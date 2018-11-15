@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+<!--Dubs Hygiene Personal Preference and Redundant Removals-->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dubs Bad Hygiene</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+    <!--BuildingsA_Pipes-->
+    <li Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName="airPipe"]/designationCategory</xpath>
+    </li>
+    <!--BuildingsB_Hygiene-->
+    <li Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName="LitterBox"]/designationCategory</xpath>
+    </li>
+    <li Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName="KitchenSink"]/designationCategory</xpath>
+    </li>
+    <!--BuildingsC_Joy-->
+    <li Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName="WashingMachine"]/designationCategory</xpath>
+    </li>
+    <!--BuildingsE_Heating-->
+    <li Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName="AirConOutdoorUnit"]/designationCategory</xpath>
+    </li>
+    <li Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[@Name="BaseAircon"]/designationCategory</xpath>
+    </li>
+    <li Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[@Name="BaseAircon"]</xpath>
+    <value>
+    <designationCategory>Hygiene</designationCategory>
+    </value>
+    </li>
+    <!--buildingsF_Irrigation-->
+    <li Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName="IrrigationSprinkler"]/designationCategory</xpath>
+    </li>
+    <li Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName="FireSprinkler"]/designationCategory</xpath>
+    </li>
+    <li Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName="plumbingValve"]/designationCategory</xpath>
+    </li>
+    <li Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName="BiosolidsComposter"]</xpath>
+    </li>
+    <li Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName="BiosolidFertilizer"]</xpath>
+    </li>
+    </operations>
+    </match>
+</Operation>
+
+</Patch>
