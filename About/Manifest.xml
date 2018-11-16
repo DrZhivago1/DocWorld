@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Manifest>
     <identifier>DocWorld</identifier>
-    <version>1.0.0</version>
+    <version>1.0.1.0</version>
     <suggests>
         <li>Rolling Table</li>
     </suggests>
