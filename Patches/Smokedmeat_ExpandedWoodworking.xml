@@ -11,6 +11,7 @@
     <match Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
+      <!--Cook_Smokepit-->
       <li Class="PatchOperationReplace">
       <xpath>/Defs/ThingDef[defName="Smokepit"]/costList</xpath>
       <value>
