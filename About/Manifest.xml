@@ -2,12 +2,8 @@
 <Manifest>
     <identifier>DocWorld</identifier>
     <version>0.1.0.0</version>
-    <loadAfter>
-        <li>ToModOrNotToMod</li>
-    </loadAfter>
     <suggests>
         <li>Rolling Table</li>
-        <li>OtherCoolMod</li>
     </suggests>
     <showCrossPromotions>true</showCrossPromotions>
     <manifestUri>https://github.com/DrZhivago1/DocWorld/blob/master/About/Manifest.xml</manifestUri>
