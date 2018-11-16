@@ -4,3 +4,6 @@ There are a lot of patches done to the various mods outlined in the "Changelog" 
 
 
 The basics are: moves items to new tabs and organizes, balances some recipes for items.
+
+
+## [License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
