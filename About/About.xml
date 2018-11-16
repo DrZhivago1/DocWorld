@@ -4,6 +4,11 @@
   <author>Dr_Zhivago</author>
   <targetVersion>1.0.2957</targetVersion>
   <description>
-    Combined Patches for mods I use
+    Combined Patches and light additions for mods I use
+    
+    
+    Credits:
+    Lanilor- for helping me learn xpath patching on the Discord.
+    Yehn- for helping with xml codes on the Discord.
   </description>
 </ModMetaData>

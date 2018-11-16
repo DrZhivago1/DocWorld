@@ -1,0 +1,80 @@
+Date Format: MM/DD/YYYY
+
+
+First Release 11/16/2018:
+
+	Creates a "Lighting" tab(Designation Category) and moves all vanilla, and supported mod lights, under the tab.
+
+	IF Additional Joy Objects is installed:
+		Replaces chandelier "Furniture" designation category to "Lighting".
+
+	IF Dead Goat's Weapon Pack AND Expanded Woodworking are installed:
+		Replaces stuff categories, changes "Woody" to "RawWoody" for making Blowgun.
+		Replaces stuff categories, changes "Woody" to "RawWoody" for making Solanine Blowgun.
+		Replaces stuff categories, changes "Woody" to "RawWoody" for making Neurotoxin Blowgun.
+		Replaces stuff categories, changes "Woody" to "RawWoody" for making Knuckles.
+		Replaces stuff categories, changes "Woody" to "RawWoody" for making Staff.
+		Replaces stuff categories, changes "Woody" to "RawWoody" for making Skullclub.
+		Replaces stuff categories, changes "Woody" to "RawWoody" for making Macuahuitl.
+
+	IF Dubs Hygiene is installed:
+		Removes "HygieneMisc" designation category.
+		Removes "SewageSludgeComposting" research.
+		Replaces "WaterFiltration" research prerequisites to "SepticTanks".
+		Removes JobDef "LoadComposter" and "UnloadComposter".
+		Replaces "airPipe" designation category to "Temperature".
+		Replaces "ToiletStallDoor" designation category to "Structure".
+		Removes "LitterBox" designation category.
+		Removes "KitchenSink" designation category.
+		Removes "WashingMachine" designation category.
+		Adds designation category "Temperature" to "BasedHeating" Abstract.
+		Adds designation category "Temperature" to "SolarHeater".
+		Adds designation category "Temperature" to "BaseRadiator" Abstract.
+		Removes "AirConOutdoorUnit" designation category.
+		Replaces "BaseAircon" designation category to "Temperature".
+		Removes "IrrigationSprinkler" designation category.
+		Replaces "FireSprinkler" designation category to "Misc".
+		Removes "plumbingValve" designation category.
+		Removes "BiosolidsComposter".
+		Removes "BiosolidFertilizer".
+		Removes "Biosolids".
+		Removes WorkGiver "UnloadComposter".
+		Removes WorkGiver "FillComposter".
+
+	IF Dubs Hygiene AND RF Fertile Fields are installed:
+		Adds designation category "RFF_Farm" to "IrrigationSprinkler".
+
+	IF Glass+Lights is installed:
+		Replaces "CeilingLampBase" Abstract designation category to "Lighting".
+		Replaces "StandingLampBase" Abstract designation category to "Lighting".
+
+	IF More Furniture is installed:
+		Removes Designation Category "ANON2MF".
+		Replaces "Anon2SquarePlantPot" designation category to "Furniture".
+		Replaces "Anon2PlantSpot" designation category to "Furniture".
+		Replaces "Anon2Dresser" designation category to "Furniture".
+		Replaces "Anon2EndTable" designation category to "Furniture".
+		Replaces "Anon2RoyalEndTable" designation category to "Furniture".
+		Replaces "Anon2EndTableLight" designation category to "Lighting".
+		Replaces "Anon2RoyalEndTableLight" designation category to "Lighting".
+		Replaces "ANON2StandingLampBase" Abstract designation category to "Lighting".
+		Replaces "Anon2FileCabinet" designation category to "Furniture".
+		Replaces "Anon2SquareDiningChair" designation category to "Furniture".
+		Replaces "Anon2CushionedChair" designation category to "Furniture".
+		Replaces "Anon2CouchRight" designation category to "Furniture".
+		Replaces "Anon2CouchCenter" designation category to "Furniture".
+		Replaces "Anon2CouchLeft" designation category to "Furniture".
+		Replaces "Anon2CouchCorner" designation category to "Furniture".
+		Replaces "Anon2CouchCornerInv" designation category to "Furniture".
+		Replaces "Anon2TableTiny" designation category to "Furniture".
+		Replaces "Anon2CounterA" designation category to "Furniture".
+		Replaces "Anon2CounterAFull" designation category to "Furniture".
+
+	IF RT's Weapon Pack Reloaded AND Expanded Woodworking are installed:
+		Replaces RecipeDef "ingredients" for crafting "Slingshot" weapon.
+		Replaces RecipeDef "fixedIngredientFilter" for crafting "Slingshot" weapon.
+		Replaces RecipeDef "recipeUsers" for crafting "Slingshot" weapon.
+
+	IF Smoked meat AND Expanded Woodworking are installed:
+		Replaces "Smokepit" costlist to "RawWoody" category with cost of "20 stuff".
+		Removes "Smokepit" constructEffect.
