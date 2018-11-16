@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Manifest>
+    <identifier>DocWorld</identifier>
+    <version>0.1.0.0</version>
+    <loadAfter>
+        <li>ToModOrNotToMod</li>
+    </loadAfter>
+    <suggests>
+        <li>Rolling Table</li>
+        <li>OtherCoolMod</li>
+    </suggests>
+    <showCrossPromotions>true</showCrossPromotions>
+    <manifestUri>https://github.com/DrZhivago1/DocWorld/tree/master/About</manifestUri>
+    <downloadUri>https://github.com/DrZhivago1/DocWorld/releases/latest</downloadUri>
+</Manifest>
