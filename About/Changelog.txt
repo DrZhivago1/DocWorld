@@ -75,6 +75,12 @@ First Release 11/16/2018:
 		Replaces RecipeDef "fixedIngredientFilter" for crafting "Slingshot" weapon.
 		Replaces RecipeDef "recipeUsers" for crafting "Slingshot" weapon.
 
+	IF Nature's Pretty Sweet AND Stuffed Floors are loaded:
+		Removes TerrainDef "TKKN_FlagstoneBasalt" floors.
+		Removes TerrainDef "TKKN_TileBasalt" floors.
+		Removes TerrainDef "TKKN_FloorRedWood" floors.
+		Removes TerrainDef "TKKN_FloorPertrifiedWood" floors.
+
 	IF Smoked meat AND Expanded Woodworking are installed:
 		Replaces "Smokepit" costlist to "RawWoody" category with cost of "20 stuff".
 		Removes "Smokepit" constructEffect.
