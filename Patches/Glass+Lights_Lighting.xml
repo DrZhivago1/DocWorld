@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+<!--Move Glassworks Lights to Lighting Tab-->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+    <!--Cieling Lamps Abstract-->
+    <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name="CeilingLampBase"]/designationCategory</xpath>
+    <value>
+    <designationCategory>Lighting</designationCategory>
+    </value>
+    </li>
+    <!--Standing Lamp Abstract-->
+    <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[@Name="StandingLampBase"]/designationCategory</xpath>
+    <value>
+    <designationCategory>Lighting</designationCategory>
+    </value>
+    </li>
+    </operations>
+    </match>
+</Operation>
+
+</Patch>
