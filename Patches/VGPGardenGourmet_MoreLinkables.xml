@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+<Operation Class="PatchOperationFindMod">
+    <mods>
+    <li>VGP Garden Gourmet</li>
+    <li>More Linkables</li>
+    </mods>
+   <match Class="PatchOperationSequence">
+   <success>Always</success>
+   <operations>
+   <!--CookingTools-->
+    <li Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName="CookingTools"]</xpath>
+    </li>
+   </operations>
+   </match>
+</Operation>
+
+</Patch>
