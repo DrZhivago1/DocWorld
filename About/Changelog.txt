@@ -4,19 +4,20 @@ Date Format: MM/DD/YYYY
 First Release 11/18/2018:
 
 	Creates a "Lighting" tab(Designation Category) and moves all vanilla, and supported mod lights, under the tab.
-	
-	Allows Hopper, Orbital Trade Beacon, Moisture Pump, Comms Console, MultiAnalyzer, Ground Penetrating Scanner, Hi-Tech 		Research Bench, Pod Launcher, Sarcophagus, Power Switch, Wood Fired Generator, Chemfuel Powered Generator, Wind Turbine, 	 and Solar Generator to be minified.
 
-	IF Additional Joy Objects is installed:
+	Allows Hopper, Orbital Trade Beacon, Moisture Pump, Comms Console, MultiAnalyzer, Ground Penetrating Scanner, Hi-Tech 		Research Bench, Pod Launcher, Sarcophagus, Power Switch, Wood Fired Generator, Chemfuel Powered Generator, Wind Turbine, 	 and Solar Generator to be minified with mass.
+
+	IF "Additional Joy Objects" is installed:
 		Replaces chandelier "Furniture" designation category to "Lighting".
 		Allows miniaturisation of Arcade Construction Table.
-	IF Advanced Power Generation is installed:
+
+	IF "Advanced Power Generation" is installed:
 		Alters miniaturisation of Advanced Wind Turbine.
 		Alters miniaturisation of Advaned Solar Generator.
 		Removes miniaturisation of Advanced Geothermal Generator.
 		Alters miniaturisation of Advanced Nuclear Powerplant.
 
-	IF Dead Goat's Weapon Pack AND Expanded Woodworking are installed:
+	IF "Dead Goat's Weapon Pack" AND "Expanded Woodworking" are installed:
 		Replaces stuff categories, changes "Woody" to "RawWoody" for making Blowgun.
 		Replaces stuff categories, changes "Woody" to "RawWoody" for making Solanine Blowgun.
 		Replaces stuff categories, changes "Woody" to "RawWoody" for making Neurotoxin Blowgun.
@@ -25,7 +26,7 @@ First Release 11/18/2018:
 		Replaces stuff categories, changes "Woody" to "RawWoody" for making Skullclub.
 		Replaces stuff categories, changes "Woody" to "RawWoody" for making Macuahuitl.
 
-	IF Dubs Hygiene is installed:
+	IF "Dubs Hygiene" is installed:
 		Removes "HygieneMisc" designation category.
 		Removes "SewageSludgeComposting" research.
 		Replaces "WaterFiltration" research prerequisites to "SepticTanks".
@@ -50,28 +51,28 @@ First Release 11/18/2018:
 		Removes WorkGiver "FillComposter".
 		Allows miniaturisation of Wind Pump.
 
-	IF Dubs Hygiene AND RF Fertile Fields are installed:
+	IF "Dubs Hygiene" AND "RF Fertile Fields" are installed:
 		Adds designation category "RFF_Farm" to "IrrigationSprinkler".
 
-	IF ED-Shields Basic is installed:
+	IF "ED-Shields Basic" is installed:
 		Allows miniaturisation of Standard Shield.
 		Allows miniaturisation of Small Shield.
 		Allows miniaturisation of Fortress Shield.
 		Allows miniaturisation of SIF Shield.
 
-	IF Glass+Lights is installed:
+	IF "Glass+Lights" is installed:
 		Replaces "CeilingLampBase" Abstract designation category to "Lighting".
 		Replaces "StandingLampBase" Abstract designation category to "Lighting".
 
-	IF High Tech Laboratory Facilities is installed:
+	IF "High Tech Laboratory Facilities" is installed:
 		Allows miniaturisation of Modular Conter Top.
 		Allows miniaturisation of Lab Station.
 		Allows miniaturisation of Lab Terminal.
-		
-	IF Medical Training is installed:
+
+	IF "Medical Training" is installed:
 		Allows miniaturisation of MT Training Bed.
 
-	IF More Furniture is installed:
+	IF "More Furniture" is installed:
 		Removes Designation Category "ANON2MF".
 		Replaces "Anon2SquarePlantPot" designation category to "Furniture".
 		Replaces "Anon2PlantSpot" designation category to "Furniture".
@@ -92,26 +93,35 @@ First Release 11/18/2018:
 		Replaces "Anon2TableTiny" designation category to "Furniture".
 		Replaces "Anon2CounterA" designation category to "Furniture".
 		Replaces "Anon2CounterAFull" designation category to "Furniture".
-		
-	IF More Linkables is installed:
+
+	IF "More Linkables" is installed:
 		Allows miniaturisation of Surgical Lamp.
 		Allows miniaturisation of Surgical Instruments.
 		Allows miniaturisation of Advanced MultiAnalyzer.
-		
-	IF Neutrainer and AI Persona Core Crafting is installed:
+
+	IF "More Linkables" AND "VGP Garden Gourmet" are installed:
+		Removes "Cooking Tools" bench.
+
+	IF "Neutrainer and AI Persona Core Crafting" is installed:
 		Allows miniaturisation of Neurotrainer Work Table.
 
-	IF RT's Weapon Pack Reloaded AND Expanded Woodworking are installed:
+	IF "Repair Workbench" is installed:
+		Allows miniaturisation of Electric Repair Table.
+
+	IF "RT's Weapon Pack Reloaded" AND "Expanded Woodworking" are installed:
 		Replaces RecipeDef "ingredients" for crafting "Slingshot" weapon.
 		Replaces RecipeDef "fixedIngredientFilter" for crafting "Slingshot" weapon.
 		Replaces RecipeDef "recipeUsers" for crafting "Slingshot" weapon.
 
-	IF Nature's Pretty Sweet AND Stuffed Floors are loaded:
+	IF "Seeds Please" is installed:
+		Allows miniaturisation of Plant Processing Table.
+
+	IF "Nature's Pretty Sweet" AND "Stuffed Floors" are loaded:
 		Removes TerrainDef "TKKN_FlagstoneBasalt" floors.
 		Removes TerrainDef "TKKN_TileBasalt" floors.
 		Removes TerrainDef "TKKN_FloorRedWood" floors.
 		Removes TerrainDef "TKKN_FloorPertrifiedWood" floors.
 
-	IF Smoked meat AND Expanded Woodworking are installed:
+	IF "Smoked meat" AND "Expanded Woodworking" are installed:
 		Replaces "Smokepit" costlist to "RawWoody" category with cost of "20 stuff".
 		Removes "Smokepit" constructEffect.
