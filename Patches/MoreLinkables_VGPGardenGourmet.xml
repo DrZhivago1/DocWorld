@@ -8,7 +8,13 @@
    <match Class="PatchOperationSequence">
    <success>Always</success>
    <operations>
-   <!--CookingTools-->
+   <li Class="PatchOperationReplace">
+   <xpath>Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities"/linkableFacilities/CookingTools</xpath>
+   <value>
+		  <li>KitchenCupboard</li>
+   </value>
+   </li>
+   <!--CookingTools Building Remove-->
     <li Class="PatchOperationRemove">
     <xpath>/Defs/ThingDef[defName="CookingTools"]</xpath>
     </li>
