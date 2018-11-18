@@ -5,7 +5,7 @@ First Release 11/18/2018:
 
 	Creates a "Lighting" tab(Designation Category) and moves all vanilla, and supported mod lights, under the tab.
 
-	Allows Hopper, Orbital Trade Beacon, Moisture Pump, Comms Console, MultiAnalyzer, Ground Penetrating Scanner, Hi-Tech 		Research Bench, Pod Launcher, Sarcophagus, Power Switch, Wood Fired Generator, Chemfuel Powered Generator, Wind Turbine, 	 and Solar Generator to be minified with mass.
+	Allows Hopper, Orbital Trade Beacon, Moisture Pump, Comms Console, MultiAnalyzer, Ground Penetrating Scanner, Hi-Tech Research Bench, Pod Launcher, Sarcophagus, Power Switch, Wood Fired Generator, Chemfuel Powered Generator, Wind Turbine, and Solar Generator to be minified with mass.
 
 	IF "Additional Joy Objects" is installed:
 		Replaces chandelier "Furniture" designation category to "Lighting".
