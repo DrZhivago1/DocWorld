@@ -99,9 +99,6 @@ First Release 11/18/2018:
 		Allows miniaturisation of Surgical Instruments.
 		Allows miniaturisation of Advanced MultiAnalyzer.
 
-	IF "More Linkables" AND "VGP Garden Gourmet" are installed:
-		Removes "Cooking Tools" bench.
-
 	IF "Neutrainer and AI Persona Core Crafting" is installed:
 		Allows miniaturisation of Neurotrainer Work Table.
 
