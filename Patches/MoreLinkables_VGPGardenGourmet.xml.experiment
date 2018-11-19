@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
 
-<!--Replace Cooking Tools with Kitchen Cupboard-->
+<!--Replace Cooking Tools with Kitchen Cupboard. Currently Not functioning.-->
 
 <Operation Class="PatchOperationFindMod">
     <mods>
