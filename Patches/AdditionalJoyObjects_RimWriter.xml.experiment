@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
 
-<!--Make Additional Joy Objects compatible with RimWriter, remove AJO books and associated Defs-->
+<!--Make Additional Joy Objects compatible with RimWriter, remove AJO books and associated Defs. Not functioning.-->
 
 <Operation Class="PatchOperationFindMod">
     <mods>
