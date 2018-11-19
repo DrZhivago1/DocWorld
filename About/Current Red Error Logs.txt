@@ -1,0 +1,9 @@
+Failed to find Verse.JobDef named LoadComposter. There are 244 defs of this type loaded. -DocWorld, due to removing this.
+Failed to find Verse.JobDef named UnloadComposter. There are 244 defs of this type loaded. -DocWorld, due to removing this.
+Failed to find Verse.ThingDef named BiosolidsComposter. There are 4804 defs of this type loaded. -DocWorld, due to removing this.
+Failed to find Verse.ThingDef named Biosolids. There are 4804 defs of this type loaded.
+ -DocWorld, due to removing this.
+Config error in Server: description has trailing whitespace
+Verse. -PhiClient, harmless.
+MakeThing error: Bow_Short is madeFromStuff but stuff=null. Assigning default. -Not sure but harmless.
+MakeThing error: Pila is madeFromStuff but stuff=null. Assigning default. -Not sure but harmless.
