@@ -1,6 +1,11 @@
 Date Format: MM/DD/YYYY
 
 
+Second Release :
+	
+	IF "Nature's Pretty Sweet" is installed:
+		Adds forageability to biomes.
+
 First Release 11/18/2018:
 
 	Creates a "Lighting" tab(Designation Category) and moves all vanilla, and supported mod lights, under the tab.
@@ -113,7 +118,7 @@ First Release 11/18/2018:
 	IF "Seeds Please" is installed:
 		Allows miniaturisation of Plant Processing Table.
 
-	IF "Nature's Pretty Sweet" AND "Stuffed Floors" are loaded:
+	IF "Nature's Pretty Sweet" AND "Stuffed Floors" are installed:
 		Removes TerrainDef "TKKN_FlagstoneBasalt" floors.
 		Removes TerrainDef "TKKN_TileBasalt" floors.
 		Removes TerrainDef "TKKN_FloorRedWood" floors.
