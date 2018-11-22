@@ -5,6 +5,10 @@ Second Release :
 	
 	IF "Nature's Pretty Sweet" is installed:
 		Adds forageability to biomes.
+	IF "VGP Garden Fabrics" AND "Animal Collab Project are installed:
+		Adds wools from animals in "Animal Collab Project" to VGP loom "Blended Wool" recipe.
+	IF "VGP Garden Fabrics" AND "Thrumbo Extension" are installed:
+		Adds "Thrumbo Wool" to VGP loom "Blended Wool" recipe.
 
 First Release 11/18/2018:
 
