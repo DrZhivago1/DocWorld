@@ -63,7 +63,7 @@
     <li Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="TKKN_Grasslands"]</xpath>
     <value>
-    <foragedFood>TKKN_PlantCatTails</foragedFood>
+    <foragedFood>TKKN_Cattails</foragedFood>
     </value>
     </li>
     </operations>
@@ -89,7 +89,7 @@
     <li Class="PatchOperationAdd">
     <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]</xpath>
     <value>
-    <foragedFood>TKKN_PlantWildRice</foragedFood>
+    <foragedFood>TKKN_WildGreens</foragedFood>
     </value>
     </li>
     </operations>
