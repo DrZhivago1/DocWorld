@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
-    <version>1.0.2</version>
+    <version>0.1.0.2</version>
     <suggests>
-        <li>Rolling Table</li>
+        <li>935099161</li>
     </suggests>
     <showCrossPromotions>true</showCrossPromotions>
-    <manifestUri>https://github.com/DrZhivago1/DocWorld/blob/master/About/Manifest.xml</manifestUri>
-    <downloadUri>https://github.com/DrZhivago1/DocWorld/releases/latest</downloadUri>
+    <manifestUri>https://rawgit.com/FluffierThanThou/ModManager/master/About/Manifest.xml</manifestUri>
+    <downloadUri>https://github.com/FluffierThanThou/ModManager/releases/latest</downloadUri>
 </Manifest>
