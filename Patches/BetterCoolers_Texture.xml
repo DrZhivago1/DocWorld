@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   <Operation Class="PatchOperationFindMod">
+   <mods>
+   <li>BetterCoolers</li>
+   </mods>
+   <match Class="PatchOperationSequence">
+   <success>Always</success>
+   <operations>
+   <li Class="PatchOperationReplace">
+   <xpath>/Defs/ThingDef[defName="Cooler"]/graphicData/texPath</xpath>
+   <value>
+   <texPath>Things/Building/Misc/TempControl/CoolerZ</texPath>
+   </value>
+   </li>
+   </operations>
+   </match>
+   </Operation>
+
+
+
+</Patch>
