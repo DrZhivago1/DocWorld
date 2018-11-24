@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
-    <version>1.0.2</version>
-    <suggests>
-        <li>935099161</li>
-    </suggests>
-    <showCrossPromotions>true</showCrossPromotions>
-    <manifestUri>https://github.com/DrZhivago1/DocWorld/blob/master/About/Manifest.xml</manifestUri>
-    <downloadUri>https://github.com/DrZhivago1/DocWorld/releases/latest</downloadUri>
+  <version>1.0.3</version>
+  <manifestUri>https://github.com/DrZhivago1/DocWorld/blob/master/About/Manifest.xml</manifestUri>
+  <downloadUri>https://github.com/DrZhivago1/DocWorld/releases/latest</downloadUri>
 </Manifest>
