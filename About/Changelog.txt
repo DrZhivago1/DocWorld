@@ -3,7 +3,7 @@ Date Format: MM/DD/YYYY
 
 Second Release :
 	
-	IF "Better Coolers" is installed:
+	IF "BetterCoolers" is installed:
 		Changes cooler texture to new RedistHeat texture. Prettifying.
 	IF "Nature's Pretty Sweet" is installed:
 		Adds forageability to biomes.
