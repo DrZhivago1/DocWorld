@@ -1,6 +1,5 @@
 Date Format: DD/MM/YYYY
 
-
 Second Release 26/11/2018:
 	IF "Dubs SkyLights" is installed:
 		Moves skylights to "Lighting" designation category.
