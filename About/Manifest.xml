@@ -2,5 +2,5 @@
 <Manifest>
   <version>1.0.3</version>
   <manifestUri>https://github.com/DrZhivago1/DocWorld/blob/master/About/Manifest.xml</manifestUri>
-  <downloadUri>https://github.com/DrZhivago1/DocWorld/releases/latest</downloadUri>
+  <downloadUri>https://github.com/DrZhivago1/DocWorld/releases</downloadUri>
 </Manifest>
