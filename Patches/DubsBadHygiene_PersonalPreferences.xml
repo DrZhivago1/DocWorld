@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
 
-<!--Dubs Hygiene personal preference settings and redundant removals-->
+<!--Dubs Hygiene personal preference settings-->
 
 <Operation Class="PatchOperationFindMod">
     <mods>
@@ -13,25 +13,6 @@
     <!--DesignationCategories-->
     <li Class="PatchOperationRemove">
     <xpath>/Defs/DesignationCategoryDef[defName="HygieneMisc"]</xpath>
-    </li>
-    <!--ResearchProjects_Hygiene-->
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/ResearchProjectDef[defName="SewageSludgeComposting"]</xpath>
-    </li>
-    <li Class="PatchOperationReplace">
-    <xpath>/Defs/ResearchProjectDef[defName="WaterFiltration"]/prerequisites</xpath>
-    <value>
-    <prerequisites>
-      <li>SepticTanks</li>
-    </prerequisites>
-    </value>
-    </li>
-    <!--Jobs_Hygiene-->
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/JobDef[defName="LoadComposter"]</xpath>
-    </li>
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/JobDef[defName="UnloadComposter"]</xpath>
     </li>
     <!--BuildingsA_Pipes-->
     <li Class="PatchOperationReplace">
@@ -98,43 +79,45 @@
     <li Class="PatchOperationRemove">
     <xpath>/Defs/ThingDef[defName="plumbingValve"]/designationCategory</xpath>
     </li>
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef[defName="BiosolidsComposter"]</xpath>
-    </li>
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef[defName="BiosolidFertilizer"]</xpath>
-    </li>
-    <!--Items_Resource_Stuff-->
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef[defName="Biosolids"]</xpath>
-    </li>
-    <!--WorkGivers-->
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/WorkGiverDef[defName="UnloadComposter"]</xpath>
-    </li>
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/WorkGiverDef[defName="FillComposter"]</xpath>
-    </li>
     </operations>
     </match>
 </Operation>
 
-<!--Move Irrigation Sprinkler to RF Fertile Fields' Farming Tab-->
 <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[RF] Fertile Fields [1.0]</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
-    <li Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[defName="IrrigationSprinkler"]</xpath>
-    <value>
-    <designationCategory>RFF_Farm</designationCategory>
-    </value>
-    </li>
-    </operations>
-    </match>
+   <mods>
+      <li>Dubs Bad Hygiene</li>
+   </mods>
+   <match Class="PatchOperationSequence">
+   <success>Always</success>
+   <operations>
+   <li Class="PatchOperationTest">
+   <success>Always</success>
+   <xpath>/Defs/ThingDef[defName="BiosolidsComposter"]/designationCategory</xpath>
+   </li>
+   <li Class="PatchOperationRemove">
+   <xpath>/Defs/ThingDef[defName="BiosolidsComposter"]/designationCategory</xpath>
+   </li>
+   </operations>
+   </match>
+</Operation>
+
+
+<Operation Class="PatchOperationFindMod">
+   <mods>
+      <li>Dubs Bad Hygiene</li>
+   </mods>
+   <match Class="PatchOperationSequence">
+   <success>Always</success>
+   <operations>
+   <li Class="PatchOperationTest">
+   <success>Always</success>
+   <xpath>/Defs/ThingDef[defName="BiosolidFertilizer"]/designationCategory</xpath>
+   </li>
+   <li Class="PatchOperationRemove">
+   <xpath>/Defs/ThingDef[defName="BiosolidFertilizer"]/designationCategory</xpath>
+   </li>
+   </operations>
+   </match>
 </Operation>
 
 </Patch>

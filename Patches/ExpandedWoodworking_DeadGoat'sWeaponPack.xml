@@ -3,9 +3,12 @@
 
 <!--Make some weapons craftable with logs instead of lumber-->
 
-<Operation Class="PatchOperationFindMod">
+   <Operation Class="PatchOperationFindMod">
    <mods>
       <li>Dead Goat's Weapon Pack</li>
+   </mods>
+   <match Class="PatchOperationFindMod">
+   <mods>
       <li>Expanded Woodworking</li>
    </mods>
    <match Class="PatchOperationSequence">
@@ -96,6 +99,7 @@
    </li>-->
    </operations>
    </match>
-</Operation>
+   </match>
+   </Operation>
 
 </Patch>

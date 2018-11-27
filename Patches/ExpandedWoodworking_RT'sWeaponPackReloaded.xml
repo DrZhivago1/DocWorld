@@ -3,9 +3,12 @@
 
 <!--Make Slingshot craftable with logs and leathers/Textiles, instead of lumber and steel-->
 
-<Operation Class="PatchOperationFindMod">
+   <Operation Class="PatchOperationFindMod">
    <mods>
       <li>RT's Weapon Pack Reloaded (1.0)</li>
+   </mods>
+   <match Class="PatchOperationFindMod">
+   <mods>
       <li>Expanded Woodworking</li>
    </mods>
    <match Class="PatchOperationSequence">
@@ -51,15 +54,16 @@
    <li Class="PatchOperationReplace">
    <xpath>/Defs/RecipeDef[defName="SlingshotCraft"]/recipeUsers</xpath>
    <value>
-	<recipeUsers>
-		<li>CraftingSpot</li>
-    <li>FueledSmithy</li>
-    <li>ElectricSmithy</li>
-	</recipeUsers>
+	  <recipeUsers>
+		  <li>CraftingSpot</li>
+      <li>FueledSmithy</li>
+      <li>ElectricSmithy</li>
+	  </recipeUsers>
    </value>
    </li>
    </operations>
    </match>
-</Operation>
+   </match>
+   </Operation>
 
 </Patch>

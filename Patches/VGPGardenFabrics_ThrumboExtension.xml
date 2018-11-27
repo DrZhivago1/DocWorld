@@ -3,14 +3,17 @@
 
 <!--Add animal wool from Thrumbo Extension to VGP loom "blended wool" recipe-->
 
-    <Operation Class="PatchOperationFindMod">
-    <mods>
+   <Operation Class="PatchOperationFindMod">
+   <mods>
     <li>VGP Garden Fabrics</li>
+   </mods>
+   <match Class="PatchOperationFindMod">
+   <mods>
     <li>Thrumbo Extension</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
+   </mods>
+   <match Class="PatchOperationSequence">
+   <success>Always</success>
+   <operations>
     <li Class="PatchOperationAdd">
     <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/ingredients/li/filter/thingDefs</xpath>
     <value>
@@ -23,8 +26,9 @@
     <li>ThrumboWool</li>
     </value>
     </li>
-    </operations>
-    </match>
-    </Operation>
+   </operations>
+   </match>
+   </match>
+   </Operation>
 
 </Patch>
