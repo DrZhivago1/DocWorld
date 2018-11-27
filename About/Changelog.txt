@@ -1,7 +1,7 @@
-Date Format: MM/DD/YYYY
+Date Format: DD/MM/YYYY
 
 
-Second Release :
+Second Release 26/11/2018:
 	IF "Dubs SkyLights" is installed:
 		Moves skylights to "Lighting" designation category.
 		
@@ -17,7 +17,7 @@ Second Release :
 	IF "VGP Garden Fabrics" AND "Thrumbo Extension" are installed:
 		Adds "Thrumbo Wool" to VGP loom "Blended Wool" recipe.
 
-First Release 11/18/2018:
+First Release 18/11/2018:
 
 	Creates a "Lighting" tab(Designation Category) and moves all vanilla, and supported mod lights, under the tab.
 
