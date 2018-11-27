@@ -2,7 +2,7 @@ Date Format: MM/DD/YYYY
 
 
 Second Release :
-	IF "DubsSkyLights" is installed:
+	IF "Dubs SkyLights" is installed:
 		Moves skylights to "Lighting" designation category.
 		
 	IF "BetterCoolers" is installed:
