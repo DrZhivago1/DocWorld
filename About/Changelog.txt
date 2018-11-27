@@ -2,13 +2,18 @@ Date Format: MM/DD/YYYY
 
 
 Second Release :
-	
+	IF "DubsSkyLights" is installed:
+		Moves skylights to "Lighting" designation category.
+		
 	IF "BetterCoolers" is installed:
 		Changes cooler texture to new RedistHeat texture. Prettifying.
+		
 	IF "Nature's Pretty Sweet" is installed:
 		Adds forageability to biomes.
+		
 	IF "VGP Garden Fabrics" AND "Animal Collab Project are installed:
 		Adds wools from animals in "Animal Collab Project" to VGP loom "Blended Wool" recipe.
+		
 	IF "VGP Garden Fabrics" AND "Thrumbo Extension" are installed:
 		Adds "Thrumbo Wool" to VGP loom "Blended Wool" recipe.
 
