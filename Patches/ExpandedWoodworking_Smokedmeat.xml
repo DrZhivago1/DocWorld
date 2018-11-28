@@ -3,14 +3,17 @@
 
 <!-- Smoked meat Smokepit made of logs-->
 
-<Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Expanded Woodworking</li>
+   <Operation Class="PatchOperationFindMod">
+   <mods>
       <li>Smoked meat</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
+   </mods>
+   <match Class="PatchOperationFindMod">
+   <mods>
+      <li>Expanded Woodworking</li>
+   </mods>
+   <match Class="PatchOperationSequence">
+   <success>Always</success>
+   <operations>
       <!--Cook_Smokepit-->
       <li Class="PatchOperationReplace">
       <xpath>/Defs/ThingDef[defName="Smokepit"]/costList</xpath>
@@ -24,8 +27,9 @@
       <li Class="PatchOperationRemove">
       <xpath>/Defs/ThingDef[defName="Smokepit"]/constructEffect</xpath>
       </li>
-      </operations>
-    </match>
-</Operation>
+   </operations>
+   </match>
+   </match>
+   </Operation>
 
 </Patch>

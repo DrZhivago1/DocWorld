@@ -3,9 +3,12 @@
 
 <!-- Remove various floors from Nature's Pretty Sweet, it's included in Stuffed Floors-->
 
-<Operation Class="PatchOperationFindMod">
+   <Operation Class="PatchOperationFindMod">
    <mods>
    <li>Nature's Pretty Sweet</li>
+   </mods>
+   <match Class="PatchOperationFindMod">
+   <mods>
    <li>Stuffed Floors</li>
    </mods>
    <match Class="PatchOperationSequence">
@@ -25,6 +28,7 @@
    </li>
    </operations>
    </match>
-</Operation>
+   </match>
+   </Operation>
 
 </Patch>
