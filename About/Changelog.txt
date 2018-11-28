@@ -42,9 +42,6 @@ First Release 18/11/2018:
 
 	IF "Dubs Hygiene" is installed:
 		Removes "HygieneMisc" designation category.
-		Removes "SewageSludgeComposting" research.
-		Replaces "WaterFiltration" research prerequisites to "SepticTanks".
-		Removes JobDef "LoadComposter" and "UnloadComposter".
 		Replaces "airPipe" designation category to "Temperature".
 		Replaces "ToiletStallDoor" designation category to "Structure".
 		Removes "LitterBox" designation category.
@@ -58,14 +55,19 @@ First Release 18/11/2018:
 		Removes "IrrigationSprinkler" designation category.
 		Replaces "FireSprinkler" designation category to "Misc".
 		Removes "plumbingValve" designation category.
+		Removes "BiosolidsComposter" designation category.
+		Removes "BiosolidFertilizer" designation category.
+		Allows miniaturisation of Wind Pump.
+
+	IF "Dubs Hygiene" AND "RF Fertile Fields" are installed:
+		Removes JobDef "LoadComposter" and "UnloadComposter".
+		Replaces "WaterFiltration" research prerequisites to "SepticTanks".
+		Removes "SewageSludgeComposting" research.
 		Removes "BiosolidsComposter".
 		Removes "BiosolidFertilizer".
 		Removes "Biosolids".
 		Removes WorkGiver "UnloadComposter".
 		Removes WorkGiver "FillComposter".
-		Allows miniaturisation of Wind Pump.
-
-	IF "Dubs Hygiene" AND "RF Fertile Fields" are installed:
 		Adds designation category "RFF_Farm" to "IrrigationSprinkler".
 
 	IF "ED-Shields Basic" is installed:
