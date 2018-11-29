@@ -3,6 +3,8 @@ Date Format: DD/MM/YYYY
 Third Release :
 	Alphabetize designation categories for Vanilla, More Planning, RF Fertile Fields, Fences and No Floors, Colony Leadership, sd Goodnight, Dubs Bad Hygiene, Remote Tech
 	
+	Vanilla beds require cloth to build.
+	
 	IF "[sd] goodnight" is installed:
 		Moves all Vanilla beds to "Beds" designation category.
 		
