@@ -5,7 +5,7 @@
     <defName>Lighting</defName>
     <label>Lighting</label>
     <description>Things for illumination.</description>
-    <order>450</order>
+    <order>550</order>
     <specialDesignatorClasses>
       <li>Designator_Cancel</li>
       <li>Designator_Deconstruct</li>
