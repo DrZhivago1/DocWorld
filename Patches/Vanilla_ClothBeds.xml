@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Make Vanilla beds require cloth-->
+  <!--With Costlist-->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName = "Bed"]/costList</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Bed"]/costList</xpath>
+        <value>
+          <Cloth>12</Cloth>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName = "DoubleBed"]/costList</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "DoubleBed"]/costList</xpath>
+        <value>
+          <Cloth>18</Cloth>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName = "RoyalBed"]/costList</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "RoyalBed"]/costList</xpath>
+        <value>
+          <Cloth>24</Cloth>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName = "HospitalBed"]/costList</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "HospitalBed"]/costList</xpath>
+        <value>
+          <Cloth>12</Cloth>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <!--Without costList-->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName = "Bed"]/costList</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Bed"]</xpath>
+        <value>
+          <costList>
+            <Cloth>12</Cloth>
+          </costList>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName = "DoubleBed"]/costList</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "DoubleBed"]</xpath>
+        <value>
+          <costList>
+            <Cloth>18</Cloth>
+          </costList>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>
