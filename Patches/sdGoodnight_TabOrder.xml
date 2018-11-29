@@ -13,7 +13,7 @@
    <li Class="PatchOperationReplace">
    <xpath>/Defs/DesignationCategoryDef[defName="sd_beds"]/order</xpath>
    <value>
-   <order>730</order>
+   <order>725</order>
    </value>
    </li>
    </operations>

@@ -13,7 +13,7 @@
    <li Class="PatchOperationReplace">
    <xpath>/Defs/DesignationCategoryDef[defName="Planning"]/order</xpath>
    <value>
-   <order>725</order>
+   <order>730</order>
    </value>
    </li>
    </operations>
