@@ -1,5 +1,14 @@
 Date Format: DD/MM/YYYY
 
+Third Release :
+	Alphabetize designation categories for Vanilla, More Planning, RF Fertile Fields, Fences and No Floors, Colony Leadership, sd Goodnight, Dubs Bad Hygiene, Remote Tech
+	
+	IF "[sd] goodnight" is installed:
+		Moves all Vanilla beds to "Beds" designation category.
+		
+	IF "Replace Stuff" is installed:
+		Adds "Replace Stuff" function to Furniture and Production designation category.
+
 Second Release 26/11/2018:
 	IF "Dubs SkyLights" is installed:
 		Moves skylights to "Lighting" designation category.
