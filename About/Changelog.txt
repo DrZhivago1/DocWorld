@@ -8,6 +8,9 @@ Third Release :
 		
 	IF "Replace Stuff" is installed:
 		Adds "Replace Stuff" function to Furniture and Production designation category.
+		
+	IF "Wall Lights" is installed:
+		Moves lights to "Lighting" designation category.
 
 Second Release 26/11/2018:
 	IF "Dubs SkyLights" is installed:
