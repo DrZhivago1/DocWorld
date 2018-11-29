@@ -3,7 +3,7 @@
 
   <DesignationCategoryDef>
     <defName>Lighting</defName>
-    <label>Lighting</label>
+    <label>lighting</label>
     <description>Things for illumination.</description>
     <order>550</order>
     <specialDesignatorClasses>
