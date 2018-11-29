@@ -8,6 +8,9 @@ Third Release :
 	IF "[sd] goodnight" is installed:
 		Moves all Vanilla beds to "Beds" designation category.
 		
+	IF "Extended Storage" is installed:
+		Most storage containers now require "Complex Furniture" research. (Not food basket or wooden pallet).
+		
 	IF "Replace Stuff" is installed:
 		Adds "Replace Stuff" function to Furniture and Production designation category.
 		
