@@ -5,7 +5,9 @@
   <url>https://github.com/DrZhivago1/DocWorld/releases/latest</url>
   <targetVersion>1.0.2096</targetVersion>
   <description>
-    Combined Patches and light additions for mods I use
+    A mod of combined patches for my RimWorld mod collection "The Doctor's World". There are a lot of patches done to the various mods outlined in the "Changelog" in the "About" folder. I suggest you read there or GitHub for detailed information.
+    
+    The basics are: mod moves items to new tabs and organizes layout, balances some recipes for various items, enhances minaturisation abilities, improves inter-mod compatability.
     
     
     Credits:
