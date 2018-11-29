@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+<!--Alphabetize "Fertile Fields" designation category-->
+
+<Operation Class="PatchOperationFindMod">
+   <mods>
+   <li>[RF] Fertile Fields [1.0]</li>
+   </mods>
+   <match Class="PatchOperationSequence">
+   <success>Always</success>
+   <operations>
+   <li Class="PatchOperationReplace">
+   <xpath>/Defs/DesignationCategoryDef[defName="RFF_Farm"]/order</xpath>
+   <value>
+   <order>720</order>
+   </value>
+   </li>
+   <li Class="PatchOperationReplace">
+   <xpath>/Defs/DesignationCategoryDef[defName="RFF_Adds"]/order</xpath>
+   <value>
+   <order>40</order>
+   </value>
+   </li>
+   </operations>
+   </match>
+</Operation>
+
+</Patch>

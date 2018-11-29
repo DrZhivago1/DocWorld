@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+<!--Alphabetize "Dubs Bad Hygiene" designation category-->
+
+<Operation Class="PatchOperationFindMod">
+   <mods>
+   <li>Dubs Bad Hygiene</li>
+   </mods>
+   <match Class="PatchOperationSequence">
+   <success>Always</success>
+   <operations>
+   <li Class="PatchOperationReplace">
+   <xpath>/Defs/DesignationCategoryDef[defName="Hygiene"]/order</xpath>
+   <value>
+   <order>590</order>
+   </value>
+   </li>
+   </operations>
+   </match>
+</Operation>
+
+</Patch>
