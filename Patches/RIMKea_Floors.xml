@@ -1,25 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--Move Glassworks lights to "Lighting" Tab-->
+  <!--Move "RIMKea" floors to "Floors" tab-->
   <Operation Class="PatchOperationFindMod">
     <mods>
-      <li>Glass+Lights</li>
+      <li>RIMkea</li>
     </mods>
     <match Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
-        <!--Cieling Lamps Abstract-->
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="CeilingLampBase"]/designationCategory</xpath>
+          <xpath>/Defs/TerrainDef[@Name="RIKStoneFloorBase"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>Floors</designationCategory>
           </value>
         </li>
-        <!--Standing Lamp Abstract-->
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="StandingLampBase"]/designationCategory</xpath>
+          <xpath>/Defs/TerrainDef[@Name="RIKWoodFloorBase"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>Floors</designationCategory>
           </value>
         </li>
       </operations>

@@ -1,59 +1,52 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-
-<!--Make medical training table minifiable-->
-
-<!--MT-TrainingBed-->
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "IF_MeditrainTable"]/minifiedDef</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "IF_MeditrainTable"]</xpath>
-				<value>
-					<minifiedDef>MinifiedThing</minifiedDef>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "IF_MeditrainTable"]/thingCategories</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "IF_MeditrainTable"]</xpath>
-				<value>
-					<thingCategories>
-						<li>BuildingsMisc</li>
-					</thingCategories>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "IF_MeditrainTable"]/statBases/Mass</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "IF_MeditrainTable"]/statBases</xpath>
-				<value>
-					<Mass>20</Mass>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-
+  <!--Make medical training table minifiable-->
+  <!--MT-TrainingBed-->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName = "IF_MeditrainTable"]/minifiedDef</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "IF_MeditrainTable"]</xpath>
+        <value>
+          <minifiedDef>MinifiedThing</minifiedDef>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName = "IF_MeditrainTable"]/thingCategories</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "IF_MeditrainTable"]</xpath>
+        <value>
+          <thingCategories>
+            <li>BuildingsMisc</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>/Defs/ThingDef[defName = "IF_MeditrainTable"]/statBases/Mass</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "IF_MeditrainTable"]/statBases</xpath>
+        <value>
+          <Mass>20</Mass>
+        </value>
+      </li>
+    </operations>
+  </Operation>
 </Patch>

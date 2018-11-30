@@ -1,23 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-
-<!--Change texture from "BetterCoolers" to the newer one from RedistHeat-->
-
-   <Operation Class="PatchOperationFindMod">
-   <mods>
-   <li>BetterCoolers</li>
-   </mods>
-   <match Class="PatchOperationSequence">
-   <success>Always</success>
-   <operations>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Cooler"]/graphicData/texPath</xpath>
-   <value>
-   <texPath>Things/Building/Misc/TempControl/CoolerZ</texPath>
-   </value>
-   </li>
-   </operations>
-   </match>
-   </Operation>
-
+  <!--Change texture from "BetterCoolers" to the newer one from RedistHeat-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>BetterCoolers</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Cooler"]/graphicData/texPath</xpath>
+          <value>
+            <texPath>Things/Building/Misc/TempControl/CoolerZ</texPath>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
 </Patch>

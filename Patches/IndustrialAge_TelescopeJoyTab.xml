@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--Alphabetize "Fences And Null Floors" designation category-->
+  <!--Move Telescope from "Industrial Age" to "Recreation" tab-->
   <Operation Class="PatchOperationFindMod">
     <mods>
-      <li>Fences And No Floors</li>
+      <li>Industrial Age - Objects and Furniture</li>
     </mods>
     <match Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/DesignationCategoryDef[defName="Fences"]/order</xpath>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Estate_Telescope"]</xpath>
           <value>
-            <order>710</order>
+            <designationCategory>Joy</designationCategory>
           </value>
         </li>
       </operations>

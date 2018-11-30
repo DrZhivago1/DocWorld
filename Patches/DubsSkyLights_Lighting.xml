@@ -1,32 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-
-<!--Remove Dubs "Skylights" designation category, and move skylights to "Lighting" designation category-->
-
-   <Operation Class="PatchOperationFindMod">
-   <mods>
-   <li>Dubs Skylights</li>
-   </mods>
-   <match Class="PatchOperationSequence">
-   <success>Always</success>
-   <operations>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[@Name="BasedSkyLight"]/designationCategory</xpath>
-   <value>
-    <designationCategory>Lighting</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationAdd">
-   <xpath>/Defs/DesignationCategoryDef[defName="Lighting"]/specialDesignatorClasses</xpath>
-   <value>
-      <li>Dubs_Skylight.Designator_RemoveSkylights</li>
-   </value>
-   </li>
-   <li Class="PatchOperationRemove">
-   <xpath>/Defs/DesignationCategoryDef[defName="skylights"]</xpath>
-   </li>
-   </operations>
-   </match>
-   </Operation>
-
+  <!--Remove Dubs "Skylights" designation category, and move skylights to "Lighting" designation category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dubs Skylights</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[@Name="BasedSkyLight"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/DesignationCategoryDef[defName="Lighting"]/specialDesignatorClasses</xpath>
+          <value>
+            <li>Dubs_Skylight.Designator_RemoveSkylights</li>
+          </value>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/DesignationCategoryDef[defName="skylights"]</xpath>
+        </li>
+      </operations>
+    </match>
+  </Operation>
 </Patch>

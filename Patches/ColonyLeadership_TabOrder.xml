@@ -1,23 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-
-<!--Alphabetize "Colony Leadership" designation category-->
-
-<Operation Class="PatchOperationFindMod">
-   <mods>
-   <li>Colony Leadership</li>
-   </mods>
-   <match Class="PatchOperationSequence">
-   <success>Always</success>
-   <operations>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/DesignationCategoryDef[defName="LeadershipModTab"]/order</xpath>
-   <value>
-   <order>560</order>
-   </value>
-   </li>
-   </operations>
-   </match>
-</Operation>
-
+  <!--Alphabetize "Colony Leadership" designation category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Colony Leadership</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/DesignationCategoryDef[defName="LeadershipModTab"]/order</xpath>
+          <value>
+            <order>560</order>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
 </Patch>
