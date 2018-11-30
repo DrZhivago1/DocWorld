@@ -1,141 +1,138 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-
-<!--We will be moving all furniture to the "Furniture" tab, and moving all light sources to the "Lighting" tab-->
-
-<Operation Class="PatchOperationFindMod">
-   <mods>
-   <li>More Furniture [1.0]</li>
-   </mods>
-   <match Class="PatchOperationSequence">
-   <success>Always</success>
-   <operations>
-   <!--DesignationCategoriesMF-->
-   <li Class="PatchOperationRemove">
-   <xpath>/Defs/DesignationCategoryDef[defName="ANON2MF"]</xpath>
-   </li>
-   <!--Buildings_MoreFurnitureBasicStuff-->
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2SquarePlantPot"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2PlantSpot"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <!--Buildings_MoreFurnitureBedRoomStuff-->
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2Dresser"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2EndTable"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2RoyalEndTable"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <!--Buildings_MoreFurnitureLights-->
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2EndTableLight"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Lighting</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2RoyalEndTableLight"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Lighting</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[@Name="ANON2StandingLampBase"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Lighting</designationCategory>
-   </value>
-   </li>
-   <!--Buildings_MoreFurnitureMisc-->
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2FileCabinet"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <!--Buildings_MoreFurnitureSeatingStuff-->
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2SquareDiningChair"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2CushionedChair"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2CouchRight"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2CouchCenter"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2CouchLeft"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2CouchCorner"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2CouchCornerInv"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <!--Buildings_MoreFurnitureTableStuff-->
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2TableTiny"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2CounterA"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="Anon2CounterAFull"]/designationCategory</xpath>
-   <value>
-   <designationCategory>Furniture</designationCategory>
-   </value>
-   </li>
-   </operations>
-   </match>
-</Operation>
-
+  <!--We will be moving all furniture to the "Furniture" tab, and moving all light sources to the "Lighting" tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>More Furniture [1.0]</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!--DesignationCategoriesMF-->
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/DesignationCategoryDef[defName="ANON2MF"]</xpath>
+        </li>
+        <!--Buildings_MoreFurnitureBasicStuff-->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2SquarePlantPot"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2PlantSpot"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <!--Buildings_MoreFurnitureBedRoomStuff-->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2Dresser"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2EndTable"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2RoyalEndTable"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <!--Buildings_MoreFurnitureLights-->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2EndTableLight"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2RoyalEndTableLight"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[@Name="ANON2StandingLampBase"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Lighting</designationCategory>
+          </value>
+        </li>
+        <!--Buildings_MoreFurnitureMisc-->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2FileCabinet"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <!--Buildings_MoreFurnitureSeatingStuff-->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2SquareDiningChair"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2CushionedChair"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2CouchRight"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2CouchCenter"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2CouchLeft"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2CouchCorner"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2CouchCornerInv"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <!--Buildings_MoreFurnitureTableStuff-->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2TableTiny"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2CounterA"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="Anon2CounterAFull"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
 </Patch>

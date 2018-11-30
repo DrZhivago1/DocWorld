@@ -1,18 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--Alphabetize "Remote Tech" designation category-->
+  <!--Remove "RIMKea" designation category, as all items have been moved to their respective tabs-->
   <Operation Class="PatchOperationFindMod">
     <mods>
-      <li>Remote Tech</li>
+      <li>RIMkea</li>
     </mods>
     <match Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/DesignationCategoryDef[defName="rxRemoteTech"]/order</xpath>
-          <value>
-            <order>275</order>
-          </value>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/designationCategoryDef[defName="RIMkea"]</xpath>
         </li>
       </operations>
     </match>

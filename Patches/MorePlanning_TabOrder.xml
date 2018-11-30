@@ -1,23 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-
-<!--Alphabetize "More Planning" designation category-->
-
-<Operation Class="PatchOperationFindMod">
-   <mods>
-   <li>More Planning</li>
-   </mods>
-   <match Class="PatchOperationSequence">
-   <success>Always</success>
-   <operations>
-   <li Class="PatchOperationReplace">
-   <xpath>/Defs/DesignationCategoryDef[defName="Planning"]/order</xpath>
-   <value>
-   <order>730</order>
-   </value>
-   </li>
-   </operations>
-   </match>
-</Operation>
-
+  <!--Alphabetize "More Planning" designation category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>More Planning</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/DesignationCategoryDef[defName="Planning"]/order</xpath>
+          <value>
+            <order>730</order>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
 </Patch>
