@@ -5,6 +5,9 @@ Fourth Release :
 	Fixed error logs produced from redundant or missing code with PhiClient, Weapon Tech, and Colony Leadership.
 
 	Added underground power conduits, invisible, cost 2 steel, neutral beauty.
+	
+	IF "Architect Icons" is installed:
+		Adds a "Lighting" icon for the designation category.
 
 	IF "Dubs Bad Hygiene" is installed:
 		Moves "Cieling Fan" to "Lighting" designation category.
@@ -25,6 +28,7 @@ Fourth Release :
 	
 	IF "Rim of Madness - Bones" is installed:
 		Nerfs bone wall by 50 hitpoints.
+		Moves all floors into a single drop-down menu.
 	
 	IF "Rim of Madness - Bones" AND "Expanded Woodworking" are installed:
 		Allows bones to be used in wood recipes where it makes sense. (Minor bug allows "WoodLog Walls" to be made of bone)
