@@ -6,11 +6,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "LabStation"]/minifiedDef</xpath>
+        <xpath>Defs/ThingDef[defName = "LabStation"]/minifiedDef</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "LabStation"]</xpath>
+        <xpath>Defs/ThingDef[defName = "LabStation"]</xpath>
         <value>
           <minifiedDef>MinifiedThing</minifiedDef>
         </value>
@@ -21,11 +21,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "LabStation"]/thingCategories</xpath>
+        <xpath>Defs/ThingDef[defName = "LabStation"]/thingCategories</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "LabStation"]</xpath>
+        <xpath>Defs/ThingDef[defName = "LabStation"]</xpath>
         <value>
           <thingCategories>
             <li>BuildingsMisc</li>
@@ -38,11 +38,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "LabStation"]/statBases/Mass</xpath>
+        <xpath>Defs/ThingDef[defName = "LabStation"]/statBases/Mass</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "LabStation"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "LabStation"]/statBases</xpath>
         <value>
           <Mass>20</Mass>
         </value>
@@ -54,11 +54,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "LabTerminal"]/minifiedDef</xpath>
+        <xpath>Defs/ThingDef[defName = "LabTerminal"]/minifiedDef</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "LabTerminal"]</xpath>
+        <xpath>Defs/ThingDef[defName = "LabTerminal"]</xpath>
         <value>
           <minifiedDef>MinifiedThing</minifiedDef>
         </value>
@@ -69,11 +69,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "LabTerminal"]/thingCategories</xpath>
+        <xpath>Defs/ThingDef[defName = "LabTerminal"]/thingCategories</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "LabTerminal"]</xpath>
+        <xpath>Defs/ThingDef[defName = "LabTerminal"]</xpath>
         <value>
           <thingCategories>
             <li>BuildingsMisc</li>
@@ -86,11 +86,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "LabTerminal"]/statBases/Mass</xpath>
+        <xpath>Defs/ThingDef[defName = "LabTerminal"]/statBases/Mass</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "LabTerminal"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "LabTerminal"]/statBases</xpath>
         <value>
           <Mass>20</Mass>
         </value>

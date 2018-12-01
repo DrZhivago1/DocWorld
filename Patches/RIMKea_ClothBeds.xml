@@ -6,10 +6,10 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "SNOREGGSingle"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName = "SNOREGGSingle"]/costList</xpath>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "SNOREGGSingle"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName = "SNOREGGSingle"]/costList</xpath>
         <value>
           <Cloth>12</Cloth>
         </value>
@@ -20,10 +20,10 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "SNOREGGDouble"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName = "SNOREGGDouble"]/costList</xpath>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "SNOREGGDouble"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName = "SNOREGGDouble"]/costList</xpath>
         <value>
           <Cloth>18</Cloth>
         </value>
@@ -34,10 +34,10 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "KRUDNEPPSingle"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName = "KRUDNEPPSingle"]/costList</xpath>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "KRUDNEPPSingle"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName = "KRUDNEPPSingle"]/costList</xpath>
         <value>
           <Cloth>12</Cloth>
         </value>
@@ -48,10 +48,10 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "SLABNEPPDouble"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName = "SLABNEPPDouble"]/costList</xpath>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "SLABNEPPDouble"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName = "SLABNEPPDouble"]/costList</xpath>
         <value>
           <Cloth>18</Cloth>
         </value>
@@ -63,11 +63,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "SNOREGGSingle"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName = "SNOREGGSingle"]/costList</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "SNOREGGSingle"]</xpath>
+        <xpath>Defs/ThingDef[defName = "SNOREGGSingle"]</xpath>
         <value>
           <costList>
             <Cloth>12</Cloth>
@@ -80,11 +80,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "SNOREGGDouble"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName = "SNOREGGDouble"]/costList</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "SNOREGGDouble"]</xpath>
+        <xpath>Defs/ThingDef[defName = "SNOREGGDouble"]</xpath>
         <value>
           <costList>
             <Cloth>18</Cloth>
@@ -97,11 +97,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "KRUDNEPPSingle"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName = "KRUDNEPPSingle"]/costList</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "KRUDNEPPSingle"]</xpath>
+        <xpath>Defs/ThingDef[defName = "KRUDNEPPSingle"]</xpath>
         <value>
           <costList>
             <Cloth>12</Cloth>
@@ -114,11 +114,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "SLABNEPPDouble"]/costList</xpath>
+        <xpath>Defs/ThingDef[defName = "SLABNEPPDouble"]/costList</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "SLABNEPPDouble"]</xpath>
+        <xpath>Defs/ThingDef[defName = "SLABNEPPDouble"]</xpath>
         <value>
           <costList>
             <Cloth>18</Cloth>

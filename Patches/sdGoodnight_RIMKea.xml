@@ -13,37 +13,37 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="SNOREGGSingle"]</xpath>
+            <xpath>Defs/ThingDef[defName="SNOREGGSingle"]</xpath>
             <value>
               <designationCategory>sd_beds</designationCategory>
             </value>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="SNOREGGDouble"]</xpath>
+            <xpath>Defs/ThingDef[defName="SNOREGGDouble"]</xpath>
             <value>
               <designationCategory>sd_beds</designationCategory>
             </value>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="PETSNORR"]</xpath>
+            <xpath>Defs/ThingDef[defName="PETSNORR"]</xpath>
             <value>
               <designationCategory>sd_beds</designationCategory>
             </value>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="KRUDNEPPSingle"]</xpath>
+            <xpath>Defs/ThingDef[defName="KRUDNEPPSingle"]</xpath>
             <value>
               <designationCategory>sd_beds</designationCategory>
             </value>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="SLABNEPPDouble"]</xpath>
+            <xpath>Defs/ThingDef[defName="SLABNEPPDouble"]</xpath>
             <value>
               <designationCategory>sd_beds</designationCategory>
             </value>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="SNORHOI"]</xpath>
+            <xpath>Defs/ThingDef[defName="SNORHOI"]</xpath>
             <value>
               <designationCategory>sd_beds</designationCategory>
             </value>

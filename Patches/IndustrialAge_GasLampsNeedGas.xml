@@ -9,7 +9,7 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha"]/comps</xpath>
+          <xpath>Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha"]/comps</xpath>
           <value>
             <li Class="CompProperties_Refuelable">
               <fuelConsumptionRate>0.5</fuelConsumptionRate>
@@ -23,7 +23,7 @@
           </value>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Jecrell_GasStreetLampBeta"]/comps</xpath>
+          <xpath>Defs/ThingDef[defName="Jecrell_GasStreetLampBeta"]/comps</xpath>
           <value>
             <li Class="CompProperties_Refuelable">
               <fuelConsumptionRate>0.5</fuelConsumptionRate>
@@ -37,7 +37,7 @@
           </value>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Jecrell_GasLamp"]/comps</xpath>
+          <xpath>Defs/ThingDef[defName="Jecrell_GasLamp"]/comps</xpath>
           <value>
             <li Class="CompProperties_Refuelable">
               <fuelConsumptionRate>0.25</fuelConsumptionRate>
@@ -62,13 +62,13 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha"]/thingClass</xpath>
+          <xpath>Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha"]/thingClass</xpath>
           <value>
             <thingClass>Building</thingClass>
           </value>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha"]/comps</xpath>
+          <xpath>Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha"]/comps</xpath>
           <value>
             <li Class="CompProperties_Glower">
               <glowRadius>12</glowRadius>
@@ -77,13 +77,13 @@
           </value>
         </li>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="Jecrell_GasStreetLampBeta"]/thingClass</xpath>
+          <xpath>Defs/ThingDef[defName="Jecrell_GasStreetLampBeta"]/thingClass</xpath>
           <value>
             <thingClass>Building</thingClass>
           </value>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Jecrell_GasStreetLampBeta"]/comps</xpath>
+          <xpath>Defs/ThingDef[defName="Jecrell_GasStreetLampBeta"]/comps</xpath>
           <value>
             <li Class="CompProperties_Glower">
               <glowRadius>12</glowRadius>

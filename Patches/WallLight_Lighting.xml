@@ -10,7 +10,7 @@
       <operations>
         <!--Wall Light Abstract-->
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="MURWallLightVIIBase"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[@Name="MURWallLightVIIBase"]/designationCategory</xpath>
           <value>
             <designationCategory>Lighting</designationCategory>
           </value>

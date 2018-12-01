@@ -6,11 +6,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "NeurotrainerWorkTable"]/minifiedDef</xpath>
+        <xpath>Defs/ThingDef[defName = "NeurotrainerWorkTable"]/minifiedDef</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "NeurotrainerWorkTable"]</xpath>
+        <xpath>Defs/ThingDef[defName = "NeurotrainerWorkTable"]</xpath>
         <value>
           <minifiedDef>MinifiedThing</minifiedDef>
         </value>
@@ -21,11 +21,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "NeurotrainerWorkTable"]/thingCategories</xpath>
+        <xpath>Defs/ThingDef[defName = "NeurotrainerWorkTable"]/thingCategories</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "NeurotrainerWorkTable"]</xpath>
+        <xpath>Defs/ThingDef[defName = "NeurotrainerWorkTable"]</xpath>
         <value>
           <thingCategories>
             <li>BuildingsMisc</li>
@@ -38,11 +38,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "NeurotrainerWorkTable"]/statBases/Mass</xpath>
+        <xpath>Defs/ThingDef[defName = "NeurotrainerWorkTable"]/statBases/Mass</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "NeurotrainerWorkTable"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "NeurotrainerWorkTable"]/statBases</xpath>
         <value>
           <Mass>20</Mass>
         </value>

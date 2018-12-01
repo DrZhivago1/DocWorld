@@ -6,11 +6,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldStandard"]/minifiedDef</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldStandard"]/minifiedDef</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldStandard"]</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldStandard"]</xpath>
         <value>
           <minifiedDef>MinifiedThing</minifiedDef>
         </value>
@@ -21,11 +21,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldStandard"]/thingCategories</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldStandard"]/thingCategories</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldStandard"]</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldStandard"]</xpath>
         <value>
           <thingCategories>
             <li>BuildingsMisc</li>
@@ -38,11 +38,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldStandard"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldStandard"]/statBases</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldStandard"]</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldStandard"]</xpath>
         <value>
           <statBases>
 					</statBases>
@@ -54,11 +54,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldStandard"]/statBases/Mass</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldStandard"]/statBases/Mass</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldStandard"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldStandard"]/statBases</xpath>
         <value>
           <Mass>20</Mass>
         </value>
@@ -70,11 +70,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSmall"]/minifiedDef</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSmall"]/minifiedDef</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSmall"]</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSmall"]</xpath>
         <value>
           <minifiedDef>MinifiedThing</minifiedDef>
         </value>
@@ -85,11 +85,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSmall"]/thingCategories</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSmall"]/thingCategories</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSmall"]</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSmall"]</xpath>
         <value>
           <thingCategories>
             <li>BuildingsMisc</li>
@@ -102,11 +102,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSmall"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSmall"]/statBases</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSmall"]</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSmall"]</xpath>
         <value>
           <statBases>
 					</statBases>
@@ -118,11 +118,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSmall"]/statBases/Mass</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSmall"]/statBases/Mass</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSmall"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSmall"]/statBases</xpath>
         <value>
           <Mass>10</Mass>
         </value>
@@ -134,11 +134,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_Shield_Fortress"]/minifiedDef</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_Shield_Fortress"]/minifiedDef</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_Shield_Fortress"]</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_Shield_Fortress"]</xpath>
         <value>
           <minifiedDef>MinifiedThing</minifiedDef>
         </value>
@@ -149,11 +149,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_Shield_Fortress"]/thingCategories</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_Shield_Fortress"]/thingCategories</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_Shield_Fortress"]</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_Shield_Fortress"]</xpath>
         <value>
           <thingCategories>
             <li>BuildingsMisc</li>
@@ -166,11 +166,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_Shield_Fortress"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_Shield_Fortress"]/statBases</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_Shield_Fortress"]</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_Shield_Fortress"]</xpath>
         <value>
           <statBases>
 					</statBases>
@@ -182,11 +182,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_Shield_Fortress"]/statBases/Mass</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_Shield_Fortress"]/statBases/Mass</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_Shield_Fortress"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_Shield_Fortress"]/statBases</xpath>
         <value>
           <Mass>50</Mass>
         </value>
@@ -198,11 +198,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSIF"]/minifiedDef</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSIF"]/minifiedDef</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSIF"]</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSIF"]</xpath>
         <value>
           <minifiedDef>MinifiedThing</minifiedDef>
         </value>
@@ -213,11 +213,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSIF"]/thingCategories</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSIF"]/thingCategories</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSIF"]</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSIF"]</xpath>
         <value>
           <thingCategories>
             <li>BuildingsMisc</li>
@@ -230,11 +230,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSIF"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSIF"]/statBases</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSIF"]</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSIF"]</xpath>
         <value>
           <statBases>
 					</statBases>
@@ -246,11 +246,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSIF"]/statBases/Mass</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSIF"]/statBases/Mass</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "Building_ShieldSIF"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "Building_ShieldSIF"]/statBases</xpath>
         <value>
           <Mass>30</Mass>
         </value>

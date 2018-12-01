@@ -10,14 +10,14 @@
       <operations>
         <!--Cieling Lamps Abstract-->
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="CeilingLampBase"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[@Name="CeilingLampBase"]/designationCategory</xpath>
           <value>
             <designationCategory>Lighting</designationCategory>
           </value>
         </li>
         <!--Standing Lamp Abstract-->
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="StandingLampBase"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[@Name="StandingLampBase"]/designationCategory</xpath>
           <value>
             <designationCategory>Lighting</designationCategory>
           </value>

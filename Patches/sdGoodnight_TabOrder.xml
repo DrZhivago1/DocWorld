@@ -9,7 +9,7 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/DesignationCategoryDef[defName="sd_beds"]/order</xpath>
+          <xpath>Defs/DesignationCategoryDef[defName="sd_beds"]/order</xpath>
           <value>
             <order>725</order>
           </value>

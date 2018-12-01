@@ -9,7 +9,7 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="Cooler"]/graphicData/texPath</xpath>
+          <xpath>Defs/ThingDef[defName="Cooler"]/graphicData/texPath</xpath>
           <value>
             <texPath>Things/Building/Misc/TempControl/CoolerZ</texPath>
           </value>

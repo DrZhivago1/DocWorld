@@ -14,7 +14,7 @@
         <operations>
           <!--3dg_weapon_blowgun-->
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="dgBlowgun"]/stuffCategories</xpath>
+            <xpath>Defs/ThingDef[defName="dgBlowgun"]/stuffCategories</xpath>
             <value>
               <stuffCategories>
                 <li>Metallic</li>
@@ -24,7 +24,7 @@
             </value>
           </li>
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="dgBlowgunSolanine"]/stuffCategories</xpath>
+            <xpath>Defs/ThingDef[defName="dgBlowgunSolanine"]/stuffCategories</xpath>
             <value>
               <stuffCategories>
                 <li>Metallic</li>
@@ -34,7 +34,7 @@
             </value>
           </li>
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="3dg_blowgun_neurotoxin"]/stuffCategories</xpath>
+            <xpath>Defs/ThingDef[defName="3dg_blowgun_neurotoxin"]/stuffCategories</xpath>
             <value>
               <stuffCategories>
                 <li>Metallic</li>
@@ -45,7 +45,7 @@
           </li>
           <!--dg_Weapons_Melee-->
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="3dg_MeleeWeapon_Knuckles"]/stuffCategories</xpath>
+            <xpath>Defs/ThingDef[defName="3dg_MeleeWeapon_Knuckles"]/stuffCategories</xpath>
             <value>
               <stuffCategories>
                 <li>Metallic</li>
@@ -55,7 +55,7 @@
             </value>
           </li>
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="3dg_MeleeWeapon_Staff"]/stuffCategories</xpath>
+            <xpath>Defs/ThingDef[defName="3dg_MeleeWeapon_Staff"]/stuffCategories</xpath>
             <value>
               <stuffCategories>
                 <li>Metallic</li>
@@ -65,7 +65,7 @@
             </value>
           </li>
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="3dg_MeleeWeapon_Skullclub"]/stuffCategories</xpath>
+            <xpath>Defs/ThingDef[defName="3dg_MeleeWeapon_Skullclub"]/stuffCategories</xpath>
             <value>
               <stuffCategories>
                 <li>Metallic</li>
@@ -75,7 +75,7 @@
             </value>
           </li>
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="3dg_MeleeWeapon_Macuahuitl"]/stuffCategories</xpath>
+            <xpath>Defs/ThingDef[defName="3dg_MeleeWeapon_Macuahuitl"]/stuffCategories</xpath>
             <value>
               <stuffCategories>
                 <li>Metallic</li>
@@ -86,7 +86,7 @@
           </li>
           <!--dg_Weapons_Ranged
    <li Class="PatchOperationReplace">
-   <xpath>/Defs/ThingDef[defName="3DG_StaffSling"]/stuffCategories</xpath>
+   <xpath>Defs/ThingDef[defName="3DG_StaffSling"]/stuffCategories</xpath>
    <value>
     <stuffCategories>
       <li>Metallic</li>

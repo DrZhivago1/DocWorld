@@ -9,7 +9,7 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationRemove">
-          <xpath>/Defs/designationCategoryDef[defName="RIMkea"]</xpath>
+          <xpath>Defs/designationCategoryDef[defName="RIMkea"]</xpath>
         </li>
       </operations>
     </match>

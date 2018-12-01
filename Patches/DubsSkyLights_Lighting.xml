@@ -9,19 +9,19 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="BasedSkyLight"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[@Name="BasedSkyLight"]/designationCategory</xpath>
           <value>
             <designationCategory>Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/DesignationCategoryDef[defName="Lighting"]/specialDesignatorClasses</xpath>
+          <xpath>Defs/DesignationCategoryDef[defName="Lighting"]/specialDesignatorClasses</xpath>
           <value>
             <li>Dubs_Skylight.Designator_RemoveSkylights</li>
           </value>
         </li>
         <li Class="PatchOperationRemove">
-          <xpath>/Defs/DesignationCategoryDef[defName="skylights"]</xpath>
+          <xpath>Defs/DesignationCategoryDef[defName="skylights"]</xpath>
         </li>
       </operations>
     </match>

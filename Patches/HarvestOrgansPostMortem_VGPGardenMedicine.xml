@@ -13,11 +13,11 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationTest">
-            <xpath>/Defs/RecipeDef[defName="AutopsyBasic"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <xpath>Defs/RecipeDef[defName="AutopsyBasic"]/fixedIngredientFilter/disallowedThingDefs</xpath>
             <success>Invert</success>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/RecipeDef[defName="AutopsyBasic"]/fixedIngredientFilter</xpath>
+            <xpath>Defs/RecipeDef[defName="AutopsyBasic"]/fixedIngredientFilter</xpath>
             <value>
               <disallowedThingDefs>
                 <li>VG_antibiotics</li>
@@ -40,11 +40,11 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationTest">
-            <xpath>/Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs/VG_antibiotics</xpath>
+            <xpath>Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs/VG_antibiotics</xpath>
             <success>Invert</success>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <xpath>Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
             <value>
               <li>VG_antibiotics</li>
             </value>
@@ -65,11 +65,11 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationTest">
-            <xpath>/Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs/Bandagekit</xpath>
+            <xpath>Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs/Bandagekit</xpath>
             <success>Invert</success>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <xpath>Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
             <value>
               <li>Bandagekit</li>
             </value>

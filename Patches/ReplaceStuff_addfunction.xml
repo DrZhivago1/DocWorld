@@ -9,13 +9,13 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/DesignationCategoryDef[defName="Furniture"]/specialDesignatorClasses</xpath>
+          <xpath>Defs/DesignationCategoryDef[defName="Furniture"]/specialDesignatorClasses</xpath>
           <value>
             <li>Replace_Stuff.Designator_ReplaceStuff</li>
           </value>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/DesignationCategoryDef[defName="Production"]/specialDesignatorClasses</xpath>
+          <xpath>Defs/DesignationCategoryDef[defName="Production"]/specialDesignatorClasses</xpath>
           <value>
             <li>Replace_Stuff.Designator_ReplaceStuff</li>
           </value>

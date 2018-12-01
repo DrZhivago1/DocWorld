@@ -6,11 +6,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_wind_turbine"]/minifiedDef</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_wind_turbine"]/minifiedDef</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_wind_turbine"]</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_wind_turbine"]</xpath>
         <value>
           <minifiedDef>MinifiedThing</minifiedDef>
         </value>
@@ -21,11 +21,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_wind_turbine"]/thingCategories</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_wind_turbine"]/thingCategories</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_wind_turbine"]</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_wind_turbine"]</xpath>
         <value>
           <thingCategories>
             <li>BuildingsMisc</li>
@@ -38,11 +38,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_wind_turbine"]/statBases/Mass</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_wind_turbine"]/statBases/Mass</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_wind_turbine"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_wind_turbine"]/statBases</xpath>
         <value>
           <Mass>75</Mass>
         </value>
@@ -54,11 +54,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_solar_generator"]/minifiedDef</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_solar_generator"]/minifiedDef</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_solar_generator"]</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_solar_generator"]</xpath>
         <value>
           <minifiedDef>MinifiedThing</minifiedDef>
         </value>
@@ -69,11 +69,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_solar_generator"]/thingCategories</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_solar_generator"]/thingCategories</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_solar_generator"]</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_solar_generator"]</xpath>
         <value>
           <thingCategories>
             <li>BuildingsMisc</li>
@@ -86,11 +86,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_solar_generator"]/statBases/Mass</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_solar_generator"]/statBases/Mass</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_solar_generator"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_solar_generator"]/statBases</xpath>
         <value>
           <Mass>50</Mass>
         </value>
@@ -102,11 +102,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_geothermal_generator"]/minifiedDef</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_geothermal_generator"]/minifiedDef</xpath>
         <success>Always</success>
       </li>
       <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_geothermal_generator"]/minifiedDef</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_geothermal_generator"]/minifiedDef</xpath>
       </li>
     </operations>
   </Operation>
@@ -114,11 +114,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_geothermal_generator"]/thingCategories</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_geothermal_generator"]/thingCategories</xpath>
         <success>Always</success>
       </li>
       <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_geothermal_generator"]/thingCategories</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_geothermal_generator"]/thingCategories</xpath>
       </li>
     </operations>
   </Operation>
@@ -126,11 +126,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_geothermal_generator"]/statBases/Mass</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_geothermal_generator"]/statBases/Mass</xpath>
         <success>Always</success>
       </li>
       <li Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_adv_geothermal_generator"]/statBases/Mass</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_adv_geothermal_generator"]/statBases/Mass</xpath>
       </li>
     </operations>
   </Operation>
@@ -139,11 +139,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_nuclear_power_plant"]/minifiedDef</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_nuclear_power_plant"]/minifiedDef</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_nuclear_power_plant"]</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_nuclear_power_plant"]</xpath>
         <value>
           <minifiedDef>MinifiedThing</minifiedDef>
         </value>
@@ -154,11 +154,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_nuclear_power_plant"]/thingCategories</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_nuclear_power_plant"]/thingCategories</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_nuclear_power_plant"]</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_nuclear_power_plant"]</xpath>
         <value>
           <thingCategories>
             <li>BuildingsMisc</li>
@@ -171,11 +171,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_nuclear_power_plant"]/statBases/Mass</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_nuclear_power_plant"]/statBases/Mass</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName = "sd_adv_powergen_nuclear_power_plant"]/statBases</xpath>
+        <xpath>Defs/ThingDef[defName = "sd_adv_powergen_nuclear_power_plant"]/statBases</xpath>
         <value>
           <Mass>100</Mass>
         </value>
