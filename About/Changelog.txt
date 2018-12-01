@@ -7,7 +7,9 @@ Fourth Release 01/12/2018:
 	Added underground power conduits, invisible, cost 2 steel, neutral beauty.
 	
 	IF "Architect Icons" is installed:
-		Adds a "Lighting" icon for the designation category.
+		Adds a "Lighting" icon for the "Lighting" designation category.
+		Adds a "Bomb" icon for "Remote Tech" designation category.
+		Adds a "Sketch" icon for "More Planning" designation category.
 
 	IF "Dubs Bad Hygiene" is installed:
 		Moves "Cieling Fan" to "Lighting" designation category.
