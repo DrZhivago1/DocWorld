@@ -1,6 +1,6 @@
 Date Format: DD/MM/YYYY
 
-Fourth Release :
+Fourth Release 01/12/2018:
 
 	Fixed error logs produced from redundant or missing code with PhiClient, Weapon Tech, and Colony Leadership.
 
