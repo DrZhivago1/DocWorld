@@ -14,6 +14,9 @@ Fourth Release 01/12/2018:
 
 	IF "Dubs Bad Hygiene" is installed:
 		Moves "Cieling Fan" to "Lighting" designation category.
+		
+	IF "Glass+Lights" AND "Dubs Skylights" are installed:
+		Removes "Dubs Skylights" glass and recipes in favor of "Glass+Lights".
 	
 	IF "Gloomy Furniture" is installed:
 		Adds cloth to bed recipes.
