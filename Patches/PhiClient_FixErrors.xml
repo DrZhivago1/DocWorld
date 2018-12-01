@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Remove annoying error logs from PhiClient trailing whitespace-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>PhiClient</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/MainButtonDef[defName="Server"]/description</xpath>
+          <value>
+            <description>Check the status of the goddamn trailing whitespace.</description>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
