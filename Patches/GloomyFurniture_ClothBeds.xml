@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Add Cloth cost to beds-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>GloomyFurniture</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDefs[defName="RGK_bedSingle"]/costList</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDefs[defName="RGK_bedSingle"]</xpath>
+            <value>
+              <costList>
+                <Cloth>12</Cloth>
+              </costList>
+            </value>
+          </nomatch>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDefs[defName="RGK_bedSingle"]/costList</xpath>
+            <value>
+              <Cloth>12</Cloth>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDefs[defName="RGK_bedSingleB"]/costList</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDefs[defName="RGK_bedSingleB"]</xpath>
+            <value>
+              <costList>
+                <Cloth>12</Cloth>
+              </costList>
+            </value>
+          </nomatch>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDefs[defName="RGK_bedSingleB"]/costList</xpath>
+            <value>
+              <Cloth>12</Cloth>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDefs[defName="RGK_bedDouble"]/costList</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDefs[defName="RGK_bedDouble"]</xpath>
+            <value>
+              <costList>
+                <Cloth>12</Cloth>
+              </costList>
+            </value>
+          </nomatch>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDefs[defName="RGK_bedDouble"]/costList</xpath>
+            <value>
+              <Cloth>12</Cloth>
+            </value>
+          </match>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDefs[defName="RGK_bedDoubleB"]/costList</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDefs[defName="RGK_bedDoubleB"]</xpath>
+            <value>
+              <costList>
+                <Cloth>12</Cloth>
+              </costList>
+            </value>
+          </nomatch>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDefs[defName="RGK_bedDoubleB"]/costList</xpath>
+            <value>
+              <Cloth>12</Cloth>
+            </value>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
