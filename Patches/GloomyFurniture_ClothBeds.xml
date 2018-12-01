@@ -48,14 +48,14 @@
             <xpath>Defs/ThingDefs[defName="RGK_bedDouble"]</xpath>
             <value>
               <costList>
-                <Cloth>12</Cloth>
+                <Cloth>18</Cloth>
               </costList>
             </value>
           </nomatch>
           <match Class="PatchOperationAdd">
             <xpath>Defs/ThingDefs[defName="RGK_bedDouble"]/costList</xpath>
             <value>
-              <Cloth>12</Cloth>
+              <Cloth>18</Cloth>
             </value>
           </match>
         </li>
@@ -65,14 +65,14 @@
             <xpath>Defs/ThingDefs[defName="RGK_bedDoubleB"]</xpath>
             <value>
               <costList>
-                <Cloth>12</Cloth>
+                <Cloth>18</Cloth>
               </costList>
             </value>
           </nomatch>
           <match Class="PatchOperationAdd">
             <xpath>Defs/ThingDefs[defName="RGK_bedDoubleB"]/costList</xpath>
             <value>
-              <Cloth>12</Cloth>
+              <Cloth>18</Cloth>
             </value>
           </match>
         </li>
