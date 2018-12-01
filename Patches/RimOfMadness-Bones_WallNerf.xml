@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Rim of Madness Bone Wall nerf by 50 hitpoints-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Rim of Madness - Bones</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="BoneWall"]/statBases/MaxHitPoints</xpath>
+      <value>
+        <MaxHitPoints>150</MaxHitPoints>
+      </value>
+    </match>
+  </Operation>
+</Patch>
