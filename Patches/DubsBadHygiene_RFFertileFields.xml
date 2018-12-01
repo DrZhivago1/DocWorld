@@ -14,10 +14,10 @@
         <operations>
           <!--ResearchProjects_Hygiene-->
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/ResearchProjectDef[defName="SewageSludgeComposting"]</xpath>
+            <xpath>Defs/ResearchProjectDef[defName="SewageSludgeComposting"]</xpath>
           </li>
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/ResearchProjectDef[defName="WaterFiltration"]/prerequisites</xpath>
+            <xpath>Defs/ResearchProjectDef[defName="WaterFiltration"]/prerequisites</xpath>
             <value>
               <prerequisites>
                 <li>SepticTanks</li>
@@ -26,31 +26,31 @@
           </li>
           <!--Jobs_Hygiene-->
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/JobDef[defName="LoadComposter"]</xpath>
+            <xpath>Defs/JobDef[defName="LoadComposter"]</xpath>
           </li>
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/JobDef[defName="UnloadComposter"]</xpath>
+            <xpath>Defs/JobDef[defName="UnloadComposter"]</xpath>
           </li>
           <!--BuildingsF_Irrigation-->
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName="BiosolidsComposter"]</xpath>
+            <xpath>Defs/ThingDef[defName="BiosolidsComposter"]</xpath>
           </li>
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName="BiosolidFertilizer"]</xpath>
+            <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]</xpath>
           </li>
           <!--Items_Resource_Stuff-->
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName="Biosolids"]</xpath>
+            <xpath>Defs/ThingDef[defName="Biosolids"]</xpath>
           </li>
           <!--WorkGivers-->
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/WorkGiverDef[defName="UnloadComposter"]</xpath>
+            <xpath>Defs/WorkGiverDef[defName="UnloadComposter"]</xpath>
           </li>
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/WorkGiverDef[defName="FillComposter"]</xpath>
+            <xpath>Defs/WorkGiverDef[defName="FillComposter"]</xpath>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="IrrigationSprinkler"]</xpath>
+            <xpath>Defs/ThingDef[defName="IrrigationSprinkler"]</xpath>
             <value>
               <designationCategory>RFF_Farm</designationCategory>
             </value>

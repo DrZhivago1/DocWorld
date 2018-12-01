@@ -5,11 +5,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Desert"]/forageability</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Desert"]/forageability</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Desert"]</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Desert"]</xpath>
         <value>
           <forageability>0</forageability>
         </value>
@@ -20,21 +20,21 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Oasis"]/forageability</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Oasis"]/forageability</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Oasis"]</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Oasis"]</xpath>
         <value>
           <forageability>0.25</forageability>
         </value>
       </li>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Oasis"]/foragedFood</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Oasis"]/foragedFood</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Oasis"]</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Oasis"]</xpath>
         <value>
           <foragedFood>TKKN_PricklyPear</foragedFood>
         </value>
@@ -45,21 +45,21 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Grasslands"]/forageability</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Grasslands"]/forageability</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Grasslands"]</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Grasslands"]</xpath>
         <value>
           <forageability>1</forageability>
         </value>
       </li>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Grasslands"]/foragedFood</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Grasslands"]/foragedFood</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Grasslands"]</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Grasslands"]</xpath>
         <value>
           <foragedFood>TKKN_Cattails</foragedFood>
         </value>
@@ -70,21 +70,21 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]/forageability</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Savanna"]/forageability</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Savanna"]</xpath>
         <value>
           <forageability>0.80</forageability>
         </value>
       </li>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]/foragedFood</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Savanna"]/foragedFood</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/BiomeDef[defName="TKKN_Savanna"]</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_Savanna"]</xpath>
         <value>
           <foragedFood>TKKN_WildGreens</foragedFood>
         </value>
@@ -95,11 +95,11 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/BiomeDef[defName="TKKN_VolcanicFlow"]/forageability</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_VolcanicFlow"]/forageability</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/BiomeDef[defName="TKKN_VolcanicFlow"]</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_VolcanicFlow"]</xpath>
         <value>
           <forageability>0</forageability>
         </value>
@@ -110,21 +110,21 @@
     <success>Always</success>
     <operations>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/BiomeDef[defName="TKKN_RedwoodForest"]/forageability</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_RedwoodForest"]/forageability</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/BiomeDef[defName="TKKN_RedwoodForest"]</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_RedwoodForest"]</xpath>
         <value>
           <forageability>0.75</forageability>
         </value>
       </li>
       <li Class="PatchOperationTest">
-        <xpath>/Defs/BiomeDef[defName="TKKN_RedwoodForest"]/foragedFood</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_RedwoodForest"]/foragedFood</xpath>
         <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
-        <xpath>/Defs/BiomeDef[defName="TKKN_RedwoodForest"]</xpath>
+        <xpath>Defs/BiomeDef[defName="TKKN_RedwoodForest"]</xpath>
         <value>
           <foragedFood>RawBerries</foragedFood>
         </value>

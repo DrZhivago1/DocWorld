@@ -9,25 +9,25 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="RIKWallLampBase"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[@Name="RIKWallLampBase"]/designationCategory</xpath>
           <value>
             <designationCategory>Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="RIKLampBase2"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[@Name="RIKLampBase2"]/designationCategory</xpath>
           <value>
             <designationCategory>Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="RIKLampBase"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[@Name="RIKLampBase"]/designationCategory</xpath>
           <value>
             <designationCategory>Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="BOLTASKLamp"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[defName="BOLTASKLamp"]/designationCategory</xpath>
           <value>
             <designationCategory>Lighting</designationCategory>
           </value>

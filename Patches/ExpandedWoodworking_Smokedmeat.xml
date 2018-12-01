@@ -14,7 +14,7 @@
         <operations>
           <!--Cook_Smokepit-->
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="Smokepit"]/costList</xpath>
+            <xpath>Defs/ThingDef[defName="Smokepit"]/costList</xpath>
             <value>
               <stuffCategories>
                 <li>RawWoody</li>
@@ -23,7 +23,7 @@
             </value>
           </li>
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName="Smokepit"]/constructEffect</xpath>
+            <xpath>Defs/ThingDef[defName="Smokepit"]/constructEffect</xpath>
           </li>
         </operations>
       </match>

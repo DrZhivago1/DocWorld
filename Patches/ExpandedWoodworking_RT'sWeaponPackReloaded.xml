@@ -14,7 +14,7 @@
         <operations>
           <!--RecipeDefs_Ranged-->
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/RecipeDef[defName="SlingshotCraft"]/ingredients</xpath>
+            <xpath>Defs/RecipeDef[defName="SlingshotCraft"]/ingredients</xpath>
             <value>
               <ingredients>
                 <li>
@@ -38,7 +38,7 @@
             </value>
           </li>
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/RecipeDef[defName="SlingshotCraft"]/fixedIngredientFilter</xpath>
+            <xpath>Defs/RecipeDef[defName="SlingshotCraft"]/fixedIngredientFilter</xpath>
             <value>
               <fixedIngredientFilter>
                 <categories>
@@ -50,7 +50,7 @@
             </value>
           </li>
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/RecipeDef[defName="SlingshotCraft"]/recipeUsers</xpath>
+            <xpath>Defs/RecipeDef[defName="SlingshotCraft"]/recipeUsers</xpath>
             <value>
               <recipeUsers>
                 <li>CraftingSpot</li>

@@ -9,25 +9,25 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="RIKFurnitureBase"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[@Name="RIKFurnitureBase"]/designationCategory</xpath>
           <value>
             <designationCategory>Furniture</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="RIKTableBase"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[@Name="RIKTableBase"]/designationCategory</xpath>
           <value>
             <designationCategory>Furniture</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="RIKTableBaseTwo"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[@Name="RIKTableBaseTwo"]/designationCategory</xpath>
           <value>
             <designationCategory>Furniture</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="FEERSTELL"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[defName="FEERSTELL"]/designationCategory</xpath>
           <value>
             <designationCategory>Furniture</designationCategory>
           </value>

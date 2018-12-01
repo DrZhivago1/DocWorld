@@ -10,7 +10,7 @@
       <operations>
         <!--Furniture_Chandeliers-->
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[@Name="ChanPart_Support_Base"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[@Name="ChanPart_Support_Base"]/designationCategory</xpath>
           <value>
             <designationCategory>Lighting</designationCategory>
           </value>

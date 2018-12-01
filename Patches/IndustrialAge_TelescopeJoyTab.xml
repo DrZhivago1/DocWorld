@@ -9,7 +9,7 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Estate_Telescope"]</xpath>
+          <xpath>Defs/ThingDef[defName="Estate_Telescope"]</xpath>
           <value>
             <designationCategory>Joy</designationCategory>
           </value>

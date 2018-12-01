@@ -9,13 +9,13 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/DesignationCategoryDef[defName="RFF_Farm"]/order</xpath>
+          <xpath>Defs/DesignationCategoryDef[defName="RFF_Farm"]/order</xpath>
           <value>
             <order>720</order>
           </value>
         </li>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/DesignationCategoryDef[defName="RFF_Adds"]/order</xpath>
+          <xpath>Defs/DesignationCategoryDef[defName="RFF_Adds"]/order</xpath>
           <value>
             <order>40</order>
           </value>

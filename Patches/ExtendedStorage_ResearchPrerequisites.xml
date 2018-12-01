@@ -9,11 +9,11 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationTest">
-          <xpath>/Defs/ThingDef[defName="Storage_HazMatContainer"]/researchPrerequisites</xpath>
+          <xpath>Defs/ThingDef[defName="Storage_HazMatContainer"]/researchPrerequisites</xpath>
           <success>Invert</success>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Storage_HazMatContainer"]</xpath>
+          <xpath>Defs/ThingDef[defName="Storage_HazMatContainer"]</xpath>
           <value>
             <researchPrerequisites>
               <li>ComplexFurniture</li>
@@ -31,11 +31,11 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationTest">
-          <xpath>/Defs/ThingDef[defName="Storage_FabricHamper"]/researchPrerequisites</xpath>
+          <xpath>Defs/ThingDef[defName="Storage_FabricHamper"]/researchPrerequisites</xpath>
           <success>Invert</success>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Storage_FabricHamper"]</xpath>
+          <xpath>Defs/ThingDef[defName="Storage_FabricHamper"]</xpath>
           <value>
             <researchPrerequisites>
               <li>ComplexFurniture</li>
@@ -53,11 +53,11 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationTest">
-          <xpath>/Defs/ThingDef[defName="Storage_Locker"]/researchPrerequisites</xpath>
+          <xpath>Defs/ThingDef[defName="Storage_Locker"]/researchPrerequisites</xpath>
           <success>Invert</success>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Storage_Locker"]</xpath>
+          <xpath>Defs/ThingDef[defName="Storage_Locker"]</xpath>
           <value>
             <researchPrerequisites>
               <li>ComplexFurniture</li>
@@ -75,11 +75,11 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationTest">
-          <xpath>/Defs/ThingDef[defName="Storage_MedicineCabinet"]/researchPrerequisites</xpath>
+          <xpath>Defs/ThingDef[defName="Storage_MedicineCabinet"]/researchPrerequisites</xpath>
           <success>Invert</success>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Storage_MedicineCabinet"]</xpath>
+          <xpath>Defs/ThingDef[defName="Storage_MedicineCabinet"]</xpath>
           <value>
             <researchPrerequisites>
               <li>ComplexFurniture</li>
@@ -97,11 +97,11 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationTest">
-          <xpath>/Defs/ThingDef[defName="Storage_Skip"]/researchPrerequisites</xpath>
+          <xpath>Defs/ThingDef[defName="Storage_Skip"]/researchPrerequisites</xpath>
           <success>Invert</success>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Storage_Skip"]</xpath>
+          <xpath>Defs/ThingDef[defName="Storage_Skip"]</xpath>
           <value>
             <researchPrerequisites>
               <li>ComplexFurniture</li>

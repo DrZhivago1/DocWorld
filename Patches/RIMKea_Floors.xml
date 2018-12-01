@@ -9,13 +9,13 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/TerrainDef[@Name="RIKStoneFloorBase"]/designationCategory</xpath>
+          <xpath>Defs/TerrainDef[@Name="RIKStoneFloorBase"]/designationCategory</xpath>
           <value>
             <designationCategory>Floors</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/TerrainDef[@Name="RIKWoodFloorBase"]/designationCategory</xpath>
+          <xpath>Defs/TerrainDef[@Name="RIKWoodFloorBase"]/designationCategory</xpath>
           <value>
             <designationCategory>Floors</designationCategory>
           </value>
