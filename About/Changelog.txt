@@ -8,6 +8,9 @@ Fourth Release :
 
 	IF "Dubs Bad Hygiene" is installed:
 		Moves "Cieling Fan" to "Lighting" designation category.
+	
+	IF "Gloomy Furniture" is installed:
+		Adds cloth to bed recipes.
 		
 	IF "Harvest Organs" AND "VGP Garden Medicine" are installed:
 		Removes most VGP medicine from harvesting recipes where overpowered.
@@ -19,6 +22,12 @@ Fourth Release :
 		Moves light sources to "Lighting" tab.
 		Makes gas lamps actually require and use chemfuel.
 		Moves telescope to "Joy"(aka Recreation) tab.
+	
+	IF "Rim of Madness - Bones" is installed:
+		Nerfs bone wall by 50 hitpoints.
+	
+	IF "Rim of Madness - Bones" AND "Expanded Woodworking" are installed:
+		Allows bones to be used in wood recipes where it makes sense. (Minor bug allows "WoodLog Walls" to be made of bone)
 
 	IF "RIMkea" is installed:
 		Moves light sources to "Lighting" tab.
