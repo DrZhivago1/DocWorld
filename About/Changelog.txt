@@ -31,6 +31,7 @@ Fourth Release :
 	
 	IF "Rim of Madness - Bones" AND "Expanded Woodworking" are installed:
 		Allows bones to be used in wood recipes where it makes sense. (Minor bug allows "WoodLog Walls" to be made of bone)
+	
 	IF "Rim of Madness - Bones" AND "Stuffed Floors" are installed:
 		Moves all floors into a single drop-down menu on the "Foors" designation category.
 
