@@ -1,6 +1,11 @@
 Date Format: DD/MM/YYYY
 
 Fourth Release :
+
+	Fixed error logs produced from redundant or missing code with PhiClient, Weapon Tech, and Colony Leadership.
+
+	Added underground power conduits, invisible, cost 2 steel, neutral beauty.
+
 	IF "Dubs Bad Hygiene" is installed:
 		Moves "Cieling Fan" to "Lighting" designation category.
 		
