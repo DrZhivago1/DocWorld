@@ -1,5 +1,10 @@
 Date Format: DD/MM/YYYY
 
+Fifth Release:
+	
+	IF "Smoked Meat" is installed:
+		Hides ability to smoke meat behind pemmican research, the smoke house also requires complex furniture.
+
 Fourth Release 01/12/2018:
 
 	Optimized this mods patch coding for faster game load times.
