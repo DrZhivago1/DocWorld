@@ -2,7 +2,7 @@ Date Format: DD/MM/YYYY
 
 Fourth Release 01/12/2018:
 
-	Optimized patch coding for faster game load times.
+	Optimized this mods patch coding for faster game load times.
 	
 	Fixed error logs produced from redundant or missing code with PhiClient, Weapon Tech, and Colony Leadership.
 
