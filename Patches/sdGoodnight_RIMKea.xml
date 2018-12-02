@@ -13,6 +13,12 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="PILFURBed"]</xpath>
+            <value>
+              <designationCategory>sd_beds</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="SNOREGGSingle"]</xpath>
             <value>
               <designationCategory>sd_beds</designationCategory>
