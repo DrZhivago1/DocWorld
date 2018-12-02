@@ -33,6 +33,7 @@ Fourth Release 01/12/2018:
 		Moves light sources to "Lighting" tab.
 		Makes gas lamps actually require and use chemfuel.
 		Moves telescope to "Joy"(aka Recreation) tab.
+		Makes "Complex Furniture" required research for "Telescope".
 	
 	IF "Rim of Madness - Bones" is installed:
 		Nerfs bone wall by 50 hitpoints.
