@@ -1,123 +1,123 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-
-<!--Dubs Hygiene personal preference settings-->
-
-<Operation Class="PatchOperationFindMod">
+  <!--Dubs Hygiene personal preference settings-->
+  <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Dubs Bad Hygiene</li>
     </mods>
     <match Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
-    <!--DesignationCategories-->
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/DesignationCategoryDef[defName="HygieneMisc"]</xpath>
-    </li>
-    <!--BuildingsA_Pipes-->
-    <li Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="airPipe"]/designationCategory</xpath>
-    <value>
-    <designationCategory>Temperature</designationCategory>
-    </value>
-    </li>
-    <!--BuildingsB_Hygiene-->
-    <li Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[defName="ToiletStallDoor"]</xpath>
-    <value>
-    <designationCategory>Structure</designationCategory>
-    </value>
-    </li>
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef[defName="LitterBox"]/designationCategory</xpath>
-    </li>
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef[defName="KitchenSink"]/designationCategory</xpath>
-    </li>
-    <!--BuildingsC_Joy-->
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef[defName="WashingMachine"]/designationCategory</xpath>
-    </li>
-    <!--BuildingsE_Heating-->
-    <li Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[@Name="BasedHeating"]</xpath>
-    <value>
-    <designationCategory>Temperature</designationCategory>
-    </value>
-    </li>
-    <li Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[defName="SolarHeater"]</xpath>
-    <value>
-    <designationCategory>Temperature</designationCategory>
-    </value>
-    </li>
-    <li Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[@Name="BaseRadiator"]</xpath>
-    <value>
-    <designationCategory>Temperature</designationCategory>
-    </value>
-    </li>
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef[defName="AirConOutdoorUnit"]/designationCategory</xpath>
-    </li>
-    <li Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[@Name="BaseAircon"]/designationCategory</xpath>
-    <value>
-    <designationCategory>Temperature</designationCategory>
-    </value>
-    </li>
-    <!--BuildingsF_Irrigation-->
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef[defName="IrrigationSprinkler"]/designationCategory</xpath>
-    </li>
-    <li Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="FireSprinkler"]/designationCategory</xpath>
-    <value>
-    <designationCategory>Misc</designationCategory>
-    </value>
-    </li>
-    <li Class="PatchOperationRemove">
-    <xpath>/Defs/ThingDef[defName="plumbingValve"]/designationCategory</xpath>
-    </li>
-    </operations>
+      <success>Always</success>
+      <operations>
+        <!--DesignationCategories-->
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/DesignationCategoryDef[defName="HygieneMisc"]</xpath>
+        </li>
+        <!--BuildingsA_Pipes-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="airPipe"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Temperature</designationCategory>
+          </value>
+        </li>
+        <!--BuildingsB_Hygiene-->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="ToiletStallDoor"]</xpath>
+          <value>
+            <designationCategory>Structure</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="LitterBox"]/designationCategory</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="KitchenSink"]/designationCategory</xpath>
+        </li>
+        <!--BuildingsC_Joy-->
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="WashingMachine"]/designationCategory</xpath>
+        </li>
+        <!--BuildingsE_Heating-->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[@Name="BasedHeating"]</xpath>
+          <value>
+            <designationCategory>Temperature</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="SolarHeater"]</xpath>
+          <value>
+            <designationCategory>Temperature</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[@Name="BaseRadiator"]</xpath>
+          <value>
+            <designationCategory>Temperature</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="CeilingFan"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="AirConOutdoorUnit"]/designationCategory</xpath>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="BaseAircon"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Temperature</designationCategory>
+          </value>
+        </li>
+        <!--BuildingsF_Irrigation-->
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="IrrigationSprinkler"]/designationCategory</xpath>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="FireSprinkler"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Misc</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="plumbingValve"]/designationCategory</xpath>
+        </li>
+      </operations>
     </match>
-</Operation>
-
-<Operation Class="PatchOperationFindMod">
-   <mods>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
       <li>Dubs Bad Hygiene</li>
-   </mods>
-   <match Class="PatchOperationSequence">
-   <success>Always</success>
-   <operations>
-   <li Class="PatchOperationTest">
-   <success>Always</success>
-   <xpath>/Defs/ThingDef[defName="BiosolidsComposter"]/designationCategory</xpath>
-   </li>
-   <li Class="PatchOperationRemove">
-   <xpath>/Defs/ThingDef[defName="BiosolidsComposter"]/designationCategory</xpath>
-   </li>
-   </operations>
-   </match>
-</Operation>
-
-
-<Operation Class="PatchOperationFindMod">
-   <mods>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="BiosolidsComposter"]/designationCategory</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="BiosolidsComposter"]/designationCategory</xpath>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
       <li>Dubs Bad Hygiene</li>
-   </mods>
-   <match Class="PatchOperationSequence">
-   <success>Always</success>
-   <operations>
-   <li Class="PatchOperationTest">
-   <success>Always</success>
-   <xpath>/Defs/ThingDef[defName="BiosolidFertilizer"]/designationCategory</xpath>
-   </li>
-   <li Class="PatchOperationRemove">
-   <xpath>/Defs/ThingDef[defName="BiosolidFertilizer"]/designationCategory</xpath>
-   </li>
-   </operations>
-   </match>
-</Operation>
-
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]/designationCategory</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]/designationCategory</xpath>
+        </li>
+      </operations>
+    </match>
+  </Operation>
 </Patch>

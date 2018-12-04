@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Remove Alpha Animals Cactipine Quill from Harvest recipes-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Harvest Organs Post Mortem - 4.1 [1.0]</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Alpha Animals</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationTest">
+            <xpath>Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs/AA_CactipineQuill</xpath>
+            <success>Invert</success>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <value>
+              <li>AA_CactipineQuill</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+  <!--<Operation Class="PatchOperationFindMod">
+   <mods>
+      <li>Harvest Organs Post Mortem - 4.1 [1.0]</li>
+   </mods>
+   <match Class="PatchOperationFindMod">
+   <mods>
+      <li>Alpha Animals</li>
+   </mods>
+   <match Class="PatchOperationSequence">
+   <success>Always</success>
+   <operations>
+   <li Class="PatchOperationTest">
+   <xpath>Defs/RecipeDef[defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs/AA_CactipineQuill</xpath>
+   <success>Invert</success>
+   </li>
+   <li Class="PatchOperationAdd">
+   <xpath>Defs/RecipeDef[defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+   <value>
+   <li>AA_CactipineQuill</li>
+   </value>
+   </li>
+   </operations>
+   </match>
+   </match>
+   </Operation>-->
+</Patch>

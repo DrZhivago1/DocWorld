@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Move Rimkea Furniture to Furniture tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RIMkea</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="RIKFurnitureBase"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="RIKTableBase"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="RIKTableBaseTwo"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="FEERSTELL"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

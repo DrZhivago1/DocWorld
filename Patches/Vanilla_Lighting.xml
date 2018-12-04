@@ -1,24 +1,21 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-
-<!--Vanilla Lights moved to Lighting Tab-->
-
-<Operation Class="PatchOperationSequence">
+  <!--Vanilla Lights moved to Lighting Tab-->
+  <Operation Class="PatchOperationSequence">
     <success>Always</success>
     <operations>
-    <li Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[defName="TorchLamp"]/designationCategory</xpath>
-    <value>
-    <designationCategory>Lighting</designationCategory>
-    </value>
-    </li>
-    <li Class="PatchOperationReplace">
-    <xpath>/Defs/ThingDef[@Name="LampBase"]/designationCategory</xpath>
-    <value>
-    <designationCategory>Lighting</designationCategory>
-    </value>
-    </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="TorchLamp"]/designationCategory</xpath>
+        <value>
+          <designationCategory>Lighting</designationCategory>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[@Name="LampBase"]/designationCategory</xpath>
+        <value>
+          <designationCategory>Lighting</designationCategory>
+        </value>
+      </li>
     </operations>
-</Operation>
-
+  </Operation>
 </Patch>

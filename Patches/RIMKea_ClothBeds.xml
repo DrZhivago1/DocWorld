@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Add Cloth cost to build "RIMKea" beds-->
+  <!--With Costlist-->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SNOREGGSingle"]/costList</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SNOREGGSingle"]/costList</xpath>
+        <value>
+          <Cloth>12</Cloth>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SNOREGGDouble"]/costList</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SNOREGGDouble"]/costList</xpath>
+        <value>
+          <Cloth>18</Cloth>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "KRUDNEPPSingle"]/costList</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "KRUDNEPPSingle"]/costList</xpath>
+        <value>
+          <Cloth>12</Cloth>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SLABNEPPDouble"]/costList</xpath>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SLABNEPPDouble"]/costList</xpath>
+        <value>
+          <Cloth>18</Cloth>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <!--Without costList-->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SNOREGGSingle"]/costList</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SNOREGGSingle"]</xpath>
+        <value>
+          <costList>
+            <Cloth>12</Cloth>
+          </costList>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SNOREGGDouble"]/costList</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SNOREGGDouble"]</xpath>
+        <value>
+          <costList>
+            <Cloth>18</Cloth>
+          </costList>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "KRUDNEPPSingle"]/costList</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "KRUDNEPPSingle"]</xpath>
+        <value>
+          <costList>
+            <Cloth>12</Cloth>
+          </costList>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SLABNEPPDouble"]/costList</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SLABNEPPDouble"]</xpath>
+        <value>
+          <costList>
+            <Cloth>18</Cloth>
+          </costList>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

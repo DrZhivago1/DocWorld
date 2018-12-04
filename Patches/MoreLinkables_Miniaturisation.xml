@@ -1,196 +1,180 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-
-<!--Make surgical lamp, surgical instruments, and advanced multianalyzer minifiable-->
-
-<!--Surgical Lamp-->
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "SurgicalLamp"]/minifiedDef</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "SurgicalLamp"]</xpath>
-				<value>
-					<minifiedDef>MinifiedThing</minifiedDef>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "SurgicalLamp"]/thingCategories</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "SurgicalLamp"]</xpath>
-				<value>
-					<thingCategories>
-						<li>BuildingsMisc</li>
-					</thingCategories>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "SurgicalLamp"]/statBases</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "SurgicalLamp"]</xpath>
-				<value>
-					<statBases>
+  <!--Make surgical lamp, surgical instruments, and advanced multianalyzer minifiable-->
+  <!--Surgical Lamp-->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SurgicalLamp"]/minifiedDef</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SurgicalLamp"]</xpath>
+        <value>
+          <minifiedDef>MinifiedThing</minifiedDef>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SurgicalLamp"]/thingCategories</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SurgicalLamp"]</xpath>
+        <value>
+          <thingCategories>
+            <li>BuildingsMisc</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SurgicalLamp"]/statBases</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SurgicalLamp"]</xpath>
+        <value>
+          <statBases>
 					</statBases>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-	
-		<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "SurgicalLamp"]/statBases/mass</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "SurgicalLamp"]/statBases</xpath>
-				<value>
-					<Mass>5</Mass>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-<!--SurgicalInstruments-->
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "SurgicalInstruments"]/minifiedDef</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "SurgicalInstruments"]</xpath>
-				<value>
-					<minifiedDef>MinifiedThing</minifiedDef>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "SurgicalInstruments"]/thingCategories</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "SurgicalInstruments"]</xpath>
-				<value>
-					<thingCategories>
-						<li>BuildingsMisc</li>
-					</thingCategories>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-	
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "SurgicalInstruments"]/statBases</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "SurgicalInstruments"]</xpath>
-				<value>
-					<statBases>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SurgicalLamp"]/statBases/mass</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SurgicalLamp"]/statBases</xpath>
+        <value>
+          <Mass>5</Mass>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <!--SurgicalInstruments-->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SurgicalInstruments"]/minifiedDef</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SurgicalInstruments"]</xpath>
+        <value>
+          <minifiedDef>MinifiedThing</minifiedDef>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SurgicalInstruments"]/thingCategories</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SurgicalInstruments"]</xpath>
+        <value>
+          <thingCategories>
+            <li>BuildingsMisc</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SurgicalInstruments"]/statBases</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SurgicalInstruments"]</xpath>
+        <value>
+          <statBases>
 					</statBases>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "SurgicalInstruments"]/statBases/Mass</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "SurgicalInstruments"]/statBases</xpath>
-				<value>
-					<Mass>10</Mass>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-	
-<!--AdvancedMultiAnalyzer-->
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "AdvancedMultiAnalyzer"]/minifiedDef</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "AdvancedMultiAnalyzer"]</xpath>
-				<value>
-					<minifiedDef>MinifiedThing</minifiedDef>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "AdvancedMultiAnalyzer"]/thingCategories</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "AdvancedMultiAnalyzer"]</xpath>
-				<value>
-					<thingCategories>
-						<li>BuildingsMisc</li>
-					</thingCategories>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationTest">
-				<xpath>/Defs/ThingDef[defName = "AdvancedMultiAnalyzer"]/statBases/Mass</xpath>
-				<success>Invert</success>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/ThingDef[defName = "AdvancedMultiAnalyzer"]/statBases</xpath>
-				<value>
-					<Mass>50</Mass>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-	
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "SurgicalInstruments"]/statBases/Mass</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "SurgicalInstruments"]/statBases</xpath>
+        <value>
+          <Mass>10</Mass>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <!--AdvancedMultiAnalyzer-->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "AdvancedMultiAnalyzer"]/minifiedDef</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "AdvancedMultiAnalyzer"]</xpath>
+        <value>
+          <minifiedDef>MinifiedThing</minifiedDef>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "AdvancedMultiAnalyzer"]/thingCategories</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "AdvancedMultiAnalyzer"]</xpath>
+        <value>
+          <thingCategories>
+            <li>BuildingsMisc</li>
+          </thingCategories>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName = "AdvancedMultiAnalyzer"]/statBases/Mass</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName = "AdvancedMultiAnalyzer"]/statBases</xpath>
+        <value>
+          <Mass>50</Mass>
+        </value>
+      </li>
+    </operations>
+  </Operation>
 </Patch>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Move all Vanilla beds into "Beds" designation category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[sd] goodnight</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="SleepingSpot"]/designationCategory</xpath>
+          <value>
+            <designationCategory>sd_beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="DoubleSleepingSpot"]/designationCategory</xpath>
+          <value>
+            <designationCategory>sd_beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="AnimalSleepingSpot"]/designationCategory</xpath>
+          <value>
+            <designationCategory>sd_beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="Bed"]</xpath>
+          <value>
+            <designationCategory>sd_beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="DoubleBed"]</xpath>
+          <value>
+            <designationCategory>sd_beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="RoyalBed"]</xpath>
+          <value>
+            <designationCategory>sd_beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="HospitalBed"]</xpath>
+          <value>
+            <designationCategory>sd_beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="Bedroll"]</xpath>
+          <value>
+            <designationCategory>sd_beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="BedrollDouble"]</xpath>
+          <value>
+            <designationCategory>sd_beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="AnimalSleepingBox"]</xpath>
+          <value>
+            <designationCategory>sd_beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="AnimalBed"]</xpath>
+          <value>
+            <designationCategory>sd_beds</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

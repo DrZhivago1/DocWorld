@@ -1,45 +1,41 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-
-
-<!--Add animal wool from Animal Collab Project to VGP loom "blended wool" recipe-->
-
-   <Operation Class="PatchOperationFindMod">
-   <mods>
-    <li>VGP Garden Fabrics</li>
-   </mods>
-   <match Class="PatchOperationFindMod">
-   <mods>
-    <li>AnimalCollabProj</li>
-   </mods>
-   <match Class="PatchOperationSequence">
-   <success>Always</success>
-   <operations>
-    <li Class="PatchOperationAdd">
-    <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/ingredients/li/filter/thingDefs</xpath>
-    <value>
-    <li>ACPAngoraWool</li>
-    <li>ACPLlamaWool</li>
-    <li>ACPBisondown</li>
-    <li>ACPBDireWolfWool</li>
-    <li>ACPSheepWool</li>
-    <li>ACPFerretSilk</li>
-    </value>
-    </li>
-    <li Class="PatchOperationAdd">
-    <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/fixedIngredientFilter/thingDefs</xpath>
-    <value>
-    <li>ACPAngoraWool</li>
-    <li>ACPLlamaWool</li>
-    <li>ACPBisondown</li>
-    <li>ACPBDireWolfWool</li>
-    <li>ACPSheepWool</li>
-    <li>ACPFerretSilk</li>
-    </value>
-    </li>
-   </operations>
-   </match>
-   </match>
-   </Operation>
-
+  <!--Add animal wool from Animal Collab Project to VGP loom "blended wool" recipe-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>AnimalCollabProj</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="Makeblendedwool"]/ingredients/li/filter/thingDefs</xpath>
+            <value>
+              <li>ACPAngoraWool</li>
+              <li>ACPLlamaWool</li>
+              <li>ACPBisondown</li>
+              <li>ACPBDireWolfWool</li>
+              <li>ACPSheepWool</li>
+              <li>ACPFerretSilk</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="Makeblendedwool"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>ACPAngoraWool</li>
+              <li>ACPLlamaWool</li>
+              <li>ACPBisondown</li>
+              <li>ACPBDireWolfWool</li>
+              <li>ACPSheepWool</li>
+              <li>ACPFerretSilk</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
 </Patch>

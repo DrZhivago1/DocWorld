@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Alphabetize "Remote Tech" designation category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Remote Tech</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/DesignationCategoryDef[defName="rxRemoteTech"]/order</xpath>
+          <value>
+            <order>275</order>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

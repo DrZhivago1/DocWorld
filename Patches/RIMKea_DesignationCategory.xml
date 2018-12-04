@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Remove "RIMKea" designation category, as all items have been moved to their respective tabs-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RIMkea</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/designationCategoryDef[defName="RIMkea"]</xpath>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

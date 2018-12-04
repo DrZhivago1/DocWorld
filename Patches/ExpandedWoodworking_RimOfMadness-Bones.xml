@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Make "Rim of Madness - Bones" and "Expanded Woodworking" compatible-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Rim of Madness - Bones</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Expanded Woodworking</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationTest">
+            <xpath>Defs/ThingDef[defName="BoneItem"]/stuffProps/categories[li = "Woody"]</xpath>
+            <success>Always</success>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="BoneItem"]/stuffProps/categories[li="Woody"]</xpath>
+            <value>
+              <categories>
+                <li>RawWoody</li>
+              </categories>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>

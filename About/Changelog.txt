@@ -1,5 +1,84 @@
 Date Format: DD/MM/YYYY
 
+Fifth Release:
+	
+	IF "Smoked Meat" is installed:
+		Hides ability to smoke meat behind pemmican research, the smoke house also requires complex furniture.
+
+Fourth Release 01/12/2018:
+
+	Optimized this mods patch coding for faster game load times.
+	
+	Fixed error logs produced from redundant or missing code with PhiClient, Weapon Tech, and Colony Leadership.
+
+	Added underground power conduits, invisible, cost 2 steel, neutral beauty.
+	
+	IF "Architect Icons" is installed:
+		Adds a "Lighting" icon for the "Lighting" designation category.
+		Adds a "Bomb" icon for "Remote Tech" designation category.
+		Adds a "Sketch" icon for "More Planning" designation category.
+		Adds a "Saloon" icon for "Gloomy Furniture" designation category.
+
+	IF "Dubs Bad Hygiene" is installed:
+		Moves "Cieling Fan" to "Lighting" designation category.
+		
+	IF "Glass+Lights" AND "Dubs Skylights" are installed:
+		Removes "Dubs Skylights" glass and recipes in favor of "Glass+Lights".
+	
+	IF "Gloomy Furniture" is installed:
+		Adds cloth to bed recipes.
+		
+	IF "Harvest Organs" AND "VGP Garden Medicine" are installed:
+		Removes most VGP medicine from harvesting recipes where overpowered.
+
+	IF "Harvest Organs" AND "Alpha Animals" are installed:
+		Removes "Cactipine Quill" from harvesting recipes where overpowered.
+
+	IF "Industrial Age - Objects and Furniture" is installed:
+		Moves light sources to "Lighting" tab.
+		Makes gas lamps actually require and use chemfuel.
+		Moves telescope to "Joy"(aka Recreation) tab.
+		Makes "Complex Furniture" required research for "Telescope".
+	
+	IF "Rim of Madness - Bones" is installed:
+		Nerfs bone wall by 50 hitpoints.
+	
+	IF "Rim of Madness - Bones" AND "Expanded Woodworking" are installed:
+		Allows bones to be used in wood recipes where it makes sense. (Minor bug allows "WoodLog Walls" to be made of bone)
+	
+	IF "Rim of Madness - Bones" AND "Stuffed Floors" are installed:
+		Moves all floors into a single drop-down menu on the "Foors" designation category.
+
+	IF "RIMkea" is installed:
+		Moves light sources to "Lighting" tab.
+		Moves furniture to "Furniture" tab.
+		Adds cloth requirement to colonist beds.
+		Moves floors to "Floors" tab.
+		Removes designation category "RIMkea" as all items are moved out and to Vanilla tabs.
+
+	IF "RIMkea" AND "Stuffed Floors" are installed:
+		Removes "RIMkea" stone floors as they are redundant.
+
+	IF "[sd] goodnight" AND "RIMkea" are installed:
+		Moves "RIMkea" beds to "Beds" tab.
+
+Third Release 29/11/2018:
+	Alphabetize designation categories for Vanilla, More Planning, RF Fertile Fields, Fences and No Floors, Colony Leadership, sd Goodnight, Dubs Bad Hygiene, Remote Tech.
+	
+	Vanilla colonist beds require cloth to build.
+	
+	IF "[sd] goodnight" is installed:
+		Moves all Vanilla beds to "Beds" designation category.
+		
+	IF "Extended Storage" is installed:
+		Most storage containers now require "Complex Furniture" research. (Not food basket or wooden pallet).
+		
+	IF "Replace Stuff" is installed:
+		Adds "Replace Stuff" function to Furniture and Production designation category.
+		
+	IF "Wall Light" is installed:
+		Moves lights to "Lighting" designation category.
+
 Second Release 26/11/2018:
 	IF "Dubs SkyLights" is installed:
 		Moves skylights to "Lighting" designation category.
