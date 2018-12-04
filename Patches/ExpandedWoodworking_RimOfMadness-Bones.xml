@@ -13,40 +13,18 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationTest">
-            <xpath>Defs/ThingDef[defName="BoneItem"]/stuffProps/categories/Woody</xpath>
+            <xpath>Defs/ThingDef[defName="BoneItem"]/stuffProps/categories[li = "Woody"]</xpath>
             <success>Always</success>
           </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="BoneItem"]/stuffProps/categories</xpath>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="BoneItem"]/stuffProps/categories[li="Woody"]</xpath>
+            <value>
+              <categories>
+                <li>RawWoody</li>
+              </categories>
+            </value>
           </li>
         </operations>
-      </match>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Rim of Madness - Bones</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Expanded Woodworking</li>
-      </mods>
-      <match Class="PatchOperationConditional">
-        <xpath>Defs/ThingDef[defName="BoneItem"]/stuffProps/categories</xpath>
-        <nomatch Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="BoneItem"]/stuffProps</xpath>
-          <value>
-            <categories>
-              <li>RawWoody</li>
-            </categories>
-          </value>
-        </nomatch>
-        <match Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="BoneItem"]/stuffProps/categories</xpath>
-          <value>
-            <li>RawWoody</li>
-          </value>
-        </match>
       </match>
     </match>
   </Operation>
