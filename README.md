@@ -3,7 +3,7 @@ A mod of combined patches for my RimWorld mod collection [The Doctor's World](ht
 
 The basics are: mod moves items to new tabs and organizes layout, balances some recipes for various items, enhances minaturisation abilities, improves inter-mod compatability.
 
-- [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1580375043)
+- [Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1568744597)
 - [Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416)
 # Save-Friendliness and Compatibility
 *A note for save compatibility*
