@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Move LoTR fences to Fence category if available-->
+  <!--=====Elves=====-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Lord of the Rims - Elves</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Fences And No Floors</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="LotRE_FenceElven"]/designationCategory</xpath>
+            <value>
+              <designationCategory>Fences</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/DoorsExpanded.DoorExpandedDef[defName="Elven_Fence_GateA" or defName="Elven_Fence_GateB"]</xpath>
+            <value>
+              <designationCategory>Fences</designationCategory>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>
