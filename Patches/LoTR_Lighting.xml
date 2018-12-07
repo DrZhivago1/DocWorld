@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--LoTR move candelabra to lighting category and fix refuelables-->
+  <!--LoTR move lights to lighting category and fix refuelables-->
   <!--=====Dwarves=====-->
   <Operation Class="PatchOperationFindMod">
     <mods>
