@@ -1,9 +1,15 @@
 Date Format: DD/MM/YYYY
 
-Fifth Release:
+Fifth Release 07/12/2018:
 	
 	IF "Glass+Lights" is installed:
 		Make lights require "Electricity" as research prerequisite and make outdoor ground lamp require electricity.
+		
+	IF "Industrial Age - Objects and Furniture" AND "VGP Garden Gourmet" are installed:
+		Allow basic gourmet recipes to be cooked at the wood burning stove.
+		
+	IF "Nature's Pretty Sweet" is installed:
+		Alter forageability of biomes.
 	
 	IF "LoTR Elves" or "LoTR Dwarves" is installed:
 		Move all lighting to "Lighting" designation category.
