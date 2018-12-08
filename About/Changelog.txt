@@ -11,7 +11,7 @@ Fifth Release 07/12/2018:
 	IF "Nature's Pretty Sweet" is installed:
 		Alter forageability of biomes.
 	
-	IF "LoTR Elves" or "LoTR Dwarves" is installed:
+	IF "LoTR Elves" AND/OR "LoTR Dwarves" is installed:
 		Move all lighting to "Lighting" designation category.
 	
 	IF "LoTR Elves" AND "Fences and No Floors" are installed:
