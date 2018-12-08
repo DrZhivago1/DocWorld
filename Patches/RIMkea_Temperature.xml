@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Move Rimkea fireplace to Temperature tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RIMkea</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="FEERSTELL"]/designationCategory</xpath>
+      <value>
+        <designationCategory>Temperature</designationCategory>
+      </value>
+    </match>
+  </Operation>
+</Patch>

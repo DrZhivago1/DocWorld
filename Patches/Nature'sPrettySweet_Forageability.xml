@@ -1,134 +1,61 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-<!--Add Forageability to most NPS biomes-->
-  <Operation Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
-      <li Class="PatchOperationTest">
-        <xpath>Defs/BiomeDef[defName="TKKN_Desert"]/forageability</xpath>
-        <success>Invert</success>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/BiomeDef[defName="TKKN_Desert"]</xpath>
-        <value>
-          <forageability>0</forageability>
-        </value>
-      </li>
-    </operations>
-  </Operation>
-  <Operation Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
-      <li Class="PatchOperationTest">
-        <xpath>Defs/BiomeDef[defName="TKKN_Oasis"]/forageability</xpath>
-        <success>Invert</success>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/BiomeDef[defName="TKKN_Oasis"]</xpath>
-        <value>
-          <forageability>0.25</forageability>
-        </value>
-      </li>
-      <li Class="PatchOperationTest">
-        <xpath>Defs/BiomeDef[defName="TKKN_Oasis"]/foragedFood</xpath>
-        <success>Invert</success>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/BiomeDef[defName="TKKN_Oasis"]</xpath>
-        <value>
-          <foragedFood>TKKN_PricklyPear</foragedFood>
-        </value>
-      </li>
-    </operations>
-  </Operation>
-  <Operation Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
-      <li Class="PatchOperationTest">
-        <xpath>Defs/BiomeDef[defName="TKKN_Grasslands"]/forageability</xpath>
-        <success>Invert</success>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/BiomeDef[defName="TKKN_Grasslands"]</xpath>
-        <value>
-          <forageability>1</forageability>
-        </value>
-      </li>
-      <li Class="PatchOperationTest">
-        <xpath>Defs/BiomeDef[defName="TKKN_Grasslands"]/foragedFood</xpath>
-        <success>Invert</success>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/BiomeDef[defName="TKKN_Grasslands"]</xpath>
-        <value>
-          <foragedFood>TKKN_Cattails</foragedFood>
-        </value>
-      </li>
-    </operations>
-  </Operation>
-  <Operation Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
-      <li Class="PatchOperationTest">
-        <xpath>Defs/BiomeDef[defName="TKKN_Savanna"]/forageability</xpath>
-        <success>Invert</success>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/BiomeDef[defName="TKKN_Savanna"]</xpath>
-        <value>
-          <forageability>0.80</forageability>
-        </value>
-      </li>
-      <li Class="PatchOperationTest">
-        <xpath>Defs/BiomeDef[defName="TKKN_Savanna"]/foragedFood</xpath>
-        <success>Invert</success>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/BiomeDef[defName="TKKN_Savanna"]</xpath>
-        <value>
-          <foragedFood>TKKN_WildGreens</foragedFood>
-        </value>
-      </li>
-    </operations>
-  </Operation>
-  <Operation Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
-      <li Class="PatchOperationTest">
-        <xpath>Defs/BiomeDef[defName="TKKN_VolcanicFlow"]/forageability</xpath>
-        <success>Invert</success>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/BiomeDef[defName="TKKN_VolcanicFlow"]</xpath>
-        <value>
-          <forageability>0</forageability>
-        </value>
-      </li>
-    </operations>
-  </Operation>
-  <Operation Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
-      <li Class="PatchOperationTest">
-        <xpath>Defs/BiomeDef[defName="TKKN_RedwoodForest"]/forageability</xpath>
-        <success>Invert</success>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/BiomeDef[defName="TKKN_RedwoodForest"]</xpath>
-        <value>
-          <forageability>0.75</forageability>
-        </value>
-      </li>
-      <li Class="PatchOperationTest">
-        <xpath>Defs/BiomeDef[defName="TKKN_RedwoodForest"]/foragedFood</xpath>
-        <success>Invert</success>
-      </li>
-      <li Class="PatchOperationAdd">
-        <xpath>Defs/BiomeDef[defName="TKKN_RedwoodForest"]</xpath>
-        <value>
-          <foragedFood>RawBerries</foragedFood>
-        </value>
-      </li>
-    </operations>
+  <!--Change Forageability to most NPS biomes-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Nature's Pretty Sweet</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!--Salt Fields and Lava Fields remove forageability-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/BiomeDef[defName="TKKN_Desert" or defName="TKKN_VolcanicFlow"]/forageability</xpath>
+          <value>
+            <forageability>0</forageability>
+          </value>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/BiomeDef[defName="TKKN_Desert" or defName="TKKN_VolcanicFlow"]/foragedFood</xpath>
+        </li>
+        <!--Oasis, Grasslands, Savanna altered forageability-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/BiomeDef[defName="TKKN_Oasis"]/forageability</xpath>
+          <value>
+            <forageability>0.75</forageability>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/BiomeDef[defName="TKKN_Oasis"]/foragedFood</xpath>
+          <value>
+            <foragedFood>TKKN_PricklyPear</foragedFood>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/BiomeDef[defName="TKKN_Grasslands"]/forageability</xpath>
+          <value>
+            <forageability>1</forageability>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/BiomeDef[defName="TKKN_Grasslands"]/foragedFood</xpath>
+          <value>
+            <foragedFood>TKKN_Cattails</foragedFood>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/BiomeDef[defName="TKKN_Savanna"]/forageability</xpath>
+          <value>
+            <forageability>0.85</forageability>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/BiomeDef[defName="TKKN_Savanna"]/foragedFood</xpath>
+          <value>
+            <foragedFood>TKKN_WildGreens</foragedFood>
+          </value>
+        </li>
+      </operations>
+    </match>
   </Operation>
 </Patch>

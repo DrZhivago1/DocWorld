@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--LoTR move lights to lighting category and fix refuelables-->
+  <!--=====Dwarves=====-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Lord of the Rims - Dwarves</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="LotRD_Chandelier" or defName="LotRD_DwarvenCandelabra" or defName="LotRD_Brazier" or defName="LotRD_DwarvenWallLight" or defName="LotRD_DwarvenStreetLamp"]/designationCategory</xpath>
+      <value>
+        <designationCategory>Lighting</designationCategory>
+      </value>
+    </match>
+  </Operation>
+  <!--Make Dwarven Chandelier and Candelabra refuelable with wax-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Lord of the Rims - Dwarves</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Industrial Age - Objects and Furniture</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="LotRD_Chandelier" or defName="LotRD_DwarvenCandelabra"]/comps/li/fuelFilter/thingDefs</xpath>
+        <value>
+          <thingDefs>
+            <li>Jecrell_Wax</li>
+          </thingDefs>
+        </value>
+      </match>
+    </match>
+  </Operation>
+  <!--=====Elves=====-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Lord of the Rims - Elves</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="LotRE_ElvenCandelabra"]/designationCategory</xpath>
+      <value>
+        <designationCategory>Lighting</designationCategory>
+      </value>
+    </match>
+  </Operation>
+  <!--Make Elven Candelabra refuelable with wax-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Lord of the Rims - Elves</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Industrial Age - Objects and Furniture</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="LotRE_ElvenCandelabra"]/comps/li/fuelFilter/thingDefs</xpath>
+        <value>
+          <thingDefs>
+            <li>Jecrell_Wax</li>
+          </thingDefs>
+        </value>
+      </match>
+    </match>
+  </Operation>
+</Patch>

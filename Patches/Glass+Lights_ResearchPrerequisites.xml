@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Make research more fitting and alter OP outdoor light-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!--Cieling Lamps Abstract-->
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[@Name="CeilingLampBase"]/researchPrerequisites</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="CeilingLampBase"]</xpath>
+            <value>
+              <researchPrerequisites>
+                <li>Electricity</li>
+              </researchPrerequisites>
+            </value>
+          </nomatch>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="CeilingLampBase"]/researchPrerequisites</xpath>
+            <value>
+              <li>Electricity</li>
+            </value>
+          </match>
+        </li>
+        <!--Standing Lamp Abstract-->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[@Name="StandingLampBase"]/researchPrerequisites</xpath>
+          <value>
+            <li>Electricity</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!--Alter OP outdoor light-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="OutdoorGroundLamp"]/comps</xpath>
+      <value>
+        <li Class="CompProperties_Power">
+          <compClass>CompPowerTrader</compClass>
+          <basePowerConsumption>15</basePowerConsumption>
+          <shortCircuitInRain>false</shortCircuitInRain>
+        </li>
+        <li Class="CompProperties_Flickable"/>
+      </value>
+    </match>
+  </Operation>
+</Patch>
