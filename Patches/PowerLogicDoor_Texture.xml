@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Change texture from "Power Logic Remote Door" to the one from ClutterDoors-->
+<Operation Class="PatchOperationFindMod">
+  <mods>
+    <li>Power Logic</li>
+  </mods>
+  <match Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SupesRemoteDoor"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Building/Door/RemoteDoor</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SupesRemoteDoor"]/graphicData/graphicClass</xpath>
+        <value>
+          <graphicClass>Graphic_Multi</graphicClass>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="SupesRemoteDoor"]/uiIconPath</xpath>
+        <value>
+          <uiIconPath>Things/Building/Door/RemoteDoor_icon</uiIconPath>
+        </value>
+      </li>
+    </operations>
+  </match>
+</Operation>
+</Patch>

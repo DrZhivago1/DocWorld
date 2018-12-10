@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!--Change texture from "Vanilla Doors" to the one from ClutterDoors-->
+<Patch>
+    <Operation Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Door"]/graphicData/texPath</xpath>
+          <value>
+            <texPath>Things/Building/Door/SimpleDoor</texPath>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Door"]/graphicData/graphicClass</xpath>
+          <value>
+            <graphicClass>Graphic_Multi</graphicClass>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Door"]/uiIconPath</xpath>
+          <value>
+            <uiIconPath>Things/Building/Door/SimpleDoor_ico</uiIconPath>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Autodoor"]/graphicData/texPath</xpath>
+          <value>
+            <texPath>Things/Building/Door/AutoDoor</texPath>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Autodoor"]/graphicData/graphicClass</xpath>
+          <value>
+            <graphicClass>Graphic_Multi</graphicClass>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Autodoor"]/uiIconPath</xpath>
+          <value>
+            <uiIconPath>Things/Building/Door/AutoDoor_ico</uiIconPath>
+          </value>
+        </li>
+      </operations>
+  </Operation>
+  <!--Change texture from "Doors Expanded" to the one from ClutterDoors
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Doors Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef_Building[defName="PH_DoorDouble"]/graphicData/texPath</xpath>
+          <value>
+            <texPath>Things/Building/Door/DoubleDoor</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation-->
+</Patch>

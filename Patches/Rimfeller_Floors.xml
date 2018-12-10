@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Move Rimefeller floors to the "Floors" tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Rimefeller</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/TerrainDef[@Name="RimefellerLinoBase"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Floors</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
