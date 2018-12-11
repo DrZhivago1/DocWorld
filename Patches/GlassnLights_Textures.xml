@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
+  <!--Change texture from "Vanilla Doors" to the one from ClutterDoors-->
 <Patch>
-  <!--Change texture from "Power Logic Remote Door" to the one from ClutterDoors-->
 <Operation Class="PatchOperationFindMod">
   <mods>
-    <li>Power Logic</li>
+    <li>Glass+Lights</li>
   </mods>
   <match Class="PatchOperationSequence">
     <success>Always</success>
     <operations>
       <li Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="SupesRemoteDoor"]/graphicData/texPath</xpath>
+        <xpath>Defs/ThingDef[defName="DoorGlass"]/graphicData/texPath</xpath>
         <value>
-          <texPath>Things/Building/Door/RemoteDoor</texPath>
+          <texPath>Things/Building/Door/GlassDoor</texPath>
         </value>
       </li>
       <li Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="SupesRemoteDoor"]/graphicData/graphicClass</xpath>
+        <xpath>Defs/ThingDef[defName="DoorGlass"]/graphicData/graphicClass</xpath>
         <value>
           <graphicClass>Graphic_Multi</graphicClass>
         </value>
       </li>
       <li Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="SupesRemoteDoor"]/uiIconPath</xpath>
+        <xpath>Defs/ThingDef[defName="DoorGlass"]/uiIconPath</xpath>
         <value>
-          <uiIconPath>Things/Building/Door/RemoteDoor_ico</uiIconPath>
+          <uiIconPath>Things/Building/Door/GlassDoor_ico</uiIconPath>
         </value>
       </li>
     </operations>
