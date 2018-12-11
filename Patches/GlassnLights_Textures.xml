@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!--Change texture from "Vanilla Doors" to the one from ClutterDoors-->
+  <!--Change texture from "Glass+Lights" to the one from ClutterDoors-->
 <Patch>
 <Operation Class="PatchOperationFindMod">
   <mods>
