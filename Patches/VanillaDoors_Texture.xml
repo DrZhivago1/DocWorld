@@ -11,7 +11,7 @@
           </value>
         </li>
         <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[defName="Door"]/graphicData/graphicClass</xpath>
+          <xpath>Defs/ThingDef[defName="Door" or defName="Autodoor"]/graphicData/graphicClass</xpath>
           <value>
             <graphicClass>Graphic_Multi</graphicClass>
           </value>
@@ -26,12 +26,6 @@
           <xpath>Defs/ThingDef[defName="Autodoor"]/graphicData/texPath</xpath>
           <value>
             <texPath>Things/Building/Door/AutoDoor</texPath>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[defName="Autodoor"]/graphicData/graphicClass</xpath>
-          <value>
-            <graphicClass>Graphic_Multi</graphicClass>
           </value>
         </li>
         <li Class="PatchOperationReplace">

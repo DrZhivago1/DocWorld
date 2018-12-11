@@ -15,7 +15,7 @@
         </value>
       </li>
       <li Class="PatchOperationReplace">
-        <xpath>Defs/DoorsExpanded.DoorExpandedDef[defName="PH_DoorDouble"]/graphicData/graphicClass</xpath>
+        <xpath>Defs/DoorsExpanded.DoorExpandedDef[defName="PH_DoorDouble" or defName="PH_DoorTriple"]/graphicData/graphicClass</xpath>
         <value>
           <graphicClass>Graphic_Multi</graphicClass>
         </value>
@@ -30,12 +30,6 @@
         <xpath>Defs/DoorsExpanded.DoorExpandedDef[defName="PH_DoorTriple"]/graphicData/texPath</xpath>
         <value>
           <texPath>Things/Building/Door/TripleDoor</texPath>
-        </value>
-      </li>
-      <li Class="PatchOperationReplace">
-        <xpath>Defs/DoorsExpanded.DoorExpandedDef[defName="PH_DoorTriple"]/graphicData/graphicClass</xpath>
-        <value>
-          <graphicClass>Graphic_Multi</graphicClass>
         </value>
       </li>
     </operations>

@@ -21,9 +21,21 @@
         </value>
       </li>
       <li Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="DoorGlass"]/uiIconPath</xpath>
+        <xpath>Defs/ThingDef[defName="DoorGlass" or defName="AutoDoorGlass"]/uiIconPath</xpath>
         <value>
           <uiIconPath>Things/Building/Door/GlassDoor_ico</uiIconPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="AutoDoorGlass"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Things/Building/Door/AutoGlassDoor</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="AutoDoorGlass"]/graphicData/graphicClass</xpath>
+        <value>
+          <graphicClass>Graphic_Multi</graphicClass>
         </value>
       </li>
     </operations>
