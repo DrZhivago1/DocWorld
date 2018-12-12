@@ -27,14 +27,7 @@
           </value>
         </li>
         <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="LitterBox"]/designationCategory</xpath>
-        </li>
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="KitchenSink"]/designationCategory</xpath>
-        </li>
-        <!--BuildingsC_Joy-->
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="WashingMachine"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[defName="LitterBox" or defName="KitchenSink" or defName="WashingMachine"]/designationCategory</xpath>
         </li>
         <!--BuildingsE_Heating-->
         <li Class="PatchOperationAdd">
@@ -68,25 +61,14 @@
             <designationCategory>Misc</designationCategory>
           </value>
         </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="BiosolidsComposter" or defName="BiosolidFertilizer"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Hygiene</designationCategory>
+          </value>
+        </li>
         <li Class="PatchOperationRemove">
           <xpath>Defs/ThingDef[defName="plumbingValve"]/designationCategory</xpath>
-        </li>
-      </operations>
-    </match>
-  </Operation>
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Dubs Bad Hygiene</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
-        <li Class="PatchOperationTest">
-          <success>Always</success>
-          <xpath>Defs/ThingDef[defName="BiosolidsComposter" or defName="BiosolidFertilizer"]/designationCategory</xpath>
-        </li>
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="BiosolidsComposter" or defName="BiosolidFertilizer"]/designationCategory</xpath>
         </li>
       </operations>
     </match>

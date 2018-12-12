@@ -12,42 +12,25 @@
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
-          <!--ResearchProjects_Hygiene-->
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/ResearchProjectDef[defName="SewageSludgeComposting"]</xpath>
-          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ResearchProjectDef[defName="RFF_Farming"]</xpath>
+             <value>
+               <prerequisites>
+                 <li>SewageSludgeComposting</li>
+               </prerequisites>
+             </value>
+           </li>
+           <li Class="PatchOperationReplace">
+             <xpath>Defs/ResearchProjectDef[defName="WaterFiltration"]/techLevel</xpath>
+             <value>
+               <techLevel>Industrial</techLevel>
+             </value>
+           </li>
           <li Class="PatchOperationReplace">
-            <xpath>Defs/ResearchProjectDef[defName="WaterFiltration"]/prerequisites</xpath>
+            <xpath>Defs/ThingDef[defName="BiosolidsComposter" or defName="BiosolidFertilizer"]/designationCategory</xpath>
             <value>
-              <prerequisites>
-                <li>SepticTanks</li>
-              </prerequisites>
+              <designationCategory>RFF_Farm</designationCategory>
             </value>
-          </li>
-          <!--Jobs_Hygiene-->
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/JobDef[defName="LoadComposter"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/JobDef[defName="UnloadComposter"]</xpath>
-          </li>
-          <!--BuildingsF_Irrigation-->
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="BiosolidsComposter"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]</xpath>
-          </li>
-          <!--Items_Resource_Stuff-->
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="Biosolids"]</xpath>
-          </li>
-          <!--WorkGivers-->
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/WorkGiverDef[defName="UnloadComposter"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/WorkGiverDef[defName="FillComposter"]</xpath>
           </li>
           <li Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="IrrigationSprinkler"]</xpath>
@@ -55,6 +38,30 @@
               <designationCategory>RFF_Farm</designationCategory>
             </value>
           </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="BiosolidsComposter" or defName="BiosolidFertilizer"]/designationCategory</xpath>
+            <value>
+              <designationCategory>RFF_Farm</designationCategory>
+            </value>
+          </li>
+            <li Class="PatchOperationAdd">
+              <xpath>Defs/ThingDef[defName="Terraform_SoilF-SoilRich"]/costList</xpath>
+              <value>
+                  <FecalSludge>10</FecalSludge>
+              </value>
+            </li>
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Terraform_Topsoil-DirtFert"]/costList</xpath>
+                <value>
+                    <Biosolids>10</Biosolids>
+                </value>
+              </li>
+              <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Terraform_SoilRich-SoilTilled"]/costList</xpath>
+                <value>
+                    <Biosolids>15</Biosolids>
+                </value>
+              </li>
         </operations>
       </match>
     </match>
