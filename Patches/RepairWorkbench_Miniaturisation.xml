@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
   <!--Make Repair Workbench minifiable-->
-  <!--Repair Workbench-->
+  <!--=====ElectricTableRepair=====-->
   <Operation Class="PatchOperationSequence">
     <success>Always</success>
     <operations>
@@ -15,15 +15,6 @@
           <minifiedDef>MinifiedThing</minifiedDef>
         </value>
       </li>
-    </operations>
-  </Operation>
-  <Operation Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
-      <li Class="PatchOperationTest">
-        <xpath>Defs/ThingDef[defName = "ElectricTableRepair"]/thingCategories</xpath>
-        <success>Invert</success>
-      </li>
       <li Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName = "ElectricTableRepair"]</xpath>
         <value>
@@ -31,15 +22,6 @@
             <li>BuildingsMisc</li>
           </thingCategories>
         </value>
-      </li>
-    </operations>
-  </Operation>
-  <Operation Class="PatchOperationSequence">
-    <success>Always</success>
-    <operations>
-      <li Class="PatchOperationTest">
-        <xpath>Defs/ThingDef[defName = "ElectricTableRepair"]/statBases/Mass</xpath>
-        <success>Invert</success>
       </li>
       <li Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName = "ElectricTableRepair"]/statBases</xpath>
