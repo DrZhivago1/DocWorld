@@ -1,5 +1,9 @@
 Date Format: DD/MM/YYYY
 
+Sixth Release:
+	
+	Updated Vanilla and modded miniaturisation Defs.
+
 Fifth Release 07/12/2018:
 	
 	IF "Glass+Lights" is installed:
