@@ -8,6 +8,24 @@
     <match Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="ToiletStallDoor"]/graphicData/texPath</xpath>
+          <value>
+            <texPath>Things/Building/Door/StallDoorSimple</texPath>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="ToiletStallDoor"]/graphicData/graphicClass</xpath>
+          <value>
+            <graphicClass>Graphic_Multi</graphicClass>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="ToiletStallDoor"]/uiIconPath</xpath>
+          <value>
+            <uiIconPath>Things/Building/Door/StallDoorSimple_ico</uiIconPath>
+          </value>
+        </li>
         <!--DesignationCategories-->
         <li Class="PatchOperationRemove">
           <xpath>Defs/DesignationCategoryDef[defName="HygieneMisc"]</xpath>
