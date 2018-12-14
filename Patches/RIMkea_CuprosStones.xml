@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--=====Add Cupro Stones to BULDRESTStool from RIMkea IF both mods installed=====-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[TWC]Cupro's Stones 1.0</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>RIMkea</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+
+          <!--=====Add chunk seat shared stats to Cupro's Stone Bases=====-->
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name = "STN_NormalChunkBase" or @Name = "STN_GraniticChunkBase" or @Name = "STN_SmoothChunkBase" or @Name = "STN_MarbledChunkBase" or @Name = "STN_BandedChunkBase"]</xpath>
+            <value>
+              <resourceReadoutPriority>Middle</resourceReadoutPriority>
+              <stuffProps>
+                <categories>
+                  <li>Chunky</li>
+                </categories>
+                <statOffsets>
+                  <WorkToBuild>140</WorkToBuild>
+                </statOffsets>
+                <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+                <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+                <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+              </stuffProps>
+            </value>
+          </li>
+
+          <!--=====Add individual chunk seat stats=====-->
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ChunkClaystone"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(228, 188, 147)</color>
+                <stuffAdjective>claystone</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.4</MarketValue>
+                  <MaxHitPoints>1.4</MaxHitPoints>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ChunkAndesite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(155, 164, 166)</color>
+                <stuffAdjective>andesite</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.5</MarketValue>
+                  <MaxHitPoints>1.7</MaxHitPoints>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ChunkSyenite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(186, 126, 121)</color>
+                <stuffAdjective>syenite</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.35</Beauty>
+                  <MarketValue>0.45</MarketValue>
+                  <MaxHitPoints>1.2</MaxHitPoints>
+                  <WorkToBuild>5.5</WorkToBuild>
+                  <WorkToMake>1.15</WorkToMake>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ChunkGneiss"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(146, 138, 104)</color>
+                <stuffAdjective>gneiss</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.5</MarketValue>
+                  <MaxHitPoints>1.7</MaxHitPoints>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ChunkQuartzite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(155, 156, 160)</color>
+                <stuffAdjective>quartzite</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.1</Beauty>
+                  <MarketValue>0.4</MarketValue>
+                  <MaxHitPoints>1.4</MaxHitPoints>
+                  <WorkToBuild>5.0</WorkToBuild>
+                  <WorkToMake>1.1</WorkToMake>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ChunkSchist"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(105, 124, 102)</color>
+                <stuffAdjective>schist</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.1</Beauty>
+                  <MarketValue>0.4</MarketValue>
+                  <MaxHitPoints>1.4</MaxHitPoints>
+                  <WorkToBuild>5.0</WorkToBuild>
+                  <WorkToMake>1.1</WorkToMake>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ChunkGabbro"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(122, 122, 122)</color>
+                <stuffAdjective>gabbro</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.5</MarketValue>
+                  <MaxHitPoints>1.7</MaxHitPoints>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ChunkDiorite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(204, 204, 204)</color>
+                <stuffAdjective>diorite</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.35</Beauty>
+                  <MarketValue>0.45</MarketValue>
+                  <MaxHitPoints>1.2</MaxHitPoints>
+                  <WorkToBuild>5.5</WorkToBuild>
+                  <WorkToMake>1.15</WorkToMake>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ChunkDunite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(154, 162, 126)</color>
+                <stuffAdjective>dunite</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.4</MarketValue>
+                  <MaxHitPoints>1.55</MaxHitPoints>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "ChunkPegmatite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(201, 150, 115)</color>
+                <stuffAdjective>pegmatite</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.1</Beauty>
+                  <MarketValue>0.38</MarketValue>
+                  <MaxHitPoints>1.3</MaxHitPoints>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>
