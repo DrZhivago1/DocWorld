@@ -3,6 +3,15 @@ Date Format: DD/MM/YYYY
 Sixth Release:
 	
 	Updated Vanilla and modded miniaturisation Defs.
+	
+	IF "RIMkea" AND "CuprosStones" are installed:
+		Allows all chunks to be used for BULDRESTStool.
+	
+	IF "RimCuisine" AND "VGP Garden Fabrics" are installed:
+		Wild flax drops raw flax instead of cloth.
+	
+	IF "High Tech Labratory Facilities" is installed:
+		Moves countertop behind complex furniture research.
 
 Fifth Release 07/12/2018:
 	
