@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
+  <!--This patch will generate errors unless you manually remove one of the patches made by "RimCuisine" in regards to replacing "<harvestedThingDef>RawCacaoBeans</harvestedThingDef>" on Vanilla Cocoa Tree. This is due to a spelling conflict with "SeedsPlease". The errors generated from my patch are not game breaking even if you do not make the manual edit.-->
   <!--IF RimCuisine AND SeedsPlease are installed; remove extra cocoa recipes and items-->
   <Operation Class="PatchOperationFindMod">
     <mods>
