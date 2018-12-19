@@ -4,7 +4,7 @@ Sixth Release:
 	
 	Updated Vanilla and modded miniaturisation Defs.
 	
-	Removed "Expanded Woodworking" patches, as they are now integrated into the main mod.
+	Removed "Expanded Woodworking"/experimental patches, as they are now integrated into the main mod/not useful.
 	
 	IF "High Tech Labratory Facilities" is installed:
 		Moves countertop behind complex furniture research.
