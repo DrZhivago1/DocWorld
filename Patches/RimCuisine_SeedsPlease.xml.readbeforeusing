@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--IF RimCuisine AND SeedsPlease are installed; remove extra cocoa recipes and items-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RimCuisine 1.0</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>SeedsPlease</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="RawCacaoBeans"]</xpath>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="ProcessCacao" or defName="ProcessCacaoBulk"]/ingredients/li/filter/thingDefs</xpath>
+            <value>
+              <thingDefs>
+                <li>RawCocoaBeans</li>
+              </thingDefs>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/RecipeDef[defName="ProcessRawCocoa"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>
