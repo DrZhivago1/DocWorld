@@ -15,7 +15,7 @@ v1.0.8 (18/12/2018):
 	IF "RIMkea" AND "CuprosStones" are installed:
 		Allows all chunks to be used for BULDRESTStool.
 		
-	IF "VGP Garden Fabrics" and "Vanilla Animals Overhaul Reloaded" are installed:
+	IF "VGP Garden Fabrics" AND "Vanilla Animals Overhaul Reloaded" are installed:
 		Allows new wools to be used on blended wool recipe.
 	
 	IF "VGP Garden Fabrics" AND "RimCuisine" are installed:
