@@ -20,6 +20,7 @@ v1.0.8 (18/12/2018):
 	
 	IF "VGP Garden Fabrics" AND "RimCuisine" are installed:
 		Wild flax drops raw flax instead of cloth.
+		
 v1.0.7 (07/12/2018):
 	
 	IF "Glass+Lights" is installed:
