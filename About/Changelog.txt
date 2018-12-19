@@ -123,7 +123,7 @@ v1.0.5 (29/11/2018):
 	IF "Wall Light" is installed:
 		Moves lights to "Lighting" designation category.
 
-v1.0.3 (26/11/2018):
+v1.0.4 (26/11/2018):
 	IF "Dubs SkyLights" is installed:
 		Moves skylights to "Lighting" designation category.
 		
