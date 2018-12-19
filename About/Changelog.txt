@@ -8,6 +8,9 @@ Sixth Release:
 	
 	IF "High Tech Labratory Facilities" is installed:
 		Moves countertop behind complex furniture research.
+	
+	IF "RimCuisine" AND "SeedsPlease" are installed:
+		Removes extra cocoa recipes and items.
 		
 	IF "RIMkea" AND "CuprosStones" are installed:
 		Allows all chunks to be used for BULDRESTStool.
