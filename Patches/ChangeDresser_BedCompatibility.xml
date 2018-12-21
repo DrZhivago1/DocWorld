@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--=====Allow Gloomy Furniture beds to use Change Dresser and Mirror=====-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] Change Dresser - 1.0</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>GloomyFurniture</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "RGK_bedSingle" or defName = "RGK_bedSingleB" or defName = "RGK_bedDouble" or defName = "RGK_bedDoubleB"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+              <li>ChangeDresser</li>
+              <li>ChangeMirror</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+  <!--=====Allow LotRE beds to use Change Dresser and Mirror=====-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] Change Dresser - 1.0</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Lord of the Rims - Elves</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "LotRE_ElvenRoyalBed" or defName = "LotRE_ElvenBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+              <li>ChangeDresser</li>
+              <li>ChangeMirror</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+  <!--=====Allow Medieval Times beds to use Change Dresser and Mirror=====-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] Change Dresser - 1.0</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Medieval Times</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "MedTimes_Cot" or defName = "MedTimes_CotDouble"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+              <li>ChangeDresser</li>
+              <li>ChangeMirror</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+  <!--=====Allow Polyamory Beds to use Change Dresser and Mirror=====-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] Change Dresser - 1.0</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[1.0] Polyamory Beds (Vanilla Edition)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "TripleBed" or defName = "QuadBed" or defName = "TripleRoyalBed" or defName = "QuadRoyalBed" or defName = "PentaRoyalBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+              <li>ChangeDresser</li>
+              <li>ChangeMirror</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+  <!--=====Allow RIMkea beds to use Change Dresser and Mirror=====-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] Change Dresser - 1.0</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>RIMkea</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "PILFURBed" or defName = "SNOREGGSingle" or defName = "SNOREGGDouble" or defName = "KRUDNEPPSingle" or defName = "SLABNEPPDouble"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+              <li>ChangeDresser</li>
+              <li>ChangeMirror</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+  <!--=====Allow [sd]Goodnight beds to use Change Dresser and Mirror=====-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] Change Dresser - 1.0</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[sd] goodnight</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName = "sd_basebed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+              <li>ChangeDresser</li>
+              <li>ChangeMirror</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+</Patch>
