@@ -1,5 +1,9 @@
 Date Format: DD/MM/YYYY
 
+v1.0.9 ():
+	IF "Change Dresser" is installed:
+		Added compatibility to [sd] Goodnight, RIMkea, LOTRE, Gloomy Furniture, Medeival Times, Polyamory Beds
+
 v1.0.8 (18/12/2018):
 	
 	Updated Vanilla and modded miniaturisation Defs.
