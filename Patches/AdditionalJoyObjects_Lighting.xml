@@ -4,6 +4,7 @@
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Additional Joy Objects</li>
+      <li>Additional Joy Objects Classic</li>
     </mods>
     <match Class="PatchOperationSequence">
       <success>Always</success>
