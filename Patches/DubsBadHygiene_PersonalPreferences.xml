@@ -19,7 +19,7 @@
             <designationCategory>Temperature</designationCategory>
           </value>
         </li>
-        <!--BuildingsB_Hygiene-->
+        <!--BuildingsB_Hygiene & BuildingsC_Joy-->
         <li Class="PatchOperationAdd">
           <xpath>Defs/ThingDef[defName="ToiletStallDoor"]</xpath>
           <value>
@@ -27,30 +27,11 @@
           </value>
         </li>
         <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="LitterBox"]/designationCategory</xpath>
-        </li>
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="KitchenSink"]/designationCategory</xpath>
-        </li>
-        <!--BuildingsC_Joy-->
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="WashingMachine"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[defName="LitterBox" or defName="KitchenSink" or defName="WashingMachine"]/designationCategory</xpath>
         </li>
         <!--BuildingsE_Heating-->
         <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[@Name="BasedHeating"]</xpath>
-          <value>
-            <designationCategory>Temperature</designationCategory>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="SolarHeater"]</xpath>
-          <value>
-            <designationCategory>Temperature</designationCategory>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[@Name="BaseRadiator"]</xpath>
+          <xpath>Defs/ThingDef[@Name="BasedHeating" or @Name="BaseRadiator" or defName="SolarHeater"]</xpath>
           <value>
             <designationCategory>Temperature</designationCategory>
           </value>
@@ -78,7 +59,7 @@
         </li>
         <!--BuildingsF_Irrigation-->
         <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="IrrigationSprinkler"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[defName="IrrigationSprinkler" or defName="plumbingValve"]/designationCategory</xpath>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="FireSprinkler"]/designationCategory</xpath>
@@ -86,12 +67,10 @@
             <designationCategory>Misc</designationCategory>
           </value>
         </li>
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="plumbingValve"]/designationCategory</xpath>
-        </li>
       </operations>
     </match>
   </Operation>
+<!--Test to see if Biosolids exist, move category with patch-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Dubs Bad Hygiene</li>
@@ -109,6 +88,7 @@
       </operations>
     </match>
   </Operation>
+
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Dubs Bad Hygiene</li>

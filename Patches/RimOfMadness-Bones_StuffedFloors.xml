@@ -13,19 +13,7 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationRemove">
-            <xpath>Defs/TerrainDef[defName="BoneFloor"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/TerrainDef[defName="BoneFloor_Blackened"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/TerrainDef[defName="BoneChinaFloor"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/TerrainDef[defName="BoneFloor_Ashen"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/TerrainDef[defName="BoneFloor_Tile"]</xpath>
+            <xpath>Defs/TerrainDef[defName="BoneFloor" or defName="BoneFloor_Blackened" or defName="BoneChinaFloor" or defName="BoneFloor_Ashen" or defName="BoneFloor_Tile"]</xpath>
           </li>
           <li Class="PatchOperationAdd">
             <xpath>Defs</xpath>
