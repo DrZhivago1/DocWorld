@@ -26,11 +26,17 @@
           </li>
           <!--Jobs_Hygiene-->
           <li Class="PatchOperationRemove">
-            <xpath>Defs/JobDef[defName="LoadComposter" or defName="UnloadComposter"]</xpath>
+            <xpath>Defs/JobDef[defName="LoadComposter"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/JobDef[defName="UnloadComposter"]</xpath>
           </li>
           <!--BuildingsF_Irrigation-->
           <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="BiosolidsComposter" or defName="BiosolidFertilizer"]</xpath>
+            <xpath>Defs/ThingDef[defName="BiosolidsComposter"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]</xpath>
           </li>
           <!--Items_Resource_Stuff-->
           <li Class="PatchOperationRemove">
@@ -38,7 +44,10 @@
           </li>
           <!--WorkGivers-->
           <li Class="PatchOperationRemove">
-            <xpath>Defs/WorkGiverDef[defName="UnloadComposter" or defName="FillComposter"]</xpath>
+            <xpath>Defs/WorkGiverDef[defName="UnloadComposter"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/WorkGiverDef[defName="FillComposter"]</xpath>
           </li>
           <li Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="IrrigationSprinkler"]</xpath>
