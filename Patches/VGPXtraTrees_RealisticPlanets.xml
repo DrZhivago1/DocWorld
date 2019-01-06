@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--VGP Xtra Trees with Realistic Planets-->
+  <!--VGP Xtra Trees with Realistic Planets And Extended Woodworking-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>[RF] Realistic Planets [1.0]</li>
