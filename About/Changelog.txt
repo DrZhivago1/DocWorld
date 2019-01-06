@@ -1,6 +1,10 @@
 Date Format: DD/MM/YYYY
 
 v1.0.9 (06/01/2018):
+
+	IF "Architect Icons" is installed:
+		Added more mod support for pictures.
+		
 	IF "Change Dresser" is installed:
 		Added compatibility to [sd] Goodnight, RIMkea, LOTRE, Gloomy Furniture, Medeival Times, Polyamory Beds
 	
