@@ -1,5 +1,9 @@
 Date Format: DD/MM/YYYY
 
+v1.0.10 (00/00/0000):
+	IF "Repair Workbench" AND "Survival Tools" are installed:
+		Add tools to weapon repair recipe.
+
 v1.0.9 (06/01/2018):
 
 	IF "Architect Icons" is installed:
