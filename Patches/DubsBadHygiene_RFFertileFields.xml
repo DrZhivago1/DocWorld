@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-    <!--Redundant removal of "Dub's Bad Hygiene" composting and biosolids with "RF Fertile Fields".-->
+    <!--Redundant removal/replacing of "Dub's Bad Hygiene" biosolids with "RF Fertile Fields" installed -->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Dubs Bad Hygiene</li>
