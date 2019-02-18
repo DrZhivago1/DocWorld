@@ -1,6 +1,18 @@
 Date Format: DD/MM/YYYY
 
 v1.0.10 (00/00/0000):
+
+	IF "Dubs Hygiene" AND "RF Fertile Fields" are installed:
+		The composter is usable and produces RF Fertile Field compost. May cause minor issues with ongoing saves.
+		Returns previously removed JobDef "LoadComposter" and "UnloadComposter".
+		Returns previously replaced "WaterFiltration" research prerequisites to "SepticTanks".
+		Returns previously removed "SewageSludgeComposting" research.
+		Returns previously removed "BiosolidsComposter".
+		Returns previously removed WorkGiver "UnloadComposter".
+		Returns previously removed WorkGiver "FillComposter".
+		Continues to remove "BiosolidFertilizer".
+		Continues to remove "Biosolids".
+		
 	IF "Repair Workbench" AND "Survival Tools" are installed:
 		Add tools to weapon repair recipe.
 
