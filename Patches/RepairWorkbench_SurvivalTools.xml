@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--Words_go_Here-->
+  <!--Add survival tools to repair workbench-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Repair Workbench</li>
