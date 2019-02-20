@@ -16,7 +16,7 @@ There is only one patch that causes major save incompatibility. This incompatibi
 # Changelog
 Date Format: DD/MM/YYYY
 
-**v1.0.10 (00/00/0000):
+**v1.0.10 (00/00/0000):**
 
 	IF "Dubs Hygiene" AND "RF Fertile Fields" are installed:
 		The composter is usable and produces RF Fertile Field compost. May cause minor issues with ongoing saves.
@@ -32,7 +32,7 @@ Date Format: DD/MM/YYYY
 	IF "Repair Workbench" AND "Survival Tools" are installed:
 		Add tools to weapon repair recipe.
 
-**v1.0.9 (06/01/2018):
+**v1.0.9 (06/01/2018):**
 
 	IF "Architect Icons" is installed:
 		Added more mod support for pictures.
@@ -49,7 +49,7 @@ Date Format: DD/MM/YYYY
 	IF "VGP Xtra Trees and Flowers" AND "Realistic Planets" AND "Expanded Woodworking" are installed:
 		Add wood logs and lumber to VGP Trees.
 
-**v1.0.8 (18/12/2018):
+**v1.0.8 (18/12/2018):**
 	
 	Updated Vanilla and modded miniaturisation Defs.
 	
@@ -70,7 +70,7 @@ Date Format: DD/MM/YYYY
 	IF "VGP Garden Fabrics" AND "RimCuisine" are installed:
 		Wild flax drops raw flax instead of cloth.
 		
-**v1.0.7 (07/12/2018):
+**v1.0.7 (07/12/2018):**
 	
 	IF "Glass+Lights" is installed:
 		Make lights require "Electricity" as research prerequisite and make outdoor ground lamp require electricity.
@@ -99,7 +99,7 @@ Date Format: DD/MM/YYYY
 	IF "Smoked Meat" is installed:
 		Hides ability to smoke meat behind pemmican research, the smoke house also requires complex furniture.
 
-**v1.0.6 (01/12/2018):
+**v1.0.6 (01/12/2018):**
 
 	Optimized this mods patch coding for faster game load times.
 	
@@ -156,7 +156,7 @@ Date Format: DD/MM/YYYY
 	IF "[sd] goodnight" AND "RIMkea" are installed:
 		Moves "RIMkea" beds to "Beds" tab.
 
-**v1.0.4 (29/11/2018):
+**v1.0.4 (29/11/2018):**
 
 	Alphabetize designation categories for Vanilla, More Planning, RF Fertile Fields, Fences and No Floors, Colony Leadership, sd Goodnight, Dubs Bad Hygiene, Remote Tech.
 	
@@ -174,7 +174,7 @@ Date Format: DD/MM/YYYY
 	IF "Wall Light" is installed:
 		Moves lights to "Lighting" designation category.
 
-**v1.0.2 (26/11/2018):
+**v1.0.2 (26/11/2018):**
 
 	IF "Dubs SkyLights" is installed:
 		Moves skylights to "Lighting" designation category.
@@ -191,7 +191,7 @@ Date Format: DD/MM/YYYY
 	IF "VGP Garden Fabrics" AND "Thrumbo Extension" are installed:
 		Adds "Thrumbo Wool" to VGP loom "Blended Wool" recipe.
 
-**v1.0.0 (18/11/2018):
+**v1.0.0 (18/11/2018):**
 
 	Creates a "Lighting" tab(Designation Category) and moves all vanilla, and supported mod lights, under the tab.
 
