@@ -6,6 +6,10 @@ The basics are: mod moves items to new tabs and organizes layout, balances some 
 _[Link to Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1568744597)_
 
 _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416)_
+
+
+## [License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 # Save-Friendliness and Compatibility
 *A note for save compatibility*
 
@@ -316,4 +320,3 @@ Date Format: DD/MM/YYYY
     		Removes "Smokepit" constructEffect.
 
 
-## [License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
