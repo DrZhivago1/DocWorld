@@ -7,7 +7,7 @@
     <li>1.0</li>
   </supportedVersions>
   <description>
-    A mod of combined patches for my RimWorld mod collection "The Doctor's World". There are a lot of patches done to the various mods outlined in the "Changelog" in the "About" folder. I suggest you read there or GitHub for detailed information.
+    A mod of combined patches for my RimWorld mod collection "The Doctor's World". There are a lot of patches done to the various mods outlined in the "Changelog" in the README.md.
     
     The basics are: mod moves items to new tabs and organizes layout, balances some recipes for various items, enhances minaturisation abilities, improves inter-mod compatability.
     
@@ -19,6 +19,6 @@
     Sunlace- for hidden conduit idea.
     Yehn- for helping with xml codes on the Discord.
     Architect Textures- Smartline, eucalyp, and free pics @ https://www.flaticon.com/
-    Of course all the beautiful mod creators without whom this patch wouldn't do much.
+    Of course all the beautiful mod creators without whom these patches wouldn't do much.
   </description>
 </ModMetaData>
