@@ -13,9 +13,9 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 # Save-Friendliness and Compatibility
 *A note for save compatibility*
 
-There is only one patch that causes major save incompatibility. This incompatibility only exists IF you are using the mod "Dubs Bad Hygiene" AND "RF Fertile Fields". This is due to the fact that I remove all biosolids and composting elements. That means research, jobgivers, workdefs, defs... Everything related to them from "Dubs Bad Hygiene". So it may break your current save-game if you use both mods. New games will not suffer any issues other than 4 error logs generated from the missing defs, but they are harmless errors. The only other thing to note is that there may be some issues with floors going missing if you use various other mods along with "Stuffed Floors" by Fluffy. This is not save-breaking, it will only mean you need to redo your floors.
+There is only one patch that causes major save incompatibility. This incompatibility only exists IF you are using the mod "Dubs Bad Hygiene" AND "RF Fertile Fields". This is due to the fact that I remove biosolids and fertilizing from "Dubs Bad Hygiene". So it may break your current save-game, but more than likely there will only be a lot of errors generated upon first loading into an existing game. These errors occur due to any existing biosolids being deleted, as well as any soil previously fertilized with them. I've tested on-going saves with this patch, and my save was not broken by the changes made. New games will not suffer any issues other than 1 error log generated at game start-up from the missing defs, but it is harmless. The only other thing to note is that there may be some issues with floors going missing if you use various other mods along with "Stuffed Floors" by Fluffy. This is not save-breaking, it will only mean you need to redo your floors.
 
-**To remove that patch and allow this patch mod to be save-friendly navigate to "DocWorld/Patches" and find "DubsBadHygiene_RFFertileFields.xml" and then either hide it or delete it.**
+**To remove that patch and allow this mod to be entirely save-friendly, navigate to "DocWorld/Patches" and find "DubsBadHygiene_RFFertileFields.xml" and then either hide it or delete it.**
 
 # Changelog
 Date Format: DD/MM/YYYY
