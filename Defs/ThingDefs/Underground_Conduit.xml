@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
   <ThingDef ParentName="BuildingBase">
-    <defName>PowerConduitSecret</defName>
+    <defName>PowerConduitSecret_DZ</defName>
     <label>underground power conduit</label>
     <description>A bundle of underground electrical cables for moving power around. Can be placed beneath walls and other buildings.</description>
     <thingClass>Building</thingClass>
