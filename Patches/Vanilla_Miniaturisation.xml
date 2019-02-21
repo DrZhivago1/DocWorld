@@ -30,7 +30,7 @@
             </li>
         </operations>
     </Operation>
-    
+
     <!--=====Buildings_Misc=====-->
     <!--=====CommsConsole=====-->
     <Operation Class="PatchOperationSequence">
@@ -177,7 +177,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "MultiAnalyzer"]/statBases</xpath>
                 <value>
-                    <Mass>30</Mass>
+                    <Mass>50</Mass>
                 </value>
             </li>
         </operations>
@@ -237,7 +237,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "PodLauncher"]/statBases</xpath>
                 <value>
-                    <Mass>30</Mass>
+                    <Mass>50</Mass>
                 </value>
             </li>
         </operations>
@@ -274,7 +274,7 @@
     </Operation>
 
     <!--=====Buildings_Power=====-->
-	<!--=====ChemfuelPoweredGenerator=====-->
+    <!--=====ChemfuelPoweredGenerator=====-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -299,12 +299,12 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "ChemfuelPoweredGenerator"]/statBases</xpath>
                 <value>
-                    <Mass>100</Mass>
+                    <Mass>150</Mass>
                 </value>
             </li>
         </operations>
     </Operation>
-	<!--=====PowerSwitch=====-->
+    <!--=====PowerSwitch=====-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -334,7 +334,7 @@
             </li>
         </operations>
     </Operation>
-	<!--=====SolarGenerator=====-->
+    <!--=====SolarGenerator=====-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -364,7 +364,7 @@
             </li>
         </operations>
     </Operation>
-	<!--=====WindTurbine=====-->
+    <!--=====WindTurbine=====-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -394,7 +394,7 @@
             </li>
         </operations>
     </Operation>
-	<!--=====WoodFiredGenerator=====-->
+    <!--=====WoodFiredGenerator=====-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -419,38 +419,38 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "WoodFiredGenerator"]/statBases</xpath>
                 <value>
-                    <Mass>100</Mass>
+                    <Mass>150</Mass>
                 </value>
             </li>
         </operations>
     </Operation>
 
     <!--=====Buildings_Production=====-->
-	<!--=====BiofuelRefinery, FabricationBench, HiTechResearchBench=====-->
-	<Operation Class="PatchOperationSequence">
-		<success>Always</success>
-		<operations>
-			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName = "BiofuelRefinery" or defName = "FabricationBench" or defName = "HiTechResearchBench"]/minifiedDef</xpath>
-				<value>
-					<minifiedDef>MinifiedThing</minifiedDef>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName = "BiofuelRefinery" or defName = "FabricationBench" or defName = "HiTechResearchBench"]/thingCategories</xpath>
-				<value>
-					<li>BuildingsProduction</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>Defs/ThingDef[defName = "BiofuelRefinery" or defName = "FabricationBench" or defName = "HiTechResearchBench"]/statBases</xpath>
-				<value>
-					<Mass>50</Mass>
-				</value>
-			</li>
-		</operations>
-	</Operation>
-	<!--=====ElectricCrematorium=====-->
+    <!--=====BiofuelRefinery, FabricationBench, HiTechResearchBench=====-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName = "BiofuelRefinery" or defName = "FabricationBench" or defName = "HiTechResearchBench"]/minifiedDef</xpath>
+                <value>
+                    <minifiedDef>MinifiedThing</minifiedDef>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "BiofuelRefinery" or defName = "FabricationBench" or defName = "HiTechResearchBench"]/thingCategories</xpath>
+                <value>
+                    <li>BuildingsProduction</li>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName = "BiofuelRefinery" or defName = "FabricationBench" or defName = "HiTechResearchBench"]/statBases</xpath>
+                <value>
+                    <Mass>75</Mass>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+    <!--=====ElectricCrematorium=====-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -480,7 +480,7 @@
             </li>
         </operations>
     </Operation>
-	<!--=====Hopper=====-->
+    <!--=====Hopper=====-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -535,14 +535,14 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "HydroponicsBasin"]/statBases</xpath>
                 <value>
-                    <Mass>20</Mass>
+                    <Mass>30</Mass>
                 </value>
             </li>
         </operations>
     </Operation>
 
     <!--=====Buildings_Temperature=====-->
-	<!--=====Cooler=====-->
+    <!--=====Cooler=====-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -572,7 +572,7 @@
             </li>
         </operations>
     </Operation>
-	<!--=====PassiveCooler=====-->
+    <!--=====PassiveCooler=====-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -602,7 +602,7 @@
             </li>
         </operations>
     </Operation>
-	<!--=====Vent=====-->
+    <!--=====Vent=====-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
