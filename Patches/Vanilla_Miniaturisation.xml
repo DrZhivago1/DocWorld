@@ -87,7 +87,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "GroundPenetratingScanner"]/statBases</xpath>
                 <value>
-                    <Mass>40</Mass>
+                    <Mass>100</Mass>
                 </value>
             </li>
         </operations>
@@ -117,7 +117,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "LongRangeMineralScanner"]/statBases</xpath>
                 <value>
-                    <Mass>100</Mass>
+                    <Mass>250</Mass>
                 </value>
             </li>
         </operations>
@@ -299,7 +299,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "ChemfuelPoweredGenerator"]/statBases</xpath>
                 <value>
-                    <Mass>50</Mass>
+                    <Mass>100</Mass>
                 </value>
             </li>
         </operations>
@@ -359,7 +359,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "SolarGenerator"]/statBases</xpath>
                 <value>
-                    <Mass>50</Mass>
+                    <Mass>250</Mass>
                 </value>
             </li>
         </operations>
@@ -389,7 +389,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "WindTurbine"]/statBases</xpath>
                 <value>
-                    <Mass>75</Mass>
+                    <Mass>300</Mass>
                 </value>
             </li>
         </operations>
@@ -419,7 +419,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "WoodFiredGenerator"]/statBases</xpath>
                 <value>
-                    <Mass>50</Mass>
+                    <Mass>100</Mass>
                 </value>
             </li>
         </operations>
@@ -475,7 +475,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "ElectricCrematorium"]/statBases</xpath>
                 <value>
-                    <Mass>75</Mass>
+                    <Mass>150</Mass>
                 </value>
             </li>
         </operations>
