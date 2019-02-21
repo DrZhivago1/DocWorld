@@ -22,7 +22,7 @@ Date Format: DD/MM/YYYY
 
 **v1.0.10 (00/00/0000):**
 
-	Moved the Changelog into the README.md
+	Moved the Changelog into the README.md, fixed RoM-Bones_StuffedFloors patch.
 
 	IF "Dubs Hygiene" AND "RF Fertile Fields" are installed:
 		The composter is usable and produces RF Fertile Field compost. May cause minor issues with ongoing saves.
