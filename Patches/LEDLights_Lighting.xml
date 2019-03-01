@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   <!--If using LED Lights, move lights to Lighting tab-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>LED Lights</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationRemove">
+               <xpath>Defs/DesignationCategoryDef[defName="LEDLights"]</xpath>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[@Name="CCP_LEDRopeLightBase"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>Lighting</designationCategory>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+</Patch>
