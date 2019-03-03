@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Replace research for blast doors from DDA Security with Doors Expanded-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Doors Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>DDA Security and More</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ResearchProjectDef[defName="BlastDoor"]</xpath>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="BlastDoor"]/researchPrerequisites</xpath>
+            <value>
+              <researchPrerequisites>
+                <li>ProjectHeron_BlastDoors</li>
+              </researchPrerequisites>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>

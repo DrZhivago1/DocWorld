@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Remove fence research and move to Fences tab if DDA Security AND either fence mod are installed-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Fences And No Floors</li>
+      <li>Fences And Floors</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>DDA Security and More</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ResearchProjectDef[defName="Fences"]</xpath>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="Fence"]/researchPrerequisites</xpath>
+            <value>
+              <researchPrerequisites>
+                <li>Machining</li>
+              </researchPrerequisites>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="Fence"]/designationCategory</xpath>
+            <value>
+              <designationCategory>Fences</designationCategory>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>
