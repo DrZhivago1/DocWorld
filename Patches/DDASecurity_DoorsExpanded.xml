@@ -16,7 +16,7 @@
             <xpath>Defs/ResearchProjectDef[defName="BlastDoor"]</xpath>
           </li>
           <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="BlastDoor"]/researchPrerequisites</xpath>
+            <xpath>Defs/ThingDef[defName="Blastdoor"]/researchPrerequisites</xpath>
             <value>
               <researchPrerequisites>
                 <li>ProjectHeron_BlastDoors</li>
