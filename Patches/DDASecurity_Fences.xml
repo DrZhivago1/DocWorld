@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--Remove fence research and move to Fences tab if DDA Security AND either fence mod are installed-->
+  <!--Remove fence research, replace with machining research requirement, and move to Fences tab if DDA Security AND either fence mod are installed-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Fences And No Floors</li>
