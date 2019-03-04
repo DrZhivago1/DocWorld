@@ -26,7 +26,13 @@ Date Format: DD/MM/YYYY
 	Fixed RoM-Bones_StuffedFloors patch
 	Changed underground conduit defname, this will delete conduits from ongoing saves.
 	Buffed Vanilla minifiable item mass.
-
+	
+	IF "DDA Security and More" AND "Doors Expanded" are installed:
+		Remove DDA blastdoor research and replace research with Doors Expanded version.
+	
+	IF "DDA Security and More" AND "Fences and No Floors" OR "Fences and Floors" are installed:
+		Remove fence research and move fences to Fences tab.
+		
 	IF "Dubs Hygiene" AND "RF Fertile Fields" are installed:
 		The composter is usable and produces RF Fertile Field compost. May cause minor issues with ongoing saves.
 		Returns previously removed JobDef "LoadComposter" and "UnloadComposter".
@@ -37,6 +43,9 @@ Date Format: DD/MM/YYYY
 		Returns previously removed WorkGiver "FillComposter".
 		Continues to remove "BiosolidFertilizer".
 		Continues to remove "Biosolids".
+		
+	IF "LED Lights" is installed:
+		Move all lights to Lighting tab.
 		
 	IF "Repair Workbench" AND "Survival Tools" are installed:
 		Add tools to weapon repair recipe.
