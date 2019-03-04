@@ -20,43 +20,7 @@
             </li>
             <!--LED Lights Rope-->
             <li Class="PatchOperationReplace">
-               <xpath>Defs/ThingDef[@Name="CCP_LEDRopeLightBase"]/designationCategory</xpath>
-               <value>
-                  <designationCategory>Lighting</designationCategory>
-               </value>
-            </li>
-            <li Class="PatchOperationReplace">
-               <xpath>Defs/ThingDef[@Name="CCP_LEDWallLight"]/designationCategory</xpath>
-               <value>
-                  <designationCategory>Lighting</designationCategory>
-               </value>
-            </li>
-            <li Class="PatchOperationReplace">
-               <xpath>Defs/ThingDef[@Name="CCP_WRLEDWallLight"]/designationCategory</xpath>
-               <value>
-                  <designationCategory>Lighting</designationCategory>
-               </value>
-            </li>
-            <li Class="PatchOperationReplace">
-               <xpath>Defs/ThingDef[@Name="CCP_LEDLight"]/designationCategory</xpath>
-               <value>
-                  <designationCategory>Lighting</designationCategory>
-               </value>
-            </li>
-            <li Class="PatchOperationReplace">
-               <xpath>Defs/ThingDef[@Name="CCP_WRLEDLight"]/designationCategory</xpath>
-               <value>
-                  <designationCategory>Lighting</designationCategory>
-               </value>
-            </li>
-            <li Class="PatchOperationReplace">
-               <xpath>Defs/ThingDef[@Name="CCP_HIDLEDLight"]/designationCategory</xpath>
-               <value>
-                  <designationCategory>Lighting</designationCategory>
-               </value>
-            </li>
-            <li Class="PatchOperationReplace">
-               <xpath>Defs/ThingDef[@Name="CCP_WRHIDLEDLight"]/designationCategory</xpath>
+               <xpath>Defs/ThingDef[@Name="CCP_LEDRopeLightBase" or @Name="CCP_LEDWallLight" or @Name="CCP_WRLEDWallLight" or @Name="CCP_LEDLight" or @Name="CCP_WRLEDLight" or @Name="CCP_HIDLEDLight" or @Name="CCP_WRHIDLEDLight"]/designationCategory</xpath>
                <value>
                   <designationCategory>Lighting</designationCategory>
                </value>
