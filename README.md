@@ -326,4 +326,4 @@ Date Format: DD/MM/YYYY
 
 	IF "Smoked meat" AND "Expanded Woodworking" are installed:
 		Replaces "Smokepit" costlist to "RawWoody" category with cost of "20 stuff".
-    		Removes "Smokepit" constructEffect.
+    	Removes "Smokepit" constructEffect.
