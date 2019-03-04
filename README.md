@@ -30,7 +30,7 @@ Date Format: DD/MM/YYYY
 	IF "DDA Security and More" AND "Doors Expanded" are installed:
 		Remove DDA blastdoor research and replace research with Doors Expanded version.
 	
-	IF "DDA Security and More" AND "Fences and No Floors" OR "Fences and Floors" are installed:
+	IF "DDA Security and More" AND "Fences and No Floors"/"Fences and Floors" are installed:
 		Remove fence research and move fences to Fences tab.
 		
 	IF "Dubs Hygiene" AND "RF Fertile Fields" are installed:
@@ -56,13 +56,13 @@ Date Format: DD/MM/YYYY
 		Added more mod support for pictures.
 		
 	IF "Change Dresser" is installed:
-		Added compatibility to [sd] Goodnight, RIMkea, LOTRE, Gloomy Furniture, Medeival Times, Polyamory Beds
+		Added compatibility to [sd] Goodnight, RIMkea, LOTRE, Gloomy Furniture, Medeival Times, Polyamory Beds.
 	
 	IF "Dubs Bad Hygiene" is installed:
-		Move "Ceiling Fan" behind electricity research.
+		"Ceiling Fan" requires electricity research.
 
 	IF "Extended Storage" is installed:
-		Adds some categories to various storage furniture for better compatibility with "RimCuisine" and "Rim of Madness - Bones"
+		Adds some categories to various storage furniture for better compatibility with "RimCuisine" and "Rim of Madness - Bones".
 	
 	IF "VGP Xtra Trees and Flowers" AND "Realistic Planets" AND "Expanded Woodworking" are installed:
 		Add wood logs and lumber to VGP Trees.
@@ -70,7 +70,6 @@ Date Format: DD/MM/YYYY
 **v1.0.8 (18/12/2018):**
 	
 	Updated Vanilla and modded miniaturisation Defs.
-	
 	Removed "Expanded Woodworking"/experimental patches, as they are now integrated into the main mod/not useful.
 	
 	IF "High Tech Labratory Facilities" is installed:
@@ -120,9 +119,7 @@ Date Format: DD/MM/YYYY
 **v1.0.6 (01/12/2018):**
 
 	Optimized this mods patch coding for faster game load times.
-	
 	Fixed error logs produced from redundant or missing code with PhiClient, Weapon Tech, and Colony Leadership.
-
 	Added underground power conduits, invisible, cost 2 steel, neutral beauty.
 	
 	IF "Architect Icons" is installed:
@@ -156,7 +153,7 @@ Date Format: DD/MM/YYYY
 		Nerfs bone wall by 50 hitpoints.
 	
 	IF "Rim of Madness - Bones" AND "Expanded Woodworking" are installed:
-		Allows bones to be used in wood recipes where it makes sense. (Minor bug allows "WoodLog Walls" to be made of bone)
+		Allows bones to be used in wood recipes where it makes sense. (Minor bug allows "WoodLog Walls" to be made of bone).
 	
 	IF "Rim of Madness - Bones" AND "Stuffed Floors" are installed:
 		Moves all floors into a single drop-down menu on the "Foors" designation category.
@@ -177,7 +174,6 @@ Date Format: DD/MM/YYYY
 **v1.0.4 (29/11/2018):**
 
 	Alphabetize designation categories for Vanilla, More Planning, RF Fertile Fields, Fences and No Floors, Colony Leadership, sd Goodnight, Dubs Bad Hygiene, Remote Tech.
-	
 	Vanilla colonist beds require cloth to build.
 	
 	IF "[sd] goodnight" is installed:
@@ -212,7 +208,6 @@ Date Format: DD/MM/YYYY
 **v1.0.0 (18/11/2018):**
 
 	Creates a "Lighting" tab(Designation Category) and moves all vanilla, and supported mod lights, under the tab.
-
 	Allows Hopper, Orbital Trade Beacon, Moisture Pump, Comms Console, MultiAnalyzer, Ground Penetrating Scanner, Hi-Tech Research Bench, Pod Launcher, Sarcophagus, Power Switch, Wood Fired Generator, Chemfuel Powered Generator, Wind Turbine, and Solar Generator to be minified with mass.
 
 	IF "Additional Joy Objects" is installed:
@@ -331,6 +326,4 @@ Date Format: DD/MM/YYYY
 
 	IF "Smoked meat" AND "Expanded Woodworking" are installed:
 		Replaces "Smokepit" costlist to "RawWoody" category with cost of "20 stuff".
-    	Removes "Smokepit" constructEffect.
-
-
+    		Removes "Smokepit" constructEffect.
