@@ -24,7 +24,7 @@ Date Format: DD/MM/YYYY
 
 	Moved the Changelog into the README.md
 	Fixed RoM-Bones_StuffedFloors patch
-	Changed underground conduit defname, this will delete conduits from ongoing saves.
+	Changed underground conduit defName, this will delete conduits from ongoing saves (so replace them).
 	Buffed Vanilla minifiable item mass.
 	
 	IF "DDA Security and More" AND "Doors Expanded" are installed:
