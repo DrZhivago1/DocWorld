@@ -37,13 +37,13 @@
           </value>
         </li>
         <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[defName="CeilingFan"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[defName="CeilingFan" or defName="CeilingFanS"]/designationCategory</xpath>
           <value>
             <designationCategory>Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="CeilingFan"]/researchPrerequisites</xpath>
+          <xpath>Defs/ThingDef[defName="CeilingFan" or defName="CeilingFanS"]/researchPrerequisites</xpath>
           <value>
             <li>Electricity</li>
           </value>
