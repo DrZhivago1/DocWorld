@@ -20,7 +20,7 @@ There is only one patch that causes major save incompatibility. This incompatibi
 # Changelog
 Date Format: DD/MM/YYYY
 
-**v1.0.10 (00/00/0000):**
+**v1.0.10 (04/03/2019):**
 
 	Moved the Changelog into the README.md
 	Fixed RoM-Bones_StuffedFloors patch
