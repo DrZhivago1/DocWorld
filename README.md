@@ -26,6 +26,7 @@ Date Format: DD/MM/YYYY
 	Fixed RoM-Bones_StuffedFloors patch
 	Changed underground conduit defName, this will delete conduits from ongoing saves (so replace them).
 	Buffed the mass of various minifiable Vanilla items (only items from 1.0.0 release of DocWorld).
+	Removed "Weapon Tech" error fixing patch, no longer needed.
 	
 	IF "DDA Security and More" AND "Doors Expanded" are installed:
 		Remove DDA blastdoor research and replace research with Doors Expanded version.
