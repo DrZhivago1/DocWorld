@@ -34,6 +34,9 @@ Date Format: DD/MM/YYYY
 	IF "DDA Security and More" AND "Fences and No Floors"/"Fences and Floors" are installed:
 		Remove fence research and move fences to Fences tab.
 		
+	IF "Dubs Hygiene" is installed:
+		Moves "CeilingFanS" to Hygiene designation category.
+		
 	IF "Dubs Hygiene" AND "RF Fertile Fields" are installed:
 		The composter is usable and produces RF Fertile Field compost. May cause minor issues with ongoing saves.
 		Returns previously removed JobDef "LoadComposter" and "UnloadComposter".
