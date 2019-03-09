@@ -26,7 +26,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName = "WindPump"]/statBases</xpath>
                 <value>
-                    <Mass>50</Mass>
+                    <Mass>150</Mass>
                 </value>
             </li>
         </operations>
