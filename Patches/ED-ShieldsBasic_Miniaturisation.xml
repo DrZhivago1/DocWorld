@@ -27,7 +27,7 @@
         <xpath>Defs/ThingDef[defName = "Building_ShieldStandard"]</xpath>
         <value>
           <statBases>
-            <Mass>500</Mass>
+            <Mass>1000</Mass>
           </statBases>
         </value>
       </li>
@@ -59,7 +59,7 @@
         <xpath>Defs/ThingDef[defName = "Building_ShieldSmall"]</xpath>
         <value>
           <statBases>
-            <Mass>200</Mass>
+            <Mass>500</Mass>
           </statBases>
         </value>
       </li>
@@ -91,7 +91,7 @@
         <xpath>Defs/ThingDef[defName = "Building_Shield_Fortress"]</xpath>
         <value>
           <statBases>
-            <Mass>1000</Mass>
+            <Mass>1500</Mass>
           </statBases>
         </value>
       </li>
@@ -123,7 +123,7 @@
         <xpath>Defs/ThingDef[defName = "Building_ShieldSIF"]</xpath>
         <value>
           <statBases>
-            <Mass>500</Mass>
+            <Mass>1000</Mass>
           </statBases>
         </value>
       </li>
