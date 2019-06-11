@@ -20,6 +20,11 @@ There is only one patch that causes major save incompatibility. This incompatibi
 # Changelog
 Date Format: DD/MM/YYYY
 
+**v1.0.11 (DD/MM/YYYY):**
+	
+	IF "LWM's Deep Storage" is installed:
+		Adds categories and items to storage furniture for compatibility with "RimCuisine" and "Rim of Madness - Bones".
+
 **v1.0.10 (04/03/2019):**
 
 	Moved the Changelog into the README.md
