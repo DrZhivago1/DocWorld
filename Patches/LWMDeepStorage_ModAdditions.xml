@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
     <!--Add storage support to various mods-->
+
+    <!--=====Vanilla=====-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>LWM's Deep Storage</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="LWM_Food_Basket"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>Hay</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
     <!--=====Rim Cuisine=====-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -17,6 +35,12 @@
                         <xpath>Defs/ThingDef[defName="LWM_Food_Basket"]/building/fixedStorageSettings/filter/categories</xpath>
                         <value>
                             <li>FoodProcessed</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="LWM_Food_Basket"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                        <value>
+                            <li>RawFlax</li>
                         </value>
                     </li>
                     <li Class="PatchOperationAdd">
@@ -52,6 +76,34 @@
                         <xpath>Defs/ThingDef[defName="LWM_Food_Basket"]/building/fixedStorageSettings/filter/thingDefs</xpath>
                         <value>
                             <li>ROMB_Gelatin</li>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+    <!--=====[XND] Survival Tools=====-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>LWM's Deep Storage</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>[XND] Survival Tools</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="LWM_WeaponsCabinet"]/building/fixedStorageSettings/filter/categories</xpath>
+                        <value>
+                            <li>SurvivalTools</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="LWM_WeaponsLocker"]/building/fixedStorageSettings/filter/categories</xpath>
+                        <value>
+                            <li>SurvivalTools</li>
                         </value>
                     </li>
                 </operations>
