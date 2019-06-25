@@ -23,7 +23,9 @@ Date Format: DD/MM/YYYY
 **v1.0.11 (DD/MM/YYYY):**
 	
 	IF "LWM's Deep Storage" is installed:
-		Adds categories and items to storage furniture for compatibility with "RimCuisine" and "Rim of Madness - Bones".
+		Adds categories and items to storage furniture for compatibility with "RimCuisine", "[XND] Survival Tools" and "Rim of Madness - Bones".
+	IF "Glass+Lights" is installed:
+		Updated patch.
 
 **v1.0.10 (04/03/2019):**
 
