@@ -26,12 +26,24 @@ Date Format: DD/MM/YYYY
 **v1.0.11 (DD/MM/YYYY):**
 
 	Now requires being loaded below "Extended Storage Extended" if the mod is used. This is due to patching patches.
+	Updated patch for "Glass+Lights" to reflect mod updates.
+	Added new "Beds" tab for all beds. Supported Mods: RIMKea, LoTR, [sd] goodnight, Vanilla Furniture Expanded/Medical Module
+	Added new "Storage" tab for all shelving furniture. Supported mods: LWM's Deep Storage, RimWriter, Vanilla Furniture Expanded, Extended Storage, Extended Storage Extended
 	
 	IF "LWM's Deep Storage" is installed:
 		Adds categories and items to storage furniture for better compatibility with Vanilla as well as "RimCuisine", "[XND] Survival Tools", and "Rim of Madness - Bones".
 		
-	IF "Glass+Lights" is installed:
-		Updated patch.
+	IF "Vanilla Furniture Expanded" is installed:
+		Remove VFE category and put all furniture into their respective tabs.
+		
+	IF "Vanilla Furniture Expanded" AND "Additional Joy Objects/Classic" are installed:
+		Remove VFE dartboard and arcade.
+		
+	IF "Vanilla Furniture Expanded" AND "Industrial Age - Objects and Furniture" are installed:
+		Remove Industrial Age radio.
+		
+	IF "Vanilla Furniture Expanded" AND "Misc. Training" are installed:
+		Remove VFE punching bag.
 
 **v1.0.10 (04/03/2019):**
 
