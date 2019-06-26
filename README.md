@@ -21,6 +21,8 @@ There is only one patch that causes major save incompatibility. This incompatibi
 Date Format: DD/MM/YYYY
 
 **v1.0.11 (DD/MM/YYYY):**
+
+	Now requires being loaded below "Extended Storage Extended" if the mod is used. This is due to patching patches.
 	
 	IF "LWM's Deep Storage" is installed:
 		Adds categories and items to storage furniture for better compatibility with Vanilla as well as "RimCuisine", "[XND] Survival Tools", and "Rim of Madness - Bones".
