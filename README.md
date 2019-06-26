@@ -12,7 +12,7 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 
 # Save-Friendliness and Compatibility
 _*Mod Compatibillity*_
--Requires loading below "Extended Storage Extended" if mod is used.
+	-Requires loading below "Extended Storage Extended" if mod is used.
 
 _*A note for save compatibility*_
 
