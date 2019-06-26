@@ -11,7 +11,7 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 ## [License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 # Save-Friendliness and Compatibility
-__*Mod Compatibillity*__
+__*Mod Compatibility*__
 - Requires loading below "Extended Storage Extended" if mod is used.
 
 __*Save Compatibility*__
