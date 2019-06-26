@@ -11,7 +11,10 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 ## [License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 # Save-Friendliness and Compatibility
-*A note for save compatibility*
+_*Mod Compatibillity*_
+-Requires loading below "Extended Storage Extended" if mod is used.
+
+_*A note for save compatibility*_
 
 There is only one patch that causes major save incompatibility. This incompatibility only exists IF you are using the mod "Dubs Bad Hygiene" AND "RF Fertile Fields". This is due to the fact that I remove biosolids and fertilizing from "Dubs Bad Hygiene". So it _may_ break your current save-game, but more than likely there will only be a lot of errors generated upon first loading into an existing game. These errors occur due to any existing biosolids being deleted, as well as any soil previously fertilized with them. I've tested on-going saves with this patch, and my save was not broken by the changes made. New games will not suffer any issues other than 1 error log generated at game start-up from the missing defs, but it is harmless. The error is: _"Failed to find Verse.ThingDef named Biosolids. There are 4804 defs of this type loaded."_ The only other thing to note is that there may be some issues with floors going missing if you use various other mods along with "Stuffed Floors" by Fluffy. This is not save-breaking, it will only mean you need to redo your floors.
 
