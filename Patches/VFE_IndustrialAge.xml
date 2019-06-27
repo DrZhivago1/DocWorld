@@ -19,10 +19,10 @@
             <xpath>Defs/ResearchProjectDef[defName="Estate_TechMusicMed"]</xpath>
           </li>
           <li Class="PatchOperationRemove">
-            <xpath>Defs/JoyGiverDef[defName="Estate_ListenToGramophoneJG"]/thingDefs/li[2]</xpath>
+            <xpath>Defs/JoyGiverDef[defName="Estate_ListenToGramophoneJG"]/thingDefs/li[.="Estate_Radio"]</xpath>
           </li>
           <li Class="PatchOperationRemove">
-            <xpath>Defs/JoyGiverDef[defName="Estate_PlayAndListenToGramophoneJG"]/thingDefs/li[2]</xpath>
+            <xpath>Defs/JoyGiverDef[defName="Estate_PlayAndListenToGramophoneJG"]/thingDefs/li[.="Estate_Radio"]</xpath>
           </li>
           <li Class="PatchOperationRemove">
             <xpath>Defs/ThingDef[defName="Estate_Radio"]</xpath>
