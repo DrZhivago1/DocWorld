@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   <!--Change designation category of storage furniture for "Vanilla Furniture Expanded"-->
+    <!--=====Vanilla Furniture Expanded=====-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Shelf_1x1c" or defName="Shelf_WeaponRack"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Furniture_Storage</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
