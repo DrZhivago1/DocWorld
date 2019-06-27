@@ -2,6 +2,30 @@
 <Defs>
 
   <DesignationCategoryDef>
+    <defName>Beds</defName>
+    <label>beds</label>
+    <description>Places of rest for your colonists.</description>
+    <order>725</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+      <li>Designator_Uninstall</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+
+  <DesignationCategoryDef>
+    <defName>Furniture_Storage</defName>
+    <label>storage</label>
+    <description>Furniture that can store items.</description>
+    <order>150</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+      <li>Designator_Uninstall</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+
+  <DesignationCategoryDef>
     <defName>Lighting</defName>
     <label>lighting</label>
     <description>Things for illumination.</description>
