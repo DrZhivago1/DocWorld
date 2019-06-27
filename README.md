@@ -30,6 +30,9 @@ Date Format: DD/MM/YYYY
 	Added new "Beds" tab for all beds. Supported Mods: RIMKea, LoTR, [sd] goodnight, Vanilla Furniture Expanded/Medical Module
 	Added new "Storage" tab for all shelving furniture. Supported mods: LWM's Deep Storage, RimWriter, Vanilla Furniture Expanded, Extended Storage, Extended Storage Extended
 	
+	IF "Expanded Woodworking" AND "Simple Chains: Leather" are installed:
+		Tanning liquor made from logs.
+		
 	IF "LWM's Deep Storage" is installed:
 		Adds categories and items to storage furniture for better compatibility with Vanilla as well as "RimCuisine", "[XND] Survival Tools", and "Rim of Madness - Bones".
 		
