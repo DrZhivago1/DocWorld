@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--We will be moving all beds to the "Beds" tab, furniture to the "Furniture" tab, and moving all light sources to the "Lighting" tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!--Remove added category-->
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/DesignationCategoryDef[defName="AOMorefurniture"]</xpath>
+        </li>
+        <!--Move all beds to Beds category-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Bed_StoneSlab" or defName="Bed_Simple" or defName="Bed_Ergonomic" or defName="Bed_DoubleErgonomic" or defName="Bed_Kingsize"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Beds</designationCategory>
+          </value>
+        </li>
+        <!--Move all furniture to Furniture category-->
+        <!--Two furniture items are excluded due to a new category with this mod. "Shelf_1x1c" and "Shelf_WeaponRack"-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Seat_Cushion" or defName="Seat_Bench" or defName="Seat_SquareChair" or defName="Table_1x1c" or defName="Table_Counter" or defName="Table_Wardrobe" or defName="Seat_ModernChair" or defName="Table_RoyalEndTable" or defName="Table_RoyalDresser" or defName="Seat_RoyalChair" or defName="Seat_RoyalArmchair" or @Name="RoyalTableDesc"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <!--Move all lights to Lighting category-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Light_ModernLamp" or defName="Light_Streetlamp"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Lighting</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

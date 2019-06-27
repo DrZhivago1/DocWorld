@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Move "RIMKea" beds into "Bed" tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RIMkea</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="PILFURBed"]</xpath>
+          <value>
+            <designationCategory>Beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="SNOREGGSingle"]</xpath>
+          <value>
+            <designationCategory>Beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="SNOREGGDouble"]</xpath>
+          <value>
+            <designationCategory>Beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="PETSNORR"]</xpath>
+          <value>
+            <designationCategory>Beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="KRUDNEPPSingle"]</xpath>
+          <value>
+            <designationCategory>Beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="SLABNEPPDouble"]</xpath>
+          <value>
+            <designationCategory>Beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="SNORHOI"]</xpath>
+          <value>
+            <designationCategory>Beds</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Remove industrial radio from "Industrial Age" IF "VFE" is installed-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Industrial Age - Objects and Furniture</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/SoundDef[defName="Estate_RadioSeeking"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ResearchProjectDef[defName="Estate_TechMusicMed"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/JoyGiverDef[defName="Estate_ListenToGramophoneJG"]/thingDefs/li[2]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/JoyGiverDef[defName="Estate_PlayAndListenToGramophoneJG"]/thingDefs/li[2]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="Estate_Radio"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+    <!--Change designation category of storage furniture for Vanilla-->
+
+    <!--=====Vanilla=====-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <!--Move Vanilla Shelf-->
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Shelf"]</xpath>
+                    <value>
+                        <designationCategory>Furniture_Storage</designationCategory>
+                    </value>
+                </nomatch>
+                <match Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Furniture_Storage</designationCategory>
+                    </value>
+                </match>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

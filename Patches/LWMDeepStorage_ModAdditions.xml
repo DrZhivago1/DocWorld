@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-    <!--Add storage support to various mods-->
+    <!--Add storage support for various mods-->
 
     <!--=====Vanilla=====-->
     <Operation Class="PatchOperationFindMod">
