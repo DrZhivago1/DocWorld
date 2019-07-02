@@ -13,11 +13,10 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationRemove">
-            <xpath>Defs/RecipeDef[defName="Make_Patchleather"]/recipeUsers</xpath>
-            <value>
-              <li>TableLoom</li>
-              <li>TableElecLoom</li>
-            </value>
+            <xpath>Defs/RecipeDef[defName="Make_Patchleather"]/recipeUsers/TableLoom</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/RecipeDef[defName="Make_Patchleather"]/recipeUsers/TableElecLoom</xpath>
           </li>
         </operations>
       </match>
