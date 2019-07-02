@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--IF Fertile Fields AND SC:L are installed, allow tanning liquor to be made at stone campfire-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[RF] Fertile Fields [1.0]</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="CompostCorpseCampfire"]/recipeUsers</xpath>
+            <value>
+              <li>Stone_Campfire</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+  <!--IF Razzle Dazzle AND SC:L are installed, allow tanning liquor to be made at stone campfire-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>RazzleDazzle!</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[@Name="BurnPerformance"]/recipeUsers</xpath>
+            <value>
+              <li>Stone_Campfire</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+  <!--IF VFE AND SC:L are installed, allow tanning liquor to be made at stone campfire-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Leather</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[@Name="MakeTanningLiquorBase"]/recipeUsers</xpath>
+            <value>
+              <li>Stone_Campfire</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>

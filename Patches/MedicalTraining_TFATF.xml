@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Words_go_Here-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[1.0] Thanks For All The Fish</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Medical Training</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="IF_MedTable"]/fixedIngredientFilter/disallowedCategories</xpath>
+            <value>
+              <disallowedCategories>
+                <li>CorpsesFish</li>
+                <li>CorpsesMechanoid</li>
+                <li>CorpsesAnimal</li>
+              </disallowedCategories>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>
