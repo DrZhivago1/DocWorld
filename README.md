@@ -29,6 +29,7 @@ Date Format: DD/MM/YYYY
 	Now requires being loaded below "Extended Storage Extended" or/and "VGP Garden Fabrics" if the mod/s is/are used. This is due to patching patches.
 	Updated patch for "Glass+Lights" to reflect mod updates.
 	Removed "Colony Leadership" patch for sound errors, fixed by mod author.
+	Removed "VGPGardenFabrics_ThrumboExtension", author of VGP used my patch.
 	Added new "Beds" tab for all beds. Supported Mods: RIMKea, LoTR, [sd] goodnight, Vanilla Furniture Expanded/Medical Module
 	Added new "Storage" tab for all shelving furniture. Supported mods: LWM's Deep Storage, RimWriter, Vanilla Furniture Expanded, Extended Storage, Extended Storage Extended
 	
