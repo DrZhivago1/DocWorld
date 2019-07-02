@@ -13,6 +13,7 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 # Save-Friendliness and Compatibility
 __*Mod Compatibility*__
 - Requires loading below "Extended Storage Extended" if mod is used.
+- Requires loading below "VGP Garden Fabrics" if mod is used.
 
 __*Save Compatibility*__
 
@@ -25,7 +26,7 @@ Date Format: DD/MM/YYYY
 
 **v1.0.11 (DD/MM/YYYY):**
 
-	Now requires being loaded below "Extended Storage Extended" if the mod is used. This is due to patching patches.
+	Now requires being loaded below "Extended Storage Extended" or/and "VGP Garden Fabrics" if the mod/s is/are used. This is due to patching patches.
 	Updated patch for "Glass+Lights" to reflect mod updates.
 	Removed "Colony Leadership" patch for sound errors, fixed by mod author.
 	Added new "Beds" tab for all beds. Supported Mods: RIMKea, LoTR, [sd] goodnight, Vanilla Furniture Expanded/Medical Module
@@ -35,10 +36,17 @@ Date Format: DD/MM/YYYY
 		Tanning liquor made from logs.
 		
 	IF "LWM's Deep Storage" is installed:
-		Adds categories and items to storage furniture for better compatibility with Vanilla as well as "RimCuisine", "[XND] Survival Tools", and "Rim of Madness - Bones".
+		Adds categories and items to storage furniture for change to Vanilla as well as "VGP Garden Fabrics".
+		
+	IF "Medical Training" AND "Thanks For All The Fish" are installed:
+		Removes fish from training recipe on medical training table.
+		
+	IF "Soft Warm Beds" is installed:
+		Move beds to Beds tab.
 		
 	IF "Vanilla Furniture Expanded" is installed:
 		Remove VFE category and put all furniture into their respective tabs.
+		Add recipes to stone campfire from mods: "Fertile Fields", "RazzleDazzle!", "Simple Chains: Leather".
 		
 	IF "Vanilla Furniture Expanded" AND "Additional Joy Objects/Classic" are installed:
 		Remove VFE dartboard and arcade.
@@ -46,8 +54,13 @@ Date Format: DD/MM/YYYY
 	IF "Vanilla Furniture Expanded" AND "Industrial Age - Objects and Furniture" are installed:
 		Remove Industrial Age radio.
 		
-	IF "Vanilla Furniture Expanded" AND "Misc. Training" are installed:
+	IF "Vanilla Furniture Expanded" AND "Misc. Training"/"Combat Training" are installed:
 		Remove VFE punching bag.
+	
+	IF "Vanilla Furniture
+		
+	IF "VGP Garden Fabrics" AND "Simple Chains: Leather" are installed:
+		Remove patchleather recipe from VGP loom. (too OP)
 
 **v1.0.10 (04/03/2019):**
 
