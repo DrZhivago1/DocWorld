@@ -58,8 +58,6 @@ Date Format: DD/MM/YYYY
 		
 	IF "Vanilla Furniture Expanded" AND "Misc. Training"/"Combat Training" are installed:
 		Remove VFE punching bag.
-	
-	IF "Vanilla Furniture
 		
 	IF "VGP Garden Fabrics" AND "Simple Chains: Leather" are installed:
 		Remove patchleather recipe from VGP loom. (too OP)
