@@ -13,7 +13,6 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 # Save-Friendliness and Compatibility
 __*Mod Compatibility*__
 - Requires loading below "Extended Storage Extended" if mod is used.
-- Requires loading below "VGP Garden Fabrics" if mod is used.
 
 __*Save Compatibility*__
 
@@ -26,7 +25,7 @@ Date Format: DD/MM/YYYY
 
 **v1.0.11 (DD/MM/YYYY):**
 
-	Now requires being loaded below "Extended Storage Extended" or/and "VGP Garden Fabrics" if the mod/s is/are used. This is due to patching patches.
+	Now requires being loaded below "Extended Storage Extended" if the mod is used. This is due to patching patches.
 	Updated patch for "Glass+Lights" to reflect mod updates.
 	Removed "Colony Leadership" patch for sound errors, fixed by mod author.
 	Removed "VGPGardenFabrics_ThrumboExtension", author of VGP used my patch.
@@ -58,9 +57,6 @@ Date Format: DD/MM/YYYY
 		
 	IF "Vanilla Furniture Expanded" AND "Misc. Training"/"Combat Training" are installed:
 		Remove VFE punching bag.
-		
-	IF "VGP Garden Fabrics" AND "Simple Chains: Leather" are installed:
-		Remove patchleather recipe from VGP loom. (too OP)
 
 **v1.0.10 (04/03/2019):**
 
