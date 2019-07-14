@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--Words_go_Here-->
+  <!--Remove Fish from training bench-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>[1.0] Thanks For All The Fish</li>
