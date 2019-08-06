@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--IF Fertile Fields AND VFE are installed, allow tanning liquor to be made at stone campfire-->
+  <!--IF Fertile Fields AND VFE are installed, allow corpse composting at stone campfire-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Vanilla Furniture Expanded</li>
@@ -22,7 +22,7 @@
       </match>
     </match>
   </Operation>
-  <!--IF Razzle Dazzle AND SC:L are installed, allow tanning liquor to be made at stone campfire-->
+  <!--IF Razzle Dazzle AND VFE are installed, allow burning of performance items-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Vanilla Furniture Expanded</li>
