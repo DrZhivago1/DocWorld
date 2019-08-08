@@ -44,33 +44,33 @@
                     </li>
                     <li Class="PatchOperationReplace">                        <!--SadjuukUN-IndustryRECIPE-->
                         <xpath>Defs/RecipeDef[defName="SadjuukSolarCellRecipeA"]/ingredients/li/filter/thingDefs/SadjuukGlass</xpath>
-                            <value>
-                                <li>Glass</li>
-                            </value>
-                        </li>
+                        <value>
+                            <li>Glass</li>
+                        </value>
+                    </li>
                     <li Class="PatchOperationReplace">
                         <xpath>Defs/RecipeDef[defName="SadjuukSolarCellRecipeA"]/fixedIngredientFilter/thingDefs/SadjuukGlass</xpath>
-                            <value>
-                                <li>Glass</li>
-                            </value>
-                        </li>
+                        <value>
+                            <li>Glass</li>
+                        </value>
+                    </li>
                     <li Class="PatchOperationReplace">
                         <xpath>Defs/RecipeDef[defName="SadjuukSolarCellRecipeB"]/ingredients/li/filter/thingDefs/SadjuukGlass</xpath>
-                            <value>
-                                <li>Glass</li>
-                            </value>
-                        </li>
+                        <value>
+                            <li>Glass</li>
+                        </value>
+                    </li>
                     <li Class="PatchOperationReplace">
                         <xpath>Defs/RecipeDef[defName="SadjuukSolarCellRecipeB"]/fixedIngredientFilter/thingDefs/SadjuukGlass</xpath>
-                            <value>
-                                <li>Glass</li>
-                            </value>
-                        </li>
-                        <li Class="PatchOperationRemove">                            <!--SadjuukUN-BuildingITEM-->
-                            <xpath>Defs/ThingDef[defName="SadjuukGlass"]</xpath>
-                        </li>
-                    </operations>
-                </match>
+                        <value>
+                            <li>Glass</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationRemove">                        <!--SadjuukUN-BuildingITEM-->
+                        <xpath>Defs/ThingDef[defName="SadjuukGlass"]</xpath>
+                    </li>
+                </operations>
             </match>
-        </Operation>
-    </Patch>
+        </match>
+    </Operation>
+</Patch>
