@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--IF "ZARS Production Spots" is installed, add various production spots into drop down designator from ZARS-->
+  <!--=====RimCuisine=====-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ZARS Production Spots</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>RimCuisine 1.0</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="RC_FoodPrepSpot"]</xpath>
+            <value>
+              <designatorDropdown>ZARS_Spots</designatorDropdown>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+  <!--=====Thanks For All The Fish=====-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ZARS Production Spots</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[1.0] Thanks For All The Fish</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="FishingSpot"]</xpath>
+            <value>
+              <designatorDropdown>ZARS_Spots</designatorDropdown>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>

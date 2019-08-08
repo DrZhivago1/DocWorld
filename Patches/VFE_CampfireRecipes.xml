@@ -3,11 +3,11 @@
   <!--IF Fertile Fields AND VFE are installed, allow corpse composting at stone campfire-->
   <Operation Class="PatchOperationFindMod">
     <mods>
-      <li>Vanilla Furniture Expanded</li>
+      <li>[RF] Fertile Fields [1.0]</li>
     </mods>
     <match Class="PatchOperationFindMod">
       <mods>
-        <li>[RF] Fertile Fields [1.0]</li>
+        <li>Vanilla Furniture Expanded</li>
       </mods>
       <match Class="PatchOperationSequence">
         <success>Always</success>
@@ -25,11 +25,11 @@
   <!--IF Razzle Dazzle AND VFE are installed, allow burning of performance items-->
   <Operation Class="PatchOperationFindMod">
     <mods>
-      <li>Vanilla Furniture Expanded</li>
+      <li>RazzleDazzle!</li>
     </mods>
     <match Class="PatchOperationFindMod">
       <mods>
-        <li>RazzleDazzle!</li>
+        <li>Vanilla Furniture Expanded</li>
       </mods>
       <match Class="PatchOperationSequence">
         <success>Always</success>
@@ -44,14 +44,14 @@
       </match>
     </match>
   </Operation>
-  <!--IF VFE AND SC:L are installed, allow tanning liquor to be made at stone campfire-->
+  <!--IF SC:L AND VFE are installed, allow tanning liquor to be made at stone campfire-->
   <Operation Class="PatchOperationFindMod">
     <mods>
-      <li>Vanilla Furniture Expanded</li>
+      <li>Simple Chains: Leather</li>
     </mods>
     <match Class="PatchOperationFindMod">
       <mods>
-        <li>Simple Chains: Leather</li>
+        <li>Vanilla Furniture Expanded</li>
       </mods>
       <match Class="PatchOperationSequence">
         <success>Always</success>
