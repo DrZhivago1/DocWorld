@@ -80,9 +80,6 @@ Date Format: DD/MM/YYYY
 	IF "Vanilla Furniture Expanded" AND "Misc. Training"/"Combat Training" are installed:
 		Remove VFE punching bag.
 		
-	IF "Vanilla Furniture Expanded" AND "Fertile Fields [1.0]" OR "RazzleDazzle!" OR "Simple Chains: Leather" are installed:
-		Add corresponding recipes to VFE campfire.
-		
 	IF "ZARS Production Spots" AND "Thanks For All The Fish" OR "RimCuisine" are installed:
 		Move production spots into drop down designator from ZARS.
 
