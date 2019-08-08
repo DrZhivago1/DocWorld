@@ -14,13 +14,22 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationRemove">
-            <xpath>Defs/ThingDef[defName="Joy_Arcade" or defName="Joy_DartsBoard"]</xpath>
+            <xpath>Defs/ThingDef[defName="Joy_Arcade"]</xpath>
           </li>
           <li Class="PatchOperationRemove">
-            <xpath>Defs/JobDef[defName="Play_Arcade" or defName="Play_DartsBoard"]</xpath>
+            <xpath>Defs/ThingDef[defName="Joy_DartsBoard"]</xpath>
           </li>
           <li Class="PatchOperationRemove">
-            <xpath>Defs/JoyGiverDef[defName="Play_Arcade" or defName="Play_DartsBoard"]</xpath>
+            <xpath>Defs/JobDef[defName="Play_Arcade"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/JobDef[defName="Play_DartsBoard"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/JoyGiverDef[defName="Play_Arcade"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/JoyGiverDef[defName="Play_DartsBoard"]</xpath>
           </li>
           <li Class="PatchOperationReplace">
             <xpath>Defs/ResearchProjectDef[defName="MF_ModernFurniture"]/description</xpath>

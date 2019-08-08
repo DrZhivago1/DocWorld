@@ -10,9 +10,9 @@
       <operations>
         <!--Cieling Lamps Abstract-->
         <li Class="PatchOperationConditional">
-          <xpath>Defs/ThingDef[@Name="CeilingLampBase"]/researchPrerequisites</xpath>
+          <xpath>Defs/ThingDef[@Name="CeilingLampBase" or @Name="GlCeilingLampBase"]/researchPrerequisites</xpath>
           <nomatch Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[@Name="CeilingLampBase"]</xpath>
+            <xpath>Defs/ThingDef[@Name="CeilingLampBase" or @Name="GlCeilingLampBase"]</xpath>
             <value>
               <researchPrerequisites>
                 <li>Electricity</li>
@@ -20,18 +20,29 @@
             </value>
           </nomatch>
           <match Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[@Name="CeilingLampBase"]/researchPrerequisites</xpath>
+            <xpath>Defs/ThingDef[@Name="CeilingLampBase" or @Name="GlCeilingLampBase"]/researchPrerequisites</xpath>
             <value>
               <li>Electricity</li>
             </value>
           </match>
         </li>
         <!--Standing Lamp Abstract-->
-        <li Class="PatchOperationAdd">
+        <li Class="PatchOperationConditional">
           <xpath>Defs/ThingDef[@Name="StandingLampBase"]/researchPrerequisites</xpath>
-          <value>
-            <li>Electricity</li>
-          </value>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="StandingLampBase"]</xpath>
+            <value>
+              <researchPrerequisites>
+                <li>Electricity</li>
+              </researchPrerequisites>
+            </value>
+          </nomatch>
+          <match Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="StandingLampBase"]/researchPrerequisites</xpath>
+            <value>
+              <li>Electricity</li>
+            </value>
+          </match>
         </li>
       </operations>
     </match>
@@ -41,16 +52,27 @@
     <mods>
       <li>Glass+Lights</li>
     </mods>
-    <match Class="PatchOperationAdd">
-      <xpath>Defs/ThingDef[defName="OutdoorGroundLamp"]/comps</xpath>
-      <value>
-        <li Class="CompProperties_Power">
-          <compClass>CompPowerTrader</compClass>
-          <basePowerConsumption>15</basePowerConsumption>
-          <shortCircuitInRain>false</shortCircuitInRain>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="OutdoorGroundLamp"]/comps</xpath>
+          <value>
+            <li Class="CompProperties_Power">
+              <compClass>CompPowerTrader</compClass>
+              <basePowerConsumption>5</basePowerConsumption>
+              <shortCircuitInRain>false</shortCircuitInRain>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+          </value>
         </li>
-        <li Class="CompProperties_Flickable"/>
-      </value>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="OutdoorGroundLamp"]/description</xpath>
+          <value>
+            <description>A lamp only placeable outdoors. Requires little external energy to run.</description>
+          </value>
+        </li>
+      </operations>
     </match>
   </Operation>
 </Patch>
