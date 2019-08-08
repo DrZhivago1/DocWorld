@@ -12,8 +12,8 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 
 # Save-Friendliness and Compatibility
 __*Mod Compatibility*__
-- Requires loading below "Extended Storage Extended" if mod is used.
-- Requires loading below "Industrialisation" if mod is used.
+- Requires loading below ["Extended Storage Extended"](https://github.com/Terragg/Extended-Storage-Extended) if mod is used.
+- Requires loading below ["Industrialisation"](https://steamcommunity.com/sharedfiles/filedetails/?id=1463579055) if mod is used.
 
 __*Save Compatibility*__
 
@@ -60,6 +60,12 @@ Date Format: DD/MM/YYYY
 		
 	IF "Soft Warm Beds" is installed:
 		Move beds to Beds tab.
+		
+	IF "Un-Colony" AND "Glass+Lights" are installed:
+		Remove and replace all UN-Colony glass.
+		
+	IF "Un-Colony" AND "Industrialisation" are installed:
+		Remove and replace all Industrialisation concrete.
 		
 	IF "Vanilla Furniture Expanded" is installed:
 		Remove VFE category and put all furniture into their respective tabs.
