@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Remove and replace all Industrialisation concrete if using UN-Colony as well.-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>1- UN-Colony [1.0]</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Industrialisation</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/WorkGiverDef[defName="Ind_DoBillsMixconcrete"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="Ind_Concrete" or defName="Ind_ConcreteMixer"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ResearchProjectDef[defName="Ind_ConcreteProduction"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">            <!--I would have used one operation in: [defName="item" or defName="item"...] but it was breaking. So separate operations it is...-->
+            <xpath>Defs/RecipeDef[defName="Ind_MakeConcreteFromAny"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/RecipeDef[defName="Ind_MakeConcreteFromSandstone"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/RecipeDef[defName="Ind_MakeConcreteFromGranite"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/RecipeDef[defName="Ind_MakeConcreteFromLimestone"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/RecipeDef[defName="Ind_MakeConcreteFromSlate"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/RecipeDef[defName="Ind_MakeConcreteFromMarble"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/RecipeDef[@Name="Ind_MakeConcreteBase"]</xpath>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/TerrainDef[defName="Concrete"]/costList</xpath>
+            <value>
+              <costList>
+                <SadjuukConcrete>5</SadjuukConcrete>
+              </costList>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="Ind_NuclearPowerPlant"]/costList/Ind_Concrete</xpath>
+            <value>
+              <SadjuukConcrete>1000</SadjuukConcrete>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>
