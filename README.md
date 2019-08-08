@@ -24,7 +24,7 @@ There is only one patch that causes some save incompatibility. This incompatibil
 # Changelog
 Date Format: DD/MM/YYYY
 
-**v1.0.11 (DD/MM/YYYY):**
+**v1.0.11 (08/08/2019):**
 
 	Now requires being loaded below "Extended Storage Extended" and/or "Industrialisation" if the mod/s are used. This is due to patching patches.
 	Updated patch for "Glass+Lights" to reflect mod updates.
