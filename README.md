@@ -13,6 +13,7 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 # Save-Friendliness and Compatibility
 __*Mod Compatibility*__
 - Requires loading below "Extended Storage Extended" if mod is used.
+- Requires loading below "Industrialisation" if mod is used.
 
 __*Save Compatibility*__
 
