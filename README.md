@@ -44,6 +44,9 @@ Date Format: DD/MM/YYYY
 		
 	IF "Medical Training" AND "Thanks For All The Fish" are installed:
 		Removes fish from training recipe on medical training table.
+
+	IF "RIMkea" is installed:
+		Nerf values for work to build/comfort/beauty on furniture items.
 		
 	IF "Soft Warm Beds" is installed:
 		Move beds to Beds tab.
@@ -60,6 +63,12 @@ Date Format: DD/MM/YYYY
 		
 	IF "Vanilla Furniture Expanded" AND "Misc. Training"/"Combat Training" are installed:
 		Remove VFE punching bag.
+		
+	IF "Vanilla Furniture Expanded" AND "Fertile Fields [1.0]" OR "RazzleDazzle!" OR "Simple Chains: Leather" are installed:
+		Add corresponding recipes to VFE campfire.
+		
+	IF "ZARS Production Spots" AND "Thanks For All The Fish" OR "RimCuisine" are installed:
+		Move production spots into drop down designator from ZARS.
 
 **v1.0.10 (04/03/2019):**
 
