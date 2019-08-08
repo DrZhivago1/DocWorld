@@ -33,6 +33,9 @@ Date Format: DD/MM/YYYY
 	Added new "Beds" tab for all beds. Supported Mods: RIMKea, LoTR, [sd] goodnight, Vanilla Furniture Expanded/Medical Module
 	Added new "Storage" tab for all shelving furniture. Supported mods: LWM's Deep Storage, RimWriter, Vanilla Furniture Expanded, Extended Storage, Extended Storage Extended
 	
+	IF "Combat Extended" AND "[SYR] Individuality" are installed:
+		Patch 'Expert Shooter' accuracy bonus to be in line with Combat Extended. -Thanks to XeoNovaDan
+	
 	IF "Expanded Woodworking" AND "Simple Chains: Leather" are installed:
 		Tanning liquor made from logs.
 		
