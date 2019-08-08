@@ -33,17 +33,26 @@ Date Format: DD/MM/YYYY
 	Added new "Beds" tab for all beds. Supported Mods: RIMKea, LoTR, [sd] goodnight, Vanilla Furniture Expanded/Medical Module
 	Added new "Storage" tab for all shelving furniture. Supported mods: LWM's Deep Storage, RimWriter, Vanilla Furniture Expanded, Extended Storage, Extended Storage Extended
 	
+	IF "Ceiling Lights" is installed:
+		Moves all lights to the Lighting tab.
+	
 	IF "Combat Extended" AND "[SYR] Individuality" are installed:
 		Patch 'Expert Shooter' accuracy bonus to be in line with Combat Extended. -Thanks to XeoNovaDan
 	
 	IF "Expanded Woodworking" AND "Simple Chains: Leather" are installed:
 		Tanning liquor made from logs.
+
+	IF "Floor Lights" is installed:
+		Moves all lights to the Lighting tab.
 		
 	IF "LWM's Deep Storage" is installed:
 		Adds categories and items to storage furniture for change to Vanilla as well as "VGP Garden Fabrics".
 		
 	IF "Medical Training" AND "Thanks For All The Fish" are installed:
 		Removes fish from training recipe on medical training table.
+		
+	IF "Outdoor Lighting" is installed:
+		Moves all lights to the Lighting tab.
 
 	IF "RIMkea" is installed:
 		Nerf values for work to build/comfort/beauty on furniture items.
