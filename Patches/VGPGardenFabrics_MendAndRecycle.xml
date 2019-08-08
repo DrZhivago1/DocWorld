@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Remove salvaging from Loom if using VGP Fabrics and MendandRecycle-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+      <li>VGP Garden Fabrics Simplified</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>MendAndRecycle</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+        <li Class="PatchOperationRemove">
+        <xpath>Defs/RecipeDef[defName="SalvageApparel"]</xpath>
+        </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>
