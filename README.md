@@ -80,6 +80,9 @@ Date Format: DD/MM/YYYY
 	IF "Vanilla Furniture Expanded" AND "Misc. Training"/"Combat Training" are installed:
 		Remove VFE punching bag.
 		
+	IF "VGP Garden Fabrics" AND "MendAndRecycle" are installed:
+		Remove salvage recipe from loom, as it is on tailoring bench, which seems more appropriate.
+		
 	IF "ZARS Production Spots" AND "Thanks For All The Fish" OR "RimCuisine" are installed:
 		Move production spots into drop down designator from ZARS.
 
