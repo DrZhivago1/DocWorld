@@ -26,7 +26,7 @@ Date Format: DD/MM/YYYY
 
 **v1.0.11 (DD/MM/YYYY):**
 
-	Now requires being loaded below "Extended Storage Extended" if the mod is used. This is due to patching patches.
+	Now requires being loaded below "Extended Storage Extended" and/or "Industrialisation" if the mod/s are used. This is due to patching patches.
 	Updated patch for "Glass+Lights" to reflect mod updates.
 	Removed "Colony Leadership" patch for sound errors, fixed by mod author.
 	Removed "VGPGardenFabrics_ThrumboExtension", author of VGP used my patch.
