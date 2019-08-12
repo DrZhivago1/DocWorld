@@ -24,7 +24,7 @@
                     <li Class="PatchOperationReplace">                        <!--SadjuukUN-BuildingRESEARCH-->
                         <xpath>Defs/ResearchProjectDef[defName="SadjuukConstructionA"]/description</xpath>
                         <value>
-                            <description>This important research allow you to produce basic construction items such as paint or concrete.</description>
+                            <description>This important research allows you to produce basic construction items such as paint or concrete.</description>
                         </value>
                     </li>
                     <li Class="PatchOperationRemove">                        <!--SadjuukUN-BuildingRECIPE-->
