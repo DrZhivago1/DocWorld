@@ -17,11 +17,9 @@ __*Mod Compatibility*__
 
 __*Save Compatibility*__
 
-There is only one patch that causes larger incompatibility. This incompatibility only exists IF you are using the mod "Dubs Bad Hygiene" AND "RF Fertile Fields". This is due to the fact that I remove biosolids and fertilizing from "Dubs Bad Hygiene". So it may break your current save-game, but more than likely there will only be a lot of errors generated upon first loading into an existing game. These errors occur due to any existing biosolids being deleted, as well as any soil previously fertilized with them. I've tested on-going saves with this patch, and my save was not broken by the changes made. New games will not suffer any issues other than 1 error log generated at game start-up from the missing defs, but it is harmless. The error is: "Failed to find Verse.ThingDef named Biosolids. There are XXXX defs of this type loaded."
+There is only one patch that causes larger incompatibility. This incompatibility only exists IF you are using the mod "Dubs Bad Hygiene" AND "RF Fertile Fields". This is due to the fact that I remove biosolids and fertilizing from "Dubs Bad Hygiene". So it may break your current save-game, but more than likely there will only be a lot of errors generated upon first loading into an existing game. These errors occur due to any existing biosolids being deleted, as well as any soil previously fertilized with them. I've tested on-going saves with this patch, and my save was not broken by the changes made. New games will not suffer any issues other than 1 error log generated at game start-up from the missing defs, but it is harmless. The error is: "Failed to find Verse.ThingDef named Biosolids. There are XXXX defs of this type loaded." **To remove that patch and allow this mod to be save-friendlier, navigate to "DocWorld/Patches" and find "DubsBadHygiene_RFFertileFields.xml" and then either hide it or delete it.**
 
 The only other thing to note is that there may be some issues with floors/items going missing if you use various other mods. This *should* not be save-breaking, it means you need to redo your floors or may lose some redundant items from stockpiles. The more mods you use, the more likely it is to have complications on current saves. Use with caution.
-
-**To remove that patch and allow this mod to be entirely save-friendly, navigate to "DocWorld/Patches" and find "DubsBadHygiene_RFFertileFields.xml" and then either hide it or delete it.**
 
 # Changelog
 Date Format: DD/MM/YYYY
