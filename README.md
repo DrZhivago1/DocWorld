@@ -1,7 +1,7 @@
 # DocWorld
 A mod of combined patches for Vanilla RimWorld, and my RimWorld mod collection [The Doctor's World](https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074).
 
-The basics are: mod moves items to new tabs and organizes layout, balances some recipes for various items, enhances minaturisation abilities, adds underground power conduits, improves inter-mod compatability. There are a lot of patches done to the various mods outlined in the "Changelog". I suggest you read there for detailed information.
+The basics are: mod moves items to new tabs and organizes layout, balances some recipes for various items, enhances minaturisation abilities, adds underground power conduits, improves inter-mod compatability. There are a lot of patches done to the various mods outlined in the [Changelog](https://github.com/DrZhivago1/DocWorld/blob/master/README.md#changelog). I suggest you read there for detailed information.
 
 _[Link to Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1568744597)_
 
