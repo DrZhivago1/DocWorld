@@ -30,6 +30,9 @@ Date Format: DD/MM/YYYY
 
 	Now requires being loaded below "Gloomy Vanilla" if the mod is used. This is due to patching patches.
 	Changed all designation category def names to be unique and better support adapting mods into new tabs.
+	
+	IF "VGP Fabrics" AND "MendandRecycle" are installed:
+		Remove salvaging from Loom.
 
 **v1.0.11 (08/08/2019):**
 
