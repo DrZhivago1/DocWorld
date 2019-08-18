@@ -2,9 +2,9 @@
 <Defs>
 
   <DesignationCategoryDef>
-    <defName>Beds</defName>
+    <defName>DZ_Beds</defName>
     <label>beds</label>
-    <description>Places of rest for your colonists.</description>
+    <description>Spots for your pawns to rest.</description>
     <order>725</order>
     <specialDesignatorClasses>
       <li>Designator_Cancel</li>
@@ -14,7 +14,18 @@
   </DesignationCategoryDef>
 
   <DesignationCategoryDef>
-    <defName>Furniture_Storage</defName>
+    <defName>DZ_Fences</defName>
+    <label>fences</label>
+    <description>Not quite walls, but still an obstruction.</description>
+    <order>710</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+
+  <DesignationCategoryDef>
+    <defName>DZ_Storage</defName>
     <label>storage</label>
     <description>Furniture that can store items.</description>
     <order>150</order>
@@ -26,13 +37,14 @@
   </DesignationCategoryDef>
 
   <DesignationCategoryDef>
-    <defName>Lighting</defName>
+    <defName>DZ_Lighting</defName>
     <label>lighting</label>
-    <description>Things for illumination.</description>
+    <description>Illumination.</description>
     <order>550</order>
     <specialDesignatorClasses>
       <li>Designator_Cancel</li>
       <li>Designator_Deconstruct</li>
+      <li>Designator_Uninstall</li>
     </specialDesignatorClasses>
   </DesignationCategoryDef>
 
