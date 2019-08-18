@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--Move lights to the "Lighting" tab-->
+  <!--Move lights to the "DZ_Lighting" tab-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Floor Lights - 1.0</li>
@@ -14,55 +14,55 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="FloorLightSquare"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="FloorLightStripe"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="FloorLightSmallStripe"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="FloorLightPlus"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="FloorLightCorner"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="FloorLightInverseCorner"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="FloorLightCornerSmall"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="FloorLightInverseCornerSmall"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="FloorTileLightSquare"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
       </operations>

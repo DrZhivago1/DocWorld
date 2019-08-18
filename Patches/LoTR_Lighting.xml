@@ -9,7 +9,7 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="LotRD_Chandelier" or defName="LotRD_DwarvenCandelabra" or defName="LotRD_Brazier" or defName="LotRD_DwarvenWallLight" or defName="LotRD_DwarvenStreetLamp"]/designationCategory</xpath>
       <value>
-        <designationCategory>Lighting</designationCategory>
+        <designationCategory>DZ_Lighting</designationCategory>
       </value>
     </match>
   </Operation>
@@ -40,7 +40,7 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ThingDef[defName="LotRE_ElvenCandelabra"]/designationCategory</xpath>
       <value>
-        <designationCategory>Lighting</designationCategory>
+        <designationCategory>DZ_Lighting</designationCategory>
       </value>
     </match>
   </Operation>

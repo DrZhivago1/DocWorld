@@ -7,7 +7,7 @@
     </mods>
     <match Class="PatchOperationFindMod">
       <mods>
-        <li>Additional Joy Objects</li>
+        <li>Additional Joy Objects Lite</li>
         <li>Additional Joy Objects Classic</li>
       </mods>
       <match Class="PatchOperationSequence">

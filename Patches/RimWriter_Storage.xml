@@ -12,7 +12,7 @@
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/ThingDef[defName="Jecrell_StoneShelf"]</xpath>
                     <value>
-                        <designationCategory>Furniture_Storage</designationCategory>
+                        <designationCategory>DZ_Storage</designationCategory>
                     </value>
                 </li>
             </operations>

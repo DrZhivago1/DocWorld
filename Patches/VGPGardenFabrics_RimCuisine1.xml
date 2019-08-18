@@ -1,20 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--Remove salvaging from Loom if using VGP Fabrics and MendandRecycle-->
+  <!--Replace Cloth Harvest with Flax-->
   <Operation Class="PatchOperationFindMod">
     <mods>
-      <li>VGP Garden Fabrics</li>
-      <li>VGP Garden Fabrics Simplified</li>
+      <li>RimCuisine 1.0</li>
     </mods>
     <match Class="PatchOperationFindMod">
       <mods>
-        <li>MendAndRecycle</li>
+        <li>VGP Garden Fabrics</li>
       </mods>
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
-          <li Class="PatchOperationRemove">
-            <xpath>Defs/RecipeDef[defName="SalvageApparel"]</xpath>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="RC_PlantFlax"]/plant/harvestedThingDef</xpath>
+            <value>
+              <harvestedThingDef>RawFlax</harvestedThingDef>
+            </value>
           </li>
         </operations>
       </match>

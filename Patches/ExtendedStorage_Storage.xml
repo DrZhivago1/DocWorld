@@ -14,13 +14,13 @@
                     <nomatch Class="PatchOperationAdd">
                         <xpath>Defs/ThingDef[defName="Storage_Basket"]</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </nomatch>
                     <match Class="PatchOperationReplace">
                         <xpath>Defs/ThingDef[defName="Storage_Basket"]/designationCategory</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </match>
                 </li>
@@ -29,13 +29,13 @@
                     <nomatch Class="PatchOperationAdd">
                         <xpath>Defs/ThingDef[defName="Storage_HazMatContainer"]</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </nomatch>
                     <match Class="PatchOperationReplace">
                         <xpath>Defs/ThingDef[defName="Storage_HazMatContainer"]/designationCategory</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </match>
                 </li>
@@ -44,13 +44,13 @@
                     <nomatch Class="PatchOperationAdd">
                         <xpath>Defs/ThingDef[defName="Storage_Locker"]</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </nomatch>
                     <match Class="PatchOperationReplace">
                         <xpath>Defs/ThingDef[defName="Storage_Locker"]/designationCategory</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </match>
                 </li>
@@ -59,13 +59,13 @@
                     <nomatch Class="PatchOperationAdd">
                         <xpath>Defs/ThingDef[defName="Storage_MedicineCabinet"]</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </nomatch>
                     <match Class="PatchOperationReplace">
                         <xpath>Defs/ThingDef[defName="Storage_MedicineCabinet"]/designationCategory</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </match>
                 </li>
@@ -74,13 +74,13 @@
                     <nomatch Class="PatchOperationAdd">
                         <xpath>Defs/ThingDef[defName="Storage_TrayRack"]</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </nomatch>
                     <match Class="PatchOperationReplace">
                         <xpath>Defs/ThingDef[defName="Storage_TrayRack"]/designationCategory</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </match>
                 </li>
@@ -89,13 +89,13 @@
                     <nomatch Class="PatchOperationAdd">
                         <xpath>Defs/ThingDef[defName="Storage_FabricHamper"]</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </nomatch>
                     <match Class="PatchOperationReplace">
                         <xpath>Defs/ThingDef[defName="Storage_FabricHamper"]/designationCategory</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </match>
                 </li>
@@ -104,13 +104,13 @@
                     <nomatch Class="PatchOperationAdd">
                         <xpath>Defs/ThingDef[defName="Storage_Skip"]</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </nomatch>
                     <match Class="PatchOperationReplace">
                         <xpath>Defs/ThingDef[defName="Storage_Skip"]/designationCategory</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </match>
                 </li>
@@ -119,13 +119,13 @@
                     <nomatch Class="PatchOperationAdd">
                         <xpath>Defs/ThingDef[defName="Storage_WoodenPallet"]</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </nomatch>
                     <match Class="PatchOperationReplace">
                         <xpath>Defs/ThingDef[defName="Storage_WoodenPallet"]/designationCategory</xpath>
                         <value>
-                            <designationCategory>Furniture_Storage</designationCategory>
+                            <designationCategory>DZ_Storage</designationCategory>
                         </value>
                     </match>
                 </li>

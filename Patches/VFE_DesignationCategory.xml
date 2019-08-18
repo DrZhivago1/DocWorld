@@ -16,7 +16,7 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="Bed_StoneSlab" or defName="Bed_Simple" or defName="Bed_Ergonomic" or defName="Bed_DoubleErgonomic" or defName="Bed_Kingsize"]/designationCategory</xpath>
           <value>
-            <designationCategory>Beds</designationCategory>
+            <designationCategory>DZ_Beds</designationCategory>
           </value>
         </li>
         <!--Move all furniture to Furniture category-->
@@ -31,7 +31,14 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="Light_ModernLamp" or defName="Light_Streetlamp"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <!--Change designation category of storage furniture for "Vanilla Furniture Expanded"-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Shelf_1x1c" or defName="Shelf_WeaponRack"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Storage</designationCategory>
           </value>
         </li>
       </operations>

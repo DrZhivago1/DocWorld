@@ -7,7 +7,7 @@
       <li Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="TorchLamp" or @Name="LampBase"]/designationCategory</xpath>
         <value>
-          <designationCategory>Lighting</designationCategory>
+          <designationCategory>DZ_Lighting</designationCategory>
         </value>
       </li>
     </operations>

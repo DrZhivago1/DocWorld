@@ -39,7 +39,7 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="CeilingFan" or defName="CeilingFanS"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationAdd">
