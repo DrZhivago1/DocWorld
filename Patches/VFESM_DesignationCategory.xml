@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--We will be moving all beds to the "Beds" tab, furniture to the "Furniture" tab, and moving all light sources to the "Lighting" tab-->
+  <!--We will be moving all beds to the "Beds" tab, furniture to the "Furniture" tab, storage to "Storage" tab, and moving all light sources to the "Lighting" tab-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Vanilla Furniture Expanded - Spacer Module</li>
