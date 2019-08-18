@@ -37,7 +37,7 @@ Date Format: DD/MM/YYYY
 	IF "Gloomy Vanilla" is installed:
 		Move lights to "Lighting" and fences to "Fences" tab.
 		
-	IF "Vanilla Fences" is installed;
+	IF "Vanilla Fences" is installed:
 		Moves fences to "Fences" tab.
 	
 	IF "VGP Fabrics" AND "MendandRecycle" are installed:
