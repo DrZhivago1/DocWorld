@@ -25,6 +25,12 @@ The only other thing to note is that there may be some issues with floors/items 
 # Changelog
 Date Format: DD/MM/YYYY
 
+
+**v1.0.12 (00/00/0000):**
+
+	Now requires being loaded below "Gloomy Vanilla" if the mod is used. This is due to patching patches.
+	Changed all designation category def names to be unique and better support adapting mods into new tabs.
+
 **v1.0.11 (08/08/2019):**
 
 	Now requires being loaded below "Extended Storage Extended" and/or "Industrialisation" if the mod/s are used. This is due to patching patches.
