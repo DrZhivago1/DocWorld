@@ -33,12 +33,16 @@ Date Format: DD/MM/YYYY
 	Rewrote the "ClothBeds" modification so it is friendlier and nullified if using with other similar mods. "Add cloth to bed construction recipe if select mods are not in use. Support for: Vanilla, Gloomy Furniture, RIMkea".
 	Removes "Fences" designation category if not using any Fence mods.
 	Updated AJO-Lite mod name in patches.
+	Updated DBH and [RF]FF patch, irrigation sprinklers and composter now in "Farming" tab.
 	
 	IF "Gloomy Vanilla" is installed:
 		Move lights to "Lighting" and fences to "Fences" tab.
 		
 	IF "Vanilla Fences" is installed:
 		Moves fences to "Fences" tab.
+		
+	IF "Vanilla Furniture Expanded - Spacer Module" is installed:
+		Remove VFE category and put all furniture into their respective tabs.
 	
 	IF "VGP Fabrics" AND "MendandRecycle" are installed:
 		Remove salvaging from Loom.
