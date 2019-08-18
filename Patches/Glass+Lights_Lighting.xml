@@ -12,27 +12,27 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="GlCeilingLampBase"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
         <!--Standing Lamp Abstract-->
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="GLWallLightBase"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
         <!--Old Versions below, likely to be removed in future-->
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="CeilingLampBase"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="StandingLampBase"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
       </operations>

@@ -12,7 +12,7 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="MURWallLightVIIBase"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
       </operations>

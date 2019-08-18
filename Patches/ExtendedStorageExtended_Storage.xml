@@ -12,7 +12,7 @@
                 <li Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[@Name="ExtendedStorageExtended_FurnitureBase"]/designationCategory</xpath>
                     <value>
-                        <designationCategory>Furniture_Storage</designationCategory>
+                        <designationCategory>DZ_Storage</designationCategory>
                     </value>
                 </li>
                 <li Class="PatchOperationRemove">

@@ -24,14 +24,24 @@
               </researchPrerequisites>
             </value>
           </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="Fence"]/designationCategory</xpath>
-            <value>
-              <designationCategory>Fences</designationCategory>
-            </value>
-          </li>
         </operations>
       </match>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>DDA Security and More</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Fence"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Fences</designationCategory>
+          </value>
+        </li>
+      </operations>
     </match>
   </Operation>
 </Patch>

@@ -23,7 +23,7 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="Anon2EndTableLight" or defName="Anon2RoyalEndTableLight" or @Name="ANON2StandingLampBase"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
       </operations>

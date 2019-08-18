@@ -12,7 +12,7 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="Bed_OperatingTable" or defName="Bed_CryptoBed"]/designationCategory</xpath>
           <value>
-            <designationCategory>Beds</designationCategory>
+            <designationCategory>DZ_Beds</designationCategory>
           </value>
         </li>
       </operations>

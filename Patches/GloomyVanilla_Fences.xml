@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   <!--Move fences to Fences tab if using Gloomy Vanilla-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Gloomy Vanilla</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationConditional">
+               <xpath>Defs/ThingDef[defName="RGK_Door" or defName="RGK_WoodFence"]/designationCategory</xpath>
+               <match Class="PatchOperationReplace">
+                  <xpath>Defs/ThingDef[defName="RGK_Door" or defName="RGK_WoodFence"]/designationCategory</xpath>
+                  <value>
+                     <designationCategory>DZ_Fences</designationCategory>
+                  </value>
+               </match>
+               <nomatch Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[defName="RGK_Door" or defName="RGK_WoodFence"]</xpath>
+                  <value>
+                     <designationCategory>DZ_Fences</designationCategory>
+                  </value>
+               </nomatch>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+</Patch>

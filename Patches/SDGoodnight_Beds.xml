@@ -16,7 +16,7 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="SDGoodnightBedBase"]/designationCategory</xpath>
           <value>
-            <designationCategory>Beds</designationCategory>
+            <designationCategory>DZ_Beds</designationCategory>
           </value>
         </li>
       </operations>

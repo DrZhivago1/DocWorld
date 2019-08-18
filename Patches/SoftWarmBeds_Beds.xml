@@ -11,7 +11,7 @@
             <li Class="PatchOperationAdd">
                <xpath>Defs/ThingDef[defName="Rede"]</xpath>
                <value>
-                  <designationCategory>Beds</designationCategory>
+                  <designationCategory>DZ_Beds</designationCategory>
                </value>
             </li>
          </operations>

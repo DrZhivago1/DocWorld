@@ -3,7 +3,7 @@
   <!--Move chandeliers from AJO to the "Lighting" tab-->
   <Operation Class="PatchOperationFindMod">
     <mods>
-      <li>Additional Joy Objects</li>
+      <li>Additional Joy Objects Lite</li>
       <li>Additional Joy Objects Classic</li>
     </mods>
     <match Class="PatchOperationSequence">
@@ -13,7 +13,7 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="ChanPart_Support_Base"]/designationCategory</xpath>
           <value>
-            <designationCategory>Lighting</designationCategory>
+            <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
       </operations>

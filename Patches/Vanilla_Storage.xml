@@ -12,13 +12,13 @@
                 <nomatch Class="PatchOperationAdd">
                     <xpath>Defs/ThingDef[defName="Shelf"]</xpath>
                     <value>
-                        <designationCategory>Furniture_Storage</designationCategory>
+                        <designationCategory>DZ_Storage</designationCategory>
                     </value>
                 </nomatch>
                 <match Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
                     <value>
-                        <designationCategory>Furniture_Storage</designationCategory>
+                        <designationCategory>DZ_Storage</designationCategory>
                     </value>
                 </match>
             </li>

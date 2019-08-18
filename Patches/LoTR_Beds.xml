@@ -12,7 +12,7 @@
           <li Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="LotRE_ElvenRoyalBed" or defName="LotRE_ElvenBed"]</xpath>
             <value>
-              <designationCategory>Beds</designationCategory>
+              <designationCategory>DZ_Beds</designationCategory>
             </value>
           </li>
         </operations>
