@@ -34,6 +34,8 @@ Date Format: DD/MM/YYYY
 	Removes "Fences" designation category if not using any Fence mods.
 	Updated AJO-Lite mod name in patches.
 	Updated DBH and [RF]FF patch, irrigation sprinklers and composter now in "Farming" tab.
+	Updated "Glass+Lights" (outdoor ground lamp now in proper category and cieling lamps combined into one dropdown menu).
+	Updated "DubsSkylights" (updated lighting designation category name).
 	
 	IF "Gloomy Vanilla" is installed:
 		Move lights to "Lighting" and fences to "Fences" tab.
