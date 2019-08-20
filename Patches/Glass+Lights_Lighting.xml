@@ -15,9 +15,26 @@
             <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
+        <!--Combine cieling lights into one-->
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="GLCeilingLamp"]/designatorDropdown</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="GLCeilingLamp"]</xpath>
+            <value>
+              <designatorDropdown>CeilingLights</designatorDropdown>
+            </value>
+          </nomatch>
+        </li>
         <!--Standing Lamp Abstract-->
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[@Name="GLWallLightBase"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <!--Outdoor Ground Lamp-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="OutdoorGroundLamp"]/designationCategory</xpath>
           <value>
             <designationCategory>DZ_Lighting</designationCategory>
           </value>
