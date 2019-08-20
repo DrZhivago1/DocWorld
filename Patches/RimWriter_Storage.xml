@@ -1,21 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-   <!--Change designation category of storage furniture for "RimWriter"-->
+    <!--Change designation category of storage furniture for "RimWriter"-->
     <!--=====RimWriter=====-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RimWriter - Books, Scrolls, Tablets, and Libraries</li>
         </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[defName="Jecrell_StoneShelf"]</xpath>
-                    <value>
-                        <designationCategory>DZ_Storage</designationCategory>
-                    </value>
-                </li>
-            </operations>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Jecrell_StoneShelf"]</xpath>
+                <value>
+                    <designationCategory>LWM_DS_Storage</designationCategory>
+                </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Jecrell_StoneShelf"]</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
         </match>
     </Operation>
 </Patch>

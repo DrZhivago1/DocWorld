@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--We will be moving all beds to the "Beds" tab, furniture to the "Furniture" tab, storage to "Storage" tab, and moving all light sources to the "Lighting" tab-->
+
+  <!--We will be moving all beds to the "Beds" tab, furniture to the "Furniture" tab, and moving all light sources to the "Lighting" tab-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Vanilla Furniture Expanded</li>
@@ -34,14 +35,32 @@
             <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
-        <!--Change designation category of storage furniture for "Vanilla Furniture Expanded"-->
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[defName="Shelf_1x1c" or defName="Shelf_WeaponRack"]/designationCategory</xpath>
-          <value>
-            <designationCategory>DZ_Storage</designationCategory>
-          </value>
-        </li>
       </operations>
     </match>
   </Operation>
+
+  <!--Change designation category of storage furniture for "Vanilla Furniture Expanded" if "LWM Deep Storage" is/isnt installed-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Shelf_1x1c" or defName="Shelf_WeaponRack"]/designationCategory</xpath>
+        <value>
+          <designationCategory>LWM_DS_Storage</designationCategory>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Shelf_1x1c" or defName="Shelf_WeaponRack"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Storage</designationCategory>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
 </Patch>

@@ -1,21 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-   <!--Change designation category of storage furniture for "LWM's Deep Storage"-->
+    <!--Remove designation category for storage if "LWM's Deep Storage" is installed.-->
     <!--=====LWM's Deep Storage=====-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>LWM's Deep Storage</li>
         </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[@Name="LWM_DeepStorage" or defName="BigShelf"]</xpath>
-                    <value>
-                        <designationCategory>DZ_Storage</designationCategory>
-                    </value>
-                </li>
-            </operations>
+        <match Class="PatchOperationRemove">
+            <xpath>Defs/DesignationCategoryDef[defName="DZ_Storage"]</xpath>
         </match>
     </Operation>
 </Patch>

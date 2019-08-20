@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--We will be moving all beds to the "Beds" tab, furniture to the "Furniture" tab, storage to "Storage" tab, and moving all light sources to the "Lighting" tab-->
+  <!--We will be moving all beds to the "Beds" tab, furniture to the "Furniture" tab, and moving all light sources to the "Lighting" tab-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Vanilla Furniture Expanded - Spacer Module</li>
@@ -16,7 +16,6 @@
           </value>
         </li>
         <!--Move all furniture to Furniture category-->
-        <!--Two furniture items are excluded due to a new category with this mod. "Shelf_1x1c" and "Shelf_WeaponRack"-->
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="Table_IlluminatedEndTable" or defName="Table_IlluminatedDresser" or defName="Seat_AdvChair" or defName="Table_interactive_1x1c" or defName="Table_interactive_2x2c"]/designationCategory</xpath>
           <value>
@@ -30,14 +29,31 @@
             <designationCategory>DZ_Lighting</designationCategory>
           </value>
         </li>
-        <!--Change designation category of storage furniture for "Vanilla Furniture Expanded"-->
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>
-          <value>
-            <designationCategory>DZ_Storage</designationCategory>
-          </value>
-        </li>
       </operations>
+    </match>
+  </Operation>
+
+  <!--Change designation category of storage furniture for "Vanilla Furniture Expanded - Spacer Module" if "LWM Deep Storage" is/isnt installed-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Spacer Module</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>
+        <value>
+          <designationCategory>LWM_DS_Storage</designationCategory>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Storage</designationCategory>
+        </value>
+      </nomatch>
     </match>
   </Operation>
 
