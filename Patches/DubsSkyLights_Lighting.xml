@@ -15,7 +15,7 @@
           </value>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>Defs/DesignationCategoryDef[defName="Lighting"]/specialDesignatorClasses</xpath>
+          <xpath>Defs/DesignationCategoryDef[defName="DZ_Lighting"]/specialDesignatorClasses</xpath>
           <value>
             <li>Dubs_Skylight.Designator_RemoveSkylights</li>
           </value>
