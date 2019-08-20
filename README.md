@@ -33,9 +33,9 @@ Date Format: DD/MM/YYYY
 	Rewrote the "ClothBeds" modification so it is friendlier and nullified if using with other similar mods. "Add cloth to bed construction recipe if select mods are not in use. Support for: Vanilla, Gloomy Furniture, RIMkea".
 	Removes "Fences" designation category if not using any Fence mods.
 	Updated AJO-Lite mod name in patches.
-	Updated DBH and [RF]FF patch, irrigation sprinklers and composter now in "Farming" tab.
-	Updated "Glass+Lights" (outdoor ground lamp now in proper category and cieling lamps combined into one dropdown menu).
-	Updated "DubsSkylights" (updated lighting designation category name).
+	Updated "DubsBadHygiene_RFFertileFields" (irrigation sprinklers and composter now in "Farming" tab).
+	Updated "Glass+Lights_Lighting" (outdoor ground lamp in proper category and cieling lamps combined in one dropdown menu).
+	Updated "DubsSkyLights_Lighting" (updated lighting designation category name).
 	Updated "LWM Deep Storage" (patches better reflect storage categories and recent update).
 	
 	IF "Gloomy Vanilla" is installed:
