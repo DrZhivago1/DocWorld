@@ -36,6 +36,7 @@ Date Format: DD/MM/YYYY
 	Updated DBH and [RF]FF patch, irrigation sprinklers and composter now in "Farming" tab.
 	Updated "Glass+Lights" (outdoor ground lamp now in proper category and cieling lamps combined into one dropdown menu).
 	Updated "DubsSkylights" (updated lighting designation category name).
+	Updated "LWM Deep Storage" (patches better reflect storage categories and recent update).
 	
 	IF "Gloomy Vanilla" is installed:
 		Move lights to "Lighting" and fences to "Fences" tab.
