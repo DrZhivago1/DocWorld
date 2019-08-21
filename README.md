@@ -38,17 +38,30 @@ Date Format: DD/MM/YYYY
 	Updated "DubsSkyLights_Lighting" (updated lighting designation category name).
 	Updated "LWM Deep Storage" (patches better reflect storage categories and recent update).
 	
+	IF "Glitter Tech"/"Glitter Tech (No Surgery)" is installed:
+		Move beds and lights to respective categories.
+	
 	IF "Gloomy Vanilla" is installed:
-		Move lights to "Lighting" and fences to "Fences" tab.
+		Move lights to "Lighting" and fences to "Fences" category.
+	
+	IF "Glowstone" is installed:
+		Move lights into their respective category, and remove designation category from mod.
+	
+	IF "Steam Light" is installed:
+		Move lights into their respective category.
 		
 	IF "Vanilla Fences" is installed:
 		Moves fences to "Fences" tab.
 		
 	IF "Vanilla Furniture Expanded - Spacer Module" is installed:
-		Remove VFE category and put all furniture into their respective tabs.
+		Remove VFE category and put all furniture into their respective categories.
 	
 	IF "VGP Fabrics" AND "MendandRecycle" are installed:
 		Remove salvaging from Loom.
+		
+	IF "Wall Sun Lamp" is installed:
+		Move lights into their respective category, if "Fertile Fields" is installed the Sun Lamp goes into farming category.
+	
 
 **v1.0.11 (08/08/2019):**
 
