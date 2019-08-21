@@ -94,7 +94,7 @@ Date Format: DD/MM/YYYY
 		Move lights into their respective category, if "Fertile Fields" is installed the Sun Lamp goes into farming category.
 		
 	IF "ZARS Production Spots" AND "RimCuisine 2" are installed:
-		Move production spots into drop down designator from ZARS, and move brewing/butcher spots to "Culinary" category, remove excess brewing spot from RC2.	
+		Move production spots into drop down designator from ZARS, move brewing/butcher spots to "Culinary" category, and remove excess brewing spot from RC2.	
 
 **v1.0.11 (08/08/2019):**
 
