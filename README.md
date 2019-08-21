@@ -29,7 +29,7 @@ Date Format: DD/MM/YYYY
 **v1.0.12 (00/00/0000):**
 
 	Now requires being loaded below "Gloomy Vanilla" if the mod is used. This is due to patching patches.
-	Changed all designation category def names to be unique and better support adapting mods into new tabs.
+	Changed all designation category def names to be unique and better support adapting mods into new categories.
 	Rewrote the "ClothBeds" modification so it is friendlier and nullified if using with other similar mods. Support for: Vanilla, Gloomy Furniture, RimJobWorld, RIMkea, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module.
 	Removes "Fences" designation category if not using any Fence mods.
 	Add dropdown designator for Vanilla standing lamps.
