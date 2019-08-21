@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   <!--Move beds and lights to DocWorld categories-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Glitter Tech</li>
+         <li>Glitter Tech (No Surgery)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="ambTable"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>DZ_Beds</designationCategory>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="FloodLight"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>DZ_Lighting</designationCategory>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+</Patch>
