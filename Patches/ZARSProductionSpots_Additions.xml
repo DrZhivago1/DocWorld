@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
   <!--IF "ZARS Production Spots" is installed, add various production spots into drop down designator from ZARS-->
+
   <!--=====RimCuisine 1=====-->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -23,6 +24,62 @@
       </match>
     </match>
   </Operation>
+
+  <!--=====RimCuisine 2=====-->
+  <!--Core-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ZARS Production Spots</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[1.0] RimCuisine 2 Core</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="RC2_FoodPrepSpot"]</xpath>
+            <value>
+              <designatorDropdown>ZARS_Spots</designatorDropdown>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+  <!--Bottling and Booze-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ZARS Production Spots</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[1.0] RimCuisine 2: Bottling and Booze Expansion</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="ZARS_BrewingSpot"]</xpath>
+            <value>
+              <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="RC2_BrewingSpot"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/RecipeDef[defName="Make_Wort" or defName="RC2_Make_FruitMust" or defName="RC2_Make_GrapeMust" or defName="RC2_Make_KumisMust"]/recipeUsers/li[.="RC2_BrewingSpot"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/WorkGiverDef[defName="RC_DoBillsBrew"]/fixedBillGiverDefs/li[.="RC2_BrewingSpot"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
   <!--=====Thanks For All The Fish=====-->
   <Operation Class="PatchOperationFindMod">
     <mods>
