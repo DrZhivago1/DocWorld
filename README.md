@@ -68,13 +68,18 @@ Date Format: DD/MM/YYYY
 	
 	IF "VGP Fabrics" AND "MendandRecycle" are installed:
 		Remove salvaging from Loom.
+		
+	IF "RimCuisine 2" and/or the sub-mods are installed:
+		Create new category called "Culinary" and move all cooking/brewing items into it. Remove RC2 designation category.
 	
 	IF "RIMkea" is installed:
 		Put Shainbrait and Kageshain lights into dropdown designators.
 		
 	IF "Wall Sun Lamp" is installed:
 		Move lights into their respective category, if "Fertile Fields" is installed the Sun Lamp goes into farming category.
-	
+		
+	IF "ZARS Production Spots" AND "RimCuisine 2" are installed:
+		Move production spots into drop down designator from ZARS, and move brewing/butcher spots to "Culinary" category, remove excess brewing spot from RC2.	
 
 **v1.0.11 (08/08/2019):**
 
