@@ -38,6 +38,12 @@ Date Format: DD/MM/YYYY
 	Updated "DubsSkyLights_Lighting" (updated lighting designation category name).
 	Updated "LWM Deep Storage" (patches better reflect storage categories and recent update).
 	
+	IF "Centralized Climate Control" is installed:
+		Move all items to "Temperature" category.
+		
+	IF "Fast Regen" is installed:
+		Move beds to "Beds" category.
+	
 	IF "Glitter Tech"/"Glitter Tech (No Surgery)" is installed:
 		Move beds and lights to respective categories.
 	
