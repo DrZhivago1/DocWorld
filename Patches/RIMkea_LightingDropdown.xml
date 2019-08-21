@@ -1,0 +1,41 @@
+﻿<Patch>
+   <!--Create dropdown menu for RIMkea lights-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>RIMkea</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs</xpath>
+               <value>
+                  <DesignatorDropdownGroupDef>
+                     <defName>DZ_Lighting_SHAINBRAIT</defName>
+                  </DesignatorDropdownGroupDef>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[@Name="RIKMilleniumLampBase"]</xpath>
+               <value>
+               <designatorDropdown>DZ_Lighting_SHAINBRAIT</designatorDropdown>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs</xpath>
+               <value>
+                  <DesignatorDropdownGroupDef>
+                     <defName>DZ_Lighting_KAGESHAIN</defName>
+                  </DesignatorDropdownGroupDef>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[@Name="RIKFleaLampBase"]</xpath>
+               <value>
+               <designatorDropdown>DZ_Lighting_KAGESHAIN</designatorDropdown>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+</Patch>

@@ -1,0 +1,27 @@
+﻿<Patch>
+    <!--Create dropdown menu for DBH ceiling fan lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dubs Bad Hygiene</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Lighting_CeilingFan</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="CeilingFan" or defName="CeilingFanS"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Lighting_CeilingFan</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

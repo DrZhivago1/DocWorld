@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-  <!--Remove "RIMKea" designation category, as all items have been moved to their respective tabs-->
+  <!--Remove "RIMKea" designation category, and move all items to their respective tabs-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>RIMkea</li>
@@ -10,6 +10,36 @@
       <operations>
         <li Class="PatchOperationRemove">
           <xpath>Defs/designationCategoryDef[defName="RIMkea"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="PILFURBed" or defName="SNOREGGSingle" or defName="SNOREGGDouble" or defName="PETSNORR" or defName="KRUDNEPPSingle" or defName="SLABNEPPDouble" or defName="SNORHOI"]</xpath>
+          <value>
+            <designationCategory>DZ_Beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/TerrainDef[@Name="RIKStoneFloorBase" or @Name="RIKWoodFloorBase"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Floors</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="RIKFurnitureBase" or @Name="RIKTableBase" or @Name="RIKTableBaseTwo"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="RIKWallLampBase" or @Name="RIKLampBase" or @Name="RIKLampBase2" or defName="BOLTASKLamp"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="FEERSTELL"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Temperature</designationCategory>
+          </value>
         </li>
       </operations>
     </match>
