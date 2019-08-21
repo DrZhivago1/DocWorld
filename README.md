@@ -37,7 +37,7 @@ Date Format: DD/MM/YYYY
 	Updated "DubsBadHygiene_RFFertileFields" (irrigation sprinklers and composter now in "Farming" tab).
 	Updated "Glass+Lights_Lighting" (outdoor ground lamp in proper category and cieling lamps combined in one dropdown menu).
 	Updated "DubsSkyLights_Lighting" (updated lighting designation category name).
-	Updated "LWM Deep Storage" (patches better reflect storage categories and recent update).
+	Updated "LWM Deep Storage" (patches better reflect storage categories and recent update, though this will likely need to be updated again very soon).
 	
 	IF "Additional Joy Objects" lite/classic is/are installed:
 		Move painting easel to "joy" category.
