@@ -30,7 +30,7 @@ Date Format: DD/MM/YYYY
 
 	Now requires being loaded below "Gloomy Vanilla" if the mod is used. This is due to patching patches.
 	Changed all designation category def names to be unique and better support adapting mods into new tabs.
-	Rewrote the "ClothBeds" modification so it is friendlier and nullified if using with other similar mods. "Add cloth to bed construction recipe if select mods are not in use. Support for: Vanilla, Gloomy Furniture, RIMkea, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module".
+	Rewrote the "ClothBeds" modification so it is friendlier and nullified if using with other similar mods. "Add cloth to bed construction recipe if select mods are not in use. Support for: Vanilla, Gloomy Furniture, RimJobWorld, RIMkea, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module".
 	Removes "Fences" designation category if not using any Fence mods.
 	Add dropdown designator for Vanilla standing lamps.
 	Updated AJO-Lite mod name in patches.
@@ -44,6 +44,9 @@ Date Format: DD/MM/YYYY
 	
 	IF "Centralized Climate Control" is installed:
 		Move all items to "Temperature" category.
+		
+	IF "Complete Tech Solutions" is installed:
+		Move bed to "Beds" category.
 		
 	IF "Dubs Bad Hygiene" is installed:
 		Put Ceiling fans into dropdown designator.
@@ -59,6 +62,12 @@ Date Format: DD/MM/YYYY
 	
 	IF "Glowstone" is installed:
 		Move lights into their respective category, and remove designation category from mod.
+	
+	IF "RimJobWorld" is installed:
+		Move beds to "Beds" category.
+		
+	IF "Sparkling Worlds" is installed:
+		Move bed to "Beds" category.
 	
 	IF "Steam Light" is installed:
 		Move lights into their respective category.
