@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Patch>
+﻿<Patch>
 
    <!--Add cloth to bed construction recipe if select mods are not in use. Support for: Vanilla, Gloomy Furniture, RIMkea, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module-->
    <!--Vanilla-->
@@ -139,6 +138,77 @@
       </match>
    </Operation>
 
+   <!--RimJobWorld-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>RimJobWorld</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+         <mods>
+            <li>Soft Beds</li>
+            <li>[T] MoreBedsCloth</li>
+            <li>[JPT] Soft Warm Beds</li>
+            <li>[JPT] Soft Warm Beds - No Hospitality</li>
+         </mods>
+         <nomatch Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+               <li Class="PatchOperationConditional">                  <!--RJW_Bed-->
+                  <xpath>Defs/ThingDef[defName="RJW_Bed"]/costList</xpath>
+                  <match Class="PatchOperationAdd">
+                     <xpath>Defs/ThingDef[defName="RJW_Bed"]/costList</xpath>
+                     <value>
+                        <Cloth>12</Cloth>
+                     </value>
+                  </match>
+                  <nomatch Class="PatchOperationAdd">
+                     <xpath>Defs/ThingDef[defName="RJW_Bed"]</xpath>
+                     <value>
+                        <costList>
+                           <Cloth>12</Cloth>
+                        </costList>
+                     </value>
+                  </nomatch>
+               </li>
+               <li Class="PatchOperationConditional">                  <!--RJW_DoubleBed-->
+                  <xpath>Defs/ThingDef[defName="RJW_DoubleBed"]/costList</xpath>
+                  <match Class="PatchOperationAdd">
+                     <xpath>Defs/ThingDef[defName="RJW_DoubleBed"]/costList</xpath>
+                     <value>
+                        <Cloth>18</Cloth>
+                     </value>
+                  </match>
+                  <nomatch Class="PatchOperationAdd">
+                     <xpath>Defs/ThingDef[defName="RJW_DoubleBed"]</xpath>
+                     <value>
+                        <costList>
+                           <Cloth>18</Cloth>
+                        </costList>
+                     </value>
+                  </nomatch>
+               </li>
+               <li Class="PatchOperationConditional">                  <!--RJW_RoyalBed-->
+                  <xpath>Defs/ThingDef[defName="RJW_RoyalBed"]/costList</xpath>
+                  <match Class="PatchOperationAdd">
+                     <xpath>Defs/ThingDef[defName="RJW_RoyalBed"]/costList</xpath>
+                     <value>
+                        <Cloth>24</Cloth>
+                     </value>
+                  </match>
+                  <nomatch Class="PatchOperationAdd">
+                     <xpath>Defs/ThingDef[defName="RJW_RoyalBed"]</xpath>
+                     <value>
+                        <costList>
+                           <Cloth>24</Cloth>
+                        </costList>
+                     </value>
+                  </nomatch>
+               </li>
+            </operations>
+         </nomatch>
+      </match>
+   </Operation>
+
    <!--RIMKEA-->
    <Operation Class="PatchOperationFindMod">
       <mods>
@@ -225,7 +295,7 @@
                      </value>
                   </nomatch>
                </li>
-			
+
                <li Class="PatchOperationConditional">                  <!--Bed_Ergonomic-->
                   <xpath>Defs/ThingDef[defName="Bed_Ergonomic"]/costList</xpath>
                   <match Class="PatchOperationAdd">

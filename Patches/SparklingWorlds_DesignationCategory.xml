@@ -1,0 +1,15 @@
+﻿<Patch>
+  <!--Move all beds to "Beds" category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Sparkling Worlds - Full Mod</li>
+      <li>Sparkling Worlds - Core Mod [1.0] - Reduced features</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="GlitterworldHospitalBedSW"]</xpath>
+      <value>
+        <designationCategory>DZ_Beds</designationCategory>
+      </value>
+    </match>
+  </Operation>
+</Patch>
