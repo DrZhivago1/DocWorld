@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
   <!--IF "ZARS Production Spots" is installed, add various production spots into drop down designator from ZARS-->
-  <!--=====RimCuisine=====-->
+  <!--=====RimCuisine 1=====-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>ZARS Production Spots</li>
