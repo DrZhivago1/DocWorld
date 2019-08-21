@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Move chandeliers from AJO to the "Lighting" tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Additional Joy Objects Lite</li>
+      <li>Additional Joy Objects Classic</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!--Furniture_Chandeliers-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="ChanPart_Support_Base"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <!--Objects_Art-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="AJO_Easel"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Joy</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
