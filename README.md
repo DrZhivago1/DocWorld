@@ -32,6 +32,7 @@ Date Format: DD/MM/YYYY
 	Changed all designation category def names to be unique and better support adapting mods into new tabs.
 	Rewrote the "ClothBeds" modification so it is friendlier and nullified if using with other similar mods. "Add cloth to bed construction recipe if select mods are not in use. Support for: Vanilla, Gloomy Furniture, RIMkea".
 	Removes "Fences" designation category if not using any Fence mods.
+	Add dropdown designator for Vanilla standing lamps.
 	Updated AJO-Lite mod name in patches.
 	Updated "DubsBadHygiene_RFFertileFields" (irrigation sprinklers and composter now in "Farming" tab).
 	Updated "Glass+Lights_Lighting" (outdoor ground lamp in proper category and cieling lamps combined in one dropdown menu).
@@ -40,6 +41,9 @@ Date Format: DD/MM/YYYY
 	
 	IF "Centralized Climate Control" is installed:
 		Move all items to "Temperature" category.
+		
+	IF "Dubs Bad Hygiene" is installed:
+		Put Ceiling fans into dropdown designator.
 		
 	IF "Fast Regen" is installed:
 		Move beds to "Beds" category.
@@ -64,6 +68,9 @@ Date Format: DD/MM/YYYY
 	
 	IF "VGP Fabrics" AND "MendandRecycle" are installed:
 		Remove salvaging from Loom.
+	
+	IF "RIMkea" is installed:
+		Put Shainbrait and Kageshain lights into dropdown designators.
 		
 	IF "Wall Sun Lamp" is installed:
 		Move lights into their respective category, if "Fertile Fields" is installed the Sun Lamp goes into farming category.
