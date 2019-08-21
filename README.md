@@ -39,6 +39,9 @@ Date Format: DD/MM/YYYY
 	Updated "DubsSkyLights_Lighting" (updated lighting designation category name).
 	Updated "LWM Deep Storage" (patches better reflect storage categories and recent update).
 	
+	IF "Additional Joy Objects" lite/classic is/are installed:
+		Move painting easel to "joy" category.
+	
 	IF "Centralized Climate Control" is installed:
 		Move all items to "Temperature" category.
 		
@@ -68,6 +71,9 @@ Date Format: DD/MM/YYYY
 	
 	IF "VGP Fabrics" AND "MendandRecycle" are installed:
 		Remove salvaging from Loom.
+		
+	IF "RF Fertile Fields" AND "SeedsPlease" are installed:
+		Move seeds production bench to "farming" category.	
 		
 	IF "RimCuisine 2" and/or the sub-mods are installed:
 		Create new category called "Culinary" and move all cooking/brewing items into it. Remove RC2 designation category.
