@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   <!--Move animal beds, all others are moved via Vanilla beds patch-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Fast regen 1.0</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+         <xpath>Defs/ThingDef[defName="AnimalMedic" or defName="AnimalMedicRobo"]</xpath>
+         <value>
+            <designationCategory>DZ_Beds</designationCategory>
+         </value>
+      </match>
+   </Operation>
+</Patch>

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
+
    <!--Move Vanilla beds to "Beds" designation category-->
    <Operation Class="PatchOperationSequence">
       <success>Always</success>
@@ -11,11 +12,12 @@
           </value>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="Bed" or defName="DoubleBed" or defName="RoyalBed" or defName="HospitalBed" or defName="Bedroll" or defName="BedrollDouble" or defName="AnimalSleepingBox" or defName="AnimalBed"]</xpath>
+          <xpath>Defs/ThingDef[@Name="BedBase" or defName="AnimalSleepingBox" or defName="AnimalBed"]</xpath>
           <value>
             <designationCategory>DZ_Beds</designationCategory>
           </value>
         </li>
       </operations>
    </Operation>
+   
 </Patch>
