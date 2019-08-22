@@ -81,6 +81,9 @@ Date Format: DD/MM/YYYY
 	IF "VGP Fabrics" AND "MendandRecycle" are installed:
 		Remove salvaging from Loom.
 		
+	IF "VGP Fabrics" AND "SeedsPlease" are installed:
+		Clean up storage categories if using "VGP Garden Fabrics" and "SeedsPlease".
+		
 	IF "RF Fertile Fields" AND "SeedsPlease" are installed:
 		Move seeds production bench to "farming" category.	
 		
