@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
-   <!--Moves fences from "Vanilla Fences" to proper tab-->
+   <!--Words_go_Here-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Vanilla Fences</li>
