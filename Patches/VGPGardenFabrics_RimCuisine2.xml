@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Replace Cloth Harvest with Flax-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[1.0] RimCuisine 2 Core</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>VGP Garden Fabrics</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="RC_PlantFlax"]/plant/harvestedThingDef</xpath>
+            <value>
+              <harvestedThingDef>RawFlax</harvestedThingDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+</Patch>
