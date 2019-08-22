@@ -25,6 +25,10 @@ The only other thing to note is that there may be some issues with floors/items 
 # Changelog
 Date Format: DD/MM/YYYY
 
+**v1.0.13 (00/00/0000):**
+
+	IF "VGP Fabrics" AND "RimCuisine 2" are installed:
+		Replace flax plant harvest with raw flax.
 
 **v1.0.12 (21/08/2019):**
 
