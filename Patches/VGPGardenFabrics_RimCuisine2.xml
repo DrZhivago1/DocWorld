@@ -13,7 +13,7 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="RC_PlantFlax"]/plant/harvestedThingDef</xpath>
+            <xpath>Defs/ThingDef[defName="RC2_PlantFlax"]/plant/harvestedThingDef</xpath>
             <value>
               <harvestedThingDef>RawFlax</harvestedThingDef>
             </value>
