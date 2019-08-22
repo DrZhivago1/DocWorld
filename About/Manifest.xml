@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
-  <version>1.0.11</version>
+  <version>1.0.12</version>
   <suggests>
     <li>935099161</li>
     <li>1580375043</li>
