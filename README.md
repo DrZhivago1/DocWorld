@@ -26,7 +26,7 @@ The only other thing to note is that there may be some issues with floors/items 
 Date Format: DD/MM/YYYY
 
 
-**v1.0.12 (00/00/0000):**
+**v1.0.12 (21/08/2019):**
 
 	Now requires being loaded below "Gloomy Vanilla" if the mod is used. This is due to patching patches.
 	Changed all designation category def names to be unique and better support adapting mods into new categories.
