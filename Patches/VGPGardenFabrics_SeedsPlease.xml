@@ -1,5 +1,5 @@
 ﻿<Patch>
-  <!--Clean up storage categories if using "VGP Garden Fabrics" and "VGPGardenFabrics"-->
+  <!--Clean up storage categories if using "VGP Garden Fabrics" and "SeedsPlease"-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>VGP Garden Fabrics</li>
