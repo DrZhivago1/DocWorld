@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
     <!--Add storage support for various mods-->
 
@@ -28,16 +27,16 @@
             <mods>
                 <li>VGP Garden Fabrics</li>
             </mods>
-            <match Class="PatchOperationSequence">
-                <success>Always</success>
-                <operations>
-                    <li Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="LWM_Food_Basket"]/building/fixedStorageSettings/filter/thingDefs</xpath>
-                        <value>
-                            <li>RawFlax</li>
-                        </value>
-                    </li>
-                </operations>
+            <match Class="PatchOperationFindMod">
+                <mods>
+                    <li>SeedsPlease</li>
+                </mods>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="LWM_Food_Basket"]/building/fixedStorageSettings/filter/categories</xpath>
+                    <value>
+                        <li>GardenFabrics</li>
+                    </value>
+                </nomatch>
             </match>
         </match>
     </Operation>
