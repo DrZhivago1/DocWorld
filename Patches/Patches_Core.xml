@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--Stuffed Vents-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName = "Vent"]/costList[Steel= "30"]</xpath>
+		<value>
+			<costStuffCount>30</costStuffCount>
+			<stuffCategories>
+				<li>Metallic</li>
+				<li>Woody</li>
+			</stuffCategories>
+		</value>				
+	</Operation>
+	
+	<!--ButcherTable stuffed with stone too!-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "TableButcher"]/stuffCategories</xpath>
+		<value>
+			<li>Stony</li>
+		</value>
+	</Operation>
+	
+</Patch>

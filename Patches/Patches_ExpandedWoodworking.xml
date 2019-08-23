@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Enables building with the wood types from Expanded Woodwoorking on the Fertile Fields' compost bin and a bunch of buildings on Survivalist's Additions. Uses the masks on textures folder. -->
+
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Expanded Woodworking</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+
+				<!--Expanded Woodworking to Fertile Fields-->	
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>[RF] Fertile Fields [1.0]</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName = "CompostBin"]/costList/WoodLog</xpath>
+							</li>
+							<li Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName = "CompostBin"]/constructEffect</xpath>
+							</li>					
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName = "CompostBin"]</xpath>
+								<value>
+									<costStuffCount>2</costStuffCount>
+									<stuffCategories>
+										<li>Woody</li>
+									</stuffCategories>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName = "CompostBin"]/graphicData/texPath</xpath>
+								<value>
+									<texPath>Things/Building/CompostBin</texPath>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName = "CompostBin"]/graphicData[not(shaderType)]</xpath>
+								<value>
+									<shaderType>CutoutComplex</shaderType>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+
+				<!--from Expanded Woodwoorking to Survivalist's Additions-->	
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Survivalist's Additions</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+
+							<!--if costlist is woodlog but now is RawWoody-->
+							<li Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName = "SRV_TableSimple" or defName = "SRV_StumpChair" or @Name="CampTableBase"]/costList/WoodLog</xpath>
+							</li>
+							<li Class="PatchOperationRemove">
+								<xpath>Defs/ThingDef[defName = "SRV_TableSimple" or defName = "SRV_StumpChair" or @Name="CampTableBase"]/constructEffect</xpath>
+							</li>			
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[defName = "SRV_TableSimple" or defName = "SRV_StumpChair" or @Name="CampTableBase"]</xpath>
+								<value>
+									<stuffCategories>
+										<li>RawWoody</li>
+									</stuffCategories>
+								</value>
+							</li>
+
+							<!--if stuff already woody but now is RawWoody-->
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName = "SRV_ShelterDoor" or defName = "SRV_WallShelter" or defname = "SRV_VinegarBarrel" or defName="SRV_ShelterHeater" or defName="SRV_Snare"]/stuffCategories/li[.="Woody"]</xpath>
+								<value>
+									<li>RawWoody</li>
+								</value>
+							</li>
+
+							<!--costStuffCount adjusts-->
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName = "SRV_TableSimple" or defName = "SRV_ShelterHeater"]/costStuffCount</xpath>
+								<value>
+									<costStuffCount>5</costStuffCount>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName = "SRV_StumpChair" or defName = "SRV_ShelterDoor"]/costStuffCount</xpath>
+								<value>
+									<costStuffCount>3</costStuffCount>
+								</value>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>Defs/ThingDef[@Name="CampTableBase"]</xpath>
+								<value>
+									<costStuffCount>7</costStuffCount>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName = "SRV_WallShelter"]/costStuffCount</xpath>
+								<value>
+									<costStuffCount>1</costStuffCount>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>Defs/ThingDef[defName = "SRV_VinegarBarrel" or defName = "SRV_Snare"]/costStuffCount</xpath>
+								<value>
+									<costStuffCount>15</costStuffCount>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+
+			</operations>
+		</match> 
+	</Operation>
+
+</Patch>
+

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Corrects an oversight on the VGP-GG worktables, enabling building them with stuff. Uses the masks on textures folder.
+-->
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VGP Garden Gourmet</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "HandCanningstove" or defName = "Canningstove"]/costList</xpath>
+					<value>
+						<costStuffCount>40</costStuffCount>
+						<stuffCategories>
+							<li>Metallic</li>
+							<li>Woody</li>
+							<li>Stony</li>
+						</stuffCategories>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "FueledCandyTable" or defName = "CandyTable"]/costList</xpath>
+					<value>
+						<costStuffCount>60</costStuffCount>
+						<stuffCategories>
+							<li>Metallic</li>
+							<li>Woody</li>
+							<li>Stony</li>
+						</stuffCategories>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "HandCanningstove" or defName = "Canningstove"]/graphicData/texPath</xpath>
+					<value>
+						<texPath>Things/Building/Canningstove</texPath>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="FueledCandyTable" or defName="CandyTable" or defName="HandCanningstove" or defName="Canningstove"]/graphicData[not(shaderType)]</xpath>
+					<value>
+						<shaderType>CutoutComplex</shaderType>
+					</value>
+				</li>
+
+			</operations>
+		</match> 
+	</Operation>
+
+</Patch>
+

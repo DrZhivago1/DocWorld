@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Groups the floor types on Floored into designatorDropdowns, so it's way less cluttered. Stone tiles go back to being grouped (like in vanilla), the carpets join the vanilla ones and the flashy floors are joined. Also, makes the bridges from "Simply More Bridges" match the floored tiled texture (I really like how it looks). 
+-->
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Floored</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				
+				<!-- doing this is wierd, but necessary for some reason -->
+				<li Class="PatchOperationRemove">
+					<xpath>
+						/Defs/TerrainDef[@Name="TileStoneBase"]/designatorDropdown | 
+						/Defs/TerrainDef[@Name="TileStoneBase"]/researchPrerequisites | 
+						/Defs/TerrainDef[@Name="TileStoneBase"]/constructionSkillPrerequisite 
+					</xpath>
+				</li>
+				
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/TerrainDef[@Name="TileStoneBase"]</xpath>
+					<value>
+						<designatorDropdown>Floor_Tile</designatorDropdown>
+						<researchPrerequisites>
+							<li>Stonecutting</li>
+						</researchPrerequisites>
+						<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>
+						/Defs/TerrainDef[@Name="CarpetBase"]/designatorDropdown | 
+						/Defs/TerrainDef[@Name="CarpetBase"]/statBases 
+					</xpath>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/TerrainDef[@Name="CarpetBase"]</xpath>
+					<value>
+						<designatorDropdown>Floor_Carpet</designatorDropdown>
+						<statBases>
+							<Flammability>0.32</Flammability>
+							<WorkToBuild>800</WorkToBuild>
+						</statBases>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs</xpath>
+					<value>
+						<DesignatorDropdownGroupDef>
+							<defName>Floors_Security</defName>
+						</DesignatorDropdownGroupDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd"> 
+					<xpath>/Defs/TerrainDef[defName="StripedTile" or defName="YellowTile"]</xpath>
+					<value>
+						<designatorDropdown>Floors_Security</designatorDropdown>
+					</value>
+				</li>
+
+				<!--Floored to Simply More Bridges-->	
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Simply More Bridges</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationTest">
+								<xpath>/Defs/TerrainDef[@Name = "DeepWaterBridgeStoneBase"]</xpath>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/TerrainDef[@Name = "DeepWaterBridgeStoneBase" or @Name = "HeavyBridgeStoneBase"]/texturePath</xpath>
+								<value>
+									<texturePath>TileStone</texturePath>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/TerrainDef[@Name = "DeepWaterBridgeMetalBase" or @Name = "HeavyBridgeMetalBase"]/texturePath</xpath>
+								<value>
+									<texturePath>GenericFloorTile</texturePath>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+			</operations>
+		</match> 
+	</Operation>
+
+</Patch>
+
