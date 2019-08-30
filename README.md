@@ -27,6 +27,8 @@ Date Format: DD/MM/YYYY
 
 **v1.0.13 (00/00/0000):**
 
+	Updated "LWM Deep Storage" designation category patches.
+
 	IF "VGP Fabrics" AND "RimCuisine 2" are installed:
 		Replace flax plant harvest with raw flax.
 
