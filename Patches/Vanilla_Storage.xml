@@ -7,21 +7,6 @@
         <mods>
             <li>LWM's Deep Storage</li>
         </mods>
-        <match Class="PatchOperationConditional">
-            <xpath>Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
-            <match Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
-                <value>
-                    <designationCategory>LWM_DS_Storage</designationCategory>
-                </value>
-            </match>
-            <nomatch Class="PatchOperationAdd">
-                <xpath>Defs/ThingDef[defName="Shelf"]</xpath>
-                <value>
-                    <designationCategory>LWM_DS_Storage</designationCategory>
-                </value>
-            </nomatch>
-        </match>
         <nomatch Class="PatchOperationConditional">
             <xpath>Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
             <match Class="PatchOperationReplace">

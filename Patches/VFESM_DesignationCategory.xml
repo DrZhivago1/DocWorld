@@ -42,11 +42,8 @@
       <mods>
         <li>LWM's Deep Storage</li>
       </mods>
-      <match Class="PatchOperationReplace">
+      <match Class="PatchOperationRemove">
         <xpath>Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>
-        <value>
-          <designationCategory>LWM_DS_Storage</designationCategory>
-        </value>
       </match>
       <nomatch Class="PatchOperationReplace">
         <xpath>Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>

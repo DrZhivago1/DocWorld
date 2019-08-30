@@ -10,12 +10,6 @@
             <mods>
                 <li>LWM's Deep Storage</li>
             </mods>
-            <match Class="PatchOperationAdd">
-                <xpath>Defs/ThingDef[defName="Jecrell_StoneShelf"]</xpath>
-                <value>
-                    <designationCategory>LWM_DS_Storage</designationCategory>
-                </value>
-            </match>
             <nomatch Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="Jecrell_StoneShelf"]</xpath>
                 <value>
