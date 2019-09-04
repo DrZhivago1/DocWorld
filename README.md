@@ -31,6 +31,9 @@ Date Format: DD/MM/YYYY
 
 	IF "VGP Fabrics" AND "RimCuisine 2" are installed:
 		Replace flax plant harvest with raw flax.
+	
+	IF "VGP Fabrics" AND "RimCuisine 2" AND "SeedsPlease" are installed:
+		Add rot to flax plant.
 
 **v1.0.12 (21/08/2019):**
 
