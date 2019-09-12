@@ -2,8 +2,8 @@
 <Manifest>
   <version>1.0.12</version>
   <loadAfter>
-    <li>Extended Storage Extended</li>
-    <li>Gloomy Vanilla</li>
+    <li>ExtendedStorageExtended</li>
+    <li>GloomyVanilla</li>
     <li>Industrialisation</li>
   </loadAfter>
   <suggests>
