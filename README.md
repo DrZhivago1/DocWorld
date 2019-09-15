@@ -45,6 +45,12 @@ Date Format: DD/MM/YYYY
 	IF "More Furniture [1.0]" is installed:
 		Groups the "More Furniture" carpet with the vanilla carpet.
 		
+	IF "[1.0] RimCuisine 2 Core" is installed:
+		Change biome foraged foods.
+		
+	IF "[1.0] RimCuisine 2 Core" AND "[RF] Realistic Planets [1.0]" are installed:
+		Change biome foraged foods, and include agriculture patch to RF biomes.
+		
 	IF "Simple Concrete" AND "Simply More Bridges" are installed:
 		Replace the cost of concrete bridges with concrete.
 		
@@ -124,7 +130,7 @@ Date Format: DD/MM/YYYY
 	IF "RF Fertile Fields" AND "SeedsPlease" are installed:
 		Move seeds production bench to "farming" category.	
 		
-	IF "RimCuisine 2" and/or the sub-mods are installed:
+	IF "[1.0] RimCuisine 2 Core" and/or the sub-mods are installed:
 		Create new category called "Culinary" and move all cooking/brewing items into it. Remove RC2 designation category.
 	
 	IF "RIMkea" is installed:
