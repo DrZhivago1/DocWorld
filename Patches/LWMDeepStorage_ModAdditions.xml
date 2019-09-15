@@ -18,6 +18,24 @@
             </operations>
         </match>
     </Operation>
+    <!--=====Simple Concrete=====-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>LWM's Deep Storage</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Simple Concrete</li>
+            </mods>
+            <match Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="LWM_DeepStorage_Skip"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                <value>
+                    <li>D9Cement</li>
+                    <li>D9Concrete</li>
+                </value>
+            </match>
+        </match>
+    </Operation>
     <!--=====VGP Garden Fabrics=====-->
     <Operation Class="PatchOperationFindMod">
         <mods>

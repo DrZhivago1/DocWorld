@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--We will be moving all medical beds to the "Beds" tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Medical Module</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!--Move all beds to Beds category-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Bed_OperatingTable" or defName="Bed_CryptoBed"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Beds</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   <!--Moves fences from "Vanilla Fences" to proper tab-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Fences</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationRemove">
+               <xpath>Defs/DesignationCategoryDef[defName="Fence"]</xpath>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[@Name="FenceExtBuildingBase"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>DZ_Fences</designationCategory>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+</Patch>

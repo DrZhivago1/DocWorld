@@ -12,6 +12,7 @@
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
+          <!--Remove concrete elements from Industialisation-->
           <li Class="PatchOperationRemove">
             <xpath>Defs/WorkGiverDef[defName="Ind_DoBillsMixconcrete"]</xpath>
           </li>
@@ -42,10 +43,20 @@
           <li Class="PatchOperationRemove">
             <xpath>Defs/RecipeDef[@Name="Ind_MakeConcreteBase"]</xpath>
           </li>
+
           <li Class="PatchOperationReplace">
             <xpath>Defs/TerrainDef[defName="Concrete"]/costList</xpath>
             <value>
               <costList>
+                <SadjuukConcrete>5</SadjuukConcrete>
+              </costList>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/TerrainDef[defName="PavedTile"]/costList</xpath>
+            <value>
+              <costList>
+                <Steel>1</Steel>
                 <SadjuukConcrete>5</SadjuukConcrete>
               </costList>
             </value>
