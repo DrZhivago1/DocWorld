@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 Groups the floor types on Floored into designatorDropdowns, so it's way less cluttered. Stone tiles go back to being grouped (like in vanilla), the carpets join the vanilla ones and the flashy floors are joined. Also, makes the bridges from "Simply More Bridges" match the floored tiled texture (I really like how it looks). 
 -->
 <Patch>
