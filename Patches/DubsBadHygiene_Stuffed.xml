@@ -1,0 +1,25 @@
+<Patch>
+
+  <!--Stuffed SewageOutlet from "Dubs Bad Hygiene"-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dubs Bad Hygiene</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName = "SewageOutlet"]/costList</xpath>
+          <value>
+            <costStuffCount>50</costStuffCount>
+            <stuffCategories>
+              <li>Stony</li>
+              <li>Metallic</li>
+            </stuffCategories>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>
