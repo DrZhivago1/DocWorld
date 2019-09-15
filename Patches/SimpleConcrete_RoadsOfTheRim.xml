@@ -1,0 +1,33 @@
+﻿<Patch>
+
+  <!--Replace the cost of concrete bridges with concrete, disregard patch if using "Simply More Bridges"-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Concrete</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simply More Bridges</li>
+      </mods>
+      <nomatch Class="PatchOperationFindMod">
+        <mods>
+          <li>Roads of the Rim</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+          <success>Always</success>
+          <operations>
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/TerrainDef[defName="ConcreteBridge"]/costList</xpath>
+              <value>
+                <costList>
+                  <D9Concrete>25</D9Concrete>
+                </costList>
+              </value>
+            </li>
+          </operations>
+        </match>
+      </nomatch>
+    </match>
+  </Operation>
+
+</Patch>

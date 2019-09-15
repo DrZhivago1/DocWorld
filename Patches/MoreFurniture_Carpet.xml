@@ -1,4 +1,4 @@
-<Patch>
+﻿<Patch>
    <!--Groups the "More Furniture" carpet with the vanilla carpet-->
    <Operation Class="PatchOperationFindMod">
       <mods>

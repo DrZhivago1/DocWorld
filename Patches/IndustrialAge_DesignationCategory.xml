@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Move chandeliers and lamps from "Industrial Age" to the "Lighting" tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Industrial Age - Objects and Furniture</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!--Estate_BuildingsLighting-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Jecrell_Chandelier"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Jecrell_ChandelierRoyal"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Jecrell_Candelabra"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Jecrell_GasStreetLampBeta"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Jecrell_GasLamp"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[@Name="Estate_ArcLampBase"]</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

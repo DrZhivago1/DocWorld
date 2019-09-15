@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--Move lights to the "Lighting" tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Outdoor Lighting</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[@Name="LampBaseOutdoor"]</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="LanternBase"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[@Name="StreetLampBase"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="OutdoorFloodLights"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

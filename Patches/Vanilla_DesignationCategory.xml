@@ -1,0 +1,58 @@
+<Patch>
+    <!--=====Vanilla designation category changes=====-->
+
+    <!--Vanilla storage furniture to "Storage" designation category, with conditional if "LWM Deep Storage" is installed-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>LWM's Deep Storage</li>
+        </mods>
+        <nomatch Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
+            <match Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Shelf"]</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </nomatch>
+    </Operation>
+
+    <!--Vanilla lights to "Lighting" designation category-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="TorchLamp" or @Name="LampBase"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Lighting</designationCategory>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <!--Vanilla beds to "Beds" designation category-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="SleepingSpot" or defName="DoubleSleepingSpot" or defName="AnimalSleepingSpot"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Beds</designationCategory>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[@Name="BedBase" or defName="AnimalSleepingBox" or defName="AnimalBed"]</xpath>
+                <value>
+                    <designationCategory>DZ_Beds</designationCategory>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>

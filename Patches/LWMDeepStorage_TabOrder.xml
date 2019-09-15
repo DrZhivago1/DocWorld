@@ -1,0 +1,23 @@
+﻿<Patch>
+    <!--Remove designation category for storage if "LWM's Deep Storage" is installed.-->
+    <!--=====LWM's Deep Storage=====-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>LWM's Deep Storage</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/DesignationCategoryDef[defName="DZ_Storage"]</xpath>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/DesignationCategoryDef[defName="LWM_DS_Storage"]/order</xpath>
+                    <value>
+                        <order>150</order>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

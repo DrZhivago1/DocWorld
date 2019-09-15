@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <!--We will be moving all furniture to the "Furniture" tab, and moving all light sources to the "Lighting" tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>More Furniture [1.0]</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!--Remove more furniture's added category-->
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/DesignationCategoryDef[defName="ANON2MF"]</xpath>
+        </li>
+        <!--Move all furniture to furniture category-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Anon2SquarePlantPot" or defName="Anon2PlantSpot" or defName="Anon2Dresser" or defName="Anon2EndTable" or defName="Anon2RoyalEndTable" or defName="Anon2FileCabinet" or defName="Anon2SquareDiningChair" or defName="Anon2CushionedChair" or defName="Anon2CouchRight" or defName="Anon2CouchLeft" or defName="Anon2CouchCenter" or defName="Anon2CouchCorner" or defName="Anon2CouchCornerInv" or defName="Anon2TableTiny" or defName="Anon2CounterA" or defName="Anon2CounterAFull"]/designationCategory</xpath>
+          <value>
+            <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <!--Move all lights to Lighting category-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Anon2EndTableLight" or defName="Anon2RoyalEndTableLight" or @Name="ANON2StandingLampBase"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Lighting</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

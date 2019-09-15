@@ -1,0 +1,22 @@
+﻿<Patch>
+   <!--Patch Vanilla paved tile flooring-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Industrialisation</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/TerrainDef[defName = "PavedTile"]/costList</xpath>
+               <value>
+                  <costList>
+                     <Steel>1</Steel>
+                     <Ind_Concrete>5</Ind_Concrete>
+                  </costList>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+</Patch>

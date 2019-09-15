@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   <!--Move hammock from "Soft Warm Beds" to "Beds" tab-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>[JPT] Soft Warm Beds</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Rede"]</xpath>
+               <value>
+                  <designationCategory>DZ_Beds</designationCategory>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+</Patch>
