@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+   <!--Change designation category of storage furniture for "Extended Storage"-->
+    <!--=====Extended Storage=====-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Extended Storage</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="Storage_Basket"]/designationCategory</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Storage_Basket"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="Storage_Basket"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="Storage_HazMatContainer"]/designationCategory</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Storage_HazMatContainer"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="Storage_HazMatContainer"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="Storage_Locker"]/designationCategory</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Storage_Locker"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="Storage_Locker"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="Storage_MedicineCabinet"]/designationCategory</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Storage_MedicineCabinet"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="Storage_MedicineCabinet"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="Storage_TrayRack"]/designationCategory</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Storage_TrayRack"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="Storage_TrayRack"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="Storage_FabricHamper"]/designationCategory</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Storage_FabricHamper"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="Storage_FabricHamper"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="Storage_Skip"]/designationCategory</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Storage_Skip"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="Storage_Skip"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </match>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="Storage_WoodenPallet"]/designationCategory</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Storage_WoodenPallet"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="Storage_WoodenPallet"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
