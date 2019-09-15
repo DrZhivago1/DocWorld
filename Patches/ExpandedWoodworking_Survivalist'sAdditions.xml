@@ -1,5 +1,5 @@
 ﻿<Patch>
-  <!--Enables building with the wood types from "Expanded Woodwoorking" on the buildings from "Survivalist's Additions". Uses the masks on textures folder.-->
+  <!--Enables building with the wood types from "Expanded Woodworking" on the buildings from "Survivalist's Additions". Uses the masks on textures folder.-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Expanded Woodworking</li>
