@@ -28,12 +28,40 @@ Date Format: DD/MM/YYYY
 **v1.0.13 (00/00/0000):**
 
 	Updated "LWM Deep Storage" designation category patches.
+	Vanilla butcher table and vent are 'stuffed'.
+	
+	IF "Dubs Bad Hygiene" is installed:
+		'Stuff' the SewageOutlet.
+		
+	IF "Expanded Woodworking" AND "Survivalist's Additions" are installed:
+		Enables building with the wood types from "Expanded Woodworking". Applies masks.
+		
+	IF "Floored" is installed:
+		Group floor types into dropdown designators and match textures if using "Simply More Bridges".
+		
+	IF "Industrialisation" is installed:
+		Patch Vanilla paved tile flooring to use concrete.
+		
+	IF "More Furniture [1.0]" is installed:
+		Groups the "More Furniture" carpet with the vanilla carpet.
+		
+	IF "Simple Concrete" AND "Simply More Bridges" are installed:
+		Replace the cost of concrete bridges with concrete.
+		
+	IF "Simply More Bridges" AND "Industrialisation"/"Simple Concrete" AND "Roads of the Rim" are installed:
+		Replace/add texture and recipe for Concrete bridges.
+	
+	IF "Vanilla Armour Expanded" AND "NightVision" are installed:
+		Remove NightVision goggles from NV, VAE has a pair(check the NV settings for allowing nightvision goggles).
 
 	IF "VGP Fabrics" AND "RimCuisine 2" are installed:
 		Replace flax plant harvest with raw flax.
 	
 	IF "VGP Fabrics" AND "RimCuisine 2" AND "SeedsPlease" are installed:
 		Add rot to flax plant.
+		
+	IF "VGP Garden Gourmet" is installed:
+		'Stuffs' the VGP-GG worktables. Applies masks.
 
 **v1.0.12 (21/08/2019):**
 
