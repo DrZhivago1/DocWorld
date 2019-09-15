@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <!--
 Groups the floor types on Floored into designatorDropdowns, so it's way less cluttered. Stone tiles go back to being grouped (like in vanilla), the carpets join the vanilla ones and the flashy floors are joined. Also, makes the bridges from "Simply More Bridges" match the floored tiled texture (I really like how it looks). 
 -->
@@ -10,18 +9,18 @@ Groups the floor types on Floored into designatorDropdowns, so it's way less clu
 		<match Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>
-				
+
 				<!-- doing this is wierd, but necessary for some reason -->
 				<li Class="PatchOperationRemove">
 					<xpath>
-						/Defs/TerrainDef[@Name="TileStoneBase"]/designatorDropdown | 
-						/Defs/TerrainDef[@Name="TileStoneBase"]/researchPrerequisites | 
-						/Defs/TerrainDef[@Name="TileStoneBase"]/constructionSkillPrerequisite 
+						Defs/TerrainDef[@Name="TileStoneBase"]/designatorDropdown | 
+						Defs/TerrainDef[@Name="TileStoneBase"]/researchPrerequisites | 
+						Defs/TerrainDef[@Name="TileStoneBase"]/constructionSkillPrerequisite 
 					</xpath>
 				</li>
-				
+
 				<li Class="PatchOperationAdd">
-					<xpath>/Defs/TerrainDef[@Name="TileStoneBase"]</xpath>
+					<xpath>Defs/TerrainDef[@Name="TileStoneBase"]</xpath>
 					<value>
 						<designatorDropdown>Floor_Tile</designatorDropdown>
 						<researchPrerequisites>
@@ -32,12 +31,12 @@ Groups the floor types on Floored into designatorDropdowns, so it's way less clu
 				</li>
 				<li Class="PatchOperationRemove">
 					<xpath>
-						/Defs/TerrainDef[@Name="CarpetBase"]/designatorDropdown | 
-						/Defs/TerrainDef[@Name="CarpetBase"]/statBases 
+						Defs/TerrainDef[@Name="CarpetBase"]/designatorDropdown | 
+						Defs/TerrainDef[@Name="CarpetBase"]/statBases 
 					</xpath>
 				</li>
 				<li Class="PatchOperationAdd"> 
-					<xpath>/Defs/TerrainDef[@Name="CarpetBase"]</xpath>
+					<xpath>Defs/TerrainDef[@Name="CarpetBase"]</xpath>
 					<value>
 						<designatorDropdown>Floor_Carpet</designatorDropdown>
 						<statBases>
@@ -47,7 +46,7 @@ Groups the floor types on Floored into designatorDropdowns, so it's way less clu
 					</value>
 				</li>
 				<li Class="PatchOperationAdd"> 
-					<xpath>/Defs</xpath>
+					<xpath>Defs</xpath>
 					<value>
 						<DesignatorDropdownGroupDef>
 							<defName>Floors_Security</defName>
@@ -55,7 +54,7 @@ Groups the floor types on Floored into designatorDropdowns, so it's way less clu
 					</value>
 				</li>
 				<li Class="PatchOperationAdd"> 
-					<xpath>/Defs/TerrainDef[defName="StripedTile" or defName="YellowTile"]</xpath>
+					<xpath>Defs/TerrainDef[defName="StripedTile" or defName="YellowTile"]</xpath>
 					<value>
 						<designatorDropdown>Floors_Security</designatorDropdown>
 					</value>
@@ -70,16 +69,16 @@ Groups the floor types on Floored into designatorDropdowns, so it's way less clu
 						<success>Always</success>
 						<operations>
 							<li Class="PatchOperationTest">
-								<xpath>/Defs/TerrainDef[@Name = "DeepWaterBridgeStoneBase"]</xpath>
+								<xpath>Defs/TerrainDef[@Name="DeepWaterBridgeStoneBase"]</xpath>
 							</li>
 							<li Class="PatchOperationReplace">
-								<xpath>/Defs/TerrainDef[@Name = "DeepWaterBridgeStoneBase" or @Name = "HeavyBridgeStoneBase"]/texturePath</xpath>
+								<xpath>Defs/TerrainDef[@Name="DeepWaterBridgeStoneBase" or @Name="HeavyBridgeStoneBase"]/texturePath</xpath>
 								<value>
 									<texturePath>TileStone</texturePath>
 								</value>
 							</li>
 							<li Class="PatchOperationReplace">
-								<xpath>/Defs/TerrainDef[@Name = "DeepWaterBridgeMetalBase" or @Name = "HeavyBridgeMetalBase"]/texturePath</xpath>
+								<xpath>Defs/TerrainDef[@Name="DeepWaterBridgeMetalBase" or @Name="HeavyBridgeMetalBase"]/texturePath</xpath>
 								<value>
 									<texturePath>GenericFloorTile</texturePath>
 								</value>
@@ -92,4 +91,3 @@ Groups the floor types on Floored into designatorDropdowns, so it's way less clu
 	</Operation>
 
 </Patch>
-
