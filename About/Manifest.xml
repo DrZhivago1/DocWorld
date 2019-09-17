@@ -3,13 +3,10 @@
   <version>1.0.12</version>
   <loadAfter>
     <li>ExtendedStorageExtended</li>
+    <li>FishIndustry</li>
     <li>GloomyVanilla</li>
     <li>Industrialisation</li>
   </loadAfter>
-  <suggests>
-    <li>935099161</li>
-    <li>1580375043</li>
-  </suggests>
   <showCrossPromotions>true</showCrossPromotions>
   <manifestUri>https://raw.githubusercontent.com/DrZhivago1/DocWorld/master/About/Manifest.xml</manifestUri>
   <downloadUri>https://github.com/DrZhivago1/DocWorld/releases/latest</downloadUri>
