@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Make Smoked meat available after researching Pemmican, and hide the Smokehouse behind Complex Furniture-->
   <Operation Class="PatchOperationFindMod">

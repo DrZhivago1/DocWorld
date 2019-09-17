@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Make gas lamps from "Industrial Age" require chemfuel-->
   <Operation Class="PatchOperationFindMod">

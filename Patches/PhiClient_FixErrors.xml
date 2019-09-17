@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Remove annoying error logs from PhiClient trailing whitespace-->
   <Operation Class="PatchOperationFindMod">

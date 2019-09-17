@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--We will be moving all furniture to the "Furniture" tab, and moving all light sources to the "Lighting" tab-->
   <Operation Class="PatchOperationFindMod">

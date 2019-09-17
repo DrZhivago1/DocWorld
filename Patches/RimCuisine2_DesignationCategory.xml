@@ -1,4 +1,5 @@
 ﻿<Patch>
+
     <!--Move all items from RC2 and Vanilla if RC2 is installed-->
     <!--Core-->
     <Operation Class="PatchOperationFindMod">
@@ -8,30 +9,6 @@
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
-                <!--Create the tab-->
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs</xpath>
-                    <value>
-                        <DesignationCategoryDef>
-                            <defName>DZ_Culinary</defName>
-                            <label>culinary</label>
-                            <description>Cooking and fermenting.</description>
-                            <order>723</order>
-                            <specialDesignatorClasses>
-                                <li>Designator_Cancel</li>
-                                <li>Designator_Deconstruct</li>
-                                <li>Designator_Uninstall</li>
-                            </specialDesignatorClasses>
-                        </DesignationCategoryDef>
-                    </value>
-                </li>
-                <!--Vanilla items moved-->
-                <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Brewery" or defName="FermentingBarrel" or defName="FueledStove" or defName="ElectricStove" or defName="ButcherSpot" or defName="TableButcher"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>DZ_Culinary</designationCategory>
-                    </value>
-                </li>
                 <!--RC2 Core items moved-->
                 <li Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[defName="RC2_FoodPrepSpot" or defName="RC2_Quernstone" or defName="RC2_RollerMill" or defName="RC2_MeatDryingRack" or defName="RC2_FruitDryingRack" or defName="RC2_PicklingBarrel"]/designationCategory</xpath>
@@ -41,7 +18,7 @@
                 </li>
                 <!--Remove RC2 designation category-->
                 <li Class="PatchOperationRemove">
-                <xpath>Defs/DesignationCategoryDef[defName="RC2_RimCuisine"]</xpath>
+                    <xpath>Defs/DesignationCategoryDef[defName="RC2_RimCuisine"]</xpath>
                 </li>
             </operations>
         </match>

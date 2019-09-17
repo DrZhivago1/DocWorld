@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--IF Fertile Fields AND VFE are installed, allow corpse composting at stone campfire-->
   <Operation Class="PatchOperationFindMod">

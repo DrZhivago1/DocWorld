@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Allow some basic recipes from "VGP Garden Gourmet" to be cooked at the Wood Stove Furnace from "Industrial Age"-->
   <Operation Class="PatchOperationFindMod">

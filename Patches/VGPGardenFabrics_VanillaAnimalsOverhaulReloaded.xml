@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Add animal wool from Vanilla Animals Overhaul Reloaded to VGP loom "blended wool" recipe-->
   <Operation Class="PatchOperationFindMod">

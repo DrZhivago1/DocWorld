@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--IF RimCuisine AND SeedsPlease are installed; remove extra cocoa recipes and items-->
   <Operation Class="PatchOperationFindMod">

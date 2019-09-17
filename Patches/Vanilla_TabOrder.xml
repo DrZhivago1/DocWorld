@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Alphabetize Vanilla Tabs, except for maybe like one, but ya know it makes sense for Misc to be last. Stop judging.-->
   <Operation Class="PatchOperationSequence">

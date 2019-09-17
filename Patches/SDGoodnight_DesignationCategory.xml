@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+
 <Patch>
   <!--We will be moving all beds to the "Beds" tab, and removing the redundant category-->
   <Operation Class="PatchOperationFindMod">

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+
 <Patch>
    <!--Nerf RIMkea furniture comfort and beauty-->
    <Operation Class="PatchOperationFindMod">

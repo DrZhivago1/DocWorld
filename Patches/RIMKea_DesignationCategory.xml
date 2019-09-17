@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Remove "RIMKea" designation category, and move all items to their respective tabs-->
   <Operation Class="PatchOperationFindMod">

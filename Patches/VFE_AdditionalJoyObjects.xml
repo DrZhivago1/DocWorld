@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Remove redundancies from "VFE" IF "AJO"/"AJO-Classic" is installed-->
   <Operation Class="PatchOperationFindMod">

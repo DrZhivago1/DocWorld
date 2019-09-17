@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Moves Floors into a single designation tile IF you have "Stuffed Floors"-->
   <Operation Class="PatchOperationFindMod">

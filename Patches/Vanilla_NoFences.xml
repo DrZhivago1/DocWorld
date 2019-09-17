@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
    <!--Remove Fences Designation Category if no fence mods are installed-->
    <Operation Class="PatchOperationFindMod">

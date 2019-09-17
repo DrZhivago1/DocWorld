@@ -53,6 +53,7 @@
               <nomatch Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="RawFlax"]</xpath>
                 <value>
+                  <tickerType>Rare</tickerType>
                   <comps>
                     <li Class="CompProperties_Rottable">
                       <daysToRotStart>60</daysToRotStart>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
     <!--Remove and replace all UN-Colony glass if using Glass+Lights as well.-->
     <Operation Class="PatchOperationFindMod">

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!-- Remove various floors from Nature's Pretty Sweet, it's included in Stuffed Floors-->
   <Operation Class="PatchOperationFindMod">

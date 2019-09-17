@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Replace Cloth Harvest with Flax-->
   <Operation Class="PatchOperationFindMod">
