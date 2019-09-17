@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Put Extended Storage behind Complex Furniture Tech (excluding food basket and wooden pallet) -->
   <Operation Class="PatchOperationFindMod">

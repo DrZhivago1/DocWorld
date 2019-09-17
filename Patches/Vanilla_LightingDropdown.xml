@@ -1,22 +1,33 @@
 ﻿<Patch>
+
    <!--Put standing lamps into a dropdown designator-->
    <Operation Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
-            <li Class="PatchOperationAdd">
-               <xpath>Defs</xpath>
+         <li Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+               <DesignatorDropdownGroupDef>
+                  <defName>DZ_Lighting_StandingLamp</defName>
+               </DesignatorDropdownGroupDef>
+            </value>
+         </li>
+         <li Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="StandingLamp" or defName="StandingLamp_Red" or defName="StandingLamp_Green" or defName="StandingLamp_Blue"]/designatorDropdown</xpath>
+            <match Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="StandingLamp" or defName="StandingLamp_Red" or defName="StandingLamp_Green" or defName="StandingLamp_Blue"]/designatorDropdown</xpath>
                <value>
-                  <DesignatorDropdownGroupDef>
-                     <defName>DZ_Lighting_StandingLamp</defName>
-                  </DesignatorDropdownGroupDef>
+                  <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
                </value>
-            </li>
-            <li Class="PatchOperationAdd">
-               <xpath>Defs/ThingDef[@Name="StandingLampBase"]</xpath>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="StandingLamp" or defName="StandingLamp_Red" or defName="StandingLamp_Green" or defName="StandingLamp_Blue"]</xpath>
                <value>
-               <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
+                  <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
                </value>
-            </li>
+            </nomatch>
+         </li>
       </operations>
    </Operation>
+
 </Patch>

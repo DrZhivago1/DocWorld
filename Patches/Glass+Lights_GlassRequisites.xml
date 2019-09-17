@@ -1,0 +1,180 @@
+﻿<Patch>
+
+    <!--Glass needed on Vanilla lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[@Name="StandingLampBase" or defName="SunLamp"]/costList</xpath>
+                    <value>
+                        <LargeCircularGlass>1</LargeCircularGlass>
+                    </value>
+                </li>
+                <!--Various fixes: minor grammar correction-->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="OutdoorGroundLamp"]/label</xpath>
+                    <value>
+                        <label>outdoor ground lamp</label>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Glass needed on "Additional Joy Objects" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Additional Joy Objects Classic</li>
+                <li>Additional Joy Objects Lite</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[@Name="ChanPart_Support_Base"]</xpath>
+                        <value>
+                            <costList>
+                                <LargeCircularGlass>1</LargeCircularGlass>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Glass needed on "Industrial Age" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Industrial Age - Objects and Furniture</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha" or defName="Jecrell_GasStreetLampBeta" or defName="Jecrell_GasLamp"]/costList</xpath>
+                        <value>
+                            <Glass>1</Glass>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Estate_ArcLamp" or defName="Estate_EdisonLamp" or defName="Estate_EdisonTube"]</xpath>
+                        <value>
+                            <costList>
+                                <Glass>1</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Glass needed on "RIMkea" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>RIMkea</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="KAGESHAINLamp"]</xpath>
+                        <value>
+                            <costList>
+                                <Steel>30</Steel>
+                                <Glass>1</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Glass needed on "VFE" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Vanilla Furniture Expanded</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Light_ModernLamp" or defName="Light_Streetlamp"]/costList</xpath>
+                        <value>
+                            <LargeCircularGlass>1</LargeCircularGlass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Glass needed on "VFE-SM" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Vanilla Furniture Expanded - Spacer Module</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Light_SpacerLamp"]/costList</xpath>
+                        <value>
+                            <Glass>1</Glass>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Spacer_SunLamp"]/costList</xpath>
+                        <value>
+                            <Glass>5</Glass>
+                        </value>
+                    </li>
+                    <!--Ensure both outdoor lamps have equal lighting and resource requirements-->
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OutdoorGroundLamp" or defName="Spacer_OutdoorLamp"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>40</Steel>
+                                <ComponentIndustrial>1</ComponentIndustrial>
+                                <LargeCircularGlass>1</LargeCircularGlass>
+                            </costList>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="OutdoorGroundLamp"]/comps/li[@Class="CompProperties_Glower"]/glowRadius</xpath>
+                        <value>
+                            <glowRadius>8</glowRadius>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+</Patch>

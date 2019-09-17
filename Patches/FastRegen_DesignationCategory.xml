@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
    <!--Move animal beds, all others are moved via Vanilla beds patch-->
    <Operation Class="PatchOperationFindMod">

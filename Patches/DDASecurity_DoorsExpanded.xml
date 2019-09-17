@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Replace research for blast doors from DDA Security with Doors Expanded research-->
   <Operation Class="PatchOperationFindMod">

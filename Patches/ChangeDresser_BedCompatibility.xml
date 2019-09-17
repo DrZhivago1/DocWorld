@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--=====Allow Gloomy Furniture beds to use Change Dresser and Mirror=====-->
   <Operation Class="PatchOperationFindMod">

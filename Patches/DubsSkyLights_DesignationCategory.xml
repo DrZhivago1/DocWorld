@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Remove Dubs "Skylights" designation category, and move skylights to "Lighting" designation category-->
   <Operation Class="PatchOperationFindMod">

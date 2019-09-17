@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Allow Tanning Liquor to use Logs instead of Lumber-->
   <Operation Class="PatchOperationFindMod">

@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Patch>
+﻿<Patch>
+
     <!--Move all items to Temperature category and remove CCC category-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -14,10 +14,25 @@
                         <designationCategory>Temperature</designationCategory>
                     </value>
                 </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Temperature_CCC</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="redAirPipe" or defName="blueAirPipe" or defName="cyanAirPipe"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temperature_CCC</designatorDropdown>
+                    </value>
+                </li>
                 <li Class="PatchOperationRemove">
                     <xpath>Defs/DesignationCategoryDef[defName="CentralClimateControl"]</xpath>
                 </li>
             </operations>
         </match>
     </Operation>
+
 </Patch>

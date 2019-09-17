@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
+
   <!-- Check for Combat Extended and Individuality, then patch trait-->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -30,4 +30,5 @@
       </match>
     </match>
   </Operation>
+  
 </Patch>

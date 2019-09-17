@@ -55,4 +55,17 @@
         </operations>
     </Operation>
 
+    <!--Vanilla culinary items moved to "Culinary" designation category-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="Brewery" or defName="FermentingBarrel" or defName="FueledStove" or defName="ElectricStove" or defName="ButcherSpot" or defName="TableButcher" or defName="NutrientPasteDispenser" or defName="Hopper"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Culinary</designationCategory>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
 </Patch>

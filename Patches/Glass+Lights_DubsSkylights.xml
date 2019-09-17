@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Makes "Dubs Skylights" use glass from "Glass+Lights" if both installed. Also removes "Dubs Skylights" glass resource.-->
   <Operation Class="PatchOperationFindMod">

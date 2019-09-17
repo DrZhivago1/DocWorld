@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿
 <Patch>
   <!--Remove Alpha Animals Cactipine Quill from Harvest recipes-->
   <Operation Class="PatchOperationFindMod">

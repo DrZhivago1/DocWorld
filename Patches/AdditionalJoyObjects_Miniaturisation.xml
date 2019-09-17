@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<Patch>
-  <!--Make Arcade Construction Table minifiable-->
+﻿<Patch>
+
+    <!--Make Arcade Construction Table minifiable-->
     <!--=====AJO_TableArcadeConstruction=====-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
@@ -31,4 +31,5 @@
             </li>
         </operations>
     </Operation>
+
 </Patch>

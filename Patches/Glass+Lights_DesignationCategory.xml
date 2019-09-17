@@ -1,5 +1,5 @@
 ﻿<Patch>
-  <!--Move Glassworks lights to "Lighting" Tab-->
+
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Glass+Lights</li>
@@ -7,14 +7,17 @@
     <match Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
-        <!--Cieling Lamps Abstract-->
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[@Name="GlCeilingLampBase"]/designationCategory</xpath>
-          <value>
-            <designationCategory>DZ_Lighting</designationCategory>
-          </value>
+        <!--Move lights to "Lighting" Tab-->
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[@Name="GlCeilingLampBase" or @Name="GLWallLightBase" or defName="OutdoorGroundLamp"]/designationCategory</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[@Name="GlCeilingLampBase" or @Name="GLWallLightBase" or defName="OutdoorGroundLamp"]/designationCategory</xpath>
+            <value>
+              <designationCategory>DZ_Lighting</designationCategory>
+            </value>
+          </match>
         </li>
-        <!--Combine cieling lights into one-->
+        <!--Combine ceiling lights into one dropdown designator-->
         <li Class="PatchOperationConditional">
           <xpath>Defs/ThingDef[defName="GLCeilingLamp"]/designatorDropdown</xpath>
           <nomatch Class="PatchOperationAdd">
@@ -24,34 +27,8 @@
             </value>
           </nomatch>
         </li>
-        <!--Standing Lamp Abstract-->
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[@Name="GLWallLightBase"]/designationCategory</xpath>
-          <value>
-            <designationCategory>DZ_Lighting</designationCategory>
-          </value>
-        </li>
-        <!--Outdoor Ground Lamp-->
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[defName="OutdoorGroundLamp"]/designationCategory</xpath>
-          <value>
-            <designationCategory>DZ_Lighting</designationCategory>
-          </value>
-        </li>
-        <!--Old Versions below, likely to be removed in future-->
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[@Name="CeilingLampBase"]/designationCategory</xpath>
-          <value>
-            <designationCategory>DZ_Lighting</designationCategory>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[@Name="StandingLampBase"]/designationCategory</xpath>
-          <value>
-            <designationCategory>DZ_Lighting</designationCategory>
-          </value>
-        </li>
       </operations>
     </match>
   </Operation>
+
 </Patch>
