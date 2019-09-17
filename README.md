@@ -26,7 +26,7 @@ The only other thing to note is that there may be some issues with floors/items 
 # Changelog
 Date Format: DD/MM/YYYY
 
-**v1.0.13 (00/00/0000):**
+**v1.0.13 (17/09/2019):**
 
 	Added new "Husbandry" tab for all agriculture/livestock. Supported mods: Dubs Bad Hygiene, FishIndustry, [RF] Fertile Fields [1.0], SeedsPlease, VGP Garden Tools, Wall Sun Lamp
 	Vanilla standing lamps are combined into dropdown designator.
