@@ -32,6 +32,7 @@ Date Format: DD/MM/YYYY
 	Updated "Glass+Lights" patches. Glass is a common ingredient in lights. Supported mods: Additional Joy Objects (classic/lite), Industrial Age - Objects and Furniture, RIMkea, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module
 	Vanilla butcher table and vent are 'stuffed'.
 	Vanilla lights are now more efficient, this replaces the need for "Chickens Effecient Light".
+	Added new "Husbandry" tab for all agriculture/livestock. Supported mods: Dubs Bad Hygiene, FishIndustry, [RF] Fertile Fields [1.0], SeedsPlease, Wall Sun Lamp
 	
 	IF "Dubs Bad Hygiene" is installed:
 		'Stuff' the SewageOutlet.
