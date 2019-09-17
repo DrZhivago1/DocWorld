@@ -38,7 +38,7 @@ Date Format: DD/MM/YYYY
 		'Stuff' the SewageOutlet.
 		
 	IF "Expanded Woodworking" AND "Survivalist's Additions" are installed:
-		Enables building with the wood types from "Expanded Woodworking". Applies masks.
+		Enables building with the wood types from "Expanded Woodworking".
 		
 	IF "FishIndustry" is installed:
 		Rotatable AquacultureBasin, changed designation category, and new art assets applied (FishingPier, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus).
@@ -74,7 +74,7 @@ Date Format: DD/MM/YYYY
 		Add rot to flax plant.
 		
 	IF "VGP Garden Gourmet" is installed:
-		'Stuffs' the VGP-GG worktables. Applies masks.
+		'Stuffs' the VGP-GG worktables.
 
 **v1.0.12 (21/08/2019):**
 
