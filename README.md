@@ -28,13 +28,18 @@ Date Format: DD/MM/YYYY
 **v1.0.13 (00/00/0000):**
 
 	Updated "LWM Deep Storage" designation category patches.
+	Updated "Glass+Lights" patches. Glass is a common ingredient in lights. Supported mods: Additional Joy Objects (classic/lite), Industrial Age - Objects and Furniture, RIMkea, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module
 	Vanilla butcher table and vent are 'stuffed'.
+	Vanilla lights are now more efficient, this replaces the need for "Chickens Effecient Light".
 	
 	IF "Dubs Bad Hygiene" is installed:
 		'Stuff' the SewageOutlet.
 		
 	IF "Expanded Woodworking" AND "Survivalist's Additions" are installed:
 		Enables building with the wood types from "Expanded Woodworking". Applies masks.
+		
+	IF "FishIndustry" is installed:
+		Rotatable AquacultureBasin, changed designation category, and new art assets applied (FishingPier, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus).
 		
 	IF "Floored" is installed:
 		Group floor types into dropdown designators and match textures if using "Simply More Bridges".
