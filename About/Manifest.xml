@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
-  <version>1.0.12</version>
+  
+  <version>1.0.13</version>
   <loadAfter>
     <li>ExtendedStorageExtended</li>
     <li>FishIndustry</li>
@@ -10,4 +10,5 @@
   <showCrossPromotions>true</showCrossPromotions>
   <manifestUri>https://raw.githubusercontent.com/DrZhivago1/DocWorld/master/About/Manifest.xml</manifestUri>
   <downloadUri>https://github.com/DrZhivago1/DocWorld/releases/latest</downloadUri>
+  
 </Manifest>
