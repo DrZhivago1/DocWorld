@@ -14,6 +14,18 @@
   </DesignationCategoryDef>
 
   <DesignationCategoryDef>
+    <defName>DZ_Culinary</defName>
+    <label>culinary</label>
+    <description>Cooking and fermenting.</description>
+    <order>723</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+      <li>Designator_Uninstall</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+
+  <DesignationCategoryDef>
     <defName>DZ_Fences</defName>
     <label>fences</label>
     <description>Not quite walls, but still an obstruction.</description>
