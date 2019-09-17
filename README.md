@@ -13,7 +13,7 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 # Save-Friendliness and Compatibility
 __*Mod Compatibility*__
 - Requires loading below ["Extended Storage Extended"](https://github.com/Terragg/Extended-Storage-Extended) if mod is used.
-- Requires loading below ["FishIndustry"](https://steamcommunity.com/sharedfiles/filedetails/?id=758810805) if mod is used.
+- Requires loading below ["FishIndustry"](https://github.com/Rikiki123456789/Rimworld/tree/master/FishIndustry/FishIndustry/FishIndustry) if mod is used.
 - Requires loading below ["Gloomy Vanilla"](https://steamcommunity.com/sharedfiles/filedetails/?id=1697864590) if mod is used.
 - Requires loading below ["Industrialisation"](https://steamcommunity.com/sharedfiles/filedetails/?id=1463579055) if mod is used.
 
