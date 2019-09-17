@@ -36,21 +36,48 @@
         </operations>
     </Operation>
 
-    <!--Vanilla beds to "Beds" designation category-->
+    <!--Vanilla beds to "Beds" designation category, with conditional if "Large Animal Beds" is installed-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
-            <li Class="PatchOperationReplace">
-                <xpath>Defs/ThingDef[defName="SleepingSpot" or defName="DoubleSleepingSpot" or defName="AnimalSleepingSpot"]/designationCategory</xpath>
-                <value>
-                    <designationCategory>DZ_Beds</designationCategory>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>Defs/ThingDef[@Name="BedBase" or defName="AnimalSleepingBox" or defName="AnimalBed"]</xpath>
-                <value>
-                    <designationCategory>DZ_Beds</designationCategory>
-                </value>
+
+            <li Class="PatchOperationFindMod">
+                <mods>
+                    <li>Large Animal Beds</li>
+                </mods>
+
+                <match Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[@Name="BedBase" or defName="SleepingSpot" or defName="DoubleSleepingSpot"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[@Name="BedBase" or defName="SleepingSpot" or defName="DoubleSleepingSpot"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Beds</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[@Name="BedBase" or defName="SleepingSpot" or defName="DoubleSleepingSpot"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Beds</designationCategory>
+                        </value>
+                    </nomatch>
+                </match>
+
+                <nomatch Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[@Name="BedBase" or defName="SleepingSpot" or defName="DoubleSleepingSpot" or defName="AnimalSleepingSpot" or defName="AnimalSleepingBox" or defName="AnimalBed"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[@Name="BedBase" or defName="SleepingSpot" or defName="DoubleSleepingSpot" or defName="AnimalSleepingSpot" or defName="AnimalSleepingBox" or defName="AnimalBed"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Beds</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[@Name="BedBase" or defName="SleepingSpot" or defName="DoubleSleepingSpot" or defName="AnimalSleepingSpot" or defName="AnimalSleepingBox" or defName="AnimalBed"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Beds</designationCategory>
+                        </value>
+                    </nomatch>
+                </nomatch>
+
             </li>
         </operations>
     </Operation>
