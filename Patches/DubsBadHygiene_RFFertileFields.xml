@@ -19,21 +19,6 @@
                             <Product>RawCompost</Product>
                         </value>
                     </li>
-                    <li Class="PatchOperationConditional">
-                        <xpath>Defs/ThingDef[defName="IrrigationSprinkler" or defName="BiosolidsComposter"]/designationCategory</xpath>
-                        <match Class="PatchOperationReplace">
-                            <xpath>Defs/ThingDef[defName="IrrigationSprinkler" or defName="BiosolidsComposter"]/designationCategory</xpath>
-                            <value>
-                                <designationCategory>RFF_Farm</designationCategory>
-                            </value>
-                        </match>
-                        <nomatch Class="PatchOperationAdd">
-                            <xpath>Defs/ThingDef[defName="IrrigationSprinkler" or defName="BiosolidsComposter"]</xpath>
-                            <value>
-                                <designationCategory>RFF_Farm</designationCategory>
-                            </value>
-                        </nomatch>
-                    </li>
                     <li Class="PatchOperationRemove">
                         <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]</xpath>
                     </li>

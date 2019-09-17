@@ -1,4 +1,3 @@
-
 <Patch>
   <!--We will be moving all beds to the "Beds" tab, furniture to the "Furniture" tab, and moving all light sources to the "Lighting" tab-->
   <Operation Class="PatchOperationFindMod">
@@ -20,6 +19,13 @@
           <xpath>Defs/ThingDef[defName="Table_IlluminatedEndTable" or defName="Table_IlluminatedDresser" or defName="Seat_AdvChair" or defName="Table_interactive_1x1c" or defName="Table_interactive_2x2c"]/designationCategory</xpath>
           <value>
             <designationCategory>Furniture</designationCategory>
+          </value>
+        </li>
+        <!--Move spacer sun lamp to Husbandry category-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Spacer_SunLamp"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Husbandry</designationCategory>
           </value>
         </li>
         <!--Move all lights to Lighting category-->
@@ -49,31 +55,6 @@
         <xpath>Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>
         <value>
           <designationCategory>DZ_Storage</designationCategory>
-        </value>
-      </nomatch>
-    </match>
-  </Operation>
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Furniture Expanded - Spacer Module</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>[RF] Fertile Fields [1.0]</li>
-      </mods>
-      <!--Move spacer sun lamp to Farming category if FF installed-->
-      <match Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="Spacer_SunLamp"]/designationCategory</xpath>
-        <value>
-          <designationCategory>RFF_Farm</designationCategory>
-        </value>
-      </match>
-      <!--Move spacer sun lamp to Lighting category if FF not installed-->
-      <nomatch Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="Spacer_SunLamp"]/designationCategory</xpath>
-        <value>
-          <designationCategory>DZ_Lighting</designationCategory>
         </value>
       </nomatch>
     </match>

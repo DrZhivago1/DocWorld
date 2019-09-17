@@ -1,36 +1,21 @@
-﻿
-<Patch>
+﻿<Patch>
 
-   <!--Move lights to Lighting category-->
+   <!--Move sunlamp to Husbandry category-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Wall Sun Lamp</li>
       </mods>
-      <match Class="PatchOperationReplace">
-         <xpath>Defs/ThingDef[@Name="WSL_SunLampBase"]/designationCategory</xpath>
-         <value>
-            <designationCategory>DZ_Lighting</designationCategory>
-         </value>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="WSLWallSunLamp"]</xpath>
+               <value>
+                  <designationCategory>DZ_Husbandry</designationCategory>
+               </value>
+            </li>
+         </operations>
       </match>
    </Operation>
-
-   <!--Check for [RF] Fertile Fields and move to farming if it exists-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>Wall Sun Lamp</li>
-      </mods>
-      <match Class="PatchOperationFindMod">
-         <mods>
-            <li>[RF] Fertile Fields [1.0]</li>
-         </mods>
-         <match Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="WSLWallSunLamp"]</xpath>
-            <value>
-               <designationCategory>RFF_Farm</designationCategory>
-            </value>
-         </match>
-      </match>
-   </Operation>
-
 
 </Patch>

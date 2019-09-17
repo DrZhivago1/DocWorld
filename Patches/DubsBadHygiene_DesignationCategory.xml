@@ -1,4 +1,5 @@
 ﻿<Patch>
+
   <!--Dubs Hygiene personal preference settings-->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -66,9 +67,25 @@
             <designationCategory>Misc</designationCategory>
           </value>
         </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName="IrrigationSprinkler" or defName="BiosolidsComposter"]/designationCategory</xpath>
+          <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="IrrigationSprinkler" or defName="BiosolidsComposter"]/designationCategory</xpath>
+            <value>
+              <designationCategory>DZ_Husbandry</designationCategory>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="IrrigationSprinkler" or defName="BiosolidsComposter"]</xpath>
+            <value>
+              <designationCategory>DZ_Husbandry</designationCategory>
+            </value>
+          </nomatch>
+        </li>
       </operations>
     </match>
   </Operation>
+
   <!--Test to see if Biosolids exist, move category with patch-->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -79,30 +96,13 @@
       <operations>
         <li Class="PatchOperationTest">
           <success>Always</success>
-          <xpath>Defs/ThingDef[defName="BiosolidsComposter"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]/designationCategory</xpath>
         </li>
         <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="BiosolidsComposter"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]/designationCategory</xpath>
         </li>
       </operations>
     </match>
   </Operation>
 
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Dubs Bad Hygiene</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
-        <li Class="PatchOperationTest">
-          <success>Always</success>
-          <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]/designationCategory</xpath>
-        </li>
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]/designationCategory</xpath>
-        </li>
-      </operations>
-    </match>
-  </Operation>
 </Patch>

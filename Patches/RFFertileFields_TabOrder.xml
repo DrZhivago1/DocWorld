@@ -1,6 +1,6 @@
-﻿
-<Patch>
-  <!--Alphabetize "Fertile Fields" designation category-->
+﻿<Patch>
+
+  <!--Change "Fertile Fields" designation category-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>[RF] Fertile Fields [1.0]</li>
@@ -8,11 +8,8 @@
     <match Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/DesignationCategoryDef[defName="RFF_Farm"]/order</xpath>
-          <value>
-            <order>720</order>
-          </value>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/DesignationCategoryDef[defName="RFF_Farm"]</xpath>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/DesignationCategoryDef[defName="RFF_Adds"]/order</xpath>
@@ -20,7 +17,14 @@
             <order>40</order>
           </value>
         </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Terraform_Stone-Topsoil" or defName="Terraform_Topsoil-DirtFert" or defName="Terraform_SoilF-SoilRich" or defName="Terraform_SoilRich-SoilTilled" or defName="CompostBin" or defName="CompostBarrel"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Husbandry</designationCategory>
+          </value>
+        </li>
       </operations>
     </match>
   </Operation>
+
 </Patch>

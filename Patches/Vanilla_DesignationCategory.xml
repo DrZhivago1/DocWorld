@@ -68,4 +68,32 @@
         </operations>
     </Operation>
 
+    <!--Vanilla husbandry items moved to "Husbandry" designation category-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="HydroponicsBasin"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Husbandry</designationCategory>
+                </value>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="SunLamp"]/designationCategory</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="SunLamp"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="SunLamp"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </nomatch>
+            </li>
+        </operations>
+    </Operation>
+
 </Patch>

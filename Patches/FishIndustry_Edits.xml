@@ -11,7 +11,7 @@
             <li Class="PatchOperationReplace">
                <xpath>Defs/ThingDef[defName="AquacultureBasin" or defName="FishingPier"]/designationCategory</xpath>
                <value>
-                  <designationCategory>DZ_Culinary</designationCategory>
+                  <designationCategory>DZ_Husbandry</designationCategory>
                </value>
             </li>
             <!--Allow rotation of aquaculture basin if using "FishIndustry", microfungus texture edited due to this-->
