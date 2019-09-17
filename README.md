@@ -28,11 +28,12 @@ Date Format: DD/MM/YYYY
 
 **v1.0.13 (00/00/0000):**
 
-	Updated "LWM Deep Storage" designation category patches.
-	Updated "Glass+Lights" patches. Glass is a common ingredient in lights. Supported mods: Additional Joy Objects (classic/lite), Industrial Age - Objects and Furniture, RIMkea, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module
+	Added new "Husbandry" tab for all agriculture/livestock. Supported mods: Dubs Bad Hygiene, FishIndustry, [RF] Fertile Fields [1.0], SeedsPlease, VGP Garden Tools, Wall Sun Lamp
+	Vanilla standing lamps are combined into dropdown designator.
 	Vanilla butcher table and vent are 'stuffed'.
 	Vanilla lights are now more efficient, this replaces the need for "Chickens Effecient Light".
-	Added new "Husbandry" tab for all agriculture/livestock. Supported mods: Dubs Bad Hygiene, FishIndustry, [RF] Fertile Fields [1.0], SeedsPlease, Wall Sun Lamp
+	Updated "LWM Deep Storage" designation category patches.
+	Updated "Glass+Lights" patches. Glass is a common ingredient in lights. Supported mods: Additional Joy Objects (classic/lite), Industrial Age - Objects and Furniture, RIMkea, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module
 	
 	IF "Dubs Bad Hygiene" is installed:
 		'Stuff' the SewageOutlet.
@@ -48,6 +49,9 @@ Date Format: DD/MM/YYYY
 		
 	IF "Industrialisation" is installed:
 		Patch Vanilla paved tile flooring to use concrete.
+		
+	IF "Large Animal Beds" is installed:
+		Added support for pet beds, they will stay in Large Animal Beds designation category.
 		
 	IF "More Furniture [1.0]" is installed:
 		Groups the "More Furniture" carpet with the vanilla carpet.
@@ -73,8 +77,24 @@ Date Format: DD/MM/YYYY
 	IF "VGP Fabrics" AND "RimCuisine 2" AND "SeedsPlease" are installed:
 		Add rot to flax plant.
 		
+	IF "VGP Garden Canning" is installed:
+		Moves items to "Culinary" designation category.
+		
+	IF "VGP Garden Drinks" is installed:
+		Moves items to "Culinary" designation category.
+		
 	IF "VGP Garden Gourmet" is installed:
 		'Stuffs' the VGP-GG worktables.
+		Moves items to "Culinary" designation category.
+		
+	IF "VGP Soylent Production" is installed:
+		Moves items to "Culinary" designation category.
+		
+	IF "VGP Garden Tools" is installed:
+		Moves items to "Husbandry" designation category and adds dropdown designators.
+	
+	IF "Smoked meat" is installed:
+		Moves items to "Culinary" designation category.
 
 **v1.0.12 (21/08/2019):**
 
