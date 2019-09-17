@@ -1,7 +1,6 @@
-﻿<!--
-Corrects an oversight on the VGP-GG worktables, enabling building them with stuff. Uses the masks on textures folder.
--->
-<Patch>
+﻿<Patch>
+
+    <!--Alterations to VGP Garden Gourmet. Designation category and 'stuffing'-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>VGP Garden Gourmet</li>
@@ -9,7 +8,7 @@ Corrects an oversight on the VGP-GG worktables, enabling building them with stuf
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
-
+                <!--Enables building the VGP-GG worktables with stuff.-->
                 <li Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[defName="HandCanningstove" or defName="Canningstove"]/costList</xpath>
                     <value>
@@ -32,13 +31,13 @@ Corrects an oversight on the VGP-GG worktables, enabling building them with stuf
                         </stuffCategories>
                     </value>
                 </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[defName="FueledCandyTable" or defName="CandyTable" or defName="HandCanningstove" or defName="Canningstove"]/graphicData[not(shaderType)]</xpath>
+                <!--Designation Category changes.-->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VG_SaltMine" or defName="ElectricGrindStone" or defName="GrindStone" or defName="CookingTools" or defName="CandyTable" or defName="FueledCandyTable" or defName="Canningstove" or defName="HandCanningstove" or defName="ElectricOven" or defName="Oven"]/designationCategory</xpath>
                     <value>
-                        <shaderType>CutoutComplex</shaderType>
+                        <designationCategory>DZ_Culinary</designationCategory>
                     </value>
                 </li>
-
             </operations>
         </match>
     </Operation>

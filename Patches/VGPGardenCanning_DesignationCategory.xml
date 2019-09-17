@@ -1,0 +1,22 @@
+﻿<Patch>
+
+   <!--VGP Garden Canning patches-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>VGP Garden Canning</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <!--Designation Category changes.-->
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="CanningFactory" or defName="VG_CanningFactory"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>DZ_Culinary</designationCategory>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+</Patch>

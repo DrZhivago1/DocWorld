@@ -1,6 +1,6 @@
-﻿
-<Patch>
-  <!--Make Smoked meat available after researching Pemmican, and hide the Smokehouse behind Complex Furniture-->
+﻿<Patch>
+
+  <!--Smoked meat patches-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Smoked meat</li>
@@ -8,6 +8,7 @@
     <match Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
+        <!--Make Smoked meat available after researching Pemmican, and hide the Smokehouse behind Complex Furniture-->
         <li Class="PatchOperationAdd">
           <xpath>Defs/ThingDef[defName="Tam_SmokedMeat"]</xpath>
           <value>
@@ -33,7 +34,15 @@
             </researchPrerequisites>
           </value>
         </li>
+        <!--Designation Category changes.-->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="Smokepit" or defName="SmokeHouse"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Culinary</designationCategory>
+          </value>
+        </li>
       </operations>
     </match>
   </Operation>
+
 </Patch>

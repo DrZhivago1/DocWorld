@@ -1,0 +1,22 @@
+﻿<Patch>
+
+   <!--VGP Soylent Production patches-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>VGP Soylent Production</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <!--Designation Category changes.-->
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="soylenttable"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>DZ_Culinary</designationCategory>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+</Patch>
