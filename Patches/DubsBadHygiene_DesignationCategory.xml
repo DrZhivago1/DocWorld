@@ -1,6 +1,6 @@
 ﻿<Patch>
 
-  <!--Dubs Hygiene personal preference settings-->
+  <!--Dubs Hygiene personal preference settings, remove Misc category and rearrange-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Dubs Bad Hygiene</li>
@@ -59,7 +59,7 @@
         </li>
         <!--BuildingsF_Irrigation-->
         <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="IrrigationSprinkler" or defName="plumbingValve"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[defName="plumbingValve"]/designationCategory</xpath>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="FireSprinkler"]/designationCategory</xpath>
