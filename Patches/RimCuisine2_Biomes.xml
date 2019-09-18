@@ -12,40 +12,40 @@
             <li Class="PatchOperationReplace">
                <xpath>Defs/BiomeDef[defName="BorealForest" or defName="Tundra"]/foragedFood</xpath>
                <value>
-                  <foragedFood>RC2_PlantJuniper</foragedFood>
+                  <foragedFood>RC2_RawJuniperBerries</foragedFood>
                </value>
             </li>
             <li Class="PatchOperationReplace">
                <xpath>Defs/BiomeDef[defName="ColdBog"]/foragedFood</xpath>
                <value>
-                  <foragedFood>RC2_PlantMushroom</foragedFood>
+                  <foragedFood>RawFungus</foragedFood>
                </value>
             </li>
             <!--Temperate-->
             <li Class="PatchOperationReplace">
                <xpath>Defs/BiomeDef[defName="TemperateSwamp"]/foragedFood</xpath>
                <value>
-                  <foragedFood>RC2_PlantMushroom</foragedFood>
+                  <foragedFood>RawFungus</foragedFood>
                </value>
             </li>
             <!--Warm-->
             <li Class="PatchOperationReplace">
                <xpath>Defs/BiomeDef[defName="TropicalRainforest" or defName="TropicalSwamp"]/foragedFood</xpath>
                <value>
-                  <foragedFood>RC2_PlantQuinoa</foragedFood>
+                  <foragedFood>RC2_RawQuinoa</foragedFood>
                </value>
             </li>
             <li Class="PatchOperationReplace">
                <xpath>Defs/BiomeDef[defName="TropicalSwamp"]/foragedFood</xpath>
                <value>
-                  <foragedFood>RC2_PlantMushroom</foragedFood>
+                  <foragedFood>RawFungus</foragedFood>
                </value>
             </li>
             <!--WarmArid-->
             <li Class="PatchOperationReplace">
                <xpath>Defs/BiomeDef[defName="AridShrubland"]/foragedFood</xpath>
                <value>
-                  <foragedFood>RC2_PlantChickpeas</foragedFood>
+                  <foragedFood>RC2_RawChickpeas</foragedFood>
                </value>
             </li>
          </operations>
@@ -190,13 +190,13 @@
                <li Class="PatchOperationReplace">
                   <xpath>Defs/BiomeDef[defName="RRP_Grassland"]/foragedFood</xpath>
                   <value>
-                     <foragedFood>RC2_PlantCarrot</foragedFood>
+                     <foragedFood>RC2_RawCarrots</foragedFood>
                   </value>
                </li>
                <li Class="PatchOperationReplace">
                   <xpath>Defs/BiomeDef[defName="RRP_Savanna" or defName="RRP_Steppes"]/foragedFood</xpath>
                   <value>
-                     <foragedFood>RC2_PlantBarley</foragedFood>
+                     <foragedFood>RC2_RawBarley</foragedFood>
                   </value>
                </li>
                <li Class="PatchOperationReplace">
@@ -208,13 +208,13 @@
                <li Class="PatchOperationReplace">
                   <xpath>Defs/BiomeDef[defName="RRP_Permafrost"]/foragedFood</xpath>
                   <value>
-                     <foragedFood>RC2_PlantJuniper</foragedFood>
+                     <foragedFood>RC2_RawJuniperBerries</foragedFood>
                   </value>
                </li>
                <li Class="PatchOperationReplace">
                   <xpath>Defs/BiomeDef[defName="RRP_Oasis"]/foragedFood</xpath>
                   <value>
-                     <foragedFood>RC2_PlantCactusFruit</foragedFood>
+                     <foragedFood>RC2_RawCactusFruit</foragedFood>
                   </value>
                </li>
             </operations>
