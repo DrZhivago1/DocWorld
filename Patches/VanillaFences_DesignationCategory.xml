@@ -4,18 +4,19 @@
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Vanilla Fences</li>
+         <li>Vanilla Fences (Fence Tab)</li>
       </mods>
       <match Class="PatchOperationSequence">
          <success>Always</success>
          <operations>
-            <li Class="PatchOperationRemove">
-               <xpath>Defs/DesignationCategoryDef[defName="Fence"]</xpath>
-            </li>
             <li Class="PatchOperationReplace">
                <xpath>Defs/ThingDef[@Name="FenceExtBuildingBase"]/designationCategory</xpath>
                <value>
                   <designationCategory>DZ_Fences</designationCategory>
                </value>
+            </li>
+            <li Class="PatchOperationRemove">
+               <xpath>Defs/DesignationCategoryDef[defName="Fence"]</xpath>
             </li>
          </operations>
       </match>
