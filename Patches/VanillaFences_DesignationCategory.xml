@@ -1,5 +1,5 @@
-﻿
 <Patch>
+   
    <!--Moves fences from "Vanilla Fences" to proper tab-->
    <Operation Class="PatchOperationFindMod">
       <mods>
@@ -21,4 +21,5 @@
          </operations>
       </match>
    </Operation>
+   
 </Patch>
