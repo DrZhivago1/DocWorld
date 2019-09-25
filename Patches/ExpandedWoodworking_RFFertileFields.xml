@@ -31,17 +31,11 @@
           <li Class="PatchOperationReplace">
             <xpath>Defs/ThingDef[defName="CompostBin"]/graphicData/texPath</xpath>
             <value>
-              <texPath>Stuff/Compost_Bin</texPath>
-            </value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="CompostBin"]/graphicData/graphicClass</xpath>
-            <value>
-              <graphicClass>Graphic_Multi</graphicClass>
+              <texPath>Things/Building/FertileFields/CompostBin</texPath>
             </value>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="CompostBin"]/graphicData</xpath>
+            <xpath>Defs/ThingDef[defName="CompostBin"]/graphicData[not(shaderType)]</xpath>
             <value>
               <shaderType>CutoutComplex</shaderType>
             </value>

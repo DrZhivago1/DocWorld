@@ -1,6 +1,6 @@
 ﻿<Patch>
 
-   <!--QOL edits if using "FishIndustry" (new art assets applied:FishingPier x3, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus)-->
+   <!--QOL edits if using "FishIndustry" (new art assets applied:FishingPier x6, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus)-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>FishIndustry</li>
@@ -26,7 +26,7 @@
                <xpath>Defs/ThingDef[defName="FishingPier"]/graphicData</xpath>
                <value>
                   <graphicData>
-                     <texPath>Things/Building/FishingPier</texPath>
+                     <texPath>Things/Building/FishingIndustry/FishingPier</texPath>
                      <graphicClass>Graphic_Multi</graphicClass>
                      <shaderType>CutoutComplex</shaderType>
                      <drawSize>(1.5,3.5)</drawSize>

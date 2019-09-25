@@ -8,7 +8,7 @@
       <match Class="PatchOperationSequence">
          <success>Always</success>
          <operations>
-         
+
             <!--Enables building the VGP-GG worktables with stuff.-->
             <li Class="PatchOperationReplace">
                <xpath>Defs/ThingDef[defName="HandCanningstove" or defName="Canningstove"]/costList</xpath>
@@ -36,7 +36,13 @@
             <li Class="PatchOperationReplace">
                <xpath>Defs/ThingDef[defName="HandCanningstove" or defName="Canningstove"]/graphicData/texPath</xpath>
                <value>
-                  <texPath>Things/Building/Canningstove</texPath>
+                  <texPath>Things/Building/VGP_GG/Canningstove</texPath>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="FueledCandyTable" or defName="CandyTable"]/graphicData/texPath</xpath>
+               <value>
+                  <texPath>Things/Building/VGP_GG/Candytable</texPath>
                </value>
             </li>
             <li Class="PatchOperationAdd">
