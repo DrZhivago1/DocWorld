@@ -1,4 +1,4 @@
-<Patch>
+﻿<Patch>
    
    <!--Moves fences from "Vanilla Fences" to proper tab-->
    <Operation Class="PatchOperationFindMod">
