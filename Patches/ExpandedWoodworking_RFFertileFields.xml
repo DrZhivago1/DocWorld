@@ -1,0 +1,55 @@
+﻿<Patch>
+
+  <!--Enables building with the wood types from "Expanded Woodwoorking" on the "Fertile Fields'" compost bin. Uses the masks on textures folder.-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Woodworking</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[RF] Fertile Fields [1.0]</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="CompostBin"]/costList/WoodLog</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/ThingDef[defName="CompostBin"]/constructEffect</xpath>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="CompostBin"]</xpath>
+            <value>
+              <costStuffCount>2</costStuffCount>
+              <stuffCategories>
+                <li>Woody</li>
+              </stuffCategories>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="CompostBin"]/graphicData/texPath</xpath>
+            <value>
+              <texPath>Stuff/Compost_Bin</texPath>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="CompostBin"]/graphicData/graphicClass</xpath>
+            <value>
+              <graphicClass>Graphic_Multi</graphicClass>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="CompostBin"]/graphicData</xpath>
+            <value>
+              <shaderType>CutoutComplex</shaderType>
+            </value>
+          </li>
+
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+</Patch>
