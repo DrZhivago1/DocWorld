@@ -29,18 +29,22 @@ Date Format: DD/MM/YYYY
 **v1.0.15 (00/00/0000):**
 
 	Updated "FishIndustry" patch, the pier is now masked and 'stuffed'.
-	
-	IF "Vanilla Fences" OR "Vanilla Fences (Fence Tab)" are installed:
-		Keep fences in "Fences" designation category.
+	Updated "VGP Garden Gourmet" patch, canning stove and candy table are now masked textures.
 		
 	IF "[TWC]Cupro's Stones 1.0" AND "MBS Faux Rock (Un-Unofficial) with smoothing" are installed:
 		Change textures used to match cupro stones for Faux Rock.
+		
+	IF "Expanded Woodworking" AND "[RF] Fertile Fields [1.0]" are installed:
+		'Stuffs' the compost bin and applies texture masks.
 		
 	IF "High Density Hydroponics" is installed:
 		Move hydroponics to Husbandry designation category.
 	
 	IF "[WD] Reinforced Doors 1.0" AND "Vanilla Furniture Expanded - Spacer Module" are installed:
 		Move reinforced doors into the same research requirements as reinforced walls.
+		
+	IF "Vanilla Fences" OR "Vanilla Fences (Fence Tab)" are installed:
+		Keep fences in "Fences" designation category.
 
 **v1.0.13 (17/09/2019):**
 
