@@ -10,7 +10,7 @@
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="HydroponicsBasinThree" or defName="HydroponicsBasinTwo" or defName="HydroponicsBasinOne"]/designationCategory</xpath>
           <value>
-            <designationCategory>DZ_Culinary</designationCategory>
+            <designationCategory>DZ_Husbandry</designationCategory>
           </value>
         </li>
       </operations>
