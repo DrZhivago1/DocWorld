@@ -34,6 +34,9 @@ Date Format: DD/MM/YYYY
 	IF "[TWC]Cupro's Stones 1.0" AND "MBS Faux Rock (Un-Unofficial) with smoothing" are installed:
 		Change textures used to match cupro stones for Faux Rock.
 		
+	IF "[TWC]Cupro's Stones 1.0" AND "Simply More Bridges" are installed:
+		Add all stone types to bridges and match stone colors.
+		
 	IF "Expanded Woodworking" AND "[RF] Fertile Fields [1.0]" are installed:
 		'Stuffs' the compost bin and applies texture masks.
 		
@@ -42,6 +45,9 @@ Date Format: DD/MM/YYYY
 	
 	IF "[WD] Reinforced Doors 1.0" AND "Vanilla Furniture Expanded - Spacer Module" are installed:
 		Move reinforced doors into the same research requirements as reinforced walls.
+	
+	IF "RoofBomb" is installed:
+		Make IEDs a research prerequisite.
 		
 	IF "Vanilla Fences" OR "Vanilla Fences (Fence Tab)" are installed:
 		Keep fences in "Fences" designation category.
