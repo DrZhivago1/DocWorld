@@ -37,6 +37,9 @@ Date Format: DD/MM/YYYY
 	IF "[TWC]Cupro's Stones 1.0" AND "Simply More Bridges" are installed:
 		Add all stone types to bridges and match stone colors.
 		
+	IF "Expanded Roofing" is installed:
+		Get rid of the annoying square shadows with glass roof.
+		
 	IF "Expanded Woodworking" AND "[RF] Fertile Fields [1.0]" are installed:
 		'Stuffs' the compost bin and applies texture masks.
 		
