@@ -30,6 +30,9 @@ Date Format: DD/MM/YYYY
 
 	Updated "FishIndustry" patch, the pier is now masked and 'stuffed'.
 	Updated "VGP Garden Gourmet" patch, canning stove and candy table are now masked textures.
+	
+	IF "Ceramics" AND "[RF] Fertile Fields [1.0]"/"Expanded Woodworking" are installed:
+		Add most recipes to RockMill from [RF]FF. Add fiber recipe to woodworking tables from Expanded Woodworking.
 		
 	IF "[TWC]Cupro's Stones 1.0" AND "MBS Faux Rock (Un-Unofficial) with smoothing" are installed:
 		Change textures used to match cupro stones for Faux Rock.
