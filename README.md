@@ -49,6 +49,9 @@ Date Format: DD/MM/YYYY
 		
 	IF "High Density Hydroponics" is installed:
 		Move hydroponics to Husbandry designation category.
+		
+	IF "More Hydroponics" is installed:
+		Move items to "Husbandry" designation category.
 	
 	IF "[WD] Reinforced Doors 1.0" AND "Vanilla Furniture Expanded - Spacer Module" are installed:
 		Move reinforced doors into the same research requirements as reinforced walls.
@@ -58,6 +61,9 @@ Date Format: DD/MM/YYYY
 		
 	IF "Vanilla Fences" OR "Vanilla Fences (Fence Tab)" are installed:
 		Keep fences in "Fences" designation category.
+		
+	IF "Vanilla Furniture Expanded - Production" is installed:
+		Move items to "Culinary" designation category.
 
 **v1.0.13 (17/09/2019):**
 
