@@ -65,6 +65,12 @@ Date Format: DD/MM/YYYY
 		
 	IF "Vanilla Furniture Expanded - Production" is installed:
 		Move items to "Culinary" designation category.
+		
+	IF "Zen Garden" is installed:
+		Reorder Zen designation category.
+		
+	IF "Zen Garden" AND "GloomyFurniture" are installed:
+		Move Zen Garden decor to Gloomy decoration category, and remove Zen category.
 
 **v1.0.13 (17/09/2019):**
 
