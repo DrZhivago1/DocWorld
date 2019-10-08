@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  
+  <!--Move VFE-P items to Husbadry tab.-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Production</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="VFE_TableStoveLarge" or defName="VFE_TableButcherElectric"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Culinary</designationCategory>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  
+</Patch>
