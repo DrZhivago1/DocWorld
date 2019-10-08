@@ -1,6 +1,6 @@
 ﻿<Patch>
 
-   <!--Move kitchenware to "Culinary" tab if using Gloomy Vanilla-->
+   <!--Move kitchenware to "Culinary" tab if using Gloomy Vanilla and reorder decoration menu-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Gloomy Vanilla Overhaul</li>
@@ -12,6 +12,12 @@
                <xpath>Defs/ThingDef[defName="GL_TablewareShelf"]/designationCategory</xpath>
                <value>
                   <designationCategory>DZ_Culinary</designationCategory>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/DesignationCategoryDef[defName="OldStyleDeco"]/order</xpath>
+               <value>
+                  <order>723</order>
                </value>
             </li>
          </operations>
