@@ -1,9 +1,28 @@
 ﻿<Patch>
 
-   <!--Move lights to Lighting tab if using Gloomy Vanilla-->
+   <!--Move kitchenware to "Culinary" tab if using Gloomy Vanilla-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Gloomy Vanilla Overhaul</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="GL_TablewareShelf"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>DZ_Culinary</designationCategory>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--Move lights to "Lighting" tab if using Gloomy Vanilla-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Gloomy Vanilla</li>
+         <li>Gloomy Vanilla Overhaul</li>
       </mods>
       <match Class="PatchOperationSequence">
          <success>Always</success>
@@ -18,10 +37,11 @@
       </match>
    </Operation>
 
-   <!--Move fences to Fences tab if using Gloomy Vanilla-->
+   <!--Move fences to "Fences" tab if using Gloomy Vanilla-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Gloomy Vanilla</li>
+         <li>Gloomy Vanilla Overhaul</li>
       </mods>
       <match Class="PatchOperationSequence">
          <success>Always</success>
@@ -44,5 +64,52 @@
          </operations>
       </match>
    </Operation>
+
+   <!--Gloomy storage furniture to "Storage" designation category, with conditional if "LWM Deep Storage" is installed-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Gloomy Vanilla Overhaul</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+         <mods>
+            <li>LWM's Deep Storage</li>
+         </mods>
+         <nomatch Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="RKGWineRackB" or defName="WardrobeA" or defName="GL_Cupboard" or defName="RGK_Manger" or defName="GL_Locker" or defName="RGK_DogBowl"]/designationCategory</xpath>
+            <value>
+               <designationCategory>DZ_Storage</designationCategory>
+            </value>
+         </nomatch>
+      </match>
+   </Operation>
+
+  <!--If Gloomy Extra - Kitchen installed, furniture to "Culinary" designation category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Gloomy Vanilla Overhaul</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Gloomy Extra - Kitchen</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="SM_Sink"]/designationCategory</xpath>
+            <value>
+              <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="SM_KitchenCupboard_A" or defName="SM_KitchenCupboard_B" or defName="SM_KitchenCupboard_C" or defName="SM_ButcherShelf" or defName="SM_CornerIRD"]</xpath>
+            <value>
+              <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
 
 </Patch>
