@@ -13,7 +13,7 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationAdd">
-            <xpath>Defs/RecipeDef[defName="Make_ComponentsFromWafer" or defName="Make_RawMudbricks" or defName="Make_RawBricks" or defName="Make_HardenedCeramic" or defName="Make_Wafer" or defName="Make_Porcelain"]/recipeUsers</xpath>
+            <xpath>Defs/RecipeDef[defName="Make_RawMudbricks" or defName="Make_RawBricks" or defName="Make_HardenedCeramic" or defName="Make_Wafer" or defName="Make_Porcelain"]/recipeUsers</xpath>
             <value>
               <li>RockMill</li>
             </value>
