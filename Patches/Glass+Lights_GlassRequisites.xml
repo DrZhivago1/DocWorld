@@ -21,6 +21,15 @@
                         <label>outdoor ground lamp</label>
                     </value>
                 </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[@Name="GLWallLightBase"]/costList</xpath>
+                    <value>
+                        <costList>
+                            <Glass>1</Glass>
+                            <Steel>10</Steel>
+                        </costList>
+                    </value>
+                </li>
             </operations>
         </match>
     </Operation>
@@ -44,6 +53,124 @@
                             <costList>
                                 <LargeCircularGlass>1</LargeCircularGlass>
                             </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Glass needed on "Ceiling Light" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Ceiling Light [1.0]</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Lighting_CeilingLight"]/costList</xpath>
+                        <value>
+                            <LargeCircularGlass>1</LargeCircularGlass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Glass needed on "Clutter" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Clutter "The Door Stuff"</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="ReinforcedDoor"]/costList</xpath>
+                        <value>
+                            <Glass>1</Glass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Clutter "Windows Stuff"</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationRemove">
+                        <xpath>Defs/ThingDef[defName="WindowThingy" or defName="SilverWallWindows" or defName="UtilityWallWindows" or defName="VanillaWallWindows" or defName="WindowGlower" or defName="WindowSpawner"]/costList/Jade</xpath>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="WindowThingy" or defName="SilverWallWindows" or defName="UtilityWallWindows" or defName="VanillaWallWindows" or defName="WindowGlower" or defName="WindowSpawner"]/costList</xpath>
+                        <value>
+                            <Glass>2</Glass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Glass needed on "DBH" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Dubs Bad Hygiene</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="CeilingFan"]/costList</xpath>
+                        <value>
+                            <Glass>1</Glass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Glass needed on "Glitter Tech" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Glitter Tech</li>
+                <li>Glitter Tech (No Surgery)</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="FloodLight"]/costList</xpath>
+                        <value>
+                            <LargeCircularGlass>1</LargeCircularGlass>
                         </value>
                     </li>
                 </operations>
@@ -101,6 +228,29 @@
                                 <Steel>30</Steel>
                                 <Glass>1</Glass>
                             </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Glass needed on "Static Quality" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Static Quality Plus 1.2</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="PermaSunLamp"]/costList</xpath>
+                        <value>
+                            <LargeCircularGlass>4</LargeCircularGlass>
                         </value>
                     </li>
                 </operations>
@@ -170,6 +320,32 @@
                         <xpath>Defs/ThingDef[defName="OutdoorGroundLamp"]/comps/li[@Class="CompProperties_Glower"]/glowRadius</xpath>
                         <value>
                             <glowRadius>8</glowRadius>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Glass needed on "Wall Light" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Wall Light</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[@Name="MURWallLightBase" or @Name="MURWallLightVIIBase"]</xpath>
+                        <value>
+                            <costList>
+                                <Glass>1</Glass>
+                                <Steel>2</Steel>
+                            </costList>
                         </value>
                     </li>
                 </operations>
