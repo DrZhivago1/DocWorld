@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
+  
+  <!--Move hydroponics to Husbandry tab-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>More Hydroponics</li>
@@ -16,4 +18,5 @@
       </operations>
     </match>
   </Operation>
+  
 </Patch>
