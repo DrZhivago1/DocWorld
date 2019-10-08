@@ -29,6 +29,7 @@ Date Format: DD/MM/YYYY
 **v1.0.15 (00/00/0000):**
 
 	Updated "FishIndustry" patch, the pier is now masked and 'stuffed'.
+	Updated "Glass+Lights_GlassRequisites" patch, mods additionally supported: Ceiling Light [1.0], Clutter "The Door Stuff", Clutter "Windows Stuff", Dubs Bad Hygiene, Glitter Tech, Static Quality Plus 1.2, Wall Light.
 	Updated "VGP Garden Gourmet" patch, canning stove and candy table are now masked textures.
 	
 	IF "Ceramics" AND "[RF] Fertile Fields [1.0]"/"Expanded Woodworking" are installed:
