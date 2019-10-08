@@ -1,5 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
 <Patch>
+  
+  <!--Move VFE-P items to Husbadry tab.-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Vanilla Furniture Expanded - Production</li>
@@ -16,4 +17,5 @@
       </operations>
     </match>
   </Operation>
+  
 </Patch>
