@@ -27,7 +27,7 @@ The only other thing to note is that there may be some issues with floors/items 
 # Changelog
 Date Format: DD/MM/YYYY
 
-**v1.0.15 (00/00/0000):**
+**v1.0.15 (08/10/2019):**
 
 	Updated "FishIndustry" patch, the pier is now masked and 'stuffed'.
 	Updated "Glass+Lights_GlassRequisites" patch, mods additionally supported: Ceiling Light [1.0], Clutter "The Door Stuff", Clutter "Windows Stuff", Dubs Bad Hygiene, Glitter Tech, Static Quality Plus 1.2, Wall Light.
