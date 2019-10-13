@@ -1,0 +1,26 @@
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Extended Storage</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Rim of Madness - Bones</li>
+      </mods>
+        <match Class="PatchOperationSequence">
+          <success>Always</success>
+          <operations>
+            <li Class="PatchOperationReplace">
+              <xpath>Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+              <value>
+                <thingDefs>
+                  <li>Chocolate</li>
+                  <li>ROMB_Gelatin</li>
+                </thingDefs>
+              </value>
+            </li>
+          </operations>
+        </match>
+    </match>
+  </Operation>
+</Patch>
