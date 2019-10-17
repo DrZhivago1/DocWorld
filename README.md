@@ -27,6 +27,8 @@ The only other thing to note is that there may be some issues with floors/items 
 # Changelog
 Date Format: DD/MM/YYYY
 
+**v1.0.16 (00/00/0000):**
+
 **v1.0.15 (08/10/2019):**
 
 	Updated "FishIndustry" patch, the pier is now masked and 'stuffed'.
