@@ -222,6 +222,34 @@
       </match>
    </Operation>
 
+   <!--Compatibililty with VFE-Medieval -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>[1.0] RimCuisine 2 Core</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+         <mods>
+            <li>[RF] Realistic Planets [1.0]</li>
+         </mods>
+         <match Class="PatchOperationFindMod">
+            <mods>
+               <li>Vanilla Factions Expanded - Medieval</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+               <success>Always</success>
+               <operations>
+                  <li Class="PatchOperationReplace">
+                     <xpath>Defs/BiomeDef[defName="RRP_Grassland"]/wildPlants/RC2_PlantGrapes</xpath>
+                     <value>
+                        <VFEM_Plant_Grape>0.0000000000000001</VFEM_Plant_Grape>
+                     </value>
+                  </li>
+               </operations>
+            </match>
+         </match>
+      </match>
+   </Operation>
+
 </Patch>
 
 
