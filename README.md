@@ -29,7 +29,17 @@ Date Format: DD/MM/YYYY
 
 **v1.0.16 (00/00/0000):**
 	
+	Updated "RimCuisine2_Biomes" for compatibility with Vanilla Factions Expanded - Medieval.
 	Updated "ExtendedStorage_ModAdditions" for better compatibililty and slight additions to storage.
+	
+	IF "Vanilla Furniture Expanded - Production" is installed:
+		Component Fabrication Bench is minifiable.
+		
+	IF "Vanilla Furniture Expanded - Production" AND "[1.0] RimCuisine 2 Core" are installed:
+		Add food categories to bulk meals.
+		
+	IF "Roof Support 1.0" is installed:
+		Make minor edits, allow cover and change passability.
 
 **v1.0.15 (08/10/2019):**
 
