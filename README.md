@@ -29,8 +29,9 @@ Date Format: DD/MM/YYYY
 
 **v1.0.16 (00/00/0000):**
 	
-	Updated "RimCuisine2_Biomes" for compatibility with Vanilla Factions Expanded - Medieval.
 	Updated "ExtendedStorage_ModAdditions" for better compatibililty and slight additions to storage.
+	Updated "RimCuisine2_Biomes" for compatibility with Vanilla Factions Expanded - Medieval.
+	Updated "VGPGardenTools_Patches" for compatibility with Fertile Fields.
 	
 	IF "Roof Support 1.0" is installed:
 		Make minor edits, allow cover and change passability.
