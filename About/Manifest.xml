@@ -7,6 +7,7 @@
     <li>GloomyVanilla</li>
     <li>GloomyVanillaOverhaul</li>
     <li>Industrialisation</li>
+    <li>[RF] Fertile Fields [1.0]</li>
   </loadAfter>
   <showCrossPromotions>true</showCrossPromotions>
   <manifestUri>https://raw.githubusercontent.com/DrZhivago1/DocWorld/master/About/Manifest.xml</manifestUri>
