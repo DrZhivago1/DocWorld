@@ -1,4 +1,5 @@
 <Patch>
+	<!--Fix compatibility with RimOverhaul and Simple Chains: Leather-->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>RimOverhaul</li>
