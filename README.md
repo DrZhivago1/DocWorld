@@ -12,7 +12,7 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 
 # Save-Friendliness and Compatibility
 __*Mod Compatibility*__
-- Requires loading below ["Extended Storage Extended"](https://github.com/Terragg/Extended-Storage-Extended) if mod is used.
+- Requires loading below ["Extended Storage Extended"](https://github.com/Terragg/Extended-Storage-Extended) if mod is used.- Requires loading below ["Fertile Fields"](https://ludeon.com/forums/index.php?topic=46165.msg439107#msg439107) if mod is used.
 - Requires loading below ["FishIndustry"](https://github.com/Rikiki123456789/Rimworld/tree/master/FishIndustry/FishIndustry/FishIndustry) if mod is used.
 - Requires loading below ["Gloomy Vanilla"](https://steamcommunity.com/sharedfiles/filedetails/?id=1697864590) if mod is used.
 - Requires loading below ["Gloomy Vanilla Overhaul"](https://steamcommunity.com/sharedfiles/filedetails/?id=1883678698) if mod is used.
