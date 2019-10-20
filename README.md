@@ -8,7 +8,7 @@ _[Link to Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=15687445
 
 _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416)_
 
-### Important Info
+### Important Info:
 [Mod Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/Mod-Compatibility)
 
 [Save Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/Save-Compatibility)
