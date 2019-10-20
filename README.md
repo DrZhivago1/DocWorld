@@ -8,8 +8,6 @@ _[Link to Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=15687445
 _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416)_
 
 
-## [License](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-
 # Save-Friendliness and Compatibility
 __*Mod Compatibility*__
 - Requires loading below ["Extended Storage Extended"](https://github.com/Terragg/Extended-Storage-Extended) if mod is used.
