@@ -18,7 +18,7 @@ Changelog
 =========
 Date Format: DD/MM/YYYY
 
-**v1.0.16 (00/00/0000):**
+**v2.0.0 (00/00/0000):**
 	
 	Updated "ExtendedStorage_ModAdditions" for better compatibililty and slight additions to storage.
 	Updated "RimCuisine2_Biomes" for compatibility with Vanilla Factions Expanded - Medieval.
