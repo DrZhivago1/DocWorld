@@ -7,8 +7,8 @@ _[Link to Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=15687445
 _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416)_
 
 ### Important Info:
-[Mod Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/2.-Mod-Compatibility)
+[Mod Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/2.-Mod-Compatibility) for any conflicts.
 
-[Save Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/3.-Save-Compatibility)
+[Save Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/3.-Save-Compatibility) for any ongoing games.
 
-[Changelog](https://github.com/DrZhivago1/DocWorld/wiki/4.-Changelog)
+[Changelog](https://github.com/DrZhivago1/DocWorld/wiki/4.-Changelog) for all changes made by this mod.
