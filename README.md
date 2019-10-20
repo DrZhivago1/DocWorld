@@ -1,6 +1,6 @@
 DocWorld
 ========
-A mod of combined patches for Vanilla RimWorld, and my RimWorld mod collection [The Doctor's World](https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074). This mod also patches many mods not currently included in my collection, and **can be used without any other mods**.
+A mod of combined patches for Vanilla RimWorld, any of the supported mods, and my RimWorld mod collection [The Doctor's World](https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074). This mod patches many mods not currently included in my collection, **and can be used without any other mods**.
 
 _[Link to Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1568744597)_
 
