@@ -12,7 +12,3 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 [Save Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/3.-Save-Compatibility) for any ongoing games.
 
 [Changelog](https://github.com/DrZhivago1/DocWorld/wiki/4.-Changelog) for all changes made by this mod.
-
-![Architect Menu](https://i.imgur.com/R8OMzhl.png)
-![Organized Tabs](https://i.imgur.com/97oTK59.png)
-![Small Highlights](https://i.imgur.com/KLzds94.png)
