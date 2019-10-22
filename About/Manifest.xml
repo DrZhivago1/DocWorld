@@ -15,6 +15,7 @@
     <li>GloomyVanilla</li>
     <li>GloomyVanillaOverhaul</li>
     <li>Industrialisation</li>
+    <li>LargeAnimalBeds</li>
   </loadAfter>
   <showCrossPromotions>true</showCrossPromotions>
   <manifestUri>https://raw.githubusercontent.com/DrZhivago1/DocWorld/master/About/Manifest.xml</manifestUri>
