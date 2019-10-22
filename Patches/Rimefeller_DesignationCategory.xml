@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimefeller</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/DesignationCategoryDef[defName="DZ_Industrial"]/specialDesignatorClasses</xpath>
+					<value>
+						<li>Rimefeller.Designator_CleanOil</li>
+						<li>Rimefeller.Designator_RemovePipeline</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@ParentName="BasedRimefellerMom" or @Name="BasedRimefellerMom" or @Name="ChemfuelHopperBase"]/designationCategory</xpath>
+					<value>
+						<designationCategory>DZ_Industrial</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="Filth_OilSlick"]/designationCategory</xpath>
+					<value>
+						<designationCategory />
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/TerrainDef[@Name="RimefellerLinoBase"]/designationCategory</xpath>
+					<value>
+						<designationCategory>Floors</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/DesignationCategoryDef[defName="Rimefeller"]</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

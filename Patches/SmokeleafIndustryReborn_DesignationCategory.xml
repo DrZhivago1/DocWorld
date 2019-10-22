@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Smokeleaf Industry Reborn</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@ParentName="MSI_LampBase" or @ParentName="MSI_ArtableFurnitureBase"]/designationCategory</xpath>
+					<value>
+						<designationCategory>DZ_Husbandry</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@ParentName="MSI_BuildingBase"]/designationCategory</xpath>
+					<value>
+						<designationCategory>Power</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@ParentName="MSI_BenchBase"]/designationCategory</xpath>
+					<value>
+						<designationCategory>Production</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="TrimmingTools"]/designationCategory</xpath>
+					<value>
+						<designationCategory>Misc</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/DesignationCategoryDef[defName="MSI"]</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

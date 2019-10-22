@@ -1,0 +1,15 @@
+﻿<Patch>
+
+   <!--Remove Industrial designation category if no industrial content mods are installed-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Industrial Rollers</li>
+         <li>Rimefeller</li>
+         <li>Rimatomics</li>
+      </mods>
+      <nomatch Class="PatchOperationRemove">
+         <xpath>Defs/DesignationCategoryDef[defName="DZ_Industrial"]</xpath>
+      </nomatch>
+   </Operation>
+   
+</Patch>

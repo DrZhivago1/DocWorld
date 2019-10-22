@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimatomics</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/DesignationCategoryDef[defName="DZ_Industrial"]/specialDesignatorClasses</xpath>
+					<value>
+						<li>Rimatomics.Designator_RemovePipe</li>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@Name="BasedRimatomicsMom" or @Name="BaseSarc" or @Name="BasedPower"]/designationCategory</xpath>
+					<value>
+						<designationCategory>DZ_Industrial</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="DU_Blastdoor" or defName="RadiationShielding"]/designationCategory</xpath>
+					<value>
+						<designationCategory>Structure</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@Name="BasedWeapon"]/designationCategory</xpath>
+					<value>
+						<designationCategory>Security</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/DesignationCategoryDef[defName="Rimatomics"]</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>

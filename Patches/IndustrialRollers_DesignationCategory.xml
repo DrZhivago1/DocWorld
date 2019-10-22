@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Industrial Rollers</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[@Name="RollerBase"]/designationCategory</xpath>
+					<value>
+						<designationCategory>DZ_Industrial</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="RollerBase"]</xpath>
+					<value>
+						<researchPrerequisites>
+							<li>ComplexFurniture</li>
+							<li>Electricity</li>
+						</researchPrerequisites>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/DesignationCategoryDef[defName="Industrial"]</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
