@@ -1,5 +1,29 @@
 ﻿<Patch>
 
+  <!--Add fiber recipe to woodworking tables from Expanded Woodworking-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[1.0] Ceramics</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Expanded Woodworking</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/RecipeDef[defName="Make_FiberFromWood"]/recipeUsers</xpath>
+            <value>
+              <li>TableWoodworking</li>
+              <li>ElectricTableWoodworking</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
   <!--Add most recipes to RockMill from [RF]FF-->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -23,24 +47,22 @@
     </match>
   </Operation>
 
-
-  <!--Add fiber recipe to woodworking tables from Expanded Woodworking-->
+  <!--Add most recipes to VFE-Production electric stonecutter-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>[1.0] Ceramics</li>
     </mods>
     <match Class="PatchOperationFindMod">
       <mods>
-        <li>Expanded Woodworking</li>
+        <li>Vanilla Furniture Expanded - Production</li>
       </mods>
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
           <li Class="PatchOperationAdd">
-            <xpath>Defs/RecipeDef[defName="Make_FiberFromWood"]/recipeUsers</xpath>
+            <xpath>Defs/RecipeDef[defName="Make_RawMudbricks" or defName="Make_RawBricks" or defName="Make_HardenedCeramic" or defName="Make_Wafer" or defName="Make_Porcelain"]/recipeUsers</xpath>
             <value>
-              <li>TableWoodworking</li>
-              <li>ElectricTableWoodworking</li>
+              <li>VFE_TableStonecutterElectric</li>
             </value>
           </li>
         </operations>

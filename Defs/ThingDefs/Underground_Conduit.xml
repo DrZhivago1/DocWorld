@@ -1,64 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-  <ThingDef ParentName="BuildingBase">
+
+  <DesignatorDropdownGroupDef>
+    <defName>DZ_PowerConduits</defName>
+  </DesignatorDropdownGroupDef>
+
+  <ThingDef ParentName="PowerConduit">
     <defName>PowerConduitSecret_DZ</defName>
     <label>underground power conduit</label>
-    <description>A bundle of underground electrical cables for moving power around. Can be placed beneath walls and other buildings.</description>
-    <thingClass>Building</thingClass>
-    <category>Building</category>
+    <description>A bundle of underground electrical cables for moving power around. Can be placed beneath walls and other buildings. Labor intensive.</description>
     <graphicData>
       <texPath>Things/Building/Linked/PowerConduitSecret_Atlas</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <linkType>Transmitter</linkType>
-      <linkFlags>
-        <li>PowerConduit</li>
-      </linkFlags>
-      <damageData>
-        <rect>(0,0.35,1,0.3)</rect>
-      </damageData>
     </graphicData>
     <uiIconPath>Things/Building/Linked/PowerConduitSecret_MenuIcon</uiIconPath>
-    <uiIconScale>0.7</uiIconScale>
-    <building>
-      <ai_chillDestination>false</ai_chillDestination>
-      <isInert>true</isInert>
-      <isEdifice>false</isEdifice>
-      <blueprintGraphicData>
-        <texPath>Things/Building/Linked/PowerConduitSecret_Blueprint_Atlas</texPath>
-      </blueprintGraphicData>
-    </building>
-    <altitudeLayer>FloorEmplacement</altitudeLayer>
-    <passability>Standable</passability>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <statBases>
-      <MaxHitPoints>80</MaxHitPoints>
-      <WorkToBuild>35</WorkToBuild>
+      <WorkToBuild>350</WorkToBuild>
       <Flammability>0.0</Flammability>
       <Beauty>0</Beauty>
     </statBases>
-    <placingDraggableDimensions>1</placingDraggableDimensions>
-    <costList>
-      <Steel>2</Steel>
-    </costList>
-    <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTransmitter</compClass>
-        <transmitsPower>true</transmitsPower>
-      </li>
-    </comps>
-    <placeWorkers>
-      <li>PlaceWorker_Conduit</li>
-    </placeWorkers>
-    <rotatable>false</rotatable>
-    <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect>
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <designationCategory>Power</designationCategory>
-    <constructEffect>ConstructMetal</constructEffect>
-    <clearBuildingArea>false</clearBuildingArea>
-    <researchPrerequisites>
-      <li>Electricity</li>
-    </researchPrerequisites>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
   </ThingDef>
+
 </Defs>
