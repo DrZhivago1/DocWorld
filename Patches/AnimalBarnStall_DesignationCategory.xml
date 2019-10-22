@@ -1,0 +1,30 @@
+﻿<Patch>
+
+    <!--Move items to Animal tab if "[1.0] Animal Barn Stall" is loaded-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[1.0] Animal Barn Stall</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="AnimalBarnStall"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="AnimalBarnStall"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="AnimalBarnStall"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

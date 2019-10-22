@@ -1,0 +1,15 @@
+﻿
+<Patch>
+   <!--Remove Animals Designation Category if no animal content mods are installed-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Large Animal Beds</li>
+         <li>[1.0] Animal Barn Stall</li>
+         <li>【1.0】Animal straw bed</li>
+         <li>[sd] chicken nest</li>
+      </mods>
+      <nomatch Class="PatchOperationRemove">
+         <xpath>Defs/DesignationCategoryDef[defName="DZ_Animals"]</xpath>
+      </nomatch>
+   </Operation>
+</Patch>

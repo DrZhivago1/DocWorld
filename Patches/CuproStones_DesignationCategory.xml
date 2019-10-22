@@ -1,6 +1,6 @@
 ﻿<Patch>
 
-  <!--Move floors from Cupro's Stones if Fluffies Stuff Floors is not active, add dropdowns-->
+  <!--Move floors from Cupro's Stones if Fluffies "Stuffed Floors" is not active, add dropdowns-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>[TWC]Cupro's Stones 1.0</li>

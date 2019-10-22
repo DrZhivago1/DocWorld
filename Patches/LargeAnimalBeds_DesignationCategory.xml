@@ -1,0 +1,76 @@
+﻿<Patch>
+
+    <!--Move items to Animal tab if "Large Animal Beds" is loaded-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Large Animal Beds</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Add dropdowns-->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Animals_LargeAnimalSpot</defName>
+                        </DesignatorDropdownGroupDef>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Animals_LargeAnimalBox</defName>
+                        </DesignatorDropdownGroupDef>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Animals_LargeAnimalBed</defName>
+                        </DesignatorDropdownGroupDef>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Animals_LargeAnimalHospital</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="AnimalSleepingSpot" or defName="CCPMAnimalSleepingSpot" or defName="CCPLAnimalSleepingSpot"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Animals_LargeAnimalSpot</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="AnimalSleepingBox" or defName="CCPMAnimalSleepingBox" or defName="CCPLAnimalSleepingBox"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Animals_LargeAnimalBox</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="AnimalBed" or defName="CCPMAnimalBed" or defName="CCPLAnimalBed"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Animals_LargeAnimalBed</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[@Name="PetBedWithQualityBase"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Animals_LargeAnimalHospital</designatorDropdown>
+                    </value>
+                </li>
+                <!--Change tab-->
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[@Name="PetBedWithQualityBase" or defName="AnimalSleepingBox" or defName="CCPMAnimalSleepingBox" or defName="CCPLAnimalSleepingBox" or defName="AnimalBed" or defName="CCPMAnimalBed" or defName="CCPLAnimalBed" or defName="AnimalSleepingSpot" or defName="CCPMAnimalSleepingSpot" or defName="CCPLAnimalSleepingSpot"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[@Name="PetBedWithQualityBase" or defName="AnimalSleepingBox" or defName="CCPMAnimalSleepingBox" or defName="CCPLAnimalSleepingBox" or defName="AnimalBed" or defName="CCPMAnimalBed" or defName="CCPLAnimalBed" or defName="AnimalSleepingSpot" or defName="CCPMAnimalSleepingSpot" or defName="CCPLAnimalSleepingSpot"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[@Name="PetBedWithQualityBase" or defName="AnimalSleepingBox" or defName="CCPMAnimalSleepingBox" or defName="CCPLAnimalSleepingBox" or defName="AnimalBed" or defName="CCPMAnimalBed" or defName="CCPLAnimalBed" or defName="AnimalSleepingSpot" or defName="CCPMAnimalSleepingSpot" or defName="CCPLAnimalSleepingSpot"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/DesignationCategoryDef[defName="CCP_PetBeds"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

@@ -1,5 +1,5 @@
 ﻿<Patch>
-    <!--Change designation category of storage furniture for "Medieval Times"-->
+    <!--Change designation category of furniture for "Medieval Times"-->
     <!--=====Medieval Times=====-->
     <Operation Class="PatchOperationFindMod">
         <mods>
