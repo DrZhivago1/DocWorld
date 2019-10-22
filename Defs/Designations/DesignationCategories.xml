@@ -2,6 +2,18 @@
 <Defs>
 
   <DesignationCategoryDef>
+    <defName>DZ_Animals</defName>
+    <label>animals</label>
+    <description>All things related to animals.</description>
+    <order>730</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+      <li>Designator_Uninstall</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+
+  <DesignationCategoryDef>
     <defName>DZ_Beds</defName>
     <label>beds</label>
     <description>Spots for your pawns to rest.</description>
