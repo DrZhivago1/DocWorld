@@ -1,0 +1,30 @@
+﻿<Patch>
+
+  <!--Move floors from "[T] MoreFloors" if Fluffies "Stuffed Floors" is not active-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[T] MoreFloors</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Stuffed Floors</li>
+      </mods>
+      <nomatch Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!--change category-->
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/TerrainDef[@Name="FloorBaseCarpetCheck" or @Name="FloorBaseCarpetWool" or @Name="FloorPlasteel" or @Name="FloorStraw" or @Name="FloorJade"  or @Name="FloorBaseStone"  or @Name="FloorBaseWood"]/designationCategory</xpath>
+            <value>
+              <designationCategory>Floors</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>Defs/designationCategoryDef[defName="MoreFloors"]</xpath>
+          </li>
+        </operations>
+      </nomatch>
+    </match>
+  </Operation>
+
+</Patch>

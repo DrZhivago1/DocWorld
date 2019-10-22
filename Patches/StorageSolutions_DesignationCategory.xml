@@ -1,0 +1,29 @@
+﻿<Patch>
+    <!--Change designation category of storage furniture for "Storage Solutions"-->
+    <!--=====Storage Solutions=====-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Storage Solutions</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[@Name="CCPSS_StorageBase" or @Name="CCPSS_ArtableStorageBase" or defName="CCPSS_NestingBox" or defName="CCPSS_Crate"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[@Name="CCPSS_StorageBase" or @Name="CCPSS_ArtableStorageBase" or defName="CCPSS_NestingBox" or defName="CCPSS_Crate"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[@Name="CCPSS_StorageBase" or @Name="CCPSS_ArtableStorageBase" or defName="CCPSS_NestingBox" or defName="CCPSS_Crate"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
