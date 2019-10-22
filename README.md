@@ -1,4 +1,4 @@
-![The Doctor](https://i.imgur.com/eJ2Cm9s.png)
+![The Doctor](https://i.imgur.com/eJ2Cm9s.png)  
 DocWorld
 ========
 A mod of combined patches for Vanilla RimWorld, any of the supported mods, and my RimWorld mod collection [The Doctor's World](https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074). This mod patches many mods not currently included in my collection, **and can be used without any other mods**.
