@@ -61,6 +61,18 @@
   </DesignationCategoryDef>
 
   <DesignationCategoryDef>
+    <defName>DZ_Industrial</defName>
+    <label>industrial</label>
+    <description>For all your industrial production.</description>
+    <order>570</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+      <li>Designator_Uninstall</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+
+  <DesignationCategoryDef>
     <defName>DZ_Storage</defName>
     <label>storage</label>
     <description>Furniture that can store items.</description>
