@@ -1,4 +1,44 @@
 <Patch>
+    <!--=====Vanilla dropdown designators=====-->
+   <Operation Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+         <!--Put power conduits into a dropdown designator-->
+         <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="PowerConduit"][not(designatorDropdown)]</xpath>
+            <value>
+               <designatorDropdown>DZ_PowerConduits</designatorDropdown>
+            </value>
+         </li>
+         <!--Put standing lamps into a dropdown designator-->
+         <li Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+               <DesignatorDropdownGroupDef>
+                  <defName>DZ_Lighting_StandingLamp</defName>
+               </DesignatorDropdownGroupDef>
+            </value>
+         </li>
+         <li Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+               <li Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[defName="StandingLamp"]</xpath>
+                  <value>
+                     <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
+                  </value>
+               </li>
+               <li Class="PatchOperationReplace">
+                  <xpath>Defs/ThingDef[defName="StandingLamp_Red" or defName="StandingLamp_Green" or defName="StandingLamp_Blue"]/designatorDropdown</xpath>
+                  <value>
+                     <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
+                  </value>
+               </li>
+            </operations>
+         </li>
+      </operations>
+   </Operation>
+
     <!--=====Vanilla designation category changes=====-->
 
     <!--Vanilla storage furniture to "Storage" designation category, with conditional if "LWM Deep Storage" is installed-->

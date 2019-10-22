@@ -1,0 +1,21 @@
+﻿<Patch>
+
+   <!--Move fishing tools to Husbandry-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>[RF] Fishing [1.0]</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="RBB_FishingSpot" or defName="ShellfishTrap"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>DZ_Husbandry</designationCategory>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+</Patch>

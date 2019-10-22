@@ -1,5 +1,4 @@
-﻿
-<Patch>
+﻿<Patch>
   <!--Remove "RIMKea" designation category, and move all items to their respective tabs-->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -8,9 +7,6 @@
     <match Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/designationCategoryDef[defName="RIMkea"]</xpath>
-        </li>
         <li Class="PatchOperationAdd">
           <xpath>Defs/ThingDef[defName="PILFURBed" or defName="SNOREGGSingle" or defName="SNOREGGDouble" or defName="PETSNORR" or defName="KRUDNEPPSingle" or defName="SLABNEPPDouble" or defName="SNORHOI"]</xpath>
           <value>
@@ -41,7 +37,51 @@
             <designationCategory>Temperature</designationCategory>
           </value>
         </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/designationCategoryDef[defName="RIMkea"]</xpath>
+        </li>
       </operations>
     </match>
   </Operation>
+
+  <!--Create dropdown menu for RIMkea lights-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RIMkea</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <DesignatorDropdownGroupDef>
+              <defName>DZ_Lighting_SHAINBRAIT</defName>
+            </DesignatorDropdownGroupDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[@Name="RIKMilleniumLampBase"]</xpath>
+          <value>
+            <designatorDropdown>DZ_Lighting_SHAINBRAIT</designatorDropdown>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <DesignatorDropdownGroupDef>
+              <defName>DZ_Lighting_KAGESHAIN</defName>
+            </DesignatorDropdownGroupDef>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[@Name="RIKFleaLampBase"]</xpath>
+          <value>
+            <designatorDropdown>DZ_Lighting_KAGESHAIN</designatorDropdown>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
 </Patch>
