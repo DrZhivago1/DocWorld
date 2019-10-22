@@ -1,0 +1,36 @@
+﻿<Patch>
+
+    <!--Move to Fences tab from "Extended Woodworking"-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Extended Woodworking</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Fence"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Fences</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="FenceGate"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="FenceGate"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Fences</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="FenceGate"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Fences</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    
+</Patch>

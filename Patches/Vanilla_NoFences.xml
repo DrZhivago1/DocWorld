@@ -3,6 +3,7 @@
    <!--Remove Fences Designation Category if no fence mods are installed-->
    <Operation Class="PatchOperationFindMod">
       <mods>
+         <li>Extended Woodworking</li>
          <li>Gloomy Vanilla</li>
          <li>Gloomy Vanilla Overhaul</li>
          <li>Vanilla Fences</li>
