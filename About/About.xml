@@ -1,5 +1,5 @@
 <ModMetaData>
-  
+
   <name>DocWorld</name>
   <author>Dr_Zhivago</author>
   <url>https://ludeon.com/forums/index.php?topic=47165.0</url>
@@ -7,20 +7,41 @@
     <li>1.0</li>
   </supportedVersions>
   <description>
-    A mod of combined patches for my RimWorld mod collection "The Doctor's World". There are a lot of patches done to the various mods outlined in the "Changelog" in the README.md.
+A mod of combined patches for Vanilla RimWorld, any of the supported mods, and my RimWorld mod collection. This mod patches many mods not currently included in my collection, &lt;b&gt;and can be used without any other mods.&lt;/b&gt;
+
+&lt;size=24&gt;Features&lt;/size&gt;
+    * New Architect tabs and organizes Architect menu
+    * New drop down menus
+    * Balances recipes for various items
+    * Underground power conduits
+    * Enhances miniaturisation abilities
+    * Increased "stuffable" items
+    * Lights are now more efficient with power usage
+    * Greatly improves inter-mod compatibility
+
+[Link to GitHub]
+  https://github.com/DrZhivago1/DocWorld/releases
+
+[Link to Ludeon]
+  https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416
+
+[The Doctor's World mod collection]
+  https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074
     
-    The basics are: mod moves items to new tabs and organizes layout, balances some recipes for various items, enhances minaturisation abilities, improves inter-mod compatability.
-    
-    Credits:
-    Lanilor- for helping me learn xpath patching on the Discord.
-    Mehni- for his time and patience on the Discord.
-    NotFood- for showing the way of the dragon.
-    Ashnal|jptrrs|ruyanve|Taranchuk|XeoNovaDan- for the encouragement and helpful additions.
-    RedistHeat- the mod, not a person, for cooler textures.
-    Sunlace- for hidden conduit idea.
-    Yehn- for helping with xml on the Discord.
-    Architect Textures- Smartline, eucalyp, and free pics @ https://www.flaticon.com/
-    Of course all the beautiful mod creators without whom these patches wouldn't do much.
+&lt;size=24&gt;Credits&lt;/size&gt;
+    &lt;b&gt;Ashnal&lt;/b&gt; for the encouragement and helpful additions.  
+    &lt;b&gt;jptrrs&lt;/b&gt; for the encouragement and helpful additions.  
+    &lt;b&gt;Lanilor&lt;/b&gt; for helping me learn xpath patching on the Discord.  
+    &lt;b&gt;Mehni&lt;/b&gt; for his time and patience on the Discord.  
+    &lt;b&gt;NotFood&lt;/b&gt; for showing the way of the dragon.  
+    &lt;b&gt;RedistHeat&lt;/b&gt; the mod, not a person, for cooler textures.  
+    &lt;b&gt;ruyanve&lt;/b&gt; for the encouragement and helpful additions.   
+    &lt;b&gt;Sunlace&lt;/b&gt; for hidden conduit idea.  
+    &lt;b&gt;Taranchuk&lt;/b&gt; for the encouragement and helpful additions.  
+    &lt;b&gt;XeoNovaDan&lt;/b&gt; for the encouragement and helpful additions.  
+    &lt;b&gt;Yehn&lt;/b&gt; for helping with xml on the Discord.  
+    &lt;b&gt;Architect Textures&lt;/b&gt; &lt;i&gt;Smartline&lt;/i&gt;, &lt;i&gt;eucalyp&lt;/i&gt;, and free pics @ https://www.flaticon.com/  
+    &lt;b&gt;All the beautiful mod creators without whom these patches wouldn't do much.&lt;/b&gt;
   </description>
-  
+
 </ModMetaData>
