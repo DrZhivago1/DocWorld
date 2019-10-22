@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-
+	<!--Change designation category to Security-->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Preemptive Strike</li>
@@ -20,5 +20,5 @@
 			</operations>
 		</match>
 	</Operation>
-	
+
 </Patch>

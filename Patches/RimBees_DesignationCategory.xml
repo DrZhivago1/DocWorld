@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-
+	<!--Change designation categories to culinary, husbandry, and lighting-->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>RimBees</li>
@@ -26,7 +26,7 @@
 						<designationCategory>DZ_Lighting</designationCategory>
 					</value>
 				</li>
-                 <li Class="PatchOperationRemove">
+				<li Class="PatchOperationRemove">
 					<xpath>Defs/DesignationCategoryDef[defName="RB_Bees"]</xpath>
 				</li>
 			</operations>

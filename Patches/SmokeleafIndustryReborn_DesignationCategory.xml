@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+	<!--Change categories to husbandry, power, production, and misc-->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Smokeleaf Industry Reborn</li>
@@ -37,4 +38,5 @@
 			</operations>
 		</match>
 	</Operation>
+
 </Patch>

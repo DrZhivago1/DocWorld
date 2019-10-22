@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--Move Fantastic Decor decor to Gloomy decoration category or furniture if Gloomy is not found-->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Fantastic Decor</li>
+		</mods>
+		<match Class="PatchOperationFindMod">
+			<mods>
+				<li>GloomyFurniture</li>
+			</mods>
+			<match Class="PatchOperationSequence">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="Bonzai" or defName="BonzaiTree" or defName="BonzaiFlower" or defName="Ferris" or defName="MiniBirch" or defName="MiniBroach" or defName="MiniMangrove" or defName="MiniMuhly" or defName="MiniPine" or defName="MiniPoplar" or defName="MiniSaguaro"]/designationCategory</xpath>
+						<value>
+							<designationCategory>OldStyleDeco</designationCategory>
+						</value>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/DesignationCategoryDef[defName="FantasticDecor"]</xpath>
+					</li>
+				</operations>
+			</match>
+			<nomatch Class="PatchOperationSequence">
+				<success>Always</success>
+				<operations>
+					<li Class="PatchOperationReplace">
+						<xpath>Defs/ThingDef[defName="Bonzai" or defName="BonzaiTree" or defName="BonzaiFlower" or defName="Ferris" or defName="MiniBirch" or defName="MiniBroach" or defName="MiniMangrove" or defName="MiniMuhly" or defName="MiniPine" or defName="MiniPoplar" or defName="MiniSaguaro"]/designationCategory</xpath>
+						<value>
+							<designationCategory>Furniture</designationCategory>
+						</value>
+					</li>
+					<li Class="PatchOperationRemove">
+						<xpath>Defs/DesignationCategoryDef[defName="FantasticDecor"]</xpath>
+					</li>
+				</operations>
+			</nomatch>
+		</match>
+	</Operation>
+
+</Patch>
