@@ -1,3 +1,4 @@
+![The Doctor](https://i.imgur.com/eJ2Cm9s.png)
 DocWorld
 ========
 A mod of combined patches for Vanilla RimWorld, any of the supported mods, and my RimWorld mod collection [The Doctor's World](https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074). This mod patches many mods not currently included in my collection, **and can be used without any other mods**.
@@ -13,7 +14,6 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 
 [Changelog](https://github.com/DrZhivago1/DocWorld/wiki/4.-Changelog) for all changes made by this mod.
 
-![The Doctor](https://i.imgur.com/eJ2Cm9s.png)
 ![Architect Menu](https://i.imgur.com/R8OMzhl.png)
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Organized Tabs](https://i.imgur.com/97oTK59.png)
+![Small Highlights](https://i.imgur.com/KLzds94.png)
