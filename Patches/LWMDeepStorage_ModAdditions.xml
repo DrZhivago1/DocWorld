@@ -18,6 +18,23 @@
             </operations>
         </match>
     </Operation>
+    <!--=====Ceramics=====-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>LWM's Deep Storage</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>[1.0] Ceramics</li>
+            </mods>
+            <match Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="LWM_DeepStorage_Skip"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                <value>
+                    <li>N7_Porcelain</li>
+                </value>
+            </match>
+        </match>
+    </Operation>
     <!--=====Simple Concrete=====-->
     <Operation Class="PatchOperationFindMod">
         <mods>
