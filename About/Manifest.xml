@@ -7,6 +7,8 @@
     <li>InvisibleConduits1.0</li>
     <li>SubsurfaceConduit</li>
     <li>UndergroundPowerConduits</li>
+    <li>DubsSkylightsGlass+LightsPatch</li>
+    <li>FertileFieldsDub'sHygieneCompat</li>
   </incompatibleWith>
   <loadAfter>
     <li>ExtendedStorageExtended</li>
