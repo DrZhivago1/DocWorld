@@ -9,6 +9,6 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 ### Important Info:
 [Mod Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/2.-Mod-Compatibility) for conflicts.
 
-[Save Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/3.-Save-Compatibility) for any ongoing games.
+[Save Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/3.-Save-Compatibility) for any ongoing/new games.
 
 [Changelog](https://github.com/DrZhivago1/DocWorld/wiki/4.-Changelog) for all changes made by this mod.
