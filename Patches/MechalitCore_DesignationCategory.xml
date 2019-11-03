@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+   <!--Move beds, lamp pots, and mechaponics to correct tabs-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Mechalit Core 1.0</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <!--Beds-->
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="EliteBed" or defName="EliteDoubleBed" or defName="FirstClassBed"]</xpath>
+               <value>
+                  <designationCategory>DZ_Beds</designationCategory>
+               </value>
+            </li>
+            <!--Husbandry-->
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="MechaponicBox"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>DZ_Husbandry</designationCategory>
+               </value>
+            </li>
+            <!--Lighting-->
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Lamp-pot" or @Name="Lamp-potBase"]</xpath>
+               <value>
+                  <designationCategory>DZ_Lighting</designationCategory>
+               </value>
+            </li>
+            <!--Lamp pots into a dropdown designator-->
+            <li Class="PatchOperationAdd">
+               <xpath>Defs</xpath>
+               <value>
+                  <DesignatorDropdownGroupDef>
+                     <defName>DZ_LampPots_Mechalit</defName>
+                  </DesignatorDropdownGroupDef>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="Lamp-pot" or @Name="Lamp-potBase"][not(designatorDropdown)]</xpath>
+               <value>
+                  <designatorDropdown>DZ_LampPots_Mechalit</designatorDropdown>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+</Patch>

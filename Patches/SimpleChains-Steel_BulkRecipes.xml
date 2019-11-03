@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <!--Create Bulk Recipes for steel from "Simple Chains: Steel"-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Simple Chains: Steel</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+
+                        <RecipeDef>
+                            <defName>Owl_RefineSteel1000</defName>
+                            <label>refine 1000 steel</label>
+                            <description>Make a batch of steel using raw iron ore.</description>
+                            <jobString>Refining steel from iron ore.</jobString>
+                            <effectWorking>Smelt</effectWorking>
+                            <soundWorking>Recipe_Smelt</soundWorking>
+                            <workAmount>60000</workAmount>
+                            <workSpeedStat>SmeltingSpeed</workSpeedStat>
+                            <workSkillLearnFactor>0.25</workSkillLearnFactor>
+                            <targetCountAdjustment>750</targetCountAdjustment>
+                            <allowMixingIngredients>false</allowMixingIngredients>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs />
+                                    </filter>
+                                    <count>250</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>Owl_Iron</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>750</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs>
+                                    <li>Owl_Iron</li>
+                                </thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <Steel>1000</Steel>
+                            </products>
+                            <recipeUsers>
+                                <li>ElectricSmelter</li>
+                            </recipeUsers>
+                        </RecipeDef>
+
+                        <RecipeDef>
+                            <defName>Owl_RefineSteel100</defName>
+                            <label>refine 100 steel</label>
+                            <description>Make a batch of steel using raw iron ore.</description>
+                            <jobString>Refining steel from iron ore.</jobString>
+                            <effectWorking>Smelt</effectWorking>
+                            <soundWorking>Recipe_Smelt</soundWorking>
+                            <workAmount>6000</workAmount>
+                            <workSpeedStat>SmeltingSpeed</workSpeedStat>
+                            <workSkillLearnFactor>0.25</workSkillLearnFactor>
+                            <targetCountAdjustment>75</targetCountAdjustment>
+                            <allowMixingIngredients>false</allowMixingIngredients>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs />
+                                    </filter>
+                                    <count>25</count>
+                                </li>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>Owl_Iron</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>75</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs>
+                                    <li>Owl_Iron</li>
+                                </thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <Steel>100</Steel>
+                            </products>
+                            <recipeUsers>
+                                <li>ElectricSmelter</li>
+                            </recipeUsers>
+                        </RecipeDef>
+
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

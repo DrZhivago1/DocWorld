@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+   <!--Create Bulk Recipes for steel from "Simple Chains: Steel"-->
+
+   <!-- Any mod using the def "coal" -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Steel</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationTest">
+               <xpath>Defs/ThingDef[defName="Coal"]</xpath>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+					//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+               </xpath>
+               <value>
+                  <li>Coal</li>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!-- Any mod using the def "charcoal" -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Steel</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationTest">
+               <xpath>Defs/ThingDef[defName="Charcoal"]</xpath>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+					//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+               </xpath>
+               <value>
+                  <li>Charcoal</li>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!-- Atlas Materials -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Steel</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+         <mods>
+            <li>[1.0] Atlas' Materials</li>
+         </mods>
+         <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+               <li Class="PatchOperationAdd">
+                  <xpath>Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+                  //thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+                  </xpath>
+                  <value>
+                     <li>AM_Coal</li>
+                  </value>
+               </li>
+            </operations>
+         </match>
+      </match>
+   </Operation>
+
+   <!-- Simple Coal -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Steel</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+         <mods>
+            <li>[WD] Simple Coal 1.0</li>
+         </mods>
+         <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+               <li Class="PatchOperationAdd">
+                  <xpath>Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+                  //thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+                  </xpath>
+                  <value>
+                     <li>WDCoal</li>
+                  </value>
+               </li>
+            </operations>
+         </match>
+      </match>
+   </Operation>
+
+   <!-- Xenite Industries -->
+   <Operation Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+         <li Class="PatchOperationTest">
+            <xpath>Defs/ThingDef[defName="XIcharcoal"]</xpath>
+         </li>
+         <li Class="PatchOperationAdd">
+            <xpath>Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+				//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+            </xpath>
+            <value>
+               <li>XIcharcoal</li>
+            </value>
+         </li>
+      </operations>
+   </Operation>
+
+   <!-- Medieval Times -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Steel</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+         <mods>
+            <li>Medieval Times</li>
+         </mods>
+         <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+               <li Class="PatchOperationAdd">
+                  <xpath>Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+                  //thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+                  </xpath>
+                  <value>
+                     <li>MedTimes_Resource_Coal</li>
+                  </value>
+               </li>
+            </operations>
+         </match>
+      </match>
+   </Operation>
+
+   <!-- Survivalist Additions -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Steel</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+         <mods>
+            <li>Survivalist's Additions</li>
+         </mods>
+         <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+               <li Class="PatchOperationAdd">
+                  <xpath>Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+                  //thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+                  </xpath>
+                  <value>
+                     <li>SRV_Charcoal</li>
+                  </value>
+               </li>
+            </operations>
+         </match>
+      </match>
+   </Operation>
+
+</Patch>

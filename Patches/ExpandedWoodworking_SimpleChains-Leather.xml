@@ -1,5 +1,4 @@
-﻿
-<Patch>
+﻿<Patch>
   <!--Allow Tanning Liquor to use Logs instead of Lumber-->
   <Operation Class="PatchOperationFindMod">
     <mods>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+   <!--Change designation category-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Factions Expanded - Medieval</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="VFEM_WineBarrel"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>DZ_Culinary</designationCategory>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+</Patch>

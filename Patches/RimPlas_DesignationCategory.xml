@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+   <!--Change designation category-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>RimPlas</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[@Name="RimPlasFurnitureBase"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>Furniture</designationCategory>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="RPGrapheneGrowBin"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>DZ_Husbandry</designationCategory>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="RPGrapheneRegenWall"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>Structure</designationCategory>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName="RimPlas_Barrier"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>Security</designationCategory>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="RimPlas_AnimalSleepingBox" or defName="BedRoll_TSB" or defName="BedrollDouble_TSB"]</xpath>
+               <value>
+                  <designationCategory>DZ_Beds</designationCategory>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="RimPlas_DrugCabinet" or defName="RimPlas_Shelf" or defName="RimPlas_Rack"]</xpath>
+               <value>
+                  <designationCategory>DZ_Storage</designationCategory>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="RimPlas_GameOfUr"]</xpath>
+               <value>
+                  <designationCategory>Joy</designationCategory>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName="RPSecurityDoor"]</xpath>
+               <value>
+                  <designationCategory>Structure</designationCategory>
+               </value>
+            </li>
+            <li Class="PatchOperationRemove">
+               <xpath>Defs/DesignationCategoryDef[defName="RimPlas_FurnDesig"]</xpath>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+</Patch>

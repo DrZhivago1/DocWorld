@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <!--"Seeds Please" healroot recipes onto production benches-->
+
+    <!--Vanilla-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>SeedsPlease</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/RecipeDef[defName="ProcessRawHealroot"]</xpath>
+                    <value>
+                        <recipeUsers>
+                            <li>PlantProcessingTable</li>
+                            <li>DrugLab</li>
+                        </recipeUsers>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                        <RecipeDef ParentName="ProcessRaw">
+                            <defName>ProcessRawHealrootBulk</defName>
+                            <label>make bulk herbal medicine</label>
+                            <description>Process Raw Healroot into Herbal Medicine in bulk.</description>
+                            <ingredients>
+                                <li>
+                                    <filter>
+                                        <thingDefs>
+                                            <li>RawHealroot</li>
+                                        </thingDefs>
+                                    </filter>
+                                    <count>25</count>
+                                </li>
+                            </ingredients>
+                            <fixedIngredientFilter>
+                                <thingDefs>
+                                    <li>RawHealroot</li>
+                                </thingDefs>
+                            </fixedIngredientFilter>
+                            <products>
+                                <MedicineHerbal>5</MedicineHerbal>
+                            </products>
+                            <skillRequirements>
+                                <Crafting>5</Crafting>
+                            </skillRequirements>
+                            <recipeUsers>
+                                <li>PlantProcessingTable</li>
+                                <li>DrugLab</li>
+                            </recipeUsers>
+                        </RecipeDef>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--VFE-Production-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>SeedsPlease</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Vanilla Furniture Expanded - Production</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/RecipeDef[defName="ProcessRawHealroot" or defName="ProcessRawHealrootBulk"]/recipeUsers</xpath>
+                        <value>
+                            <li>VFE_TableDrugLabElectric</li>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+</Patch>

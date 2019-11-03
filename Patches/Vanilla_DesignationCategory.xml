@@ -3,14 +3,29 @@
    <Operation Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
-         <!--Put power conduits into a dropdown designator-->
+         <!--IEDs into a dropdown designator-->
+         <li Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+               <DesignatorDropdownGroupDef>
+                  <defName>DZ_IEDs</defName>
+               </DesignatorDropdownGroupDef>
+            </value>
+         </li>
+         <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[@Name="TrapIEDBase"][not(designatorDropdown)]</xpath>
+            <value>
+               <designatorDropdown>DZ_IEDs</designatorDropdown>
+            </value>
+         </li>
+         <!--Power conduits into a dropdown designator-->
          <li Class="PatchOperationAdd">
             <xpath>Defs/ThingDef[defName="PowerConduit"][not(designatorDropdown)]</xpath>
             <value>
                <designatorDropdown>DZ_PowerConduits</designatorDropdown>
             </value>
          </li>
-         <!--Put standing lamps into a dropdown designator-->
+         <!--Standing lamps into a dropdown designator-->
          <li Class="PatchOperationAdd">
             <xpath>Defs</xpath>
             <value>
