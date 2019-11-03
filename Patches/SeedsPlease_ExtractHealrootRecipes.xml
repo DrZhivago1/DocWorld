@@ -45,6 +45,7 @@
                             <products>
                                 <MedicineHerbal>5</MedicineHerbal>
                             </products>
+                            <workAmount>3500</workAmount>
                             <skillRequirements>
                                 <Crafting>5</Crafting>
                             </skillRequirements>
@@ -56,29 +57,6 @@
                     </value>
                 </li>
             </operations>
-        </match>
-    </Operation>
-
-    <!--VFE-Production-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>SeedsPlease</li>
-        </mods>
-        <match Class="PatchOperationFindMod">
-            <mods>
-                <li>Vanilla Furniture Expanded - Production</li>
-            </mods>
-            <match Class="PatchOperationSequence">
-                <success>Always</success>
-                <operations>
-                    <li Class="PatchOperationAdd">
-                        <xpath>Defs/RecipeDef[defName="ProcessRawHealroot" or defName="ProcessRawHealrootBulk"]/recipeUsers</xpath>
-                        <value>
-                            <li>VFE_TableDrugLabElectric</li>
-                        </value>
-                    </li>
-                </operations>
-            </match>
         </match>
     </Operation>
 
