@@ -8,7 +8,7 @@
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
-                <!--Add dropdowns-->
+                <!--Add dropdowns
                 <li Class="PatchOperationAdd">
                     <xpath>Defs</xpath>
                     <value>
@@ -49,7 +49,7 @@
                     <value>
                         <designatorDropdown>DZ_Animals_LargeAnimalHospital</designatorDropdown>
                     </value>
-                </li>
+                </li>-->
                 <!--Change tab-->
                 <li Class="PatchOperationConditional">
                     <xpath>Defs/ThingDef[@Name="PetBedWithQualityBase" or defName="AnimalSleepingBox" or defName="CCPMAnimalSleepingBox" or defName="CCPLAnimalSleepingBox" or defName="AnimalBed" or defName="CCPMAnimalBed" or defName="CCPLAnimalBed" or defName="AnimalSleepingSpot" or defName="CCPMAnimalSleepingSpot" or defName="CCPLAnimalSleepingSpot"]/designationCategory</xpath>
