@@ -1,6 +1,6 @@
 <Manifest>
 
-  <version>2.2.1</version>
+  <version>2.2.2</version>
   <incompatibleWith>
     <li>ChickensEfficientLight</li>
     <li>UndergroundConduits</li>
