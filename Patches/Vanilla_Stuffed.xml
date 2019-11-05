@@ -4,21 +4,27 @@
    <Operation Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
-         <li Class="PatchOperationReplace">
+         <li Class="PatchOperationConditional">
             <xpath>Defs/ThingDef[defName = "Vent"]/costList</xpath>
-            <value>
-               <costStuffCount>30</costStuffCount>
-               <stuffCategories>
-                  <li>Metallic</li>
-                  <li>Woody</li>
-               </stuffCategories>
-            </value>
+            <match Class="PatchOperationReplace">
+               <xpath>Defs/ThingDef[defName = "Vent"]/costList</xpath>
+               <value>
+                  <costStuffCount>30</costStuffCount>
+                  <stuffCategories>
+                     <li>Metallic</li>
+                     <li>Woody</li>
+                  </stuffCategories>
+               </value>
+            </match>
          </li>
-         <li Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName = "TableButcher"]/stuffCategories</xpath>
-            <value>
-               <li>Stony</li>
-            </value>
+         <li Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName = "TableButcher"]/stuffCategories/Stony</xpath>
+            <nomatch Class="PatchOperationAdd">
+               <xpath>Defs/ThingDef[defName = "TableButcher"]/stuffCategories</xpath>
+               <value>
+                  <li>Stony</li>
+               </value>
+            </nomatch>
          </li>
       </operations>
    </Operation>
