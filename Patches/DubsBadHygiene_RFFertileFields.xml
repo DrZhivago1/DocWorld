@@ -1,5 +1,4 @@
-﻿
-<Patch>
+﻿<Patch>
     <!--Redundant removal/replacing of "Dub's Bad Hygiene" biosolids and fertilizer when "RF Fertile Fields" is installed -->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -12,19 +11,19 @@
             <match Class="PatchOperationSequence">
                 <success>Always</success>
                 <operations>
-                    <!--BuildingsF_Irrigation-->
+                    <!--Replace product gained from composter-->
                     <li Class="PatchOperationReplace">
                         <xpath>Defs/ThingDef[defName="BiosolidsComposter"]/comps/li[@Class="DubsBadHygiene.CompProperties_Composter"]/Product</xpath>
                         <value>
                             <Product>RawCompost</Product>
                         </value>
                     </li>
-                    <li Class="PatchOperationRemove">
-                        <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]</xpath>
-                    </li>
-                    <!--Items_Resource_Stuff-->
-                    <li Class="PatchOperationRemove">
-                        <xpath>Defs/ThingDef[defName="Biosolids"]</xpath>
+                    <!--Descriptions-->
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/ResearchProjectDef[defName="SewageSludgeComposting"]/description</xpath>
+                        <value>
+                            <description>When properly treated and processed, sewage sludge becomes compost which requires further treatment to be useful as fertilizer.</description>
+                        </value>
                     </li>
                     <li Class="PatchOperationReplace">
                         <xpath>Defs/ThingDef[defName="FecalSludge"]/description</xpath>
@@ -32,11 +31,24 @@
                             <description>A barrel filled with fecal sludge, can be dumped, burned, or composted.</description>
                         </value>
                     </li>
-                    <!--ResearchProjects_Hygiene-->
-                    <li Class="PatchOperationReplace">
-                        <xpath>Defs/ResearchProjectDef[defName="SewageSludgeComposting"]/description</xpath>
+                    <!--Removals-->
+                    <li Class="PatchOperationRemove">
+                        <xpath>Defs/ThingDef[defName="BiosolidFertilizer" or defName="Biosolids"]</xpath>
+                    </li>
+                    <!--These dummy defs need to be re-added because they are hardcoded in the .dll, so we don't log errors-->
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs</xpath>
                         <value>
-                            <description>When properly treated and processed, sewage sludge becomes compost which requires further treatment to be useful as fertilizer.</description>
+                            <ThingDef>
+                                <defName>Biosolids</defName>
+                                <label>biosolids</label>
+                                <thingClass>Thing</thingClass>
+                            </ThingDef>
+                            <ThingDef>
+                                <defName>BiosolidFertilizer</defName>
+                                <label>Biosolid Fertilizer</label>
+                                <thingClass>Thing</thingClass>
+                            </ThingDef>
                         </value>
                     </li>
                 </operations>

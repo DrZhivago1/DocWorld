@@ -8,37 +8,20 @@
     <match Class="PatchOperationSequence">
       <success>Always</success>
       <operations>
-        <!--BuildingsA_Pipes-->
+        <!--Designation Category changes-->
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="plumbingValve" or defName="AirConOutdoorUnit" or defName="LitterBox" or defName="KitchenSink" or defName="WashingMachine"]/designationCategory</xpath>
+        </li>
         <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[defName="airPipe"]/designationCategory</xpath>
+          <xpath>Defs/ThingDef[@Name="BaseAircon" or @Name="BasedHeating" or @Name="BaseRadiator" or defName="SolarHeater" or defName="airPipe"]/designationCategory</xpath>
           <value>
             <designationCategory>Temperature</designationCategory>
           </value>
         </li>
-        <!--BuildingsB_Hygiene & BuildingsC_Joy-->
         <li Class="PatchOperationAdd">
           <xpath>Defs/ThingDef[defName="ToiletStallDoor"]</xpath>
           <value>
             <designationCategory>Structure</designationCategory>
-          </value>
-        </li>
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="LitterBox" or defName="KitchenSink" or defName="WashingMachine"]/designationCategory</xpath>
-        </li>
-        <!--BuildingsE_Heating-->
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[@Name="BasedHeating" or @Name="BaseRadiator" or defName="SolarHeater"]</xpath>
-          <value>
-            <designationCategory>Temperature</designationCategory>
-          </value>
-        </li>
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="AirConOutdoorUnit"]/designationCategory</xpath>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[@Name="BaseAircon"]/designationCategory</xpath>
-          <value>
-            <designationCategory>Temperature</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">
@@ -46,31 +29,6 @@
           <value>
             <designationCategory>DZ_Lighting</designationCategory>
           </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="CeilingFan" or defName="CeilingFanS"]/researchPrerequisites</xpath>
-          <value>
-            <li>Electricity</li>
-          </value>
-        </li>
-        <!--Create dropdown menu for DBH ceiling fan lights-->
-        <li Class="PatchOperationAdd">
-          <xpath>Defs</xpath>
-          <value>
-            <DesignatorDropdownGroupDef>
-              <defName>DZ_Lighting_CeilingFan</defName>
-            </DesignatorDropdownGroupDef>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="CeilingFan" or defName="CeilingFanS"]</xpath>
-          <value>
-            <designatorDropdown>DZ_Lighting_CeilingFan</designatorDropdown>
-          </value>
-        </li>
-        <!--BuildingsF_Irrigation-->
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="plumbingValve"]/designationCategory</xpath>
         </li>
         <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="FireSprinkler"]/designationCategory</xpath>
@@ -93,13 +51,64 @@
             </value>
           </nomatch>
         </li>
-        <!--DesignationCategories-->
+        <!--Designation Categories Removal-->
         <li Class="PatchOperationRemove">
           <xpath>Defs/DesignationCategoryDef[defName="HygieneMisc"]</xpath>
+        </li>
+        <!--Research Prereqs-->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="CeilingFan" or defName="CeilingFanS"]/researchPrerequisites</xpath>
+          <value>
+            <li>Electricity</li>
+          </value>
+        </li>
+        <!--Create dropdown menus-->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <DesignatorDropdownGroupDef>
+              <defName>DZ_CeilingFan</defName>
+            </DesignatorDropdownGroupDef>
+            <DesignatorDropdownGroupDef>
+              <defName>DZ_Boilers</defName>
+            </DesignatorDropdownGroupDef>
+            <DesignatorDropdownGroupDef>
+              <defName>DZ_Pumps</defName>
+            </DesignatorDropdownGroupDef>
+            <DesignatorDropdownGroupDef>
+              <defName>DZ_Wells</defName>
+            </DesignatorDropdownGroupDef>
+          </value>
+        </li>
+        <!-- Apply dropdown menus -->
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="CeilingFan" or defName="CeilingFanS"][not(designatorDropdown)]</xpath>
+          <value>
+            <designatorDropdown>DZ_CeilingFan</designatorDropdown>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[comps/li/@Class="DubsBadHygiene.CompProperties_CompBoiler"][not(designatorDropdown)]</xpath>
+          <value>
+            <designatorDropdown>DZ_Boilers</designatorDropdown>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[comps/li/@Class="DubsBadHygiene.CompProperties_WaterPumpingStation"][not(designatorDropdown)]</xpath>
+          <value>
+            <designatorDropdown>DZ_Pumps</designatorDropdown>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[comps/li/@Class="DubsBadHygiene.CompProperties_WaterInlet"][not(designatorDropdown)]</xpath>
+          <value>
+            <designatorDropdown>DZ_Wells</designatorDropdown>
+          </value>
         </li>
       </operations>
     </match>
   </Operation>
+
 
   <!--Test to see if Biosolids exist, move category with patch-->
   <Operation Class="PatchOperationFindMod">
@@ -113,11 +122,15 @@
           <success>Always</success>
           <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]/designationCategory</xpath>
         </li>
-        <li Class="PatchOperationRemove">
+        <li Class="PatchOperationReplace">
           <xpath>Defs/ThingDef[defName="BiosolidFertilizer"]/designationCategory</xpath>
+          <value>
+            <designationCategory>DZ_Husbandry</designationCategory>
+          </value>
         </li>
       </operations>
     </match>
   </Operation>
+
 
 </Patch>
