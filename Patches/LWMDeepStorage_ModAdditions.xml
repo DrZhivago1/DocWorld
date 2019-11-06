@@ -9,10 +9,19 @@
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[defName="LWM_Food_Basket"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="LWM_Food_Basket"]/building/fixedStorageSettings</xpath>
                     <value>
-                        <li>Hay</li>
+                        <fixedStorageSettings>
+                            <filter>
+                                <categories>
+                                    <li>Foods</li>
+                                </categories>
+                                <thingDefs>
+                                    <li>MedicineHerbal</li>
+                                </thingDefs>
+                            </filter>
+                        </fixedStorageSettings>
                     </value>
                 </li>
             </operations>
