@@ -1,58 +1,58 @@
 <Patch>
     <!--=====Vanilla dropdown designators=====-->
-   <Operation Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
-         <!--IEDs into a dropdown designator-->
-         <li Class="PatchOperationAdd">
-            <xpath>Defs</xpath>
-            <value>
-               <DesignatorDropdownGroupDef>
-                  <defName>DZ_IEDs</defName>
-               </DesignatorDropdownGroupDef>
-            </value>
-         </li>
-         <li Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[@Name="TrapIEDBase"][not(designatorDropdown)]</xpath>
-            <value>
-               <designatorDropdown>DZ_IEDs</designatorDropdown>
-            </value>
-         </li>
-         <!--Power conduits into a dropdown designator-->
-         <li Class="PatchOperationAdd">
-            <xpath>Defs/ThingDef[defName="PowerConduit"][not(designatorDropdown)]</xpath>
-            <value>
-               <designatorDropdown>DZ_PowerConduits</designatorDropdown>
-            </value>
-         </li>
-         <!--Standing lamps into a dropdown designator-->
-         <li Class="PatchOperationAdd">
-            <xpath>Defs</xpath>
-            <value>
-               <DesignatorDropdownGroupDef>
-                  <defName>DZ_Lighting_StandingLamp</defName>
-               </DesignatorDropdownGroupDef>
-            </value>
-         </li>
-         <li Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-               <li Class="PatchOperationAdd">
-                  <xpath>Defs/ThingDef[defName="StandingLamp"]</xpath>
-                  <value>
-                     <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
-                  </value>
-               </li>
-               <li Class="PatchOperationReplace">
-                  <xpath>Defs/ThingDef[defName="StandingLamp_Red" or defName="StandingLamp_Green" or defName="StandingLamp_Blue"]/designatorDropdown</xpath>
-                  <value>
-                     <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
-                  </value>
-               </li>
-            </operations>
-         </li>
-      </operations>
-   </Operation>
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <!--IEDs into a dropdown designator-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_IEDs</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[@Name="TrapIEDBase"][not(designatorDropdown)]</xpath>
+                <value>
+                    <designatorDropdown>DZ_IEDs</designatorDropdown>
+                </value>
+            </li>
+            <!--Power conduits into a dropdown designator-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="PowerConduit"][not(designatorDropdown)]</xpath>
+                <value>
+                    <designatorDropdown>DZ_PowerConduits</designatorDropdown>
+                </value>
+            </li>
+            <!--Standing lamps into a dropdown designator-->
+            <li Class="PatchOperationAdd">
+                <xpath>Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Lighting_StandingLamp</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="StandingLamp"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="StandingLamp_Red" or defName="StandingLamp_Green" or defName="StandingLamp_Blue"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
+                        </value>
+                    </li>
+                </operations>
+            </li>
+        </operations>
+    </Operation>
 
     <!--=====Vanilla designation category changes=====-->
 
@@ -91,15 +91,39 @@
         </operations>
     </Operation>
 
-    <!--Vanilla beds to "Beds" designation category, with conditional if "Large Animal Beds" is installed-->
+    <!--Vanilla beds to "Beds" designation category, with conditional if animal mods are installed-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Large Animal Beds</li>
+            <li>[1.0] Animal Barn Stall</li>
+            <li>【1.0】Animal straw bed</li>
+            <li>[sd] chicken nest</li>
         </mods>
 
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="AnimalSleepingSpot"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Animals</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[defName="AnimalSleepingBox" or defName="AnimalBed"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="AnimalSleepingBox" or defName="AnimalBed"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="AnimalSleepingBox" or defName="AnimalBed"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
                 <li Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[defName="SleepingSpot" or defName="DoubleSleepingSpot"]/designationCategory</xpath>
                     <value>
@@ -107,7 +131,7 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[@Name="BedBase"]</xpath>
+                    <xpath>Defs/ThingDef[@Name="BedBase"][not(designationCategory)]</xpath>
                     <value>
                         <designationCategory>DZ_Beds</designationCategory>
                     </value>
@@ -132,7 +156,7 @@
                 </li>
             </operations>
         </nomatch>
-        
+
     </Operation>
 
     <!--Vanilla culinary items moved to "Culinary" designation category-->

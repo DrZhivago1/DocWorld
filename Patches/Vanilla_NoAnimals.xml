@@ -1,5 +1,4 @@
-﻿
-<Patch>
+﻿<Patch>
    <!--Remove Animals Designation Category if no animal content mods are installed-->
    <Operation Class="PatchOperationFindMod">
       <mods>
