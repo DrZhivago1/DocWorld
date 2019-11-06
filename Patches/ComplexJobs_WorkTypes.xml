@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <!--Replace brewing worktype from "Complex Jobs" IF "RC2" installed-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[FSF] Complex Jobs</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>[1.0] RimCuisine 2: Bottling and Booze Expansion</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/WorkGiverDef[defName="RC_DoBillsBrew" or defName="TakeBeerOutOfFermentingBarrel3" or defName="FillFermentingBarrel3"]/workType</xpath>
+                        <value>
+                            <workType>FSFBrewing</workType>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationRemove">
+                        <xpath>Defs/WorkTypeDef[defName="RC2_Brewing"]</xpath>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+</Patch>
