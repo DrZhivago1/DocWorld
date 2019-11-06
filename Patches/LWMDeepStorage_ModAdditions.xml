@@ -17,6 +17,9 @@
                                 <categories>
                                     <li>Foods</li>
                                 </categories>
+                                <disallowedCategories>
+                                    <li>FoodMeals</li>
+                                </disallowedCategories>
                                 <thingDefs>
                                     <li>MedicineHerbal</li>
                                 </thingDefs>
