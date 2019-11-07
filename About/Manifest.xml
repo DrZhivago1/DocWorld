@@ -2,6 +2,7 @@
 
   <version>2.2.2</version>
   <incompatibleWith>
+    <li>AmmunitionPatch:RimofMadness-Bones</li>
     <li>ChickensEfficientLight</li>
     <li>UndergroundConduits</li>
     <li>InvisibleConduits1.0</li>
