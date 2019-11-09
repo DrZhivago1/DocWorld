@@ -340,7 +340,7 @@
                 <success>Always</success>
                 <operations>
                     <li Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[@Name="MURWallLightBase" or @Name="MURWallLightVIIBase"]</xpath>
+                        <xpath>Defs/ThingDef[@Name="MURWallLightBase" or @Name="MURWallLightVIIBase"]/costList</xpath>
                         <value>
                             <costList>
                                 <Glass>1</Glass>
