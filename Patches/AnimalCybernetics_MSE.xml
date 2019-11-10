@@ -1,0 +1,114 @@
+<Patch>
+    <!-- IF Medical System Expansion AND Animal Cybernetics are installed: add more prosthetic recipes to animals -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medical System Expansion</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Animal Cybernetics</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <!-- Add MSE recipes to animals -->
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[@Name="AnimalThingBase"]/recipes</xpath>
+                        <value>
+                            <li>InstallWoodenArm</li>
+                            <li>InstallHookHand</li>
+
+                            <li>InstallSimpleProstheticFoot</li>
+                            <li>InstallSimpleProstheticArm</li>
+                            <li>InstallSimpleProstheticHand</li>
+                            <li>InstallSimpleProstheticJaw</li>
+
+                            <li>MSE_InstallBionicArmModule</li>
+                            <li>InstallBionicHand</li>
+                            <li>MSE_InstallBionicHandModule</li>
+                            <li>InstallBionicFoot</li>
+                            <li>MSE_InstallBionicFootModule</li>
+
+
+                            <li>InstallPowerArm</li>
+                            <li>MSE_InstallPowerArmModule</li>
+                            <li>MSE_InstallAdvancedPowerArmModule</li>
+                            <li>MSE_InstallPowerClawModule</li>
+                            <li>MSE_InstallAdvancedPowerClawModule</li>
+
+                            <li>InstallArchotechArm</li>
+                            <li>MSE_InstallArchotechArmModule</li>
+                            <li>InstallArchotechHand</li>
+                            <li>MSE_InstallArchotechHandModule</li>
+                            <li>InstallArchotechLeg</li>
+                            <li>InstallArchotechFoot</li>
+                            <li>MSE_InstallArchotechFootModule</li>
+                            <li>InstallArchotechEar</li>
+                            <li>InstallArchotechSpine</li>
+
+                            <li>InstallArchotechHeart</li>
+                            <li>InstallArchotechStomach</li>
+                            <li>InstallArchotechLung</li>
+                            <li>InstallArchotechKidney</li>
+                            <li>InstallArchotechLiver</li>
+
+                            <li>InstallAntitoxinKidney</li>
+                            <li>InstallAdvancedAntitoxinKidney</li>
+                            <li>InstallMedicalLiver</li>
+                            <li>InstallAdvancedMedicalLiver</li>
+                            <li>InstallEnergizedLiver</li>
+                            <li>InstallAdvancedEnergizedLiver</li>
+
+                            <li>InstallAdvancedPainstopper</li>
+                            <li>MSE_InstallEndoskeletonStimulator</li>
+                            <li>MSE_InstallAdvancedEndoskeletonStimulator</li>
+                            <li>MSE_InstallArmMuscleStimulator</li>
+                            <li>MSE_InstallAdvancedArmMuscleStimulator</li>
+                            <li>MSE_InstallLegMuscleStimulator</li>
+                            <li>MSE_InstallAdvancedLegMuscleStimulator</li>
+                            <li>MSE_InstallAppetiteSuppressant</li>
+                            <li>MSE_InstallAdvancedAppetiteSuppressant</li>
+
+                        </value>
+                    </li>
+                    <!-- Body -->
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/RecipeDef[defName="MSE_InstallEndoskeletonStimulator" or defName="MSE_InstallAdvancedEndoskeletonStimulator"]/appliedOnFixedBodyParts</xpath>
+                        <value>
+                            <li>Body</li>
+                        </value>
+                    </li>
+                    <!-- Legs -->
+                    <li Class="PatchOperationRemove">
+                        <xpath>Defs/RecipeDef[defName="InstallAdvancedPowerArm"]/appliedOnFixedBodyParts/li[.="Leg"]</xpath>
+                    </li>
+                    <!-- Paws -->
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/RecipeDef[defName="InstallSimpleProstheticFoot" or defName="InstallBionicFoot" or defName="MSE_InstallBionicFootModule" or defName="MSE_InstallPowerClawModule" or defName="MSE_InstallAdvancedPowerClawModule" or defName="InstallArchotechFoot" or defName="MSE_InstallArchotechFootModule"]/appliedOnFixedBodyParts</xpath>
+                        <value>
+                            <li>FrontClaw</li>
+                            <li>RearClaw</li>
+                            <li>Paw</li>
+                            <li>Hoof</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/RecipeDef[defName="InstallAdvancedPowerClaw"]/appliedOnFixedBodyParts</xpath>
+                        <value>
+                            <li>Hoof</li>
+                        </value>
+                    </li>
+                    <!-- Jaws -->
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/RecipeDef[defName="InstallSimpleProstheticJaw"]/appliedOnFixedBodyParts</xpath>
+                        <value>
+                            <li>AnimalJaw</li>
+                            <li>Beak</li>
+                            <li>SnakeMouth</li>
+                            <li>TurtleBeak</li>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+</Patch>
