@@ -16,6 +16,7 @@
                             <filter>
                                 <categories>
                                     <li>Foods</li>
+                                    <li>PlantMatter</li>
                                 </categories>
                                 <disallowedCategories>
                                     <li>FoodMeals</li>
