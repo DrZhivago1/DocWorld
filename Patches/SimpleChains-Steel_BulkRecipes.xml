@@ -20,7 +20,7 @@
                             <jobString>Refining steel from iron ore.</jobString>
                             <effectWorking>Smelt</effectWorking>
                             <soundWorking>Recipe_Smelt</soundWorking>
-                            <workAmount>60000</workAmount>
+                            <workAmount>10000</workAmount>
                             <workSpeedStat>SmeltingSpeed</workSpeedStat>
                             <workSkillLearnFactor>0.25</workSkillLearnFactor>
                             <targetCountAdjustment>750</targetCountAdjustment>
@@ -61,7 +61,7 @@
                             <jobString>Refining steel from iron ore.</jobString>
                             <effectWorking>Smelt</effectWorking>
                             <soundWorking>Recipe_Smelt</soundWorking>
-                            <workAmount>6000</workAmount>
+                            <workAmount>5000</workAmount>
                             <workSpeedStat>SmeltingSpeed</workSpeedStat>
                             <workSkillLearnFactor>0.25</workSkillLearnFactor>
                             <targetCountAdjustment>75</targetCountAdjustment>
