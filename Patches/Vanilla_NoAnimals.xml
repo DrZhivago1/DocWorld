@@ -6,6 +6,7 @@
          <li>[1.0] Animal Barn Stall</li>
          <li>【1.0】Animal straw bed</li>
          <li>[sd] chicken nest</li>
+         <li>RIMkea</li>
       </mods>
       <nomatch Class="PatchOperationRemove">
          <xpath>Defs/DesignationCategoryDef[defName="DZ_Animals"]</xpath>

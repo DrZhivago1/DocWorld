@@ -8,9 +8,15 @@
       <success>Always</success>
       <operations>
         <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="PILFURBed" or defName="SNOREGGSingle" or defName="SNOREGGDouble" or defName="PETSNORR" or defName="KRUDNEPPSingle" or defName="SLABNEPPDouble" or defName="SNORHOI"]</xpath>
+          <xpath>Defs/ThingDef[defName="PILFURBed" or defName="SNOREGGSingle" or defName="SNOREGGDouble" or defName="KRUDNEPPSingle" or defName="SLABNEPPDouble"]</xpath>
           <value>
             <designationCategory>DZ_Beds</designationCategory>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="PETSNORR" or defName="SNORHOI"]</xpath>
+          <value>
+            <designationCategory>DZ_Animals</designationCategory>
           </value>
         </li>
         <li Class="PatchOperationReplace">

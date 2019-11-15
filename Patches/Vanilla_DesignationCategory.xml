@@ -98,6 +98,7 @@
             <li>[1.0] Animal Barn Stall</li>
             <li>【1.0】Animal straw bed</li>
             <li>[sd] chicken nest</li>
+            <li>RIMkea</li>
         </mods>
 
         <match Class="PatchOperationSequence">
@@ -118,7 +119,7 @@
                         </value>
                     </match>
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="AnimalSleepingBox" or defName="AnimalBed"]/designationCategory</xpath>
+                        <xpath>Defs/ThingDef[defName="AnimalSleepingBox" or defName="AnimalBed"]</xpath>
                         <value>
                             <designationCategory>DZ_Animals</designationCategory>
                         </value>
