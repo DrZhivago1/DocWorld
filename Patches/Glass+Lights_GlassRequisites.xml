@@ -209,6 +209,51 @@
         </match>
     </Operation>
 
+    <!--Glass needed on "More Furniture [1.0]" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>More Furniture [1.0]</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[@Name="ANON2StandingLampBase"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>15</Steel>
+                                <Glass>1</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="Anon2EndTableLight"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>10</Steel>
+                                <Glass>1</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="Anon2RoyalEndTableLight"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>10</Steel>
+                                <Gold>15</Gold>
+                                <Glass>1</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
     <!--Glass needed on "RIMkea" lights-->
     <Operation Class="PatchOperationFindMod">
         <mods>
