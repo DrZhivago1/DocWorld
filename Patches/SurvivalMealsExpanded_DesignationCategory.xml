@@ -1,0 +1,18 @@
+<Patch>
+    <!-- IF Survival Meals Expanded is installed: Move to Culinary designation category -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Survival Meals Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="SPC_PackagingStation"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

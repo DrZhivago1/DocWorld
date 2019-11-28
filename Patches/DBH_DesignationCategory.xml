@@ -1,0 +1,61 @@
+<Patch>
+    <!-- IF Dubs Bad Hygiene is installed: alter designation categories and add dropdowns-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dubs Bad Hygiene</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!--Husbandry-->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="IrrigationSprinkler" or defName="BiosolidsComposter"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </li>
+                <!--Misc-->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FireSprinkler"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Misc</designationCategory>
+                    </value>
+                </li>
+                <!--Structure-->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="ToiletStallDoor"]</xpath>
+                    <value>
+                        <designationCategory>Structure</designationCategory>
+                    </value>
+                </li>
+                <!--Temperature-->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[@Name="BasedHeating" or defName="SolarHeater"]</xpath>
+                    <value>
+                        <designationCategory>Temperature</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[@Name="BaseAircon"  or defName="airPipe" or defName="AirConOutdoorUnit" or defName="CeilingFan" or defName="CeilingFanS"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Temperature</designationCategory>
+                    </value>
+                </li>
+                <!--Water heater dropdown menu-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_DBH_WaterHeaters</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="LogBoiler" or defName="GasBoiler" or defName="ElectricBoiler" or defName="SolarHeater"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_DBH_WaterHeaters</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
