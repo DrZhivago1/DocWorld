@@ -11,7 +11,7 @@
             <match Class="PatchOperationSequence">
                 <operations>
                     <li Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="Bed_StoneSlab" or defName="Bed_Simple" or defName="Bed_Ergonomic" or defName="Bed_DoubleErgonomic" or defName="Bed_Kingsize"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                        <xpath>Defs/ThingDef[defName="Bed_StoneSlab" or defName="Bed_Simple" or defName="Bed_Ergonomic" or defName="Bed_DoubleErgonomic" or defName="Bed_Kingsize"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
                         <value>
                             <li>sd_medicaddons_medieval_surg_washpan</li>
                             <li>sd_medicaddons_medieval_surg_instruments</li>
@@ -25,62 +25,65 @@
                     </li>
                 </operations>
             </match>
-        </Operation>
+        </match>
+    </Operation>
 
-        <!-- IF "[sd] medicaddons" AND "Vanilla Furniture Expanded - Medical Module" are installed: add compatibility to VFE beds -->
-        <Operation Class="PatchOperationFindMod">
+    <!-- IF "[sd] medicaddons" AND "Vanilla Furniture Expanded - Medical Module" are installed: add compatibility to VFE beds -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[sd] medicaddons</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
             <mods>
-                <li>[sd] medicaddons</li>
+                <li>Vanilla Furniture Expanded - Medical Module</li>
             </mods>
-            <match Class="PatchOperationFindMod">
-                <mods>
-                    <li>Vanilla Furniture Expanded - Medical Module</li>
-                </mods>
-                <match Class="PatchOperationSequence">
-                    <operations>
-                        <li Class="PatchOperationAdd">
-                            <xpath>Defs/ThingDef[defName="Bed_OperatingTable" or defName="Bed_CryptoBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-                            <value>
-                                <li>sd_medicaddons_medieval_surg_washpan</li>
-                                <li>sd_medicaddons_medieval_surg_instruments</li>
-                                <li>sd_medicaddons_medieval_surg_lamp</li>
-                                <li>sd_medicaddons_industrial_surg_instruments</li>
-                                <li>sd_medicaddons_industrial_surg_lamp</li>
-                                <li>sd_medicaddons_spacer_surg_vitalsmonitor</li>
-                                <li>sd_medicaddons_spacer_surg_instruments</li>
-                                <li>sd_medicaddons_spacer_surg_lamp</li>
-                            </value>
-                        </li>
-                    </operations>
-                </match>
-            </Operation>
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Bed_OperatingTable" or defName="Bed_CryptoBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                        <value>
+                            <li>sd_medicaddons_medieval_surg_washpan</li>
+                            <li>sd_medicaddons_medieval_surg_instruments</li>
+                            <li>sd_medicaddons_medieval_surg_lamp</li>
+                            <li>sd_medicaddons_industrial_surg_instruments</li>
+                            <li>sd_medicaddons_industrial_surg_lamp</li>
+                            <li>sd_medicaddons_spacer_surg_vitalsmonitor</li>
+                            <li>sd_medicaddons_spacer_surg_instruments</li>
+                            <li>sd_medicaddons_spacer_surg_lamp</li>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
 
-            <!-- IF "[sd] medicaddons" AND "Vanilla Furniture Expanded - Spacer Module" are installed: add compatibility to VFE beds -->
-            <Operation Class="PatchOperationFindMod">
-                <mods>
-                    <li>[sd] medicaddons</li>
-                </mods>
-                <match Class="PatchOperationFindMod">
-                    <mods>
-                        <li>Vanilla Furniture Expanded - Spacer Module</li>
-                    </mods>
-                    <match Class="PatchOperationSequence">
-                        <operations>
-                            <li Class="PatchOperationAdd">
-                                <xpath>Defs/ThingDef[defName="Bed_AdvBed" or defName="Bed_AdvDoubleBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-                                <value>
-                                    <li>sd_medicaddons_medieval_surg_washpan</li>
-                                    <li>sd_medicaddons_medieval_surg_instruments</li>
-                                    <li>sd_medicaddons_medieval_surg_lamp</li>
-                                    <li>sd_medicaddons_industrial_surg_instruments</li>
-                                    <li>sd_medicaddons_industrial_surg_lamp</li>
-                                    <li>sd_medicaddons_spacer_surg_vitalsmonitor</li>
-                                    <li>sd_medicaddons_spacer_surg_instruments</li>
-                                    <li>sd_medicaddons_spacer_surg_lamp</li>
-                                </value>
-                            </li>
-                        </operations>
-                    </match>
-                </Operation>
+    <!-- IF "[sd] medicaddons" AND "Vanilla Furniture Expanded - Spacer Module" are installed: add compatibility to VFE beds -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[sd] medicaddons</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Vanilla Furniture Expanded - Spacer Module</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Bed_AdvBed" or defName="Bed_AdvDoubleBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                        <value>
+                            <li>sd_medicaddons_medieval_surg_washpan</li>
+                            <li>sd_medicaddons_medieval_surg_instruments</li>
+                            <li>sd_medicaddons_medieval_surg_lamp</li>
+                            <li>sd_medicaddons_industrial_surg_instruments</li>
+                            <li>sd_medicaddons_industrial_surg_lamp</li>
+                            <li>sd_medicaddons_spacer_surg_vitalsmonitor</li>
+                            <li>sd_medicaddons_spacer_surg_instruments</li>
+                            <li>sd_medicaddons_spacer_surg_lamp</li>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
 
-            </Patch>
+</Patch>

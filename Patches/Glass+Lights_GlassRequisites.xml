@@ -226,7 +226,7 @@
                         <value>
                             <costList>
                                 <Steel>15</Steel>
-                                <Glass>1</Glass>
+                                <LargeCircularGlass>1</LargeCircularGlass>
                             </costList>
                         </value>
                     </li>
@@ -235,7 +235,7 @@
                         <value>
                             <costList>
                                 <Steel>10</Steel>
-                                <Glass>1</Glass>
+                                <LargeCircularGlass>1</LargeCircularGlass>
                             </costList>
                         </value>
                     </li>
@@ -245,7 +245,7 @@
                             <costList>
                                 <Steel>10</Steel>
                                 <Gold>15</Gold>
-                                <Glass>1</Glass>
+                                <LargeCircularGlass>1</LargeCircularGlass>
                             </costList>
                         </value>
                     </li>
