@@ -12,12 +12,13 @@
   </incompatibleWith>
   <loadAfter>
     <li>ExtendedStorageExtended</li>
-    <li>[RF]FertileFields[1.0]</li>
+    <li>Fermenter</li>
     <li>FishIndustry</li>
     <li>GloomyVanilla</li>
     <li>GloomyVanillaOverhaul</li>
     <li>Industrialisation</li>
     <li>LargeAnimalBeds</li>
+    <li>[RF]FertileFields[1.0]</li>
   </loadAfter>
   <showCrossPromotions>true</showCrossPromotions>
   <manifestUri>https://raw.githubusercontent.com/DrZhivago1/DocWorld/master/About/Manifest.xml</manifestUri>
