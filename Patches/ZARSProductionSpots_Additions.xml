@@ -1,5 +1,4 @@
-﻿
-<Patch>
+﻿<Patch>
   <!--IF "ZARS Production Spots" is installed, add various production spots into drop down designator from ZARS-->
 
   <!--=====RimCuisine 1=====-->
@@ -70,10 +69,10 @@
             <xpath>Defs/ThingDef[defName="RC2_BrewingSpot"]</xpath>
           </li>
           <li Class="PatchOperationRemove">
-            <xpath>Defs/RecipeDef[defName="Make_Wort" or defName="RC2_Make_FruitMust" or defName="RC2_Make_GrapeMust" or defName="RC2_Make_KumisMust"]/recipeUsers/li[.="RC2_BrewingSpot"]</xpath>
+            <xpath>/Defs/RecipeDef//recipeUsers//li[text()="RC2_BrewingSpot"]</xpath>
           </li>
           <li Class="PatchOperationRemove">
-            <xpath>Defs/WorkGiverDef[defName="RC_DoBillsBrew"]/fixedBillGiverDefs/li[.="RC2_BrewingSpot"]</xpath>
+            <xpath>/Defs/WorkGiverDef//fixedBillGiverDefs//li[text()="RC2_BrewingSpot"]</xpath>
           </li>
         </operations>
       </match>

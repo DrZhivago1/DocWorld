@@ -48,6 +48,11 @@
                                 <defName>BiosolidFertilizer</defName>
                                 <label>Biosolid Fertilizer</label>
                                 <thingClass>Thing</thingClass>
+                                <graphicData>
+                                    <texPath>DBH/Things/God</texPath>
+                                    <graphicClass>Graphic_Single</graphicClass>
+                                    <drawSize>(1,1)</drawSize>
+                                </graphicData>
                             </ThingDef>
                         </value>
                     </li>
@@ -55,4 +60,32 @@
             </match>
         </match>
     </Operation>
+
+    <!--=== IF *Dubs Bad Hygiene* AND *[RF] Fertile Fields [1.0]* AND *Fermenter* are installed: Fermenting shit produces FF fertilizer ===-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dubs Bad Hygiene</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>[RF] Fertile Fields [1.0]</li>
+            </mods>
+            <match Class="PatchOperationFindMod">
+                <mods>
+                    <li>Fermenter</li>
+                </mods>
+                <match Class="PatchOperationSequence">
+                    <operations>
+                        <li Class="PatchOperationReplace">
+                            <xpath>/Defs/Fermenter.FermentDef[defName="Ferment_DBH_Biosolids"]/Product</xpath>
+                            <value>
+                                <Product>RawCompost</Product>
+                            </value>
+                        </li>
+                    </operations>
+                </match>
+            </match>
+        </match>
+    </Operation>
+
 </Patch>
