@@ -1,0 +1,18 @@
+<Patch>
+    <!--=== IF *Fermenter* is installed: Change_by_doing_what_is_stated ===-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fermenter</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Fermenter"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
