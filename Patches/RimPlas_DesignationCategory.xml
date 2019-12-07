@@ -40,12 +40,6 @@
                </value>
             </li>
             <li Class="PatchOperationAdd">
-               <xpath>Defs/ThingDef[defName="RimPlas_DrugCabinet" or defName="RimPlas_Shelf" or defName="RimPlas_Rack"]</xpath>
-               <value>
-                  <designationCategory>DZ_Storage</designationCategory>
-               </value>
-            </li>
-            <li Class="PatchOperationAdd">
                <xpath>Defs/ThingDef[defName="RimPlas_GameOfUr"]</xpath>
                <value>
                   <designationCategory>Joy</designationCategory>
@@ -61,6 +55,28 @@
                <xpath>Defs/DesignationCategoryDef[defName="RimPlas_FurnDesig"]</xpath>
             </li>
          </operations>
+      </match>
+   </Operation>
+
+   <!-- If mod *RimPlas* AND *LWM's Deep Storage* are installed: Move items to custom designation category -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>RimPlas</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+         <mods>
+            <li>LWM's Deep Storage</li>
+         </mods>
+         <nomatch Class="PatchOperationSequence">
+            <operations>
+               <li Class="PatchOperationAdd">
+                  <xpath>Defs/ThingDef[defName="RimPlas_DrugCabinet" or defName="RimPlas_Shelf" or defName="RimPlas_Rack"]</xpath>
+                  <value>
+                     <designationCategory>DZ_Storage</designationCategory>
+                  </value>
+               </li>
+            </operations>
+         </nomatch>
       </match>
    </Operation>
 
