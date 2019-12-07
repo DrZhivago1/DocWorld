@@ -7,7 +7,7 @@
         <match Class="PatchOperationSequence">
             <operations>
                 <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="Fermenter"]/designationCategory</xpath>
+                    <xpath>Defs/ThingDef[defName="Fermenter" or defName="FermenterVat"]/designationCategory</xpath>
                     <value>
                         <designationCategory>DZ_Culinary</designationCategory>
                     </value>
