@@ -58,7 +58,7 @@
       </match>
    </Operation>
 
-   <!-- If mod *RimPlas* AND *LWM's Deep Storage* are installed: Move items to custom designation category -->
+   <!-- If mod *RimPlas* AND *LWM's Deep Storage* are installed: Do not move items to custom designation category -->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>RimPlas</li>
