@@ -115,7 +115,7 @@
                                 <defName>Hide_Tiger</defName>
                                 <label>tiger hide</label>
                                 <graphicData>
-                                    <color>(197,54,99)</color>                                    <!--(149,115,70) potential alternate color (would need to patch VAE)-->
+                                    <color>(197,154,99)</color>
                                 </graphicData>
                             </ThingDef>
                         </value>
@@ -135,7 +135,7 @@
                                 <defName>Prepared_Hide_Tiger</defName>
                                 <label>prepared tiger hide</label>
                                 <graphicData>
-                                    <color>(197,54,99)</color>
+                                    <color>(197,154,99)</color>
                                 </graphicData>
                             </ThingDef>
                         </value>
