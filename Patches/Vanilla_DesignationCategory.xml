@@ -3,7 +3,7 @@
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
-            <!--IEDs into a dropdown designator-->
+            <!-- == IEDs into a dropdown designator == -->
             <li Class="PatchOperationAdd">
                 <xpath>Defs</xpath>
                 <value>
@@ -18,14 +18,14 @@
                     <designatorDropdown>DZ_IEDs</designatorDropdown>
                 </value>
             </li>
-            <!--Power conduits into a dropdown designator-->
+            <!-- == Power conduits into a dropdown designator == -->
             <li Class="PatchOperationAdd">
                 <xpath>Defs/ThingDef[defName="PowerConduit"][not(designatorDropdown)]</xpath>
                 <value>
                     <designatorDropdown>DZ_PowerConduits</designatorDropdown>
                 </value>
             </li>
-            <!--Standing lamps into a dropdown designator-->
+            <!-- == Standing lamps into a dropdown designator == -->
             <li Class="PatchOperationAdd">
                 <xpath>Defs</xpath>
                 <value>
@@ -159,6 +159,25 @@
         </nomatch>
 
     </Operation>
+
+
+    <!-- If mod *Android Tiers++ Extension* is installed: Move bed to Android Tiers category -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Android Tiers++ Extension</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="AndroidOperationBed"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
 
     <!--Vanilla culinary items moved to "Culinary" designation category-->
     <Operation Class="PatchOperationSequence">

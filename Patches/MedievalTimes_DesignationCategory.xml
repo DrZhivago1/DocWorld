@@ -8,7 +8,7 @@
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
-            <!--Beds-->
+                <!--Beds-->
                 <li Class="PatchOperationConditional">
                     <xpath>Defs/ThingDef[defName="MedTimes_Cot" or defName="MedTimes_CotDouble"]/designationCategory</xpath>
                     <match Class="PatchOperationReplace">
@@ -137,19 +137,28 @@
                     </nomatch>
                 </li>
                 <!--Storage-->
-                <li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[defName="MedTimes_CombatStandPlaced" or defName="MedTimes_StoragePallet" or defName="MedTimes_StoragePotPlaced" or defName="MedTimes_Icebox" or defName="MedTimes_IceboxFancy" or defName="MedTimes_Icebox"]/designationCategory</xpath>
-                    <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="MedTimes_CombatStandPlaced" or defName="MedTimes_StoragePallet" or defName="MedTimes_StoragePotPlaced" or defName="MedTimes_Icebox" or defName="MedTimes_IceboxFancy" or defName="MedTimes_Icebox"]/designationCategory</xpath>
-                        <value>
-                            <designationCategory>DZ_Storage</designationCategory>
-                        </value>
-                    </match>
-                    <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[defName="MedTimes_CombatStandPlaced" or defName="MedTimes_StoragePallet" or defName="MedTimes_StoragePotPlaced" or defName="MedTimes_Icebox" or defName="MedTimes_IceboxFancy" or defName="MedTimes_Icebox"]</xpath>
-                        <value>
-                            <designationCategory>DZ_Storage</designationCategory>
-                        </value>
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>LWM Deep Storage</li>
+                    </mods>
+                    <nomatch Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationConditional">
+                                <xpath>Defs/ThingDef[defName="MedTimes_CombatStandPlaced" or defName="MedTimes_StoragePallet" or defName="MedTimes_StoragePotPlaced" or defName="MedTimes_Icebox" or defName="MedTimes_IceboxFancy" or defName="MedTimes_Icebox"]/designationCategory</xpath>
+                                <match Class="PatchOperationReplace">
+                                    <xpath>Defs/ThingDef[defName="MedTimes_CombatStandPlaced" or defName="MedTimes_StoragePallet" or defName="MedTimes_StoragePotPlaced" or defName="MedTimes_Icebox" or defName="MedTimes_IceboxFancy" or defName="MedTimes_Icebox"]/designationCategory</xpath>
+                                    <value>
+                                        <designationCategory>DZ_Storage</designationCategory>
+                                    </value>
+                                </match>
+                                <nomatch Class="PatchOperationAdd">
+                                    <xpath>Defs/ThingDef[defName="MedTimes_CombatStandPlaced" or defName="MedTimes_StoragePallet" or defName="MedTimes_StoragePotPlaced" or defName="MedTimes_Icebox" or defName="MedTimes_IceboxFancy" or defName="MedTimes_Icebox"]</xpath>
+                                    <value>
+                                        <designationCategory>DZ_Storage</designationCategory>
+                                    </value>
+                                </nomatch>
+                            </li>
+                        </operations>
                     </nomatch>
                 </li>
                 <li Class="PatchOperationRemove">
