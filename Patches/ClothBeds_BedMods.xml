@@ -93,6 +93,8 @@
       </mods>
       <match Class="PatchOperationFindMod">
          <mods>
+            <li>RealBeds</li>
+            <li>RealBeds-Easy</li>
             <li>Soft Beds</li>
             <li>[T] MoreBedsCloth</li>
             <li>[JPT] Soft Warm Beds</li>
@@ -147,6 +149,8 @@
       </mods>
       <match Class="PatchOperationFindMod">
          <mods>
+            <li>RealBeds</li>
+            <li>RealBeds-Easy</li>
             <li>Soft Beds</li>
             <li>[T] MoreBedsCloth</li>
             <li>[JPT] Soft Warm Beds</li>
@@ -218,6 +222,8 @@
       </mods>
       <match Class="PatchOperationFindMod">
          <mods>
+            <li>RealBeds</li>
+            <li>RealBeds-Easy</li>
             <li>Soft Beds</li>
             <li>[T] MoreBedsCloth</li>
             <li>[JPT] Soft Warm Beds</li>
@@ -272,6 +278,8 @@
       </mods>
       <match Class="PatchOperationFindMod">
          <mods>
+            <li>RealBeds</li>
+            <li>RealBeds-Easy</li>
             <li>Soft Beds</li>
             <li>[T] MoreBedsCloth</li>
             <li>[JPT] Soft Warm Beds</li>
@@ -361,6 +369,8 @@
       </mods>
       <match Class="PatchOperationFindMod">
          <mods>
+            <li>RealBeds</li>
+            <li>RealBeds-Easy</li>
             <li>Soft Beds</li>
             <li>[T] MoreBedsCloth</li>
             <li>[JPT] Soft Warm Beds</li>
