@@ -160,25 +160,6 @@
 
     </Operation>
 
-
-    <!-- If mod *Android Tiers++ Extension* is installed: Move bed to Android Tiers category -->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Android Tiers++ Expansion</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <operations>
-                <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="AndroidOperationBed"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>ATPP_DesignationAndroidTiers</designationCategory>
-                    </value>
-                </li>
-            </operations>
-        </match>
-    </Operation>
-
-
     <!--Vanilla culinary items moved to "Culinary" designation category-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
