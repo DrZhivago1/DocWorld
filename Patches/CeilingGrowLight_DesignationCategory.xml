@@ -11,7 +11,7 @@
                 <li Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[defName="Lighting_CeilingGrowLight"]/designationCategory</xpath>
                     <value>
-                        <designationCategory>DZ_Lighting</designationCategory>
+                        <designationCategory>DZ_Husbandry</designationCategory>
                     </value>
                 </li>
             </operations>
