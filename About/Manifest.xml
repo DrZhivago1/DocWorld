@@ -11,7 +11,7 @@
     <li>FertileFieldsDub'sHygieneCompat</li>
   </incompatibleWith>
   <loadAfter>
-    <li>AndroidTiers++Extension</li>
+    <li>AndroidTiers++Expansion</li>
     <li>ExtendedStorageExtended</li>
     <li>Fermenter</li>
     <li>FishIndustry</li>
