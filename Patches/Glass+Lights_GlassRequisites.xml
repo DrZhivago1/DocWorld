@@ -83,7 +83,7 @@
         </match>
     </Operation>
 
-    <!--Glass needed on "Ceiling Light" lights-->
+    <!--Glass needed on "Ceiling Grow Light" lights-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Glass+Lights</li>
