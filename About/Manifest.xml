@@ -19,6 +19,7 @@
     <li>GloomyVanillaOverhaul</li>
     <li>Industrialisation</li>
     <li>LargeAnimalBeds</li>
+		<li>VanillaFurnitureExpanded-Farming</li>
     <li>[RF]FertileFields[1.0]</li>
   </loadAfter>
   <showCrossPromotions>true</showCrossPromotions>
