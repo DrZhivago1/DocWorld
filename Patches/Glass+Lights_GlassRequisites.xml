@@ -83,6 +83,29 @@
         </match>
     </Operation>
 
+    <!--Glass needed on "Ceiling Light" lights-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Ceiling Grow Light</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Lighting_CeilingGrowLight"]/costList</xpath>
+                        <value>
+                            <LargeCircularGlass>1</LargeCircularGlass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
     <!--Glass needed on "Clutter" lights-->
     <Operation Class="PatchOperationFindMod">
         <mods>
