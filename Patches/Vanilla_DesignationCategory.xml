@@ -164,7 +164,7 @@
     <!-- If mod *Android Tiers++ Extension* is installed: Move bed to Android Tiers category -->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>Android Tiers++ Extension</li>
+            <li>Android Tiers++ Expansion</li>
         </mods>
         <match Class="PatchOperationSequence">
             <operations>
