@@ -4,6 +4,7 @@
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>[TWC]Cupro's Stones 1.0</li>
+      <li>Cupro's Stones Vanilla Friendly</li>
     </mods>
     <match Class="PatchOperationFindMod">
       <mods>
