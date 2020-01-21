@@ -247,4 +247,219 @@
     </match>
   </Operation>
 
+    <!--Add Cupro's Stones to bridge types-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Cupro's Stones Vanilla Friendly</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simply More Bridges</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+
+          <!--Add new bridges-->
+          <li Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+              <!--======================== Claystone Deep water and Heavy bridge ========================-->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeClaystone</defName>
+                <label>claystone deep water bridge</label>
+                <color>(228,188,147)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksClaystone>17</BlocksClaystone>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeClaystone</defName>
+                <label>claystone bridge</label>
+                <color>(228,188,147)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksClaystone>10</BlocksClaystone>
+                </costList>
+              </TerrainDef>
+              <!--======================== Andesite Deep water and Heavy bridge ========================-->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeAndesite</defName>
+                <label>andesite deep water bridge</label>
+                <color>(155,164,166)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksAndesite>17</BlocksAndesite>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeAndesite</defName>
+                <label>andesite bridge</label>
+                <color>(155,164,166)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksAndesite>10</BlocksAndesite>
+                </costList>
+              </TerrainDef>
+              <!--======================== Syenite Deep water and Heavy bridge ========================-->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeSyenite</defName>
+                <label>syenite deep water bridge</label>
+                <color>(186, 126, 121)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksSyenite>17</BlocksSyenite>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeSyenite</defName>
+                <label>syenite bridge</label>
+                <color>(186, 126, 121)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksSyenite>10</BlocksSyenite>
+                </costList>
+              </TerrainDef>
+              <!--======================== Gneiss Deep water and Heavy bridge ========================-->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeGneiss</defName>
+                <label>gneiss deep water bridge</label>
+                <color>(146, 138, 104)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksGneiss>17</BlocksGneiss>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeGneiss</defName>
+                <label>gneiss bridge</label>
+                <color>(146, 138, 104)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksGneiss>10</BlocksGneiss>
+                </costList>
+              </TerrainDef>
+              <!--======================== Quartzite Deep water and Heavy bridge ========================-->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeQuartzite</defName>
+                <label>quartzite deep water bridge</label>
+                <color>(155, 156, 160)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksQuartzite>17</BlocksQuartzite>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeQuartzite</defName>
+                <label>quartzite bridge</label>
+                <color>(155, 156, 160)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksQuartzite>10</BlocksQuartzite>
+                </costList>
+              </TerrainDef>
+              <!--======================== Schist Deep water and Heavy bridge ========================-->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeSchist</defName>
+                <label>schist deep water bridge</label>
+                <color>(105, 124, 102)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksSchist>17</BlocksSchist>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeSchist</defName>
+                <label>schist bridge</label>
+                <color>(105, 124, 102)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksSchist>10</BlocksSchist>
+                </costList>
+              </TerrainDef>
+              <!--======================== Gabbro Deep water and Heavy bridge ========================-->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeGabbro</defName>
+                <label>gabbro deep water bridge</label>
+                <color>(122, 122, 122)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksGabbro>17</BlocksGabbro>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeGabbro</defName>
+                <label>gabbro bridge</label>
+                <color>(122, 122, 122)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksGabbro>10</BlocksGabbro>
+                </costList>
+              </TerrainDef>
+              <!--======================== Diorite Deep water and Heavy bridge ========================-->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeDiorite</defName>
+                <label>diorite deep water bridge</label>
+                <color>(204, 204, 204)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksDiorite>17</BlocksDiorite>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeDiorite</defName>
+                <label>diorite bridge</label>
+                <color>(204, 204, 204)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksDiorite>10</BlocksDiorite>
+                </costList>
+              </TerrainDef>
+              <!--======================== Dunite Deep water and Heavy bridge ========================-->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeDunite</defName>
+                <label>dunite deep water bridge</label>
+                <color>(154, 162, 126)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksDunite>17</BlocksDunite>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeDunite</defName>
+                <label>dunite bridge</label>
+                <color>(154, 162, 126)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksDunite>10</BlocksDunite>
+                </costList>
+              </TerrainDef>
+              <!--======================== Pegmatite Deep water and Heavy bridge ========================-->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgePegmatite</defName>
+                <label>pegmatite deep water bridge</label>
+                <color>(201, 150, 115)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksPegmatite>17</BlocksPegmatite>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgePegmatite</defName>
+                <label>pegmatite bridge</label>
+                <color>(201, 150, 115)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksPegmatite>10</BlocksPegmatite>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
 </Patch>
