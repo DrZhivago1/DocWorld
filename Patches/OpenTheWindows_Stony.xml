@@ -1,0 +1,20 @@
+<Patch>
+
+    <!-- If mod *[JPT] Open The Windows* is installed: Allow regular windows to be made of stone -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[JPT] Open The Windows</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="OpenWindow" or defName="LargeOpenWindow"]/stuffCategories</xpath>
+                    <value>
+                        <li>Stony</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
