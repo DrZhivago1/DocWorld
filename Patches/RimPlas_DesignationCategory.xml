@@ -58,6 +58,28 @@
       </match>
    </Operation>
 
+   <!-- If mod *RimPlas* AND *Insulation* are installed: moved insulated items to Insulation designation category -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>RimPlas</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+         <mods>
+            <li>Insulation</li>
+         </mods>
+         <nomatch Class="PatchOperationSequence">
+            <operations>
+               <li Class="PatchOperationReplace">
+                  <xpath>Defs/ThingDef[defName="RTPDoorSimple" or defName="RTPAutodoor" or defName="RTPInsulatedWall" or @Name="RTPInsulatorBuildingBase"]/designationCategory</xpath>
+                  <value>
+                     <designationCategory>Insulation_Desig</designationCategory>
+                  </value>
+               </li>
+            </operations>
+         </nomatch>
+      </match>
+   </Operation>
+
    <!-- If mod *RimPlas* AND *LWM's Deep Storage* are installed: Do not move items to custom designation category -->
    <Operation Class="PatchOperationFindMod">
       <mods>
