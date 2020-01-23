@@ -16,8 +16,10 @@
     <li>FishIndustry</li>
     <li>GloomyVanilla</li>
     <li>GloomyVanillaOverhaul</li>
-    <li>Industrialisation</li>
+    <li>Industrialisation</li>    
+    <li>Insulation</li>
     <li>LargeAnimalBeds</li>
+    <li>RimPlas</li>
     <li>VanillaFurnitureExpanded-Farming</li>
     <li>[RF]FertileFields[1.0]</li>
   </loadAfter>
