@@ -67,7 +67,7 @@
          <mods>
             <li>Insulation</li>
          </mods>
-         <nomatch Class="PatchOperationSequence">
+         <match Class="PatchOperationSequence">
             <operations>
                <li Class="PatchOperationReplace">
                   <xpath>Defs/ThingDef[defName="RTPDoorSimple" or defName="RTPAutodoor" or defName="RTPInsulatedWall" or @Name="RTPInsulatorBuildingBase"]/designationCategory</xpath>
@@ -76,7 +76,7 @@
                   </value>
                </li>
             </operations>
-         </nomatch>
+         </match>
       </match>
    </Operation>
 
