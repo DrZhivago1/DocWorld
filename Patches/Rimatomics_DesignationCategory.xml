@@ -15,7 +15,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[@Name="BasedRimatomicsMom" or @Name="BaseSarc" or @Name="BasedPower"]/designationCategory</xpath>
+					<xpath>Defs/ThingDef//designationCategory[text()="Rimatomics"]</xpath>
 					<value>
 						<designationCategory>DZ_Industrial</designationCategory>
 					</value>
