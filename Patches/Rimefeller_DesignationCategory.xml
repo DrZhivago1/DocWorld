@@ -16,7 +16,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/ThingDef[@ParentName="BasedRimefellerMom" or @Name="BasedRimefellerMom" or @Name="ChemfuelHopperBase"]/designationCategory</xpath>
+					<xpath>Defs/ThingDef//designationCategory[text()="Rimefeller"]</xpath>
 					<value>
 						<designationCategory>DZ_Industrial</designationCategory>
 					</value>
@@ -28,7 +28,7 @@
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
-					<xpath>Defs/TerrainDef[@Name="RimefellerLinoBase"]/designationCategory</xpath>
+					<xpath>Defs/TerrainDef//designationCategory[text()="Rimefeller"]</xpath>
 					<value>
 						<designationCategory>Floors</designationCategory>
 					</value>
