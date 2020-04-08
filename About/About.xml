@@ -1,11 +1,13 @@
 <ModMetaData>
 
-  <name>DocWorld</name>
-  <author>Dr_Zhivago</author>
-  <url>https://ludeon.com/forums/index.php?topic=47165.0</url>
-  <supportedVersions>
-    <li>1.0</li>
-  </supportedVersions>
+	<name>DocPawnOverhaul</name>
+	<author>Dr_Zhivago</author>
+	<url>https://github.com/DrZhivago1/DocWorld</url>
+	<supportedVersions>
+		<li>1.0</li>
+		<li>1.1</li>
+	</supportedVersions>
+	<packageId>drzhivago.docworld</packageId>
   <description>
 A mod of combined patches for Vanilla RimWorld, any of the supported mods, and my RimWorld mod collection. This mod patches many mods not currently included in my collection, &lt;b&gt;and can be used without any other mods.&lt;/b&gt;
 
