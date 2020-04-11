@@ -1,0 +1,152 @@
+<Patch>
+
+    <!--==========
+    VANILLA
+    ==========-->
+
+    <!--Vanilla Storage Furniture, with conditional if "LWM Deep Storage" is installed-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>LWM's Deep Storage</li>
+        </mods>
+        <nomatch Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
+            <match Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="Shelf"]</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </nomatch>
+    </Operation>
+
+    <!--Vanilla Lights-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="TorchLamp" or @Name="LampBase"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Lighting</designationCategory>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <!--Vanilla Beds, with conditional if animal mods are installed-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Large Animal Beds</li>
+            <li>[1.0] Animal Barn Stall</li>
+            <li>【1.0】Animal straw bed</li>
+            <li>[sd] chicken nest</li>
+            <li>RIMkea</li>
+        </mods>
+
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="AnimalSleepingSpot"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Animals</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="AnimalSleepingBox" or defName="AnimalBed"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="AnimalSleepingBox" or defName="AnimalBed"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="AnimalSleepingBox" or defName="AnimalBed"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="SleepingSpot" or defName="DoubleSleepingSpot"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Beds</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="BedBase"][not(designationCategory)]</xpath>
+                    <value>
+                        <designationCategory>DZ_Beds</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+
+        <nomatch Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="SleepingSpot" or defName="DoubleSleepingSpot" or defName="AnimalSleepingSpot"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Beds</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="BedBase" or defName="AnimalSleepingBox" or defName="AnimalBed"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Beds</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </nomatch>
+
+    </Operation>
+
+    <!--Vanilla Culinary-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="Brewery" or defName="FermentingBarrel" or defName="FueledStove" or defName="ElectricStove" or defName="ButcherSpot" or defName="TableButcher" or defName="NutrientPasteDispenser" or defName="Hopper"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Culinary</designationCategory>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <!--Vanilla Husbandry-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="HydroponicsBasin"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Husbandry</designationCategory>
+                </value>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="SunLamp"]/designationCategory</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="SunLamp"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="SunLamp"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </nomatch>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>
