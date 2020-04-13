@@ -4,7 +4,7 @@
     VANILLA
     ==========-->
 
-    <!--Vanilla Storage Furniture. Not done, if mods found. #storage-->
+    <!--Vanilla Storage Furniture, with conditional if mods installed. #storage-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>LWM's Deep Storage</li>
@@ -39,7 +39,7 @@
         </operations>
     </Operation>
 
-    <!--Vanilla Beds, with conditional if animal mods are installed. #animalbeds-->
+    <!--Vanilla Beds, with conditional if mods installed. #animalbeds-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Large Animal Beds</li>
@@ -146,6 +146,37 @@
                 </nomatch>
             </li>
         </operations>
+    </Operation>
+
+    <!--==========
+    ANIMAL STRAW BED
+    ==========-->
+
+    <!--Move items to DocWorld Animal tab if "【1.1】Animalstrawbed" is loaded-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>【1.1】Animalstrawbed</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[@Name="StrawBedBase"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[@Name="StrawBedBase"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[@Name="StrawBedBase"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
     </Operation>
 
 </Patch>

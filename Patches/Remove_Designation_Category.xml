@@ -47,4 +47,14 @@
       </nomatch>
    </Operation>
 
+   <!--Storage Designation Category Removal, if mods found. #storage-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>LWM's Deep Storage</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="DZ_Storage"]</xpath>
+      </match>
+   </Operation>
+
 </Patch>

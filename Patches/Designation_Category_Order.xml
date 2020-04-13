@@ -1,6 +1,6 @@
 <Patch>
 
-    <!--==========
+  <!--==========
     VANILLA
     ==========-->
 
@@ -69,6 +69,22 @@
         </value>
       </li>
     </operations>
+  </Operation>
+
+  <!--==========
+    LWM's DEEP STORAGE
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>LWM's Deep Storage</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="LWM_DS_Storage"]/order</xpath>
+      <value>
+        <order>150</order>
+      </value>
+    </match>
   </Operation>
 
 </Patch>
