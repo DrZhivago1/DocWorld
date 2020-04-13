@@ -163,13 +163,13 @@
                 <li Class="PatchOperationConditional">
                     <xpath>Defs/ThingDef[@Name="StrawBedBase"]/designationCategory</xpath>
                     <match Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[@Name="StrawBedBase"]/designationCategory</xpath>
+                        <xpath>/Defs/ThingDef[@Name="StrawBedBase"]/designationCategory</xpath>
                         <value>
                             <designationCategory>DZ_Animals</designationCategory>
                         </value>
                     </match>
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>Defs/ThingDef[@Name="StrawBedBase"]</xpath>
+                        <xpath>/Defs/ThingDef[@Name="StrawBedBase"]</xpath>
                         <value>
                             <designationCategory>DZ_Animals</designationCategory>
                         </value>
