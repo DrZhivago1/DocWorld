@@ -4,7 +4,7 @@
     VANILLA
     ==========-->
 
-    <!--Vanilla Storage Furniture, with conditional if "LWM Deep Storage" is installed-->
+    <!--Vanilla Storage Furniture. Not done, if mods found. #storage-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>LWM's Deep Storage</li>
@@ -39,13 +39,12 @@
         </operations>
     </Operation>
 
-    <!--Vanilla Beds, with conditional if animal mods are installed-->
+    <!--Vanilla Beds, with conditional if animal mods are installed. #animalbeds-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Large Animal Beds</li>
-            <li>[1.0] Animal Barn Stall</li>
-            <li>【1.0】Animal straw bed</li>
-            <li>[sd] chicken nest</li>
+            <li>【1.1】Animalstrawbed</li>
+            <li>[sd] Chicken Nest (Continued)</li>
             <li>RIMkea</li>
         </mods>
 

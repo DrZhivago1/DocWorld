@@ -7,6 +7,7 @@
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
+            <!--Standing Lamps-->
             <li Class="PatchOperationReplace">
                 <xpath>/Defs/ThingDef[@Name="StandingLampBase"]/basePowerConsumption</xpath>
                 <value>
@@ -19,6 +20,7 @@
                     <glowRadius>13</glowRadius>
                 </value>
             </li>
+            <!--Sun Lamps-->
             <li Class="PatchOperationReplace">
                 <xpath>/Defs/ThingDef[defName="SunLamp"]/basePowerConsumption</xpath>
                 <value>

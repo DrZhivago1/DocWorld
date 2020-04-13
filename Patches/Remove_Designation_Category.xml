@@ -1,30 +1,29 @@
 <Patch>
 
-    <!--==========
+   <!--==========
     VANILLA
     ==========-->
 
-   <!--Remove Animals Designation Category if no animal content mods are installed-->
+   <!--Animals Designation Category Removal, if mods not found. #animalbeds-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Large Animal Beds</li>
-         <li>[1.0] Animal Barn Stall</li>
-         <li>【1.0】Animal straw bed</li>
-         <li>[sd] chicken nest</li>
+         <li>【1.1】Animalstrawbed</li>
+         <li>[sd] Chicken Nest (Continued)</li>
          <li>RIMkea</li>
       </mods>
       <nomatch Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="DZ_Animals"]</xpath>
       </nomatch>
    </Operation>
-   
-   <!--Remove Fences Designation Category if no fence mods are installed-->
+
+   <!--Fences Designation Category Removal, if mods not found. #fence-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Extended Woodworking</li>
          <li>Gloomy Vanilla</li>
          <li>Gloomy Vanilla Overhaul</li>
-         <li>Vanilla Fences</li>         
+         <li>Vanilla Fences</li>
          <li>Vanilla Fences (Fence Tab)</li>
          <li>Fences And Floors</li>
          <li>Fences And No Floors</li>
@@ -35,8 +34,8 @@
          <xpath>/Defs/DesignationCategoryDef[defName="DZ_Fences"]</xpath>
       </nomatch>
    </Operation>
-   
-   <!--Remove Industrial designation category if no industrial content mods are installed-->
+
+   <!--Industrial Designation Category Removal, if mods not found. #industrial-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Industrial Rollers</li>
