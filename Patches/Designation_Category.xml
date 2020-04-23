@@ -1,4 +1,5 @@
 <Patch>
+    <!--This file will contain all patches that replace/change Designation Categories in Vanilla and Mods-->
 
     <!--==========
     VANILLA
@@ -152,7 +153,7 @@
     ANIMAL STRAW BED
     ==========-->
 
-    <!--Move items to DocWorld Animal tab if "【1.1】Animalstrawbed" is loaded-->
+    <!--Move items to Animal tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>【1.1】Animalstrawbed</li>
@@ -174,6 +175,385 @@
                             <designationCategory>DZ_Animals</designationCategory>
                         </value>
                     </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Ceiling Lights
+    ==========-->
+
+    <!--Move items to Husbandry and Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Ceiling Lights</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Lighting_CeilingGrowLight"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Lighting_CeilingLight"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Centralized Climate Control
+    ==========-->
+
+    <!--Move items to Temperature tab and remove CCC category-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Centralized Climate Control (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="CentralizedClimateControl_BaseVent" or defName="IntakeFan" or defName="redAirPipe" or defName="redAirPipeHidden" or defName="blueAirPipe" or defName="blueAirPipeHidden" or defName="cyanAirPipe" or defName="cyanAirPipeHidden" or defName="AirThermal" or defName="LargeIntakeFan" or defName="LargeAirThermal"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Temperature</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/DesignationCategoryDef[defName="CentralClimateControl"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Chicken Nest
+    ==========-->
+
+    <!--Move items to Animal tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[sd] Chicken Nest (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="sd_chickennest"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="sd_chickennest"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="sd_chickennest"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Coal Expanded
+    ==========-->
+
+    <!--Move items to Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Coal Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="NECCoalLamp"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    CTS - Complete Tech Solutions
+    ==========-->
+
+    <!--Move items to Beds tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>CTS - Complete Tech Solutions</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="CTSHiTechHospitalBed"]</xpath>
+            <value>
+                <designationCategory>DZ_Beds</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    DeCore
+    ==========-->
+
+    <!--Move items to Husbandry tab and remove excess hidden power conduit-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>DeCore 1.1</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="HydroponicsBasinx"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="PowerConduitx"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Dubs Skylights
+    ==========-->
+
+    <!--Move items to Lighting tab and remove Dubs "Skylights" designation category-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dubs Skylights</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="BasedSkyLight"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/DesignationCategoryDef[defName="DZ_Lighting"]/specialDesignatorClasses</xpath>
+                    <value>
+                        <li>Dubs_Skylight.Designator_RemoveSkylights</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/DesignationCategoryDef[defName="skylights"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Extended Storage
+    ==========-->
+
+    <!--Move items to Storage tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Extended Storage</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="Storage_Basket" or defName="Storage_HazMatContainer" or defName="Storage_Locker" or defName="Storage_MedicineCabinet" or defName="Storage_TrayRack" or defName="Storage_FabricHamper" or defName="Storage_Skip" or defName="Storage_WoodenPallet"]/designationCategory</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Storage_Basket" or defName="Storage_HazMatContainer" or defName="Storage_Locker" or defName="Storage_MedicineCabinet" or defName="Storage_TrayRack" or defName="Storage_FabricHamper" or defName="Storage_Skip" or defName="Storage_WoodenPallet"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Storage_Basket" or defName="Storage_HazMatContainer" or defName="Storage_Locker" or defName="Storage_MedicineCabinet" or defName="Storage_TrayRack" or defName="Storage_FabricHamper" or defName="Storage_Skip" or defName="Storage_WoodenPallet"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Extended Storage Extended
+    ==========-->
+
+    <!--Move items to Storage tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Extended Storage Extended</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="ExtendedStorageExtended_FurnitureBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Storage</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/DesignationCategoryDef[defName="ExtendedStorageExtended_FurnitureStorage"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Extended Woodworking
+    ==========-->
+
+    <!--Move items to Fences tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Extended Woodworking</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Fence"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Fences</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="FenceGate"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="FenceGate"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Fences</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="FenceGate"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Fences</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Fences And Floors
+    Fences And No Floors
+    ==========-->
+
+    <!--Move items to Fences tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fences And Floors (Continued)</li>
+            <li>Fences And No Floors</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/DesignationCategoryDef[defName="Fences"]</xpath>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="FencesAFGateBase" or defName="WoodFence" or defName="WoodFenceGate" or defName="WoodFenceGateB" or defName="ChainFence" or defName="ChainFenceGate" or defName="ChainFenceGateB" or defName="TechFence" or defName="TechFenceGate" or defName="TechFenceGateB" or defName="SecurityBarrier"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Fences</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Fast Regen
+    ==========-->
+
+    <!--Move items to Animals tab, all others are moved via Vanilla beds patch-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fast regen 1.1</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="AnimalMedic" or defName="AnimalMedicRobo"]</xpath>
+            <value>
+                <designationCategory>DZ_Animals</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Fermenter
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fermenter</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Fermenter" or defName="FermenterVat"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Fishing Nets
+    ==========-->
+
+    <!--Move items to Husbandry tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fishing Nets</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[@Name="GTF_FishingNetBase"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Husbandry</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Floor Lights
+    ==========-->
+
+    <!--Move items to Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Floor Lights</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="FloorLightSquare" or @Name="FloorLightStripe" or @Name="FloorLightSmallStripe" or @Name="FloorLightPlus" or @Name="FloorLightCorner" or @Name="FloorLightInverseCorner" or @Name="FloorLightCornerSmall" or @Name="FloorLightInverseCornerSmall" or @Name="FloorTileLightSquare" or @Name="FloorLightTriangle" or @Name="FloorLightSmallStripeMiddle" or @Name="FloorLightSmallStripeDiagonal"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/DesignationCategoryDef[defName="Lamps"]</xpath>
                 </li>
             </operations>
         </match>

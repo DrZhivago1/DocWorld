@@ -1,4 +1,5 @@
 <Patch>
+    <!--This file will contain all patches that replace/change dropdown menus for Vanilla and Mods-->
 
     <!--==========
     VANILLA
@@ -7,21 +8,6 @@
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
-            <!--IEDs-->
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs</xpath>
-                <value>
-                    <DesignatorDropdownGroupDef>
-                        <defName>DZ_IEDs</defName>
-                    </DesignatorDropdownGroupDef>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[@Name="TrapIEDBase"][not(designatorDropdown)]</xpath>
-                <value>
-                    <designatorDropdown>DZ_IEDs</designatorDropdown>
-                </value>
-            </li>
             <!--Power Conduits-->
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName="PowerConduit"][not(designatorDropdown)]</xpath>
@@ -55,7 +41,259 @@
                     </li>
                 </operations>
             </li>
+            <!--IEDs-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_IEDs</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[@Name="TrapIEDBase"][not(designatorDropdown)]</xpath>
+                <value>
+                    <designatorDropdown>DZ_IEDs</designatorDropdown>
+                </value>
+            </li>
         </operations>
+    </Operation>
+
+    <!--==========
+    Fishing Nets
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fishing Nets</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Husbandry_FishingNets</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="GTF_FishingNetBase"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Husbandry_FishingNets</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Floored
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Floored [1.0+]</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FlooredSecurity</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/TerrainDef[defName="StripedTile" or defName="YellowTile"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FlooredSecurity</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Floor Lights
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Floor Lights</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Square-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FloorLightSquare</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="FloorLightSquare"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FloorLightSquare</designatorDropdown>
+                    </value>
+                </li>
+                <!--Stripe-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FloorLightStripe</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="FloorLightStripe"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FloorLightStripe</designatorDropdown>
+                    </value>
+                </li>
+                <!--Small Stripe-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FloorLightSmallStripe</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="FloorLightSmallStripe"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FloorLightSmallStripe</designatorDropdown>
+                    </value>
+                </li>
+                <!--Plus-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FloorLightPlus</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="FloorLightPlus"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FloorLightPlus</designatorDropdown>
+                    </value>
+                </li>
+                <!--Corner-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FloorLightCorner</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="FloorLightCorner"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FloorLightCorner</designatorDropdown>
+                    </value>
+                </li>
+                <!--Inverse Corner-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FloorLightInverseCorner</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="FloorLightInverseCorner"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FloorLightInverseCorner</designatorDropdown>
+                    </value>
+                </li>
+                <!--Inverse Corner Small-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FloorLightInverseCornerSmall</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="FloorLightInverseCornerSmall"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FloorLightInverseCornerSmall</designatorDropdown>
+                    </value>
+                </li>
+                <!--Corner Small-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FloorLightCornerSmall</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="FloorLightCornerSmall"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FloorLightCornerSmall</designatorDropdown>
+                    </value>
+                </li>
+                <!--Triangle-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FloorLightTriangle</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="FloorLightTriangle"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FloorLightTriangle</designatorDropdown>
+                    </value>
+                </li>
+                <!--Small Stripe-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FloorLightSmallStripeMiddle</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="FloorLightSmallStripeMiddle"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FloorLightSmallStripeMiddle</designatorDropdown>
+                    </value>
+                </li>
+                <!--Small Stripe Diagonal-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FloorLightSmallStripeDiagonal</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="FloorLightSmallStripeDiagonal"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FloorLightSmallStripeDiagonal</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
     </Operation>
 
 </Patch>

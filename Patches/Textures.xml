@@ -1,0 +1,21 @@
+﻿<Patch>
+  <!--This file will contain all patches that replace/change textures for Vanilla and Mods-->
+
+  <!--==========
+    Better Coolers
+    ==========-->
+
+  <!--Change texture from "BetterCoolers" to the newer one from RedistHeat-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>BetterCoolers</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Cooler"]/graphicData/texPath</xpath>
+      <value>
+        <texPath>Better_Coolers/CoolerZ</texPath>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

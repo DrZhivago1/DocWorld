@@ -1,10 +1,11 @@
 <Patch>
+    <!--This file will contain all patches that replace/change the ability to miniaturize objects for Vanilla and Mods-->
 
     <!--==========
     VANILLA
     ==========-->
 
-    <!--=====Torch_Lamp=====-->
+    <!--Torch_Lamp-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -25,7 +26,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====CommsConsole=====-->
+    <!--CommsConsole-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -46,7 +47,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====GroundPenetratingScanner=====-->
+    <!--GroundPenetratingScanner-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -67,7 +68,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====LongRangeMineralScanner=====-->
+    <!--LongRangeMineralScanner-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -88,7 +89,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====MoisturePump=====-->
+    <!--MoisturePump-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -109,7 +110,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====MultiAnalyzer=====-->
+    <!--MultiAnalyzer-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -130,7 +131,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====OrbitalTradeBeacon=====-->
+    <!--OrbitalTradeBeacon-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -151,7 +152,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====PodLauncher=====-->
+    <!--PodLauncher-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -172,7 +173,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====Sarcophagus=====-->
+    <!--Sarcophagus-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -193,7 +194,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====ChemfuelPoweredGenerator=====-->
+    <!--ChemfuelPoweredGenerator-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -214,7 +215,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====PowerSwitch=====-->
+    <!--PowerSwitch-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -235,7 +236,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====SolarGenerator=====-->
+    <!--SolarGenerator-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -256,7 +257,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====WindTurbine=====-->
+    <!--WindTurbine-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -277,7 +278,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====WoodFiredGenerator=====-->
+    <!--WoodFiredGenerator-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -298,7 +299,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====BiofuelRefinery, FabricationBench, HiTechResearchBench=====-->
+    <!--BiofuelRefinery, FabricationBench, HiTechResearchBench-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -322,7 +323,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====ElectricCrematorium=====-->
+    <!--ElectricCrematorium-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -343,7 +344,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====Hopper=====-->
+    <!--Hopper-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -364,7 +365,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====HydroponicsBasin=====-->
+    <!--HydroponicsBasin-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -385,7 +386,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====Cooler=====-->
+    <!--Cooler-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -406,7 +407,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====PassiveCooler=====-->
+    <!--PassiveCooler-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -427,7 +428,7 @@
             </li>
         </operations>
     </Operation>
-    <!--=====Vent=====-->
+    <!--Vent-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -448,5 +449,5 @@
             </li>
         </operations>
     </Operation>
-
+    
 </Patch>

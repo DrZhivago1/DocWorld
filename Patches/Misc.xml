@@ -1,0 +1,252 @@
+﻿<Patch>
+
+   <!--==========
+    Expanded Roofing
+    ==========-->
+
+   <!--Get rid of the annoying square shadows with glass roof-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Expanded Roofing</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="RoofTransparentFraming"]</xpath>
+               <value>
+                  <castEdgeShadows>false</castEdgeShadows>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Extended Storage
+    ==========-->
+
+   <!--Put Extended Storage behind Complex Furniture Tech (excluding food basket and wooden pallet) -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Extended Storage</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+         <xpath>/Defs/ThingDef[defName="Storage_HazMatContainer" or defName="Storage_FabricHamper" or defName="Storage_Locker" or defName="Storage_MedicineCabinet" or defName="Storage_Skip" or defName="Storage_TrayRack"]</xpath>
+         <value>
+            <researchPrerequisites>
+               <li>ComplexFurniture</li>
+            </researchPrerequisites>
+         </value>
+      </match>
+   </Operation>
+
+   <!--==========
+    FishIndustry
+    ==========-->
+
+   <!--QOL edits if using "FishIndustry" (new art assets applied:FishingPier x6, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus)-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>FishIndustry</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="AquacultureBasin" or defName="FishingPier"]/designationCategory</xpath>
+               <value>
+                  <designationCategory>DZ_Husbandry</designationCategory>
+               </value>
+            </li>
+            <!--Allow rotation of aquaculture basin if using "FishIndustry", microfungus texture edited due to this-->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="AquacultureBasin"]/rotatable</xpath>
+               <value>
+                  <rotatable>true</rotatable>
+               </value>
+            </li>
+            <!--Apply new pier textures-->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="FishingPier"]/graphicData</xpath>
+               <value>
+                  <graphicData>
+                     <texPath>FishingIndustry/FishingPier</texPath>
+                     <graphicClass>Graphic_Multi</graphicClass>
+                     <shaderType>CutoutComplex</shaderType>
+                     <drawSize>(1.5,3.5)</drawSize>
+                     <damageData>
+                        <cornerTL>Damage/Corner</cornerTL>
+                        <cornerTR>Damage/Corner</cornerTR>
+                        <cornerBL>Damage/Corner</cornerBL>
+                        <cornerBR>Damage/Corner</cornerBR>
+                     </damageData>
+                  </graphicData>
+               </value>
+            </li>
+            <!--Stuff the pier-->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="FishingPier"]/costList</xpath>
+               <value>
+                  <costStuffCount>200</costStuffCount>
+                  <stuffCategories>
+                     <li>Stony</li>
+                     <li>Metallic</li>
+                     <li>Woody</li>
+                  </stuffCategories>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Fishing Nets
+    ==========-->
+
+   <!--Increase fish spawn randomness, ensure minimum meat count per trap, and increase/further randomize the possible lifespan of all traps -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Fishing Nets</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <operations>
+            <!--Basic Nets-->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetBasic"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/resultCount</xpath>
+               <value>
+                  <resultCount>7</resultCount>                  <!--Fish caught when successful, minimum 7 meat per basic net-->
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetBasic"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/durationIntervalRange</xpath>
+               <value>
+                  <durationIntervalRange>
+                     <min>180000</min>                     <!--3 days-->
+                     <max>360000</max>                     <!--6 days-->
+                  </durationIntervalRange>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetBasic"]/comps/li[@Class="GTU_Processor.CompProperties_GTLifespan"]/lifetimeRange</xpath>
+               <value>
+                  <lifetimeRange>
+                     <min>420000</min>                     <!--7 days-->
+                     <max>900000</max>                     <!--15 days-->
+                  </lifetimeRange>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetBasic"]/comps</xpath>
+               <value>
+                  <li Class="GT_ExplicitTerrainAffordance.CompProperties_GTExplicitTerrainAffordance">
+                     <requiredTerrains>
+                        <li>Marsh</li>
+                        <li>WaterShallow</li>
+                     </requiredTerrains>
+                  </li>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetBasic"]</xpath>
+               <value>
+                  <placeWorkers>
+                     <li>GT_ExplicitTerrainAffordance.PlaceWorker_ExplicitAffordance</li>
+                  </placeWorkers>
+               </value>
+            </li>
+            <li Class="PatchOperationRemove">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetBasic"]/terrainAffordanceNeeded</xpath>
+            </li>
+            <!--Complex Nets-->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetComplex"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/resultCount</xpath>
+               <value>
+                  <resultCount>15</resultCount>                  <!--Fish caught when successful, minimum 45 meat per complex net-->
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetComplex"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/durationIntervalRange</xpath>
+               <value>
+                  <durationIntervalRange>
+                     <min>120000</min>                     <!--2 days-->
+                     <max>300000</max>                     <!--5 days-->
+                  </durationIntervalRange>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetComplex"]/comps/li[@Class="GTU_Processor.CompProperties_GTLifespan"]/lifetimeRange</xpath>
+               <value>
+                  <lifetimeRange>
+                     <min>900000</min>                     <!--15 days-->
+                     <max>1800000</max>                     <!--30 days-->
+                  </lifetimeRange>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetComplex"]/comps/li[@Class="GT_ExplicitTerrainAffordance.CompProperties_GTExplicitTerrainAffordance"]</xpath>
+               <value>
+                  <li Class="GT_ExplicitTerrainAffordance.CompProperties_GTExplicitTerrainAffordance">
+                     <requiredTerrains>
+                        <li>WaterShallow</li>
+                        <li>WaterMovingChestDeep</li>
+                        <li>WaterOceanShallow</li>
+                     </requiredTerrains>
+                  </li>
+               </value>
+            </li>
+            <!--Advanced Nets-->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetAdvanced"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/resultCount</xpath>
+               <value>
+                  <resultCount>30</resultCount>                  <!--Fish caught when successful, minimum 300 meat per advanced net-->
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetAdvanced"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/durationIntervalRange</xpath>
+               <value>
+                  <durationIntervalRange>
+                     <min>60000</min>                     <!--1 day-->
+                     <max>180000</max>                     <!--3 day-->
+                  </durationIntervalRange>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetAdvanced"]/comps/li[@Class="GTU_Processor.CompProperties_GTLifespan"]/lifetimeRange</xpath>
+               <value>
+                  <lifetimeRange>
+                     <min>1800000</min>                     <!--30 days-->
+                     <max>3600000</max>                     <!--60 days-->
+                  </lifetimeRange>
+               </value>
+            </li>
+            <!--Ice Nets-->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetIce"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/resultCount</xpath>
+               <value>
+                  <resultCount>7</resultCount>                  <!--Fish caught when successful, minimum 17.5 meat per ice net-->
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetIce"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/durationIntervalRange</xpath>
+               <value>
+                  <durationIntervalRange>
+                     <min>180000</min>                     <!--3 day-->
+                     <max>360000</max>                     <!--6 day-->
+                  </durationIntervalRange>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetIce"]/comps/li[@Class="GTU_Processor.CompProperties_GTLifespan"]/lifetimeRange</xpath>
+               <value>
+                  <lifetimeRange>
+                     <min>900000</min>                     <!--15 days-->
+                     <max>1800000</max>                     <!--30 days-->
+                  </lifetimeRange>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+</Patch>

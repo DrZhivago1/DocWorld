@@ -1,4 +1,5 @@
 <Patch>
+  <!--This file will contain all patches that replace/change the visual location of Designation Categories in the architect menu for Vanilla and Mods-->
 
   <!--==========
     VANILLA
@@ -69,6 +70,26 @@
         </value>
       </li>
     </operations>
+  </Operation>
+
+  <!--==========
+    Colony Leadership
+    ==========-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Colony Leadership</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/DesignationCategoryDef[defName="LeadershipModTab"]/order</xpath>
+          <value>
+            <order>560</order>
+          </value>
+        </li>
+      </operations>
+    </match>
   </Operation>
 
   <!--==========
