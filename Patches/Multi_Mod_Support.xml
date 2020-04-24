@@ -982,4 +982,150 @@
     </match>
   </Operation>
 
+  <!--==========
+    Glass+Lights (Dubs Skylights, Vanilla Furniture Expanded - Spacer Module)
+    ==========-->
+
+  <!--Use glass from "Glass+Lights" if "Dubs Skylights" also installed. Also removes "Dubs Skylights" glass resource.-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Dubs Skylights</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SkyLightA"]/costList</xpath>
+            <value>
+              <costList>
+                <Glass>2</Glass>
+              </costList>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SkyLightB"]/costList</xpath>
+            <value>
+              <costList>
+                <Glass>10</Glass>
+              </costList>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SkyLightC" or defName="SkyLightD"]/costList</xpath>
+            <value>
+              <costList>
+                <Glass>6</Glass>
+              </costList>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="GlassPane"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/RecipeDef[defName="SmeltGlass"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Hide outdoor lamp from Glass+Lights until solar lamp from VFE-SM is researched, and dropdown edits-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Furniture Expanded - Spacer Module</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!--Hide behind research-->
+          <li Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[@Name="GlassLightBase"]/researchPrerequisites</xpath>
+            <match Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[@Name="GlassLightBase"]/researchPrerequisites</xpath>
+              <value>
+                <li>SpacerElectronics</li>
+              </value>
+            </match>
+          </li>
+          <!--Add to a dropdown designator to show similar type of lighting-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <DesignatorDropdownGroupDef>
+                <defName>DZ_GL_VFESM</defName>
+              </DesignatorDropdownGroupDef>
+            </value>
+          </li>
+          <li Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="Spacer_OutdoorLamp" or defName="OutdoorGroundLamp"]/designatorDropdown</xpath>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="Spacer_OutdoorLamp" or defName="OutdoorGroundLamp"]</xpath>
+              <value>
+                <designatorDropdown>DZ_GL_VFESM</designatorDropdown>
+              </value>
+            </nomatch>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Gloomy Vanilla Overhaul (LWM's Deep Storage, Gloomy Extra - Kitchen)
+    ==========-->
+
+  <!--Gloomy storage furniture to "Storage" designation category, with conditional if "LWM Deep Storage" is installed. #storage-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Gloomy Vanilla Overhaul</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="RKGWineRackB" or defName="WardrobeA" or defName="GL_Cupboard" or defName="RGK_Manger" or defName="GL_Locker" or defName="RGK_DogBowl"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Storage</designationCategory>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--If Gloomy Extra - Kitchen installed, furniture to "Culinary" designation category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Gloomy Vanilla Overhaul</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Gloomy Extra - Kitchen</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SM_Sink"]/designationCategory</xpath>
+            <value>
+              <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="SM_KitchenCupboard_A" or defName="SM_KitchenCupboard_B" or defName="SM_KitchenCupboard_C" or defName="SM_ButcherShelf" or defName="SM_CornerIRD"]</xpath>
+            <value>
+              <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
 </Patch>

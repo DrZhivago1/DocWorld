@@ -296,4 +296,24 @@
         </match>
     </Operation>
 
+    <!--==========
+    Glass+Lights
+    ==========-->
+
+    <!--Cieling Lamps-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="GLCeilingLamp"]/designatorDropdown</xpath>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="GLCeilingLamp"]</xpath>
+                <value>
+                    <designatorDropdown>CeilingLights</designatorDropdown>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
 </Patch>

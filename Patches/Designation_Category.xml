@@ -212,7 +212,7 @@
     Centralized Climate Control
     ==========-->
 
-    <!--Move items to Temperature tab and remove CCC category-->
+    <!--Move items to Temperature tab and remove designation category-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Centralized Climate Control (Continued)</li>
@@ -332,7 +332,7 @@
     Dubs Skylights
     ==========-->
 
-    <!--Move items to Lighting tab and remove Dubs "Skylights" designation category-->
+    <!--Move items to Lighting tab and remove designation category-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Dubs Skylights</li>
@@ -518,6 +518,23 @@
     </Operation>
 
     <!--==========
+    Fish Industry
+    ==========-->
+
+    <!--Move items to Husbandry tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FishIndustry</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="AquacultureBasin" or defName="FishingPier"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Husbandry</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Fishing Nets
     ==========-->
 
@@ -554,6 +571,124 @@
                 </li>
                 <li Class="PatchOperationRemove">
                     <xpath>/Defs/DesignationCategoryDef[defName="Lamps"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Glass+Lights
+    ==========-->
+
+    <!--Move items to Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[@Name="GlCeilingLampBase" or @Name="GLWallLightBase" or defName="OutdoorGroundLamp"]/designationCategory</xpath>
+            <match Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name="GlCeilingLampBase" or @Name="GLWallLightBase" or defName="OutdoorGroundLamp"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Lighting</designationCategory>
+                </value>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Glitter Tech
+    ==========-->
+
+    <!--Move items to Beds and Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glitter Tech</li>
+            <li>Glitter Tech (No Surgery)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="ambTable"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Beds</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="FloodLight"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Gloomy Vanilla/Overhaul
+    ==========-->
+
+    <!--Move items to Beds, Culinary, and Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Gloomy Vanilla</li>
+            <li>Gloomy Vanilla Overhaul</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="WallLightBase" or defName="RGK_lamp" or defName="RGK_LampM" or defName="RGK_Street_Lamp" or defName="RGK_Street_Lamp_Seven"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="RGK_Door" or defName="RGK_WoodFence"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="RGK_Door" or defName="RGK_WoodFence"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Fences</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="RGK_Door" or defName="RGK_WoodFence"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Fences</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="GL_TablewareShelf"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Glowstone
+    ==========-->
+
+    <!--Move items to Lighting tab, remove designation category-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glowstone</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="GLO_GlowstonePylon" or defName="GLO_GlowstoneLamp" or @Name="GlowstoneChandelierBase" or @Name="GlowstoneFloorStipBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/DesignationCategoryDef[defName="GLO_Glowstone"]</xpath>
                 </li>
             </operations>
         </match>
