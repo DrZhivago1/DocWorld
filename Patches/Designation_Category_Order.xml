@@ -124,4 +124,20 @@
     </match>
   </Operation>
 
+  <!--==========
+    More Planning
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>More Planning</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="Planning"]/order</xpath>
+      <value>
+        <order>730</order>
+      </value>
+    </match>
+  </Operation>
+
 </Patch>

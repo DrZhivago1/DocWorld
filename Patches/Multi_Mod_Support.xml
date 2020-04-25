@@ -2,7 +2,7 @@
   <!--This file will contain all patches that replace/change items based off whether or not multiple mods are loaded-->
 
   <!--==========
-    Ceramics (Expanded Woodworking, Fertile Fields, VFE-Production)
+    Ceramics {Expanded Woodworking, Fertile Fields, VFE-Production}
     ==========-->
 
   <!--Add fiber recipe to woodworking tables from Expanded Woodworking-->
@@ -61,7 +61,7 @@
   </Operation>
 
   <!--==========
-    Change Dresser (GloomyFurniture, Lord of the Rims - Elves *not yet 1.0*, Medieval Times Unofficial, Polyamory Beds (Vanilla Edition), RIMkea, [sd] Goodnight (Continued))
+    Change Dresser {GloomyFurniture, Lord of the Rims - Elves *not yet 1.0*, Medieval Times Unofficial, Polyamory Beds (Vanilla Edition), RIMkea, [sd] Goodnight (Continued)}
     ==========-->
 
   <!--Allow Gloomy Furniture beds to use Change Dresser and Mirror-->
@@ -209,7 +209,7 @@
   </Operation>
 
   <!--==========
-    Cupro's Stones (Simple Chains: Steel, RIMkea, MBS Faux Rock Wall, Simply More Bridges)
+    Cupro's Stones {Simple Chains: Steel, RIMkea, MBS Faux Rock Wall, Simply More Bridges}
     ==========-->
 
   <!--Chunks are buildable-->
@@ -644,7 +644,7 @@
   </Operation>
 
   <!--==========
-    DDA Security and More (Fences And Floors (Continued), Fences And No Floors)
+    DDA Security and More {Fences And Floors (Continued), Fences And No Floors}
     ==========-->
 
   <!--If fence mods installed, remove research. In either instance of mods loaded or not, move items to Fences tab.-->
@@ -689,7 +689,7 @@
   </Operation>
 
   <!--==========
-    Expanded Woodworking (Simple Chains: Leather, Survivalist's Additions)
+    Expanded Woodworking {Simple Chains: Leather, Survivalist's Additions}
     ==========-->
 
   <!--Allow Tanning Liquor to use Logs instead of Lumber-->
@@ -800,7 +800,7 @@
   </Operation>
 
   <!--==========
-    Extended Storage (Base, Rim Cuisine 2, Rim of Madness - Bones)
+    Extended Storage {Base, Rim Cuisine 2, Rim of Madness - Bones}
     ==========-->
 
   <!--Base-->
@@ -906,7 +906,7 @@
   </Operation>
 
   <!--==========
-    Fantastic Decor (Base, Gloomy Furniture)
+    Fantastic Decor {Base, Gloomy Furniture}
     ==========-->
 
   <!--Move Fantastic Decor decor to Gloomy decoration category or furniture if Gloomy is not found-->
@@ -950,7 +950,7 @@
   </Operation>
 
   <!--==========
-    Floored (Simply More Bridges (Continued))
+    Floored {Simply More Bridges (Continued)}
     ==========-->
 
   <!--Makes the bridges from Simply More Bridges match the floored tiled texture-->
@@ -983,7 +983,7 @@
   </Operation>
 
   <!--==========
-    Glass+Lights (Dubs Skylights, Vanilla Furniture Expanded - Spacer Module)
+    Glass+Lights {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module}
     ==========-->
 
   <!--Use glass from "Glass+Lights" if "Dubs Skylights" also installed. Also removes "Dubs Skylights" glass resource.-->
@@ -1079,7 +1079,7 @@
   </Operation>
 
   <!--==========
-    Gloomy Vanilla Overhaul (LWM's Deep Storage, Gloomy Extra - Kitchen)
+    Gloomy Vanilla Overhaul {LWM's Deep Storage, Gloomy Extra - Kitchen}
     ==========-->
 
   <!--Gloomy storage furniture to "Storage" designation category, with conditional if "LWM Deep Storage" is installed. #storage-->
@@ -1128,4 +1128,122 @@
       </match>
     </match>
   </Operation>
+
+  <!--==========
+    Harvest Organs Post Mortem {Alpha Animals, VGP Garden Medicine}
+    ==========-->
+
+  <!--Remove Alpha Animals Cactipine Quill from Harvest recipes-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Harvest Organs Post Mortem</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Alpha Animals</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <value>
+              <li>AA_CactipineQuill</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Remove most VGP Garden Medicine from Harvest recipes-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Harvest Organs Post Mortem</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>VGP Garden Medicine</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="AutopsyBasic" or defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <value>
+              <li>VG_antibiotics</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <value>
+              <li>Bandagekit</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Medical Training {Thanks For All The Fish}
+    ==========-->
+
+  <!--Remove Fish from training bench-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medical Training</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Thanks For All The Fish</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="IF_MedTable"]/fixedIngredientFilter/disallowedCategories</xpath>
+            <value>
+              <disallowedCategories>
+                <li>CorpsesFish</li>
+                <li>CorpsesMechanoid</li>
+                <li>CorpsesAnimal</li>
+              </disallowedCategories>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    [T] MoreFloors {Stuffed Floors}
+    ==========-->
+
+  <!--Move floors if no "Stuffed Floors" installed-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[T] MoreFloors</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Stuffed Floors</li>
+      </mods>
+      <nomatch Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[@Name="FloorBaseCarpetCheck" or @Name="FloorBaseCarpetWool" or @Name="FloorPlasteel" or @Name="FloorStraw" or @Name="FloorJade"  or @Name="FloorBaseStone"  or @Name="FloorBaseWood"]/designationCategory</xpath>
+            <value>
+              <designationCategory>Floors</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/designationCategoryDef[defName="MoreFloors"]</xpath>
+          </li>
+        </operations>
+      </nomatch>
+    </match>
+  </Operation>
+
 </Patch>

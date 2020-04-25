@@ -224,4 +224,24 @@
       </match>
    </Operation>
 
+   <!--==========
+    Industrialisation
+    ==========-->
+
+   <!--Patch Vanilla paved tile flooring-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Industrialisation</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+         <xpath>/Defs/TerrainDef[defName = "PavedTile"]/costList</xpath>
+         <value>
+            <costList>
+               <Steel>1</Steel>
+               <Ind_Concrete>5</Ind_Concrete>
+            </costList>
+         </value>
+      </match>
+   </Operation>
+
 </Patch>

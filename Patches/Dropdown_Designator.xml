@@ -316,4 +316,80 @@
         </match>
     </Operation>
 
+    <!--==========
+    Large Animal Beds
+    ==========-->
+
+    <!--Sleeping Spots-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Large Animal Beds</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Animals_LargeAnimalSpot</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AnimalSleepingSpot" or defName="CCPMAnimalSleepingSpot" or defName="CCPLAnimalSleepingSpot"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Animals_LargeAnimalSpot</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Mechalit Core
+    ==========-->
+
+    <!--Lamp-pots-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Mechalit Core 1.1</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_LampPots_Mechalit</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Lamp-pot" or @Name="Lamp-potBase"][not(designatorDropdown)]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_LampPots_Mechalit</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    More Furniture [1.1]
+    ==========-->
+
+    <!--Groups the "More Furniture" carpet with the vanilla carpet-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>More Furniture [1.1]</li>
+        </mods>
+        <match Class="PatchOperationAttributeSet">
+            <xpath>/Defs/TerrainDef[@ParentName="Anon2CarpetBase"]</xpath>
+            <attribute>ParentName</attribute>
+            <value>CarpetBase</value>
+        </match>
+    </Operation>
+
 </Patch>
