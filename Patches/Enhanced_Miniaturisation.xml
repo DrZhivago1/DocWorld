@@ -543,4 +543,35 @@
         </match>
     </Operation>
 
+    <!--==========
+    Repair Workbench
+    ==========-->
+
+    <!--SurgicalLamp, SurgicalInstruments-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Repair Workbench</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ElectricTableRepair"]</xpath>
+                    <value>
+                        <minifiedDef>MinifiedThing</minifiedDef>
+                        <thingCategories>
+                            <li>BuildingsMisc</li>
+                        </thingCategories>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ElectricTableRepair"]/statBases</xpath>
+                    <value>
+                        <Mass>20</Mass>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
 </Patch>

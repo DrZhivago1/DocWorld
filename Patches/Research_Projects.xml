@@ -61,5 +61,22 @@
     </match>
   </Operation>
 
+  <!--==========
+    RoofBomb
+    ==========-->
+
+  <!--Shaped Charges require IEDs-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RoofBomb</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ResearchProjectDef[defName="ShapedCharges"]/prerequisites</xpath>
+      <value>
+        <li>IEDs</li>
+      </value>
+    </match>
+  </Operation>
+
 
 </Patch>

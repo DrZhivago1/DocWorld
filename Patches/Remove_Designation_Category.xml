@@ -5,7 +5,7 @@
     VANILLA
     ==========-->
 
-   <!--Animals Designation Category Removal, if mods not found. #animalbeds-->
+   <!--Animals Designation Category removal, if mods not found. #animalbeds-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Large Animal Beds</li>
@@ -18,7 +18,7 @@
       </nomatch>
    </Operation>
 
-   <!--Fences Designation Category Removal, if mods not found. #fence-->
+   <!--Fences Designation Category removal, if mods not found. #fence-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Extended Woodworking</li>
@@ -36,7 +36,7 @@
       </nomatch>
    </Operation>
 
-   <!--Industrial Designation Category Removal, if mods not found. #industrial-->
+   <!--Industrial Designation Category removal, if mods not found. #industrial-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Industrial Rollers</li>
@@ -48,13 +48,139 @@
       </nomatch>
    </Operation>
 
-   <!--Storage Designation Category Removal, if mods found. #storage-->
+   <!--Storage Designation Category removal, if mods found. #storage-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>LWM's Deep Storage</li>
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="DZ_Storage"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Centralized Climate Control
+    ==========-->
+
+   <!--CentralClimateControl Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Centralized Climate Control (Continued)</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="CentralClimateControl"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Dubs Skylights
+    ==========-->
+
+   <!--skylights Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Dubs Skylights</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="skylights"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Glowstone
+    ==========-->
+
+   <!--GLO_Glowstone Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Glowstone</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="GLO_Glowstone"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Preemptive Strike
+    ==========-->
+
+   <!--PES_Reconnaissance Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Preemptive Strike</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="PES_Reconnaissance"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Rimatomics
+    ==========-->
+
+   <!--Rimatomics Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Rimatomics</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="Rimatomics"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    RimBees
+    ==========-->
+
+   <!--RB_Bees Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>RimBees</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="RB_Bees"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Rimefeller
+    ==========-->
+
+   <!--Rimefeller Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Rimefeller</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="Rimefeller"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    RIMkea
+    ==========-->
+
+   <!--RIMkea Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>RIMkea</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/designationCategoryDef[defName="RIMkea"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    RimPlas
+    ==========-->
+
+   <!--RimPlas_FurnDesig Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>RimPlas</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="RimPlas_FurnDesig"]</xpath>
       </match>
    </Operation>
 
