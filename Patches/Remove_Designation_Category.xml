@@ -107,7 +107,7 @@
    <!--PES_Reconnaissance Designation Category removal-->
    <Operation Class="PatchOperationFindMod">
       <mods>
-         <li>Preemptive Strike</li>
+         <li>Preemptive Strike (v1.1 Fork)</li>
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="PES_Reconnaissance"]</xpath>
