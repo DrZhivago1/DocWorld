@@ -1220,6 +1220,178 @@
         </match>
     </Operation>
 
+    <!--==========
+    SeedsPlease
+    ==========-->
+
+    <!--Move items to Husbandry tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>SeedsPlease</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="PlantProcessingTable"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Husbandry</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Smarter Vanilla Food
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Smarter Vanilla Food</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="DryingRack"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Smoked meat
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Smoked meat</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Smokepit" or defName="SmokeHouse"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Smokeleaf Industry Reborn
+    ==========-->
+
+    <!--Move items to Husbandry, Power, Production, and Misc tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Smokeleaf Industry Reborn</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@ParentName="MSI_LampBase" or @ParentName="MSI_ArtableFurnitureBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@ParentName="MSI_BuildingBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Power</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@ParentName="MSI_BenchBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Production</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="TrimmingTools"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Misc</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/DesignationCategoryDef[defName="MSI"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Soft Warm Beds
+    ==========-->
+
+    <!--Move items to Beds tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[JPT] Soft Warm Beds</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Rede"]</xpath>
+            <value>
+                <designationCategory>DZ_Beds</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Sparkling Worlds
+    ==========-->
+
+    <!--Move items to Beds tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Sparkling Worlds - Full Mod</li>
+            <li>Sparkling Worlds - Modular Core - Reduced features</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="GlitterworldHospitalBedSW"]</xpath>
+            <value>
+                <designationCategory>DZ_Beds</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Steam Light
+    ==========-->
+
+    <!--Move items to Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Steam Light</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SL_TungstenTableLamp" or defName="SL_FlourescentTableLamp" or defName="SL_FlourescentWallLamp" or defName="SL_FlourescentChandelierLamp" or defName="SL_TungstenChandelierLamp" or defName="SL_StreetLamp"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Lighting</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Storage Solutions
+    ==========-->
+
+    <!--Move items to Storage tab. #storage-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Storage Solutions</li>
+        </mods>
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[@Name="CCPSS_StorageBase" or @Name="CCPSS_ArtableStorageBase" or defName="CCPSS_NestingBox" or defName="CCPSS_Crate"]/designationCategory</xpath>
+            <match Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name="CCPSS_StorageBase" or @Name="CCPSS_ArtableStorageBase" or defName="CCPSS_NestingBox" or defName="CCPSS_Crate"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[@Name="CCPSS_StorageBase" or @Name="CCPSS_ArtableStorageBase" or defName="CCPSS_NestingBox" or defName="CCPSS_Crate"]</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
 
 
 

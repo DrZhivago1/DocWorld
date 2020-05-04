@@ -184,4 +184,32 @@
       </match>
    </Operation>
 
+   <!--==========
+    Smokeleaf Industry Reborn
+    ==========-->
+
+   <!--MSI Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Smokeleaf Industry Reborn</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="MSI"]</xpath>
+      </match>
+   </Operation>
+
+    <!--==========
+    Storage Solutions
+    ==========-->
+
+   <!--CCP_StorageSolutions Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Storage Solutions</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="CCP_StorageSolutions"]</xpath>
+      </match>
+   </Operation>
+
 </Patch>

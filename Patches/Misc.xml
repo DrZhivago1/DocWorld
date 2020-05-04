@@ -523,4 +523,260 @@
       </match>
    </Operation>
 
+   <!--==========
+    SeedsPlease
+    ==========-->
+
+   <!--Healroot recipes onto production benches-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>SeedsPlease</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/RecipeDef[defName="ProcessRawHealroot"]</xpath>
+               <value>
+                  <recipeUsers>
+                     <li>PlantProcessingTable</li>
+                     <li>DrugLab</li>
+                  </recipeUsers>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs</xpath>
+               <value>
+                  <RecipeDef ParentName="ProcessRaw">
+                     <defName>ProcessRawHealrootBulk</defName>
+                     <label>make bulk herbal medicine</label>
+                     <description>Process Raw Healroot into Herbal Medicine in bulk.</description>
+                     <ingredients>
+                        <li>
+                           <filter>
+                              <thingDefs>
+                                 <li>RawHealroot</li>
+                              </thingDefs>
+                           </filter>
+                           <count>25</count>
+                        </li>
+                     </ingredients>
+                     <fixedIngredientFilter>
+                        <thingDefs>
+                           <li>RawHealroot</li>
+                        </thingDefs>
+                     </fixedIngredientFilter>
+                     <products>
+                        <MedicineHerbal>5</MedicineHerbal>
+                     </products>
+                     <workAmount>3500</workAmount>
+                     <skillRequirements>
+                        <Crafting>5</Crafting>
+                     </skillRequirements>
+                     <recipeUsers>
+                        <li>PlantProcessingTable</li>
+                        <li>DrugLab</li>
+                     </recipeUsers>
+                  </RecipeDef>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Simple Chains: Leather
+    ==========-->
+
+   <!--Increase Max Capacity of tanning vat-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Leather</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+         <xpath>/Defs/ThingDef[defName="Owl_TanningVat"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/products/*/maxCapacity</xpath>
+         <value>
+            <maxCapacity>150</maxCapacity>
+         </value>
+      </match>
+   </Operation>
+
+   <!--==========
+    Simple Chains: Steel
+    ==========-->
+
+   <!--Create Bulk Recipes for steel-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Steel</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs</xpath>
+               <value>
+
+                  <RecipeDef>
+                     <defName>Owl_RefineSteel1000</defName>
+                     <label>refine 1000 steel</label>
+                     <description>Make a batch of steel using raw iron ore.</description>
+                     <jobString>Refining steel from iron ore.</jobString>
+                     <effectWorking>Smelt</effectWorking>
+                     <soundWorking>Recipe_Smelt</soundWorking>
+                     <workAmount>10000</workAmount>
+                     <workSpeedStat>SmeltingSpeed</workSpeedStat>
+                     <workSkillLearnFactor>0.25</workSkillLearnFactor>
+                     <targetCountAdjustment>750</targetCountAdjustment>
+                     <allowMixingIngredients>false</allowMixingIngredients>
+                     <ingredients>
+                        <li>
+                           <filter>
+                              <thingDefs />
+                           </filter>
+                           <count>250</count>
+                        </li>
+                        <li>
+                           <filter>
+                              <thingDefs>
+                                 <li>Owl_Iron</li>
+                              </thingDefs>
+                           </filter>
+                           <count>750</count>
+                        </li>
+                     </ingredients>
+                     <fixedIngredientFilter>
+                        <thingDefs>
+                           <li>Owl_Iron</li>
+                        </thingDefs>
+                     </fixedIngredientFilter>
+                     <products>
+                        <Steel>1000</Steel>
+                     </products>
+                     <recipeUsers>
+                        <li>ElectricSmelter</li>
+                     </recipeUsers>
+                  </RecipeDef>
+
+                  <RecipeDef>
+                     <defName>Owl_RefineSteel100</defName>
+                     <label>refine 100 steel</label>
+                     <description>Make a batch of steel using raw iron ore.</description>
+                     <jobString>Refining steel from iron ore.</jobString>
+                     <effectWorking>Smelt</effectWorking>
+                     <soundWorking>Recipe_Smelt</soundWorking>
+                     <workAmount>5000</workAmount>
+                     <workSpeedStat>SmeltingSpeed</workSpeedStat>
+                     <workSkillLearnFactor>0.25</workSkillLearnFactor>
+                     <targetCountAdjustment>75</targetCountAdjustment>
+                     <allowMixingIngredients>false</allowMixingIngredients>
+                     <ingredients>
+                        <li>
+                           <filter>
+                              <thingDefs />
+                           </filter>
+                           <count>25</count>
+                        </li>
+                        <li>
+                           <filter>
+                              <thingDefs>
+                                 <li>Owl_Iron</li>
+                              </thingDefs>
+                           </filter>
+                           <count>75</count>
+                        </li>
+                     </ingredients>
+                     <fixedIngredientFilter>
+                        <thingDefs>
+                           <li>Owl_Iron</li>
+                        </thingDefs>
+                     </fixedIngredientFilter>
+                     <products>
+                        <Steel>100</Steel>
+                     </products>
+                     <recipeUsers>
+                        <li>ElectricSmelter</li>
+                     </recipeUsers>
+                  </RecipeDef>
+
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Smoked meat
+    ==========-->
+
+   <!--Make Smoked meat available after researching Pemmican, and hide the Smokehouse behind Complex Furniture-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Smoked meat</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="Tam_SmokedMeat"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>Pemmican</li>
+                  </researchPrerequisites>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="Smokepit"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>Pemmican</li>
+                  </researchPrerequisites>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="SmokeHouse"]</xpath>
+               <value>
+                  <researchPrerequisites>
+                     <li>Pemmican</li>
+                     <li>ComplexFurniture</li>
+                  </researchPrerequisites>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Save Our Ship 2
+    ==========-->
+
+   <!--Increase pod launcher range-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Save Our Ship 2</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="PersonalShuttle"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+               <value>
+                  <fuelCapacity>200.0</fuelCapacity>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="CargoShuttle"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+               <value>
+                  <fuelCapacity>600.0</fuelCapacity>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="HeavyShuttle"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+               <value>
+                  <fuelCapacity>300.0</fuelCapacity>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
 </Patch>

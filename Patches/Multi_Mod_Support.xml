@@ -1590,4 +1590,314 @@
     </match>
   </Operation>
 
+  <!--==========
+    Simple Chains: Steel {Coal, Charcoal, Atlas Materials, Simple Coal, Xenite Industries, Medieval Times, Survivalist Additions}
+    ==========-->
+
+  <!--Add modded items to steel smelting list conditionally, based on defName-->
+  <!-- Any mod using the def "coal" -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="Coal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+					//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>Coal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Any mod using the def "charcoal" -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="Charcoal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+					//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>Charcoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Atlas Materials -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="AM_Coal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+                  //thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>AM_Coal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Simple Coal -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="WDCoal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+                  //thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>WDCoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Xenite Industries -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="XIcharcoal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+				//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>XIcharcoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Medieval Times -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="MedTimes_Resource_Coal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+				//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>MedTimes_Resource_Coal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Survivalist Additions -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="SRV_Charcoal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+				//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>SRV_Charcoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--==========
+    Simple Concrete {Simply More Bridges, Roads of the Rim}
+    ==========-->
+
+  <!--Replace the cost of concrete bridges with concrete, disregard patch if using "Simply More Bridges"-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Concrete</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simply More Bridges</li>
+      </mods>
+      <nomatch Class="PatchOperationFindMod">
+        <mods>
+          <li>Roads of the Rim</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+          <success>Always</success>
+          <operations>
+            <li Class="PatchOperationReplace">
+              <xpath>/Defs/TerrainDef[defName="ConcreteBridge"]/costList</xpath>
+              <value>
+                <costList>
+                  <D9Concrete>25</D9Concrete>
+                </costList>
+              </value>
+            </li>
+          </operations>
+        </match>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--==========
+    Simply More Bridges {Industrialisation, Roads of the Rim, Simple Concrete}
+    ==========-->
+
+  <!--Replace/add texture and recipe for Concrete bridges-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simply More Bridges</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Industrialisation</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationFindMod">
+            <mods>
+              <li>Roads of the Rim</li>
+            </mods>
+            <match Class="PatchOperationRemove">
+              <xpath>/Defs/TerrainDef[defName="ConcreteBridge"]</xpath>
+            </match>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeConcrete</defName>
+                <label>concrete deep water bridge</label>
+                <color>(155, 155, 150)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <Ind_Concrete>17</Ind_Concrete>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>ConcreteBridge</defName>
+                <label>concrete bridge</label>
+                <color>(155, 155, 150)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <Ind_Concrete>10</Ind_Concrete>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Replace/add texture and recipe for Concrete bridges-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simply More Bridges</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Concrete</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationFindMod">
+            <mods>
+              <li>Roads of the Rim</li>
+            </mods>
+            <match Class="PatchOperationRemove">
+              <xpath>/Defs/TerrainDef[defName="ConcreteBridge"]</xpath>
+            </match>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeConcrete</defName>
+                <label>concrete deep water bridge</label>
+                <color>(155, 155, 150)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <D9Concrete>17</D9Concrete>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>ConcreteBridge</defName>
+                <label>concrete bridge</label>
+                <color>(155, 155, 150)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <D9Concrete>10</D9Concrete>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
 </Patch>
