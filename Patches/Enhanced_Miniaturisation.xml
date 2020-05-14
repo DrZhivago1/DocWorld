@@ -547,7 +547,7 @@
     Repair Workbench
     ==========-->
 
-    <!--SurgicalLamp, SurgicalInstruments-->
+    <!--ElectricTableRepair-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Repair Workbench</li>
@@ -573,5 +573,58 @@
             </operations>
         </match>
     </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Production
+    ==========-->
+
+    <!--VFE_ComponentFabricationBench-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Furniture Expanded - Production</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationConditional">
+               <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/minifiedDef</xpath>
+               <match Class="PatchOperationSequence">
+                  <success>Always</success>
+                  <operations>
+                     <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/minifiedDef</xpath>
+                        <value>
+                           <minifiedDef>MinifiedThing</minifiedDef>
+                        </value>
+                     </li>
+                     <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/thingCategories</xpath>
+                        <value>
+                           <thingCategories>
+                              <li>BuildingsMisc</li>
+                           </thingCategories>
+                        </value>
+                     </li>
+                  </operations>
+               </match>
+               <nomatch Class="PatchOperationAdd">
+                  <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]</xpath>
+                  <value>
+                     <minifiedDef>MinifiedThing</minifiedDef>
+                     <thingCategories>
+                        <li>BuildingsMisc</li>
+                     </thingCategories>
+                  </value>
+               </nomatch>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/statBases</xpath>
+               <value>
+                  <Mass>20</Mass>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
 
 </Patch>

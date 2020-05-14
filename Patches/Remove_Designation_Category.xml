@@ -21,11 +21,11 @@
    <!--Fences Designation Category removal, if mods not found. #fence-->
    <Operation Class="PatchOperationFindMod">
       <mods>
+         <li>Architect Expanded - Fences</li>
+         <li>Architect Expanded - Fences (Tab Patch)</li>
          <li>Extended Woodworking</li>
          <li>Gloomy Vanilla</li>
          <li>Gloomy Vanilla Overhaul</li>
-         <li>Vanilla Fences</li>
-         <li>Vanilla Fences (Fence Tab)</li>
          <li>Fences And Floors</li>
          <li>Fences And No Floors</li>
          <li>DDA Security and More</li>
@@ -55,6 +55,20 @@
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="DZ_Storage"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Architect Expanded - Fences
+    ==========-->
+
+   <!--ArchitectExpandedFence Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Architect Expanded - Fences (Tab Patch)</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="ArchitectExpandedFence"]</xpath>
       </match>
    </Operation>
 
@@ -198,7 +212,7 @@
       </match>
    </Operation>
 
-    <!--==========
+   <!--==========
     Storage Solutions
     ==========-->
 
@@ -209,6 +223,20 @@
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="CCP_StorageSolutions"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Vanilla Furniture Expanded
+    ==========-->
+
+   <!--AOMorefurniture Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Furniture Expanded</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="AOMorefurniture"]</xpath>
       </match>
    </Operation>
 

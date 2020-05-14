@@ -317,4 +317,64 @@
         </match>
     </Operation>
 
+    <!--==========
+    UN-Colony
+    ==========-->
+
+    <!--Remove and replace all UN-Colony glass-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>UN-Colony (Continued)</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationRemove">                        <!--SadjuukUN-IndustryDEF-->
+                        <xpath>/Defs/ThingDef[defName="SadjuukConstructionMachinery"]/recipes/li[.="SadjuukGlassRecipeA"]</xpath>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="SadjuukConstructionMachinery"]/description</xpath>
+                        <value>
+                            <description>A very complex machinery capable of extracting silicon from the rock and coarsely refining organic elements to produce paint, concrete, and asphalt.</description>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">                        <!--SadjuukUN-BuildingRESEARCH-->
+                        <xpath>/Defs/ResearchProjectDef[defName="SadjuukConstructionA"]/description</xpath>
+                        <value>
+                            <description>This important research allows you to produce basic construction items such as paint or concrete.</description>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationRemove">                        <!--SadjuukUN-BuildingRECIPE-->
+                        <xpath>/Defs/RecipeDef[defName="SadjuukGlassRecipeA"]</xpath>
+                    </li>
+                    <li Class="PatchOperationReplace">                        <!--SadjuukUN-BuildingDEF-->
+                        <xpath>/Defs/ThingDef[@Name="SadjuukDoorBaseC" or defName="SadjuukGlassFenceA"]/costList/SadjuukGlass</xpath>
+                        <value>
+                            <Glass>2</Glass>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">                        <!--SadjuukUN-IndustryRECIPE-->
+                        <xpath>/Defs/RecipeDef[defName="SadjuukSolarCellRecipeA" or defName="SadjuukSolarCellRecipeB"]/ingredients/li/filter/thing/Defs/SadjuukGlass</xpath>
+                        <value>
+                            <li>Glass</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/RecipeDef[defName="SadjuukSolarCellRecipeA" or defName="SadjuukSolarCellRecipeB"]/fixedIngredientFilter/thing/Defs/SadjuukGlass</xpath>
+                        <value>
+                            <li>Glass</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationRemove">                        <!--SadjuukUN-BuildingITEM-->
+                        <xpath>/Defs/ThingDef[defName="SadjuukGlass"]</xpath>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
 </Patch>

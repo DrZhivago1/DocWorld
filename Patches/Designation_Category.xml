@@ -181,6 +181,24 @@
     </Operation>
 
     <!--==========
+    Architect Expanded - Fences
+    ==========-->
+
+    <!--Move items to Fences tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Architect Expanded - Fences</li>
+            <li>Architect Expanded - Fences (Tab Patch)</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[@Name="FenceBase" or @Name="GateBase"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Fences</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Ceiling Lights
     ==========-->
 
@@ -1389,6 +1407,197 @@
                     <designationCategory>DZ_Storage</designationCategory>
                 </value>
             </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Survival Meals Expanded
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Survival Meals Expanded</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SPC_PackagingStation"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Factions Expanded - Medieval
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Medieval</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VFEM_WineBarrel"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Factions Expanded - Settlers
+    ==========-->
+
+    <!--Move items to Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Settlers</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Chemlamp"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Lighting</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded
+    ==========-->
+
+    <!--Move items to Beds, Furniture, and Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Beds-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Bed_StoneSlab" or defName="Bed_Simple" or defName="Bed_Ergonomic" or defName="Bed_DoubleErgonomic" or defName="Bed_Kingsize"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Beds</designationCategory>
+                    </value>
+                </li>
+                <!--Furniture-->
+                <!--Two furniture items are excluded due to DZ_Storage category. "Shelf_1x1c" and "Shelf_WeaponRack"-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Seat_Cushion" or defName="Seat_Bench" or defName="Seat_SquareChair" or defName="Table_1x1c" or defName="Table_Counter" or defName="Table_Wardrobe" or defName="Seat_ModernChair" or defName="Table_RoyalEndTable" or defName="Table_RoyalDresser" or defName="Seat_RoyalChair" or defName="Seat_RoyalArmchair" or @Name="RoyalTableDesc"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Furniture</designationCategory>
+                    </value>
+                </li>
+                <!--Lights-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Light_ModernLamp" or defName="Light_Streetlamp" or defName="Table_LightEndTable"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Farming
+    ==========-->
+
+    <!--Move items to Husbandry tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Farming</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VFE_PlanterBox" or defName="VFE_Ecosystem" or @Name="VFE_TilableHydroponics_Base" or defName="VFE_Scarecrow" or defName="VFE_Sprinkler"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Husbandry</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Medical Module
+    ==========-->
+
+    <!--Move items to Beds tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Medical Module</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Bed_OperatingTable" or defName="Bed_CryptoBed"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Beds</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Production
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Production</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VFE_TableStoveLarge" or defName="VFE_TableButcherElectric"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Spacer Module
+    ==========-->
+
+    <!--Move items to Beds, Furniture, Husbandry, Lighting, and Joy tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Spacer Module</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Beds-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Bed_AdvBed" or defName="Bed_AdvDoubleBed"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Beds</designationCategory>
+                    </value>
+                </li>
+                <!--Furniture-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Table_IlluminatedEndTable" or defName="Table_IlluminatedDresser" or defName="Seat_AdvChair" or defName="Table_interactive_1x1c" or defName="Table_interactive_2x2c"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Furniture</designationCategory>
+                    </value>
+                </li>
+                <!--Husbandry-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Spacer_SunLamp"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </li>
+                <!--Lighting-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Light_SpacerLamp" or defName="Spacer_OutdoorLamp"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+                <!--Recreation-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="UltrascreenTV"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Joy</designationCategory>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 

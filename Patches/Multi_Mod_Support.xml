@@ -1591,6 +1591,202 @@
   </Operation>
 
   <!--==========
+    Simple Chains: Leather {Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest}
+    ==========-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Leather</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Expanded — Arid Shrubland</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!-- Replace leather drops with generics where appropriate -->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef/race/leatherDef[text()="AEXP_Leather_Wildebeest" or text()="AEXP_Leather_Hippopotamus"]</xpath>
+            <value>
+              <leatherDef>Hide_Thick</leatherDef>
+            </value>
+          </li>
+          <!-- Remove unused leather -->
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="AEXP_Leather_Wildebeest"]/*/..
+            | /Defs/ThingDef[defName="AEXP_Leather_Hippopotamus"]/*/..</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Leather</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Expanded — Desert</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!-- Replace leather drops with generics where appropriate -->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef/race/leatherDef[text()="AEXP_Leather_Lion"]</xpath>
+            <value>
+              <leatherDef>Hide_Plain</leatherDef>
+            </value>
+          </li>
+          <!-- Remove unused leather -->
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="AEXP_Leather_Lion"]/*/..</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Leather</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Expanded — Ice Sheet</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!-- Replace leather drops with generics where appropriate -->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef/race/leatherDef[text()="AEXP_Leather_Pinniped"]</xpath>
+            <value>
+              <leatherDef>Hide_Thick</leatherDef>
+            </value>
+          </li>
+          <!-- Remove unused leather -->
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="AEXP_Leather_Pinniped"]/*/..</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Leather</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Expanded — Tropical Rainforest</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!-- add the new hides -->
+          <li Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+              <ThingDef ParentName="HideBase">
+                <defName>Hide_Tiger</defName>
+                <label>tiger hide</label>
+                <graphicData>
+                  <color>(197,154,99)</color>
+                </graphicData>
+              </ThingDef>
+            </value>
+          </li>
+          <!-- apply the new hides -->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef/race/leatherDef[text()="AEXP_Leather_Tiger"]</xpath>
+            <value>
+              <leatherDef>Hide_Tiger</leatherDef>
+            </value>
+          </li>
+          <!-- add the prepared hides -->
+          <li Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+              <ThingDef ParentName="PreparedHideBase">
+                <defName>Prepared_Hide_Tiger</defName>
+                <label>prepared tiger hide</label>
+                <graphicData>
+                  <color>(197,154,99)</color>
+                </graphicData>
+              </ThingDef>
+            </value>
+          </li>
+          <!-- add the recipes-->
+          <li Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+              <RecipeDef ParentName="PrepareHideBase">
+                <label>prepare tiger hide</label>
+                <defName>Owl_PrepareHideTiger</defName>
+                <ingredients>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>Hide_Tiger</li>
+                      </thingDefs>
+                    </filter>
+                    <count>15</count>
+                  </li>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>Owl_TanningLiquor</li>
+                      </thingDefs>
+                    </filter>
+                    <count>7</count>
+                  </li>
+                </ingredients>
+                <fixedIngredientFilter>
+                  <thingDefs>
+                    <li>Hide_Tiger</li>
+                    <li>Owl_TanningLiquor</li>
+                  </thingDefs>
+                </fixedIngredientFilter>
+                <products>
+                  <Prepared_Hide_Tiger>15</Prepared_Hide_Tiger>
+                </products>
+              </RecipeDef>
+            </value>
+          </li>
+          <!-- Add the tannin vat data -->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Owl_TanningVat"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/products</xpath>
+            <value>
+              <li>
+                <thingDef>AEXP_Leather_Tiger</thingDef>
+                <ingredientFilter>
+                  <thingDefs>
+                    <li>Prepared_Hide_Tiger</li>
+                  </thingDefs>
+                </ingredientFilter>
+                <maxCapacity>150</maxCapacity>
+                <baseFermentationDuration>182000</baseFermentationDuration>
+                <temperatureIdeal>
+                  <min>1</min>
+                  <max>99</max>
+                </temperatureIdeal>
+                <temperatureSafe>
+                  <min>-50</min>
+                  <max>200</max>
+                </temperatureSafe>
+                <graphSuffix>_full</graphSuffix>
+              </li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
     Simple Chains: Steel {Coal, Charcoal, Atlas Materials, Simple Coal, Xenite Industries, Medieval Times, Survivalist Additions}
     ==========-->
 
@@ -1894,6 +2090,208 @@
                 </costList>
               </TerrainDef>
             </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Armour Expanded {NightVision}
+    ==========-->
+
+  <!--Remove NightVision goggles-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Armour Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>NightVision</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="NV_nv_goggles"]</xpath>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Furniture Expanded {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training}
+    ==========-->
+
+  <!--Allow tanning liquor to be made at stone campfire-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Leather</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[@Name="MakeTanningLiquorBase"]/recipeUsers</xpath>
+        <value>
+          <li>Stone_Campfire</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Change designation category of storage furniture if "LWM Deep Storage" is/isnt installed. #storage-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="Shelf_1x1c" or defName="Shelf_WeaponRack"]/designationCategory</xpath>
+      </match>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Shelf_1x1c" or defName="Shelf_WeaponRack"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Storage</designationCategory>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--Remove redundancies from "VFE" IF "Misc Training" or "Combat Training" is installed-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Misc. Training</li>
+        <li>Combat Training</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="Joy_PunchingBag"]
+            | /Defs/TaleDef[defName="Tale_UsedPunchingBag"]
+            | /Defs/JobDef[defName="Play_PunchingBag"]
+            | /Defs/JoyGiverDef[defName="Play_PunchingBag"]</xpath>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Furniture Expanded - Farming {LWM's Deep Storage}
+    ==========-->
+
+  <!--Move animal feeder to Storage if LWM Deep Storage is not installed. #storage-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Farming</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VFE_AnimalFeeder"]</xpath>
+        <value>
+          <designationCategory>DZ_Storage</designationCategory>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Furniture Expanded - Production {Medical System Expansion - Revived}
+    ==========-->
+
+  <!--Add linkable connection to MSE from VFE-P-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Production</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Medical System Expansion - Revived</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="ArchotechProsthesesBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+        <value>
+          <li>VFE_FabricationCabinet</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Furniture Expanded - Spacer Module {LWM's Deep Storage, [WD] Reinforced Doors}
+    ==========-->
+
+  <!--Change designation category of storage furniture for "Vanilla Furniture Expanded - Spacer Module" if "LWM Deep Storage" is/isnt installed. #storage-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Spacer Module</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>
+      </match>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Storage</designationCategory>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--Lock reinforced doors behind tech required for reinforced walls-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Spacer Module</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[WD] Reinforced Doors</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="WDReinforcedDoor"]/researchPrerequisites</xpath>
+            <match Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="WDReinforcedDoor"]/researchPrerequisites</xpath>
+              <value>
+                <li>SpacerFurniture</li>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="WDReinforcedDoor"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>SpacerFurniture</li>
+                </researchPrerequisites>
+              </value>
+            </nomatch>
+          </li>
+          <li Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="WDReinforcedAutodoor"]/researchPrerequisites</xpath>
+            <match Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="WDReinforcedAutodoor"]/researchPrerequisites</xpath>
+              <value>
+                <li>SpacerFurniture</li>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="WDReinforcedAutodoor"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>Autodoors</li>
+                  <li>SpacerFurniture</li>
+                </researchPrerequisites>
+              </value>
+            </nomatch>
           </li>
         </operations>
       </match>
