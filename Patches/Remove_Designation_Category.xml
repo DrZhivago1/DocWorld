@@ -240,4 +240,18 @@
       </match>
    </Operation>
 
+   <!--==========
+    VGP Garden Tools
+    ==========-->
+
+   <!--GardenTools Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>VGP Garden Tools</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="GardenTools"]</xpath>
+      </match>
+   </Operation>
+
 </Patch>

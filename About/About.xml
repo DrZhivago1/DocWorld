@@ -7,6 +7,19 @@
 		<li>1.1</li>
 	</supportedVersions>
 	<packageId>drzhivago.docworld</packageId>
+	<loadAfter>
+		<li>Nif.ArchitectExpanded.FencesTabPatch</li>
+		<li>Terragg.ExtendedStorage.Extended</li>
+		<li>pelador.fermenter</li>
+		<li>Rikiki.FishIndustry</li>
+		<li>Owlchemist.GloomyVanilla</li>
+		<li>zymex.GloomyVanillaOverhaul</li>
+		<li>trasheddt.industrialisation</li>
+		<li>pelador.insulation</li>
+		<li>pelador.rimplas</li>
+		<li>cucumpear.animalbeds</li>
+		<li>VanillaExpanded.VFEFarming</li>
+	</loadAfter>
   <description>
 One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, better functioning, and intuitive system. This mod patches, fixes, and adds content to many mods (including but not limited to plain old vanilla RimWorld).
 
@@ -20,6 +33,9 @@ One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, be
     * Lights are now more efficient with power usage
     * Greatly improves inter-mod compatibility
 
+[Link to Full Feature List]
+  https://github.com/DrZhivago1/DocWorld/wiki/1.-Content-Overview#in-depth-mod-effect-data
+
 [Link to GitHub]
   https://github.com/DrZhivago1/DocWorld/releases
 
@@ -29,22 +45,6 @@ One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, be
 [The Doctor's World mod collection]
   https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074
     
-&lt;size=24&gt;Credits&lt;/size&gt;
-    &lt;b&gt;Alex Il Tabaccaio&lt;/b&gt; for the encouragement and helpful additions.
-    &lt;b&gt;Ashnal&lt;/b&gt; for the encouragement and helpful additions.  
-    &lt;b&gt;Chicken Plucker&lt;/b&gt; for the awesome picture of the Doctor.
-    &lt;b&gt;jptrrs&lt;/b&gt; for the encouragement and helpful additions.  
-    &lt;b&gt;Lanilor&lt;/b&gt; for helping me learn xpath patching on the Discord.  
-    &lt;b&gt;Mehni&lt;/b&gt; for his time and patience on the Discord.  
-    &lt;b&gt;NotFood&lt;/b&gt; for showing the way of the dragon.  
-    &lt;b&gt;RedistHeat&lt;/b&gt; the mod, not a person, for cooler textures.  
-    &lt;b&gt;ruyanve&lt;/b&gt; for the encouragement and helpful additions.   
-    &lt;b&gt;Sunlace&lt;/b&gt; for hidden conduit idea.  
-    &lt;b&gt;Taranchuk&lt;/b&gt; for the encouragement and helpful additions.  
-    &lt;b&gt;XeoNovaDan&lt;/b&gt; for the encouragement and helpful additions.  
-    &lt;b&gt;Yehn&lt;/b&gt; for helping with xml on the Discord.  
-    &lt;b&gt;Architect Textures&lt;/b&gt; &lt;i&gt;Smartline&lt;/i&gt;, &lt;i&gt;eucalyp&lt;/i&gt;, and free pics @ https://www.flaticon.com/  
-    &lt;b&gt;All the beautiful mod creators without whom these patches wouldn't do much.&lt;/b&gt;
   </description>
 
 </ModMetaData>

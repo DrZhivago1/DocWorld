@@ -2298,4 +2298,180 @@
     </match>
   </Operation>
 
+  <!--==========
+    VGP Garden Fabrics {Vanilla Animals Expanded — Tundra, Vanilla Animals Overhaul Reloaded, MendAndRecycle, SeedsPlease}
+    ==========-->
+
+  <!--Add Musk Ox wool to blended wool recipe-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+      <li>VGP Garden Fabrics Simplified</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Expanded — Tundra</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/ingredients/li/filter/thingDefs</xpath>
+            <value>
+              <li>AEXP_MuskOxWool</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>AEXP_MuskOxWool</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add Ibex and Thrumbo wool to blended wool recipe-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+      <li>VGP Garden Fabrics Simplified</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Overhaul Reloaded</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/ingredients/li/filter/thingDefs</xpath>
+            <value>
+              <li>KKAO_WoolIbex</li>
+              <li>KKAO_ThrumboWool</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>KKAO_WoolIbex</li>
+              <li>KKAO_ThrumboWool</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Remove salvaging from Loom if using VGP Fabrics and MendandRecycle-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+      <li>VGP Garden Fabrics Simplified</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>MendAndRecycle</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+        <xpath>/Defs/RecipeDef[defName="SalvageApparel"]</xpath>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Clean up storage categories if using "VGP Garden Fabrics" and "SeedsPlease"-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>SeedsPlease</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="RawFlax" or defName="RawDevilstrand" or defName="RawCotton"]/thingCategories</xpath>
+            <value>
+              <thingCategories>
+                <li>PlantMatter</li>
+              </thingCategories>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VG_PlasteelThread"]/thingCategories</xpath>
+            <value>
+              <thingCategories>
+                <li>ResourcesRaw</li>
+              </thingCategories>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingCategoryDef[defName="GardenFabrics"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    ZARS Production Spots {Thanks For All The Fish}
+    ==========-->
+
+  <!--Add to ZARS dropdown-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ZARS Production Spots</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Thanks For All The Fish</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="FishingSpot"]</xpath>
+        <value>
+          <designatorDropdown>ZARS_Spots</designatorDropdown>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Zen Garden {GloomyFurniture}
+    ==========-->
+
+  <!--Move Zen Garden decor to Gloomy decoration category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Zen Garden</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>GloomyFurniture</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[@Name="ZenBase" or @Name="ZenFountainBase" or @Name="RakedBase"]/designationCategory</xpath>
+            <value>
+              <designationCategory>OldStyleDeco</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[@Name="GravelFloorBase"]/designationCategory</xpath>
+            <value>
+              <designationCategory>OldStyleDeco</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/DesignationCategoryDef[defName="ZEN_Decoration"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
 </Patch>

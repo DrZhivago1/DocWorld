@@ -156,4 +156,20 @@
     </match>
   </Operation>
 
+  <!--==========
+    Zen Garden
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Zen Garden</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="ZEN_Decoration"]/order</xpath>
+      <value>
+        <order>720</order>
+      </value>
+    </match>
+  </Operation>
+
 </Patch>

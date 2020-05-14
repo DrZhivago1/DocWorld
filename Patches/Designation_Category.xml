@@ -1325,9 +1325,6 @@
                         <designationCategory>Misc</designationCategory>
                     </value>
                 </li>
-                <li Class="PatchOperationRemove">
-                    <xpath>/Defs/DesignationCategoryDef[defName="MSI"]</xpath>
-                </li>
             </operations>
         </match>
     </Operation>
@@ -1601,6 +1598,137 @@
         </match>
     </Operation>
 
+    <!--==========
+    VGP Garden Canning
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Garden Canning</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="CanningFactory" or defName="VG_CanningFactory"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    VGP Garden Drinks
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Garden Drinks</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VG_LargeFermentingBarrel" or defName="CPD_DrinksTable"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    VGP Garden Gourmet
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Garden Drinks</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VG_SaltMine" or defName="ElectricGrindStone" or defName="GrindStone" or defName="CookingTools" or defName="CandyTable" or defName="FueledCandyTable" or defName="Canningstove" or defName="HandCanningstove" or defName="ElectricOven" or defName="Oven"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    VGP Garden Tools
+    ==========-->
+
+    <!--Move items to Husbandry tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Garden Tools</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--SunLamps, Diggingspot (which is in the lamps .xml for some reason...), Hydroponics, Planters-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="VG_LampBase" or defName="VG_DiggingSpot" or defName="Planterbox" or defName="ModularPlanterbox" or defName="ADV_ModularPlanterbox" or defName="ModularFlowerbox" or defName="ModularHydroponicsBasin" or defName="ADVHydroponicsBasin" or defName="ADVModularHydroponicsBasin" or defName="VG_Composterbox"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </li>
+                <!--Soil-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/TerrainDef[defName="VG_PlaceSoil" or defName="VG_ReclaimSoil" or defName="VG_ReclaimMud" or defName="VG_ReclaimWater" or defName="VG_GardenSoil" or defName="VG_PlowSoil"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    VGP Soylent Production
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Soylent Production</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="soylenttable"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Wall Light
+    ==========-->
+
+    <!--Move items to Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Wall Light</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[@Name="MURWallLightVIIBase"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Lighting</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Wall Sun Lamp
+    ==========-->
+
+    <!--Move items to Husbandry tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Wall Sun Lamp</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="WSLWallSunLamp"]</xpath>
+            <value>
+                <designationCategory>DZ_Husbandry</designationCategory>
+            </value>
+        </match>
+    </Operation>
 
 
 
