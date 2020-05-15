@@ -1,0 +1,271 @@
+<Patch>
+   <!--This file will contain all patches that remove Designation Categories for Vanilla and Mods-->
+
+   <!--==========
+    VANILLA
+    ==========-->
+
+   <!--Animals Designation Category removal, if mods not found. #animalbeds-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Large Animal Beds</li>
+         <li>【1.1】Animalstrawbed</li>
+         <li>[sd] Chicken Nest (Continued)</li>
+         <li>RIMkea</li>
+      </mods>
+      <nomatch Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="DZ_Animals"]</xpath>
+      </nomatch>
+   </Operation>
+
+   <!--Fences Designation Category removal, if mods not found. #fence-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Architect Expanded - Fences</li>
+         <li>Architect Expanded - Fences (Tab Patch)</li>
+         <li>Extended Woodworking</li>
+         <li>Gloomy Vanilla</li>
+         <li>Gloomy Vanilla Overhaul</li>
+         <li>Fences And Floors</li>
+         <li>Fences And No Floors</li>
+         <li>DDA Security and More</li>
+         <li>Lord of the Rims - Elves</li>
+      </mods>
+      <nomatch Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="DZ_Fences"]</xpath>
+      </nomatch>
+   </Operation>
+
+   <!--Industrial Designation Category removal, if mods not found. #industrial-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Industrial Rollers</li>
+         <li>Rimefeller</li>
+         <li>Rimatomics</li>
+      </mods>
+      <nomatch Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="DZ_Industrial"]</xpath>
+      </nomatch>
+   </Operation>
+
+   <!--Storage Designation Category removal, if mods found. #storage-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>LWM's Deep Storage</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="DZ_Storage"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Alpha Biomes
+    ==========-->
+
+   <!--AB_AlphaBiomesBuildings Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Alpha Biomes</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="AB_AlphaBiomesBuildings"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Architect Expanded - Fences
+    ==========-->
+
+   <!--ArchitectExpandedFence Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Architect Expanded - Fences (Tab Patch)</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="ArchitectExpandedFence"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Centralized Climate Control
+    ==========-->
+
+   <!--CentralClimateControl Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Centralized Climate Control (Continued)</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="CentralClimateControl"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Dubs Skylights
+    ==========-->
+
+   <!--skylights Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Dubs Skylights</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="skylights"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Glowstone
+    ==========-->
+
+   <!--GLO_Glowstone Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Glowstone</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="GLO_Glowstone"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Preemptive Strike
+    ==========-->
+
+   <!--PES_Reconnaissance Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Preemptive Strike (v1.1 Fork)</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="PES_Reconnaissance"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Rimatomics
+    ==========-->
+
+   <!--Rimatomics Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Rimatomics</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="Rimatomics"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    RimBees
+    ==========-->
+
+   <!--RB_Bees Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>RimBees</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="RB_Bees"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Rimefeller
+    ==========-->
+
+   <!--Rimefeller Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Rimefeller</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="Rimefeller"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    RIMkea
+    ==========-->
+
+   <!--RIMkea Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>RIMkea</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/designationCategoryDef[defName="RIMkea"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    RimPlas
+    ==========-->
+
+   <!--RimPlas_FurnDesig Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>RimPlas</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="RimPlas_FurnDesig"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Smokeleaf Industry Reborn
+    ==========-->
+
+   <!--MSI Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Smokeleaf Industry Reborn</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="MSI"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Storage Solutions
+    ==========-->
+
+   <!--CCP_StorageSolutions Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Storage Solutions</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="CCP_StorageSolutions"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Vanilla Furniture Expanded
+    ==========-->
+
+   <!--AOMorefurniture Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Furniture Expanded</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="AOMorefurniture"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    VGP Garden Tools
+    ==========-->
+
+   <!--GardenTools Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>VGP Garden Tools</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="GardenTools"]</xpath>
+      </match>
+   </Operation>
+
+</Patch>

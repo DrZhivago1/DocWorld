@@ -1,0 +1,49 @@
+﻿<Patch>
+  <!--This file will contain all patches that replace/change textures for Vanilla and Mods-->
+
+  <!--==========
+    Better Coolers
+    ==========-->
+
+  <!--New art assets applied:  Newer cooler graphic from RedistHeat-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>BetterCoolers</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Cooler"]/graphicData/texPath</xpath>
+      <value>
+        <texPath>Better_Coolers/CoolerZ</texPath>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Fish Industry
+    ==========-->
+
+  <!--New art assets applied: FishingPier x6, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>FishIndustry</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="FishingPier"]/graphicData</xpath>
+      <value>
+        <graphicData>
+          <texPath>FishingIndustry/FishingPier</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>CutoutComplex</shaderType>
+          <drawSize>(1.5,3.5)</drawSize>
+          <damageData>
+            <cornerTL>Damage/Corner</cornerTL>
+            <cornerTR>Damage/Corner</cornerTR>
+            <cornerBL>Damage/Corner</cornerBL>
+            <cornerBR>Damage/Corner</cornerBR>
+          </damageData>
+        </graphicData>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

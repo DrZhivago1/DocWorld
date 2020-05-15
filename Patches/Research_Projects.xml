@@ -1,0 +1,82 @@
+﻿<Patch>
+  <!--This file will contain all patches that replace/change research requirements for Vanilla and Mods-->
+
+  <!--==========
+    Glass+Lights
+    ==========-->
+
+  <!--Disallow lights until electricity is researched-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="GLCeilingLamp" or defName="GLCeilingLamp_Red" or defName="GLCeilingLamp_Blue" or defName="GLCeilingLamp_Green" or defName="GLCeilingLamp_Violet" or defName="GLCeilingLamp_Yellow" or defName="GLCeilingLamp_Orange"]/researchPrerequisites/li[.="Electricity"]</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="GLCeilingLamp" or defName="GLCeilingLamp_Red" or defName="GLCeilingLamp_Blue" or defName="GLCeilingLamp_Green" or defName="GLCeilingLamp_Violet" or defName="GLCeilingLamp_Yellow" or defName="GLCeilingLamp_Orange"]/researchPrerequisites</xpath>
+            <value>
+              <li>Electricity</li>
+            </value>
+          </nomatch>
+        </li>
+        <!--Remove Redundancies-->
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ResearchProjectDef[defName="ReinforcedGlassResearch"]/prerequisites/li[.=Electricity]</xpath>
+          <match Class="PatchOperationRemove">
+            <xpath>/Defs/ResearchProjectDef[defName="ReinforcedGlassResearch"]/prerequisites/Electricity</xpath>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--==========
+    High Tech Laboratory Facilities (Continued)
+    ==========-->
+
+  <!--Require Research for countertop-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>High Tech Laboratory Facilities (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="CounterTopModular"]/researchPrerequisites</xpath>
+          <success>Invert</success>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="CounterTopModular"]</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>ComplexFurniture</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--==========
+    RoofBomb
+    ==========-->
+
+  <!--Shaped Charges require IEDs-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RoofBomb</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ResearchProjectDef[defName="ShapedCharges"]/prerequisites</xpath>
+      <value>
+        <li>IEDs</li>
+      </value>
+    </match>
+  </Operation>
+
+
+</Patch>

@@ -1,0 +1,191 @@
+<Patch>
+  <!--This file will contain all patches that replace/change the visual location of Designation Categories in the architect menu for Vanilla and Mods-->
+
+  <!--==========
+    VANILLA
+    ==========-->
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Floors"]/order</xpath>
+        <value>
+          <order>700</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Furniture"]/order</xpath>
+        <value>
+          <order>600</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Power"]/order</xpath>
+        <value>
+          <order>500</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Production"]/order</xpath>
+        <value>
+          <order>400</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Joy"]/order</xpath>
+        <value>
+          <order>300</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Security"]/order</xpath>
+        <value>
+          <order>250</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Ship"]/order</xpath>
+        <value>
+          <order>200</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Structure"]/order</xpath>
+        <value>
+          <order>100</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Temperature"]/order</xpath>
+        <value>
+          <order>50</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Misc"]/order</xpath>
+        <value>
+          <order>25</order>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+
+  <!--==========
+    Colony Leadership
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Colony Leadership</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/DesignationCategoryDef[defName="LeadershipModTab"]/order</xpath>
+          <value>
+            <order>560</order>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--==========
+    Genetic Rim
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Genetic Rim</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="GR_GeneticsTab"]/order</xpath>
+      <value>
+        <order>596</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Gloomy Vanilla Overhaul
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Gloomy Vanilla Overhaul</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="OldStyleDeco"]/order</xpath>
+      <value>
+        <order>723</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    LWM's DEEP STORAGE
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>LWM's Deep Storage</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="LWM_DS_Storage"]/order</xpath>
+      <value>
+        <order>150</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    More Planning
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>More Planning</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="Planning"]/order</xpath>
+      <value>
+        <order>730</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Remote Tech
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Remote Tech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="rxRemoteTech"]/order</xpath>
+      <value>
+        <order>275</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Zen Garden
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Zen Garden</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="ZEN_Decoration"]/order</xpath>
+      <value>
+        <order>720</order>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

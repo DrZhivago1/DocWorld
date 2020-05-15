@@ -1,0 +1,34 @@
+<Patch>
+   <!--This file will contain all patches that replace/change item stuffability for Vanilla and Mods-->
+
+   <!--==========
+    VANILLA
+    ==========-->
+
+   <!--Butcher Table-->
+   <Operation Class="PatchOperationConditional">
+      <xpath>/Defs/ThingDef[defName = "TableButcher"]/stuffCategories/Stony</xpath>
+      <nomatch Class="PatchOperationAdd">
+         <xpath>/Defs/ThingDef[defName = "TableButcher"]/stuffCategories</xpath>
+         <value>
+            <li>Stony</li>
+         </value>
+      </nomatch>
+   </Operation>
+
+   <!--Vents-->
+   <Operation Class="PatchOperationConditional">
+      <xpath>/Defs/ThingDef[defName = "Vent"]/costList</xpath>
+      <match Class="PatchOperationReplace">
+         <xpath>/Defs/ThingDef[defName = "Vent"]/costList</xpath>
+         <value>
+            <costStuffCount>30</costStuffCount>
+            <stuffCategories>
+               <li>Metallic</li>
+               <li>Woody</li>
+            </stuffCategories>
+         </value>
+      </match>
+   </Operation>
+
+</Patch>

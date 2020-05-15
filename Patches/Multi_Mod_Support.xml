@@ -1,0 +1,2477 @@
+﻿<Patch>
+  <!--This file will contain all patches that replace/change items based off whether or not multiple mods are loaded-->
+
+  <!--==========
+    Ceramics {Expanded Woodworking, Fertile Fields, VFE-Production}
+    ==========-->
+
+  <!--Add fiber recipe to woodworking tables from Expanded Woodworking-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[1.1] Ceramics</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Expanded Woodworking</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="Make_FiberFromWood"]/recipeUsers</xpath>
+        <value>
+          <li>TableWoodworking</li>
+          <li>ElectricTableWoodworking</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add most recipes to RockMill from FF-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[1.1] Ceramics</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Fertile Fields [1.1]</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="Make_RawMudbricks" or defName="Make_RawBricks" or defName="Make_HardenedCeramic" or defName="Make_Wafer" or defName="Make_Porcelain"]/recipeUsers</xpath>
+        <value>
+          <li>RockMill</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add most recipes to VFE-Production electric stonecutter-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[1.1] Ceramics</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Furniture Expanded - Production</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="Make_RawMudbricks" or defName="Make_RawBricks" or defName="Make_HardenedCeramic" or defName="Make_Wafer" or defName="Make_Porcelain"]/recipeUsers</xpath>
+        <value>
+          <li>VFE_TableStonecutterElectric</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Change Dresser {GloomyFurniture, Lord of the Rims - Elves *not yet 1.0*, Medieval Times Unofficial, Polyamory Beds (Vanilla Edition), RIMkea, [sd] Goodnight (Continued)}
+    ==========-->
+
+  <!--Allow Gloomy Furniture beds to use Change Dresser and Mirror-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] Change Dresser - 1.1</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>GloomyFurniture</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "RGK_bedSingle" or defName = "RGK_bedSingleB" or defName = "RGK_bedDouble" or defName = "RGK_bedDoubleB"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+              <li>ChangeDresser</li>
+              <li>ChangeMirror</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Allow LotRE beds to use Change Dresser and Mirror-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] Change Dresser - 1.1</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Lord of the Rims - Elves</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "LotRE_ElvenRoyalBed" or defName = "LotRE_ElvenBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+              <li>ChangeDresser</li>
+              <li>ChangeMirror</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Allow Medieval Times beds to use Change Dresser and Mirror-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] Change Dresser - 1.1</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Medieval Times Unofficial Update</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "MedTimes_Cot" or defName = "MedTimes_CotDouble"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+              <li>ChangeDresser</li>
+              <li>ChangeMirror</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Allow Polyamory Beds to use Change Dresser and Mirror-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] Change Dresser - 1.1</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Polyamory Beds (Vanilla Edition)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "TripleBed" or defName = "QuadBed" or defName = "TripleRoyalBed" or defName = "QuadRoyalBed" or defName = "PentaRoyalBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+              <li>ChangeDresser</li>
+              <li>ChangeMirror</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Allow RIMkea beds to use Change Dresser and Mirror-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] Change Dresser - 1.1</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>RIMkea</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "PILFURBed" or defName = "SNOREGGSingle" or defName = "SNOREGGDouble" or defName = "KRUDNEPPSingle" or defName = "SLABNEPPDouble"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+              <li>ChangeDresser</li>
+              <li>ChangeMirror</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Allow [sd]Goodnight beds to use Change Dresser and Mirror-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[KV] Change Dresser - 1.1</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[sd] Goodnight (Continued)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "sd_basebed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+            <value>
+              <li>ChangeDresser</li>
+              <li>ChangeMirror</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Cupro's Stones {Simple Chains: Steel, RIMkea, MBS Faux Rock Wall, Simply More Bridges}
+    ==========-->
+
+  <!--Chunks are buildable-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[1.1] Cupro's Stones</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Steel</li>
+        <li>RIMkea</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!--Add shared stats to Cupro's Stone Bases-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[@Name = "STN_NormalChunkBase" or @Name = "STN_GraniticChunkBase" or @Name = "STN_SmoothChunkBase" or @Name = "STN_MarbledChunkBase" or @Name = "STN_BandedChunkBase"]</xpath>
+            <value>
+              <resourceReadoutPriority>Middle</resourceReadoutPriority>
+              <stuffProps>
+                <categories>
+                  <li>Chunky</li>
+                </categories>
+                <statOffsets>
+                  <WorkToBuild>140</WorkToBuild>
+                </statOffsets>
+                <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+                <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+                <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Claystone-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkClaystone"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(228, 188, 147)</color>
+                <stuffAdjective>claystone</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.4</MarketValue>
+                  <MaxHitPoints>1.4</MaxHitPoints>
+                  <WorkToBuild>4.8</WorkToBuild>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Andesite-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkAndesite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(155, 164, 166)</color>
+                <stuffAdjective>andesite</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.5</MarketValue>
+                  <MaxHitPoints>1.7</MaxHitPoints>
+                  <WorkToBuild>4.8</WorkToBuild>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Syenite-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkSyenite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(186, 126, 121)</color>
+                <stuffAdjective>syenite</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.35</Beauty>
+                  <MarketValue>0.45</MarketValue>
+                  <MaxHitPoints>1.2</MaxHitPoints>
+                  <WorkToBuild>5.5</WorkToBuild>
+                  <WorkToMake>1.15</WorkToMake>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Gneiss-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkGneiss"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(146, 138, 104)</color>
+                <stuffAdjective>gneiss</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.5</MarketValue>
+                  <MaxHitPoints>1.7</MaxHitPoints>
+                  <WorkToBuild>4.8</WorkToBuild>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Quartzite-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkQuartzite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(155, 156, 160)</color>
+                <stuffAdjective>quartzite</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.1</Beauty>
+                  <MarketValue>0.4</MarketValue>
+                  <MaxHitPoints>1.4</MaxHitPoints>
+                  <WorkToBuild>5.0</WorkToBuild>
+                  <WorkToMake>1.1</WorkToMake>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Schist-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkSchist"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(105, 124, 102)</color>
+                <stuffAdjective>schist</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.1</Beauty>
+                  <MarketValue>0.4</MarketValue>
+                  <MaxHitPoints>1.4</MaxHitPoints>
+                  <WorkToBuild>5.0</WorkToBuild>
+                  <WorkToMake>1.1</WorkToMake>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Gabbro-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkGabbro"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(122, 122, 122)</color>
+                <stuffAdjective>gabbro</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.5</MarketValue>
+                  <MaxHitPoints>1.7</MaxHitPoints>
+                  <WorkToBuild>5.25</WorkToBuild>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Diorite-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkDiorite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(204, 204, 204)</color>
+                <stuffAdjective>diorite</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.35</Beauty>
+                  <MarketValue>0.45</MarketValue>
+                  <MaxHitPoints>1.2</MaxHitPoints>
+                  <WorkToBuild>5.5</WorkToBuild>
+                  <WorkToMake>1.15</WorkToMake>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Dunite-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkDunite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(154, 162, 126)</color>
+                <stuffAdjective>dunite</stuffAdjective>
+                <statFactors>
+                  <MarketValue>0.4</MarketValue>
+                  <MaxHitPoints>1.55</MaxHitPoints>
+                  <WorkToBuild>4.5</WorkToBuild>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+          <!--Pegmatite-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "ChunkPegmatite"]</xpath>
+            <value>
+              <stuffProps>
+                <color>(201, 150, 115)</color>
+                <stuffAdjective>pegmatite</stuffAdjective>
+                <statFactors>
+                  <Beauty>1.1</Beauty>
+                  <MarketValue>0.38</MarketValue>
+                  <MaxHitPoints>1.3</MaxHitPoints>
+                  <WorkToBuild>4.5</WorkToBuild>
+                </statFactors>
+              </stuffProps>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Use the same rock texture as Cupro's Stones-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[1.1] Cupro's Stones</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>MBS Faux Rock Wall</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[@Name="FauxRockWall"]/graphicData/texPath</xpath>
+            <value>
+              <texPath>Cupro/Object/Structure/RockFlecked_Atlas</texPath>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add Cupro's Stones to bridge types-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[1.1] Cupro's Stones</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simply More Bridges</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!--Add new bridges-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <!-- Claystone Deep water and Heavy bridge -->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeClaystone</defName>
+                <label>claystone deep water bridge</label>
+                <color>(228,188,147)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksClaystone>17</BlocksClaystone>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeClaystone</defName>
+                <label>claystone bridge</label>
+                <color>(228,188,147)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksClaystone>10</BlocksClaystone>
+                </costList>
+              </TerrainDef>
+              <!-- Andesite Deep water and Heavy bridge -->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeAndesite</defName>
+                <label>andesite deep water bridge</label>
+                <color>(155,164,166)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksAndesite>17</BlocksAndesite>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeAndesite</defName>
+                <label>andesite bridge</label>
+                <color>(155,164,166)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksAndesite>10</BlocksAndesite>
+                </costList>
+              </TerrainDef>
+              <!-- Syenite Deep water and Heavy bridge -->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeSyenite</defName>
+                <label>syenite deep water bridge</label>
+                <color>(186, 126, 121)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksSyenite>17</BlocksSyenite>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeSyenite</defName>
+                <label>syenite bridge</label>
+                <color>(186, 126, 121)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksSyenite>10</BlocksSyenite>
+                </costList>
+              </TerrainDef>
+              <!-- Gneiss Deep water and Heavy bridge -->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeGneiss</defName>
+                <label>gneiss deep water bridge</label>
+                <color>(146, 138, 104)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksGneiss>17</BlocksGneiss>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeGneiss</defName>
+                <label>gneiss bridge</label>
+                <color>(146, 138, 104)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksGneiss>10</BlocksGneiss>
+                </costList>
+              </TerrainDef>
+              <!-- Quartzite Deep water and Heavy bridge -->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeQuartzite</defName>
+                <label>quartzite deep water bridge</label>
+                <color>(155, 156, 160)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksQuartzite>17</BlocksQuartzite>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeQuartzite</defName>
+                <label>quartzite bridge</label>
+                <color>(155, 156, 160)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksQuartzite>10</BlocksQuartzite>
+                </costList>
+              </TerrainDef>
+              <!-- Schist Deep water and Heavy bridge -->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeSchist</defName>
+                <label>schist deep water bridge</label>
+                <color>(105, 124, 102)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksSchist>17</BlocksSchist>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeSchist</defName>
+                <label>schist bridge</label>
+                <color>(105, 124, 102)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksSchist>10</BlocksSchist>
+                </costList>
+              </TerrainDef>
+              <!-- Gabbro Deep water and Heavy bridge -->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeGabbro</defName>
+                <label>gabbro deep water bridge</label>
+                <color>(122, 122, 122)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksGabbro>17</BlocksGabbro>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeGabbro</defName>
+                <label>gabbro bridge</label>
+                <color>(122, 122, 122)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksGabbro>10</BlocksGabbro>
+                </costList>
+              </TerrainDef>
+              <!-- Diorite Deep water and Heavy bridge -->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeDiorite</defName>
+                <label>diorite deep water bridge</label>
+                <color>(204, 204, 204)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksDiorite>17</BlocksDiorite>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeDiorite</defName>
+                <label>diorite bridge</label>
+                <color>(204, 204, 204)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksDiorite>10</BlocksDiorite>
+                </costList>
+              </TerrainDef>
+              <!-- Dunite Deep water and Heavy bridge -->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeDunite</defName>
+                <label>dunite deep water bridge</label>
+                <color>(154, 162, 126)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksDunite>17</BlocksDunite>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgeDunite</defName>
+                <label>dunite bridge</label>
+                <color>(154, 162, 126)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksDunite>10</BlocksDunite>
+                </costList>
+              </TerrainDef>
+              <!-- Pegmatite Deep water and Heavy bridge -->
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgePegmatite</defName>
+                <label>pegmatite deep water bridge</label>
+                <color>(201, 150, 115)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <BlocksPegmatite>17</BlocksPegmatite>
+                </costList>
+              </TerrainDef>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>HeavyBridgePegmatite</defName>
+                <label>pegmatite bridge</label>
+                <color>(201, 150, 115)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <BlocksPegmatite>10</BlocksPegmatite>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    DDA Security and More {Fences And Floors (Continued), Fences And No Floors}
+    ==========-->
+
+  <!--If fence mods installed, remove research. In either instance of mods loaded or not, move items to Fences tab.-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>DDA Security and More (Continued)</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Fences And Floors (Continued)</li>
+        <li>Fences And No Floors</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ResearchProjectDef[defName="Fences"]</xpath>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Fence"]/researchPrerequisites</xpath>
+            <value>
+              <researchPrerequisites>
+                <li>Machining</li>
+              </researchPrerequisites>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Fence"]/designationCategory</xpath>
+            <value>
+              <designationCategory>DZ_Fences</designationCategory>
+            </value>
+          </li>
+        </operations>
+      </match>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Fence"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Fences</designationCategory>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--==========
+    Expanded Woodworking {Simple Chains: Leather, Survivalist's Additions}
+    ==========-->
+
+  <!--Allow Tanning Liquor to use Logs instead of Lumber-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Woodworking</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Leather</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromWood"]/ingredients/li/filter</xpath>
+            <value>
+              <filter>
+                <categories>
+                  <li>WoodTypes</li>
+                </categories>
+              </filter>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="Owl_MakeTanningLiquorFromWood"]/fixedIngredientFilter</xpath>
+            <value>
+              <fixedIngredientFilter>
+                <categories>
+                  <li>WoodTypes</li>
+                </categories>
+              </fixedIngredientFilter>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Enables building with the wood types from "Expanded Woodworking" on the buildings from "Survivalist's Additions".-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Woodworking</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Survivalist's Additions</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!--if costlist is woodlog but now is RawWoody-->
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName = "SRV_TableSimple" or defName = "SRV_StumpChair" or @Name="CampTableBase"]/costList/WoodLog</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName = "SRV_TableSimple" or defName = "SRV_StumpChair" or @Name="CampTableBase"]/constructEffect</xpath>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "SRV_TableSimple" or defName = "SRV_StumpChair" or @Name="CampTableBase"]</xpath>
+            <value>
+              <stuffCategories>
+                <li>RawWoody</li>
+              </stuffCategories>
+            </value>
+          </li>
+          <!--if stuff already woody but now is RawWoody-->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName = "SRV_ShelterDoor" or defName = "SRV_WallShelter" or defname = "SRV_VinegarBarrel" or defName="SRV_ShelterHeater" or defName="SRV_Snare"]/stuffCategories/li[.="Woody"]</xpath>
+            <value>
+              <li>RawWoody</li>
+            </value>
+          </li>
+          <!--costStuffCount adjusts-->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName = "SRV_TableSimple" or defName = "SRV_ShelterHeater"]/costStuffCount</xpath>
+            <value>
+              <costStuffCount>5</costStuffCount>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName = "SRV_StumpChair" or defName = "SRV_ShelterDoor"]/costStuffCount</xpath>
+            <value>
+              <costStuffCount>3</costStuffCount>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[@Name="CampTableBase"]</xpath>
+            <value>
+              <costStuffCount>7</costStuffCount>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName = "SRV_WallShelter"]/costStuffCount</xpath>
+            <value>
+              <costStuffCount>1</costStuffCount>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName = "SRV_VinegarBarrel" or defName = "SRV_Snare"]/costStuffCount</xpath>
+            <value>
+              <costStuffCount>15</costStuffCount>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Extended Storage {Base, Rim Cuisine 2, Rim of Madness - Bones}
+    ==========-->
+
+  <!--Base-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Extended Storage</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+            <value>
+              <li>Chocolate</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter</xpath>
+            <value>
+              <thingDefs>
+                <li>Chocolate</li>
+              </thingDefs>
+            </value>
+          </nomatch>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--Rim Cuisine 2-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Extended Storage</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[1.0, 1.1] RimCuisine 2 Core</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Storage_Basket"]/building/fixedStorageSettings/filter/categories</xpath>
+            <value>
+              <li>RC2_FoodProcessed</li>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/categories</xpath>
+            <value>
+              <li>RC2_FoodMealsJoy</li>
+              <li>RC2_DrinkMealsJoy</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Rim of Madness - Bones-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Extended Storage</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Rim of Madness - Bones</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Storage_Basket"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+            <value>
+              <li>ROMB_Marrow</li>
+            </value>
+          </li>
+          <li Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+            <match Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+              <value>
+                <li>ROMB_Gelatin</li>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="Storage_TrayRack"]/building/fixedStorageSettings/filter</xpath>
+              <value>
+                <thingDefs>
+                  <li>ROMB_Gelatin</li>
+                </thingDefs>
+              </value>
+            </nomatch>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Fantastic Decor {Base, Gloomy Furniture}
+    ==========-->
+
+  <!--Move Fantastic Decor decor to Gloomy decoration category or furniture if Gloomy is not found-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Fantastic Decor</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>GloomyFurniture</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Bonzai" or defName="BonzaiTree" or defName="BonzaiFlower" or defName="Ferris" or defName="MiniBirch" or defName="MiniBroach" or defName="MiniMangrove" or defName="MiniMuhly" or defName="MiniPine" or defName="MiniPoplar" or defName="MiniSaguaro"]/designationCategory</xpath>
+            <value>
+              <designationCategory>OldStyleDeco</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/DesignationCategoryDef[defName="FantasticDecor"]</xpath>
+          </li>
+        </operations>
+      </match>
+      <nomatch Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Bonzai" or defName="BonzaiTree" or defName="BonzaiFlower" or defName="Ferris" or defName="MiniBirch" or defName="MiniBroach" or defName="MiniMangrove" or defName="MiniMuhly" or defName="MiniPine" or defName="MiniPoplar" or defName="MiniSaguaro"]/designationCategory</xpath>
+            <value>
+              <designationCategory>Furniture</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/DesignationCategoryDef[defName="FantasticDecor"]</xpath>
+          </li>
+        </operations>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--==========
+    Floored {Simply More Bridges (Continued)}
+    ==========-->
+
+  <!--Makes the bridges from Simply More Bridges match the floored tiled texture-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Floored [1.0+]</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simply More Bridges (Continued)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[@Name="DeepWaterBridgeStoneBase" or @Name="HeavyBridgeStoneBase"]/texturePath</xpath>
+            <value>
+              <texturePath>TileStone</texturePath>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[@Name="DeepWaterBridgeMetalBase" or @Name="HeavyBridgeMetalBase"]/texturePath</xpath>
+            <value>
+              <texturePath>GenericFloorTile</texturePath>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Glass+Lights {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module}
+    ==========-->
+
+  <!--Use glass from "Glass+Lights" if "Dubs Skylights" also installed. Also removes "Dubs Skylights" glass resource.-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Dubs Skylights</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SkyLightA"]/costList</xpath>
+            <value>
+              <costList>
+                <Glass>2</Glass>
+              </costList>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SkyLightB"]/costList</xpath>
+            <value>
+              <costList>
+                <Glass>10</Glass>
+              </costList>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SkyLightC" or defName="SkyLightD"]/costList</xpath>
+            <value>
+              <costList>
+                <Glass>6</Glass>
+              </costList>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="GlassPane"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/RecipeDef[defName="SmeltGlass"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Hide outdoor lamp from Glass+Lights until solar lamp from VFE-SM is researched, and dropdown edits-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Furniture Expanded - Spacer Module</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!--Hide behind research-->
+          <li Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[@Name="GlassLightBase"]/researchPrerequisites</xpath>
+            <match Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[@Name="GlassLightBase"]/researchPrerequisites</xpath>
+              <value>
+                <li>SpacerElectronics</li>
+              </value>
+            </match>
+          </li>
+          <!--Add to a dropdown designator to show similar type of lighting-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <DesignatorDropdownGroupDef>
+                <defName>DZ_GL_VFESM</defName>
+              </DesignatorDropdownGroupDef>
+            </value>
+          </li>
+          <li Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="Spacer_OutdoorLamp" or defName="OutdoorGroundLamp"]/designatorDropdown</xpath>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="Spacer_OutdoorLamp" or defName="OutdoorGroundLamp"]</xpath>
+              <value>
+                <designatorDropdown>DZ_GL_VFESM</designatorDropdown>
+              </value>
+            </nomatch>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Gloomy Vanilla Overhaul {LWM's Deep Storage, Gloomy Extra - Kitchen}
+    ==========-->
+
+  <!--Gloomy storage furniture to "Storage" designation category, with conditional if "LWM Deep Storage" is installed. #storage-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Gloomy Vanilla Overhaul</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="RKGWineRackB" or defName="WardrobeA" or defName="GL_Cupboard" or defName="RGK_Manger" or defName="GL_Locker" or defName="RGK_DogBowl"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Storage</designationCategory>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--If Gloomy Extra - Kitchen installed, furniture to "Culinary" designation category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Gloomy Vanilla Overhaul</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Gloomy Extra - Kitchen</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SM_Sink"]/designationCategory</xpath>
+            <value>
+              <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="SM_KitchenCupboard_A" or defName="SM_KitchenCupboard_B" or defName="SM_KitchenCupboard_C" or defName="SM_ButcherShelf" or defName="SM_CornerIRD"]</xpath>
+            <value>
+              <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Harvest Organs Post Mortem {Alpha Animals, VGP Garden Medicine}
+    ==========-->
+
+  <!--Remove Alpha Animals Cactipine Quill from Harvest recipes-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Harvest Organs Post Mortem</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Alpha Animals</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <value>
+              <li>AA_CactipineQuill</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Remove most VGP Garden Medicine from Harvest recipes-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Harvest Organs Post Mortem</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>VGP Garden Medicine</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="AutopsyBasic" or defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <value>
+              <li>VG_antibiotics</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="AutopsyAdvanced" or defName="AutopsyGlitterworld"]/fixedIngredientFilter/disallowedThingDefs</xpath>
+            <value>
+              <li>Bandagekit</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Medical Training {Thanks For All The Fish}
+    ==========-->
+
+  <!--Remove Fish from training bench-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medical Training</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Thanks For All The Fish</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="IF_MedTable"]/fixedIngredientFilter/disallowedCategories</xpath>
+            <value>
+              <disallowedCategories>
+                <li>CorpsesFish</li>
+                <li>CorpsesMechanoid</li>
+                <li>CorpsesAnimal</li>
+              </disallowedCategories>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    [T] MoreFloors {Stuffed Floors}
+    ==========-->
+
+  <!--Move floors if no "Stuffed Floors" installed-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[T] MoreFloors</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Stuffed Floors</li>
+      </mods>
+      <nomatch Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[@Name="FloorBaseCarpetCheck" or @Name="FloorBaseCarpetWool" or @Name="FloorPlasteel" or @Name="FloorStraw" or @Name="FloorJade"  or @Name="FloorBaseStone"  or @Name="FloorBaseWood"]/designationCategory</xpath>
+            <value>
+              <designationCategory>Floors</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/designationCategoryDef[defName="MoreFloors"]</xpath>
+          </li>
+        </operations>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--==========
+    Repair Workbench {[LC] Survival Tools}
+    ==========-->
+
+  <!--Add survival tools to repair workbench-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Repair Workbench</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[LC] Survival Tools</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="RepairItemWeapon"]/ingredients/li/filter/categories</xpath>
+            <value>
+              <li>SurvivalTools</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="RepairItemWeapon"]/fixedIngredientFilter/categories</xpath>
+            <value>
+              <li>SurvivalTools</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    RIMkea {Stuffed Floors}
+    ==========-->
+
+  <!--Remove stone floors added by "RIMKea" IF "Stuffed Floors" is installed-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RIMkea</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Stuffed Floors</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[@Name="RIKStoneFloorBase"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[@Name="RIKStoneFloor"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[defName="Floor_StoneSquaresSandstone"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[defName="Floor_StoneSquaresGranite"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[defName="Floor_StoneSquaresLimestone"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[defName="Floor_StoneSquaresSlate"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[defName="Floor_StoneSquaresMarble"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Rim of Madness - Bones {Stuffed Floors}
+    ==========-->
+
+  <!--Moves Floors into a single designation tile IF you have "Stuffed Floors"-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Rim of Madness - Bones</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Stuffed Floors</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!--Remove RoM-B floors-->
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[defName="BoneFloor"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[defName="BoneFloor_Blackened"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[defName="BoneChinaFloor"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[defName="BoneFloor_Ashen"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[defName="BoneFloor_Tile"]</xpath>
+          </li>
+          <!--Add new designation class and re-add new bone floors/restructure them-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <DesignatorDropdownGroupDef>
+                <defName>Floor_Bones</defName>
+              </DesignatorDropdownGroupDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef Name="RoMBonesFloorBase" Abstract="True">
+                <layerable>true</layerable>
+                <affordances>
+                  <li>Light</li>
+                  <li>Medium</li>
+                  <li>Heavy</li>
+                </affordances>
+                <designationCategory>Floors</designationCategory>
+                <fertility>0</fertility>
+                <constructEffect>ConstructDirt</constructEffect>
+                <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+                <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+              </TerrainDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="RoMBonesFloorBase" Name="RoMBonesFloor" Abstract="True">
+                <description>Bones for your flooring pleasure. Fast to walk on, neutral in looks.</description>
+                <texturePath>Terrain/Surfaces/BoneFloor</texturePath>
+                <designatorDropdown>Floor_Bones</designatorDropdown>
+                <statBases>
+                  <WorkToBuild>85</WorkToBuild>
+                  <Beauty>0</Beauty>
+                </statBases>
+                <edgeType>Hard</edgeType>
+                <renderPrecedence>250</renderPrecedence>
+                <resourcesFractionWhenDeconstructed>0.33</resourcesFractionWhenDeconstructed>
+              </TerrainDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="RoMBonesFloor">
+                <defName>BoneFloor</defName>
+                <label>bone floor</label>
+                <color>(175,175,175)</color>
+                <costList>
+                  <BoneItem>5</BoneItem>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="RoMBonesFloor">
+                <defName>BoneFloor_Blackened</defName>
+                <label>bone floor (blackened)</label>
+                <texturePath>Terrain/Surfaces/BoneFloor_Blackened</texturePath>
+                <color>(175,175,175)</color>
+                <costList>
+                  <BoneItem>5</BoneItem>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="RoMBonesFloor">
+                <defName>BoneChinaFloor</defName>
+                <label>bone china floor</label>
+                <description>Hardened bone china tiles. Pretty, but labor and material-intensive.</description>
+                <texturePath>Terrain/Surfaces/BoneChinaFloor</texturePath>
+                <color>(170,170,170)</color>
+                <renderPrecedence>240</renderPrecedence>
+                <statBases>
+                  <Beauty>2</Beauty>
+                  <WorkToBuild>500</WorkToBuild>
+                </statBases>
+                <costList>
+                  <BoneChina>5</BoneChina>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="RoMBonesFloor">
+                <defName>BoneFloor_Ashen</defName>
+                <label>bone floor (ash)</label>
+                <description>Hardened bone floors paved with ashes. Somewhat pretty, but labor and material-intensive.</description>
+                <texturePath>Terrain/Surfaces/BoneFloor_Ash</texturePath>
+                <color>(170,170,170)</color>
+                <renderPrecedence>240</renderPrecedence>
+                <statBases>
+                  <Beauty>1</Beauty>
+                  <WorkToBuild>300</WorkToBuild>
+                </statBases>
+                <costList>
+                  <BoneItem>3</BoneItem>
+                  <BoneChina>2</BoneChina>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="RoMBonesFloor">
+                <defName>BoneFloor_Tile</defName>
+                <label>bone tile</label>
+                <description>Bone tiles, hardened together and polished. Pretty, but labor and material-intensive.</description>
+                <texturePath>Terrain/Surfaces/BoneFloor_Tile</texturePath>
+                <color>(170,170,170)</color>
+                <renderPrecedence>240</renderPrecedence>
+                <statBases>
+                  <WorkToBuild>700</WorkToBuild>
+                  <Beauty>3</Beauty>
+                </statBases>
+                <costList>
+                  <BoneChina>7</BoneChina>
+                </costList>
+                <constructEffect>ConstructMetal</constructEffect>
+              </TerrainDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    RimOverhaul {Simple Chains: Leather}
+    ==========-->
+
+  <!--Fix compatibility with RimOverhaul and Simple Chains: Leather-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RimOverhaul</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Leather</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/MapGenerator.BaseBlueprintDef/buildingLegend//Stuff//key[contains(.,'Leather_Bear')]</xpath>
+            <value>
+              <key>Prepared_Hide_Thick</key>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/MapGenerator.BaseBlueprintDef/buildingLegend//Stuff//key[contains(.,'Leather_')]</xpath>
+            <value>
+              <key>Prepared_Hide_Plain</key>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/MapGenerator.BaseBlueprintDef/itemLegend//Thing[contains(.,'Leather_')]</xpath>
+            <value>
+              <Thing>Prepared_Hide_Plain</Thing>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/MapGeneratorBlueprints.MapGenerator.MapGeneratorDef/MapData//Stuff[contains(.,'Leather_')]</xpath>
+            <value>
+              <Stuff>Prepared_Hide_Plain</Stuff>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/MapGeneratorBlueprints.MapGenerator.MapGeneratorDef/MapData//Thing[contains(.,'Leather_')]</xpath>
+            <value>
+              <Thing>Prepared_Hide_Plain</Thing>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    RimPlas {Insulation, LWM's Deep Storage}
+    ==========-->
+
+  <!--Move insulated items to Insulation designation category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RimPlas</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Insulation</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="RTPDoorSimple" or defName="RTPAutodoor" or defName="RTPInsulatedWall" or @Name="RTPInsulatorBuildingBase"]/designationCategory</xpath>
+            <value>
+              <designationCategory>Insulation_Desig</designationCategory>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Do not move items to custom designation category. #storage-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RimPlas</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <nomatch Class="PatchOperationSequence">
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="RimPlas_DrugCabinet" or defName="RimPlas_Shelf" or defName="RimPlas_Rack"]</xpath>
+            <value>
+              <designationCategory>DZ_Storage</designationCategory>
+            </value>
+          </li>
+        </operations>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--==========
+    Simple Chains: Leather {Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest}
+    ==========-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Leather</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Expanded — Arid Shrubland</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!-- Replace leather drops with generics where appropriate -->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef/race/leatherDef[text()="AEXP_Leather_Wildebeest" or text()="AEXP_Leather_Hippopotamus"]</xpath>
+            <value>
+              <leatherDef>Hide_Thick</leatherDef>
+            </value>
+          </li>
+          <!-- Remove unused leather -->
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="AEXP_Leather_Wildebeest"]/*/..
+            | /Defs/ThingDef[defName="AEXP_Leather_Hippopotamus"]/*/..</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Leather</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Expanded — Desert</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!-- Replace leather drops with generics where appropriate -->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef/race/leatherDef[text()="AEXP_Leather_Lion"]</xpath>
+            <value>
+              <leatherDef>Hide_Plain</leatherDef>
+            </value>
+          </li>
+          <!-- Remove unused leather -->
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="AEXP_Leather_Lion"]/*/..</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Leather</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Expanded — Ice Sheet</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!-- Replace leather drops with generics where appropriate -->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef/race/leatherDef[text()="AEXP_Leather_Pinniped"]</xpath>
+            <value>
+              <leatherDef>Hide_Thick</leatherDef>
+            </value>
+          </li>
+          <!-- Remove unused leather -->
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="AEXP_Leather_Pinniped"]/*/..</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Leather</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Expanded — Tropical Rainforest</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!-- add the new hides -->
+          <li Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+              <ThingDef ParentName="HideBase">
+                <defName>Hide_Tiger</defName>
+                <label>tiger hide</label>
+                <graphicData>
+                  <color>(197,154,99)</color>
+                </graphicData>
+              </ThingDef>
+            </value>
+          </li>
+          <!-- apply the new hides -->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef/race/leatherDef[text()="AEXP_Leather_Tiger"]</xpath>
+            <value>
+              <leatherDef>Hide_Tiger</leatherDef>
+            </value>
+          </li>
+          <!-- add the prepared hides -->
+          <li Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+              <ThingDef ParentName="PreparedHideBase">
+                <defName>Prepared_Hide_Tiger</defName>
+                <label>prepared tiger hide</label>
+                <graphicData>
+                  <color>(197,154,99)</color>
+                </graphicData>
+              </ThingDef>
+            </value>
+          </li>
+          <!-- add the recipes-->
+          <li Class="PatchOperationAdd">
+            <xpath>Defs</xpath>
+            <value>
+              <RecipeDef ParentName="PrepareHideBase">
+                <label>prepare tiger hide</label>
+                <defName>Owl_PrepareHideTiger</defName>
+                <ingredients>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>Hide_Tiger</li>
+                      </thingDefs>
+                    </filter>
+                    <count>15</count>
+                  </li>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>Owl_TanningLiquor</li>
+                      </thingDefs>
+                    </filter>
+                    <count>7</count>
+                  </li>
+                </ingredients>
+                <fixedIngredientFilter>
+                  <thingDefs>
+                    <li>Hide_Tiger</li>
+                    <li>Owl_TanningLiquor</li>
+                  </thingDefs>
+                </fixedIngredientFilter>
+                <products>
+                  <Prepared_Hide_Tiger>15</Prepared_Hide_Tiger>
+                </products>
+              </RecipeDef>
+            </value>
+          </li>
+          <!-- Add the tannin vat data -->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Owl_TanningVat"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/products</xpath>
+            <value>
+              <li>
+                <thingDef>AEXP_Leather_Tiger</thingDef>
+                <ingredientFilter>
+                  <thingDefs>
+                    <li>Prepared_Hide_Tiger</li>
+                  </thingDefs>
+                </ingredientFilter>
+                <maxCapacity>150</maxCapacity>
+                <baseFermentationDuration>182000</baseFermentationDuration>
+                <temperatureIdeal>
+                  <min>1</min>
+                  <max>99</max>
+                </temperatureIdeal>
+                <temperatureSafe>
+                  <min>-50</min>
+                  <max>200</max>
+                </temperatureSafe>
+                <graphSuffix>_full</graphSuffix>
+              </li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Simple Chains: Steel {Coal, Charcoal, Atlas Materials, Simple Coal, Xenite Industries, Medieval Times, Survivalist Additions}
+    ==========-->
+
+  <!--Add modded items to steel smelting list conditionally, based on defName-->
+  <!-- Any mod using the def "coal" -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="Coal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+					//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>Coal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Any mod using the def "charcoal" -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="Charcoal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+					//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>Charcoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Atlas Materials -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="AM_Coal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+                  //thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>AM_Coal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Simple Coal -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="WDCoal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+                  //thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>WDCoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Xenite Industries -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="XIcharcoal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+				//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>XIcharcoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Medieval Times -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="MedTimes_Resource_Coal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+				//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>MedTimes_Resource_Coal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!-- Survivalist Additions -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="SRV_Charcoal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+				//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>SRV_Charcoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--==========
+    Simple Concrete {Simply More Bridges, Roads of the Rim}
+    ==========-->
+
+  <!--Replace the cost of concrete bridges with concrete, disregard patch if using "Simply More Bridges"-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Concrete</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simply More Bridges</li>
+      </mods>
+      <nomatch Class="PatchOperationFindMod">
+        <mods>
+          <li>Roads of the Rim</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+          <success>Always</success>
+          <operations>
+            <li Class="PatchOperationReplace">
+              <xpath>/Defs/TerrainDef[defName="ConcreteBridge"]/costList</xpath>
+              <value>
+                <costList>
+                  <D9Concrete>25</D9Concrete>
+                </costList>
+              </value>
+            </li>
+          </operations>
+        </match>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--==========
+    Simply More Bridges {Industrialisation, Roads of the Rim, Simple Concrete}
+    ==========-->
+
+  <!--Replace/add texture and recipe for Concrete bridges-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simply More Bridges</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Industrialisation</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationFindMod">
+            <mods>
+              <li>Roads of the Rim</li>
+            </mods>
+            <match Class="PatchOperationRemove">
+              <xpath>/Defs/TerrainDef[defName="ConcreteBridge"]</xpath>
+            </match>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeConcrete</defName>
+                <label>concrete deep water bridge</label>
+                <color>(155, 155, 150)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <Ind_Concrete>17</Ind_Concrete>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>ConcreteBridge</defName>
+                <label>concrete bridge</label>
+                <color>(155, 155, 150)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <Ind_Concrete>10</Ind_Concrete>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Replace/add texture and recipe for Concrete bridges-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simply More Bridges</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Concrete</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationFindMod">
+            <mods>
+              <li>Roads of the Rim</li>
+            </mods>
+            <match Class="PatchOperationRemove">
+              <xpath>/Defs/TerrainDef[defName="ConcreteBridge"]</xpath>
+            </match>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeConcrete</defName>
+                <label>concrete deep water bridge</label>
+                <color>(155, 155, 150)</color>
+                <costList>
+                  <Steel>5</Steel>
+                  <D9Concrete>17</D9Concrete>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="HeavyBridgeStoneBase">
+                <defName>ConcreteBridge</defName>
+                <label>concrete bridge</label>
+                <color>(155, 155, 150)</color>
+                <costList>
+                  <Steel>3</Steel>
+                  <D9Concrete>10</D9Concrete>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Armour Expanded {NightVision}
+    ==========-->
+
+  <!--Remove NightVision goggles-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Armour Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>NightVision</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="NV_nv_goggles"]</xpath>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Furniture Expanded {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training}
+    ==========-->
+
+  <!--Allow tanning liquor to be made at stone campfire-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Leather</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[@Name="MakeTanningLiquorBase"]/recipeUsers</xpath>
+        <value>
+          <li>Stone_Campfire</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Change designation category of storage furniture if "LWM Deep Storage" is/isnt installed. #storage-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="Shelf_1x1c" or defName="Shelf_WeaponRack"]/designationCategory</xpath>
+      </match>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Shelf_1x1c" or defName="Shelf_WeaponRack"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Storage</designationCategory>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--Remove redundancies from "VFE" IF "Misc Training" or "Combat Training" is installed-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Misc. Training</li>
+        <li>Combat Training</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="Joy_PunchingBag"]
+            | /Defs/TaleDef[defName="Tale_UsedPunchingBag"]
+            | /Defs/JobDef[defName="Play_PunchingBag"]
+            | /Defs/JoyGiverDef[defName="Play_PunchingBag"]</xpath>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Furniture Expanded - Farming {LWM's Deep Storage}
+    ==========-->
+
+  <!--Move animal feeder to Storage if LWM Deep Storage is not installed. #storage-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Farming</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VFE_AnimalFeeder"]</xpath>
+        <value>
+          <designationCategory>DZ_Storage</designationCategory>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Furniture Expanded - Production {Medical System Expansion - Revived}
+    ==========-->
+
+  <!--Add linkable connection to MSE from VFE-P-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Production</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Medical System Expansion - Revived</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="ArchotechProsthesesBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+        <value>
+          <li>VFE_FabricationCabinet</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Furniture Expanded - Spacer Module {LWM's Deep Storage, [WD] Reinforced Doors}
+    ==========-->
+
+  <!--Change designation category of storage furniture for "Vanilla Furniture Expanded - Spacer Module" if "LWM Deep Storage" is/isnt installed. #storage-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Spacer Module</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>
+      </match>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Storage</designationCategory>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--Lock reinforced doors behind tech required for reinforced walls-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded - Spacer Module</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[WD] Reinforced Doors</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="WDReinforcedDoor"]/researchPrerequisites</xpath>
+            <match Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="WDReinforcedDoor"]/researchPrerequisites</xpath>
+              <value>
+                <li>SpacerFurniture</li>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="WDReinforcedDoor"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>SpacerFurniture</li>
+                </researchPrerequisites>
+              </value>
+            </nomatch>
+          </li>
+          <li Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="WDReinforcedAutodoor"]/researchPrerequisites</xpath>
+            <match Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="WDReinforcedAutodoor"]/researchPrerequisites</xpath>
+              <value>
+                <li>SpacerFurniture</li>
+              </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName="WDReinforcedAutodoor"]</xpath>
+              <value>
+                <researchPrerequisites>
+                  <li>Autodoors</li>
+                  <li>SpacerFurniture</li>
+                </researchPrerequisites>
+              </value>
+            </nomatch>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    VGP Garden Fabrics {Vanilla Animals Expanded — Tundra, Vanilla Animals Overhaul Reloaded, MendAndRecycle, SeedsPlease}
+    ==========-->
+
+  <!--Add Musk Ox wool to blended wool recipe-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+      <li>VGP Garden Fabrics Simplified</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Expanded — Tundra</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/ingredients/li/filter/thingDefs</xpath>
+            <value>
+              <li>AEXP_MuskOxWool</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>AEXP_MuskOxWool</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add Ibex and Thrumbo wool to blended wool recipe-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+      <li>VGP Garden Fabrics Simplified</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Animals Overhaul Reloaded</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/ingredients/li/filter/thingDefs</xpath>
+            <value>
+              <li>KKAO_WoolIbex</li>
+              <li>KKAO_ThrumboWool</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>KKAO_WoolIbex</li>
+              <li>KKAO_ThrumboWool</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Remove salvaging from Loom if using VGP Fabrics and MendandRecycle-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+      <li>VGP Garden Fabrics Simplified</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>MendAndRecycle</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+        <xpath>/Defs/RecipeDef[defName="SalvageApparel"]</xpath>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Clean up storage categories if using "VGP Garden Fabrics" and "SeedsPlease"-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>SeedsPlease</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="RawFlax" or defName="RawDevilstrand" or defName="RawCotton"]/thingCategories</xpath>
+            <value>
+              <thingCategories>
+                <li>PlantMatter</li>
+              </thingCategories>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VG_PlasteelThread"]/thingCategories</xpath>
+            <value>
+              <thingCategories>
+                <li>ResourcesRaw</li>
+              </thingCategories>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingCategoryDef[defName="GardenFabrics"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    ZARS Production Spots {Thanks For All The Fish}
+    ==========-->
+
+  <!--Add to ZARS dropdown-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ZARS Production Spots</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Thanks For All The Fish</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="FishingSpot"]</xpath>
+        <value>
+          <designatorDropdown>ZARS_Spots</designatorDropdown>
+        </value>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Zen Garden {GloomyFurniture}
+    ==========-->
+
+  <!--Move Zen Garden decor to Gloomy decoration category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Zen Garden</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>GloomyFurniture</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[@Name="ZenBase" or @Name="ZenFountainBase" or @Name="RakedBase"]/designationCategory</xpath>
+            <value>
+              <designationCategory>OldStyleDeco</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[@Name="GravelFloorBase"]/designationCategory</xpath>
+            <value>
+              <designationCategory>OldStyleDeco</designationCategory>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/DesignationCategoryDef[defName="ZEN_Decoration"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+</Patch>
