@@ -513,37 +513,6 @@
     </Operation>
 
     <!--==========
-    More Linkables
-    ==========-->
-
-    <!--SurgicalLamp, SurgicalInstruments-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>More Linkables</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="SurgicalLamp" or defName = "SurgicalInstruments"]</xpath>
-                    <value>
-                        <minifiedDef>MinifiedThing</minifiedDef>
-                        <thingCategories>
-                            <li>BuildingsMisc</li>
-                        </thingCategories>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="SurgicalLamp" or defName = "SurgicalInstruments"]/statBases</xpath>
-                    <value>
-                        <Mass>5</Mass>
-                    </value>
-                </li>
-            </operations>
-        </match>
-    </Operation>
-
-    <!--==========
     Repair Workbench
     ==========-->
 
