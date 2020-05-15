@@ -1,0 +1,50 @@
+<ModMetaData>
+
+	<name>DocWorld</name>
+	<author>Dr_Zhivago</author>
+	<url>https://github.com/DrZhivago1/DocWorld</url>
+	<supportedVersions>
+		<li>1.1</li>
+	</supportedVersions>
+	<packageId>drzhivago.docworld</packageId>
+	<loadAfter>
+		<li>Nif.ArchitectExpanded.FencesTabPatch</li>
+		<li>Terragg.ExtendedStorage.Extended</li>
+		<li>pelador.fermenter</li>
+		<li>Rikiki.FishIndustry</li>
+		<li>Owlchemist.GloomyVanilla</li>
+		<li>zymex.GloomyVanillaOverhaul</li>
+		<li>trasheddt.industrialisation</li>
+		<li>pelador.insulation</li>
+		<li>pelador.rimplas</li>
+		<li>cucumpear.animalbeds</li>
+		<li>VanillaExpanded.VFEFarming</li>
+	</loadAfter>
+  <description>
+One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, better functioning, and intuitive system. This mod patches, fixes, and adds content to many mods (including but not limited to plain old vanilla RimWorld).
+
+&lt;size=24&gt;Features&lt;/size&gt;
+    * New Architect tabs and organizes Architect menu
+    * New drop down menus
+    * Balances recipes for various items
+    * Underground power conduits
+    * Enhances miniaturisation abilities
+    * Increased "stuffable" items
+    * Lights are now more efficient with power usage
+    * Greatly improves inter-mod compatibility
+
+[Link to Full Feature List]
+  https://github.com/DrZhivago1/DocWorld/wiki/1.-Content-Overview#in-depth-mod-effect-data
+
+[Link to GitHub]
+  https://github.com/DrZhivago1/DocWorld/releases
+
+[Link to Ludeon]
+  https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416
+
+[The Doctor's World mod collection]
+  https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074
+    
+  </description>
+
+</ModMetaData>
