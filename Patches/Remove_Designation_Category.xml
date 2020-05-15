@@ -59,6 +59,20 @@
    </Operation>
 
    <!--==========
+    Alpha Biomes
+    ==========-->
+
+   <!--AB_AlphaBiomesBuildings Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Alpha Biomes</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="AB_AlphaBiomesBuildings"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
     Architect Expanded - Fences
     ==========-->
 

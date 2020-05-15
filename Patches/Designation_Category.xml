@@ -150,7 +150,7 @@
     </Operation>
 
     <!--==========
-    ANIMAL STRAW BED
+    Animal Straw Bed
     ==========-->
 
     <!--Move items to Animal tab-->
@@ -175,6 +175,70 @@
                             <designationCategory>DZ_Animals</designationCategory>
                         </value>
                     </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Alpha Biomes
+    ==========-->
+
+    <!--Move items to Floors, Power, Production, Security, Joy, Culinary, Temperature, and Structure tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Alpha Biomes</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/TerrainDef[@Name="AB_FloorBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Floors</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="AB_AlcyoniteSolar"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Power</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="AB_SmelterBase" or defName="AB_CoreSampleDrill" or defName="AB_PropanePump"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Production</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="AB_OcularGasSpewer"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Security</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="AB_AlienComplianceCenter"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Joy</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="AB_PropaneStove"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="AB_PropaneHeater"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Temperature</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="AB_ExoticDoorBase" or defName="AB_ExoticWall" or defName="AB_ExoticColumn"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Structure</designationCategory>
+                    </value>
                 </li>
             </operations>
         </match>

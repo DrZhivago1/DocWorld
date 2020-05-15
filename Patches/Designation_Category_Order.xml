@@ -93,6 +93,22 @@
   </Operation>
 
   <!--==========
+    Genetic Rim
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Genetic Rim</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="GR_GeneticsTab"]/order</xpath>
+      <value>
+        <order>596</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
     Gloomy Vanilla Overhaul
     ==========-->
 

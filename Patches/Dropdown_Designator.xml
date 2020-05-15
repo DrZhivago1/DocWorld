@@ -1,5 +1,100 @@
 <Patch>
-    <!--This file will contain all patches that replace/change dropdown menus for Vanilla and Mods-->
+    <!--This file will contain all patches that replace/change dropdown menus for Vanilla and Mods. Split between Conditional Vanilla patches and Non-Conditional patches-->
+
+    <!--==============================
+            Conditional Section
+    ==============================-->
+
+    <!--==========
+    VANILLA
+    ==========-->
+
+    <!--Geothermal Generators-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RimPlas</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Geothermal</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="GeothermalGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Geothermal</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Solar Generators-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Alpha Biomes</li>
+            <li>RimPlas</li>
+            <li>Smokeleaf Industry Reborn</li>
+            <li>Vanilla Furniture Expanded - Power</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Solar</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="SolarGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Solar</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Wind Generators-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RimPlas</li>
+            <li>Vanilla Furniture Expanded - Power</li>
+            <li>Vanilla Factions Expanded - Settlers</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Wind</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="WindTurbine"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Wind</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==============================
+            Non-Conditional Section
+    ==============================-->
 
     <!--==========
     VANILLA
@@ -8,6 +103,36 @@
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
+            <!--Generators-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Power_Generator</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="WoodFiredGenerator" or defName="ChemfuelPoweredGenerator"]</xpath>
+                <value>
+                    <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                </value>
+            </li>
+            <!--IEDs-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_IEDs</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[@Name="TrapIEDBase"][not(designatorDropdown)]</xpath>
+                <value>
+                    <designatorDropdown>DZ_IEDs</designatorDropdown>
+                </value>
+            </li>
             <!--Power Conduits-->
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[defName="PowerConduit"][not(designatorDropdown)]</xpath>
@@ -41,22 +166,24 @@
                     </li>
                 </operations>
             </li>
-            <!--IEDs-->
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs</xpath>
-                <value>
-                    <DesignatorDropdownGroupDef>
-                        <defName>DZ_IEDs</defName>
-                    </DesignatorDropdownGroupDef>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[@Name="TrapIEDBase"][not(designatorDropdown)]</xpath>
-                <value>
-                    <designatorDropdown>DZ_IEDs</designatorDropdown>
-                </value>
-            </li>
         </operations>
+    </Operation>
+
+    <!--==========
+    Alpha Biomes
+    ==========-->
+
+    <!--AB_AlcyoniteSolar-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Alpha Biomes</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="AB_AlcyoniteSolar"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Power_Solar</designatorDropdown>
+            </value>
+        </match>
     </Operation>
 
     <!--==========
@@ -297,6 +424,23 @@
     </Operation>
 
     <!--==========
+    Genetic Rim
+    ==========-->
+
+    <!--GR_CryostabilizedEngine-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Genetic Rim</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="GR_CryostabilizedEngine"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Glass+Lights
     ==========-->
 
@@ -313,6 +457,23 @@
                     <designatorDropdown>CeilingLights</designatorDropdown>
                 </value>
             </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    JetPack
+    ==========-->
+
+    <!--JPKerosene_Generator-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>JetPack</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="JPKerosene_Generator"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+            </value>
         </match>
     </Operation>
 
@@ -435,5 +596,123 @@
             </operations>
         </match>
     </Operation>
-    
+
+    <!--==========
+    RimPlas
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RimPlas</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneSolarGenerator" or defName="RPSmallGrapheneSolarGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Solar</designatorDropdown>
+                    </value>
+                </li>
+                <!--RPGrapheneGeoGenerator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneGeoGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Geothermal</designatorDropdown>
+                    </value>
+                </li>
+                <!--RPGrapheneWindTurbine-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneWindTurbine"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Wind</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Smokeleaf Industry Reborn
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Smokeleaf Industry Reborn</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--HempolineGenerator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="HempolineGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                    </value>
+                </li>
+                <!--HempSolarGenerator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="HempSolarGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Solar</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Power
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Power</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--VFE_PortableWoodFiredGenerator, VFE_PortableChemfuelPoweredGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_PortableWoodFiredGenerator" or defName="VFE_PortableChemfuelPoweredGenerator" or defName="VFE_IndustrialWoodFiredGenerator" or defName="VFE_IndustrialChemfuelPoweredGenerator" or defName="VPE_HelixienGenerator" or defName="VPE_IndustrialHelixienGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                    </value>
+                </li>
+                <!--VFE_AdvancedSolarGenerator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_AdvancedSolarGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Solar</designatorDropdown>
+                    </value>
+                </li>
+                <!--VFE_AdvancedWindTurbine-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_AdvancedWindTurbine"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Wind</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Factions Expanded - Settlers
+    ==========-->
+
+    <!--Windmill-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Settlers</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Windmill"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Power_Wind</designatorDropdown>
+            </value>
+        </match>
+    </Operation>
+
 </Patch>
