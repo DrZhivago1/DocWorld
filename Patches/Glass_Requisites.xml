@@ -170,7 +170,7 @@
                 <operations>
                     <!--Kageshain lamps require glass-->
                     <li Class="PatchOperationReplace">
-                        <xpath>/Defs/ThingDef[@Name="RIKFleaLampBase"]</xpath>
+                        <xpath>/Defs/ThingDef[@Name="RIKFleaLampBase"]/costList</xpath>
                         <value>
                             <costList>
                                 <Steel>20</Steel>
