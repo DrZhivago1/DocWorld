@@ -17,7 +17,7 @@
         <nomatch Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
-                <li Class="PatchOperationConditional">                    <!--Vanilla Bed, Vanilla Hospital Bed-->
+                <li Class="PatchOperationConditional">                    <!--Vanilla Bed-->
                     <xpath>/Defs/ThingDef[defName="Bed"]/costList</xpath>
                     <match Class="PatchOperationAdd">
                         <xpath>/Defs/ThingDef[defName="Bed"]/costList</xpath>
@@ -34,7 +34,7 @@
                         </value>
                     </nomatch>
                 </li>
-                <li Class="PatchOperationConditional">                    <!--Vanilla Bed, Vanilla Hospital Bed-->
+                <li Class="PatchOperationConditional">                    <!--Vanilla Hospital Bed-->
                     <xpath>/Defs/ThingDef[defName="HospitalBed"]/costList</xpath>
                     <match Class="PatchOperationAdd">
                         <xpath>/Defs/ThingDef[defName="HospitalBed"]/costList</xpath>
