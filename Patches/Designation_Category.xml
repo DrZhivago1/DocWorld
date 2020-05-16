@@ -1758,6 +1758,23 @@
     </Operation>
 
     <!--==========
+    VGP Vegetable Garden
+    ==========-->
+
+    <!--Move items to Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Vegetable Garden</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VG_TorchLamp"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Lighting</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Wall Light
     ==========-->
 
