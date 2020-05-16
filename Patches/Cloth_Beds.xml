@@ -18,15 +18,32 @@
             <success>Always</success>
             <operations>
                 <li Class="PatchOperationConditional">                    <!--Vanilla Bed, Vanilla Hospital Bed-->
-                    <xpath>/Defs/ThingDef[defName="Bed" or defName="HospitalBed"]/costList</xpath>
+                    <xpath>/Defs/ThingDef[defName="Bed"]/costList</xpath>
                     <match Class="PatchOperationAdd">
-                        <xpath>/Defs/ThingDef[defName="Bed" or defName="HospitalBed"]/costList</xpath>
+                        <xpath>/Defs/ThingDef[defName="Bed"]/costList</xpath>
                         <value>
                             <Cloth>12</Cloth>
                         </value>
                     </match>
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>/Defs/ThingDef[defName="Bed" or defName="HospitalBed"]</xpath>
+                        <xpath>/Defs/ThingDef[defName="Bed"]</xpath>
+                        <value>
+                            <costList>
+                                <Cloth>12</Cloth>
+                            </costList>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">                    <!--Vanilla Bed, Vanilla Hospital Bed-->
+                    <xpath>/Defs/ThingDef[defName="HospitalBed"]/costList</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="HospitalBed"]/costList</xpath>
+                        <value>
+                            <Cloth>12</Cloth>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="HospitalBed"]</xpath>
                         <value>
                             <costList>
                                 <Cloth>12</Cloth>
