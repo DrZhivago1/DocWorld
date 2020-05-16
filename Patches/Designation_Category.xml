@@ -308,9 +308,6 @@
                         <designationCategory>Temperature</designationCategory>
                     </value>
                 </li>
-                <li Class="PatchOperationRemove">
-                    <xpath>/Defs/DesignationCategoryDef[defName="CentralClimateControl"]</xpath>
-                </li>
             </operations>
         </match>
     </Operation>
