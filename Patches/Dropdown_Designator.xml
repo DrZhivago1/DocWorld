@@ -187,6 +187,56 @@
     </Operation>
 
     <!--==========
+    Dubs Bad Hygiene
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dubs Bad Hygiene</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!--Water heaters-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_DBH_WaterHeaters</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="LogBoiler" or defName="GasBoiler" or defName="ElectricBoiler" or defName="SolarHeater"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_DBH_WaterHeaters</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Fertile Fields
+    ==========-->
+
+    <!--RFF_ScrapGenerator-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fertile Fields [1.1]</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RFF_ScrapGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Fishing Nets
     ==========-->
 

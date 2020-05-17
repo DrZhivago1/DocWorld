@@ -77,6 +77,32 @@
     </Operation>
 
     <!--==========
+    Dubs Bad Hygiene
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Dubs Bad Hygiene</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="CeilingFan" or defName="CeilingFanS"]/costList</xpath>
+                        <value>
+                            <Glass>1</Glass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
     Glitter Tech
     ==========-->
 

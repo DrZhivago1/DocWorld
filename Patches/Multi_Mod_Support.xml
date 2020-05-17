@@ -644,7 +644,7 @@
   </Operation>
 
   <!--==========
-    DDA Security and More {Fences And Floors (Continued), Fences And No Floors}
+    DDA Security and More {Fences And Floors (Continued), Fences And No Floors, Doors Expanded}
     ==========-->
 
   <!--If fence mods installed, remove research. In either instance of mods loaded or not, move items to Fences tab.-->
@@ -685,6 +685,142 @@
           <designationCategory>DZ_Fences</designationCategory>
         </value>
       </nomatch>
+    </match>
+  </Operation>
+
+  <!--Replace research for blast doors from DDA Security with Doors Expanded research-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>DDA Security and More (Continued)</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Doors Expanded</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Blastdoor"]/researchPrerequisites</xpath>
+            <value>
+              <researchPrerequisites>
+                <li>ProjectHeron_BlastDoors</li>
+              </researchPrerequisites>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ResearchProjectDef[defName="BlastDoor"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Dubs Bad Hygiene {Vanilla Furniture Expanded - Farming, Fertile Fields, Fermenter}
+    ==========-->
+
+  <!--Remove VFE sprinkler in favor of Dubs'-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dubs Bad Hygiene</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Furniture Expanded - Farming</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="VFE_Sprinkler"]</xpath>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Redundant removal/replacing of "Dub's Bad Hygiene" biosolids and fertilizer when "RF Fertile Fields" is installed -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dubs Bad Hygiene</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Fertile Fields [1.1]</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!--Replace product gained from composter-->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="BiosolidsComposter"]/comps/li[@Class="DubsBadHygiene.CompProperties_Composter"]/Product</xpath>
+            <value>
+              <Product>RawCompost</Product>
+            </value>
+          </li>
+          <!--Descriptions-->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ResearchProjectDef[defName="SewageSludgeComposting"]/description</xpath>
+            <value>
+              <description>When properly treated and processed, sewage sludge becomes compost which requires further treatment to be useful as fertilizer.</description>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="FecalSludge"]/description</xpath>
+            <value>
+              <description>A barrel filled with fecal sludge, can be dumped, burned, or composted.</description>
+            </value>
+          </li>
+          <!--Removals-->
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="BiosolidFertilizer" or defName="Biosolids"]</xpath>
+          </li>
+          <!--These dummy defs need to be re-added because they are hardcoded in the .dll, so we don't log errors-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <ThingDef>
+                <defName>Biosolids</defName>
+                <label>biosolids</label>
+                <thingClass>Thing</thingClass>
+              </ThingDef>
+              <ThingDef>
+                <defName>BiosolidFertilizer</defName>
+                <label>Biosolid Fertilizer</label>
+                <thingClass>Thing</thingClass>
+                <graphicData>
+                  <texPath>DBH/Things/God</texPath>
+                  <graphicClass>Graphic_Single</graphicClass>
+                  <drawSize>(1,1)</drawSize>
+                </graphicData>
+              </ThingDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Fermenting shit produces Fertile Fields fertilizer-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dubs Bad Hygiene</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Fertile Fields [1.1]</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+        <mods>
+          <li>Fermenter</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+            <li Class="PatchOperationReplace">
+              <xpath>//Defs/Fermenter.FermentDef[defName="Ferment_DBH_Biosolids"]/Product</xpath>
+              <value>
+                <Product>RawCompost</Product>
+              </value>
+            </li>
+          </operations>
+        </match>
+      </match>
     </match>
   </Operation>
 
@@ -2097,6 +2233,82 @@
   </Operation>
 
   <!--==========
+    UN-Colony {Industrialisation}
+    ==========-->
+
+  <!--Remove and replace all Industrialisation concrete if using UN-Colony as well.-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>UN-Colony (Continued)</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Industrialisation</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!--Remove concrete elements from Industialisation-->
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/WorkGiverDef[defName="Ind_DoBillsMixconcrete"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="Ind_Concrete" or defName="Ind_ConcreteMixer"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ResearchProjectDef[defName="Ind_ConcreteProduction"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">            <!--I would have used one operation in: [defName="item" or defName="item"...] but it was breaking. So separate operations it is...-->
+            <xpath>/Defs/RecipeDef[defName="Ind_MakeConcreteFromAny"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/RecipeDef[defName="Ind_MakeConcreteFromSandstone"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/RecipeDef[defName="Ind_MakeConcreteFromGranite"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/RecipeDef[defName="Ind_MakeConcreteFromLimestone"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/RecipeDef[defName="Ind_MakeConcreteFromSlate"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/RecipeDef[defName="Ind_MakeConcreteFromMarble"]</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/RecipeDef[@Name="Ind_MakeConcreteBase"]</xpath>
+          </li>
+
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[defName="Concrete"]/costList</xpath>
+            <value>
+              <costList>
+                <SadjuukConcrete>5</SadjuukConcrete>
+              </costList>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[defName="PavedTile"]/costList</xpath>
+            <value>
+              <costList>
+                <Steel>1</Steel>
+                <SadjuukConcrete>5</SadjuukConcrete>
+              </costList>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Ind_NuclearPowerPlant"]/costList/Ind_Concrete</xpath>
+            <value>
+              <SadjuukConcrete>1000</SadjuukConcrete>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
     Vanilla Armour Expanded {NightVision}
     ==========-->
 
@@ -2116,8 +2328,26 @@
   </Operation>
 
   <!--==========
-    Vanilla Furniture Expanded {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training}
+    Vanilla Furniture Expanded {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields}
     ==========-->
+
+  <!--Allow corpse composting at stone campfire-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Furniture Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Fertile Fields [1.1]</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/RecipeDef[defName="CompostCorpseCampfire"]/recipeUsers</xpath>
+        <value>
+          <li>Stone_Campfire</li>
+        </value>
+      </match>
+    </match>
+  </Operation>
 
   <!--Allow tanning liquor to be made at stone campfire-->
   <Operation Class="PatchOperationFindMod">

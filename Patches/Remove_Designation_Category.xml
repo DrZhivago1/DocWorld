@@ -115,6 +115,20 @@
    </Operation>
 
    <!--==========
+    Fertile Fields
+    ==========-->
+
+   <!--RFF_Farm Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Fertile Fields [1.1]</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="RFF_Farm"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
     Glowstone
     ==========-->
 
@@ -125,6 +139,20 @@
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="GLO_Glowstone"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Goodnight
+    ==========-->
+
+   <!--sd_beds Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>[sd] Goodnight (Continued)</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="sd_beds"]</xpath>
       </match>
    </Operation>
 

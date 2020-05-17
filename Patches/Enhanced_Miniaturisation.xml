@@ -451,6 +451,37 @@
     </Operation>
 
     <!--==========
+    Dubs Bad Hygiene
+    ==========-->
+
+    <!--WindPump-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dubs Bad Hygiene</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="WindPump"]</xpath>
+                    <value>
+                        <minifiedDef>MinifiedThing</minifiedDef>
+                        <thingCategories>
+                            <li>BuildingsMisc</li>
+                        </thingCategories>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="WindPump"]/statBases</xpath>
+                    <value>
+                        <Mass>250</Mass>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     High Tech Laboratory Facilities (Continued)
     ==========-->
 

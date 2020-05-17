@@ -93,6 +93,38 @@
   </Operation>
 
   <!--==========
+    Dubs Bad Hygiene
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dubs Bad Hygiene</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="Hygiene"]/order</xpath>
+      <value>
+        <order>590</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Fertile Fields
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Fertile Fields [1.1]</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="RFF_Adds"]/order</xpath>
+      <value>
+        <order>40</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
     Genetic Rim
     ==========-->
 
