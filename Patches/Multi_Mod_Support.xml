@@ -1416,6 +1416,34 @@
   </Operation>
 
   <!--==========
+    Replimat {LWM's Deep Storage}
+    ==========-->
+
+  <!--Moves Animal Feeder and Feedstock Tank to Storage. #storage-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Replimat</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="ReplimatAnimalFeeder" or defName="ReplimatFeedTank"]/designationCategory</xpath>
+        <value>
+          <designationCategory>LWM_DS_Storage</designationCategory>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="ReplimatAnimalFeeder" or defName="ReplimatFeedTank"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Storage</designationCategory>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--==========
     RIMkea {Stuffed Floors}
     ==========-->
 

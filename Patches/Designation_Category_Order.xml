@@ -157,6 +157,22 @@
   </Operation>
 
   <!--==========
+    Jurassic Rimworld
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Jurassic Rimworld 1.1</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="JurassicRimworld"]/order</xpath>
+      <value>
+        <order>565</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
     LWM's DEEP STORAGE
     ==========-->
 

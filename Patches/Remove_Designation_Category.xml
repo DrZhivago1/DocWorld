@@ -157,6 +157,34 @@
    </Operation>
 
    <!--==========
+    Industrial Rollers
+    ==========-->
+
+   <!--Industrial Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Industrial Rollers</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="Industrial"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Jurassic Rimworld
+    ==========-->
+
+   <!--AviaryJurassicRimworld Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Jurassic Rimworld 1.1</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="AviaryJurassicRimworld"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
     Preemptive Strike
     ==========-->
 
@@ -167,6 +195,34 @@
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="PES_Reconnaissance"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Replimat
+    ==========-->
+
+   <!--Replimat_Replimat Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Replimat</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="Replimat_Replimat"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Revia Race
+    ==========-->
+
+   <!--ReviaCategory Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Revia Race</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="ReviaCategory"]</xpath>
       </match>
    </Operation>
 
@@ -306,6 +362,20 @@
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="GardenTools"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    What The Hack
+    ==========-->
+
+   <!--WTH_Hacking Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>What the hack?!</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="WTH_Hacking"]</xpath>
       </match>
    </Operation>
 

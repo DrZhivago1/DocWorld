@@ -86,6 +86,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Husbandry tab}
     Industrial Rollers
         {Move items to Industrial tab}
+    Jurassic Rimworld
+        {Move items to Jurassic tab}
     Large Animal Beds
         {Move items to Animal tab}
     LED Lights
@@ -106,6 +108,10 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Security tab}
     [RF] Fishing
         {Move items to Husbandry tab}
+    Replimat
+        {Move items to Culinary tab}
+    Revia Race
+        {Move items to Production tab}
     Rimatomics
         {Move items to Industrial, Structure, and Security tab}
     RimBees
@@ -170,6 +176,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Lighting tab}
     Wall Sun Lamp
         {Move items to Husbandry tab}
+    What The Hack
+        {Move items to Production, and Misc tab}
     
 
 
@@ -188,6 +196,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {GR_GeneticsTab}
     Gloomy Vanilla Overhaul
         {OldStyleDeco}
+    Jurassic Rimworld
+        {JurassicRimworld}
     LWM's Deep Storage
         {Storage}
     More Planning
@@ -357,12 +367,14 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {LWM's Deep Storage, Gloomy Extra - Kitchen}
     Harvest Organs Post Mortem
         {Alpha Animals, VGP Garden Medicine}
-     Medical Training
+    Medical Training
         {Thanks For All The Fish}
     [T] MoreFloors
         {Stuffed Floors}
     Repair Workbench
         {[LC] Survival Tools}
+    Replimat
+        {LWM's Deep Storage}
     RIMkea
         {Stuffed Floors}
     Rim of Madness - Bones
@@ -417,8 +429,16 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {GLO_Glowstone Designation Category removal}
     Goodnight
         {sd_beds Designation Category removal}
+    Industrial Rollers
+        {Industrial Designation Category removal}
+    Jurassic Rimworld
+        {AviaryJurassicRimworld Designation Category removal}
     Preemptive Strike
         {PES_Reconnaissance Designation Category removal}
+    Replimat
+        {Replimat_Replimat Designation Category removal}
+    Revia Race
+        {ReviaCategory Designation Category removal}
     Rimatomics
         {Rimatomics Designation Category removal}
     RimBees
@@ -439,6 +459,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {AOMorefurniture Designation Category removal}
     VGP Garden Tools
         {GardenTools Designation Category removal}
+    What The Hack
+        {WTH_Hacking Designation Category removal}
 
 ### Research_Projects:
 `This file will contain all patches that replace/change research requirements for Vanilla and Mods.`
@@ -530,6 +552,7 @@ Industrial Rollers
 Industrialisation
 Insulation
 JetPack
+Jurassic Rimworld
 Large Animal Beds
 LED Lights
 Lord of the Rims - Elves
@@ -559,6 +582,7 @@ RedistHeat
 Remote Tech
 Repair Workbench
 Replace Stuff
+Revia Race
 Rim Cuisine 2
 Rim of Madness - Bones
 Rimatomics
@@ -621,6 +645,7 @@ VGP Soylent Production
 VGP Vegetable Garden
 Wall Light
 Wall Sun Lamp
+What The Hack
 Xenite Industries
 ZARS Production Spots
 Zen Garden

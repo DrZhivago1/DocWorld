@@ -910,8 +910,27 @@
                         </researchPrerequisites>
                     </value>
                 </li>
-                <li Class="PatchOperationRemove">
-                    <xpath>/Defs/DesignationCategoryDef[defName="Industrial"]</xpath>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Jurassic Rimworld
+    ==========-->
+
+    <!--Move items to Jurassic tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Jurassic Rimworld 1.1</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef//designationCategory[text()="AviaryJurassicRimworld"]</xpath>
+                    <value>
+                        <designationCategory>JurassicRimworld</designationCategory>
+                    </value>
                 </li>
             </operations>
         </match>
@@ -1164,6 +1183,40 @@
             <xpath>/Defs/ThingDef[defName="RBB_FishingSpot" or defName="ShellfishTrap"]/designationCategory</xpath>
             <value>
                 <designationCategory>DZ_Husbandry</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Replimat
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Replimat</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath> /Defs/ThingDef[defName="ReplimatTerminal" or defName="ReplimatHopper" or defName="ReplimatComputer"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Revia Race
+    ==========-->
+
+    <!--Move items to Production tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Revia Race</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath> /Defs/ThingDef[defName="ReviaSacrificeSpot" or defName="ReviaBloodSigil"]/designationCategory</xpath>
+            <value>
+                <designationCategory>Production</designationCategory>
             </value>
         </match>
     </Operation>
@@ -1425,7 +1478,7 @@
     RimWriter
     ==========-->
 
-    <!--Move items to Stroage tab. #storage-->
+    <!--Move items to Storage tab. #storage-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RimWriter - Books, Scrolls, Tablets, and Libraries</li>
@@ -1982,6 +2035,34 @@
             <value>
                 <designationCategory>DZ_Husbandry</designationCategory>
             </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    What The Hack
+    ==========-->
+
+    <!--Move items to Production, and Misc tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>What the hack?!</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="WTH_HackingTable" or defName="WTH_TableMechanoidWorkshop" or defName="WTH_PortableDisassemblingBench"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Production</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="WTH_MechanoidPlatform" or defName="WTH_PortableChargingPlatform" or defName="WTH_MechanoidBeacon" or defName="WTH_RogueAI"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Misc</designationCategory>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 
