@@ -7,13 +7,13 @@ assignees: ''
 
 ---
 
-### General Summary
+### Replace_this_text_with_a_general_summary_of_request
 _________________________________________________________________
-- Summary of first change:
+- Summary_of_first_change:
 - [ ] Item_Name_One & Item_Name_Two & Item_Name_Three [Mod_Name](Mod_Link)
 - [ ] Item_Name_One & Item_Name_Two [Mod_Name](Mod_Link)
 - [ ] Item_Name_One [Mod_Name](Mod_Link)
 _________________________________________________________________
-- Summary of second change:
+- Summary_of_second_change:
 - [ ] Item_Name_One & Item_Name_Two [Mod_Name](Mod_Link)
 - [ ] Item_Name_One [Mod_Name](Mod_Link)
