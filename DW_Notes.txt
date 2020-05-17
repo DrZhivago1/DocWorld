@@ -1,0 +1,627 @@
+In order to best utilize this, search for a mod name using CTRL+F(or other search function based on your OS). The template below is an example of how each file documentation is setup.
+*******
+# Template 
+******* 
+### File_Name:
+`Description of File.`
+
+    Mod_Name
+        {Content or Mod_Name}
+*******
+# Mod Features
+*******
+### New Original Content:
+    DocWorld
+        {Underground Conduit, Designation Categories (Beds, Animals, Culinary, Fences, Husbandry, Industrial, Storage, Lighting)}
+
+### Cloth_Beds:
+`This file will contain all patches that add cloth to bed construction recipes, with conditionals if certain mods are installed.`
+
+    Vanilla
+    Gloomy Furniture
+    Rim Job World
+    RIMkea
+    Vanilla Furniture Expanded
+    Vanilla Furniture Expanded - Spacer Module
+
+### Designation_Category:
+`This file will contain all patches that replace/change Designation Categories in Vanilla and Mods.`
+
+    【1.1】Animalstrawbed
+        {Move items to Animal tab}
+    Alpha Biomes
+        {Move items to Floors, Power, Production, Security, Joy, Culinary, Temperature, and Structure tab}
+    Architect Expanded - Fences
+        {Move items to Fences tab}
+    Ceiling Lights
+        {Move items to Husbandry and Lighting tab}
+    Centralized Climate Control
+        {Move items to Temperature tab}
+    [sd] Chicken Nest (Continued)
+        {Move items to Animal tab}
+    Coal Expanded
+        {Move items to Lighting tab}
+    CTS - Complete Tech Solutions
+        {Move items to Beds tab}
+    DeCore
+        {Move items to Husbandry tab and remove excess hidden power conduit}
+    Dubs Bad Hygiene
+        {Move items to Husbandry, Misc, Structure, and Temperature tab}
+    Dubs Skylights
+        {Move items to Lighting tab}
+    Extended Storage
+        {Move items to Storage tab}
+    Extended Storage Extended
+        {Move items to Storage tab}
+    Extended Woodworking
+        {Move items to Fences tab}
+    Fast regen 1.1
+        {Move items to Animals tab, all others are moved via Vanilla beds patch}
+    Fences And Floors
+    Fences And No Floors
+        {Move items to Fences tab}
+    Fermenter
+        {Move items to Culinary tab}
+    Fertile Fields
+        {Move items to Husbandry tab. Add Special Designator Classes}
+    Fish Industry
+        {Move items to Husbandry tab}
+    Fishing Nets
+        {Move items to Husbandry tab}
+    Floor Lights
+        {Move items to Lighting tab}
+    Glass+Lights
+        {Move items to Lighting tab}
+    Glitter Tech
+    Glitter Tech {No Surgery}
+        {Move items to Beds and Lighting tab}
+    Gloomy Vanilla
+    Gloomy Vanilla Overhaul
+        {Move items to Beds, Culinary, and Lighting tab}
+    Glowstone
+        {Move items to Lighting tab}
+    Goodnight
+        {Move items to Beds tab}
+    High Density Hydroponics
+        {Move items to Husbandry tab}
+    Industrial Rollers
+        {Move items to Industrial tab}
+    Large Animal Beds
+        {Move items to Animal tab}
+    LED Lights
+        {Move items to Lighting tab}
+    Mechalit Core
+        {Move items to Beds, Husbanry, and Lighting tab}
+    More Furniture [1.1]
+        {Move items to Furniture and Lighting tab, remove designation category}
+    More Hydroponics
+        {Move items to Husbandry tab}
+    Outdoor Lighting
+        {Move items to Lighting tab}
+    Plant Growing Wall Light
+        {Move items to Husbandry tab}
+    Polyamory Beds
+        {Move items to Beds tab}
+    Preemptive Strike
+        {Move items to Security tab}
+    [RF] Fishing
+        {Move items to Husbandry tab}
+    Rimatomics
+        {Move items to Industrial, Structure, and Security tab}
+    RimBees
+        {Move items to Culinary, Husbandry, and Lighting tab}
+    Rimefeller
+        {Move items to Industrial, Floors, and add special Designators}
+    RimJobWorld
+        {Move items to Beds tab}
+    RIMkea
+        {Move items to Animals, Beds, Floors, Furniture, Lighting, and Temperature tab}
+    RimPlas
+        {Move items to Furniture, Husbandry, Structure, Security, Beds, and Joy tab}
+    RimWriter
+        {Move items to Storage tab}
+    SeedsPlease
+		{Move items to Husbandry tab}
+	Smarter Vanilla Food
+		{Move items to Culinary tab}
+	Smoked meat
+		{Move items to Culinary tab}
+	Smokeleaf Industry Reborn
+		{Move items to Husbandry, Power, Production, and Misc tab}
+	Soft Warm Beds
+		{Move items to Beds tab}
+	Sparkling Worlds
+		{Move items to Beds tab}
+	Steam Light
+		{Move items to Lighting tab}
+	Storage Solutions
+		{Move items to Storage tab. #storage}
+    Survival Meals Expanded
+        {Move items to Culinary tab}
+    Tabletop Trove
+        {Move items to Recreation tab}
+    Vanilla Factions Expanded - Medieval
+        {Move items to Culinary tab}
+    Vanilla Factions Expanded - Settlers
+        {Move items to Lighting tab}
+    Vanilla Furniture Expanded
+        {Move items to Beds, Furniture, and Lighting tab}
+    Vanilla Furniture Expanded - Farming
+        {Move items to Husbandry tab}
+    Vanilla Furniture Expanded - Medical Module
+        {Move items to Beds tab}
+    Vanilla Furniture Expanded - Production
+        {Move items to Culinary tab}
+    Vanilla Furniture Expanded - Spacer Module
+        {Move items to Beds, Furniture, Husbandry, Lighting, and Joy tab}
+    VGP Garden Canning
+        {Move items to Culinary tab}
+    VGP Garden Drinks
+        {Move items to Culinary tab}
+    VGP Garden Gourmet
+        {Move items to Culinary tab}
+    VGP Garden Tools
+        {Move items to Husbandry tab}
+    VGP Soylent Production
+        {Move items to Culinary tab}
+    VGP Vegetable Garden
+        {Move items to Lighting tab}
+    Wall Light
+        {Move items to Lighting tab}
+    Wall Sun Lamp
+        {Move items to Husbandry tab}
+    
+
+
+### Designation_Category_Order:
+`This file will contain all patches that replace/change the visual location of Designation Categories in the architect menu for Vanilla and Mods.`
+
+    Vanilla
+        {Floors, Furniture, Power, Production, Joy, Security, Ship, Structure, Temperature, Misc}
+    Colony Leadership
+        {LeadershipModTab}
+    Dubs Bad Hygiene
+        {Hygiene}
+    Fertile Fields
+        {RFF_Adds}
+    Genetic Rim
+        {GR_GeneticsTab}
+    Gloomy Vanilla Overhaul
+        {OldStyleDeco}
+    LWM's Deep Storage
+        {Storage}
+    More Planning
+        {Planning}
+    Remote Tech
+        {rxRemoteTech}
+    Zen Garden
+        {ZEN_Decoration}
+
+
+### Dropdown_Designator:
+`This file will contain all patches that replace/change dropdown menus for Vanilla and Mods. Split between Non-Conditional and Conditional patches.`
+
+#### Conditional Section:
+    Vanilla
+        {Solar, Geothermal}
+
+#### Non-Conditional Section:
+    Vanilla
+        {Generators, IEDs, Power Conduits, Standing Lamps}
+    Alpha Biomes
+        {AB_AlcyoniteSolar}
+    Dubs Bad Hygiene
+        {Water heaters}
+    Fertile Fields
+        {RFF_ScrapGenerator}
+    Fishing Nets
+        {Fishing Nets}
+    Floored
+        {Striped Tile, Yellow Tile}
+    Floor Lights
+        {Square, Stripe, Small Stripe, Plus, Corner, Inverse Corner, Inverse Corner Small, Corner Small, Triangle, Small Stripe, Small Stripe Diagonal}
+    Genetic Rim
+        {GR_CryostabilizedEngine}
+    Glass+Lights
+        {Cieling Lamps}
+    JetPack
+        {JPKerosene_Generator}
+    Large Animal Beds
+        {Sleeping Spots}
+    Mechalit Core
+        {Lamp-pots}
+    More Furniture [1.1]
+        {Carpet}
+    RIMkea
+        {Shainbrait, Kageshain}
+    RimPlas
+        {RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator, RPGrapheneGeoGenerator, RPGrapheneWindTurbine}
+    Smokeleaf Industry Reborn
+        {HempolineGenerator, HempSolarGenerator}
+    Vanilla Furniture Expanded - Power
+        {VFE_PortableWoodFiredGenerator, VFE_PortableChemfuelPoweredGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_AdvancedSolarGenerator, VFE_AdvancedWindTurbine}
+    Vanilla Factions Expanded - Settlers
+        {Windmill}
+
+### Efficient_Lights:
+`This file will contain all patches that replace/change the power consumption for lights in Vanilla and Mods.`
+
+    Vanilla
+        {basePowerConsumption for Standing Lamps is 20, glowRadius for Standing Lamps is 13, basePowerConsumption for SunLamp is 2000,  SunLamp does not short circuit in rain}
+
+### Enhanced_Miniaturisation:
+`This file will contain all patches that replace/change the ability to miniaturize objects for Vanilla and Mods.`
+
+    Vanilla
+        {Torch_Lamp, CommsConsole, GroundPenetratingScanner, LongRangeMineralScanner, MoisturePump, MultiAnalyzer, OrbitalTradeBeacon, PodLauncher, Sarcophagus, ChemfuelPoweredGenerator, PowerSwitch, SolarGenerator, WindTurbine, WoodFiredGenerator, BiofuelRefinery, FabricationBench, HiTechResearchBench, ElectricCrematorium, Hopper, HydroponicsBasin, Cooler, PassiveCooler, Vent}
+    Dubs Bad Hygiene
+        {WindPump}
+    High Tech Laboratory Facilities (Continued)
+        {LabStation, LabTerminal}
+    Medical Training
+        {IF_MeditrainTable}
+    Repair Workbench
+        {ElectricTableRepair}
+    Vanilla Furniture Expanded - Production
+        {VFE_ComponentFabricationBench}
+
+### Glass_Requisites (Glass+Lights mod required):
+`This file will contain all patches that replace/change glass requirements for Vanilla and Mods using Glass+Lights as the base glass mod.`
+
+    Vanilla
+        {Lamps require glass, Minor grammar correction}
+    Ceiling Lights
+        {Ceiling light and Grow light require glass}
+    Dubs Bad Hygiene
+        {Ceiling Fans require glass}
+    Glitter Tech
+    Glitter Tech (No Surgery)
+        {Floodlight requires glass}
+    More Furniture
+        {Lamps and endtables require glass}
+    RIMkea
+        {Kageshain lamps require glass}
+    Static Quality Plus
+        {Sun lamps require glass}
+    Vanilla Furniture Expanded
+        {Lamps require glass}
+    Vanilla Furniture Expanded - Spacer Module
+        {Lamps require glass, Vanilla outdoor lamps have equal lighting and resource requirements}
+    Wall Light
+        {Lamps require glass}
+    UN-Colony
+        {Remove and replace all UN-Colony glass}
+
+### Misc:
+`This file will contain all miscellaneous patches that replace/change all sorts of things from various mods.`
+
+    Expanded Roofing
+        {Get rid of the annoying square shadows with glass roof}
+    Extended Storage
+        {Put Extended Storage behind Complex Furniture Tech (excluding food basket and wooden pallet)}
+    Fish Industry
+        {Allow rotation of aquaculture basin (microfungus texture edited due to this), Stuff the pier}
+    Fishing Nets
+        {Increase fish spawn randomness, ensure minimum meat count per trap, and increase/further randomize the possible lifespan of all traps}
+    Industrialisation
+        {Patch Vanilla paved tile flooring}
+    Open The Windows
+        {Allow regular windows to be made of stone}
+    Power Switch
+        {Remove hidden conduits}
+    Replace Stuff
+        {Add "Replace Stuff" designator to more Vanilla tabs}
+    RIMkea
+        {Nerf RIMkea furniture comfort and beauty}
+    Rim of Madness - Bones
+        {Wall nerf by 50 hitpoints}
+    Roof Support
+        {Minor edits, allow cover}
+	SeedsPlease
+		{Healroot recipes onto production benches}
+	Simple Chains: Leather
+		{Increase Max Capacity of tanning vat}
+	Simple Chains: Steel
+		{Create Bulk Recipes for steel}
+	Smoked meat
+		{Make Smoked meat available after researching Pemmican, and hide the Smokehouse behind Complex Furniture}
+	Save Our Ship 2
+		{Increase pod launcher range}
+    VGP Garden Gourmet
+        {Stuff items}
+
+### Multi_Mod_Support:
+`This file will contain all patches that replace/change items based off whether or not multiple mods are loaded.`
+
+    Ceramics
+        {Expanded Woodworking, Fertile Fields, VFE-Production}
+    Change Dresser
+        {GloomyFurniture, Lord of the Rims - Elves *not yet 1.0*, Medieval Times Unofficial, Polyamory Beds (Vanilla Edition), RIMkea, [sd] Goodnight (Continued)}
+    Cupro's Stones
+        {Simple Chains: Steel, RIMkea, MBS Faux Rock Wall, Simply More Bridges}
+    DDA Security and More
+        {Fences And Floors (Continued), Fences And No Floors, Doors Expanded}
+    Dubs Bad Hygiene
+        {Vanilla Furniture Expanded - Farming, Fertile Fields, Fermenter}
+    Expanded Woodworking
+        {Simple Chains: Leather, Survivalist's Additions}
+    Extended Storage
+        {Base, Rim Cuisine 2, Rim of Madness - Bones}
+    Fantastic Decor
+        {Base, Gloomy Furniture}
+    Floored
+        {Simply More Bridges (Continued)}
+    Glass+Lights
+        {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module}
+    Gloomy Vanilla Overhaul
+        {LWM's Deep Storage, Gloomy Extra - Kitchen}
+    Harvest Organs Post Mortem
+        {Alpha Animals, VGP Garden Medicine}
+     Medical Training
+        {Thanks For All The Fish}
+    [T] MoreFloors
+        {Stuffed Floors}
+    Repair Workbench
+        {[LC] Survival Tools}
+    RIMkea
+        {Stuffed Floors}
+    Rim of Madness - Bones
+        {Stuffed Floors}
+    RimOverhaul
+        {Simple Chains: Leather}
+    RimPlas
+        {Insulation, LWM's Deep Storage}
+    Simple Chains: Leather
+        {Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest}
+	Simple Chains: Steel
+		{Coal, Charcoal, Atlas Materials, Simple Coal, Xenite Industries, Medieval Times, Survivalist Additions}
+	Simple Concrete
+		{Simply More Bridges, Roads of the Rim}
+	Simply More Bridges
+		{Industrialisation, Roads of the Rim, Simple Concrete}
+    UN-Colony
+        {Industrialisation}
+    Vanilla Armour Expanded
+        {NightVision}
+    Vanilla Furniture Expanded
+        {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields}
+    Vanilla Furniture Expanded - Farming
+        {LWM's Deep Storage}
+    Vanilla Furniture Expanded - Production
+        {Medical System Expansion - Revived}
+    Vanilla Furniture Expanded - Spacer Module
+        {LWM's Deep Storage, [WD] Reinforced Doors}
+    VGP Garden Fabrics
+        {Vanilla Animals Expanded — Tundra, Vanilla Animals Overhaul Reloaded, MendAndRecycle, SeedsPlease}
+    ZARS Production Spots
+        {Thanks For All The Fish}
+    Zen Garden
+        {GloomyFurniture}
+
+### Remove_Designation_Category:
+`This file will contain all patches that remove Designation Categories for Vanilla and Mods.`
+
+    Vanilla
+        {Animals, Fences, Industrial, Storage}
+    Alpha Biomes
+        {AB_AlphaBiomesBuildings Designation Category removal}
+    Architect Expanded - Fences
+        {ArchitectExpandedFence Designation Category removal}
+    Centralized Climate Control
+        {CentralClimateControl Designation Category removal}
+    Dubs Skylights
+        {skylights Designation Category removal}
+    Fertile Fields
+        {RFF_Farm Designation Category removal}
+    Glowstone
+        {GLO_Glowstone Designation Category removal}
+    Goodnight
+        {sd_beds Designation Category removal}
+    Preemptive Strike
+        {PES_Reconnaissance Designation Category removal}
+    Rimatomics
+        {Rimatomics Designation Category removal}
+    RimBees
+        {RB_Bees Designation Category removal}
+    Rimefeller
+        {Rimefeller Designation Category removal}
+    RIMkea
+        {RIMkea Designation Category removal}
+    RimPlas
+        {RimPlas_FurnDesig Designation Category removal}
+	Smokeleaf Industry Reborn
+		{MSI Designation Category removal}
+	Storage Solutions
+		{CCP_StorageSolutions Designation Category removal}
+    Tabletop Trove
+        {TabletopCategory}
+    Vanilla Furniture Expanded
+        {AOMorefurniture Designation Category removal}
+    VGP Garden Tools
+        {GardenTools Designation Category removal}
+
+### Research_Projects:
+`This file will contain all patches that replace/change research requirements for Vanilla and Mods.`
+
+    Glass+Lights
+        {Disallow lights until electricity is researched, Remove Redundancies}
+    High Tech Laboratory Facilities (Continued)
+        {Require Research for countertop}
+    RoofBomb
+        {Shaped Charges require IEDs}
+
+### Stuffed_Items:
+`This file will contain all patches that replace/change item stuffability for Vanilla and Mods.`
+
+    Vanilla
+        {Vent, Butcher Table}
+
+### Textures:
+`This file will contain all patches that replace/change textures for Vanilla and Mods.`
+
+    BetterCoolers
+        {New art assets applied:  Newer cooler graphic from RedistHeat}
+    Fishing Industry
+        {New art assets applied: FishingPier x6, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus}
+
+*******
+# Incorporated Mods in RimWorld 1.1
+*******
+```
+[LC] Survival Tools
+[RF] Fishing
+[sd] Chicken Nest (Continued)
+[sd] Goodnight (Continued)
+[T] MoreFloors
+[WD] Reinforced Doors
+【1.1】Animalstrawbed
+Alpha Animals
+Alpha Biomes
+Architect Expanded - Fences
+Atlas Materials
+BetterCoolers
+Ceiling Lights
+Centralized Climate Control
+Ceramics
+Change Dresser
+Charcoal
+Coal
+Coal Expanded
+Colony Leadership
+Combat Training
+CTS - Complete Tech Solutions
+Cupro's Stones
+DDA Security and More
+DeCore
+Dubs Bad Hygiene
+Dubs Skylights
+Expanded Roofing
+Expanded Woodworking
+Extended Storage
+Extended Storage Extended
+Extended Woodworking
+Fantastic Decor
+Fast regen 1.1
+Fences And Floors
+Fences And Floors (Continued)
+Fences And No Floors
+Fermenter
+Fertile Fields
+Fish Industry
+Fishing Industry
+Fishing Nets
+Floor Lights
+Floored
+Genetic Rim
+Glass+Lights
+Glitter Tech
+Glitter Tech (No Surgery)
+Glitter Tech {No Surgery}
+Gloomy Extra - Kitchen
+Gloomy Furniture
+Gloomy Vanilla
+Gloomy Vanilla Overhaul
+GloomyFurniture
+Glowstone
+Harvest Organs Post Mortem
+High Density Hydroponics
+High Tech Laboratory Facilities (Continued)
+Industrial Rollers
+Industrialisation
+Insulation
+JetPack
+Large Animal Beds
+LED Lights
+Lord of the Rims - Elves
+LWM's Deep Storage
+MBS Faux Rock Wall
+Mechalit Core
+Medical System Expansion - Revived
+Medical Training
+Medieval Times
+Medieval Times Unofficial
+MendAndRecycle
+Misc. Training
+More Furniture
+More Furniture [1.1]
+More Hydroponics
+More Linkables
+More Planning
+NightVision
+Open The Windows
+Outdoor Lighting
+Plant Growing Wall Light
+Polyamory Beds
+Polyamory Beds (Vanilla Edition)
+Power Switch
+Preemptive Strike
+RedistHeat
+Remote Tech
+Repair Workbench
+Replace Stuff
+Rim Cuisine 2
+Rim of Madness - Bones
+Rimatomics
+RimBees
+Rimefeller
+RimJobWorld
+RIMkea
+RimOverhaul
+RimPlas
+RimWriter
+Roads of the Rim
+Roof Support
+RoofBomb
+Save Our Ship 2
+SeedsPlease
+Simple Chains: Leather
+Simple Chains: Steel
+Simple Coal
+Simple Concrete
+Simply More Bridges
+Simply More Bridges (Continued)
+Smarter Vanilla Food
+Smoked meat
+Smokeleaf Industry Reborn
+Soft Warm Beds
+Sparkling Worlds
+Static Quality Plus
+Steam Light
+Storage Solutions
+Stuffed Floors
+Survival Meals Expanded
+Survivalist Additions
+Survivalist's Additions
+Tabletop Trove - Additional Joy Objects and Decor
+Thanks For All The Fish
+UN-Colony
+Vanilla Animals Expanded — Arid Shrubland
+Vanilla Animals Expanded — Desert
+Vanilla Animals Expanded — Ice Sheet
+Vanilla Animals Expanded — Tropical Rainforest
+Vanilla Animals Expanded — Tundra
+Vanilla Animals Overhaul Reloaded
+Vanilla Armour Expanded
+Vanilla Factions Expanded - Medieval
+Vanilla Factions Expanded - Settlers
+Vanilla Furniture Expanded
+Vanilla Furniture Expanded - Farming
+Vanilla Furniture Expanded - Medical Module
+Vanilla Furniture Expanded - Power
+Vanilla Furniture Expanded - Production
+Vanilla Furniture Expanded - Spacer Module
+VFE-Production
+VGP Garden Canning
+VGP Garden Drinks
+VGP Garden Fabrics
+VGP Garden Gourmet
+VGP Garden Medicine
+VGP Garden Tools
+VGP Soylent Production
+VGP Vegetable Garden
+Wall Light
+Wall Sun Lamp
+Xenite Industries
+ZARS Production Spots
+Zen Garden
+```

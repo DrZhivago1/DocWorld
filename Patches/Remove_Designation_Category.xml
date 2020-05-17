@@ -269,6 +269,19 @@
    </Operation>
 
    <!--==========
+    Tabletop Trove
+    ==========-->
+
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Tabletop Trove - Additional Joy Objects and Decor</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="TabletopCategory"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
     Vanilla Furniture Expanded
     ==========-->
 
