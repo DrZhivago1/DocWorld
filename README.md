@@ -6,9 +6,11 @@ _[Link to Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=15687445
 
 _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416)_
 
-### Important Info
+### Important Info:
+[Full Feature List](https://github.com/DrZhivago1/DocWorld/wiki/1.-Content-Overview)
+
 [Mod Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/2.-Mod-Compatibility) for conflicts.
 
-[Save Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/3.-Save-Compatibility) for any ongoing/new games.
+[Save Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/3.-Save-Compatibility)
 
-[Changelog](https://github.com/DrZhivago1/DocWorld/wiki/4.-Changelog) for all changes made by this mod.
+[Changelog](https://github.com/DrZhivago1/DocWorld/wiki/4.-Changelog)
