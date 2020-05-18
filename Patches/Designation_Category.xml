@@ -1683,39 +1683,6 @@
     </Operation>
 
     <!--==========
-    Tabletop Trove
-    ==========-->
-
-    <!--Move items to Recreation tab-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Tabletop Trove - Additional Joy Objects and Decor</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[
-                    defName = "DMScreen" or
-                    defName = "OneCards" or
-                    defName = "SorceryCards" or
-                    defName = "TreacheryGame" or         
-                    defName = "ColonistsGame" or
-                    defName = "BoardGameBoxes" or
-                    defName = "PlayerHandbook" or
-                    defName = "CharacterSheet" or
-                    defName = "MonopsonyBoard" or
-                    defName = "DiscreteDictator"]/designationCategory   
-                    </xpath>
-                    <value>
-                        <designationCategory>Joy</designationCategory>
-                    </value>
-                </li>
-            </operations>
-        </match>
-    </Operation>
-
-    <!--==========
     Vanilla Factions Expanded - Medieval
     ==========-->
 

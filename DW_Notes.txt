@@ -144,8 +144,6 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 		{Move items to Storage tab. #storage}
     Survival Meals Expanded
         {Move items to Culinary tab}
-    Tabletop Trove
-        {Move items to Recreation tab}
     Vanilla Factions Expanded - Medieval
         {Move items to Culinary tab}
     Vanilla Factions Expanded - Settlers
@@ -453,8 +451,6 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 		{MSI Designation Category removal}
 	Storage Solutions
 		{CCP_StorageSolutions Designation Category removal}
-    Tabletop Trove
-        {TabletopCategory}
     Vanilla Furniture Expanded
         {AOMorefurniture Designation Category removal}
     VGP Garden Tools
@@ -616,7 +612,6 @@ Stuffed Floors
 Survival Meals Expanded
 Survivalist Additions
 Survivalist's Additions
-Tabletop Trove - Additional Joy Objects and Decor
 Thanks For All The Fish
 UN-Colony
 Vanilla Animals Expanded — Arid Shrubland
