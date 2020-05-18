@@ -240,6 +240,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Lamp-pots}
     More Furniture [1.1]
         {Carpet}
+    Rim of Madness - Bones
+        {BoneFloor, BoneFloor_Blackened, BoneChinaFloor, BoneFloor_Ashen, BoneFloor_Tile}
     RIMkea
         {Shainbrait, Kageshain}
     RimPlas
@@ -374,8 +376,6 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Replimat
         {LWM's Deep Storage}
     RIMkea
-        {Stuffed Floors}
-    Rim of Madness - Bones
         {Stuffed Floors}
     RimOverhaul
         {Simple Chains: Leather}

@@ -604,6 +604,36 @@
     </Operation>
 
     <!--==========
+    Rim of Madness - Bones
+    ==========-->
+
+    <!--Moves Floors into a single designation tile-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Rim of Madness - Bones</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Floor_Bones</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/TerrainDef[defName="BoneFloor" or defName="BoneFloor_Blackened" or defName="BoneChinaFloor" or defName="BoneFloor_Ashen" or defName="BoneFloor_Tile"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Floor_Bones</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     RIMkea
     ==========-->
 
