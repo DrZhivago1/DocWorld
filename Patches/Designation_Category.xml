@@ -1274,7 +1274,7 @@
             <success>Always</success>
             <operations>
                 <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[defName="RB_Beekeeping_Workbench_Building" or defName="RB_MeadFermentingBarrel"]/designationCategory</xpath>
+                    <xpath>/Defs/ThingDef[defName="RB_Beekeeping_Workbench_Building"]/designationCategory</xpath>
                     <value>
                         <designationCategory>DZ_Culinary</designationCategory>
                     </value>
@@ -1683,16 +1683,16 @@
     </Operation>
 
     <!--==========
-    Vanilla Factions Expanded - Medieval
+    Universal Fermenter
     ==========-->
 
     <!--Move items to Culinary tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>Vanilla Factions Expanded - Medieval</li>
+            <li>[SYR] Universal Fermenter</li>
         </mods>
         <match Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="VFEM_WineBarrel"]/designationCategory</xpath>
+            <xpath>/Defs/ThingDef[defName="UniversalFermenter"]/designationCategory</xpath>
             <value>
                 <designationCategory>DZ_Culinary</designationCategory>
             </value>

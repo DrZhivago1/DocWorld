@@ -2167,6 +2167,64 @@
   </Operation>
 
   <!--==========
+    Universal Fermenter {Vanilla Factions Expanded - Medieval, Vanilla Factions Expanded - Settlers, RimBees}
+    ==========-->
+
+  <!--Move items to Culinary tab. #uf-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[SYR] Universal Fermenter</li>
+    </mods>
+    <nomatch Class="PatchOperationFindMod">
+      <mods>
+        <li>RimBees</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="RB_MeadFermentingBarrel"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Culinary</designationCategory>
+        </value>
+      </match>
+    </nomatch>
+  </Operation>
+
+  <!--Move items to Culinary tab. #uf-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[SYR] Universal Fermenter</li>
+    </mods>
+    <nomatch Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Factions Expanded - Medieval</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="VFEM_WineBarrel"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Culinary</designationCategory>
+        </value>
+      </match>
+    </nomatch>
+  </Operation>
+
+  <!--Move items to Culinary tab. #uf-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[SYR] Universal Fermenter</li>
+    </mods>
+    <nomatch Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Factions Expanded - Settlers</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Building_ChemshineBarrel"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Culinary</designationCategory>
+        </value>
+      </match>
+    </nomatch>
+  </Operation>
+
+  <!--==========
     Vanilla Armour Expanded {NightVision}
     ==========-->
 

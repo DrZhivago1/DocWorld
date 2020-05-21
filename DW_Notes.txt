@@ -144,6 +144,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 		{Move items to Storage tab. #storage}
     Survival Meals Expanded
         {Move items to Culinary tab}
+    Universal Fermenter
+        {Move items to Culinary tab}
     Vanilla Factions Expanded - Medieval
         {Move items to Culinary tab}
     Vanilla Factions Expanded - Settlers
@@ -391,6 +393,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 		{Industrialisation, Roads of the Rim, Simple Concrete}
     UN-Colony
         {Industrialisation}
+    Universal Fermenter
+        {Vanilla Factions Expanded - Medieval, Vanilla Factions Expanded - Settlers, RimBees}
     Vanilla Armour Expanded
         {NightVision}
     Vanilla Furniture Expanded
