@@ -62,6 +62,26 @@
   </Operation>
 
   <!--==========
+    Industrial Rollers
+    ==========-->
+
+  <!--Rollers require complex furniture and electricity-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Industrial Rollers</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[@Name="RollerBase"]</xpath>
+      <value>
+        <researchPrerequisites>
+          <li>ComplexFurniture</li>
+          <li>Electricity</li>
+        </researchPrerequisites>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
     RoofBomb
     ==========-->
 

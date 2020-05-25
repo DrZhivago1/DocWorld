@@ -913,18 +913,9 @@
             <success>Always</success>
             <operations>
                 <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[@Name="RollerBase"]/designationCategory</xpath>
+                    <xpath>/Defs/ThingDef//designationCategory[text()="Industrial"]</xpath>
                     <value>
                         <designationCategory>DZ_Industrial</designationCategory>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[@Name="RollerBase"]</xpath>
-                    <value>
-                        <researchPrerequisites>
-                            <li>ComplexFurniture</li>
-                            <li>Electricity</li>
-                        </researchPrerequisites>
                     </value>
                 </li>
             </operations>
@@ -1184,6 +1175,46 @@
             <value>
                 <designationCategory>Security</designationCategory>
             </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Project RimFactory Revived
+    ==========-->
+
+    <!--Move items to Industrial, Lighting, and Floors tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Project RimFactory Revived</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef//designationCategory[text()="Industrial"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Industrial</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/TerrainDef[@Name="FloorBase_prf"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Floors</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/TerrainDef[@Name="PRF_FloorSign"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 

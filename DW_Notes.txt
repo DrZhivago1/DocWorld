@@ -108,6 +108,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Beds tab}
     Preemptive Strike
         {Move items to Security tab}
+    Project RimFactory Revived
+        {Move items to Industrial, Lighting, and Floors tab}
     [RF] Fishing
         {Move items to Husbandry tab}
     Replimat
@@ -375,6 +377,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Thanks For All The Fish}
     [T] MoreFloors
         {Stuffed Floors}
+    Project RimFactory Revived
+        {LWM's Deep Storage}
     Repair Workbench
         {[LC] Survival Tools}
     Replimat
@@ -439,6 +443,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {AviaryJurassicRimworld Designation Category removal}
     Preemptive Strike
         {PES_Reconnaissance Designation Category removal}
+    Project RimFactory Revived
+        {Industrial Designation Category removal}
     Replimat
         {Replimat_Replimat Designation Category removal}
     Revia Race
@@ -471,6 +477,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Disallow lights until electricity is researched, Remove Redundancies}
     High Tech Laboratory Facilities (Continued)
         {Require Research for countertop}
+    Industrial Rollers
+        {Rollers require complex furniture and electricity}
     RoofBomb
         {Shaped Charges require IEDs}
 
@@ -581,6 +589,7 @@ Polyamory Beds
 Polyamory Beds (Vanilla Edition)
 Power Switch
 Preemptive Strike
+Project RimFactory Revived
 RedistHeat
 Remote Tech
 Repair Workbench

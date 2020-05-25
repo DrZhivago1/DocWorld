@@ -1383,6 +1383,28 @@
   </Operation>
 
   <!--==========
+    Project RimFactory Revived {LWM's Deep Storage}
+    ==========-->
+
+  <!--Storage furniture moved to Storage. #storage-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Project RimFactory Revived</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>LWM's Deep Storage</li>
+      </mods>
+      <nomatch Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[@Name="PRFMassStorageBase"]/designationCategory</xpath>
+        <value>
+          <designationCategory>DZ_Storage</designationCategory>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <!--==========
     Repair Workbench {[LC] Survival Tools}
     ==========-->
 
