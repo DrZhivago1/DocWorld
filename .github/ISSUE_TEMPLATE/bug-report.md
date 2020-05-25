@@ -7,14 +7,11 @@ assignees: ''
 
 ---
 
-**Describe the bug**
+**Bug Description**
 A clear and concise description of what the bug is.
-
-**Expected behavior**
-A clear and concise description of what you expected to happen, if relevant to bug report.
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
 **HugsLib Error Log:**
- - Paste_Link_Here
+ - [Error Log](Paste_Link_Here)
