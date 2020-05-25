@@ -9,7 +9,7 @@ _[Link to Ludeon](https://ludeon.com/forums/index.php?topic=47165.msg447416#msg4
 ### Important Info:
 [Full Feature List](https://github.com/DrZhivago1/DocWorld/wiki/1.-Content-Overview)
 
-[Mod Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/2.-Mod-Compatibility) for conflicts.
+[Mod Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/2.-Mod-Compatibility)  
 
 [Save Compatibility](https://github.com/DrZhivago1/DocWorld/wiki/3.-Save-Compatibility)
 
