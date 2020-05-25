@@ -17,3 +17,6 @@ _________________________________________________________________
 - Summary_of_second_change:
 - [ ] Item_Name_One & Item_Name_Two [Mod_Name](Mod_Link)
 - [ ] Item_Name_One [Mod_Name](Mod_Link)
+_________________________________________________________________
+Copy/paste the above templates ad infinitum
+
