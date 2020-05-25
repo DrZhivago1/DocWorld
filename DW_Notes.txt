@@ -88,6 +88,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Husbandry tab}
     Industrial Rollers
         {Move items to Industrial tab}
+    Invisible Animal Beds
+        {Move items to Animals tab. #animalbeds}
     Jurassic Rimworld
         {Move items to Jurassic tab}
     Large Animal Beds
@@ -127,7 +129,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     RIMkea
         {Move items to Animals, Beds, Floors, Furniture, Lighting, and Temperature tab}
     RimPlas
-        {Move items to Furniture, Husbandry, Structure, Security, Beds, and Joy tab}
+        {Move items to Furniture, Husbandry, Structure, Security, Beds, Animals, and Joy tab}
     RimWriter
         {Move items to Storage tab}
     SeedsPlease
@@ -562,6 +564,7 @@ High Tech Laboratory Facilities (Continued)
 Industrial Rollers
 Industrialisation
 Insulation
+Invisible Animal Beds
 JetPack
 Jurassic Rimworld
 Large Animal Beds

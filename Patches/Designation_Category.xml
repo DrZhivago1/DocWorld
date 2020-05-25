@@ -923,6 +923,23 @@
     </Operation>
 
     <!--==========
+    Invisible Animal Beds
+    ==========-->
+
+    <!--Move items to Animals tab. #animalbeds-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[FSF] Invisible Animal Beds</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="FSFInvisibleAnimalBed" or defName="FSFInvisibleAnimalBedPlush"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Animals</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Jurassic Rimworld
     ==========-->
 
@@ -1468,7 +1485,7 @@
     RimPlas
     ==========-->
 
-    <!--Move items to Furniture, Husbandry, Structure, Security, Beds, and Joy tab-->
+    <!--Move items to Furniture, Husbandry, Structure, Security, Beds, Animals, and Joy tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RimPlas</li>
@@ -1516,6 +1533,13 @@
                     <xpath>/Defs/ThingDef[defName="RPSecurityDoor"]</xpath>
                     <value>
                         <designationCategory>Structure</designationCategory>
+                    </value>
+                </li>
+                <!--#animalbeds-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="RimPlas_AnimalSleepingBox"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Animals</designationCategory>
                     </value>
                 </li>
             </operations>
