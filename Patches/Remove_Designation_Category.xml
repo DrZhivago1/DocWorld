@@ -8,6 +8,7 @@
    <!--Animals Designation Category removal, if mods not found. #animalbeds-->
    <Operation Class="PatchOperationFindMod">
       <mods>
+         <li>Animal Medical Bed</li>
          <li>Large Animal Beds</li>
          <li>【1.1】Animalstrawbed</li>
          <li>[sd] Chicken Nest (Continued)</li>

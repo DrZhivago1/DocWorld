@@ -150,6 +150,23 @@
     </Operation>
 
     <!--==========
+    Animal Medical Bed
+    ==========-->
+
+    <!--Move items to Animal tab. #animalbeds-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Animal Medical Bed</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="SUN_MedicalAnimalBed"]</xpath>
+            <value>
+                <designationCategory>DZ_Animals</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Animal Straw Bed
     ==========-->
 

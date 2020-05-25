@@ -31,6 +31,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Animal tab}
     Alpha Biomes
         {Move items to Floors, Power, Production, Security, Joy, Culinary, Temperature, and Structure tab}
+    Animal Medical Bed
+        {Move items to Animal tab. #animalbeds}
     Architect Expanded - Fences
         {Move items to Fences tab}
     Ceiling Lights
@@ -499,6 +501,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 【1.1】Animalstrawbed
 Alpha Animals
 Alpha Biomes
+Animal Medical Bed
 Architect Expanded - Fences
 Atlas Materials
 BetterCoolers
