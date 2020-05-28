@@ -1225,11 +1225,20 @@
                         <designationCategory>DZ_Lighting</designationCategory>
                     </value>
                 </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp"]</xpath>
-                    <value>
-                        <designationCategory>DZ_Lighting</designationCategory>
-                    </value>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Lighting</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Lighting</designationCategory>
+                        </value>
+                    </nomatch>
                 </li>
             </operations>
         </match>
@@ -1518,7 +1527,7 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="RimPlas_AnimalSleepingBox" or defName="BedRoll_TSB" or defName="BedrollDouble_TSB"]</xpath>
+                    <xpath>/Defs/ThingDef[defName="BedRoll_TSB" or defName="BedrollDouble_TSB"]</xpath>
                     <value>
                         <designationCategory>DZ_Beds</designationCategory>
                     </value>
@@ -1536,8 +1545,8 @@
                     </value>
                 </li>
                 <!--#animalbeds-->
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[defName="RimPlas_AnimalSleepingBox"]/designationCategory</xpath>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RimPlas_AnimalSleepingBox"]</xpath>
                     <value>
                         <designationCategory>DZ_Animals</designationCategory>
                     </value>
