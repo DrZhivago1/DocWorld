@@ -211,8 +211,13 @@
       <mods>
          <li>Project RimFactory Revived</li>
       </mods>
-      <match Class="PatchOperationRemove">
-         <xpath>/Defs/DesignationCategoryDef[defName="Industrial"]</xpath>
+      <match Class="PatchOperationFindMod">
+         <mods>
+            <li>Industrial Rollers</li>
+         </mods>
+         <nomatch Class="PatchOperationRemove">
+            <xpath>/Defs/DesignationCategoryDef[defName="Industrial"]</xpath>
+         </nomatch>
       </match>
    </Operation>
 

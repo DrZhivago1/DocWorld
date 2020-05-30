@@ -1208,19 +1208,7 @@
             <success>Always</success>
             <operations>
                 <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef//designationCategory[text()="Industrial"]</xpath>
-                    <value>
-                        <designationCategory>DZ_Industrial</designationCategory>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/TerrainDef[@Name="FloorBase_prf"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Floors</designationCategory>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/TerrainDef[@Name="PRF_FloorSign"]/designationCategory</xpath>
+                    <xpath>/Defs/ThingDef[@Name="PRF_FloorSign"]/designationCategory</xpath>
                     <value>
                         <designationCategory>DZ_Lighting</designationCategory>
                     </value>
@@ -1239,6 +1227,12 @@
                             <designationCategory>DZ_Lighting</designationCategory>
                         </value>
                     </nomatch>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef//designationCategory[text()="Industrial"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Industrial</designationCategory>
+                    </value>
                 </li>
             </operations>
         </match>

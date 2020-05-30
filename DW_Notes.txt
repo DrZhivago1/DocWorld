@@ -111,7 +111,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Preemptive Strike
         {Move items to Security tab}
     Project RimFactory Revived
-        {Move items to Industrial, Lighting, and Floors tab}
+        {Move items to Industrial, and Lighting tab}
     [RF] Fishing
         {Move items to Husbandry tab}
     Replimat
