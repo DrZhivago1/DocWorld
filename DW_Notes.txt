@@ -219,7 +219,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 
 #### Conditional Section:
     Vanilla
-        {Solar, Geothermal}
+        {Battery, Solar, Geothermal, Wind}
 
 #### Non-Conditional Section:
     Vanilla
@@ -246,6 +246,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Sleeping Spots}
     Mechalit Core
         {Lamp-pots}
+    Metallic Batteries
+        {Battery_Silver, Battery_Gold, Battery_Plasteel, Battery_Uranium, Battery_Advanced, Battery_Vanometric}
     More Furniture [1.1]
         {Carpet}
     Rim of Madness - Bones
@@ -253,11 +255,11 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     RIMkea
         {Shainbrait, Kageshain}
     RimPlas
-        {RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator, RPGrapheneGeoGenerator, RPGrapheneWindTurbine}
+        {RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator, RPGrapheneGeoGenerator, RPGrapheneWindTurbine, RPGrapheneBattery, RPSmallGrapheneBattery, RPGraphenePowerConduit, RPUndGrapheneConduit}
     Smokeleaf Industry Reborn
         {HempolineGenerator, HempSolarGenerator}
     Vanilla Furniture Expanded - Power
-        {VFE_PortableWoodFiredGenerator, VFE_PortableChemfuelPoweredGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_AdvancedSolarGenerator, VFE_AdvancedWindTurbine}
+        {VFE_PortableWoodFiredGenerator, VFE_PortableChemfuelPoweredGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_AdvancedSolarGenerator, VFE_AdvancedWindTurbine, VFE_LargeBattery, VFE_SmallBattery, VFE_AdvancedBattery, VFE_LargeAdvancedBattery, VFE_AdvancedWatermillGenerator}
     Vanilla Factions Expanded - Settlers
         {Windmill}
 
@@ -578,6 +580,7 @@ Medical Training
 Medieval Times
 Medieval Times Unofficial
 MendAndRecycle
+Metallic Batteries
 Misc. Training
 More Furniture
 More Furniture [1.1]

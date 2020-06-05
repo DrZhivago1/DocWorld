@@ -9,6 +9,43 @@
     VANILLA
     ==========-->
 
+    <!--Battery-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[SYR] Metallic Batteries</li>
+            <li>RimPlas</li>
+            <li>Vanilla Furniture Expanded - Power</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Battery</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="Battery"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Battery"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Power_Battery</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Battery"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Power_Battery</designatorDropdown>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
     <!--Geothermal Generators-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -588,6 +625,23 @@
     </Operation>
 
     <!--==========
+    Metallic Batteries
+    ==========-->
+
+    <!--Battery_Silver, Battery_Gold, Battery_Plasteel, Battery_Uranium, Battery_Advanced, Battery_Vanometric-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[SYR] Metallic Batteries</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Battery_Silver" or defName="Battery_Gold" or defName="Battery_Plasteel" or defName="Battery_Uranium" or defName="Battery_Advanced" or defName="Battery_Vanometric"]/designatorDropdown</xpath>
+            <value>
+                <designatorDropdown>DZ_Power_Battery</designatorDropdown>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     More Furniture [1.1]
     ==========-->
 
@@ -709,6 +763,26 @@
                         <designatorDropdown>DZ_Power_Wind</designatorDropdown>
                     </value>
                 </li>
+                <!--RPGrapheneBattery, RPSmallGrapheneBattery-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneBattery" or defName="RPSmallGrapheneBattery"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Battery</designatorDropdown>
+                    </value>
+                </li>
+                <!--RPGraphenePowerConduit, RPUndGrapheneConduit, RPGraphenePowerConduit_Buried
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGraphenePowerConduit" or defName="RPUndGrapheneConduit"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_PowerConduits</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGraphenePowerConduit_Buried"]</xpath>
+                    <value>
+                        <designatorDropdown Inherit="false" />
+                    </value>
+                </li>-->
             </operations>
         </match>
     </Operation>
@@ -772,6 +846,27 @@
                     <xpath>/Defs/ThingDef[defName="VFE_AdvancedWindTurbine"]</xpath>
                     <value>
                         <designatorDropdown>DZ_Power_Wind</designatorDropdown>
+                    </value>
+                </li>
+                <!--VFE_LargeBattery, VFE_SmallBattery, VFE_AdvancedBattery, VFE_LargeAdvancedBattery-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_LargeBattery" or defName="VFE_SmallBattery" or defName="VFE_AdvancedBattery" or defName="VFE_LargeAdvancedBattery"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Battery</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Watermill</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="WatermillGenerator" or defName="VFE_AdvancedWatermillGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Watermill</designatorDropdown>
                     </value>
                 </li>
             </operations>
