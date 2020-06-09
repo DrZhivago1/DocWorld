@@ -133,6 +133,34 @@
    </Operation>
 
    <!--==========
+    Floor Lights
+    ==========-->
+
+   <!--Lamps Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Floor Lights</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="Lamps"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Give up your building
+    ==========-->
+
+   <!--ZoreTechTool Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Give up your building</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="ZoreTechTool"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
     Glowstone
     ==========-->
 
@@ -301,7 +329,21 @@
          <li>RIMkea</li>
       </mods>
       <match Class="PatchOperationRemove">
-         <xpath>/Defs/designationCategoryDef[defName="RIMkea"]</xpath>
+         <xpath>/Defs/DesignationCategoryDef[defName="RIMkea"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Rimoleum
+    ==========-->
+
+   <!--Rimoleum Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Rimoleum</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="Rimoleum"]</xpath>
       </match>
    </Operation>
 

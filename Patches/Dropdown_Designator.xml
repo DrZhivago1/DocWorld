@@ -46,6 +46,42 @@
         </match>
     </Operation>
 
+    <!--Coolers-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Power</li>
+            <li>RimPlas</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Temp_Cooler</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="Cooler"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Cooler"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Temp_Cooler</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Cooler"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Temp_Cooler</designatorDropdown>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
     <!--Geothermal Generators-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -67,6 +103,44 @@
                     <value>
                         <designatorDropdown>DZ_Power_Geothermal</designatorDropdown>
                     </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Heaters-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Alpha Biomes</li>
+            <li>Vanilla Furniture Expanded - Power</li>
+            <li>Vanilla Factions Expanded - Settlers</li>
+            <li>RimPlas</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Temp_Heater</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="Heater"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Heater"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Heater"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                        </value>
+                    </nomatch>
                 </li>
             </operations>
         </match>
@@ -96,6 +170,41 @@
                     <value>
                         <designatorDropdown>DZ_Power_Solar</designatorDropdown>
                     </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Transport Pod-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Sparkling Worlds - Full Mod</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Misc_Pod</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="TransportPod"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="TransportPod"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Misc_Pod</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="TransportPod"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Misc_Pod</designatorDropdown>
+                        </value>
+                    </nomatch>
                 </li>
             </operations>
         </match>
@@ -210,16 +319,26 @@
     Alpha Biomes
     ==========-->
 
-    <!--AB_AlcyoniteSolar-->
+    <!--AB_AlcyoniteSolar, AB_PropaneHeater-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Alpha Biomes</li>
         </mods>
-        <match Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="AB_AlcyoniteSolar"]</xpath>
-            <value>
-                <designatorDropdown>DZ_Power_Solar</designatorDropdown>
-            </value>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AB_AlcyoniteSolar"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Solar</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AB_PropaneHeater"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 
@@ -531,19 +650,39 @@
     Glass+Lights
     ==========-->
 
-    <!--Cieling Lamps-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Glass+Lights</li>
         </mods>
-        <match Class="PatchOperationConditional">
-            <xpath>/Defs/ThingDef[defName="GLCeilingLamp"]/designatorDropdown</xpath>
-            <nomatch Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="GLCeilingLamp"]</xpath>
-                <value>
-                    <designatorDropdown>CeilingLights</designatorDropdown>
-                </value>
-            </nomatch>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Cieling Lamps-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="GLCeilingLamp"]/designatorDropdown</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="GLCeilingLamp"]</xpath>
+                        <value>
+                            <designatorDropdown>CeilingLights</designatorDropdown>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--FueledGlassworkTable, GlassworkTable, ReinforcedGlassworkTable-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_GL_Glassworks</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="FueledGlassworkTable" or defName="GlassworkTable" or defName="ReinforcedGlassworkTable"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_GL_Glassworks</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 
@@ -770,6 +909,35 @@
                         <designatorDropdown>DZ_Power_Battery</designatorDropdown>
                     </value>
                 </li>
+                <!--RPGrapheneHeater-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneHeater"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                    </value>
+                </li>
+                <!--RPGrapheneCooler-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneCooler"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Cooler</designatorDropdown>
+                    </value>
+                </li>
+                <!--RimPlas_InjMldMachine, RimPlas_AdvInjMld-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_RP_IMM</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RimPlas_InjMldMachine" or defName="RimPlas_AdvInjMld"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_RP_IMM</designatorDropdown>
+                    </value>
+                </li>
                 <!--RPGraphenePowerConduit, RPUndGrapheneConduit, RPGraphenePowerConduit_Buried
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[defName="RPGraphenePowerConduit" or defName="RPUndGrapheneConduit"]</xpath>
@@ -812,7 +980,31 @@
                         <designatorDropdown>DZ_Power_Solar</designatorDropdown>
                     </value>
                 </li>
+                <!--HempPowerConduit-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="HempPowerConduit"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_PowerConduits</designatorDropdown>
+                    </value>
+                </li>
             </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Sparkling Worlds - Full Mod
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Sparkling Worlds - Full Mod</li>
+        </mods>
+        <!--BeamCannonSatellitePodSW, KineticBombardmentSatellitePodSW-->
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="BeamCannonSatellitePodSW" or defName="KineticBombardmentSatellitePodSW"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Misc_Pod</designatorDropdown>
+            </value>
         </match>
     </Operation>
 
@@ -855,6 +1047,36 @@
                         <designatorDropdown>DZ_Power_Battery</designatorDropdown>
                     </value>
                 </li>
+                <!--VPE_GasHeater-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VPE_GasHeater"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                    </value>
+                </li>
+                <!--VPE_GasCooler-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VPE_GasCooler"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Cooler</designatorDropdown>
+                    </value>
+                </li>
+                <!--VPE_GasPipe, VPE_GasPipeSub-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_VPE_GasPipe</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VPE_GasPipe" or defName="VPE_GasPipeSub"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_VPE_GasPipe</designatorDropdown>
+                    </value>
+                </li>
+                <!--Watermill-->
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs</xpath>
                     <value>
@@ -877,16 +1099,28 @@
     Vanilla Factions Expanded - Settlers
     ==========-->
 
-    <!--Windmill-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Vanilla Factions Expanded - Settlers</li>
         </mods>
-        <match Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="Windmill"]</xpath>
-            <value>
-                <designatorDropdown>DZ_Power_Wind</designatorDropdown>
-            </value>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Chemboiler-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ChemBoiler"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                    </value>
+                </li>
+                <!--Windmill-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Windmill"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Wind</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 

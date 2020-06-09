@@ -72,6 +72,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Husbandry tab}
     Floor Lights
         {Move items to Lighting tab}
+    Give up your building
+        {Move items to Orders tab}
     Glass+Lights
         {Move items to Lighting tab}
     Glitter Tech
@@ -128,6 +130,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Beds tab}
     RIMkea
         {Move items to Animals, Beds, Floors, Furniture, Lighting, and Temperature tab}
+    Rimoleum
+        {Move items to Floors tab}
     RimPlas
         {Move items to Furniture, Husbandry, Structure, Security, Beds, Animals, and Joy tab}
     RimWriter
@@ -219,13 +223,13 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 
 #### Conditional Section:
     Vanilla
-        {Battery, Solar, Geothermal, Wind}
+        {Battery, Cooler, Geothermal, Heater, Solar, Transport Pod, Wind}
 
 #### Non-Conditional Section:
     Vanilla
         {Generators, IEDs, Power Conduits, Standing Lamps}
     Alpha Biomes
-        {AB_AlcyoniteSolar}
+        {AB_AlcyoniteSolar, AB_PropaneHeater}
     Dubs Bad Hygiene
         {Water heaters}
     Fertile Fields
@@ -239,7 +243,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Genetic Rim
         {GR_CryostabilizedEngine}
     Glass+Lights
-        {Cieling Lamps}
+        {Cieling Lamps, FueledGlassworkTable, GlassworkTable, ReinforcedGlassworkTable}
     JetPack
         {JPKerosene_Generator}
     Large Animal Beds
@@ -255,13 +259,15 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     RIMkea
         {Shainbrait, Kageshain}
     RimPlas
-        {RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator, RPGrapheneGeoGenerator, RPGrapheneWindTurbine, RPGrapheneBattery, RPSmallGrapheneBattery, RPGraphenePowerConduit, RPUndGrapheneConduit}
+        {RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator, RPGrapheneGeoGenerator, RPGrapheneWindTurbine, RPGrapheneBattery, RPSmallGrapheneBattery, RPGrapheneHeater, RPGrapheneCooler, RimPlas_InjMldMachine, RimPlas_AdvInjMld}
     Smokeleaf Industry Reborn
-        {HempolineGenerator, HempSolarGenerator}
+        {HempolineGenerator, HempSolarGenerator, HempPowerConduit}
+    Sparkling Worlds - Full Mod
+        {BeamCannonSatellitePodSW, KineticBombardmentSatellitePodSW}
     Vanilla Furniture Expanded - Power
-        {VFE_PortableWoodFiredGenerator, VFE_PortableChemfuelPoweredGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_AdvancedSolarGenerator, VFE_AdvancedWindTurbine, VFE_LargeBattery, VFE_SmallBattery, VFE_AdvancedBattery, VFE_LargeAdvancedBattery, VFE_AdvancedWatermillGenerator}
+        {VFE_PortableWoodFiredGenerator, VFE_PortableChemfuelPoweredGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_AdvancedSolarGenerator, VFE_AdvancedWindTurbine, VFE_LargeBattery, VFE_SmallBattery, VFE_AdvancedBattery, VFE_LargeAdvancedBattery, VPE_GasHeater, VPE_GasCooler, VPE_GasPipe, VPE_GasPipeSub, VFE_AdvancedWatermillGenerator}
     Vanilla Factions Expanded - Settlers
-        {Windmill}
+        {ChemBoiler, Windmill}
 
 ### Efficient_Lights:
 `This file will contain all patches that replace/change the power consumption for lights in Vanilla and Mods.`
@@ -437,6 +443,10 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {skylights Designation Category removal}
     Fertile Fields
         {RFF_Farm Designation Category removal}
+    Floor Lights
+        {Lamps Designation Category removal}
+    Give up your building
+        {ZoreTechTool Designation Category removal}
     Glowstone
         {GLO_Glowstone Designation Category removal}
     Goodnight
@@ -461,6 +471,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Rimefeller Designation Category removal}
     RIMkea
         {RIMkea Designation Category removal}
+    Rimoleum
+        {Rimoleum Designation Category removal}
     RimPlas
         {RimPlas_FurnDesig Designation Category removal}
 	Smokeleaf Industry Reborn
@@ -550,6 +562,7 @@ Fishing Nets
 Floor Lights
 Floored
 Genetic Rim
+Give up your building
 Glass+Lights
 Glitter Tech
 Glitter Tech (No Surgery)
@@ -608,6 +621,7 @@ RimBees
 Rimefeller
 RimJobWorld
 RIMkea
+Rimoleum
 RimOverhaul
 RimPlas
 RimWriter
