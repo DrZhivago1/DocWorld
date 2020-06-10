@@ -13,5 +13,4 @@ A clear and concise description of what the bug is.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**HugsLib Error Log:**
- - [Error Log](Paste_Link_Here)
+[**HugsLib Error Log:**](Paste_Link_Here)
