@@ -225,7 +225,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Vanilla
         {Battery, Cooler, Geothermal, Heater, Solar, Transport Pod, Wind}
 
-#### Non-Conditional Section:
+#### Unconditional Section:
     Vanilla
         {Generators, IEDs, Power Conduits, Standing Lamps}
     Alpha Biomes

@@ -329,7 +329,7 @@
          <li>RIMkea</li>
       </mods>
       <match Class="PatchOperationRemove">
-         <xpath>/Defs/DesignationCategoryDef[defName="RIMkea"]</xpath>
+         <xpath>/Defs/designationCategoryDef[defName="RIMkea"]</xpath>
       </match>
    </Operation>
 
