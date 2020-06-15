@@ -1231,7 +1231,7 @@
                         </value>
                     </match>
                     <nomatch Class="PatchOperationAdd">
-                        <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp"]</xpath>
+                        <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp" or defName="PRF_FloorSpotlight"]</xpath>
                         <value>
                             <designationCategory>DZ_Lighting</designationCategory>
                         </value>
