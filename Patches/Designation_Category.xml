@@ -222,13 +222,13 @@
                     </value>
                 </li>
                 <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[@Name="AB_SmelterBase" or defName="AB_CoreSampleDrill" or defName="AB_PropanePump"]/designationCategory</xpath>
+                    <xpath>/Defs/ThingDef[@Name="AB_SmelterBase" or defName="AB_CoreSampleDrill" or defName="AB_PropanePump" or defName="AB_TarPump"]/designationCategory</xpath>
                     <value>
                         <designationCategory>Production</designationCategory>
                     </value>
                 </li>
                 <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[defName="AB_OcularGasSpewer"]/designationCategory</xpath>
+                    <xpath>/Defs/ThingDef[defName="AB_OcularGasSpewer" or defName="AB_TrapIED_Tar"]/designationCategory</xpath>
                     <value>
                         <designationCategory>Security</designationCategory>
                     </value>
@@ -253,6 +253,12 @@
                 </li>
                 <li Class="PatchOperationReplace">
                     <xpath>/Defs/ThingDef[@Name="AB_ExoticDoorBase" or defName="AB_ExoticWall" or defName="AB_ExoticColumn"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Structure</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/TerrainDef[defName="AB_AsphaltBridge"]/designationCategory</xpath>
                     <value>
                         <designationCategory>Structure</designationCategory>
                     </value>
@@ -1225,7 +1231,7 @@
                 <li Class="PatchOperationConditional">
                     <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp"]/designationCategory</xpath>
                     <match Class="PatchOperationReplace">
-                        <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp"]/designationCategory</xpath>
+                        <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp" or defName="PRF_FloorSpotlight"]/designationCategory</xpath>
                         <value>
                             <designationCategory>DZ_Lighting</designationCategory>
                         </value>
