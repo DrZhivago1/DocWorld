@@ -146,6 +146,58 @@
         </match>
     </Operation>
 
+    <!--Machining-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Production</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Production_Machining</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="TableMachining"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Machining</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Smelter-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Production</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Production_Smelter</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ElectricSmelter"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smelter</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
     <!--Solar Generators-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -170,6 +222,42 @@
                     <value>
                         <designatorDropdown>DZ_Power_Solar</designatorDropdown>
                     </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Tool Cabinet-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>More Linkables</li>
+            <li>Vanilla Furniture Expanded - Production</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Misc_Cabinet</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="ToolCabinet"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="ToolCabinet"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Misc_Cabinet</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="ToolCabinet"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Misc_Cabinet</designatorDropdown>
+                        </value>
+                    </nomatch>
                 </li>
             </operations>
         </match>
@@ -286,6 +374,26 @@
                     <designatorDropdown>DZ_PowerConduits</designatorDropdown>
                 </value>
             </li>
+            <!--Smithy-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Production_Smithy</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="FueledSmithy" or defName="ElectricSmithy"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Production_Smithy</designatorDropdown>
+                        </value>
+                    </li>
+                </operations>
+            </li>
             <!--Standing Lamps-->
             <li Class="PatchOperationAdd">
                 <xpath>/Defs</xpath>
@@ -295,22 +403,41 @@
                     </DesignatorDropdownGroupDef>
                 </value>
             </li>
-            <li Class="PatchOperationSequence">
-                <success>Always</success>
-                <operations>
-                    <li Class="PatchOperationAdd">
-                        <xpath>/Defs/ThingDef[defName="StandingLamp"]</xpath>
-                        <value>
-                            <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
-                        </value>
-                    </li>
-                    <li Class="PatchOperationReplace">
-                        <xpath>/Defs/ThingDef[defName="StandingLamp_Red" or defName="StandingLamp_Green" or defName="StandingLamp_Blue"]/designatorDropdown</xpath>
-                        <value>
-                            <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
-                        </value>
-                    </li>
-                </operations>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="StandingLamp"]</xpath>
+                <value>
+                    <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="StandingLamp_Red" or defName="StandingLamp_Green" or defName="StandingLamp_Blue"]/designatorDropdown</xpath>
+                <value>
+                    <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
+                </value>
+            </li>
+            <!--Stove-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Culinary_Stove</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/designatorDropdown</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/designatorDropdown</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </nomatch>
             </li>
         </operations>
     </Operation>
@@ -319,7 +446,7 @@
     Alpha Biomes
     ==========-->
 
-    <!--AB_AlcyoniteSolar, AB_PropaneHeater-->
+    <!--AB_AlcyoniteSolar, AB_PropaneHeater, AB_PropaneStove, AB_SmelterBase-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Alpha Biomes</li>
@@ -336,6 +463,45 @@
                     <xpath>/Defs/ThingDef[defName="AB_PropaneHeater"]</xpath>
                     <value>
                         <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AB_PropaneStove"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="AB_SmelterBase"]/designatorDropdown</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smelter</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Apothecary
+    ==========-->
+
+    <!--AYCharcoalStove, AYCharcoalSmithy-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Apothecary</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AYCharcoalStove"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AYCharcoalSmithy"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smithy</designatorDropdown>
                     </value>
                 </li>
             </operations>
@@ -797,6 +963,23 @@
     </Operation>
 
     <!--==========
+    More Linkables
+    ==========-->
+
+    <!--ToolCabinetA, ToolCabinetB, ToolCabinetC-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>More Linkables</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="ToolCabinetA" or defName="ToolCabinetB" or defName="ToolCabinetC"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Misc_Cabinet</designatorDropdown>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Rim of Madness - Bones
     ==========-->
 
@@ -1076,6 +1259,20 @@
                         <designatorDropdown>DZ_VPE_GasPipe</designatorDropdown>
                     </value>
                 </li>
+                <!--VPE_GasSmelter-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VPE_GasSmelter"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smelter</designatorDropdown>
+                    </value>
+                </li>
+                <!--VPE_GasStove-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VPE_GasStove"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </li>
                 <!--Watermill-->
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs</xpath>
@@ -1089,6 +1286,52 @@
                     <xpath>/Defs/ThingDef[defName="WatermillGenerator" or defName="VFE_AdvancedWatermillGenerator"]</xpath>
                     <value>
                         <designatorDropdown>DZ_Power_Watermill</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Production
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Production</li>
+        </mods>
+        <!--VFE_DrugCabinet, VFE_MachiningCabinet, VFE_SmithyCabinet, VFE_KitchenSinkCabinet, VFE_TailorCabinet, VFE_FabricationCabinet, VFE_TableStoveLarge, VFE_TableSmithyLarge, VFE_FueledSmelter, VFE_TableMachiningLarge-->
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_DrugCabinet" or defName="VFE_MachiningCabinet" or defName="VFE_SmithyCabinet" or defName="VFE_KitchenSinkCabinet" or defName="VFE_TailorCabinet" or defName="VFE_FabricationCabinet"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Misc_Cabinet</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_TableStoveLarge"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_TableSmithyLarge"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smithy</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_FueledSmelter"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smelter</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_TableMachiningLarge"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Machining</designatorDropdown>
                     </value>
                 </li>
             </operations>

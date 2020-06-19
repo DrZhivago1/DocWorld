@@ -33,6 +33,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Floors, Power, Production, Security, Joy, Culinary, Temperature, and Structure tab}
     Animal Medical Bed
         {Move items to Animal tab. #animalbeds}
+    Apothecary
+        {Move items to Culinary tab}
     Architect Expanded - Fences
         {Move items to Fences tab}
     Ceiling Lights
@@ -223,13 +225,15 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 
 #### Conditional Section:
     Vanilla
-        {Battery, Cooler, Geothermal, Heater, Solar, Transport Pod, Wind}
+        {Battery, Cooler, Geothermal, Heater, Machining, Smelter, Solar, Tool Cabinet, Transport Pod, Wind}
 
 #### Unconditional Section:
     Vanilla
-        {Generators, IEDs, Power Conduits, Standing Lamps}
+        {Generators, IEDs, Power Conduits, Smithy, Standing Lamps, Stove}
     Alpha Biomes
-        {AB_AlcyoniteSolar, AB_PropaneHeater}
+        {AB_AlcyoniteSolar, AB_PropaneHeater, AB_PropaneStove, AB_SmelterBase}
+    Apothecary
+        {AYCharcoalStove, AYCharcoalSmithy}
     Dubs Bad Hygiene
         {Water heaters}
     Fertile Fields
@@ -254,6 +258,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Battery_Silver, Battery_Gold, Battery_Plasteel, Battery_Uranium, Battery_Advanced, Battery_Vanometric}
     More Furniture [1.1]
         {Carpet}
+    More Linkables
+        {ToolCabinetA, ToolCabinetB, ToolCabinetC}
     Rim of Madness - Bones
         {BoneFloor, BoneFloor_Blackened, BoneChinaFloor, BoneFloor_Ashen, BoneFloor_Tile}
     RIMkea
@@ -265,7 +271,9 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Sparkling Worlds - Full Mod
         {BeamCannonSatellitePodSW, KineticBombardmentSatellitePodSW}
     Vanilla Furniture Expanded - Power
-        {VFE_PortableWoodFiredGenerator, VFE_PortableChemfuelPoweredGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_AdvancedSolarGenerator, VFE_AdvancedWindTurbine, VFE_LargeBattery, VFE_SmallBattery, VFE_AdvancedBattery, VFE_LargeAdvancedBattery, VPE_GasHeater, VPE_GasCooler, VPE_GasPipe, VPE_GasPipeSub, VFE_AdvancedWatermillGenerator}
+        {VFE_PortableWoodFiredGenerator, VFE_PortableChemfuelPoweredGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_AdvancedSolarGenerator, VFE_AdvancedWindTurbine, VFE_LargeBattery, VFE_SmallBattery, VFE_AdvancedBattery, VFE_LargeAdvancedBattery, VPE_GasHeater, VPE_GasCooler, VPE_GasPipe, VPE_GasPipeSub, VPE_GasSmelter, VPE_GasStove, VFE_AdvancedWatermillGenerator}
+    Vanilla Furniture Expanded - Production
+        {VFE_DrugCabinet, VFE_MachiningCabinet, VFE_SmithyCabinet, VFE_KitchenSinkCabinet, VFE_TailorCabinet, VFE_FabricationCabinet, VFE_TableStoveLarge, VFE_TableSmithyLarge, VFE_FueledSmelter, VFE_TableMachiningLarge}
     Vanilla Factions Expanded - Settlers
         {ChemBoiler, Windmill}
 
@@ -526,6 +534,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 Alpha Animals
 Alpha Biomes
 Animal Medical Bed
+Apothecary
 Architect Expanded - Fences
 Atlas Materials
 BetterCoolers

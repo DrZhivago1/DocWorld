@@ -150,54 +150,6 @@
     </Operation>
 
     <!--==========
-    Animal Medical Bed
-    ==========-->
-
-    <!--Move items to Animal tab. #animalbeds-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Animal Medical Bed</li>
-        </mods>
-        <match Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="SUN_MedicalAnimalBed"]</xpath>
-            <value>
-                <designationCategory>DZ_Animals</designationCategory>
-            </value>
-        </match>
-    </Operation>
-
-    <!--==========
-    Animal Straw Bed
-    ==========-->
-
-    <!--Move items to Animal tab-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>【1.1】Animalstrawbed</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationConditional">
-                    <xpath>Defs/ThingDef[@Name="StrawBedBase"]/designationCategory</xpath>
-                    <match Class="PatchOperationReplace">
-                        <xpath>/Defs/ThingDef[@Name="StrawBedBase"]/designationCategory</xpath>
-                        <value>
-                            <designationCategory>DZ_Animals</designationCategory>
-                        </value>
-                    </match>
-                    <nomatch Class="PatchOperationAdd">
-                        <xpath>/Defs/ThingDef[@Name="StrawBedBase"]</xpath>
-                        <value>
-                            <designationCategory>DZ_Animals</designationCategory>
-                        </value>
-                    </nomatch>
-                </li>
-            </operations>
-        </match>
-    </Operation>
-
-    <!--==========
     Alpha Biomes
     ==========-->
 
@@ -264,6 +216,71 @@
                     </value>
                 </li>
             </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Animal Medical Bed
+    ==========-->
+
+    <!--Move items to Animal tab. #animalbeds-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Animal Medical Bed</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="SUN_MedicalAnimalBed"]</xpath>
+            <value>
+                <designationCategory>DZ_Animals</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Animal Straw Bed
+    ==========-->
+
+    <!--Move items to Animal tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>【1.1】Animalstrawbed</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>Defs/ThingDef[@Name="StrawBedBase"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="StrawBedBase"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="StrawBedBase"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Animals</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Apothecary
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Apothecary</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="AYCharcoalStove"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
         </match>
     </Operation>
 
@@ -1905,7 +1922,7 @@
             <li>Vanilla Furniture Expanded - Production</li>
         </mods>
         <match Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="VFE_TableStoveLarge" or defName="VFE_TableButcherElectric"]/designationCategory</xpath>
+            <xpath>/Defs/ThingDef[defName="VFE_TableStoveLarge" or defName="VFE_TableButcherElectric" or defName="VPE_GasStove"]/designationCategory</xpath>
             <value>
                 <designationCategory>DZ_Culinary</designationCategory>
             </value>
