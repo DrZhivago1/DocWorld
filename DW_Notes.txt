@@ -182,6 +182,10 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Culinary tab}
     Utility Columns
         {LightColumnMod}
+    Vanilla Cooking Expanded
+        {Move items to Culinary tab}
+    Vanilla Cooking Expanded - Stews
+        {Move items to Culinary tab}
     Vanilla Factions Expanded - Medieval
         {Move items to Culinary tab}
     Vanilla Factions Expanded - Settlers
@@ -734,6 +738,8 @@ Vanilla Animals Expanded — Tropical Rainforest
 Vanilla Animals Expanded — Tundra
 Vanilla Animals Overhaul Reloaded
 Vanilla Armour Expanded
+Vanilla Cooking Expanded
+Vanilla Cooking Expanded - Stews
 Vanilla Factions Expanded - Medieval
 Vanilla Factions Expanded - Settlers
 Vanilla Furniture Expanded

@@ -2149,6 +2149,40 @@
     </Operation>
 
     <!--==========
+    Vanilla Cooking Expanded
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Cooking Expanded</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VCE_CheesePress" or defName="VCE_CondimentPrepTable" or defName="VCE_CanningMachine" or defName="VCE_DeepFrier"  or defName="VCE_ElectricPot" or defName="VCE_Grill"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Cooking Expanded - Stews
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Cooking Expanded - Stews</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VCE_StewPot"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Vanilla Factions Expanded - Settlers
     ==========-->
 
