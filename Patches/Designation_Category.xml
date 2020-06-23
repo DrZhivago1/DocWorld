@@ -2531,7 +2531,7 @@
             <li>Wall Light</li>
         </mods>
         <match Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[@Name="MURWallLightVIIBase"]/designationCategory</xpath>
+            <xpath>/Defs/ThingDef[@Name="MURWallLightBase"]/designationCategory</xpath>
             <value>
                 <designationCategory>DZ_Lighting</designationCategory>
             </value>

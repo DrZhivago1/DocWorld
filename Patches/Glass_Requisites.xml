@@ -330,7 +330,7 @@
                 <operations>
                     <!--Lamps require glass-->
                     <li Class="PatchOperationReplace">
-                        <xpath>/Defs/ThingDef[@Name="MURWallLightBase" or @Name="MURWallLightVIIBase"]/costList</xpath>
+                        <xpath>/Defs/ThingDef[@Name="MURWallLightBase"]/costList</xpath>
                         <value>
                             <costList>
                                 <Glass>1</Glass>

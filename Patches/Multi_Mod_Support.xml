@@ -1104,6 +1104,25 @@
   </Operation>
 
   <!--==========
+    Fertile Fields {Vanilla Plants Expanded}
+    ==========-->
+
+  <!--Vanilla Plants Expanded tilling removed-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Fertile Fields [1.1]</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Plants Expanded</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+        <xpath>/Defs/TerrainDef[defName="VCE_TilledSoil"]</xpath>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
     Floored {Simply More Bridges (Continued)}
     ==========-->
 

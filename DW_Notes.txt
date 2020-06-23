@@ -431,6 +431,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Base, Rim Cuisine 2, Rim of Madness - Bones}
     Fantastic Decor
         {Base, Gloomy Furniture}
+    Fertile Fields
+        {Vanilla Plants Expanded}
     Floored
         {Simply More Bridges (Continued)}
     Glass+Lights
