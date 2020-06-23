@@ -33,6 +33,8 @@
          <li>Fences And No Floors</li>
          <li>DDA Security and More</li>
          <li>Lord of the Rims - Elves</li>
+         <li>[O21] Clutter Structures</li>
+         <li>Zen Garden</li>
       </mods>
       <nomatch Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="DZ_Fences"]</xpath>
@@ -147,6 +149,20 @@
    </Operation>
 
    <!--==========
+    Flooring and Decorative Options
+    ==========-->
+
+   <!--Decorations Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>[ELIF] Flooring and Decorative Options</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="Decorations"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
     Give up your building
     ==========-->
 
@@ -157,6 +173,20 @@
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="ZoreTechTool"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Gloomy Furniture
+    ==========-->
+
+   <!--OldStyleDeco Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>GloomyFurniture</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="OldStyleDeco"]</xpath>
       </match>
    </Operation>
 
@@ -213,6 +243,20 @@
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="AviaryJurassicRimworld"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    More Furniture
+    ==========-->
+
+   <!--ANON2MF Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>More Furniture [1.1]</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="ANON2MF"]</xpath>
       </match>
    </Operation>
 
@@ -390,6 +434,20 @@
    </Operation>
 
    <!--==========
+    Training Rack
+    ==========-->
+
+   <!--Training_Racks Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Training Rack</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="Training_Racks"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
     Vanilla Furniture Expanded
     ==========-->
 
@@ -400,6 +458,20 @@
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="AOMorefurniture"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Vanilla Furniture Expanded - Props and Decor
+    ==========-->
+
+   <!--PropsandDecor Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Furniture Expanded - Props and Decor</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="PropsandDecor"]</xpath>
       </match>
    </Operation>
 
@@ -428,6 +500,20 @@
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="WTH_Hacking"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Zen Garden
+    ==========-->
+
+   <!--ZEN_Decoration Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Zen Garden</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="ZEN_Decoration"]</xpath>
       </match>
    </Operation>
 

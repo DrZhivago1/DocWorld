@@ -5,41 +5,6 @@
     VANILLA
     ==========-->
 
-    <!--Vanilla Storage Furniture, with conditional if mods installed. #storage-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>LWM's Deep Storage</li>
-        </mods>
-        <nomatch Class="PatchOperationConditional">
-            <xpath>/Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
-            <match Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
-                <value>
-                    <designationCategory>DZ_Storage</designationCategory>
-                </value>
-            </match>
-            <nomatch Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="Shelf"]</xpath>
-                <value>
-                    <designationCategory>DZ_Storage</designationCategory>
-                </value>
-            </nomatch>
-        </nomatch>
-    </Operation>
-
-    <!--Vanilla Lights-->
-    <Operation Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-            <li Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="TorchLamp" or @Name="LampBase"]/designationCategory</xpath>
-                <value>
-                    <designationCategory>DZ_Lighting</designationCategory>
-                </value>
-            </li>
-        </operations>
-    </Operation>
-
     <!--Vanilla Beds, with conditional if mods installed. #animalbeds-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -121,6 +86,27 @@
         </operations>
     </Operation>
 
+    <!--Vanilla Decor-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <!--Stele-->
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name="SteleBase"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Decor</designationCategory>
+                </value>
+            </li>
+            <!--Plant Pot-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="PlantPot"]</xpath>
+                <value>
+                    <designationCategory>DZ_Decor</designationCategory>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
     <!--Vanilla Husbandry-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
@@ -147,6 +133,41 @@
                 </nomatch>
             </li>
         </operations>
+    </Operation>
+
+    <!--Vanilla Lights-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="TorchLamp" or @Name="LampBase"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Lighting</designationCategory>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <!--Vanilla Storage, with conditional if mods installed. #storage-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>LWM's Deep Storage</li>
+        </mods>
+        <nomatch Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
+            <match Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="Shelf"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </match>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="Shelf"]</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </nomatch>
     </Operation>
 
     <!--==========
@@ -271,16 +292,51 @@
     Apothecary
     ==========-->
 
-    <!--Move items to Culinary tab-->
+    <!--Move items to Culinary, Husbandry, and Lighting tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Apothecary</li>
         </mods>
-        <match Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="AYCharcoalStove"]/designationCategory</xpath>
-            <value>
-                <designationCategory>DZ_Culinary</designationCategory>
-            </value>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="AYCharcoalStove"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="AYCompostBarrel" or defName="AYHerbBox" or defName="AYHerbBoxLime" or defName="AYPotashBarrel" or defName="AYWaterGrower"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="AYCandle"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Move items to Storage tab. #storage-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Apothecary</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="AYPreserveBarrel"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
         </match>
     </Operation>
 
@@ -384,6 +440,23 @@
     </Operation>
 
     <!--==========
+    Clutter Structures
+    ==========-->
+
+    <!--Move items to Fences tab. #fence-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[O21] Clutter Structures</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="ClutterFence" or defName="ClutterConcreteFenceA"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Fences</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Coal Expanded
     ==========-->
 
@@ -442,6 +515,28 @@
                 </li>
                 <li Class="PatchOperationRemove">
                     <xpath>/Defs/ThingDef[defName="PowerConduitx"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Door Mat
+    ==========-->
+
+    <!--Move items to Decor tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Door Mat</li>
+            <li>[SYR] Doormats</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="LT_MatBase" or @Name="DoorMatBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Decor</designationCategory>
+                    </value>
                 </li>
             </operations>
         </match>
@@ -772,6 +867,62 @@
     </Operation>
 
     <!--==========
+    Flooring and Decorative Options
+    ==========-->
+
+    <!--Move items to Decor and Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[ELIF] Flooring and Decorative Options</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="ELIF_Banner_Base" or @Name="ELIF_FloorDeco_Base" or @Name="ELIF_TableDeco_Base"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Decor</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="ELIF_FloorLight_Base"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Genetic Rim
+    ==========-->
+
+    <!--Move items to Decor and Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Genetic Rim</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="GR_HugeBearRug" or defName="GR_HugeBearCatRug" or defName="GR_WolfRug" or defName="GR_MuffaloRug" or defName="GR_BoarTuskStatuette"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Decor</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="FloodLight"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Give up your building
     ==========-->
 
@@ -836,6 +987,24 @@
             </operations>
         </match>
     </Operation>
+
+    <!--==========
+    Gloomy Furniture
+    ==========-->
+
+    <!--Move items to Decor tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>GloomyFurniture</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef//designationCategory[text()="OldStyleDeco"]</xpath>
+            <value>
+                <designationCategory>DZ_Decor</designationCategory>
+            </value>
+        </match>
+    </Operation>
+    
 
     <!--==========
     Gloomy Vanilla/Overhaul
@@ -1086,10 +1255,10 @@
     </Operation>
 
     <!--==========
-    More Furniture [1.1]
+    More Furniture
     ==========-->
 
-    <!--Move items to Furniture and Lighting tab, remove designation category-->
+    <!--Move items to Decor, Furniture, and Lighting tab.-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>More Furniture [1.1]</li>
@@ -1097,9 +1266,16 @@
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
+                <!--Move all plant pots to decor category-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Anon2SquarePlantPot" or defName="Anon2PlantSpot"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Decor</designationCategory>
+                    </value>
+                </li>
                 <!--Move all furniture to furniture category-->
                 <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[defName="Anon2SquarePlantPot" or defName="Anon2PlantSpot" or defName="Anon2Dresser" or defName="Anon2EndTable" or defName="Anon2RoyalEndTable" or defName="Anon2FileCabinet" or defName="Anon2SquareDiningChair" or defName="Anon2CushionedChair" or defName="Anon2CouchRight" or defName="Anon2CouchLeft" or defName="Anon2CouchCenter" or defName="Anon2CouchCorner" or defName="Anon2CouchCornerInv" or defName="Anon2TableTiny" or defName="Anon2CounterA" or defName="Anon2CounterAFull"]/designationCategory</xpath>
+                    <xpath>/Defs/ThingDef[defName="Anon2Dresser" or defName="Anon2EndTable" or defName="Anon2RoyalEndTable" or defName="Anon2FileCabinet" or defName="Anon2SquareDiningChair" or defName="Anon2CushionedChair" or defName="Anon2CouchRight" or defName="Anon2CouchLeft" or defName="Anon2CouchCenter" or defName="Anon2CouchCorner" or defName="Anon2CouchCornerInv" or defName="Anon2TableTiny" or defName="Anon2CounterA" or defName="Anon2CounterAFull"]/designationCategory</xpath>
                     <value>
                         <designationCategory>Furniture</designationCategory>
                     </value>
@@ -1110,10 +1286,6 @@
                     <value>
                         <designationCategory>DZ_Lighting</designationCategory>
                     </value>
-                </li>
-                <!--Remove more furniture's added category-->
-                <li Class="PatchOperationRemove">
-                    <xpath>/Defs/DesignationCategoryDef[defName="ANON2MF"]</xpath>
                 </li>
             </operations>
         </match>
@@ -1133,6 +1305,50 @@
             <value>
                 <designationCategory>DZ_Husbandry</designationCategory>
             </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Neon Rim: The Rimworld Signs Pack
+    ==========-->
+
+    <!--Move items to Decor tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Neon Rim: The Rimworld Signs Pack</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="Armorysignbase" or @Name="BARsignbase" or @Name="Femalesignbase" or @Name="Malesignbase" or @Name="OPENsignbase" or @Name="PLUSsignbase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Decor</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    NPDTiers - The Nutrient Paste Expansion Mod
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>NPDTiers - The Nutrient Paste Expansion Mod (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="FridgeHopper" or defName="FreezerHopper" or defName="INutrientPasteDispenser" or defName="FNutrientPasteDispenser" or defName="PrisonerNutrientPaste" or defName="ChocoNutrientPaste"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 
@@ -1170,6 +1386,34 @@
                     <xpath>/Defs/ThingDef[defName="OutdoorFloodLights"]/designationCategory</xpath>
                     <value>
                         <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Over-Wall Nutrient Paste Dispenser
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Over-Wall Nutrient Paste Dispenser</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="OverWallNutrient"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="ChocoNutrientPasteOverWall" or defName="PrisonerNutrientPasteOverWall" or defName="FNutrientPasteDispenserOverWall" or defName="INutrientPasteDispenserOverWall"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
                     </value>
                 </li>
             </operations>
@@ -1399,7 +1643,7 @@
     Rimefeller
     ==========-->
 
-    <!--Move items to Industrial, Floors, and add special Designators-->
+    <!--Move items to Industrial, Floors, Security, and add special Designators-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Rimefeller</li>
@@ -1418,6 +1662,18 @@
                     <xpath>/Defs/ThingDef//designationCategory[text()="Rimefeller"]</xpath>
                     <value>
                         <designationCategory>DZ_Industrial</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Filth_NapalmTrail" or defName="SparkGrid"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Security</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="NapalmBomb"]</xpath>
+                    <value>
+                        <designationCategory>Security</designationCategory>
                     </value>
                 </li>
                 <li Class="PatchOperationReplace">
@@ -1468,7 +1724,7 @@
     RIMkea
     ==========-->
 
-    <!--Move items to Animals, Beds, Floors, Furniture, Lighting, and Temperature tab-->
+    <!--Move items to Animals, Beds, Decor, Floors, Furniture, Lighting, and Temperature tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RIMkea</li>
@@ -1477,15 +1733,21 @@
             <success>Always</success>
             <operations>
                 <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="PETSNORR" or defName="SNORHOI"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Animals</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[defName="PILFURBed" or defName="SNOREGGSingle" or defName="SNOREGGDouble" or defName="KRUDNEPPSingle" or defName="SLABNEPPDouble"]</xpath>
                     <value>
                         <designationCategory>DZ_Beds</designationCategory>
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="PETSNORR" or defName="SNORHOI"]</xpath>
+                    <xpath>/Defs/ThingDef[defName="BLUMTASK" or defName="POTBLUM" or defName="RUGUN" or defName="RUGDWA" or defName="FUTSTENTRug" or defName="STEPFUTRug" or defName="RUGTRE" or defName="RUGFIR" or defName="HOISTEPRug" or defName="MISKANTAARug" or defName="MATIPESSIRug" or defName="aFLIKFUTRug"]</xpath>
                     <value>
-                        <designationCategory>DZ_Animals</designationCategory>
+                        <designationCategory>DZ_Decor</designationCategory>
                     </value>
                 </li>
                 <li Class="PatchOperationReplace">
@@ -1537,7 +1799,7 @@
     RimPlas
     ==========-->
 
-    <!--Move items to Furniture, Husbandry, Structure, Security, Beds, Animals, and Joy tab-->
+    <!--Move items to Animals, Beds, Decor, Furniture, Husbandry, Joy, Security, and Structure tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RimPlas</li>
@@ -1576,7 +1838,7 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="RimPlas_GameOfUr"]</xpath>
+                    <xpath>/Defs/ThingDef[defName="RimPlas_GameOfUr" or defName="RimPlas_ChessTable"]</xpath>
                     <value>
                         <designationCategory>Joy</designationCategory>
                     </value>
@@ -1585,6 +1847,12 @@
                     <xpath>/Defs/ThingDef[defName="RPSecurityDoor"]</xpath>
                     <value>
                         <designationCategory>Structure</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RimPlas_PlantPot"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Decor</designationCategory>
                     </value>
                 </li>
                 <!--#animalbeds-->
@@ -1807,6 +2075,40 @@
     </Operation>
 
     <!--==========
+    Thermodynamics - Hot Meals
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[D] Thermodynamics - Hot Meals</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="DMicrowave"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Training Rack
+    ==========-->
+
+    <!--Move items to Misc tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Training Rack</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="TrainingRack" or defName="TrainingRackShooting" or defName="TrainingRackMelee" or defName="TrainingRackSocial" or defName="TrainingRackAnimals" or defName="TrainingRackMedicine" or defName="TrainingRackCooking" or defName="TrainingRackConstruction" or defName="TrainingRackPlants" or defName="TrainingRackMining" or defName="TrainingRackArtistic" or defName="TrainingRackCrafting" or defName="TrainingRackResearch"]/designationCategory</xpath>
+            <value>
+                <designationCategory>Misc</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Universal Fermenter
     ==========-->
 
@@ -1824,6 +2126,29 @@
     </Operation>
 
     <!--==========
+    Utility Columns
+    ==========-->
+
+    <!--LightColumnMod-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Utility Columns</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Lights-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="LightColumnMod"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Vanilla Factions Expanded - Settlers
     ==========-->
 
@@ -1833,7 +2158,7 @@
             <li>Vanilla Factions Expanded - Settlers</li>
         </mods>
         <match Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="Chemlamp"]/designationCategory</xpath>
+            <xpath>/Defs/ThingDef[defName="Chemlamp" or defName="ChemlampPost"]/designationCategory</xpath>
             <value>
                 <designationCategory>DZ_Lighting</designationCategory>
             </value>
@@ -1913,6 +2238,23 @@
     </Operation>
 
     <!--==========
+    Vanilla Furniture Expanded - Power
+    ==========-->
+
+    <!--Move items to Husbandry tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Power</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="VPE_GasSunLamp"]</xpath>
+            <value>
+                <designationCategory>DZ_Husbandry</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Vanilla Furniture Expanded - Production
     ==========-->
 
@@ -1926,6 +2268,56 @@
             <value>
                 <designationCategory>DZ_Culinary</designationCategory>
             </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Props and Decor
+    ==========-->
+
+    <!--Move items to Decor tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="DecalBase" or @ParentName="BuildingBase" or @ParentName="FurnitureBase"]/designationCategory[text()="PropsandDecor"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Decor</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VFEPD_Desk" or defName="VFEPD_CoffeeTable" or defName="VFEPD_CoffeeTableSmall"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Furniture</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Security
+    ==========-->
+
+    <!--Move items to Storage tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Security</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VFES_AmmoCrate"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Storage</designationCategory>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 
@@ -2151,6 +2543,46 @@
                     <xpath>/Defs/ThingDef[defName="WTH_MechanoidPlatform" or defName="WTH_PortableChargingPlatform" or defName="WTH_MechanoidBeacon" or defName="WTH_RogueAI"]/designationCategory</xpath>
                     <value>
                         <designationCategory>Misc</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Zen Garden
+    ==========-->
+
+    <!--Move items to Decor, Fences, Floors, Lighting tab. #fence-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Zen Garden</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="ZenBase" or @Name="RakedBase" or defName="ZEN_FlowerArch"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Decor</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ZEN_Fence" or defName="ZEN_BonboriFence"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Fences</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/TerrainDef[@Name="GravelFloorBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Floors</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ZEN_Tachidoro" or defName="ZEN_Andon"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
                     </value>
                 </li>
             </operations>

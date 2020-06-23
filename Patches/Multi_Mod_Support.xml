@@ -717,8 +717,26 @@
   </Operation>
 
   <!--==========
-    Dubs Bad Hygiene {Vanilla Furniture Expanded - Farming, Fertile Fields, Fermenter}
+    Dubs Bad Hygiene {Apothecary, Fertile Fields, Fermenter, Vanilla Furniture Expanded - Farming}
     ==========-->
+
+  <!--Move Apothecary washing tub to Hygiene tab-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dubs Bad Hygiene</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Apothecary</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="AYApparelWashingTub"]/designationCategory</xpath>
+        <value>
+          <designationCategory>Hygiene</designationCategory>
+        </value>
+      </match>
+    </match>
+  </Operation>
 
   <!--Remove VFE sprinkler in favor of Dubs'-->
   <Operation Class="PatchOperationFindMod">

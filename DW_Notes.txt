@@ -12,7 +12,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 *******
 ### New Original Content:
     DocWorld
-        {Underground Conduit, Designation Categories (Beds, Animals, Culinary, Fences, Husbandry, Industrial, Storage, Lighting)}
+        {Underground Conduit, Designation Categories (Animals, Beds, Culinary, Decor, Fences, Husbandry, Industrial, Storage, Lighting)}
 
 ### Cloth_Beds:
 `This file will contain all patches that add cloth to bed construction recipes, with conditionals if certain mods are installed.`
@@ -27,14 +27,16 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 ### Designation_Category:
 `This file will contain all patches that replace/change Designation Categories in Vanilla and Mods.`
 
-    【1.1】Animalstrawbed
-        {Move items to Animal tab}
+    Vanilla
+        {Move items to Animals(conditional), Culinary, Decor, Husbandry, Lighting, and Storage(conditional) tab}
     Alpha Biomes
         {Move items to Floors, Power, Production, Security, Joy, Culinary, Temperature, and Structure tab}
     Animal Medical Bed
         {Move items to Animal tab. #animalbeds}
+    Animal Straw Bed
+        {Move items to Animal tab}
     Apothecary
-        {Move items to Culinary tab}
+        {Move items to Culinary, Husbandry, Lighting, and Storage tab. #storage}
     Architect Expanded - Fences
         {Move items to Fences tab}
     Ceiling Lights
@@ -43,12 +45,16 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Temperature tab}
     [sd] Chicken Nest (Continued)
         {Move items to Animal tab}
+    Clutter Structures
+        {Move items to Fences tab. #fence}
     Coal Expanded
         {Move items to Lighting tab}
     CTS - Complete Tech Solutions
         {Move items to Beds tab}
     DeCore
         {Move items to Husbandry tab and remove excess hidden power conduit}
+    Door Mat
+        {Move items to Decor tab}
     Dubs Bad Hygiene
         {Move items to Husbandry, Misc, Structure, and Temperature tab}
     Dubs Skylights
@@ -74,6 +80,10 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Husbandry tab}
     Floor Lights
         {Move items to Lighting tab}
+    Flooring and Decorative Options
+        {Move items to Decor and Lighting tab}
+    Genetic Rim
+        {Move items to Decor and Lighting tab}
     Give up your building
         {Move items to Orders tab}
     Glass+Lights
@@ -81,6 +91,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Glitter Tech
     Glitter Tech {No Surgery}
         {Move items to Beds and Lighting tab}
+    Gloomy Furniture
+        {Move items to Decor tab}
     Gloomy Vanilla
     Gloomy Vanilla Overhaul
         {Move items to Beds, Culinary, and Lighting tab}
@@ -102,12 +114,18 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Lighting tab}
     Mechalit Core
         {Move items to Beds, Husbanry, and Lighting tab}
-    More Furniture [1.1]
-        {Move items to Furniture and Lighting tab, remove designation category}
+    More Furniture
+        {Move items to Decor, Furniture, and Lighting tab.}
     More Hydroponics
         {Move items to Husbandry tab}
+    Neon Rim: The Rimworld Signs Pack
+        {Move items to Decor tab}
+    NPDTiers - The Nutrient Paste Expansion Mod
+        {Move items to Culinary tab}
     Outdoor Lighting
         {Move items to Lighting tab}
+    Over-Wall Nutrient Paste Dispenser
+        {Move items to Culinary tab}
     Plant Growing Wall Light
         {Move items to Husbandry tab}
     Polyamory Beds
@@ -127,15 +145,15 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     RimBees
         {Move items to Culinary, Husbandry, and Lighting tab}
     Rimefeller
-        {Move items to Industrial, Floors, and add special Designators}
+        {Move items to Industrial, Floors, Security, and add special Designators}
     RimJobWorld
         {Move items to Beds tab}
     RIMkea
-        {Move items to Animals, Beds, Floors, Furniture, Lighting, and Temperature tab}
+        {Move items to Animals, Beds, Decor, Floors, Furniture, Lighting, and Temperature tab}
     Rimoleum
         {Move items to Floors tab}
     RimPlas
-        {Move items to Furniture, Husbandry, Structure, Security, Beds, Animals, and Joy tab}
+        {Move items to Animals, Beds, Decor, Furniture, Husbandry, Joy, Security, and Structure tab}
     RimWriter
         {Move items to Storage tab}
     SeedsPlease
@@ -156,8 +174,14 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 		{Move items to Storage tab. #storage}
     Survival Meals Expanded
         {Move items to Culinary tab}
+    Thermodynamics - Hot Meals
+        {Move items to Culinary tab}
+    Training Rack
+        {Move items to Misc tab}
     Universal Fermenter
         {Move items to Culinary tab}
+    Utility Columns
+        {LightColumnMod}
     Vanilla Factions Expanded - Medieval
         {Move items to Culinary tab}
     Vanilla Factions Expanded - Settlers
@@ -168,8 +192,14 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Husbandry tab}
     Vanilla Furniture Expanded - Medical Module
         {Move items to Beds tab}
+    Vanilla Furniture Expanded - Power
+        {Move items to Husbandry tab}
     Vanilla Furniture Expanded - Production
         {Move items to Culinary tab}
+    Vanilla Furniture Expanded - Props and Decor
+        {Move items to Decor tab}
+    Vanilla Furniture Expanded - Security
+        {Move items to Storage tab}
     Vanilla Furniture Expanded - Spacer Module
         {Move items to Beds, Furniture, Husbandry, Lighting, and Joy tab}
     VGP Garden Canning
@@ -190,6 +220,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Husbandry tab}
     What The Hack
         {Move items to Production, and Misc tab}
+    Zen Garden
+        {Move items to Decor, Fences, Floors, Lighting tab. #fence}
     
 
 
@@ -216,8 +248,6 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Planning}
     Remote Tech
         {rxRemoteTech}
-    Zen Garden
-        {ZEN_Decoration}
 
 
 ### Dropdown_Designator:
@@ -225,11 +255,11 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 
 #### Conditional Section:
     Vanilla
-        {Battery, Cooler, Geothermal, Heater, Machining, Smelter, Solar, Tool Cabinet, Transport Pod, Wind}
+        {Battery, Cooler, Geothermal, Heater, Machining, Smelter, Solar, Tool Cabinet, Transport Pod, Vitals Monitor, Wind Generator}
 
 #### Unconditional Section:
     Vanilla
-        {Generators, IEDs, Power Conduits, Smithy, Standing Lamps, Stove}
+        {Generator, IEDs, Power Conduits, Smithy, Standing Lamps, Stove, Television, Turrets}
     Alpha Biomes
         {AB_AlcyoniteSolar, AB_PropaneHeater, AB_PropaneStove, AB_SmelterBase}
     Apothecary
@@ -240,42 +270,56 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {RFF_ScrapGenerator}
     Fishing Nets
         {Fishing Nets}
-    Floored
-        {Striped Tile, Yellow Tile}
     Floor Lights
         {Square, Stripe, Small Stripe, Plus, Corner, Inverse Corner, Inverse Corner Small, Corner Small, Triangle, Small Stripe, Small Stripe Diagonal}
+    Floored
+        {Striped Tile, Yellow Tile}
+    Flooring and Decorative Options
+        {ELIF_WallMountedFTV}
     Genetic Rim
-        {GR_CryostabilizedEngine}
+        {GR_CryostabilizedEngine, GR_NitroMilkTrap, GR_HugeBearRug, GR_HugeBearCatRug, GR_WolfRug, GR_MuffaloRug}
     Glass+Lights
-        {Cieling Lamps, FueledGlassworkTable, GlassworkTable, ReinforcedGlassworkTable}
+        {Cieling Lamps, GlassMonitorLarge, FueledGlassworkTable, GlassworkTable, ReinforcedGlassworkTable}
     JetPack
         {JPKerosene_Generator}
     Large Animal Beds
         {Sleeping Spots}
+    Larger Solar Panels
+        {SolarGeneratorLarge, CCPSolarGeneratorLarger, CCPSolarGeneratorLargest, CCPSolarGeneratorTiled}
     Mechalit Core
         {Lamp-pots}
     Metallic Batteries
         {Battery_Silver, Battery_Gold, Battery_Plasteel, Battery_Uranium, Battery_Advanced, Battery_Vanometric}
     More Furniture [1.1]
-        {Carpet}
+        {Anon2CarpetBase, ANON2StandingLampBase}
     More Linkables
         {ToolCabinetA, ToolCabinetB, ToolCabinetC}
+    Questionable Ethics Enhanced
+        {QE_Building_OrganVat, QE_PawnVat}
     Rim of Madness - Bones
         {BoneFloor, BoneFloor_Blackened, BoneChinaFloor, BoneFloor_Ashen, BoneFloor_Tile}
     RIMkea
         {Shainbrait, Kageshain}
     RimPlas
-        {RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator, RPGrapheneGeoGenerator, RPGrapheneWindTurbine, RPGrapheneBattery, RPSmallGrapheneBattery, RPGrapheneHeater, RPGrapheneCooler, RimPlas_InjMldMachine, RimPlas_AdvInjMld}
+        {RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator, RPGrapheneGeoGenerator, RPGrapheneWindTurbine, RPGrapheneBattery, RPSmallGrapheneBattery, RPGrapheneHeater, RPGrapheneCooler, RimPlas_InjMldMachine, RimPlas_AdvInjMld, RP_CeilingLight, RP_GrapheneCeilingLight}
     Smokeleaf Industry Reborn
         {HempolineGenerator, HempSolarGenerator, HempPowerConduit}
     Sparkling Worlds - Full Mod
         {BeamCannonSatellitePodSW, KineticBombardmentSatellitePodSW}
+    Utility Columns
+        {OrbitalTradeBeacon, OrbitalTradeColumnMod}
     Vanilla Furniture Expanded - Power
         {VFE_PortableWoodFiredGenerator, VFE_PortableChemfuelPoweredGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_AdvancedSolarGenerator, VFE_AdvancedWindTurbine, VFE_LargeBattery, VFE_SmallBattery, VFE_AdvancedBattery, VFE_LargeAdvancedBattery, VPE_GasHeater, VPE_GasCooler, VPE_GasPipe, VPE_GasPipeSub, VPE_GasSmelter, VPE_GasStove, VFE_AdvancedWatermillGenerator}
     Vanilla Furniture Expanded - Production
         {VFE_DrugCabinet, VFE_MachiningCabinet, VFE_SmithyCabinet, VFE_KitchenSinkCabinet, VFE_TailorCabinet, VFE_FabricationCabinet, VFE_TableStoveLarge, VFE_TableSmithyLarge, VFE_FueledSmelter, VFE_TableMachiningLarge}
+    Vanilla Furniture Expanded - Security
+        {VFES_ShieldGenerator_Large, VFES_ShieldGenerator_Small, VFES_Turret_AutocannonDouble}
     Vanilla Factions Expanded - Settlers
         {ChemBoiler, Windmill}
+    Vanilla Furniture Expanded - Spacer Module
+        {UltrascreenTV}
+    Wall Vitals Monitor
+        {Wall_M_VitalsMonitor}
 
 ### Efficient_Lights:
 `This file will contain all patches that replace/change the power consumption for lights in Vanilla and Mods.`
@@ -376,7 +420,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     DDA Security and More
         {Fences And Floors (Continued), Fences And No Floors, Doors Expanded}
     Dubs Bad Hygiene
-        {Vanilla Furniture Expanded - Farming, Fertile Fields, Fermenter}
+        {Apothecary, Fertile Fields, Fermenter, Vanilla Furniture Expanded - Farming}
     Expanded Woodworking
         {Simple Chains: Leather, Survivalist's Additions}
     Extended Storage
@@ -453,8 +497,12 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {RFF_Farm Designation Category removal}
     Floor Lights
         {Lamps Designation Category removal}
+    Flooring and Decorative Options
+        {Decorations Designation Category removal}
     Give up your building
         {ZoreTechTool Designation Category removal}
+    OldStyleDeco Designation Category removal
+        {OldStyleDeco Designation Category removal}
     Glowstone
         {GLO_Glowstone Designation Category removal}
     Goodnight
@@ -463,6 +511,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Industrial Designation Category removal}
     Jurassic Rimworld
         {AviaryJurassicRimworld Designation Category removal}
+    More Furniture
+        {ANON2MF Designation Category removal}
     Preemptive Strike
         {PES_Reconnaissance Designation Category removal}
     Project RimFactory Revived
@@ -487,12 +537,18 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 		{MSI Designation Category removal}
 	Storage Solutions
 		{CCP_StorageSolutions Designation Category removal}
+    Training Rack
+        {Training_Racks Designation Category removal}
     Vanilla Furniture Expanded
         {AOMorefurniture Designation Category removal}
+    Vanilla Furniture Expanded - Props and Decor
+        {PropsandDecor Designation Category removal}
     VGP Garden Tools
         {GardenTools Designation Category removal}
     What The Hack
         {WTH_Hacking Designation Category removal}
+    Zen Garden
+        {ZEN_Decoration Designation Category removal}
 
 ### Research_Projects:
 `This file will contain all patches that replace/change research requirements for Vanilla and Mods.`
@@ -524,10 +580,12 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 # Incorporated Mods in RimWorld 1.1
 *******
 ```
+[ELIF] Flooring and Decorative Options
 [LC] Survival Tools
 [RF] Fishing
 [sd] Chicken Nest (Continued)
 [sd] Goodnight (Continued)
+[SYR] Doormats
 [T] MoreFloors
 [WD] Reinforced Doors
 【1.1】Animalstrawbed
@@ -543,6 +601,7 @@ Centralized Climate Control
 Ceramics
 Change Dresser
 Charcoal
+Clutter Structures
 Coal
 Coal Expanded
 Colony Leadership
@@ -551,6 +610,7 @@ CTS - Complete Tech Solutions
 Cupro's Stones
 DDA Security and More
 DeCore
+Door Mat
 Dubs Bad Hygiene
 Dubs Skylights
 Expanded Roofing
@@ -592,6 +652,7 @@ Invisible Animal Beds
 JetPack
 Jurassic Rimworld
 Large Animal Beds
+Larger Solar Panels
 LED Lights
 Lord of the Rims - Elves
 LWM's Deep Storage
@@ -609,15 +670,19 @@ More Furniture [1.1]
 More Hydroponics
 More Linkables
 More Planning
+Neon Rim: The Rimworld Signs Pack
 NightVision
+NPDTiers - The Nutrient Paste Expansion Mod (Continued)
 Open The Windows
 Outdoor Lighting
+Over-Wall Nutrient Paste Dispenser
 Plant Growing Wall Light
 Polyamory Beds
 Polyamory Beds (Vanilla Edition)
 Power Switch
 Preemptive Strike
 Project RimFactory Revived
+Questionable Ethics Enhanced
 RedistHeat
 Remote Tech
 Repair Workbench
@@ -658,7 +723,10 @@ Survival Meals Expanded
 Survivalist Additions
 Survivalist's Additions
 Thanks For All The Fish
+Thermodynamics - Hot Meals
+Training Rack
 UN-Colony
+Utility Columns
 Vanilla Animals Expanded — Arid Shrubland
 Vanilla Animals Expanded — Desert
 Vanilla Animals Expanded — Ice Sheet
@@ -673,6 +741,8 @@ Vanilla Furniture Expanded - Farming
 Vanilla Furniture Expanded - Medical Module
 Vanilla Furniture Expanded - Power
 Vanilla Furniture Expanded - Production
+Vanilla Furniture Expanded - Props and Decor
+Vanilla Furniture Expanded - Security
 Vanilla Furniture Expanded - Spacer Module
 VFE-Production
 VGP Garden Canning

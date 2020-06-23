@@ -38,6 +38,18 @@
   </DesignationCategoryDef>
 
   <DesignationCategoryDef>
+    <defName>DZ_Decor</defName>
+    <label>Decor</label>
+    <description>Beautify your base.</description>
+    <order>720</order>
+    <specialDesignatorClasses>
+      <li>Designator_Cancel</li>
+      <li>Designator_Deconstruct</li>
+      <li>Designator_Uninstall</li>
+    </specialDesignatorClasses>
+  </DesignationCategoryDef>
+
+  <DesignationCategoryDef>
     <defName>DZ_Fences</defName>
     <label>fences</label>
     <description>Not quite walls, but still an obstruction.</description>

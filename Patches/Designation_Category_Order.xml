@@ -151,7 +151,7 @@
     <match Class="PatchOperationReplace">
       <xpath>/Defs/DesignationCategoryDef[defName="OldStyleDeco"]/order</xpath>
       <value>
-        <order>723</order>
+        <order>722</order>
       </value>
     </match>
   </Operation>
@@ -216,22 +216,6 @@
       <xpath>/Defs/DesignationCategoryDef[defName="rxRemoteTech"]/order</xpath>
       <value>
         <order>275</order>
-      </value>
-    </match>
-  </Operation>
-
-  <!--==========
-    Zen Garden
-    ==========-->
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Zen Garden</li>
-    </mods>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/DesignationCategoryDef[defName="ZEN_Decoration"]/order</xpath>
-      <value>
-        <order>720</order>
       </value>
     </match>
   </Operation>
