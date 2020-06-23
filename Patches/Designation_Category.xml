@@ -1004,7 +1004,7 @@
             </value>
         </match>
     </Operation>
-    
+
 
     <!--==========
     Gloomy Vanilla/Overhaul
@@ -1020,7 +1020,7 @@
             <success>Always</success>
             <operations>
                 <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[@Name="WallLightBase" or defName="RGK_lamp" or defName="RGK_LampM" or defName="RGK_Street_Lamp" or defName="RGK_Street_Lamp_Seven"]/designationCategory</xpath>
+                    <xpath>/Defs/ThingDef[@Name="WallLightBase" or defName="RGK_lamp" or defName="GL_lamp_White" or defName="RGK_LampM" or defName="GL_LampM_White" or defName="RGK_Street_Lamp" or defName="GL_lampE_White" or defName="GL_Street_Lamp_White" or defName="GL_Street_Lamp_L_White" or defName="RGK_Street_Lamp_Seven"  or defName="GL_Street_Lamp_Seven_White"  or defName="GL_Street_Lamp_SevenE_White"]/designationCategory</xpath>
                     <value>
                         <designationCategory>DZ_Lighting</designationCategory>
                     </value>
