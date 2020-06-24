@@ -221,7 +221,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     VGP Vegetable Garden
         {Move items to Lighting tab}
     Wall Light
-        {Move items to Lighting tab}
+        {Move items to Lighting and Husbandry tab}
     Wall Sun Lamp
         {Move items to Husbandry tab}
     What The Hack

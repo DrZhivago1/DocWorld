@@ -2581,16 +2581,27 @@
     Wall Light
     ==========-->
 
-    <!--Move items to Lighting tab-->
+    <!--Move items to Lighting and Husbandry tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Wall Light</li>
         </mods>
-        <match Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[@Name="MURWallLightBase"]/designationCategory</xpath>
-            <value>
-                <designationCategory>DZ_Lighting</designationCategory>
-            </value>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="MURWallLightBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Lighting_MURWallSunLight"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 
