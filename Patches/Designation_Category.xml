@@ -1264,6 +1264,53 @@
     </Operation>
 
     <!--==========
+    Medical Supplements
+    ==========-->
+
+    <!--Move items to Beds, Production, and Storage tab. #storage-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medical Supplements</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Beds-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="MSMedicalMatEarly" or defName="MSMedicalMat" or defName="MSMedicalMatSpacer" or defName="MSMedicalMatUltra"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Beds</designationCategory>
+                    </value>
+                </li>
+                <!--Production-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="MSDrugMixer" or defName="MSDrugMixInput" or defName="MSDrugMixOutput"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Production</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medical Supplements</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="DrugCabinet"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
     More Furniture
     ==========-->
 

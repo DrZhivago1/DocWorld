@@ -114,6 +114,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Lighting tab}
     Mechalit Core
         {Move items to Beds, Husbanry, and Lighting tab}
+    Medical Supplements
+        {Move items to Beds, Production, and Storage tab. #storage}
     More Furniture
         {Move items to Decor, Furniture, and Lighting tab.}
     More Hydroponics
@@ -292,6 +294,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {SolarGeneratorLarge, CCPSolarGeneratorLarger, CCPSolarGeneratorLargest, CCPSolarGeneratorTiled}
     Mechalit Core
         {Lamp-pots}
+    Medical Supplements
+        {MSMedicalMatEarly, MSMedicalMat, MSMedicalMatSpacer, MSMedicalMatUltra}
     Metallic Batteries
         {Battery_Silver, Battery_Gold, Battery_Plasteel, Battery_Uranium, Battery_Advanced, Battery_Vanometric}
     More Furniture [1.1]
@@ -664,6 +668,7 @@ Lord of the Rims - Elves
 LWM's Deep Storage
 MBS Faux Rock Wall
 Mechalit Core
+Medical Supplements
 Medical System Expansion - Revived
 Medical Training
 Medieval Times

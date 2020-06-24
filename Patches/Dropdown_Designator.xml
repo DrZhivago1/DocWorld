@@ -1079,6 +1079,36 @@
     </Operation>
 
     <!--==========
+    Medical Supplements
+    ==========-->
+
+    <!--MSMedicalMatEarly, MSMedicalMat, MSMedicalMatSpacer, MSMedicalMatUltra-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medical Supplements</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_MS_MedMats</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="MSMedicalMatEarly" or defName="MSMedicalMat" or defName="MSMedicalMatSpacer" or defName="MSMedicalMatUltra"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_MS_MedMats</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Metallic Batteries
     ==========-->
 
