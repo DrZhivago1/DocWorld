@@ -11,6 +11,9 @@
             <li>Large Animal Beds</li>
             <li>【1.1】Animalstrawbed</li>
             <li>[sd] Chicken Nest (Continued)</li>
+            <li>[FSF] Invisible Animal Beds</li>
+            <li>Animal Medical Bed</li>
+            <li>RimPlas</li>
             <li>RIMkea</li>
         </mods>
 
@@ -261,7 +264,7 @@
     Animal Straw Bed
     ==========-->
 
-    <!--Move items to Animal tab-->
+    <!--Move items to Animal tab. #animalbeds-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>【1.1】Animalstrawbed</li>
@@ -418,7 +421,7 @@
     Chicken Nest
     ==========-->
 
-    <!--Move items to Animal tab-->
+    <!--Move items to Animal tab. #animalbeds-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>[sd] Chicken Nest (Continued)</li>
@@ -1172,7 +1175,7 @@
     Large Animal Beds
     ==========-->
 
-    <!--Move items to Animal tab-->
+    <!--Move items to Animal tab. #animalbeds-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Large Animal Beds</li>
@@ -1730,7 +1733,7 @@
     RIMkea
     ==========-->
 
-    <!--Move items to Animals, Beds, Decor, Floors, Furniture, Lighting, and Temperature tab-->
+    <!--Move items to Animals, Beds, Decor, Floors, Furniture, Lighting, and Temperature tab. #animalbeds-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RIMkea</li>
