@@ -272,6 +272,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {AYCharcoalStove, AYCharcoalSmithy}
     Dubs Bad Hygiene
         {Water heaters}
+    Dubs Skylights
+        {BasedSkyLight}
     Fertile Fields
         {RFF_ScrapGenerator}
     Fishing Nets

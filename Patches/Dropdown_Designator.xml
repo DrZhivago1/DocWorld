@@ -606,6 +606,36 @@
     </Operation>
 
     <!--==========
+    Dubs Skylights
+    ==========-->
+
+    <!--BasedSkyLight-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dubs Skylights</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_DS_Skylights</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="BasedSkyLight"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_DS_Skylights</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Fertile Fields
     ==========-->
 
