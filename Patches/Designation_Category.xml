@@ -331,6 +331,12 @@
             <mods>
                 <li>LWM's Deep Storage</li>
             </mods>
+            <match Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="AYPreserveBarrel"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>LWM_DS_Storage</designationCategory>
+                </value>
+            </match>
             <nomatch Class="PatchOperationReplace">
                 <xpath>/Defs/ThingDef[defName="AYPreserveBarrel"]/designationCategory</xpath>
                 <value>
