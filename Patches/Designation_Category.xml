@@ -2337,21 +2337,21 @@
     Vanilla Furniture Expanded - Security
     ==========-->
 
-    <!--Move items to Storage tab-->
+    <!--Move items to Storage tab. #storage-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Vanilla Furniture Expanded - Security</li>
         </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[defName="VFES_AmmoCrate"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>DZ_Storage</designationCategory>
-                    </value>
-                </li>
-            </operations>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="VFES_AmmoCrate"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
         </match>
     </Operation>
 
