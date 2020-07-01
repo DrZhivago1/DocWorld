@@ -72,6 +72,38 @@
   </Operation>
 
   <!--==========
+    Android Tiers
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Android tiers</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="ATPP_DesignationAndroidTiers"]/order</xpath>
+      <value>
+        <order>730</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Boats
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Boats</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="RimShips"]/order</xpath>
+      <value>
+        <order>724</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
     Colony Leadership
     ==========-->
 
@@ -199,7 +231,7 @@
     <match Class="PatchOperationReplace">
       <xpath>/Defs/DesignationCategoryDef[defName="Planning"]/order</xpath>
       <value>
-        <order>730</order>
+        <order>733</order>
       </value>
     </match>
   </Operation>
