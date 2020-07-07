@@ -469,7 +469,7 @@
     Coal Expanded
     ==========-->
 
-    <!--Move items to Lighting tab-->
+    <!--Move items to Culinary and Lighting tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Coal Expanded</li>
@@ -477,6 +477,12 @@
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="CoalGrill"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
+                    </value>
+                </li>
                 <li Class="PatchOperationReplace">
                     <xpath>/Defs/ThingDef[defName="NECCoalLamp"]/designationCategory</xpath>
                     <value>
@@ -932,6 +938,23 @@
     </Operation>
 
     <!--==========
+    Geyser Cooker
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Geyser Cooker</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="GeyserCooker"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Give up your building
     ==========-->
 
@@ -940,8 +963,8 @@
         <mods>
             <li>Give up your building</li>
         </mods>
-        <match Class="PatchOperationAdd">
-            <xpath>/Defs/DesignationCategoryDef[defName="Orders"]/specialDesignatorClasses</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Orders"]/specialDesignatorClasses</xpath>
             <value>
                 <li>ZeroTech.Designator_GiveUpBuilding</li>
             </value>
@@ -1531,7 +1554,7 @@
     Project RimFactory Revived
     ==========-->
 
-    <!--Move items to Industrial, Lighting, and Floors tab-->
+    <!--Move items to Industrial and Lighting tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Project RimFactory Revived</li>

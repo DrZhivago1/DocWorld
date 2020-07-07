@@ -58,17 +58,21 @@
                     <li Class="PatchOperationReplace">
                         <xpath>/Defs/ThingDef[defName="Lighting_CeilingLight"]/costList</xpath>
                         <value>
-                            <Steel>10</Steel>
-                            <LargeCircularGlass>1</LargeCircularGlass>
+                            <costList>
+                                <Steel>10</Steel>
+                                <LargeCircularGlass>1</LargeCircularGlass>
+                            </costList>
                         </value>
                     </li>
                     <li Class="PatchOperationReplace">
                         <xpath>/Defs/ThingDef[defName="Lighting_CeilingGrowLight"]/costList</xpath>
                         <value>
-                            <Steel>30</Steel>
-                            <Gold>15</Gold>
-                            <ComponentIndustrial>1</ComponentIndustrial>
-                            <LargeCircularGlass>1</LargeCircularGlass>
+                            <costList>
+                                <Steel>30</Steel>
+                                <Gold>15</Gold>
+                                <ComponentIndustrial>1</ComponentIndustrial>
+                                <LargeCircularGlass>1</LargeCircularGlass>
+                            </costList>
                         </value>
                     </li>
                 </operations>

@@ -48,7 +48,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Clutter Structures
         {Move items to Fences tab. #fence}
     Coal Expanded
-        {Move items to Lighting tab}
+        {Move items to Culinary and Lighting tab}
     CTS - Complete Tech Solutions
         {Move items to Beds tab}
     DeCore
@@ -84,6 +84,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Decor and Lighting tab}
     Genetic Rim
         {Move items to Decor and Lighting tab}
+    Geyser Cooker
+        {Move items to Culinary tab}
     Give up your building
         {Move items to Orders tab}
     Glass+Lights
@@ -236,6 +238,10 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 
     Vanilla
         {Floors, Furniture, Power, Production, Joy, Security, Ship, Structure, Temperature, Misc}
+    Android Tiers
+        {ATPP_DesignationAndroidTiers}
+    Boats
+        {RimShips}
     Colony Leadership
         {LeadershipModTab}
     Dubs Bad Hygiene
@@ -270,6 +276,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {AB_AlcyoniteSolar, AB_PropaneHeater, AB_PropaneStove, AB_SmelterBase}
     Apothecary
         {AYCharcoalStove, AYCharcoalSmithy}
+    Coal Expanded
+        {CoalGrill, CoalSmelter}
     Dubs Bad Hygiene
         {Water heaters}
     Dubs Skylights
@@ -453,6 +461,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Stuffed Floors}
     Project RimFactory Revived
         {LWM's Deep Storage}
+    ReGrowth: Biomes of The Rim
+        {Expanded Woodworking}
     Repair Workbench
         {[LC] Survival Tools}
     Replimat
@@ -643,6 +653,7 @@ Fishing Nets
 Floor Lights
 Floored
 Genetic Rim
+Geyser Cooker
 Give up your building
 Glass+Lights
 Glitter Tech
@@ -697,6 +708,7 @@ Preemptive Strike
 Project RimFactory Revived
 Questionable Ethics Enhanced
 RedistHeat
+ReGrowth: Biomes of The Rim - Boreal Expansion
 Remote Tech
 Repair Workbench
 Replace Stuff

@@ -1442,6 +1442,33 @@
   </Operation>
 
   <!--==========
+    ReGrowth: Biomes of The Rim {Expanded Woodworking}
+    ==========-->
+
+  <!--Change tree to produce proper logs-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ReGrowth: Biomes of The Rim - Boreal Expansion</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Expanded Woodworking</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="RG-B_Plant_BlueTreePine" or defName="RG-B_Plant_LargeTreePine"]/plant</xpath>
+            <value>
+              <harvestedThingDef>WoodLog_Pine</harvestedThingDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
     Repair Workbench {[LC] Survival Tools}
     ==========-->
 

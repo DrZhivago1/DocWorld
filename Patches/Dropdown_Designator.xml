@@ -178,6 +178,7 @@
             <li>Alpha Biomes</li>
             <li>Vanilla Furniture Expanded - Power</li>
             <li>Vanilla Furniture Expanded - Production</li>
+            <li>Coal Expanded</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>
@@ -570,6 +571,36 @@
                     <xpath>/Defs/ThingDef[defName="AYCharcoalSmithy"]</xpath>
                     <value>
                         <designatorDropdown>DZ_Production_Smithy</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Coal Expanded
+    ==========-->
+
+    <!--CoalGrill, CoalSmelter-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Coal Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!--Grill-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="CoalGrill"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </li>
+                <!--Smelter-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="CoalSmelter"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smelter</designatorDropdown>
                     </value>
                 </li>
             </operations>
@@ -1027,10 +1058,10 @@
     </Operation>
 
     <!--==========
-    Large Animal Beds
+    Large Animal Beds (not currently working)
     ==========-->
 
-    <!--Sleeping Spots-->
+    <!--Sleeping Spots
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Large Animal Beds</li>
@@ -1054,7 +1085,7 @@
                 </li>
             </operations>
         </match>
-    </Operation>
+    </Operation>-->
 
     <!--==========
     Larger Solar Panels
