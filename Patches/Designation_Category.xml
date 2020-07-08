@@ -963,8 +963,8 @@
         <mods>
             <li>Give up your building</li>
         </mods>
-        <match Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="Orders"]/specialDesignatorClasses</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/DesignationCategoryDef[defName="Orders"]/specialDesignatorClasses</xpath>
             <value>
                 <li>ZeroTech.Designator_GiveUpBuilding</li>
             </value>
