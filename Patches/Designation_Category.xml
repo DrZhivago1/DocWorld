@@ -728,6 +728,40 @@
     </Operation>
 
     <!--==========
+    Fantastic Decor
+    ==========-->
+
+    <!--Move items to Decor tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fantastic Decor</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Bonzai" or defName="BonzaiTree" or defName="BonzaiFlower" or defName="Ferris" or defName="MiniBirch" or defName="MiniBroach" or defName="MiniMangrove" or defName="MiniMuhly" or defName="MiniPine" or defName="MiniPoplar" or defName="MiniSaguaro"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Decor</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Fast Regen
+    ==========-->
+
+    <!--Move items to Animals tab, all others are moved via Vanilla beds patch-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fast regen 1.1</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="AnimalMedic" or defName="AnimalMedicRobo"]</xpath>
+            <value>
+                <designationCategory>DZ_Animals</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Fences And Floors
     Fences And No Floors
     ==========-->
@@ -751,23 +785,6 @@
                     </value>
                 </li>
             </operations>
-        </match>
-    </Operation>
-
-    <!--==========
-    Fast Regen
-    ==========-->
-
-    <!--Move items to Animals tab, all others are moved via Vanilla beds patch-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Fast regen 1.1</li>
-        </mods>
-        <match Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="AnimalMedic" or defName="AnimalMedicRobo"]</xpath>
-            <value>
-                <designationCategory>DZ_Animals</designationCategory>
-            </value>
         </match>
     </Operation>
 

@@ -121,6 +121,20 @@
    </Operation>
 
    <!--==========
+    Fantastic Decor
+    ==========-->
+
+   <!--FantasticDecor Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Fantastic Decor</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="FantasticDecor"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
     Fertile Fields
     ==========-->
 

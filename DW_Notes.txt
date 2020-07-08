@@ -65,6 +65,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Storage tab}
     Extended Woodworking
         {Move items to Fences tab}
+    Fantastic Decor
+        {Move items to Decor tab}
     Fast regen 1.1
         {Move items to Animals tab, all others are moved via Vanilla beds patch}
     Fences And Floors
@@ -250,8 +252,6 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {RFF_Adds}
     Genetic Rim
         {GR_GeneticsTab}
-    Gloomy Vanilla Overhaul
-        {OldStyleDeco}
     Jurassic Rimworld
         {JurassicRimworld}
     LWM's Deep Storage
@@ -443,8 +443,6 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Simple Chains: Leather, Survivalist's Additions}
     Extended Storage
         {Base, Rim Cuisine 2, Rim of Madness - Bones}
-    Fantastic Decor
-        {Base, Gloomy Furniture}
     Fertile Fields
         {Vanilla Plants Expanded}
     Floored
@@ -499,8 +497,6 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Vanilla Animals Expanded — Tundra, Vanilla Animals Overhaul Reloaded, MendAndRecycle, SeedsPlease}
     ZARS Production Spots
         {Thanks For All The Fish}
-    Zen Garden
-        {GloomyFurniture}
 
 ### Remove_Designation_Category:
 `This file will contain all patches that remove Designation Categories for Vanilla and Mods.`
@@ -515,6 +511,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {CentralClimateControl Designation Category removal}
     Dubs Skylights
         {skylights Designation Category removal}
+    Fantastic Decor
+        {FantasticDecor Designation Category removal}
     Fertile Fields
         {RFF_Farm Designation Category removal}
     Floor Lights

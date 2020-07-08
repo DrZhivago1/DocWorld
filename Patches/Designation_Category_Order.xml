@@ -173,22 +173,6 @@
   </Operation>
 
   <!--==========
-    Gloomy Vanilla Overhaul
-    ==========-->
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Gloomy Vanilla Overhaul</li>
-    </mods>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/DesignationCategoryDef[defName="OldStyleDeco"]/order</xpath>
-      <value>
-        <order>722</order>
-      </value>
-    </match>
-  </Operation>
-
-  <!--==========
     Jurassic Rimworld
     ==========-->
 
