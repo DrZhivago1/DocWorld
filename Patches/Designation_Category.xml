@@ -1117,23 +1117,6 @@
     </Operation>
 
     <!--==========
-    Goodnight
-    ==========-->
-
-    <!--Move items to Beds tab-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>[sd] Goodnight (Continued)</li>
-        </mods>
-        <match Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[@Name="SDGoodnightBedBase"]/designationCategory</xpath>
-            <value>
-                <designationCategory>DZ_Beds</designationCategory>
-            </value>
-        </match>
-    </Operation>
-
-    <!--==========
     High Density Hydroponics
     ==========-->
 
@@ -2272,6 +2255,23 @@
         </mods>
         <match Class="PatchOperationReplace">
             <xpath>/Defs/ThingDef[defName="VCE_StewPot"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Culinary</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Cooking Expanded - Sushi
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Cooking Expanded - Sushi</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VCE_SushiPrepTable" or defName="VCE_SoyFermenter"]/designationCategory</xpath>
             <value>
                 <designationCategory>DZ_Culinary</designationCategory>
             </value>

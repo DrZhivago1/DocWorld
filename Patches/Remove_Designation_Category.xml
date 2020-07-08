@@ -219,20 +219,6 @@
    </Operation>
 
    <!--==========
-    Goodnight
-    ==========-->
-
-   <!--sd_beds Designation Category removal-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>[sd] Goodnight (Continued)</li>
-      </mods>
-      <match Class="PatchOperationRemove">
-         <xpath>/Defs/DesignationCategoryDef[defName="sd_beds"]</xpath>
-      </match>
-   </Operation>
-
-   <!--==========
     Industrial Rollers
     ==========-->
 

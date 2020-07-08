@@ -192,6 +192,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Culinary tab}
     Vanilla Cooking Expanded - Stews
         {Move items to Culinary tab}
+    Vanilla Cooking Expanded - Sushi
+        {Move items to Culinary tab}
     Vanilla Factions Expanded - Medieval
         {Move items to Culinary tab}
     Vanilla Factions Expanded - Settlers
@@ -525,8 +527,6 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {OldStyleDeco Designation Category removal}
     Glowstone
         {GLO_Glowstone Designation Category removal}
-    Goodnight
-        {sd_beds Designation Category removal}
     Industrial Rollers
         {Industrial Designation Category removal}
     Jurassic Rimworld
@@ -759,6 +759,7 @@ Vanilla Animals Overhaul Reloaded
 Vanilla Armour Expanded
 Vanilla Cooking Expanded
 Vanilla Cooking Expanded - Stews
+Vanilla Cooking Expanded - Sushi
 Vanilla Factions Expanded - Medieval
 Vanilla Factions Expanded - Settlers
 Vanilla Furniture Expanded
