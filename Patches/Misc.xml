@@ -594,10 +594,33 @@
          <li>Simple Chains: Leather</li>
       </mods>
       <match Class="PatchOperationReplace">
-         <xpath>/Defs/ThingDef[defName="Owl_TanningVat"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/products/*/maxCapacity</xpath>
+         <xpath>/Defs/ThingDef[defName="Owl_TanningVat"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes/*/maxCapacity</xpath>
          <value>
             <maxCapacity>150</maxCapacity>
          </value>
+      </match>
+   </Operation>
+
+   <!--Vanilla animal leather replacement-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Leather</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <!-- Replace leather drops with generics where appropriate -->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef/race/leatherDef[text()="Leather_GuineaPig"]</xpath>
+               <value>
+                  <leatherDef>Hide_SoftPelt</leatherDef>
+               </value>
+            </li>
+            <!-- Remove unused leather -->
+            <li Class="PatchOperationRemove">
+               <xpath>/Defs/ThingDef[defName="Leather_GuineaPig"]/*/..</xpath>
+            </li>
+         </operations>
       </match>
    </Operation>
 

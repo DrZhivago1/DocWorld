@@ -885,13 +885,13 @@
     Floor Lights
     ==========-->
 
-    <!--Move items to Lighting tab-->
+    <!--Move items to Floors tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Floor Lights</li>
         </mods>
         <match Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[@Name="FloorLightSquare" or @Name="FloorLightStripe" or @Name="FloorLightSmallStripe" or @Name="FloorLightPlus" or @Name="FloorLightCorner" or @Name="FloorLightInverseCorner" or @Name="FloorLightCornerSmall" or @Name="FloorLightInverseCornerSmall" or @Name="FloorTileLightSquare" or @Name="FloorLightTriangle" or @Name="FloorLightSmallStripeMiddle" or @Name="FloorLightSmallStripeDiagonal"]/designationCategory</xpath>
+            <xpath>/Defs/ThingDef[@Name="FloorLightSquare" or @Name="FloorLightStripe" or @Name="FloorLightSmallStripe" or @Name="FloorLightPlus" or @Name="FloorLightCorner" or @Name="FloorLightInverseCorner" or @Name="FloorLightCornerSmall" or @Name="FloorLightInverseCornerSmall" or @Name="FloorTileLightSquare" or @Name="FloorLightTriangle" or @Name="FloorLightSmallStripeMiddle" or @Name="FloorLightSmallStripeDiagonal" or @Name="FloorLightStripeMiddle" or @Name="FloorLightStripe" or @Name="FloorLightTriangleCorner"]/designationCategory</xpath>
             <value>
                 <designationCategory>DZ_Lighting</designationCategory>
             </value>

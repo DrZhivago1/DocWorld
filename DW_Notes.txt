@@ -288,8 +288,6 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {RFF_ScrapGenerator}
     Fishing Nets
         {Fishing Nets}
-    Floor Lights
-        {Square, Stripe, Small Stripe, Plus, Corner, Inverse Corner, Inverse Corner Small, Corner Small, Triangle, Small Stripe, Small Stripe Diagonal}
     Floored
         {Striped Tile, Yellow Tile}
     Flooring and Decorative Options
@@ -418,7 +416,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 	SeedsPlease
 		{Healroot recipes onto production benches}
 	Simple Chains: Leather
-		{Increase Max Capacity of tanning vat}
+		{Increase Max Capacity of tanning vat, Vanilla animal leather replacement}
 	Simple Chains: Steel
 		{Create Bulk Recipes for steel}
 	Smoked meat
@@ -496,7 +494,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Vanilla Furniture Expanded - Spacer Module
         {LWM's Deep Storage, [WD] Reinforced Doors}
     VGP Garden Fabrics
-        {Vanilla Animals Expanded — Tundra, Vanilla Animals Overhaul Reloaded, MendAndRecycle, SeedsPlease}
+        {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Animals Overhaul Reloaded, MendAndRecycle, SeedsPlease}
     ZARS Production Spots
         {Thanks For All The Fish}
 
@@ -752,6 +750,7 @@ UN-Colony
 Utility Columns
 Vanilla Animals Expanded — Arid Shrubland
 Vanilla Animals Expanded — Desert
+Vanilla Animals Expanded — Extreme Desert
 Vanilla Animals Expanded — Ice Sheet
 Vanilla Animals Expanded — Tropical Rainforest
 Vanilla Animals Expanded — Tundra
