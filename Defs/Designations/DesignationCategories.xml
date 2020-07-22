@@ -87,10 +87,10 @@
   </DesignationCategoryDef>
 
   <DesignationCategoryDef>
-    <defName>DZ_Storage</defName>
-    <label>storage</label>
-    <description>Furniture that can store items.</description>
-    <order>150</order>
+    <defName>DZ_Lighting</defName>
+    <label>lighting</label>
+    <description>Illumination.</description>
+    <order>550</order>
     <specialDesignatorClasses>
       <li>Designator_Cancel</li>
       <li>Designator_Deconstruct</li>
@@ -99,10 +99,10 @@
   </DesignationCategoryDef>
 
   <DesignationCategoryDef>
-    <defName>DZ_Lighting</defName>
-    <label>lighting</label>
-    <description>Illumination.</description>
-    <order>550</order>
+    <defName>DZ_Storage</defName>
+    <label>storage</label>
+    <description>Furniture that can store items.</description>
+    <order>150</order>
     <specialDesignatorClasses>
       <li>Designator_Cancel</li>
       <li>Designator_Deconstruct</li>

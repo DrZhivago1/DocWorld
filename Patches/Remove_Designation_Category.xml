@@ -247,6 +247,20 @@
    </Operation>
 
    <!--==========
+    Medieval - Vanilla
+    ==========-->
+
+   <!--Power and Ship Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Medieval - Vanilla [1.1]</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="Power" or defName="Ship"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
     More Furniture
     ==========-->
 

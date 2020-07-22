@@ -173,6 +173,22 @@
   </Operation>
 
   <!--==========
+    Insulation
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Insulation</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="Insulation_Desig"]/order</xpath>
+      <value>
+        <order>567</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
     Jurassic Rimworld
     ==========-->
 

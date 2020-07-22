@@ -214,6 +214,69 @@
     </Operation>
 
     <!--==========
+    Rimplas
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>RimPlas</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--CeilingLights require glass-->
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="RP_GrapheneCeilingLight" or defName="RP_CeilingLight"]/costList</xpath>
+                        <value>
+                            <Glass>2</Glass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Smokeleaf Industry Reborn
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Smokeleaf Industry Reborn</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--GrowLamps require glass-->
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="GrowLamp"]/costList</xpath>
+                        <value>
+                            <LargeCircularGlass>1</LargeCircularGlass>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="MSI_TubeGrowLights"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>10</Steel>
+                                <Glass>1</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
     Static Quality Plus
     ==========-->
 
@@ -241,6 +304,33 @@
     </Operation>
 
     <!--==========
+    Vanilla Factions Expanded - Settlers
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Vanilla Factions Expanded - Settlers</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Chemlamps require glass-->
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Chemlamp" or defName="ChemlampPost"]/costList</xpath>
+                        <value>
+                            <Glass>1</Glass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
     Vanilla Furniture Expanded
     ==========-->
 
@@ -257,7 +347,7 @@
                 <operations>
                     <!--Lamps require glass-->
                     <li Class="PatchOperationAdd">
-                        <xpath>/Defs/ThingDef[defName="Light_ModernLamp" or defName="Light_Streetlamp"]/costList</xpath>
+                        <xpath>/Defs/ThingDef[defName="Light_ModernLamp" or defName="Light_Streetlamp" or defName="Table_LightEndTable"]/costList</xpath>
                         <value>
                             <LargeCircularGlass>1</LargeCircularGlass>
                         </value>

@@ -2,6 +2,20 @@
    <!--This file will contain all miscellaneous patches that replace/change all sorts of things from various mods-->
 
    <!--==========
+    Combat Training
+    ==========-->
+
+   <!--Remove random breakdowns of dummy-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Combat Training</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/ThingDef[defName="CombatDummy"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
     Expanded Roofing
     ==========-->
 
@@ -796,6 +810,50 @@
                <xpath>/Defs/ThingDef[defName="HeavyShuttle"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
                <value>
                   <fuelCapacity>300.0</fuelCapacity>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Vanilla Armour Expanded
+    ==========-->
+
+   <!--Allow armor to be made of woody stuff-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Armour Expanded</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="VAE_Apparel_LightPlateArmor" or defName="VAE_Apparel_PlateShoulderpads" or defName="VAE_Apparel_Chestplate" or defName="VAE_Apparel_PlateHelmet"]/stuffCategories</xpath>
+               <value>
+                  <li>Woody</li>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Vanilla Factions Expanded - Medieval
+    ==========-->
+
+   <!--Allow armor to be made of woody stuff-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Factions Expanded - Medieval</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="VFEM_Apparel_PlateArmorHeavy" or defName="VFEM_Apparel_PlateHelmetLight" or defName="VFEM_Apparel_PlateHelmetHeavy"]/stuffCategories</xpath>
+               <value>
+                  <li>Woody</li>
                </value>
             </li>
          </operations>

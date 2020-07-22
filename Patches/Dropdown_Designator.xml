@@ -82,6 +82,33 @@
         </match>
     </Operation>
 
+    <!--Fermenting Barrel-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Medieval</li>
+            <li>Vanilla Factions Expanded - Settlers</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Culinary_FermentingBarrel</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="FermentingBarrel"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_FermentingBarrel</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
     <!--Geothermal Generators-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -139,6 +166,42 @@
                         <xpath>/Defs/ThingDef[defName="Heater"]</xpath>
                         <value>
                             <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Hydroponics-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Garden Tools</li>
+            <li>Science Never Stops: Ambition of the Cosmic</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Husbandry_Hydroponics</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="HydroponicsBasin"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="HydroponicsBasin"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Husbandry_Hydroponics</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="HydroponicsBasin"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Husbandry_Hydroponics</designatorDropdown>
                         </value>
                     </nomatch>
                 </li>
@@ -573,6 +636,12 @@
                         <designatorDropdown>DZ_Production_Smithy</designatorDropdown>
                     </value>
                 </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AYCharcoalFiredGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                    </value>
+                </li>
             </operations>
         </match>
     </Operation>
@@ -582,7 +651,6 @@
     ==========-->
 
     <!--CoalGrill, CoalSmelter-->
-
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Coal Expanded</li>
@@ -630,6 +698,36 @@
                     <xpath>/Defs/ThingDef[defName="LogBoiler" or defName="GasBoiler" or defName="ElectricBoiler" or defName="SolarHeater"]</xpath>
                     <value>
                         <designatorDropdown>DZ_DBH_WaterHeaters</designatorDropdown>
+                    </value>
+                </li>
+                <!--Wells-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_DBH_WaterWells</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="WaterWellInlet" or defName="DeepWaterWellInlet"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_DBH_WaterWells</designatorDropdown>
+                    </value>
+                </li>
+                <!--Pump-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_DBH_WaterPump</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ElectricPump" or defName="PumpingStation"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_DBH_WaterPump</designatorDropdown>
                     </value>
                 </li>
             </operations>
@@ -1098,6 +1196,94 @@
     </Operation>
 
     <!--==========
+    Rimatomics
+    ==========-->
+
+    <!--BaseReactor, Turbine, BigTurbine-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Rimatomics</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_BaseReactor</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="BaseReactor"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_BaseReactor</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Turbine</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Turbine" or defName="BigTurbine"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Turbine</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Rimefeller
+    ==========-->
+
+    <!--FuelPowerplant, LargeFuelPowerplant, BasedWell-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Rimefeller</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_ChemfuelPlant</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="FuelPowerplant" or defName="LargeFuelPowerplant"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_ChemfuelPlant</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_BasedWell</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="BasedWell"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_BasedWell</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Rim of Madness - Bones
     ==========-->
 
@@ -1131,7 +1317,7 @@
     RIMkea
     ==========-->
 
-    <!--Shainbrait, Kageshain-->
+    <!--Shainbrait, Kageshain, Wood Floors-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RIMkea</li>
@@ -1165,6 +1351,20 @@
                     <xpath>/Defs/ThingDef[@Name="RIKFleaLampBase"]</xpath>
                     <value>
                         <designatorDropdown>DZ_Lighting_KAGESHAIN</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Floors_RKWood</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/TerrainDef[@Name="RIKWoodFloorBase"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Floors_RKWood</designatorDropdown>
                     </value>
                 </li>
             </operations>
@@ -1267,6 +1467,28 @@
                         <designatorDropdown Inherit="false" />
                     </value>
                 </li>-->
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Science Never Stops
+    ==========-->
+
+    <!--SNS_Hydroponics_I, SNS_Hydroponics_II, SNS_Hydroponics_III-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Science Never Stops: Ambition of the Cosmic</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="SNS_Hydroponics_I" or defName="SNS_Hydroponics_II" or defName="SNS_Hydroponics_III"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Husbandry_Hydroponics</designatorDropdown>
+                    </value>
+                </li>
             </operations>
         </match>
     </Operation>
@@ -1564,6 +1786,35 @@
                         <designatorDropdown>DZ_Power_Wind</designatorDropdown>
                     </value>
                 </li>
+                <!--ChemsineBarrel-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Building_ChemshineBarrel"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_FermentingBarrel</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Factions Expanded - Medieval
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Medieval</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--VFEM_WineBarrel-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFEM_WineBarrel"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_FermentingBarrel</designatorDropdown>
+                    </value>
+                </li>
             </operations>
         </match>
     </Operation>
@@ -1582,6 +1833,28 @@
             <value>
                 <designatorDropdown>DZ_Rec_TV</designatorDropdown>
             </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    VGP Garden Tools
+    ==========-->
+
+    <!--ModularHydroponicsBasin, ADVHydroponicsBasin, ADVModularHydroponicsBasin-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Garden Tools</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ModularHydroponicsBasin" or defName="ADVHydroponicsBasin" or defName="ADVModularHydroponicsBasin"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Husbandry_Hydroponics</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 

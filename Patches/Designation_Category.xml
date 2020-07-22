@@ -1968,6 +1968,23 @@
     </Operation>
 
     <!--==========
+    Science Never Stops
+    ==========-->
+
+    <!--Move items to Husbandry tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Science Never Stops: Ambition of the Cosmic</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="SNS_Hydroponics_I" or defName="SNS_Hydroponics_II" or defName="SNS_Hydroponics_III"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Husbandry</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     SeedsPlease
     ==========-->
 
@@ -2496,6 +2513,29 @@
                     <xpath>/Defs/ThingDef[defName="UltrascreenTV"]/designationCategory</xpath>
                     <value>
                         <designationCategory>Joy</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Velcroboy's Japanese Revival
+    ==========-->
+
+    <!--Move items to Lighting-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Velcroboy's Japanese Revival</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Lighting-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="VBY_JapaneseLanternBase" or defName="VBY_Andon" or defName="VBY_AndonElec" or defName="VBY_Ishidoro"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
                     </value>
                 </li>
             </operations>

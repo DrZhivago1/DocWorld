@@ -14,6 +14,16 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     DocWorld
         {Underground Conduit, Designation Categories (Animals, Beds, Culinary, Decor, Fences, Husbandry, Industrial, Storage, Lighting)}
 
+### Biome_Foraging:
+`This file will contain all patches that alter biome foraging. Requires Vanilla Plants Expanded.`
+
+    Vanilla
+        {VCE_Bearberry(BorealForest/ColdBog), VCE_RawCherry(Tundra), VCE_RawBanana(TropicalRainforest/TropicalSwamp), VCE_RawPricklyPear(AridShrubland)}
+    More Vanilla Biomes
+        {VCE_RawCherry(ZBiome_AlpineMeadow), VCE_RawPlum(ZBiome_CloudForest), VCE_RawPricklyPear(ZBiome_DesertOasis), VCE_RawApple(ZBiome_Grasslands), VCE_RawPeach(ZBiome_Marsh)}
+    Realistic Planets - Fan Update
+        {VCE_Bearberry(RRP_Steppes/RRP_Permafrost), VCE_RawPeach(RRP_Savanna), VCE_RawPricklyPear(RRP_TemperateDesert/RRP_Oasis), VCE_RawApple(RRP_Grassland)}
+
 ### Cloth_Beds:
 `This file will contain all patches that add cloth to bed construction recipes, with conditionals if certain mods are installed.`
 
@@ -162,6 +172,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Animals, Beds, Decor, Furniture, Husbandry, Joy, Security, and Structure tab}
     RimWriter
         {Move items to Storage tab}
+    Science Never Stops
+        {Move items to Husbandry tab}
     SeedsPlease
 		{Move items to Husbandry tab}
 	Smarter Vanilla Food
@@ -214,6 +226,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Storage tab}
     Vanilla Furniture Expanded - Spacer Module
         {Move items to Beds, Furniture, Husbandry, Lighting, and Joy tab}
+    Velcroboy's Japanese Revival
+        {Move items to Lighting}
     VGP Garden Canning
         {Move items to Culinary tab}
     VGP Garden Drinks
@@ -254,6 +268,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {RFF_Adds}
     Genetic Rim
         {GR_GeneticsTab}
+    Insulation
+        {Insulation_Desig}
     Jurassic Rimworld
         {JurassicRimworld}
     LWM's Deep Storage
@@ -269,7 +285,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 
 #### Conditional Section:
     Vanilla
-        {Battery, Cooler, Geothermal, Heater, Machining, Smelter, Solar, Tool Cabinet, Transport Pod, Vitals Monitor, Wind Generator}
+        {Battery, Cooler, Geothermal, Heater, Hydroponics, Machining, Smelter, Solar, Tool Cabinet, Transport Pod, Vitals Monitor, Wind Generator}
 
 #### Unconditional Section:
     Vanilla
@@ -281,7 +297,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Coal Expanded
         {CoalGrill, CoalSmelter}
     Dubs Bad Hygiene
-        {Water heaters}
+        {Water heaters, Wells, Pump}
     Dubs Skylights
         {BasedSkyLight}
     Fertile Fields
@@ -314,12 +330,18 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {ToolCabinetA, ToolCabinetB, ToolCabinetC}
     Questionable Ethics Enhanced
         {QE_Building_OrganVat, QE_PawnVat}
+    Rimatomics
+        {BaseReactor, Turbine, BigTurbine}
+    Rimefeller
+        {FuelPowerplant, LargeFuelPowerplant, BasedWell}
     Rim of Madness - Bones
         {BoneFloor, BoneFloor_Blackened, BoneChinaFloor, BoneFloor_Ashen, BoneFloor_Tile}
     RIMkea
-        {Shainbrait, Kageshain}
+        {Shainbrait, Kageshain, Wood Floors}
     RimPlas
         {RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator, RPGrapheneGeoGenerator, RPGrapheneWindTurbine, RPGrapheneBattery, RPSmallGrapheneBattery, RPGrapheneHeater, RPGrapheneCooler, RimPlas_InjMldMachine, RimPlas_AdvInjMld, RP_CeilingLight, RP_GrapheneCeilingLight}
+    Science Never Stops
+        {SNS_Hydroponics_I, SNS_Hydroponics_II, SNS_Hydroponics_III}
     Smokeleaf Industry Reborn
         {HempolineGenerator, HempSolarGenerator, HempPowerConduit}
     Sparkling Worlds - Full Mod
@@ -333,9 +355,13 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Vanilla Furniture Expanded - Security
         {VFES_ShieldGenerator_Large, VFES_ShieldGenerator_Small, VFES_Turret_AutocannonDouble}
     Vanilla Factions Expanded - Settlers
-        {ChemBoiler, Windmill}
+        {ChemBoiler, Windmill, Building_ChemshineBarrel}
+    Vanilla Factions Expanded - Medieval
+        {VFEM_WineBarrel}
     Vanilla Furniture Expanded - Spacer Module
         {UltrascreenTV}
+    VGP Garden Tools
+        {}
     Wall Vitals Monitor
         {Wall_M_VitalsMonitor}
 
@@ -377,8 +403,14 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Lamps and endtables require glass}
     RIMkea
         {Kageshain lamps require glass}
+    Rimplas
+        {CeilingLights require glass}
+    Smokeleaf Industry Reborn
+        {GrowLamps require glass}
     Static Quality Plus
         {Sun lamps require glass}
+    Vanilla Factions Expanded - Settlers
+        {Chemlamps require glass}
     Vanilla Furniture Expanded
         {Lamps require glass}
     Vanilla Furniture Expanded - Spacer Module
@@ -391,6 +423,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 ### Misc:
 `This file will contain all miscellaneous patches that replace/change all sorts of things from various mods.`
 
+    Combat Training
+        {Remove random breakdowns of dummy}
     Expanded Roofing
         {Get rid of the annoying square shadows with glass roof}
     Extended Storage
@@ -423,6 +457,10 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 		{Make Smoked meat available after researching Pemmican, and hide the Smokehouse behind Complex Furniture}
 	Save Our Ship 2
 		{Increase pod launcher range}
+    Vanilla Armour Expanded
+        {Allow armor to be made of woody stuff}
+    Vanilla Factions Expanded - Medieval
+        {Allow armor to be made of woody stuff}
     VGP Garden Gourmet
         {Stuff items}
 
@@ -465,6 +503,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {[LC] Survival Tools}
     Replimat
         {LWM's Deep Storage}
+    Rimatomics
+        {Vanilla Furniture Expanded - Power, Sparkling Worlds - Full Mod}
     RIMkea
         {Stuffed Floors}
     RimOverhaul
@@ -479,6 +519,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 		{Simply More Bridges, Roads of the Rim}
 	Simply More Bridges
 		{Industrialisation, Roads of the Rim, Simple Concrete}
+    Slightly More Realistic Wool Production Revived
+        {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra}
     UN-Colony
         {Industrialisation}
     Universal Fermenter
@@ -486,7 +528,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Vanilla Armour Expanded
         {NightVision}
     Vanilla Furniture Expanded
-        {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields}
+        {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields, More Furniture}
     Vanilla Furniture Expanded - Farming
         {LWM's Deep Storage}
     Vanilla Furniture Expanded - Production
@@ -529,6 +571,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Industrial Designation Category removal}
     Jurassic Rimworld
         {AviaryJurassicRimworld Designation Category removal}
+    Medieval - Vanilla
+        {Power and Ship Designation Category removal}
     More Furniture
         {ANON2MF Designation Category removal}
     Preemptive Strike
@@ -594,19 +638,16 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Fishing Industry
         {New art assets applied: FishingPier x6, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus}
 
+### VFE_Usable_Props:
+`This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Since this is a large overhaul of one specific mod, I deemed it worthy to have it's own file.`
+
+    Vanilla Furniture Expanded - Props and Decor
+        {LWM's Deep Storage, Dubs Bad Hygiene, Fertile Fields [1.1], Rimatomics, Rimefeller, [D] Thermodynamics - Hot Meals, Vanilla Factions Expanded - Medieval}
+
 *******
 # Incorporated Mods in RimWorld 1.1
 *******
 ```
-[ELIF] Flooring and Decorative Options
-[LC] Survival Tools
-[RF] Fishing
-[sd] Chicken Nest (Continued)
-[sd] Goodnight (Continued)
-[SYR] Doormats
-[T] MoreFloors
-[WD] Reinforced Doors
-【1.1】Animalstrawbed
 Alpha Animals
 Alpha Biomes
 Animal Medical Bed
@@ -614,6 +655,7 @@ Apothecary
 Architect Expanded - Fences
 Atlas Materials
 BetterCoolers
+CTS - Complete Tech Solutions
 Ceiling Lights
 Centralized Climate Control
 Ceramics
@@ -624,7 +666,6 @@ Coal
 Coal Expanded
 Colony Leadership
 Combat Training
-CTS - Complete Tech Solutions
 Cupro's Stones
 DDA Security and More
 DeCore
@@ -642,7 +683,7 @@ Fences And Floors
 Fences And Floors (Continued)
 Fences And No Floors
 Fermenter
-Fertile Fields
+Fertile Fields [1.1]
 Fish Industry
 Fishing Industry
 Fishing Nets
@@ -670,16 +711,17 @@ Insulation
 Invisible Animal Beds
 JetPack
 Jurassic Rimworld
+LED Lights
+LWM's Deep Storage
 Large Animal Beds
 Larger Solar Panels
-LED Lights
 Lord of the Rims - Elves
-LWM's Deep Storage
 MBS Faux Rock Wall
 Mechalit Core
 Medical Supplements
 Medical System Expansion - Revived
 Medical Training
+Medieval - Vanilla [1.1]
 Medieval Times
 Medieval Times Unofficial
 MendAndRecycle
@@ -690,9 +732,10 @@ More Furniture [1.1]
 More Hydroponics
 More Linkables
 More Planning
+More Vanilla Biomes
+NPDTiers - The Nutrient Paste Expansion Mod (Continued)
 Neon Rim: The Rimworld Signs Pack
 NightVision
-NPDTiers - The Nutrient Paste Expansion Mod (Continued)
 Open The Windows
 Outdoor Lighting
 Over-Wall Nutrient Paste Dispenser
@@ -703,27 +746,31 @@ Power Switch
 Preemptive Strike
 Project RimFactory Revived
 Questionable Ethics Enhanced
-RedistHeat
+RIMkea
 ReGrowth: Biomes of The Rim - Boreal Expansion
+ReGrowth: Biomes of The Rim - Tundra Expansion
+ReGrowth: Biomes of The Rim - Wasteland
+Realistic Planets - Fan Update
+RedistHeat
 Remote Tech
 Repair Workbench
 Replace Stuff
 Revia Race
 Rim Cuisine 2
 Rim of Madness - Bones
-Rimatomics
 RimBees
-Rimefeller
 RimJobWorld
-RIMkea
-Rimoleum
 RimOverhaul
 RimPlas
 RimWriter
+Rimatomics
+Rimefeller
+Rimoleum
 Roads of the Rim
 Roof Support
 RoofBomb
 Save Our Ship 2
+Science Never Stops: Ambition of the Cosmic
 SeedsPlease
 Simple Chains: Leather
 Simple Chains: Steel
@@ -731,6 +778,7 @@ Simple Coal
 Simple Concrete
 Simply More Bridges
 Simply More Bridges (Continued)
+Slightly More Realistic Wool Production Revived
 Smarter Vanilla Food
 Smoked meat
 Smokeleaf Industry Reborn
@@ -744,10 +792,18 @@ Survival Meals Expanded
 Survivalist Additions
 Survivalist's Additions
 Thanks For All The Fish
-Thermodynamics - Hot Meals
 Training Rack
 UN-Colony
 Utility Columns
+VFE-Production
+VGP Garden Canning
+VGP Garden Drinks
+VGP Garden Fabrics
+VGP Garden Gourmet
+VGP Garden Medicine
+VGP Garden Tools
+VGP Soylent Production
+VGP Vegetable Garden
 Vanilla Animals Expanded — Arid Shrubland
 Vanilla Animals Expanded — Desert
 Vanilla Animals Expanded — Extreme Desert
@@ -769,19 +825,22 @@ Vanilla Furniture Expanded - Production
 Vanilla Furniture Expanded - Props and Decor
 Vanilla Furniture Expanded - Security
 Vanilla Furniture Expanded - Spacer Module
-VFE-Production
-VGP Garden Canning
-VGP Garden Drinks
-VGP Garden Fabrics
-VGP Garden Gourmet
-VGP Garden Medicine
-VGP Garden Tools
-VGP Soylent Production
-VGP Vegetable Garden
+Vanilla Plants Expanded
+Velcroboy's Japanese Revival
 Wall Light
 Wall Sun Lamp
 What The Hack
 Xenite Industries
 ZARS Production Spots
 Zen Garden
+[D] Thermodynamics - Hot Meals
+[ELIF] Flooring and Decorative Options
+[LC] Survival Tools
+[RF] Fishing
+[SYR] Doormats
+[T] MoreFloors
+[WD] Reinforced Doors
+[sd] Chicken Nest (Continued)
+[sd] Goodnight (Continued)
+【1.1】Animalstrawbed
 ```

@@ -1,0 +1,1091 @@
+<Patch>
+    <!--This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Since this is a large overhaul of one specific mod, I deemed it worthy to have it's own file.-->
+
+    <!--==========
+    Vanilla Furniture Expanded - Props and Decor {LWM's Deep Storage, Dubs Bad Hygiene, Fertile Fields [1.1], Rimatomics, Rimefeller, [D] Thermodynamics - Hot Meals, Vanilla Factions Expanded - Medieval}
+    ==========-->
+    <!--Allow some props to become functional storage with Deep Storage-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Cargo Containers-->
+                    <li Class="PatchOperationRemove">
+                        <xpath>/Defs/ThingDef[defName="VFEPD_ContainerGreen" or defName="VFEPD_ContainerGrey" or defName="VFEPD_ContainerRed" or defName="VFEPD_ContainerYellow" or defName="VFEPD_ContainerBlue"]</xpath>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs</xpath>
+                        <value>
+                            <ThingDef Name="DZ_VFEPD_ContainerGreen" ParentName="LWM_Skip">
+                                <defName>DZ_VFEPD_ContainerGreen</defName>
+                                <label>green cargo container</label>
+                                <description>A green metal cargo container, similar to a skip. Impassable. Cannot hold roof.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/IndustrialProps/ShippingContainer/ShippingContainer</texPath>
+                                    <graphicClass>Graphic_Multi</graphicClass>
+                                    <drawSize>(2.5,4)</drawSize>
+                                    <shadowData>
+                                        <volume>(0.55, 0.30, 0.40)</volume>
+                                    </shadowData>
+                                    <color>(117,169,119)</color>
+                                </graphicData>
+                                <staticSunShadowHeight Inherit="false" />
+                                <defaultPlacingRot>South</defaultPlacingRot>
+                                <castEdgeShadows>True</castEdgeShadows>
+                                <blockWind>true</blockWind>
+                                <passability>Impassable</passability>
+                                <fillPercent>1</fillPercent>
+                                <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+                                <repairEffect>ConstructMetal</repairEffect>
+                                <statBases>
+                                    <MaxHitPoints>500</MaxHitPoints>
+                                    <WorkToBuild>1500</WorkToBuild>
+                                    <Mass>150</Mass>
+                                    <Flammability>0</Flammability>
+                                </statBases>
+                                <size>(2,4)</size>
+                                <costList>
+                                    <Steel>150</Steel>
+                                </costList>
+                                <costStuffCount Inherit="false" />
+                                <stuffCategories Inherit="false" />
+                                <uiIconScale>1</uiIconScale>
+                                <designatorDropdown>IndustrialPropsContainers</designatorDropdown>
+                                <building>
+                                    <isInert>true</isInert>
+                                </building>
+                                <comps>
+                                    <li Class="LWM.DeepStorage.Properties">
+                                        <maxNumberStacks>7</maxNumberStacks>
+                                        <minTimeStoringTakes>100</minTimeStoringTakes>
+                                        <showContents>false</showContents>
+                                        <overlayType>SumOfAllItems</overlayType>
+                                    </li>
+                                </comps>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_ContainerGreen">
+                                <defName>DZ_VFEPD_ContainerGrey</defName>
+                                <label>grey cargo container</label>
+                                <description>A grey metal cargo container, similar to a skip. Impassable. Cannot hold roof.</description>
+                                <graphicData>
+                                    <color>(123,123,123)</color>
+                                </graphicData>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_ContainerGreen">
+                                <defName>DZ_VFEPD_ContainerRed</defName>
+                                <label>red cargo container</label>
+                                <description>A red metal cargo container, similar to a skip. Impassable. Cannot hold roof.</description>
+                                <graphicData>
+                                    <color>(168,124,120)</color>
+                                </graphicData>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_ContainerGreen">
+                                <defName>DZ_VFEPD_ContainerYellow</defName>
+                                <label>yellow cargo container</label>
+                                <description>A yellow metal cargo container, similar to a skip. Impassable. Cannot hold roof.</description>
+                                <graphicData>
+                                    <color>(221,181,124)</color>
+                                </graphicData>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_ContainerGreen">
+                                <defName>DZ_VFEPD_ContainerBlue</defName>
+                                <label>blue cargo container</label>
+                                <description>A blue metal cargo container, similar to a skip. Impassable. Cannot hold roof.</description>
+                                <graphicData>
+                                    <color>(127,138,167)</color>
+                                </graphicData>
+                            </ThingDef>
+                        </value>
+                    </li>
+                    <!--Barrels-->
+                    <li Class="PatchOperationRemove">
+                        <xpath>/Defs/ThingDef[defName="VFEPD_BarrelGreen" or defName="VFEPD_BarrelGrey" or defName="VFEPD_BarrelRed" or defName="VFEPD_BarrelYellow" or defName="VFEPD_BarrelBlue"]</xpath>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs</xpath>
+                        <value>
+                            <ThingDef Name="DZ_VFEPD_BarrelGreen" ParentName="LWM_Skip">
+                                <defName>DZ_VFEPD_BarrelGreen</defName>
+                                <label>green barrel</label>
+                                <description>A green metal barrel used for secure mass storage.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/IndustrialProps/Barrel/Barrel</texPath>
+                                    <graphicClass>Graphic_Multi</graphicClass>
+                                    <shaderType>CutoutComplex</shaderType>
+                                    <drawSize>(1,1)</drawSize>
+                                    <shadowData>
+                                        <volume>(0.55, 0.30, 0.40)</volume>
+                                    </shadowData>
+                                    <color>(117,169,119)</color>
+                                </graphicData>
+                                <staticSunShadowHeight Inherit="false" />
+                                <altitudeLayer>Building</altitudeLayer>
+                                <passability>PassThroughOnly</passability>
+                                <fillPercent>0.2</fillPercent>
+                                <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+                                <repairEffect>ConstructMetal</repairEffect>
+                                <statBases>
+                                    <MaxHitPoints>75</MaxHitPoints>
+                                    <WorkToBuild>100</WorkToBuild>
+                                    <Mass>10</Mass>
+                                    <Flammability>0</Flammability>
+                                </statBases>
+                                <size>(1,1)</size>
+                                <costList>
+                                    <Steel>15</Steel>
+                                </costList>
+                                <costStuffCount Inherit="false" />
+                                <stuffCategories Inherit="false" />
+                                <uiIconScale>1</uiIconScale>
+                                <designatorDropdown>IndustrialProps</designatorDropdown>
+                                <building Inherit="false">
+                                    <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+                                    <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+                                    <fixedStorageSettings>
+                                        <filter>
+                                            <thingDefs>
+                                                <li>Chemfuel</li>
+                                            </thingDefs>
+                                        </filter>
+                                    </fixedStorageSettings>
+                                    <defaultStorageSettings>
+                                        <priority>Important</priority>
+                                        <filter>
+                                        </filter>
+                                    </defaultStorageSettings>
+                                    <isInert>true</isInert>
+                                </building>
+                                <comps>
+                                    <li Class="LWM.DeepStorage.Properties">
+                                        <maxNumberStacks>3</maxNumberStacks>
+                                        <minTimeStoringTakes>50</minTimeStoringTakes>
+                                        <showContents>false</showContents>
+                                        <overlayType>SumOfAllItems</overlayType>
+                                    </li>
+                                </comps>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_BarrelGreen">
+                                <defName>DZ_VFEPD_BarrelGrey</defName>
+                                <label>grey barrel</label>
+                                <description>A grey metal barrel used for secure mass storage.</description>
+                                <graphicData>
+                                    <color>(123,123,123)</color>
+                                </graphicData>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_BarrelGreen">
+                                <defName>DZ_VFEPD_BarrelRed</defName>
+                                <label>red barrel</label>
+                                <description>A red metal barrel used for secure mass storage.</description>
+                                <graphicData>
+                                    <color>(168,124,120)</color>
+                                </graphicData>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_BarrelGreen">
+                                <defName>DZ_VFEPD_BarrelYellow</defName>
+                                <label>yellow barrel</label>
+                                <description>A yellow metal barrel used for secure mass storage.</description>
+                                <graphicData>
+                                    <color>(221,181,124)</color>
+                                </graphicData>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_BarrelGreen">
+                                <defName>DZ_VFEPD_BarrelBlue</defName>
+                                <label>blue barrel</label>
+                                <description>A blue metal barrel used for secure mass storage.</description>
+                                <graphicData>
+                                    <color>(127,138,167)</color>
+                                </graphicData>
+                            </ThingDef>
+                        </value>
+                    </li>
+                    <!--Pallet Barrels-->
+                    <li Class="PatchOperationRemove">
+                        <xpath>/Defs/ThingDef[defName="VFEPD_PalletBarrelGreen" or defName="VFEPD_PalletBarrelGrey" or defName="VFEPD_PalletBarrelRed" or defName="VFEPD_PalletBarrelYellow" or defName="VFEPD_PalletBarrelBlue"]</xpath>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs</xpath>
+                        <value>
+                            <ThingDef Name="DZ_VFEPD_PalletBarrelGreen" ParentName="LWM_Skip">
+                                <defName>DZ_VFEPD_PalletBarrelGreen</defName>
+                                <label>pallet with green barrels</label>
+                                <description>Green metal barrels on a wooden pallet used for secure mass storage.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/IndustrialProps/PalletBarrels</texPath>
+                                    <graphicClass>Graphic_Random</graphicClass>
+                                    <shaderType>CutoutComplex</shaderType>
+                                    <drawSize>(3,3)</drawSize>
+                                    <shadowData>
+                                        <volume>(0.55, 0.30, 0.40)</volume>
+                                    </shadowData>
+                                    <color>(117,169,119)</color>
+                                </graphicData>
+                                <rotatable>false</rotatable>
+                                <staticSunShadowHeight Inherit="false" />
+                                <defaultPlacingRot>North</defaultPlacingRot>
+                                <altitudeLayer>Building</altitudeLayer>
+                                <passability>PassThroughOnly</passability>
+                                <fillPercent>0.6</fillPercent>
+                                <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+                                <repairEffect>ConstructMetal</repairEffect>
+                                <statBases>
+                                    <MaxHitPoints>250</MaxHitPoints>
+                                    <WorkToBuild>500</WorkToBuild>
+                                    <Mass>90</Mass>
+                                    <Flammability>0</Flammability>
+                                </statBases>
+                                <size>(2,2)</size>
+                                <costList>
+                                    <Steel>100</Steel>
+                                    <WoodLog>25</WoodLog>
+                                </costList>
+                                <costStuffCount Inherit="false" />
+                                <stuffCategories Inherit="false" />
+                                <uiIconScale>1</uiIconScale>
+                                <designatorDropdown>IndustrialProps</designatorDropdown>
+                                <castEdgeShadows>True</castEdgeShadows>
+                                <building Inherit="false">
+                                    <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+                                    <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+                                    <fixedStorageSettings>
+                                        <filter>
+                                            <thingDefs>
+                                                <li>Chemfuel</li>
+                                            </thingDefs>
+                                        </filter>
+                                    </fixedStorageSettings>
+                                    <defaultStorageSettings>
+                                        <priority>Important</priority>
+                                        <filter>
+                                        </filter>
+                                    </defaultStorageSettings>
+                                    <isInert>true</isInert>
+                                </building>
+                                <comps>
+                                    <li Class="LWM.DeepStorage.Properties">
+                                        <maxNumberStacks>27</maxNumberStacks>
+                                        <minTimeStoringTakes>50</minTimeStoringTakes>
+                                        <showContents>false</showContents>
+                                        <overlayType>SumOfAllItems</overlayType>
+                                    </li>
+                                </comps>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_PalletBarrelGreen">
+                                <defName>DZ_VFEPD_PalletBarrelGrey</defName>
+                                <label>pallet with grey barrels</label>
+                                <description>Grey metal barrels on a wooden pallet used for secure mass storage.</description>
+                                <graphicData>
+                                    <color>(123,123,123)</color>
+                                </graphicData>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_PalletBarrelGreen">
+                                <defName>DZ_VFEPD_PalletBarrelRed</defName>
+                                <label>pallet with red barrels</label>
+                                <description>Red metal barrels on a wooden pallet used for secure mass storage.</description>
+                                <graphicData>
+                                    <color>(168,124,120)</color>
+                                </graphicData>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_PalletBarrelGreen">
+                                <defName>DZ_VFEPD_PalletBarrelYellow</defName>
+                                <label>pallet with yellow barrels</label>
+                                <description>Yellow metal barrels on a wooden pallet used for secure mass storage.</description>
+                                <graphicData>
+                                    <color>(221,181,124)</color>
+                                </graphicData>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_PalletBarrelGreen">
+                                <defName>DZ_VFEPD_PalletBarrelBlue</defName>
+                                <label>pallet with blue barrels</label>
+                                <description>Blue metal barrels on a wooden pallet used for secure mass storage.</description>
+                                <graphicData>
+                                    <color>(127,138,167)</color>
+                                </graphicData>
+                            </ThingDef>
+                        </value>
+                    </li>
+                    <!--Spacer Containers-->
+                    <li Class="PatchOperationRemove">
+                        <xpath>/Defs/ThingDef[defName="VFEPD_SpacerContainer" or defName="VFEPD_SpacerContainerLarge" or defName="VFEPD_SpacerContainerStack" or defName="VFEPD_SpacerStorage"]</xpath>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs</xpath>
+                        <value>
+                            <ThingDef Name="DZ_VFEPD_SpacerContainer" ParentName="LWM_DeepStorage">
+                                <defName>DZ_VFEPD_SpacerContainer</defName>
+                                <label>spacer container</label>
+                                <description>A medium sized, triple sealed, password protected box.</description>
+                                <thingClass>Building_Storage</thingClass>
+                                <graphicData>
+                                    <texPath>Things/Building/SpacerProps/SpacerContainer/SpacerContainer</texPath>
+                                    <graphicClass>Graphic_Multi</graphicClass>
+                                    <drawSize>(1,1)</drawSize>
+                                </graphicData>
+                                <researchPrerequisites>
+                                    <li>AdvancedFabrication</li>
+                                </researchPrerequisites>
+                                <fillPercent>0.2</fillPercent>
+                                <statBases>
+                                    <MaxHitPoints>150</MaxHitPoints>
+                                    <WorkToBuild>500</WorkToBuild>
+                                    <Mass>50</Mass>
+                                    <Flammability>0</Flammability>
+                                </statBases>
+                                <size>(1,1)</size>
+                                <costList>
+                                    <Uranium>5</Uranium>
+                                    <Plasteel>15</Plasteel>
+                                    <Silver>50</Silver>
+                                </costList>
+                                <uiIconScale>1</uiIconScale>
+                                <designatorDropdown>SpacerProps</designatorDropdown>
+                                <building>
+                                    <isInert>true</isInert>
+                                </building>
+                                <comps>
+                                    <li Class="LWM.DeepStorage.Properties">
+                                        <maxNumberStacks>5</maxNumberStacks>
+                                        <minTimeStoringTakes>50</minTimeStoringTakes>
+                                        <additionalTimeEachStack>150</additionalTimeEachStack>
+                                        <additionalTimeStackSize>10</additionalTimeStackSize>
+                                        <maxMassOfStoredItem>75</maxMassOfStoredItem>
+                                        <maxTotalMass>250</maxTotalMass>
+                                        <showContents>false</showContents>
+                                        <overlayType>SumOfAllItems</overlayType>
+                                    </li>
+                                </comps>
+                            </ThingDef>
+
+                            <ThingDef Name="DZ_VFEPD_SpacerContainerLarge" ParentName="DZ_VFEPD_SpacerContainer">
+                                <defName>DZ_VFEPD_SpacerContainerLarge</defName>
+                                <label>spacer container large</label>
+                                <description>A large sized, triple sealed, password protected box.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/SpacerProps/SpacerContainerLarge/SpacerContainerLarge</texPath>
+                                    <graphicClass>Graphic_Multi</graphicClass>
+                                    <drawSize>(2,2)</drawSize>
+                                </graphicData>
+                                <statBases>
+                                    <MaxHitPoints>300</MaxHitPoints>
+                                    <WorkToBuild>1000</WorkToBuild>
+                                    <Mass>100</Mass>
+                                </statBases>
+                                <size>(2,1)</size>
+                                <costList>
+                                    <Uranium>5</Uranium>
+                                    <Plasteel>30</Plasteel>
+                                    <Silver>100</Silver>
+                                </costList>
+                                <comps>
+                                    <li Class="LWM.DeepStorage.Properties">
+                                        <maxNumberStacks>5</maxNumberStacks>
+                                        <minTimeStoringTakes>100</minTimeStoringTakes>
+                                        <additionalTimeEachStack>150</additionalTimeEachStack>
+                                        <additionalTimeStackSize>10</additionalTimeStackSize>
+                                        <maxMassOfStoredItem>100</maxMassOfStoredItem>
+                                        <maxTotalMass>500</maxTotalMass>
+                                        <showContents>false</showContents>
+                                        <overlayType>SumOfAllItems</overlayType>
+                                    </li>
+                                </comps>
+                            </ThingDef>
+
+                            <ThingDef Name="DZ_VFEPD_SpacerContainerStack" ParentName="DZ_VFEPD_SpacerContainer">
+                                <defName>DZ_VFEPD_SpacerContainerStack</defName>
+                                <label>spacer container stack</label>
+                                <description>A large stack of different sized, triple sealed, password protected boxes.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/SpacerProps/SpacerContainerStack</texPath>
+                                    <graphicClass>Graphic_Random</graphicClass>
+                                    <drawSize>(3,3)</drawSize>
+                                </graphicData>
+                                <passability>Impassable</passability>
+                                <rotatable>false</rotatable>
+                                <fillPercent>0.3</fillPercent>
+                                <statBases>
+                                    <MaxHitPoints>500</MaxHitPoints>
+                                    <WorkToBuild>1500</WorkToBuild>
+                                    <Mass>200</Mass>
+                                </statBases>
+                                <size>(2,2)</size>
+                                <costList>
+                                    <Uranium>15</Uranium>
+                                    <Plasteel>90</Plasteel>
+                                    <Silver>300</Silver>
+                                </costList>
+                                <comps>
+                                    <li Class="LWM.DeepStorage.Properties">
+                                        <maxNumberStacks>10</maxNumberStacks>
+                                        <minTimeStoringTakes>150</minTimeStoringTakes>
+                                        <additionalTimeEachStack>150</additionalTimeEachStack>
+                                        <additionalTimeStackSize>10</additionalTimeStackSize>
+                                        <maxMassOfStoredItem Inherit="false" />
+                                        <maxTotalMass Inherit="false" />
+                                        <showContents>false</showContents>
+                                        <overlayType>SumOfAllItems</overlayType>
+                                    </li>
+                                </comps>
+                            </ThingDef>
+
+                            <ThingDef Name="DZ_VFEPD_SpacerStorage" ParentName="LWM_Skip">
+                                <defName>DZ_VFEPD_SpacerStorage</defName>
+                                <label>advanced storage device</label>
+                                <description>A large, multi-chamber advanced storage device.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/SpacerProps/SpacerStorage/SpacerStorage</texPath>
+                                    <graphicClass>Graphic_Multi</graphicClass>
+                                    <drawSize>(3,3)</drawSize>
+                                </graphicData>
+                                <researchPrerequisites>
+                                    <li>AdvancedFabrication</li>
+                                </researchPrerequisites>
+                                <staticSunShadowHeight Inherit="false" />
+                                <fillPercent>0.35</fillPercent>
+                                <castEdgeShadows>True</castEdgeShadows>
+                                <blockWind>true</blockWind>
+                                <passability>Impassable</passability>
+                                <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+                                <repairEffect>ConstructMetal</repairEffect>
+                                <statBases>
+                                    <MaxHitPoints>1000</MaxHitPoints>
+                                    <WorkToBuild>2000</WorkToBuild>
+                                    <Mass>300</Mass>
+                                    <Flammability>0</Flammability>
+                                </statBases>
+                                <size>(3,1)</size>
+                                <costList>
+                                    <Uranium>30</Uranium>
+                                    <Plasteel>180</Plasteel>
+                                    <Silver>600</Silver>
+                                </costList>
+                                <costStuffCount Inherit="false" />
+                                <stuffCategories Inherit="false" />
+                                <uiIconScale>1</uiIconScale>
+                                <designatorDropdown>SpacerProps</designatorDropdown>
+                                <building>
+                                    <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+                                    <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+                                    <fixedStorageSettings>
+                                        <filter>
+                                            <categories>
+                                                <li>Chunks</li>
+                                                <li>ResourcesRaw</li>
+                                                <li>Manufactured</li>
+                                                <li>Items</li>
+                                                <li>Weapons</li>
+                                                <li>Apparel</li>
+                                            </categories>
+                                            <disallowedCategories>
+                                                <li>PlantMatter</li>
+                                                <li>Drugs</li>
+                                            </disallowedCategories>
+                                        </filter>
+                                    </fixedStorageSettings>
+                                    <defaultStorageSettings>
+                                        <priority>Important</priority>
+                                    </defaultStorageSettings>
+                                    <isInert>true</isInert>
+                                </building>
+                                <comps>
+                                    <li Class="LWM.DeepStorage.Properties">
+                                        <maxNumberStacks>10</maxNumberStacks>
+                                        <minTimeStoringTakes>100</minTimeStoringTakes>
+                                        <showContents>false</showContents>
+                                        <overlayType>SumOfAllItems</overlayType>
+                                    </li>
+                                </comps>
+                            </ThingDef>
+
+                        </value>
+                    </li>
+                    <!--Hay Bales-->
+                    <li Class="PatchOperationRemove">
+                        <xpath>/Defs/ThingDef[defName="VFEPD_HayBaleSmall" or defName="VFEPD_HayBaleMedium" or defName="VFEPD_HayBaleLarge"]</xpath>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs</xpath>
+                        <value>
+                            <DesignatorDropdownGroupDef>
+                                <defName>DZ_Storage_HayBales</defName>
+                            </DesignatorDropdownGroupDef>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs</xpath>
+                        <value>
+                            <ThingDef Name="DZ_VFEPD_HayBaleSmall" ParentName="LWM_HayLoft">
+                                <defName>DZ_VFEPD_HayBaleSmall</defName>
+                                <label>small hay bale</label>
+                                <description>A small block of hay.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/FarmProps/HayBaleSmall/HayBaleSmall</texPath>
+                                    <graphicClass>Graphic_Multi</graphicClass>
+                                    <drawSize>(1,1)</drawSize>
+                                    <shadowData>
+                                        <volume>(0.55, 0.30, 0.40)</volume>
+                                    </shadowData>
+                                </graphicData>
+                                <staticSunShadowHeight Inherit="false" />
+                                <defaultPlacingRot>South</defaultPlacingRot>
+                                <researchPrerequisites>
+                                    <li>FarmProps</li>
+                                </researchPrerequisites>
+                                <altitudeLayer>Building</altitudeLayer>
+                                <passability>PassThroughOnly</passability>
+                                <fillPercent>0.05</fillPercent>
+                                <statBases>
+                                    <MaxHitPoints>70</MaxHitPoints>
+                                    <WorkToBuild>100</WorkToBuild>
+                                    <Mass>5</Mass>
+                                    <Flammability>1</Flammability>
+                                </statBases>
+                                <size>(1,1)</size>
+                                <costList>
+                                    <Hay>20</Hay>
+                                </costList>
+                                <costStuffCount Inherit="false" />
+                                <stuffCategories Inherit="false" />
+                                <uiIconScale>1</uiIconScale>
+                                <designatorDropdown>DZ_Storage_HayBales</designatorDropdown>
+                                <building Inherit="false">
+                                    <preventDeteriorationOnTop>false</preventDeteriorationOnTop>
+                                    <fixedStorageSettings Inherit="false">
+                                        <filter>
+                                            <thingDefs>
+                                                <li>Hay</li>
+                                            </thingDefs>
+                                        </filter>
+                                    </fixedStorageSettings>
+                                    <defaultStorageSettings Inherit="false" />
+                                    <isInert>true</isInert>
+                                </building>
+                                <comps>
+                                    <li Class="LWM.DeepStorage.Properties">
+                                        <maxNumberStacks>3</maxNumberStacks>
+                                        <minTimeStoringTakes>100</minTimeStoringTakes>
+                                        <additionalTimeStackSize>8</additionalTimeStackSize>
+                                        <showContents>false</showContents>
+                                        <overlayType>SumOfAllItems</overlayType>
+                                    </li>
+                                </comps>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_HayBaleSmall">
+                                <defName>DZ_VFEPD_HayBaleMedium</defName>
+                                <label>medium hay bale</label>
+                                <description>A medium block of hay.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/FarmProps/HayBaleMedium/HayBaleMedium</texPath>
+                                    <graphicClass>Graphic_Multi</graphicClass>
+                                    <drawSize>(1,1)</drawSize>
+                                    <shadowData>
+                                        <volume>(0.55, 0.30, 0.40)</volume>
+                                    </shadowData>
+                                </graphicData>
+                                <fillPercent>0.1</fillPercent>
+                                <statBases>
+                                    <MaxHitPoints>100</MaxHitPoints>
+                                    <WorkToBuild>300</WorkToBuild>
+                                    <Mass>5</Mass>
+                                    <Flammability>1</Flammability>
+                                </statBases>
+                                <costList>
+                                    <Hay>50</Hay>
+                                </costList>
+                                <comps>
+                                    <li Class="LWM.DeepStorage.Properties">
+                                        <maxNumberStacks>5</maxNumberStacks>
+                                        <minTimeStoringTakes>100</minTimeStoringTakes>
+                                        <additionalTimeStackSize>8</additionalTimeStackSize>
+                                        <showContents>false</showContents>
+                                        <overlayType>SumOfAllItems</overlayType>
+                                    </li>
+                                </comps>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DZ_VFEPD_HayBaleSmall">
+                                <defName>DZ_VFEPD_HayBaleLarge</defName>
+                                <label>large hay bale</label>
+                                <description>A large roll of hay.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/FarmProps/HayBaleLarge/HayBaleLarge</texPath>
+                                    <graphicClass>Graphic_Multi</graphicClass>
+                                    <drawSize>(2,2)</drawSize>
+                                    <shadowData>
+                                        <volume>(0.55, 0.30, 0.40)</volume>
+                                    </shadowData>
+                                </graphicData>
+                                <fillPercent>0.3</fillPercent>
+                                <statBases>
+                                    <MaxHitPoints>500</MaxHitPoints>
+                                    <WorkToBuild>1000</WorkToBuild>
+                                    <Mass>250</Mass>
+                                    <Flammability>1</Flammability>
+                                </statBases>
+                                <size>(2,2)</size>
+                                <costList>
+                                    <Hay>250</Hay>
+                                </costList>
+                                <comps>
+                                    <li Class="LWM.DeepStorage.Properties">
+                                        <maxNumberStacks>3</maxNumberStacks>
+                                        <minTimeStoringTakes>100</minTimeStoringTakes>
+                                        <additionalTimeStackSize>8</additionalTimeStackSize>
+                                        <showContents>false</showContents>
+                                        <overlayType>SumOfAllItems</overlayType>
+                                    </li>
+                                </comps>
+                            </ThingDef>
+
+                        </value>
+                    </li>
+                    <!--Pile of Bricks-->
+                    <li Class="PatchOperationRemove">
+                        <xpath>/Defs/ThingDef[defName="VFEPD_BrickPile"]</xpath>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs</xpath>
+                        <value>
+                            <ThingDef Name="DZ_VFEPD_BrickPile" ParentName="LWM_Skip">
+                                <defName>DZ_VFEPD_BrickPile</defName>
+                                <label>brick pile</label>
+                                <description>A pile of bricks.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/IndustrialProps/BrickPile</texPath>
+                                    <graphicClass>Graphic_Random</graphicClass>
+                                    <drawSize>(1,1)</drawSize>
+                                    <shadowData>
+                                        <volume>(0.55, 0.30, 0.40)</volume>
+                                    </shadowData>
+                                </graphicData>
+                                <rotatable>false</rotatable>
+                                <staticSunShadowHeight Inherit="false" />
+                                <altitudeLayer>Building</altitudeLayer>
+                                <passability>PassThroughOnly</passability>
+                                <fillPercent>0.3</fillPercent>
+                                <statBases>
+                                    <MaxHitPoints>200</MaxHitPoints>
+                                    <WorkToBuild>75</WorkToBuild>
+                                    <Mass>25</Mass>
+                                    <Flammability>0</Flammability>
+                                </statBases>
+                                <size>(1,1)</size>
+                                <stuffCategories Inherit="false">
+                                    <li>Stony</li>
+                                </stuffCategories>
+                                <costStuffCount>50</costStuffCount>
+                                <uiIconScale>1</uiIconScale>
+                                <castEdgeShadows>True</castEdgeShadows>
+                                <building Inherit="false">
+                                    <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+                                    <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+                                    <fixedStorageSettings>
+                                        <filter>
+                                            <categories>
+                                                <li>StoneBlocks</li>
+                                            </categories>
+                                            <thingDefs>
+                                                <li>Jade</li>
+                                            </thingDefs>
+                                        </filter>
+                                    </fixedStorageSettings>
+                                    <defaultStorageSettings>
+                                        <priority>Important</priority>
+                                        <filter>
+                                        </filter>
+                                    </defaultStorageSettings>
+                                    <isInert>true</isInert>
+                                </building>
+                                <comps>
+                                    <li Class="LWM.DeepStorage.Properties">
+                                        <maxNumberStacks>5</maxNumberStacks>
+                                        <minTimeStoringTakes>50</minTimeStoringTakes>
+                                        <showContents>false</showContents>
+                                        <overlayType>SumOfAllItems</overlayType>
+                                    </li>
+                                </comps>
+                            </ThingDef>
+                        </value>
+                    </li>
+                    <!--Bottle Rack-->
+                    <li Class="PatchOperationRemove">
+                        <xpath>/Defs/ThingDef[defName="VFEPD_WineRack"]</xpath>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs</xpath>
+                        <value>
+                            <ThingDef Name="DZ_VFEPD_WineRack" ParentName="LWM_Food_Basket">
+                                <defName>DZ_VFEPD_WineRack</defName>
+                                <label>bottle rack</label>
+                                <description>A civilized bottle storage rack.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/KitchenProps/WineRack/WineRack</texPath>
+                                    <graphicClass>Graphic_Multi</graphicClass>
+                                    <drawSize>(2,2)</drawSize>
+                                </graphicData>
+                                <researchPrerequisites>
+                                    <li>KitchenProps</li>
+                                </researchPrerequisites>
+                                <rotatable>true</rotatable>
+                                <altitudeLayer>Building</altitudeLayer>
+                                <defaultPlacingRot>South</defaultPlacingRot>
+                                <passability>PassThroughOnly</passability>
+                                <fillPercent>0.3</fillPercent>
+                                <statBases>
+                                    <MaxHitPoints>50</MaxHitPoints>
+                                    <WorkToBuild>50</WorkToBuild>
+                                    <Mass>15</Mass>
+                                    <Beauty>1</Beauty>
+                                    <Flammability>1</Flammability>
+                                </statBases>
+                                <size>(1,1)</size>
+                                <costList>
+                                    <WoodLog>15</WoodLog>
+                                </costList>
+                                <costStuffCount Inherit="false" />
+                                <stuffCategories Inherit="false" />
+                                <uiIconScale>1</uiIconScale>
+                                <building Inherit="false">
+                                    <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+                                    <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+                                    <fixedStorageSettings>
+                                        <filter>
+                                            <thingDefs>
+                                                <li>Beer</li>
+                                            </thingDefs>
+                                        </filter>
+                                    </fixedStorageSettings>
+                                    <defaultStorageSettings>
+                                        <priority>Important</priority>
+                                        <filter>
+                                        </filter>
+                                    </defaultStorageSettings>
+                                    <isInert>true</isInert>
+                                </building>
+                                <comps>
+                                    <li Class="LWM.DeepStorage.Properties">
+                                        <maxNumberStacks>5</maxNumberStacks>
+                                        <minTimeStoringTakes>50</minTimeStoringTakes>
+                                        <showContents>false</showContents>
+                                        <overlayType>SumOfAllItems</overlayType>
+                                    </li>
+                                </comps>
+                            </ThingDef>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Add modded elements-->
+    <!--Dubs Bad Hygiene, with conditional for Fertile Fields-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationFindMod">
+                <mods>
+                    <li>Dubs Bad Hygiene</li>
+                </mods>
+                <match Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Fertile Fields [1.1]</li>
+                    </mods>
+                    <match Class="PatchOperationSequence">
+                        <success>Always</success>
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/ThingDef[defName="DZ_VFEPD_BarrelGreen" or defName="DZ_VFEPD_PalletBarrelGreen"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                                <value>
+                                    <li>FecalSludge</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                    <nomatch Class="PatchOperationSequence">
+                        <success>Always</success>
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/ThingDef[defName="DZ_VFEPD_BarrelGreen" or defName="DZ_VFEPD_PalletBarrelGreen"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                                <value>
+                                    <li>FecalSludge</li>
+                                    <li>Biosolids</li>
+                                </value>
+                            </li>
+                        </operations>
+                    </nomatch>
+                </match>
+            </match>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Dubs Bad Hygiene</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="WashingMachine"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Things/Building/FurnitureProps/WashingMachine/WashingMachine</texPath>
+                                <graphicClass>Graphic_Multi</graphicClass>
+                                <drawSize>(3,3)</drawSize>
+                            </graphicData>
+                            <uiIconScale>0.75</uiIconScale>
+                        </value>
+                    </li>
+                    <!-- Need to make texture mask, and load DocWorld after.
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="WashBucket"]/graphicData/texPath</xpath>
+                        <value>
+                            <texPath>Things/Building/MedievalProps/BucketWater/BucketWater</texPath>
+                        </value>
+                    </li>-->
+                    <li Class="PatchOperationRemove">
+                        <xpath>/Defs/ThingDef[defName="VFEPD_WashingMachine"]</xpath>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Fertile Fields-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationFindMod">
+                <mods>
+                    <li>Fertile Fields [1.1]</li>
+                </mods>
+                <match Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="DZ_VFEPD_BarrelGreen" or defName="DZ_VFEPD_PalletBarrelGreen"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>RawCompost</li>
+                        <li>Fertilizer</li>
+                        <li>PileofDirt</li>
+                        <li>SandPile</li>
+                        <li>RFFClay</li>
+                        <li>RottedMush</li>
+                        <li>CrushedRocks</li>
+                    </value>
+                </match>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Rimatomics-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationFindMod">
+                <mods>
+                    <li>Rimatomics</li>
+                </mods>
+                <match Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="DZ_VFEPD_BarrelGreen" or defName="DZ_VFEPD_PalletBarrelGreen"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>NuclearWaste</li>
+                    </value>
+                </match>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Rimefeller-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationFindMod">
+                <mods>
+                    <li>Rimefeller</li>
+                </mods>
+                <match Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="DZ_VFEPD_BarrelGreen" or defName="DZ_VFEPD_PalletBarrelGreen"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>OilBarrel</li>
+                        <li>Napalm</li>
+                    </value>
+                </match>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Thermodynamics-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>[D] Thermodynamics - Hot Meals</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs</xpath>
+                        <value>
+                            <DesignatorDropdownGroupDef>
+                                <defName>DZ_Culinary_HotMeals</defName>
+                            </DesignatorDropdownGroupDef>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="DMicrowave"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Things/Building/KitchenProps/Microwave/Microwave</texPath>
+                                <graphicClass>Graphic_Multi</graphicClass>
+                                <drawSize>(1.5,1.5)</drawSize>
+                            </graphicData>
+                            <uiIconScale>0.75</uiIconScale>
+                            <designatorDropdown>DZ_Culinary_HotMeals</designatorDropdown>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAttributeSet">
+                        <xpath>/Defs/ThingDef[defName="DMicrowave"]</xpath>
+                        <attribute>Name</attribute>
+                        <value>DMicrowave</value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs</xpath>
+                        <value>
+
+                            <ThingDef ParentName="DMicrowave">
+                                <defName>DZ_VFEPD_Cooker</defName>
+                                <label>cooker</label>
+                                <description>A cooker unit for heating up food.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/KitchenProps/Cooker/Cooker</texPath>
+                                    <graphicClass>Graphic_Multi</graphicClass>
+                                    <drawSize>(1.1,1.1)</drawSize>
+                                </graphicData>
+                                <uiIconScale>0.75</uiIconScale>
+                                <fillPercent>0.3</fillPercent>
+                                <costList>
+                                    <Steel>75</Steel>
+                                    <ComponentIndustrial>2</ComponentIndustrial>
+                                </costList>
+                                <size>1,1</size>
+                                <statBases>
+                                    <WorkToBuild>1000</WorkToBuild>
+                                    <MaxHitPoints>100</MaxHitPoints>
+                                    <Mass>15</Mass>
+                                    <Flammability>1.0</Flammability>
+                                    <WorkTableWorkSpeedFactor>2</WorkTableWorkSpeedFactor>
+                                </statBases>
+                                <designationCategory>DZ_Culinary</designationCategory>
+                                <designatorDropdown>DZ_Culinary_HotMeals</designatorDropdown>
+                                <researchPrerequisites>
+                                    <li>Electricity</li>
+                                </researchPrerequisites>
+                            </ThingDef>
+
+                            <ThingDef ParentName="DMicrowave">
+                                <defName>DZ_VFEPD_Oven</defName>
+                                <label>oven</label>
+                                <description>A large oven for heating up food.</description>
+                                <graphicData>
+                                    <texPath>Things/Building/KitchenProps/Oven/Oven</texPath>
+                                    <graphicClass>Graphic_Multi</graphicClass>
+                                    <drawSize>(1.5,1.5)</drawSize>
+                                </graphicData>
+                                <uiIconScale>0.75</uiIconScale>
+                                <costList>
+                                    <Steel>75</Steel>
+                                    <ComponentIndustrial>2</ComponentIndustrial>
+                                </costList>
+                                <size>1,1</size>
+                                <statBases>
+                                    <WorkToBuild>1000</WorkToBuild>
+                                    <MaxHitPoints>100</MaxHitPoints>
+                                    <Mass>15</Mass>
+                                    <Flammability>1.0</Flammability>
+                                    <WorkTableWorkSpeedFactor>2</WorkTableWorkSpeedFactor>
+                                </statBases>
+                                <designationCategory>DZ_Culinary</designationCategory>
+                                <designatorDropdown>DZ_Culinary_HotMeals</designatorDropdown>
+                                <researchPrerequisites>
+                                    <li>Electricity</li>
+                                </researchPrerequisites>
+                            </ThingDef>
+
+                        </value>
+                    </li>
+                    <li Class="PatchOperationRemove">
+                        <xpath>/Defs/ThingDef[defName="VFEPD_Microwave" or defName="VFEPD_Oven" or defName="VFEPD_Cooker"]</xpath>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Vanilla Factions Expanded - Medieval-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationFindMod">
+                <mods>
+                    <li>Vanilla Factions Expanded - Medieval</li>
+                </mods>
+                <match Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="DZ_VFEPD_WineRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VFEM_Wine</li>
+                    </value>
+                </match>
+            </match>
+        </match>
+    </Operation>
+
+</Patch>
