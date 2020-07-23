@@ -15,6 +15,7 @@
          <li>【1.1】Animalstrawbed</li>
          <li>[sd] Chicken Nest (Continued)</li>
          <li>RIMkea</li>
+         <li>Fast regen 1.1</li>
       </mods>
       <nomatch Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="DZ_Animals"]</xpath>

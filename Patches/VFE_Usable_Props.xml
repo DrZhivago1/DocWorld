@@ -69,6 +69,9 @@
                                         <overlayType>SumOfAllItems</overlayType>
                                     </li>
                                 </comps>
+                                <researchPrerequisites>
+                                    <li>Electricity</li>
+                                </researchPrerequisites>
                             </ThingDef>
 
                             <ThingDef ParentName="DZ_VFEPD_ContainerGreen">
@@ -174,6 +177,9 @@
                                         <overlayType>SumOfAllItems</overlayType>
                                     </li>
                                 </comps>
+                                <researchPrerequisites>
+                                    <li>Electricity</li>
+                                </researchPrerequisites>
                             </ThingDef>
 
                             <ThingDef ParentName="DZ_VFEPD_BarrelGreen">
@@ -283,6 +289,9 @@
                                         <overlayType>SumOfAllItems</overlayType>
                                     </li>
                                 </comps>
+                                <researchPrerequisites>
+                                    <li>Electricity</li>
+                                </researchPrerequisites>
                             </ThingDef>
 
                             <ThingDef ParentName="DZ_VFEPD_PalletBarrelGreen">

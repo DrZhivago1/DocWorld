@@ -748,7 +748,7 @@
     Fast Regen
     ==========-->
 
-    <!--Move items to Animals tab, all others are moved via Vanilla beds patch-->
+    <!--Move items to Animals tab, all others are moved via Vanilla beds patch. #animalbeds-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Fast regen 1.1</li>
