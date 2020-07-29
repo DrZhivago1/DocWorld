@@ -40,7 +40,7 @@
                                 <defaultPlacingRot>South</defaultPlacingRot>
                                 <castEdgeShadows>True</castEdgeShadows>
                                 <blockWind>true</blockWind>
-                                <passability>Impassable</passability>
+                                <passability>PassThroughOnly</passability>
                                 <fillPercent>1</fillPercent>
                                 <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
                                 <repairEffect>ConstructMetal</repairEffect>
@@ -426,7 +426,7 @@
                                     <graphicClass>Graphic_Random</graphicClass>
                                     <drawSize>(3,3)</drawSize>
                                 </graphicData>
-                                <passability>Impassable</passability>
+                                <passability>PassThroughOnly</passability>
                                 <rotatable>false</rotatable>
                                 <fillPercent>0.3</fillPercent>
                                 <statBases>
@@ -470,7 +470,7 @@
                                 <fillPercent>0.35</fillPercent>
                                 <castEdgeShadows>True</castEdgeShadows>
                                 <blockWind>true</blockWind>
-                                <passability>Impassable</passability>
+                                <passability>PassThroughOnly</passability>
                                 <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
                                 <repairEffect>ConstructMetal</repairEffect>
                                 <statBases>
