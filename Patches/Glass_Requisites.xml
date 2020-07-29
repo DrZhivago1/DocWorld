@@ -184,6 +184,47 @@
     </Operation>
 
     <!--==========
+    Raise The Roof
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Raise The Roof 1.1</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Transparent roofs require glass-->
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="RTR_TransparentRoof"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>30</Steel>
+                                <Glass>10</Glass>
+                                <ComponentIndustrial>1</ComponentIndustrial>
+                            </costList>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="RTR_TransparentSolarRoof"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>30</Steel>
+                                <Glass>10</Glass>
+                                <ComponentIndustrial>1</ComponentIndustrial>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
     RIMkea
     ==========-->
 

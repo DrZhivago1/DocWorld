@@ -747,8 +747,18 @@
       <mods>
         <li>Vanilla Furniture Expanded - Farming</li>
       </mods>
-      <match Class="PatchOperationRemove">
-        <xpath>/Defs/ThingDef[defName="VFE_Sprinkler"]</xpath>
+      <match Class="PatchOperationSequence">
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="IrrigationSprinkler"]/graphicData/texPath</xpath>
+            <value>
+              <texPath>Things/Building/Sprinkler</texPath>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="VFE_Sprinkler"] | /Defs/ResearchProjectDef[defName="VFE_Res_Sprinkler"]</xpath>
+          </li>
+        </operations>
       </match>
     </match>
   </Operation>
@@ -772,6 +782,13 @@
               <Product>RawCompost</Product>
             </value>
           </li>
+          <!--Replace product gained from composter-->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="BiosolidsComposter"]/comps/li[@Class="DubsBadHygiene.CompProperties_Composter"]/Product</xpath>
+            <value>
+              <Product>RawCompost</Product>
+            </value>
+          </li>
           <!--Descriptions-->
           <li Class="PatchOperationReplace">
             <xpath>/Defs/ResearchProjectDef[defName="SewageSludgeComposting"]/description</xpath>
@@ -787,7 +804,7 @@
           </li>
           <!--Removals-->
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName="Biosolids"]</xpath>
+            <xpath>/Defs/ThingDef[defName="Biosolids"] | /Defs/RecipeDef[defName="Make_FertilizerFromBiosolids" or defName="Make_FertilizerFromBiosolidsBulk"]</xpath>
           </li>
           <!--These dummy defs need to be re-added because they are hardcoded in the .dll, so we don't log errors-->
           <li Class="PatchOperationAdd">

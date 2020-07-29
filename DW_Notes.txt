@@ -308,6 +308,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Striped Tile, Yellow Tile}
     Flooring and Decorative Options
         {ELIF_WallMountedFTV}
+    Fueled Heaters
+        {WDWoodFiredHeater, WDChemfuelPoweredHeater}
     Genetic Rim
         {GR_CryostabilizedEngine, GR_NitroMilkTrap, GR_HugeBearRug, GR_HugeBearCatRug, GR_WolfRug, GR_MuffaloRug}
     Glass+Lights
@@ -401,6 +403,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Floodlight requires glass}
     More Furniture
         {Lamps and endtables require glass}
+    Raise The Roof
+        {Transparent roofs require glass}
     RIMkea
         {Kageshain lamps require glass}
     Rimplas
@@ -746,6 +750,7 @@ Power Switch
 Preemptive Strike
 Project RimFactory Revived
 Questionable Ethics Enhanced
+Raise The Roof 1.1
 RIMkea
 ReGrowth: Biomes of The Rim - Boreal Expansion
 ReGrowth: Biomes of The Rim - Tundra Expansion
@@ -839,6 +844,7 @@ Zen Garden
 [RF] Fishing
 [SYR] Doormats
 [T] MoreFloors
+[WD] Fueled Heaters
 [WD] Reinforced Doors
 [sd] Chicken Nest (Continued)
 [sd] Goodnight (Continued)

@@ -142,6 +142,7 @@
             <li>Vanilla Furniture Expanded - Power</li>
             <li>Vanilla Factions Expanded - Settlers</li>
             <li>RimPlas</li>
+            <li>[WD] Fueled Heaters</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>
@@ -862,6 +863,23 @@
                     </value>
                 </li>
             </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Fueled Heaters
+    ==========-->
+
+    <!--WDWoodFiredHeater, WDChemfuelPoweredHeater-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[WD] Fueled Heaters</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="WDWoodFiredHeater" or defName="WDChemfuelPoweredHeater"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+            </value>
         </match>
     </Operation>
 

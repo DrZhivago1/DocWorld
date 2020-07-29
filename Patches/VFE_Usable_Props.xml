@@ -70,7 +70,7 @@
                                     </li>
                                 </comps>
                                 <researchPrerequisites>
-                                    <li>Electricity</li>
+                                    <li>IndustrialProps</li>
                                 </researchPrerequisites>
                             </ThingDef>
 
@@ -178,7 +178,7 @@
                                     </li>
                                 </comps>
                                 <researchPrerequisites>
-                                    <li>Electricity</li>
+                                    <li>IndustrialProps</li>
                                 </researchPrerequisites>
                             </ThingDef>
 
@@ -290,7 +290,7 @@
                                     </li>
                                 </comps>
                                 <researchPrerequisites>
-                                    <li>Electricity</li>
+                                    <li>IndustrialProps</li>
                                 </researchPrerequisites>
                             </ThingDef>
 
@@ -349,7 +349,7 @@
                                     <drawSize>(1,1)</drawSize>
                                 </graphicData>
                                 <researchPrerequisites>
-                                    <li>AdvancedFabrication</li>
+                                    <li>SpacerProps</li>
                                 </researchPrerequisites>
                                 <fillPercent>0.2</fillPercent>
                                 <statBases>
@@ -464,7 +464,7 @@
                                     <drawSize>(3,3)</drawSize>
                                 </graphicData>
                                 <researchPrerequisites>
-                                    <li>AdvancedFabrication</li>
+                                    <li>SpacerProps</li>
                                 </researchPrerequisites>
                                 <staticSunShadowHeight Inherit="false" />
                                 <fillPercent>0.35</fillPercent>
@@ -829,6 +829,7 @@
                             <li Class="PatchOperationAdd">
                                 <xpath>/Defs/ThingDef[defName="DZ_VFEPD_BarrelGreen" or defName="DZ_VFEPD_PalletBarrelGreen"]/building/fixedStorageSettings/filter/thingDefs</xpath>
                                 <value>
+                                    <li>D9Ash</li>
                                     <li>FecalSludge</li>
                                 </value>
                             </li>
@@ -840,6 +841,7 @@
                             <li Class="PatchOperationAdd">
                                 <xpath>/Defs/ThingDef[defName="DZ_VFEPD_BarrelGreen" or defName="DZ_VFEPD_PalletBarrelGreen"]/building/fixedStorageSettings/filter/thingDefs</xpath>
                                 <value>
+                                    <li>D9Ash</li>
                                     <li>FecalSludge</li>
                                     <li>Biosolids</li>
                                 </value>
@@ -901,17 +903,28 @@
                 <mods>
                     <li>Fertile Fields [1.1]</li>
                 </mods>
-                <match Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="DZ_VFEPD_BarrelGreen" or defName="DZ_VFEPD_PalletBarrelGreen"]/building/fixedStorageSettings/filter/thingDefs</xpath>
-                    <value>
-                        <li>RawCompost</li>
-                        <li>Fertilizer</li>
-                        <li>PileofDirt</li>
-                        <li>SandPile</li>
-                        <li>RFFClay</li>
-                        <li>RottedMush</li>
-                        <li>CrushedRocks</li>
-                    </value>
+                <match Class="PatchOperationSequence">
+                    <success>Always</success>
+                    <operations>
+                        <li Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="DZ_VFEPD_BarrelGreen" or defName="DZ_VFEPD_PalletBarrelGreen"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                            <value>
+                                <li>RawCompost</li>
+                                <li>Fertilizer</li>
+                                <li>PileofDirt</li>
+                                <li>SandPile</li>
+                                <li>RFFClay</li>
+                                <li>RottedMush</li>
+                                <li>CrushedRocks</li>
+                            </value>
+                        </li>
+                        <li Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="DZ_VFEPD_HayBaleSmall"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                            <value>
+                                <li>PlantScraps</li>
+                            </value>
+                        </li>
+                    </operations>
                 </match>
             </match>
         </match>
