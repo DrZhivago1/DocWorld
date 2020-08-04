@@ -651,7 +651,7 @@
     Coal Expanded
     ==========-->
 
-    <!--CoalGrill, CoalSmelter-->
+    <!--CoalGrill, CoalSmelter, CoalFiredGenerator-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Coal Expanded</li>
@@ -670,6 +670,13 @@
                     <xpath>/Defs/ThingDef[defName="CoalSmelter"]</xpath>
                     <value>
                         <designatorDropdown>DZ_Production_Smelter</designatorDropdown>
+                    </value>
+                </li>
+                <!--Generator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="CoalFiredGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Generator</designatorDropdown>
                     </value>
                 </li>
             </operations>
@@ -1588,6 +1595,36 @@
                     <xpath>/Defs/ThingDef[defName="OrbitalTradeColumnMod" or defName="OrbitalTradeBeacon"]</xpath>
                     <value>
                         <designatorDropdown>DZ_UtCl_Trade</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Brewing Expanded
+    ==========-->
+
+    <!--VBE_AmbrandyDistillery, VBE_WhiskeyCask, VBE_TequilaBarrel, VBE_VodkaDrum, VBE_GinStill-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Brewing Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_VBE_Mixers</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VBE_AmbrandyDistillery" or defName="VBE_WhiskeyCask" or defName="VBE_TequilaBarrel" or defName="VBE_VodkaDrum" or defName="VBE_GinStill"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_VBE_Mixers</designatorDropdown>
                     </value>
                 </li>
             </operations>

@@ -418,6 +418,28 @@
     </Operation>
 
     <!--==========
+    Chicken Coop
+    ==========-->
+
+    <!--Move items to Husbandry tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Mitz's Chicken Coop Mod</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="ChickenCoop"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Chicken Nest
     ==========-->
 
@@ -2245,6 +2267,29 @@
     </Operation>
 
     <!--==========
+    Vanilla Brewing Expanded
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Brewing Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Bar-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VBE_Bar" or defName="VBE_SodaFountain" or defName="VBE_AmbrandyDistillery" or defName="VBE_WhiskeyCask" or defName="VBE_TequilaBarrel" or defName="VBE_VodkaDrum" or defName="VBE_GinStill"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Vanilla Cooking Expanded
     ==========-->
 
@@ -2583,7 +2628,7 @@
     <!--Move items to Culinary tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>VGP Garden Drinks</li>
+            <li>VGP Garden Gourmet</li>
         </mods>
         <match Class="PatchOperationReplace">
             <xpath>/Defs/ThingDef[defName="VG_SaltMine" or defName="ElectricGrindStone" or defName="GrindStone" or defName="CookingTools" or defName="CandyTable" or defName="FueledCandyTable" or defName="Canningstove" or defName="HandCanningstove" or defName="ElectricOven" or defName="Oven"]/designationCategory</xpath>

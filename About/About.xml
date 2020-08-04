@@ -7,28 +7,28 @@
 		<li>1.1</li>
 	</supportedVersions>
 	<packageId>drzhivago.docworld</packageId>
+	<incompatibleWith>
+		<li>Oreno.VFEFarming.DubsBadHygiene</li>
+	</incompatibleWith>
 	<loadAfter>
 		<li>Nif.ArchitectExpanded.FencesTabPatch</li>
 		<li>Terragg.ExtendedStorage.Extended</li>
 		<li>pelador.fermenter</li>
+		<li>jamaicancastle.RF.fertilefields</li>
 		<li>Rikiki.FishIndustry</li>
 		<li>Owlchemist.GloomyVanilla</li>
 		<li>zymex.GloomyVanillaOverhaul</li>
 		<li>trasheddt.industrialisation</li>
 		<li>pelador.insulation</li>
 		<li>pelador.rimplas</li>
-		<li>syrchalis.metallicbatteries</li>
 		<li>cucumpear.animalbeds</li>
-		<li>VanillaExpanded.VFEFarming</li>
-		<li>jamaicancastle.RF.fertilefields</li>
+		<li>syrchalis.metallicbatteries</li>
 		<li>JPT.OpenTheWindows</li>
-		<li>dame.scleatherufpatch</li>
 		<li>spdskatr.projectrimfactory</li>
+		<li>dame.scleatherufpatch</li>
+		<li>VanillaExpanded.VFEFarming</li>
 		<li>Oreno.VFEFarming.VGPGardenTools</li>
 	</loadAfter>
-	<incompatibleWith>
-		<li>Oreno.VFEFarming.DubsBadHygiene</li>
-	</incompatibleWith>
   <description>
 One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, better functioning, and intuitive system. This mod patches, fixes, and adds content to many mods (including but not limited to plain old vanilla RimWorld).
 

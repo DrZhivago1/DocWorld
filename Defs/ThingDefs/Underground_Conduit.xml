@@ -18,7 +18,6 @@
       <Flammability>0.0</Flammability>
       <Beauty>0</Beauty>
     </statBases>
-    <altitudeLayer>FloorEmplacement</altitudeLayer>
   </ThingDef>
 
 </Defs>

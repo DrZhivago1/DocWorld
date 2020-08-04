@@ -865,6 +865,225 @@
   </Operation>
 
   <!--==========
+    Empire {Realistic Planets - Fan Update}
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Empire</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Realistic Planets - Fan Update</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <FactionColonies.BiomeResourceDef>
+                <defName>RRP_Grassland</defName>
+                <label>grasslands</label>
+                <canSettle>true</canSettle>
+                <BaseProductionAdditive>                  <!-- 0 is default -->
+                  <li>0.75</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1.25</li>                  <!-- Animals -->
+                  <li>0.5</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionAdditive>
+                <BaseProductionMultiplicative>                  <!-- li is default -->
+                  <li>1</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1</li>                  <!-- Animals -->
+                  <li>1</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionMultiplicative>
+              </FactionColonies.BiomeResourceDef>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <FactionColonies.BiomeResourceDef>
+                <defName>RRP_Savanna</defName>
+                <label>savanna</label>
+                <canSettle>true</canSettle>
+                <BaseProductionAdditive>                  <!-- 0 is default -->
+                  <li>0.5</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1.25</li>                  <!-- Animals -->
+                  <li>0.75</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionAdditive>
+                <BaseProductionMultiplicative>                  <!-- li is default -->
+                  <li>1</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1</li>                  <!-- Animals -->
+                  <li>1</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionMultiplicative>
+              </FactionColonies.BiomeResourceDef>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <FactionColonies.BiomeResourceDef>
+                <defName>RRP_Steppes</defName>
+                <label>steppes</label>
+                <canSettle>true</canSettle>
+                <BaseProductionAdditive>                  <!-- 0 is default -->
+                  <li>.75</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>.25</li>                  <!-- Animals -->
+                  <li>0</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1.25</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionAdditive>
+                <BaseProductionMultiplicative>                  <!-- li is default -->
+                  <li>1</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1</li>                  <!-- Animals -->
+                  <li>1</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionMultiplicative>
+              </FactionColonies.BiomeResourceDef>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <FactionColonies.BiomeResourceDef>
+                <defName>RRP_TemperateDesert</defName>
+                <label>temperate desert</label>
+                <canSettle>true</canSettle>
+                <BaseProductionAdditive>                  <!-- 0 is default -->
+                  <li>.75</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1.25</li>                  <!-- Animals -->
+                  <li>.75</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionAdditive>
+                <BaseProductionMultiplicative>                  <!-- li is default -->
+                  <li>1</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1</li>                  <!-- Animals -->
+                  <li>1</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionMultiplicative>
+              </FactionColonies.BiomeResourceDef>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <FactionColonies.BiomeResourceDef>
+                <defName>RRP_Permafrost</defName>
+                <label>permafrost</label>
+                <canSettle>true</canSettle>
+                <BaseProductionAdditive>                  <!-- 0 is default -->
+                  <li>.5</li>                  <!-- Food -->
+                  <li>.5</li>                  <!-- Weapons -->
+                  <li>.5</li>                  <!-- Apparel -->
+                  <li>0.75</li>                  <!-- Animals -->
+                  <li>0</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionAdditive>
+                <BaseProductionMultiplicative>                  <!-- li is default -->
+                  <li>1</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1</li>                  <!-- Animals -->
+                  <li>1</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionMultiplicative>
+              </FactionColonies.BiomeResourceDef>
+            </value>
+          </li>
+
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <FactionColonies.BiomeResourceDef>
+                <defName>RRP_Oasis</defName>
+                <label>desert oasis</label>
+                <canSettle>true</canSettle>
+                <BaseProductionAdditive>                  <!-- 0 is default -->
+                  <li>1.25</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>1.5</li>                  <!-- Animals -->
+                  <li>0.75</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1.25</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionAdditive>
+                <BaseProductionMultiplicative>                  <!-- li is default -->
+                  <li>1</li>                  <!-- Food -->
+                  <li>1</li>                  <!-- Weapons -->
+                  <li>1</li>                  <!-- Apparel -->
+                  <li>0.75</li>                  <!-- Animals -->
+                  <li>1</li>                  <!-- Logging -->
+                  <li>1</li>                  <!-- Mining -->
+                  <li>1</li>                  <!-- Research -->
+                  <li>1</li>                  <!-- Power -->
+                  <li>1</li>                  <!-- Medicine -->
+                </BaseProductionMultiplicative>
+              </FactionColonies.BiomeResourceDef>
+            </value>
+          </li>
+
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
     Expanded Woodworking {Simple Chains: Leather, Survivalist's Additions}
     ==========-->
 
@@ -1482,8 +1701,52 @@
     </match>
   </Operation>
 
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ReGrowth - Cold Bog Expansion</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Expanded Woodworking</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="RG-CB_Plant_BogTreePine"]/plant</xpath>
+            <value>
+              <harvestedThingDef>WoodLog_Pine</harvestedThingDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>ReGrowth - Wasteland</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Expanded Woodworking</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="RG-W_Plant_DryTreePine"]/plant</xpath>
+            <value>
+              <harvestedThingDef>WoodLog_Pine</harvestedThingDef>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
   <!--==========
-    Repair Workbench {[LC] Survival Tools}
+    Repair Workbench {[LC] Survival Tools, Survival Tools Reborn}
     ==========-->
 
   <!--Add survival tools to repair workbench-->
@@ -1494,6 +1757,7 @@
     <match Class="PatchOperationFindMod">
       <mods>
         <li>[LC] Survival Tools</li>
+        <li>Survival Tools Reborn</li>
       </mods>
       <match Class="PatchOperationSequence">
         <success>Always</success>

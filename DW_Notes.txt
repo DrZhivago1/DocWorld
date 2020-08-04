@@ -53,7 +53,9 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Husbandry and Lighting tab}
     Centralized Climate Control
         {Move items to Temperature tab}
-    [sd] Chicken Nest (Continued)
+    Chicken Coop
+        {Move items to Husbandry tab}
+    Chicken Nest
         {Move items to Animal tab}
     Clutter Structures
         {Move items to Fences tab. #fence}
@@ -200,6 +202,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Culinary tab}
     Utility Columns
         {LightColumnMod}
+    Vanilla Brewing Expanded
+        {Move items to Culinary tab}
     Vanilla Cooking Expanded
         {Move items to Culinary tab}
     Vanilla Cooking Expanded - Stews
@@ -295,7 +299,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Apothecary
         {AYCharcoalStove, AYCharcoalSmithy}
     Coal Expanded
-        {CoalGrill, CoalSmelter}
+        {CoalGrill, CoalSmelter, CoalFiredGenerator}
     Dubs Bad Hygiene
         {Water heaters, Wells, Pump}
     Dubs Skylights
@@ -350,6 +354,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {BeamCannonSatellitePodSW, KineticBombardmentSatellitePodSW}
     Utility Columns
         {OrbitalTradeBeacon, OrbitalTradeColumnMod}
+    Vanilla Brewing Expanded
+        {VBE_AmbrandyDistillery, VBE_WhiskeyCask, VBE_TequilaBarrel, VBE_VodkaDrum, VBE_GinStill}
     Vanilla Furniture Expanded - Power
         {VFE_PortableWoodFiredGenerator, VFE_PortableChemfuelPoweredGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_AdvancedSolarGenerator, VFE_AdvancedWindTurbine, VFE_LargeBattery, VFE_SmallBattery, VFE_AdvancedBattery, VFE_LargeAdvancedBattery, VPE_GasHeater, VPE_GasCooler, VPE_GasPipe, VPE_GasPipeSub, VPE_GasSmelter, VPE_GasStove, VFE_AdvancedWatermillGenerator}
     Vanilla Furniture Expanded - Production
@@ -481,6 +487,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Fences And Floors (Continued), Fences And No Floors, Doors Expanded}
     Dubs Bad Hygiene
         {Apothecary, Fertile Fields, Fermenter, Vanilla Furniture Expanded - Farming}
+    Empire
+        {Realistic Planets - Fan Update}
     Expanded Woodworking
         {Simple Chains: Leather, Survivalist's Additions}
     Extended Storage
@@ -504,7 +512,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     ReGrowth: Biomes of The Rim
         {Expanded Woodworking}
     Repair Workbench
-        {[LC] Survival Tools}
+        {[LC] Survival Tools, Survival Tools Reborn}
     Replimat
         {LWM's Deep Storage}
     Rimatomics
@@ -731,6 +739,7 @@ Medieval Times Unofficial
 MendAndRecycle
 Metallic Batteries
 Misc. Training
+Mitz's Chicken Coop Mod
 More Furniture
 More Furniture [1.1]
 More Hydroponics
@@ -794,6 +803,7 @@ Steam Light
 Storage Solutions
 Stuffed Floors
 Survival Meals Expanded
+Survival Tools Reborn
 Survivalist Additions
 Survivalist's Additions
 Thanks For All The Fish
