@@ -66,7 +66,7 @@
                                         <maxNumberStacks>7</maxNumberStacks>
                                         <minTimeStoringTakes>100</minTimeStoringTakes>
                                         <showContents>false</showContents>
-                                        <overlayType>SumOfAllItems</overlayType>
+                                        <overlayType>None</overlayType>
                                     </li>
                                 </comps>
                                 <researchPrerequisites>
@@ -174,7 +174,7 @@
                                         <maxNumberStacks>3</maxNumberStacks>
                                         <minTimeStoringTakes>50</minTimeStoringTakes>
                                         <showContents>false</showContents>
-                                        <overlayType>SumOfAllItems</overlayType>
+                                        <overlayType>None</overlayType>
                                     </li>
                                 </comps>
                                 <researchPrerequisites>
@@ -286,7 +286,7 @@
                                         <maxNumberStacks>27</maxNumberStacks>
                                         <minTimeStoringTakes>50</minTimeStoringTakes>
                                         <showContents>false</showContents>
-                                        <overlayType>SumOfAllItems</overlayType>
+                                        <overlayType>None</overlayType>
                                     </li>
                                 </comps>
                                 <researchPrerequisites>
@@ -378,7 +378,7 @@
                                         <maxMassOfStoredItem>75</maxMassOfStoredItem>
                                         <maxTotalMass>250</maxTotalMass>
                                         <showContents>false</showContents>
-                                        <overlayType>SumOfAllItems</overlayType>
+                                        <overlayType>None</overlayType>
                                     </li>
                                 </comps>
                             </ThingDef>
@@ -412,7 +412,7 @@
                                         <maxMassOfStoredItem>100</maxMassOfStoredItem>
                                         <maxTotalMass>500</maxTotalMass>
                                         <showContents>false</showContents>
-                                        <overlayType>SumOfAllItems</overlayType>
+                                        <overlayType>None</overlayType>
                                     </li>
                                 </comps>
                             </ThingDef>
@@ -449,7 +449,7 @@
                                         <maxMassOfStoredItem Inherit="false" />
                                         <maxTotalMass Inherit="false" />
                                         <showContents>false</showContents>
-                                        <overlayType>SumOfAllItems</overlayType>
+                                        <overlayType>None</overlayType>
                                     </li>
                                 </comps>
                             </ThingDef>
@@ -518,7 +518,7 @@
                                         <maxNumberStacks>10</maxNumberStacks>
                                         <minTimeStoringTakes>100</minTimeStoringTakes>
                                         <showContents>false</showContents>
-                                        <overlayType>SumOfAllItems</overlayType>
+                                        <overlayType>None</overlayType>
                                     </li>
                                 </comps>
                             </ThingDef>
@@ -592,7 +592,7 @@
                                         <minTimeStoringTakes>100</minTimeStoringTakes>
                                         <additionalTimeStackSize>8</additionalTimeStackSize>
                                         <showContents>false</showContents>
-                                        <overlayType>SumOfAllItems</overlayType>
+                                        <overlayType>None</overlayType>
                                     </li>
                                 </comps>
                             </ThingDef>
@@ -625,7 +625,7 @@
                                         <minTimeStoringTakes>100</minTimeStoringTakes>
                                         <additionalTimeStackSize>8</additionalTimeStackSize>
                                         <showContents>false</showContents>
-                                        <overlayType>SumOfAllItems</overlayType>
+                                        <overlayType>None</overlayType>
                                     </li>
                                 </comps>
                             </ThingDef>
@@ -659,7 +659,7 @@
                                         <minTimeStoringTakes>100</minTimeStoringTakes>
                                         <additionalTimeStackSize>8</additionalTimeStackSize>
                                         <showContents>false</showContents>
-                                        <overlayType>SumOfAllItems</overlayType>
+                                        <overlayType>None</overlayType>
                                     </li>
                                 </comps>
                             </ThingDef>
@@ -728,7 +728,7 @@
                                         <maxNumberStacks>5</maxNumberStacks>
                                         <minTimeStoringTakes>50</minTimeStoringTakes>
                                         <showContents>false</showContents>
-                                        <overlayType>SumOfAllItems</overlayType>
+                                        <overlayType>None</overlayType>
                                     </li>
                                 </comps>
                             </ThingDef>
@@ -794,7 +794,7 @@
                                         <maxNumberStacks>5</maxNumberStacks>
                                         <minTimeStoringTakes>50</minTimeStoringTakes>
                                         <showContents>false</showContents>
-                                        <overlayType>SumOfAllItems</overlayType>
+                                        <overlayType>None</overlayType>
                                     </li>
                                 </comps>
                             </ThingDef>
@@ -1085,6 +1085,39 @@
                         <xpath>/Defs/ThingDef[defName="VFEPD_Microwave" or defName="VFEPD_Oven" or defName="VFEPD_Cooker"]</xpath>
                     </li>
                 </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Vanilla Brewing Expanded-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationFindMod">
+                <mods>
+                    <li>Vanilla Brewing Expanded</li>
+                </mods>
+                <match Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="DZ_VFEPD_WineRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VBE_AmbrandyAwful</li>
+                        <li>VBE_AmbrandyPoor</li>
+                        <li>VBE_AmbrandyNormal</li>
+                        <li>VBE_AmbrandyGood</li>
+                        <li>VBE_AmbrandyExcellent</li>
+                        <li>VBE_AmbrandyMasterwork</li>
+                        <li>VBE_AmbrandyLegendary</li>
+                        <li>VBE_Gin</li>
+                        <li>VBE_Tequila</li>
+                        <li>VBE_Vodka</li>
+                        <li>VBE_Whiskey</li>
+                    </value>
+                </match>
             </match>
         </match>
     </Operation>

@@ -819,7 +819,7 @@
           </li>
           <!--Removals-->
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName="Biosolids"] | /Defs/RecipeDef[defName="Make_FertilizerFromBiosolids" or defName="Make_FertilizerFromBiosolidsBulk"]</xpath>
+            <xpath>/Defs/ThingDef[defName="Biosolids"] | /Defs/RecipeDef[defName="Make_FertilizerFromBiosolids" or defName="Make_FertilizerFromBiosolidsBulk"] | /Defs/DesignationCategoryDef/specialDesignatorClasses/li[.="DubsBadHygiene.Designator_AreaPlaceFertilizer"]</xpath>
           </li>
           <!--These dummy defs need to be re-added because they are hardcoded in the .dll, so we don't log errors-->
           <li Class="PatchOperationAdd">

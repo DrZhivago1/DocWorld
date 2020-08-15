@@ -1519,6 +1519,139 @@
     </Operation>
 
     <!--==========
+    Simple Storage
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[JDS] Simple Storage</li>
+        </mods>
+
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- Ammo Boxes -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_AmmoBoxes</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDSAmmo_BoxA" or defName="JDSAmmo_BoxB" or defName="JDSAmmo_BoxC"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_AmmoBoxes</designatorDropdown>
+                    </value>
+                </li>
+
+                <!-- Bundles -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_BundlesWrap</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDS_Bundles_Wrap" or defName="JDS_Bundles_Wrap_Big" or defName="JDS_Bundles_Wrap_Pile"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_BundlesWrap</designatorDropdown>
+                    </value>
+                </li>
+
+                <!-- Metal Crates -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_MetalCrates</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDS_Metal_Crate" or defName="JDS_Metal_Crate_Pile" or defName="JDS_Metal_Crate_Small_Pile" or defName="JDS_Metal_Crate_Bigger_Pile"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_MetalCrates</designatorDropdown>
+                    </value>
+                </li>
+
+                <!-- Metal Shelves -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_MetalShelves</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDSMetal_Shelf_A" or defName="JDSMetal_Shelf_B" or defName="JDSIndustrial_shelf" or defName="JDSIndustrial_shelf_empty" or defName="JDSMetal_Shelf_A_Full" or defName="JDSMetal_Shelf_B_Full"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_MetalShelves</designatorDropdown>
+                    </value>
+                </li>
+
+                <!-- Military Crates -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_MilitaryCrates</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDSMilitaryGradeCrateSmall" or defName="JDSMilitary_Grade_Crate_Small_Pile" or defName="JDSMilitary_Grade_Crate_Long" or defName="JDSMilitary_Grade_crate_Large"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_MilitaryCrates</designatorDropdown>
+                    </value>
+                </li>
+
+                <!-- Resource Crates -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_ResourceCrates</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDS_1ResourcesCrate" or defName="JDS_2ResourcesCrate" or defName="JDS_3ResourcesCrate" or defName="JDS_4ResourcesCrate" or defName="JDS_5ResourcesCrate" or defName="JDS_6ResourcesCrate" or defName="JDS_7ResourcesCrate" or defName="JDS_8ResourcesCrate" or defName="JDS_9ResourcesCrate" or defName="JDS_10ResourcesCrate"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_ResourceCrates</designatorDropdown>
+                    </value>
+                </li>
+
+                <!-- Shipping Containers -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_ShippingContainers</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDSShippingContainerRed" or defName="JDSShippingContainerBlue" or defName="JDSShippingContainerGreen"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_ShippingContainers</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Smokeleaf Industry Reborn
     ==========-->
 

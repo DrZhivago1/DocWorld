@@ -348,6 +348,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator, RPGrapheneGeoGenerator, RPGrapheneWindTurbine, RPGrapheneBattery, RPSmallGrapheneBattery, RPGrapheneHeater, RPGrapheneCooler, RimPlas_InjMldMachine, RimPlas_AdvInjMld, RP_CeilingLight, RP_GrapheneCeilingLight}
     Science Never Stops
         {SNS_Hydroponics_I, SNS_Hydroponics_II, SNS_Hydroponics_III}
+    Simple Storage
+        {Ammo boxes, bundles, metal crates, metal shelves, military crates, resource crates, shipping containers}
     Smokeleaf Industry Reborn
         {HempolineGenerator, HempSolarGenerator, HempPowerConduit}
     Sparkling Worlds - Full Mod
@@ -684,6 +686,7 @@ DeCore
 Door Mat
 Dubs Bad Hygiene
 Dubs Skylights
+Empire
 Expanded Roofing
 Expanded Woodworking
 Extended Storage
@@ -850,6 +853,7 @@ ZARS Production Spots
 Zen Garden
 [D] Thermodynamics - Hot Meals
 [ELIF] Flooring and Decorative Options
+[JDS] Simple Storage
 [LC] Survival Tools
 [RF] Fishing
 [SYR] Doormats
