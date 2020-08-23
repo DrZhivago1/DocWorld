@@ -1639,7 +1639,7 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/TerrainDef[@Name="FloorBaseCarpetCheck" or @Name="FloorBaseCarpetWool" or @Name="FloorPlasteel" or @Name="FloorStraw" or @Name="FloorJade"  or @Name="FloorBaseStone"  or @Name="FloorBaseWood"]/designationCategory</xpath>
+            <xpath>/Defs/TerrainDef[@Name="TFloorBaseGemstone" or @Name="TFloorBaseCarpet" or @Name="TFloorBaseCarpetWool" or @Name="TFloorBaseCarpetCheck" or @Name="FloorBaseCarpetCheck" or @Name="FloorBaseCarpetWool" or @Name="FloorPlasteel" or @Name="FloorStraw" or @Name="FloorJade"  or @Name="FloorBaseStone"  or @Name="FloorBaseWood"]/designationCategory</xpath>
             <value>
               <designationCategory>Floors</designationCategory>
             </value>
