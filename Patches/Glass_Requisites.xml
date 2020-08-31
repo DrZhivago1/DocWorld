@@ -144,7 +144,7 @@
         </mods>
         <match Class="PatchOperationFindMod">
             <mods>
-                <li>More Furniture [1.1]</li>
+                <li>More Furniture [1.1 + 1.2]</li>
             </mods>
             <match Class="PatchOperationSequence">
                 <success>Always</success>
@@ -265,6 +265,7 @@
         <match Class="PatchOperationFindMod">
             <mods>
                 <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
             </mods>
             <match Class="PatchOperationSequence">
                 <success>Always</success>

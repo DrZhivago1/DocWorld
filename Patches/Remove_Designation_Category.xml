@@ -12,6 +12,7 @@
          <li>[FSF] Invisible Animal Beds</li>
          <li>Large Animal Beds</li>
          <li>RimPlas</li>
+         <li>RimPlas (Continued)</li>
          <li>【1.1】Animalstrawbed</li>
          <li>[sd] Chicken Nest (Continued)</li>
          <li>RIMkea</li>
@@ -254,7 +255,7 @@
    <!--Power and Ship Designation Category removal-->
    <Operation Class="PatchOperationFindMod">
       <mods>
-         <li>Medieval - Vanilla [1.1]</li>
+         <li>Medieval - Vanilla</li>
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="Power" or defName="Ship"]</xpath>
@@ -268,7 +269,7 @@
    <!--ANON2MF Designation Category removal-->
    <Operation Class="PatchOperationFindMod">
       <mods>
-         <li>More Furniture [1.1]</li>
+         <li>More Furniture [1.1 + 1.2]</li>
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="ANON2MF"]</xpath>
@@ -283,6 +284,7 @@
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Preemptive Strike (v1.1 Fork)</li>
+         <li>Preemptive Strike (Fork)</li>
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="PES_Reconnaissance"]</xpath>
@@ -400,6 +402,7 @@
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Rimoleum</li>
+         <li>Rimoleum (Continued)</li>
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="Rimoleum"]</xpath>
@@ -414,6 +417,7 @@
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>RimPlas</li>
+         <li>RimPlas (Continued)</li>
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="RimPlas_FurnDesig"]</xpath>

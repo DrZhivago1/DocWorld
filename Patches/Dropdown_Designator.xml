@@ -14,6 +14,7 @@
         <mods>
             <li>[SYR] Metallic Batteries</li>
             <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
             <li>Vanilla Furniture Expanded - Power</li>
         </mods>
         <match Class="PatchOperationSequence">
@@ -51,6 +52,7 @@
         <mods>
             <li>Vanilla Furniture Expanded - Power</li>
             <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>
@@ -113,6 +115,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>
@@ -142,6 +145,7 @@
             <li>Vanilla Furniture Expanded - Power</li>
             <li>Vanilla Factions Expanded - Settlers</li>
             <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
             <li>[WD] Fueled Heaters</li>
         </mods>
         <match Class="PatchOperationSequence">
@@ -270,6 +274,7 @@
         <mods>
             <li>Alpha Biomes</li>
             <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
             <li>Larger Solar Panels</li>
             <li>Smokeleaf Industry Reborn</li>
             <li>Vanilla Furniture Expanded - Power</li>
@@ -405,6 +410,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
             <li>Vanilla Furniture Expanded - Power</li>
             <li>Vanilla Factions Expanded - Settlers</li>
         </mods>
@@ -622,6 +628,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Apothecary</li>
+            <li>Apothecary (Continued)</li>
         </mods>
         <match Class="PatchOperationSequence">
             <operations>
@@ -991,6 +998,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>JetPack</li>
+            <li>JetPack (Continued)</li>
         </mods>
         <match Class="PatchOperationAdd">
             <xpath>/Defs/ThingDef[defName="JPKerosene_Generator"]</xpath>
@@ -1090,6 +1098,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Medical Supplements</li>
+            <li>Medical Supplements (Continued)</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>
@@ -1130,13 +1139,13 @@
     </Operation>
 
     <!--==========
-    More Furniture [1.1]
+    More Furniture
     ==========-->
 
     <!--Anon2CarpetBase, ANON2StandingLampBase-->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>More Furniture [1.1]</li>
+            <li>More Furniture [1.1 + 1.2]</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>
@@ -1403,6 +1412,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>

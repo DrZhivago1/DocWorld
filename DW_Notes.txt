@@ -45,7 +45,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Animal tab. #animalbeds}
     Animal Straw Bed
         {Move items to Animal tab}
-    Apothecary
+    Apothecary, Apothecary (Continued)
         {Move items to Culinary, Husbandry, Lighting, and Storage tab. #storage}
     Architect Expanded - Fences
         {Move items to Fences tab}
@@ -84,7 +84,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Fences And Floors
     Fences And No Floors
         {Move items to Fences tab}
-    Fermenter
+    Fermenter, Fermenter (Continued)
         {Move items to Culinary tab}
     Fertile Fields
         {Move items to Husbandry tab. Add Special Designator Classes}
@@ -130,7 +130,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Lighting tab}
     Mechalit Core
         {Move items to Beds, Husbanry, and Lighting tab}
-    Medical Supplements
+    Medical Supplements, Medical Supplements (Continued)
         {Move items to Beds, Production, and Storage tab. #storage}
     More Furniture
         {Move items to Decor, Furniture, and Lighting tab.}
@@ -148,7 +148,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Husbandry tab}
     Polyamory Beds
         {Move items to Beds tab}
-    Preemptive Strike
+    Preemptive Strike, Preemptive Strike (Fork)
         {Move items to Security tab}
     Project RimFactory Revived
         {Move items to Industrial, and Lighting tab}
@@ -168,9 +168,9 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Beds tab}
     RIMkea
         {Move items to Animals, Beds, Decor, Floors, Furniture, Lighting, and Temperature tab}
-    Rimoleum
+    Rimoleum, Rimoleum (Continued)
         {Move items to Floors tab}
-    RimPlas
+    RimPlas, RimPlas (Continued)
         {Move items to Animals, Beds, Decor, Furniture, Husbandry, Joy, Security, and Structure tab}
     RimWriter
         {Move items to Storage tab}
@@ -272,7 +272,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {RFF_Adds}
     Genetic Rim
         {GR_GeneticsTab}
-    Insulation
+    Insulation, Insulation (Continued)
         {Insulation_Desig}
     Jurassic Rimworld
         {JurassicRimworld}
@@ -296,7 +296,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Generator, IEDs, Power Conduits, Smithy, Standing Lamps, Stove, Television, Turrets}
     Alpha Biomes
         {AB_AlcyoniteSolar, AB_PropaneHeater, AB_PropaneStove, AB_SmelterBase}
-    Apothecary
+    Apothecary, Apothecary (Continued)
         {AYCharcoalStove, AYCharcoalSmithy}
     Coal Expanded
         {CoalGrill, CoalSmelter, CoalFiredGenerator}
@@ -318,7 +318,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {GR_CryostabilizedEngine, GR_NitroMilkTrap, GR_HugeBearRug, GR_HugeBearCatRug, GR_WolfRug, GR_MuffaloRug}
     Glass+Lights
         {Cieling Lamps, GlassMonitorLarge, FueledGlassworkTable, GlassworkTable, ReinforcedGlassworkTable}
-    JetPack
+    JetPack, JetPack (Continued)
         {JPKerosene_Generator}
     Large Animal Beds
         {Sleeping Spots}
@@ -326,11 +326,11 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {SolarGeneratorLarge, CCPSolarGeneratorLarger, CCPSolarGeneratorLargest, CCPSolarGeneratorTiled}
     Mechalit Core
         {Lamp-pots}
-    Medical Supplements
+    Medical Supplements, Medical Supplements (Continued)
         {MSMedicalMatEarly, MSMedicalMat, MSMedicalMatSpacer, MSMedicalMatUltra}
     Metallic Batteries
         {Battery_Silver, Battery_Gold, Battery_Plasteel, Battery_Uranium, Battery_Advanced, Battery_Vanometric}
-    More Furniture [1.1]
+    More Furniture
         {Anon2CarpetBase, ANON2StandingLampBase}
     More Linkables
         {ToolCabinetA, ToolCabinetB, ToolCabinetC}
@@ -344,7 +344,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {BoneFloor, BoneFloor_Blackened, BoneChinaFloor, BoneFloor_Ashen, BoneFloor_Tile}
     RIMkea
         {Shainbrait, Kageshain, Wood Floors}
-    RimPlas
+    RimPlas, RimPlas (Continued)
         {RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator, RPGrapheneGeoGenerator, RPGrapheneWindTurbine, RPGrapheneBattery, RPSmallGrapheneBattery, RPGrapheneHeater, RPGrapheneCooler, RimPlas_InjMldMachine, RimPlas_AdvInjMld, RP_CeilingLight, RP_GrapheneCeilingLight}
     Science Never Stops
         {SNS_Hydroponics_I, SNS_Hydroponics_II, SNS_Hydroponics_III}
@@ -415,7 +415,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Transparent roofs require glass}
     RIMkea
         {Kageshain lamps require glass}
-    Rimplas
+    Rimplas, RimPlas (Continued)
         {CeilingLights require glass}
     Smokeleaf Industry Reborn
         {GrowLamps require glass}
@@ -488,7 +488,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     DDA Security and More
         {Fences And Floors (Continued), Fences And No Floors, Doors Expanded}
     Dubs Bad Hygiene
-        {Apothecary, Fertile Fields, Fermenter, Vanilla Furniture Expanded - Farming}
+        {Apothecary, Apothecary (Continued), Fertile Fields, Fermenter, Vanilla Furniture Expanded - Farming}
     Empire
         {Realistic Planets - Fan Update}
     Expanded Woodworking
@@ -523,8 +523,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Stuffed Floors}
     RimOverhaul
         {Simple Chains: Leather}
-    RimPlas
-        {Insulation, LWM's Deep Storage}
+    RimPlas, RimPlas (Continued)
+        {Insulation, Insulation (Continued), LWM's Deep Storage}
     Simple Chains: Leather
         {Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest}
 	Simple Chains: Steel
@@ -589,7 +589,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Power and Ship Designation Category removal}
     More Furniture
         {ANON2MF Designation Category removal}
-    Preemptive Strike
+    Preemptive Strike, Preemptive Strike (Fork)
         {PES_Reconnaissance Designation Category removal}
     Project RimFactory Revived
         {Industrial Designation Category removal}
@@ -605,9 +605,9 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Rimefeller Designation Category removal}
     RIMkea
         {RIMkea Designation Category removal}
-    Rimoleum
+    Rimoleum, Rimoleum (Continued)
         {Rimoleum Designation Category removal}
-    RimPlas
+    RimPlas, RimPlas (Continued)
         {RimPlas_FurnDesig Designation Category removal}
 	Smokeleaf Industry Reborn
 		{MSI Designation Category removal}
@@ -666,6 +666,7 @@ Alpha Animals
 Alpha Biomes
 Animal Medical Bed
 Apothecary
+Apothecary (Continued)
 Architect Expanded - Fences
 Atlas Materials
 BetterCoolers
@@ -698,6 +699,7 @@ Fences And Floors
 Fences And Floors (Continued)
 Fences And No Floors
 Fermenter
+Fermenter (Continued)
 Fertile Fields [1.1]
 Fish Industry
 Fishing Industry
@@ -723,8 +725,10 @@ High Tech Laboratory Facilities (Continued)
 Industrial Rollers
 Industrialisation
 Insulation
+Insulation (Continued)
 Invisible Animal Beds
 JetPack
+JetPack (Continued)
 Jurassic Rimworld
 LED Lights
 LWM's Deep Storage
@@ -734,17 +738,17 @@ Lord of the Rims - Elves
 MBS Faux Rock Wall
 Mechalit Core
 Medical Supplements
+Medical Supplements (Continued)
 Medical System Expansion - Revived
 Medical Training
-Medieval - Vanilla [1.1]
+Medieval - Vanilla
 Medieval Times
 Medieval Times Unofficial
 MendAndRecycle
 Metallic Batteries
 Misc. Training
 Mitz's Chicken Coop Mod
-More Furniture
-More Furniture [1.1]
+More Furniture [1.1 + 1.2]
 More Hydroponics
 More Linkables
 More Planning
@@ -760,6 +764,7 @@ Polyamory Beds
 Polyamory Beds (Vanilla Edition)
 Power Switch
 Preemptive Strike
+Preemptive Strike (Fork)
 Project RimFactory Revived
 Questionable Ethics Enhanced
 Raise The Roof 1.1
@@ -779,10 +784,12 @@ RimBees
 RimJobWorld
 RimOverhaul
 RimPlas
+RimPlas (Continued)
 RimWriter
 Rimatomics
 Rimefeller
 Rimoleum
+Rimoleum (Continued)
 Roads of the Rim
 Roof Support
 RoofBomb

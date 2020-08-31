@@ -14,6 +14,7 @@
             <li>[FSF] Invisible Animal Beds</li>
             <li>Animal Medical Bed</li>
             <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
             <li>RIMkea</li>
         </mods>
 
@@ -299,6 +300,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Apothecary</li>
+            <li>Apothecary (Continued)</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>
@@ -329,6 +331,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Apothecary</li>
+            <li>Apothecary (Continued)</li>
         </mods>
         <match Class="PatchOperationFindMod">
             <mods>
@@ -818,6 +821,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Fermenter</li>
+            <li>Fermenter (Continued)</li>
         </mods>
         <match Class="PatchOperationSequence">
             <operations>
@@ -1316,6 +1320,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Medical Supplements</li>
+            <li>Medical Supplements (Continued)</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>
@@ -1341,6 +1346,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Medical Supplements</li>
+            <li>Medical Supplements (Continued)</li>
         </mods>
         <match Class="PatchOperationFindMod">
             <mods>
@@ -1362,7 +1368,7 @@
     <!--Move items to Decor, Furniture, and Lighting tab.-->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>More Furniture [1.1]</li>
+            <li>More Furniture [1.1 + 1.2]</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>
@@ -1563,6 +1569,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Preemptive Strike (v1.1 Fork)</li>
+            <li>Preemptive Strike (Fork)</li>
         </mods>
         <match Class="PatchOperationReplace">
             <xpath>/Defs/ThingDef[defName="PES_PremitiveWatchtower_new" or defName="PES_MedievalWatchtower" or defName="PES_watchtower_new" or defName="PES_Radar" or defName="PES_SentryDroneArray" or defName="PES_SpySatellite"]/designationCategory</xpath>
@@ -1887,6 +1894,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Rimoleum</li>
+            <li>Rimoleum (Continued)</li>
         </mods>
         <match Class="PatchOperationReplace">
             <xpath>/Defs/TerrainDef[@Name="RimoleumBase"]/designationCategory</xpath>
@@ -1904,6 +1912,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>

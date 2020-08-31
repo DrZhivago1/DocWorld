@@ -179,6 +179,7 @@
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Insulation</li>
+      <li>Insulation (Continued)</li>
     </mods>
     <match Class="PatchOperationReplace">
       <xpath>/Defs/DesignationCategoryDef[defName="Insulation_Desig"]/order</xpath>

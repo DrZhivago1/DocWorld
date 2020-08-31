@@ -717,7 +717,7 @@
   </Operation>
 
   <!--==========
-    Dubs Bad Hygiene {Apothecary, Fertile Fields, Fermenter, Vanilla Furniture Expanded - Farming}
+    Dubs Bad Hygiene {Apothecary, Fertile Fields, Fermenter, Fermenter (Continued) Vanilla Furniture Expanded - Farming}
     ==========-->
 
   <!--Move Apothecary washing tub to Hygiene tab-->
@@ -728,6 +728,7 @@
     <match Class="PatchOperationFindMod">
       <mods>
         <li>Apothecary</li>
+        <li>Apothecary (Continued)</li>
       </mods>
       <match Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="AYApparelWashingTub"]/designationCategory</xpath>
@@ -849,6 +850,7 @@
       <match Class="PatchOperationFindMod">
         <mods>
           <li>Fermenter</li>
+          <li>Fermenter (Continued)</li>
         </mods>
         <match Class="PatchOperationSequence">
           <operations>
@@ -1932,10 +1934,12 @@
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>RimPlas</li>
+      <li>RimPlas (Continued)</li>
     </mods>
     <match Class="PatchOperationFindMod">
       <mods>
         <li>Insulation</li>
+        <li>Insulation (Continued)</li>
       </mods>
       <match Class="PatchOperationSequence">
         <operations>
@@ -1954,6 +1958,7 @@
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>RimPlas</li>
+      <li>RimPlas (Continued)</li>
     </mods>
     <match Class="PatchOperationFindMod">
       <mods>
@@ -2870,7 +2875,7 @@
     </mods>
     <match Class="PatchOperationFindMod">
       <mods>
-        <li>More Furniture [1.1]</li>
+        <li>More Furniture [1.1 + 1.2]</li>
       </mods>
       <match Class="PatchOperationRemove">
         <xpath>/Defs/ThingDef[defName="Anon2FileCabinet"]</xpath>
