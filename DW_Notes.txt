@@ -514,7 +514,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     ReGrowth: Biomes of The Rim
         {Expanded Woodworking}
     Repair Workbench
-        {[LC] Survival Tools, Survival Tools Reborn}
+        {[LC] Survival Tools}
     Replimat
         {LWM's Deep Storage}
     Rimatomics
@@ -806,7 +806,6 @@ Steam Light
 Storage Solutions
 Stuffed Floors
 Survival Meals Expanded
-Survival Tools Reborn
 Survivalist Additions
 Survivalist's Additions
 Thanks For All The Fish

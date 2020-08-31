@@ -1757,7 +1757,6 @@
     <match Class="PatchOperationFindMod">
       <mods>
         <li>[LC] Survival Tools</li>
-        <li>Survival Tools Reborn</li>
       </mods>
       <match Class="PatchOperationSequence">
         <success>Always</success>
@@ -1765,13 +1764,13 @@
           <li Class="PatchOperationAdd">
             <xpath>/Defs/RecipeDef[defName="RepairItemWeapon"]/ingredients/li/filter/categories</xpath>
             <value>
-              <li>SurvivalTools</li>
+              <li>Tools</li>
             </value>
           </li>
           <li Class="PatchOperationAdd">
             <xpath>/Defs/RecipeDef[defName="RepairItemWeapon"]/fixedIngredientFilter/categories</xpath>
             <value>
-              <li>SurvivalTools</li>
+              <li>Tools</li>
             </value>
           </li>
         </operations>
