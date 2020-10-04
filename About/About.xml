@@ -10,6 +10,7 @@
 	<packageId>drzhivago.docworld</packageId>
 	<incompatibleWith>
 		<li>Oreno.VFEFarming.DubsBadHygiene</li>
+		<li>dame.scleatherufpatch</li>
 	</incompatibleWith>
 	<loadAfter>
 		<li>Nif.ArchitectExpanded.FencesTabPatch</li>
@@ -29,7 +30,9 @@
 		<li>syrchalis.metallicbatteries</li>
 		<li>JPT.OpenTheWindows</li>
 		<li>spdskatr.projectrimfactory</li>
-		<li>dame.scleatherufpatch</li>
+		<li>Owlchemist.SimpleChains.Leather</li>
+		<li>Owlchemist.SimpleChains.Lumber</li>
+		<li>VanillaExpanded.VBrewE</li>
 		<li>VanillaExpanded.VFEFarming</li>
 		<li>Oreno.VFEFarming.VGPGardenTools</li>
 	</loadAfter>

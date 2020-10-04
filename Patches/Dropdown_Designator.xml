@@ -89,6 +89,7 @@
         <mods>
             <li>Vanilla Factions Expanded - Medieval</li>
             <li>Vanilla Factions Expanded - Settlers</li>
+            <li>Vanilla Factions Expanded - Vikings</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>
@@ -1960,6 +1961,28 @@
     </Operation>
 
     <!--==========
+    Vanilla Factions Expanded - Medieval
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Medieval</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--VFEM_WineBarrel-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFEM_WineBarrel"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_FermentingBarrel</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Vanilla Factions Expanded - Settlers
     ==========-->
 
@@ -1996,19 +2019,19 @@
     </Operation>
 
     <!--==========
-    Vanilla Factions Expanded - Medieval
+    Vanilla Factions Expanded - Vikings
     ==========-->
 
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>Vanilla Factions Expanded - Medieval</li>
+            <li>Vanilla Factions Expanded - Vikings</li>
         </mods>
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
-                <!--VFEM_WineBarrel-->
+                <!--VFEV_MeadFermentingBarrel-->
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="VFEM_WineBarrel"]</xpath>
+                    <xpath>/Defs/ThingDef[defName="VFEV_MeadFermentingBarrel"]</xpath>
                     <value>
                         <designatorDropdown>DZ_Culinary_FermentingBarrel</designatorDropdown>
                     </value>

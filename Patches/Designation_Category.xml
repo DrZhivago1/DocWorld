@@ -1583,7 +1583,7 @@
     Project RimFactory Revived
     ==========-->
 
-    <!--Move items to Industrial and Lighting tab-->
+    <!--Move items to Husbandry, Industrial and Lighting tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Project RimFactory Revived</li>
@@ -1611,6 +1611,12 @@
                             <designationCategory>DZ_Lighting</designationCategory>
                         </value>
                     </nomatch>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="PRF_SunWallLight"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
                 </li>
                 <li Class="PatchOperationReplace">
                     <xpath>/Defs/ThingDef//designationCategory[text()="Industrial"]</xpath>
@@ -2363,6 +2369,36 @@
             <value>
                 <designationCategory>DZ_Lighting</designationCategory>
             </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Factions Expanded - Vikings
+    ==========-->
+
+    <!--Move items to Husbandry and Culinary tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Vikings</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Apiary-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VFEV_Apiary"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Husbandry</designationCategory>
+                    </value>
+                </li>
+                <!--Mead Barrel-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VFEV_MeadFermentingBarrel"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 

@@ -193,7 +193,7 @@
         </mods>
         <match Class="PatchOperationFindMod">
             <mods>
-                <li>Raise The Roof 1.1</li>
+                <li>Raise The Roof 1.2</li>
             </mods>
             <match Class="PatchOperationSequence">
                 <success>Always</success>

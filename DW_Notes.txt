@@ -151,7 +151,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Preemptive Strike, Preemptive Strike (Fork)
         {Move items to Security tab}
     Project RimFactory Revived
-        {Move items to Industrial, and Lighting tab}
+        {Move items to Husbandry, Industrial and Lighting tab}
     [RF] Fishing
         {Move items to Husbandry tab}
     Replimat
@@ -214,6 +214,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Culinary tab}
     Vanilla Factions Expanded - Settlers
         {Move items to Lighting tab}
+    Vanilla Factions Expanded - Vikings
+        {Move items to Husbandry and Culinary tab}
     Vanilla Furniture Expanded
         {Move items to Beds, Furniture, and Lighting tab}
     Vanilla Furniture Expanded - Farming
@@ -289,7 +291,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 
 #### Conditional Section:
     Vanilla
-        {Battery, Cooler, Geothermal, Heater, Hydroponics, Machining, Smelter, Solar, Tool Cabinet, Transport Pod, Vitals Monitor, Wind Generator}
+        {Battery, Cooler, Fermenting Barrel, Geothermal, Heater, Hydroponics, Machining, Smelter, Solar, Tool Cabinet, Transport Pod, Vitals Monitor, Wind Generator}
 
 #### Unconditional Section:
     Vanilla
@@ -364,10 +366,12 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {VFE_DrugCabinet, VFE_MachiningCabinet, VFE_SmithyCabinet, VFE_KitchenSinkCabinet, VFE_TailorCabinet, VFE_FabricationCabinet, VFE_TableStoveLarge, VFE_TableSmithyLarge, VFE_FueledSmelter, VFE_TableMachiningLarge}
     Vanilla Furniture Expanded - Security
         {VFES_ShieldGenerator_Large, VFES_ShieldGenerator_Small, VFES_Turret_AutocannonDouble}
-    Vanilla Factions Expanded - Settlers
-        {ChemBoiler, Windmill, Building_ChemshineBarrel}
     Vanilla Factions Expanded - Medieval
         {VFEM_WineBarrel}
+    Vanilla Factions Expanded - Settlers
+        {ChemBoiler, Windmill, Building_ChemshineBarrel}
+    Vanilla Factions Expanded - Vikings
+        {VFEV_MeadFermentingBarrel}
     Vanilla Furniture Expanded - Spacer Module
         {UltrascreenTV}
     VGP Garden Tools
@@ -483,6 +487,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Expanded Woodworking, Fertile Fields, VFE-Production}
     Change Dresser
         {GloomyFurniture, Lord of the Rims - Elves *not yet 1.0*, Medieval Times Unofficial, Polyamory Beds (Vanilla Edition), RIMkea, [sd] Goodnight (Continued)}
+    Coal Expanded
+        {Simple Chains: Lumber}
     Cupro's Stones
         {Simple Chains: Steel, RIMkea, MBS Faux Rock Wall, Simply More Bridges}
     DDA Security and More
@@ -500,7 +506,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Floored
         {Simply More Bridges (Continued)}
     Glass+Lights
-        {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module}
+        {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module, Raise The Roof}
     Gloomy Vanilla Overhaul
         {LWM's Deep Storage, Gloomy Extra - Kitchen}
     Harvest Organs Post Mortem
@@ -526,7 +532,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     RimPlas, RimPlas (Continued)
         {Insulation, Insulation (Continued), LWM's Deep Storage}
     Simple Chains: Leather
-        {Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest}
+        {[SYR] Universal Fermenter, Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest, Vanilla Factions Expanded - Vikings}
 	Simple Chains: Steel
 		{Coal, Charcoal, Atlas Materials, Simple Coal, Xenite Industries, Medieval Times, Survivalist Additions}
 	Simple Concrete
@@ -535,6 +541,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 		{Industrialisation, Roads of the Rim, Simple Concrete}
     Slightly More Realistic Wool Production Revived
         {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra}
+    Smokeleaf Industry Reborn
+        {Vanilla Brewing Expanded, Vanilla Cooking Expanded}
     UN-Colony
         {Industrialisation}
     Universal Fermenter
@@ -651,6 +659,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {New art assets applied:  Newer cooler graphic from RedistHeat}
     Fishing Industry
         {New art assets applied: FishingPier x6, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus}
+    Simple Chains: Lumber
+        {New art assets applied: Trestle}
 
 ### VFE_Usable_Props:
 `This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Since this is a large overhaul of one specific mod, I deemed it worthy to have it's own file.`
@@ -767,7 +777,7 @@ Preemptive Strike
 Preemptive Strike (Fork)
 Project RimFactory Revived
 Questionable Ethics Enhanced
-Raise The Roof 1.1
+Raise The Roof 1.2
 RIMkea
 ReGrowth: Biomes of The Rim - Boreal Expansion
 ReGrowth: Biomes of The Rim - Tundra Expansion
@@ -841,6 +851,7 @@ Vanilla Cooking Expanded - Stews
 Vanilla Cooking Expanded - Sushi
 Vanilla Factions Expanded - Medieval
 Vanilla Factions Expanded - Settlers
+Vanilla Factions Expanded - Vikings
 Vanilla Furniture Expanded
 Vanilla Furniture Expanded - Farming
 Vanilla Furniture Expanded - Medical Module

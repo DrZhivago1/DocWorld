@@ -843,7 +843,6 @@
                             <li Class="PatchOperationAdd">
                                 <xpath>/Defs/ThingDef[defName="DZ_VFEPD_BarrelGreen" or defName="DZ_VFEPD_PalletBarrelGreen"]/building/fixedStorageSettings/filter/thingDefs</xpath>
                                 <value>
-                                    <li>D9Ash</li>
                                     <li>FecalSludge</li>
                                     <li>Biosolids</li>
                                 </value>

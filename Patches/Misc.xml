@@ -602,18 +602,18 @@
     Simple Chains: Leather
     ==========-->
 
-   <!--Increase Max Capacity of tanning vat-->
+   <!--Increase Max Capacity of tanning vat
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Simple Chains: Leather</li>
       </mods>
       <match Class="PatchOperationReplace">
-         <xpath>/Defs/ThingDef[defName="Owl_TanningVat"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes/*/maxCapacity</xpath>
+         <xpath>/Defs/ThingDef[defName="Owl_TanningVat"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes//maxCapacity</xpath>
          <value>
             <maxCapacity>150</maxCapacity>
          </value>
       </match>
-   </Operation>
+   </Operation>-->
 
    <!--Vanilla animal leather replacement-->
    <Operation Class="PatchOperationFindMod">

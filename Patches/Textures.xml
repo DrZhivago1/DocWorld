@@ -46,4 +46,21 @@
     </match>
   </Operation>
 
+  <!--==========
+    Simple Chains: Lumber
+    ==========-->
+
+  <!--New art assets applied: Trestle-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Lumber</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Owl_CarpentersTrestle"]/graphicData/texPath</xpath>
+      <value>
+          <texPath>SimpleChains_Lumber/carpenters_trestle</texPath>
+      </value>
+    </match>
+  </Operation>
+
 </Patch>

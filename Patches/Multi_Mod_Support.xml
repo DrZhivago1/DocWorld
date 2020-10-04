@@ -209,6 +209,53 @@
   </Operation>
 
   <!--==========
+    Coal Expanded {Simple Chains: Lumber}
+    ==========-->
+
+  <!--Create coal from wood logs-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Coal Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Lumber</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationConditional">
+            <xpath>/Defs/ThingDef/plant/harvestedThingDef[text()="Owl_WoodLog"]</xpath>
+            <match Class="PatchOperationReplace">
+              <xpath>/Defs/RecipeDef[defName = "Make_CharcoalFromWood"]/ingredients/li/filter/thingDefs | /Defs/RecipeDef[defName = "Make_CharcoalFromWood"]/fixedIngredientFilter/thingDefs</xpath>
+              <value>
+                <thingDefs>
+                  <li>Owl_WoodLog</li>
+                </thingDefs>
+              </value>
+            </match>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Create coal from wood logs
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Coal Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Expanded Woodworking</li>
+      </mods>
+      <match 
+        </operations>
+      </match>
+    </match>
+  </Operation>-->
+
+  <!--==========
     Cupro's Stones {Simple Chains: Steel, RIMkea, MBS Faux Rock Wall, Simply More Bridges}
     ==========-->
 
@@ -1355,7 +1402,7 @@
   </Operation>
 
   <!--==========
-    Glass+Lights {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module}
+    Glass+Lights {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module, Raise The Roof}
     ==========-->
 
   <!--Use glass from "Glass+Lights" if "Dubs Skylights" also installed. Also removes "Dubs Skylights" glass resource.-->
@@ -1399,6 +1446,37 @@
           </li>
           <li Class="PatchOperationRemove">
             <xpath>/Defs/RecipeDef[defName="SmeltGlass"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Allow transparent roofing to be research after glassworks-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Raise The Roof 1.2</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ResearchProjectDef[defName="TransparentRoofing"]/prerequisites</xpath>
+            <value>
+              <prerequisites>
+                <li>GlassworksResearch</li>
+              </prerequisites>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ResearchProjectDef[defName="TransparentRoofing"]/techLevel</xpath>
+            <value>
+              <techLevel>Medieval</techLevel>
+            </value>
           </li>
         </operations>
       </match>
@@ -1794,13 +1872,13 @@
         <li>LWM's Deep Storage</li>
       </mods>
       <match Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="ReplimatAnimalFeeder" or defName="ReplimatFeedTank"]/designationCategory</xpath>
+        <xpath>/Defs/ThingDef[defName="ReplimatAnimalFeeder" or defName="ReplimatFeedTank"]/designationCategory</xpath>
         <value>
           <designationCategory>LWM_DS_Storage</designationCategory>
         </value>
       </match>
       <nomatch Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="ReplimatAnimalFeeder" or defName="ReplimatFeedTank"]/designationCategory</xpath>
+        <xpath>/Defs/ThingDef[defName="ReplimatAnimalFeeder" or defName="ReplimatFeedTank"]/designationCategory</xpath>
         <value>
           <designationCategory>DZ_Storage</designationCategory>
         </value>
@@ -1978,7 +2056,7 @@
   </Operation>
 
   <!--==========
-    Simple Chains: Leather {Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest}
+    Simple Chains: Leather {[SYR] Universal Fermenter, Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest, Vanilla Factions Expanded - Vikings}
     ==========-->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -2062,6 +2140,7 @@
     </match>
   </Operation>
 
+  <!--Tiger-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Simple Chains: Leather</li>
@@ -2075,7 +2154,7 @@
         <operations>
           <!-- add the new hides -->
           <li Class="PatchOperationAdd">
-            <xpath>Defs</xpath>
+            <xpath>/Defs</xpath>
             <value>
               <ThingDef ParentName="HideBase">
                 <defName>Hide_Tiger</defName>
@@ -2095,7 +2174,7 @@
           </li>
           <!-- add the prepared hides -->
           <li Class="PatchOperationAdd">
-            <xpath>Defs</xpath>
+            <xpath>/Defs</xpath>
             <value>
               <ThingDef ParentName="PreparedHideBase">
                 <defName>Prepared_Hide_Tiger</defName>
@@ -2108,7 +2187,7 @@
           </li>
           <!-- add the recipes-->
           <li Class="PatchOperationAdd">
-            <xpath>Defs</xpath>
+            <xpath>/Defs</xpath>
             <value>
               <RecipeDef ParentName="PrepareHideBase">
                 <label>prepare tiger hide</label>
@@ -2143,32 +2222,579 @@
               </RecipeDef>
             </value>
           </li>
-          <!-- Add the tannin vat data -->
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Viking-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Leather</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Factions Expanded - Vikings</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <!-- add the new hides -->
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="Owl_TanningVat"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/products</xpath>
+            <xpath>/Defs</xpath>
             <value>
-              <li>
-                <thingDef>AEXP_Leather_Tiger</thingDef>
-                <ingredientFilter>
+              <ThingDef ParentName="HideBase">
+                <defName>Hide_Fenrir</defName>
+                <label>fenrir hide</label>
+                <graphicData>
+                  <color>(236,236,236)</color>
+                </graphicData>
+              </ThingDef>
+            </value>
+          </li>
+          <!-- apply the new hides -->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef/race/leatherDef[text()="VFEV_Leather_Fenrir"]</xpath>
+            <value>
+              <leatherDef>Hide_Fenrir</leatherDef>
+            </value>
+          </li>
+          <!-- add the prepared hides -->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <ThingDef ParentName="PreparedHideBase">
+                <defName>Prepared_Hide_Fenrir</defName>
+                <label>prepared fenrir hide</label>
+                <graphicData>
+                  <color>(236,236,236)</color>
+                </graphicData>
+              </ThingDef>
+            </value>
+          </li>
+          <!-- add the recipes-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <RecipeDef ParentName="PrepareHideBase">
+                <label>prepare fenrir hide</label>
+                <defName>Owl_PrepareHideFenrir</defName>
+                <ingredients>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>Hide_Fenrir</li>
+                      </thingDefs>
+                    </filter>
+                    <count>15</count>
+                  </li>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>Owl_TanningLiquor</li>
+                      </thingDefs>
+                    </filter>
+                    <count>7</count>
+                  </li>
+                </ingredients>
+                <fixedIngredientFilter>
                   <thingDefs>
-                    <li>Prepared_Hide_Tiger</li>
+                    <li>Hide_Fenrir</li>
+                    <li>Owl_TanningLiquor</li>
                   </thingDefs>
-                </ingredientFilter>
-                <maxCapacity>150</maxCapacity>
-                <baseFermentationDuration>182000</baseFermentationDuration>
-                <temperatureIdeal>
-                  <min>1</min>
-                  <max>99</max>
-                </temperatureIdeal>
-                <temperatureSafe>
-                  <min>-50</min>
-                  <max>200</max>
-                </temperatureSafe>
-                <graphSuffix>_full</graphSuffix>
-              </li>
+                </fixedIngredientFilter>
+                <products>
+                  <Prepared_Hide_Fenrir>15</Prepared_Hide_Fenrir>
+                </products>
+              </RecipeDef>
+            </value>
+          </li>
+
+          <!-- add the new hides -->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <ThingDef ParentName="HideBase">
+                <defName>Hide_Lothurr</defName>
+                <label>lothurr hide</label>
+                <graphicData>
+                  <color>(75,67,50)</color>
+                </graphicData>
+              </ThingDef>
+            </value>
+          </li>
+          <!-- apply the new hides -->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef/race/leatherDef[text()="VFEV_Leather_Lothurr"]</xpath>
+            <value>
+              <leatherDef>Hide_Lothurr</leatherDef>
+            </value>
+          </li>
+          <!-- add the prepared hides -->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <ThingDef ParentName="PreparedHideBase">
+                <defName>Prepared_Hide_Lothurr</defName>
+                <label>prepared lothurr hide</label>
+                <graphicData>
+                  <color>(75,67,50)</color>
+                </graphicData>
+              </ThingDef>
+            </value>
+          </li>
+          <!-- add the recipes-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <RecipeDef ParentName="PrepareHideBase">
+                <label>prepare lothurr hide</label>
+                <defName>Owl_PrepareHideLothurr</defName>
+                <ingredients>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>Hide_Lothurr</li>
+                      </thingDefs>
+                    </filter>
+                    <count>15</count>
+                  </li>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>Owl_TanningLiquor</li>
+                      </thingDefs>
+                    </filter>
+                    <count>7</count>
+                  </li>
+                </ingredients>
+                <fixedIngredientFilter>
+                  <thingDefs>
+                    <li>Hide_Lothurr</li>
+                    <li>Owl_TanningLiquor</li>
+                  </thingDefs>
+                </fixedIngredientFilter>
+                <products>
+                  <Prepared_Hide_Lothurr>15</Prepared_Hide_Lothurr>
+                </products>
+              </RecipeDef>
+            </value>
+          </li>
+
+          <!-- add the new hides -->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <ThingDef ParentName="HideBase">
+                <defName>Hide_Njorun</defName>
+                <label>njorun hide</label>
+                <graphicData>
+                  <color>(121,138,151)</color>
+                </graphicData>
+              </ThingDef>
+            </value>
+          </li>
+          <!-- apply the new hides -->
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef/race/leatherDef[text()="VFEV_Leather_Njorun"]</xpath>
+            <value>
+              <leatherDef>Hide_Njorun</leatherDef>
+            </value>
+          </li>
+          <!-- add the prepared hides -->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <ThingDef ParentName="PreparedHideBase">
+                <defName>Prepared_Hide_Njorun</defName>
+                <label>prepared njorun hide</label>
+                <graphicData>
+                  <color>(121,138,151)</color>
+                </graphicData>
+              </ThingDef>
+            </value>
+          </li>
+          <!-- add the recipes-->
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <RecipeDef ParentName="PrepareHideBase">
+                <label>prepare njorun hide</label>
+                <defName>Owl_PrepareHideNjorun</defName>
+                <ingredients>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>Hide_Njorun</li>
+                      </thingDefs>
+                    </filter>
+                    <count>15</count>
+                  </li>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>Owl_TanningLiquor</li>
+                      </thingDefs>
+                    </filter>
+                    <count>7</count>
+                  </li>
+                </ingredients>
+                <fixedIngredientFilter>
+                  <thingDefs>
+                    <li>Hide_Njorun</li>
+                    <li>Owl_TanningLiquor</li>
+                  </thingDefs>
+                </fixedIngredientFilter>
+                <products>
+                  <Prepared_Hide_Njorun>15</Prepared_Hide_Njorun>
+                </products>
+              </RecipeDef>
             </value>
           </li>
         </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add Universal Fermenter support-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Leather</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[SYR] Universal Fermenter</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName = "Owl_TanningVat"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]</xpath>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "Owl_TanningVat"]/comps</xpath>
+            <value>
+              <li Class="UniversalFermenter.CompProperties_UniversalFermenter">
+                <processes>
+                  <li>
+                    <thingDef>Leather_Plain</thingDef>
+                    <ingredientFilter>
+                      <thingDefs>
+                        <li>Prepared_Hide_Plain</li>
+                      </thingDefs>
+                    </ingredientFilter>
+                    <maxCapacity>150</maxCapacity>
+                    <processDays>1.8</processDays>
+                    <usesTemperature>true</usesTemperature>
+                    <temperatureIdeal>
+                      <min>1</min>
+                      <max>99</max>
+                    </temperatureIdeal>
+                    <temperatureSafe>
+                      <min>-50</min>
+                      <max>200</max>
+                    </temperatureSafe>
+                    <graphicSuffix>_full</graphicSuffix>
+                  </li>
+                  <li>
+                    <thingDef>Leather_Bear</thingDef>
+                    <ingredientFilter>
+                      <thingDefs>
+                        <li>Prepared_Hide_Thick</li>
+                      </thingDefs>
+                    </ingredientFilter>
+                    <maxCapacity>150</maxCapacity>
+                    <processDays>2.4</processDays>
+                    <usesTemperature>true</usesTemperature>
+                    <temperatureIdeal>
+                      <min>1</min>
+                      <max>99</max>
+                    </temperatureIdeal>
+                    <temperatureSafe>
+                      <min>-50</min>
+                      <max>200</max>
+                    </temperatureSafe>
+                    <graphicSuffix>_full</graphicSuffix>
+                  </li>
+                  <li>
+                    <thingDef>Leather_Light</thingDef>
+                    <ingredientFilter>
+                      <thingDefs>
+                        <li>Prepared_Hide_SoftPelt</li>
+                      </thingDefs>
+                    </ingredientFilter>
+                    <maxCapacity>150</maxCapacity>
+                    <processDays>1.37</processDays>
+                    <usesTemperature>true</usesTemperature>
+                    <temperatureIdeal>
+                      <min>1</min>
+                      <max>99</max>
+                    </temperatureIdeal>
+                    <temperatureSafe>
+                      <min>-50</min>
+                      <max>200</max>
+                    </temperatureSafe>
+                    <graphicSuffix>_full</graphicSuffix>
+                  </li>
+                  <li>
+                    <thingDef>Leather_Bluefur</thingDef>
+                    <ingredientFilter>
+                      <thingDefs>
+                        <li>Prepared_Hide_HeavyPelt</li>
+                      </thingDefs>
+                    </ingredientFilter>
+                    <maxCapacity>150</maxCapacity>
+                    <processDays>1.92</processDays>
+                    <usesTemperature>true</usesTemperature>
+                    <temperatureIdeal>
+                      <min>1</min>
+                      <max>99</max>
+                    </temperatureIdeal>
+                    <temperatureSafe>
+                      <min>-50</min>
+                      <max>200</max>
+                    </temperatureSafe>
+                    <graphicSuffix>_full</graphicSuffix>
+                  </li>
+                  <li>
+                    <thingDef>Leather_Lizard</thingDef>
+                    <ingredientFilter>
+                      <thingDefs>
+                        <li>Prepared_Hide_Scale</li>
+                      </thingDefs>
+                    </ingredientFilter>
+                    <maxCapacity>150</maxCapacity>
+                    <processDays>1.8</processDays>
+                    <usesTemperature>true</usesTemperature>
+                    <temperatureIdeal>
+                      <min>1</min>
+                      <max>99</max>
+                    </temperatureIdeal>
+                    <temperatureSafe>
+                      <min>-50</min>
+                      <max>200</max>
+                    </temperatureSafe>
+                    <graphicSuffix>_full</graphicSuffix>
+                  </li>
+                  <li>
+                    <thingDef>Leather_Bird</thingDef>
+                    <ingredientFilter>
+                      <thingDefs>
+                        <li>Prepared_Hide_Bird</li>
+                      </thingDefs>
+                    </ingredientFilter>
+                    <maxCapacity>150</maxCapacity>
+                    <processDays>1.8</processDays>
+                    <usesTemperature>true</usesTemperature>
+                    <temperatureIdeal>
+                      <min>1</min>
+                      <max>99</max>
+                    </temperatureIdeal>
+                    <temperatureSafe>
+                      <min>-50</min>
+                      <max>200</max>
+                    </temperatureSafe>
+                    <graphicSuffix>_full</graphicSuffix>
+                  </li>
+                  <li>
+                    <thingDef>Leather_Thrumbo</thingDef>
+                    <ingredientFilter>
+                      <thingDefs>
+                        <li>Prepared_Hide_Thrumbo</li>
+                      </thingDefs>
+                    </ingredientFilter>
+                    <maxCapacity>150</maxCapacity>
+                    <processDays>3.63</processDays>
+                    <usesTemperature>true</usesTemperature>
+                    <temperatureIdeal>
+                      <min>1</min>
+                      <max>99</max>
+                    </temperatureIdeal>
+                    <temperatureSafe>
+                      <min>-50</min>
+                      <max>200</max>
+                    </temperatureSafe>
+                    <graphicSuffix>_full</graphicSuffix>
+                  </li>
+                  <li>
+                    <thingDef>Leather_Human</thingDef>
+                    <ingredientFilter>
+                      <thingDefs>
+                        <li>Prepared_Hide_Human</li>
+                      </thingDefs>
+                    </ingredientFilter>
+                    <maxCapacity>75</maxCapacity>
+                    <processDays>1.8</processDays>
+                    <usesTemperature>true</usesTemperature>
+                    <temperatureIdeal>
+                      <min>1</min>
+                      <max>99</max>
+                    </temperatureIdeal>
+                    <temperatureSafe>
+                      <min>-50</min>
+                      <max>200</max>
+                    </temperatureSafe>
+                    <graphicSuffix>_full</graphicSuffix>
+                  </li>
+                </processes>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/WorkGiverDef[defName = "UF_WorkGiver_TakeProductOutOfUniversalFermenter"]/giverClass</xpath>
+            <value>
+              <giverClass>UniversalFermenter.WorkGiver_TakeProductOutOfUF</giverClass>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/WorkGiverDef[defName = "UF_WorkGiver_FillUniversalFermenter"]/giverClass</xpath>
+            <value>
+              <giverClass>UniversalFermenter.WorkGiver_FillUF</giverClass>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/JobDef[defName = "FillUniversalFermenter"]/driverClass</xpath>
+            <value>
+              <driverClass>UniversalFermenter.JobDriver_FillUF</driverClass>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/JobDef[defName = "TakeProductOutOfUniversalFermenter"]/driverClass</xpath>
+            <value>
+              <driverClass>UniversalFermenter.JobDriver_TakeProductOutOfUF</driverClass>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add Universal Fermenter support for third party mods [Vanilla Animals Expanded — Tropical Rainforest, Vanilla Factions Expanded - Vikings]-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Leather</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[SYR] Universal Fermenter</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+        <mods>
+          <li>Vanilla Animals Expanded — Tropical Rainforest</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+            <li Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName = "Owl_TanningVat"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes</xpath>
+              <value>
+                <li>
+                  <thingDef>AEXP_Leather_Tiger</thingDef>
+                  <ingredientFilter>
+                    <thingDefs>
+                      <li>Prepared_Hide_Tiger</li>
+                    </thingDefs>
+                  </ingredientFilter>
+                  <maxCapacity>150</maxCapacity>
+                  <processDays>2.5</processDays>
+                  <usesTemperature>true</usesTemperature>
+                  <temperatureIdeal>
+                    <min>1</min>
+                    <max>99</max>
+                  </temperatureIdeal>
+                  <temperatureSafe>
+                    <min>-50</min>
+                    <max>200</max>
+                  </temperatureSafe>
+                  <graphicSuffix>_full</graphicSuffix>
+                </li>
+              </value>
+            </li>
+          </operations>
+        </match>
+      </match>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Leather</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[SYR] Universal Fermenter</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+        <mods>
+          <li>Vanilla Factions Expanded - Vikings</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+          <operations>
+            <li Class="PatchOperationAdd">
+              <xpath>/Defs/ThingDef[defName = "Owl_TanningVat"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes</xpath>
+              <value>
+                <li>
+                  <thingDef>VFEV_Leather_Fenrir</thingDef>
+                  <ingredientFilter>
+                    <thingDefs>
+                      <li>Prepared_Hide_Fenrir</li>
+                    </thingDefs>
+                  </ingredientFilter>
+                  <maxCapacity>150</maxCapacity>
+                  <processDays>3.63</processDays>
+                  <usesTemperature>true</usesTemperature>
+                  <temperatureIdeal>
+                    <min>1</min>
+                    <max>99</max>
+                  </temperatureIdeal>
+                  <temperatureSafe>
+                    <min>-50</min>
+                    <max>200</max>
+                  </temperatureSafe>
+                  <graphicSuffix>_full</graphicSuffix>
+                </li>
+                <li>
+                  <thingDef>VFEV_Leather_Lothurr</thingDef>
+                  <ingredientFilter>
+                    <thingDefs>
+                      <li>Prepared_Hide_Lothurr</li>
+                    </thingDefs>
+                  </ingredientFilter>
+                  <maxCapacity>150</maxCapacity>
+                  <processDays>3.63</processDays>
+                  <usesTemperature>true</usesTemperature>
+                  <temperatureIdeal>
+                    <min>1</min>
+                    <max>99</max>
+                  </temperatureIdeal>
+                  <temperatureSafe>
+                    <min>-50</min>
+                    <max>200</max>
+                  </temperatureSafe>
+                  <graphicSuffix>_full</graphicSuffix>
+                </li>
+                <li>
+                  <thingDef>VFEV_Leather_Njorun</thingDef>
+                  <ingredientFilter>
+                    <thingDefs>
+                      <li>Prepared_Hide_Njorun</li>
+                    </thingDefs>
+                  </ingredientFilter>
+                  <maxCapacity>150</maxCapacity>
+                  <processDays>3.63</processDays>
+                  <usesTemperature>true</usesTemperature>
+                  <temperatureIdeal>
+                    <min>1</min>
+                    <max>99</max>
+                  </temperatureIdeal>
+                  <temperatureSafe>
+                    <min>-50</min>
+                    <max>200</max>
+                  </temperatureSafe>
+                  <graphicSuffix>_full</graphicSuffix>
+                </li>
+              </value>
+            </li>
+          </operations>
+        </match>
       </match>
     </match>
   </Operation>
@@ -2789,6 +3415,33 @@
   </Operation>
 
   <!--==========
+    Smokeleaf Industry Reborn {Vanilla Brewing Expanded, Vanilla Cooking Expanded}
+    ==========-->
+
+  <!--Add to HempFlour to Whiskey production-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Smokeleaf Industry Reborn</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Brewing Expanded</li>
+      </mods>
+      <match Class="PatchOperationFindMod">
+        <mods>
+          <li>Vanilla Cooking Expanded</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="VBE_MakeWhiskeyMash"]/ingredients/li/filter/thingDefs | /Defs/RecipeDef[defName="VBE_MakeWhiskeyMash"]/fixedIngredientFilter/thingDefs</xpath>
+          <value>
+            <li>HempFlour</li>
+          </value>
+        </match>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
     Vanilla Furniture Expanded {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields, More Furniture}
     ==========-->
 
@@ -3061,6 +3714,36 @@
             <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/fixedIngredientFilter/thingDefs</xpath>
             <value>
               <li>AEXP_MuskOxWool</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add Cow wool to blended wool recipe-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>VGP Garden Fabrics</li>
+      <li>VGP Garden Fabrics Simplified</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Factions Expanded - Vikings</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/ingredients/li/filter/thingDefs</xpath>
+            <value>
+              <li>VFEV_WoolCow</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>VFEV_WoolCow</li>
             </value>
           </li>
         </operations>
