@@ -861,6 +861,23 @@
    </Operation>
 
    <!--==========
+    Vanilla Furniture Expanded
+    ==========-->
+
+   <!--Add end table linkable to simple bed-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Furniture Expanded</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+         <xpath>/Defs/ThingDef[defName="Bed_Simple"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+         <value>
+              <li>Table_LightEndTable</li>
+         </value>
+      </match>
+   </Operation>
+
+   <!--==========
     VGP Garden Gourmet
     ==========-->
 

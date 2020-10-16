@@ -143,6 +143,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Alpha Biomes</li>
+            <li>Coal Expanded</li>
             <li>Vanilla Furniture Expanded - Power</li>
             <li>Vanilla Factions Expanded - Settlers</li>
             <li>RimPlas</li>
@@ -659,7 +660,7 @@
     Coal Expanded
     ==========-->
 
-    <!--CoalGrill, CoalSmelter, CoalFiredGenerator-->
+    <!--CoalGrill, CoalSmelter, CoalFiredGenerator, CoalStove-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Coal Expanded</li>
@@ -685,6 +686,13 @@
                     <xpath>/Defs/ThingDef[defName="CoalFiredGenerator"]</xpath>
                     <value>
                         <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                    </value>
+                </li>
+                <!--Coal Stove-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="CoalStove"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
                     </value>
                 </li>
             </operations>

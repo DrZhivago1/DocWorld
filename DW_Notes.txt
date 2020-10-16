@@ -301,7 +301,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Apothecary, Apothecary (Continued)
         {AYCharcoalStove, AYCharcoalSmithy}
     Coal Expanded
-        {CoalGrill, CoalSmelter, CoalFiredGenerator}
+        {CoalGrill, CoalSmelter, CoalFiredGenerator, CoalStove}
     Dubs Bad Hygiene
         {Water heaters, Wells, Pump}
     Dubs Skylights
@@ -477,6 +477,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Allow armor to be made of woody stuff}
     Vanilla Factions Expanded - Medieval
         {Allow armor to be made of woody stuff}
+    Vanilla Furniture Expanded
+        {Add end table linkable to simple bed}
     VGP Garden Gourmet
         {Stuff items}
 
@@ -526,7 +528,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Rimatomics
         {Vanilla Furniture Expanded - Power, Sparkling Worlds - Full Mod}
     RIMkea
-        {Stuffed Floors}
+        {Stuffed Floors, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module}
     RimOverhaul
         {Simple Chains: Leather}
     RimPlas, RimPlas (Continued)
@@ -543,6 +545,12 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra}
     Smokeleaf Industry Reborn
         {Vanilla Brewing Expanded, Vanilla Cooking Expanded}
+    Sparkling Worlds - Full Mod
+        {More Furniture [1.1 + 1.2], Vanilla Furniture Expanded, Vanilla Furniture Expanded - Medical Module, Vanilla Furniture Expanded - Production, Vanilla Furniture Expanded - Spacer Module, Wall Vitals Monitor}
+    Soft Warm Beds
+        {More Furniture [1.1 + 1.2], Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module}
+    Standalone Hot Spring
+        {Dubs Bad Hygiene}
     UN-Colony
         {Industrialisation}
     Universal Fermenter
@@ -550,7 +558,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Vanilla Armour Expanded
         {NightVision}
     Vanilla Furniture Expanded
-        {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields, More Furniture}
+        {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields, More Furniture, Vanilla Furniture Expanded - Spacer Module}
     Vanilla Furniture Expanded - Farming
         {LWM's Deep Storage}
     Vanilla Furniture Expanded - Production
@@ -666,7 +674,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 `This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Since this is a large overhaul of one specific mod, I deemed it worthy to have it's own file.`
 
     Vanilla Furniture Expanded - Props and Decor
-        {LWM's Deep Storage, Dubs Bad Hygiene, Fertile Fields [1.1], Rimatomics, Rimefeller, [D] Thermodynamics - Hot Meals, Vanilla Factions Expanded - Medieval}
+        {LWM's Deep Storage, Dubs Bad Hygiene, Fertile Fields [1.1], Rimatomics, Rimefeller, [D] Thermodynamics - Hot Meals, Vanilla Factions Expanded - Medieval, Vanilla Factions Expanded - Vikings}
 
 *******
 # Incorporated Mods in RimWorld 1.1
@@ -816,8 +824,10 @@ Slightly More Realistic Wool Production Revived
 Smarter Vanilla Food
 Smoked meat
 Smokeleaf Industry Reborn
-Soft Warm Beds
-Sparkling Worlds
+[JPT] Soft Warm Beds
+Sparkling Worlds - Full Mod
+Sparkling Worlds - Modular Core - Reduced features
+Standalone Hot Spring
 Static Quality Plus
 Steam Light
 Storage Solutions
@@ -864,6 +874,7 @@ Vanilla Plants Expanded
 Velcroboy's Japanese Revival
 Wall Light
 Wall Sun Lamp
+Wall Vitals Monitor
 What The Hack
 Xenite Industries
 ZARS Production Spots

@@ -1115,6 +1115,7 @@
                         <li>VBE_Tequila</li>
                         <li>VBE_Vodka</li>
                         <li>VBE_Whiskey</li>
+                        <li>VBE_DoubleWhiskey</li>
                     </value>
                 </match>
             </match>
@@ -1138,6 +1139,29 @@
                     <xpath>/Defs/ThingDef[defName="DZ_VFEPD_WineRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
                     <value>
                         <li>VFEM_Wine</li>
+                    </value>
+                </match>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Vanilla Factions Expanded - Vikings-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationFindMod">
+                <mods>
+                    <li>Vanilla Factions Expanded - Vikings</li>
+                </mods>
+                <match Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="DZ_VFEPD_WineRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                    <value>
+                        <li>VFEV_Mead</li>
                     </value>
                 </match>
             </match>
