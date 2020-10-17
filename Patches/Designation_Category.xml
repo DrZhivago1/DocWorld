@@ -2070,7 +2070,7 @@
     RimPlas
     ==========-->
 
-    <!--Move items to Animals, Beds, Decor, Furniture, Husbandry, Security, and Structure tab. With redundant removals-->
+    <!--Move items to Animals, Beds, Decor, Furniture, Husbandry, Security, and Structure tab. With redundant removals. #animalbeds-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RimPlas</li>
@@ -2110,6 +2110,12 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RimPlas_GameOfUr" or defName="RimPlas_ChessTable"]</xpath>
+                    <value>
+                        <designationCategory>Joy</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[defName="RPSecurityDoor"]</xpath>
                     <value>
                         <designationCategory>Structure</designationCategory>
@@ -2121,16 +2127,11 @@
                         <designationCategory>DZ_Decor</designationCategory>
                     </value>
                 </li>
-                <!--#animalbeds-->
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[defName="RimPlas_AnimalSleepingBox"]</xpath>
                     <value>
                         <designationCategory>DZ_Animals</designationCategory>
                     </value>
-                </li>
-                <!--Remove redundancies-->
-                <li Class="PatchOperationRemove">
-                    <xpath>/Defs/ThingDef[defName="RimPlas_GameOfUr" or defName="RimPlas_ChessTable" or defName="RimPlas_Stool" or defName="RimPlas_Shelf" or defName="RimPlas_Rack" or defName="RimPlas_AnimalSleepingBox" or defName="RimPlas_DiningChair" or defName="RimPlas_EndTable" or defName="RimPlas_Table_Tiny" or defName="RimPlas_Table_Small" or defName="RimPlas_Dresser"]</xpath>
                 </li>
             </operations>
         </match>

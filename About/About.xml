@@ -11,6 +11,7 @@
 	<incompatibleWith>
 		<li>Oreno.VFEFarming.DubsBadHygiene</li>
 		<li>dame.scleatherufpatch</li>
+		<li>Primus.FunctionalProps</li>
 	</incompatibleWith>
 	<loadAfter>
 		<li>Nif.ArchitectExpanded.FencesTabPatch</li>

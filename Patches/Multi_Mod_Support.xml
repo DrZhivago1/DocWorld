@@ -2005,13 +2005,13 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName="VPE_NuclearGenerator" | /Defs/ResearchProjectDef[defName="VFE_NuclearPower"]</xpath>
+            <xpath>/Defs/ThingDef[defName="VPE_NuclearGenerator"] | /Defs/ResearchProjectDef[defName="VFE_NuclearPower"]</xpath>
           </li>
         </operations>
       </match>
     </match>
   </Operation>
-  
+
   <!--Remove redundant power buildings in favor of complex systems-->
   <Operation Class="PatchOperationFindMod">
     <mods>

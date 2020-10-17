@@ -12,7 +12,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 *******
 ### New Original Content:
     DocWorld
-        {Underground Conduit, Designation Categories (Animals, Beds, Culinary, Decor, Fences, Husbandry, Industrial, Storage, Lighting)}
+        {Underground Conduit, Designation Categories (Animals, Beds, Culinary, Decor, Fences, Husbandry, Industrial, Lighting, Storage)}
 
 ### Biome_Foraging:
 `This file will contain all patches that alter biome foraging. Requires Vanilla Plants Expanded.`
@@ -181,7 +181,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Rimoleum, Rimoleum (Continued)
         {Move items to Floors tab}
     RimPlas, RimPlas (Continued)
-        {Move items to Animals #animalbeds, Beds, Decor, Furniture, Husbandry, Security, and Structure tab. With redundant removals}
+        {Move items to Animals, Beds, Decor, Furniture, Husbandry, Security, and Structure tab. With redundant removals. #animalbeds}
     RimWriter
         {Move items to Storage tab}
     Science Never Stops
@@ -723,7 +723,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {LWM's Deep Storage, Dubs Bad Hygiene, Fertile Fields [1.1], Rimatomics, Rimefeller, [D] Thermodynamics - Hot Meals, Vanilla Factions Expanded - Medieval, Vanilla Factions Expanded - Vikings}
 
 *******
-# Incorporated Mods in RimWorld 1.2
+# Supported Mods in RimWorld 1.2
 *******
 ```
 Alpha Animals

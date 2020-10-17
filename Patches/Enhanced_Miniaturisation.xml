@@ -695,7 +695,7 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="RPGrapheneSolarGenerator"]/statBases</xpath>
+                    <xpath>/Defs/ThingDef[defName="HempSolarGenerator"]/statBases</xpath>
                     <value>
                         <Mass>300</Mass>
                     </value>
