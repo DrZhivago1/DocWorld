@@ -135,6 +135,40 @@
     </Operation>
 
     <!--==========
+    Industrial Age - Objects and Furniture
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Industrial Age - Objects and Furniture (Continued)</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha" or defName="Jecrell_GasStreetLampBeta" or defName="Jecrell_GasLamp"]/costList</xpath>
+                        <value>
+                            <Glass>1</Glass>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Estate_ArcLamp" or defName="Estate_EdisonLamp" or defName="Estate_EdisonTube"]</xpath>
+                        <value>
+                            <costList>
+                                <Glass>1</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
     More Furniture
     ==========-->
 
@@ -265,7 +299,7 @@
         <match Class="PatchOperationFindMod">
             <mods>
                 <li>RimPlas</li>
-            <li>RimPlas (Continued)</li>
+                <li>RimPlas (Continued)</li>
             </mods>
             <match Class="PatchOperationSequence">
                 <success>Always</success>

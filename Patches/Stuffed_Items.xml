@@ -25,6 +25,7 @@
             <costStuffCount>30</costStuffCount>
             <stuffCategories>
                <li>Metallic</li>
+               <li>Stony</li>
                <li>Woody</li>
             </stuffCategories>
          </value>

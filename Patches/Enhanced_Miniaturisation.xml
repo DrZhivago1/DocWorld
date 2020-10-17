@@ -451,6 +451,37 @@
     </Operation>
 
     <!--==========
+    Apothecary
+    ==========-->
+
+    <!--AYCharcoalFiredGenerator-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Apothecary (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AYCharcoalFiredGenerator"]</xpath>
+                    <value>
+                        <minifiedDef>MinifiedThing</minifiedDef>
+                        <thingCategories>
+                            <li>BuildingsMisc</li>
+                        </thingCategories>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AYCharcoalFiredGenerator"]/statBases</xpath>
+                    <value>
+                        <Mass>150</Mass>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Dubs Bad Hygiene
     ==========-->
 
@@ -475,6 +506,37 @@
                     <xpath>/Defs/ThingDef[defName="WindPump"]/statBases</xpath>
                     <value>
                         <Mass>250</Mass>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Genetic Rim
+    ==========-->
+
+    <!--GR_CryostabilizedEngine-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Genetic Rim</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="GR_CryostabilizedEngine"]</xpath>
+                    <value>
+                        <minifiedDef>MinifiedThing</minifiedDef>
+                        <thingCategories>
+                            <li>BuildingsMisc</li>
+                        </thingCategories>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="GR_CryostabilizedEngine"]/statBases</xpath>
+                    <value>
+                        <Mass>300</Mass>
                     </value>
                 </li>
             </operations>
@@ -575,56 +637,210 @@
     </Operation>
 
     <!--==========
+    RimPlas
+    ==========-->
+
+    <!--RPGrapheneSolarGenerator, RPGrapheneWindTurbine-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RimPlas (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneSolarGenerator" or defName="RPGrapheneWindTurbine"]</xpath>
+                    <value>
+                        <minifiedDef>MinifiedThing</minifiedDef>
+                        <thingCategories>
+                            <li>BuildingsMisc</li>
+                        </thingCategories>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneSolarGenerator"]/statBases</xpath>
+                    <value>
+                        <Mass>300</Mass>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneWindTurbine"]/statBases</xpath>
+                    <value>
+                        <Mass>500</Mass>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Smokeleaf Industry Reborn
+    ==========-->
+
+    <!--HempSolarGenerator, HempolineGenerator-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Smokeleaf Industry Reborn</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="HempSolarGenerator" or defName="HempolineGenerator"]</xpath>
+                    <value>
+                        <minifiedDef>MinifiedThing</minifiedDef>
+                        <thingCategories>
+                            <li>BuildingsMisc</li>
+                        </thingCategories>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneSolarGenerator"]/statBases</xpath>
+                    <value>
+                        <Mass>300</Mass>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="HempolineGenerator"]/statBases</xpath>
+                    <value>
+                        <Mass>150</Mass>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Factions Expanded - Settlers
+    ==========-->
+
+    <!--Windmill-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Settlers</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Windmill"]</xpath>
+                    <value>
+                        <minifiedDef>MinifiedThing</minifiedDef>
+                        <thingCategories>
+                            <li>BuildingsMisc</li>
+                        </thingCategories>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Windmill"]/statBases</xpath>
+                    <value>
+                        <Mass>400</Mass>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Vanilla Furniture Expanded - Production
     ==========-->
 
     <!--VFE_ComponentFabricationBench-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>Vanilla Furniture Expanded - Production</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-         <success>Always</success>
-         <operations>
-            <li Class="PatchOperationConditional">
-               <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/minifiedDef</xpath>
-               <match Class="PatchOperationSequence">
-                  <success>Always</success>
-                  <operations>
-                     <li Class="PatchOperationReplace">
-                        <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/minifiedDef</xpath>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Production</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/minifiedDef</xpath>
+                    <match Class="PatchOperationSequence">
+                        <success>Always</success>
+                        <operations>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/minifiedDef</xpath>
+                                <value>
+                                    <minifiedDef>MinifiedThing</minifiedDef>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationReplace">
+                                <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/thingCategories</xpath>
+                                <value>
+                                    <thingCategories>
+                                        <li>BuildingsMisc</li>
+                                    </thingCategories>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]</xpath>
                         <value>
-                           <minifiedDef>MinifiedThing</minifiedDef>
+                            <minifiedDef>MinifiedThing</minifiedDef>
+                            <thingCategories>
+                                <li>BuildingsMisc</li>
+                            </thingCategories>
                         </value>
-                     </li>
-                     <li Class="PatchOperationReplace">
-                        <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/thingCategories</xpath>
-                        <value>
-                           <thingCategories>
-                              <li>BuildingsMisc</li>
-                           </thingCategories>
-                        </value>
-                     </li>
-                  </operations>
-               </match>
-               <nomatch Class="PatchOperationAdd">
-                  <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]</xpath>
-                  <value>
-                     <minifiedDef>MinifiedThing</minifiedDef>
-                     <thingCategories>
-                        <li>BuildingsMisc</li>
-                     </thingCategories>
-                  </value>
-               </nomatch>
-            </li>
-            <li Class="PatchOperationAdd">
-               <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/statBases</xpath>
-               <value>
-                  <Mass>20</Mass>
-               </value>
-            </li>
-         </operations>
-      </match>
-   </Operation>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_ComponentFabricationBench"]/statBases</xpath>
+                    <value>
+                        <Mass>20</Mass>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Power
+    ==========-->
+
+    <!--VFE_AdvancedWindTurbine, VFE_AdvancedSolarGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Power</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_AdvancedWindTurbine" or defName="VFE_AdvancedSolarGenerator" or defName="VPE_HelixienGenerator" or defName="VPE_IndustrialHelixienGenerator" or defName="VFE_IndustrialWoodFiredGenerator" or defName="VFE_IndustrialChemfuelPoweredGenerator"]</xpath>
+                    <value>
+                        <minifiedDef>MinifiedThing</minifiedDef>
+                        <thingCategories>
+                            <li>BuildingsMisc</li>
+                        </thingCategories>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_AdvancedWindTurbine"]/statBases</xpath>
+                    <value>
+                        <Mass>750</Mass>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_AdvancedSolarGenerator"]/statBases</xpath>
+                    <value>
+                        <Mass>450</Mass>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VPE_HelixienGenerator"]/statBases</xpath>
+                    <value>
+                        <Mass>150</Mass>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VPE_IndustrialHelixienGenerator" or defName="VFE_IndustrialChemfuelPoweredGenerator" or defName="VFE_IndustrialWoodFiredGenerator"]/statBases</xpath>
+                    <value>
+                        <Mass>300</Mass>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
 
 </Patch>

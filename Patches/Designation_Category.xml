@@ -13,6 +13,7 @@
             <li>[sd] Chicken Nest (Continued)</li>
             <li>[FSF] Invisible Animal Beds</li>
             <li>Animal Medical Bed</li>
+            <li>Dragon's Descent</li>
             <li>RimPlas</li>
             <li>RimPlas (Continued)</li>
             <li>RIMkea</li>
@@ -356,7 +357,7 @@
     Architect Expanded - Fences
     ==========-->
 
-    <!--Move items to Fences tab-->
+    <!--Move items to Fences tab. #fence-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Architect Expanded - Fences</li>
@@ -583,6 +584,28 @@
     </Operation>
 
     <!--==========
+    Dragon's Descent
+    ==========-->
+
+    <!--Move items to Animals tab. #animalbeds-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dragon's Descent</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="DragonNest" or defName="DragonPillow"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Animals</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Dubs Bad Hygiene
     ==========-->
 
@@ -719,7 +742,7 @@
     Extended Woodworking
     ==========-->
 
-    <!--Move items to Fences tab-->
+    <!--Move items to Fences tab. #fence-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Extended Woodworking</li>
@@ -791,7 +814,7 @@
     Fences And No Floors
     ==========-->
 
-    <!--Move items to Fences tab-->
+    <!--Move items to Fences tab. #fence-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Fences And Floors (Continued)</li>
@@ -1085,7 +1108,7 @@
     Gloomy Vanilla/Overhaul
     ==========-->
 
-    <!--Move items to Beds, Culinary, and Lighting tab-->
+    <!--Move items to Culinary, Fences, and Lighting tab. #fence-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Gloomy Vanilla</li>
@@ -1156,6 +1179,40 @@
             <value>
                 <designationCategory>DZ_Husbandry</designationCategory>
             </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Industrial Age - Objects and Furniture
+    ==========-->
+
+    <!--Move items to Lighting and Joy tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Industrial Age - Objects and Furniture (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Jecrell_Chandelier" or defName="Jecrell_ChandelierRoyal" or defName="Jecrell_Candelabra" or defName="Jecrell_GasStreetLampAlpha" or defName="Jecrell_GasStreetLampBeta" or defName="Jecrell_GasLamp"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="Estate_ArcLampBase"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Estate_Telescope"]</xpath>
+                    <value>
+                        <designationCategory>Joy</designationCategory>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 
@@ -1276,6 +1333,83 @@
     </Operation>
 
     <!--==========
+    Lord of the Rims - Dwarves
+    ==========-->
+
+    <!--Move items to Lighting tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Lord of the Rims - Dwarves</li>
+            <li>Lord of the Rims - Dwarves (Continued)</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="LotRD_Chandelier" or defName="LotRD_DwarvenCandelabra" or defName="LotRD_Brazier" or defName="LotRD_DwarvenWallLight" or defName="LotRD_DwarvenStreetLamp"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Lighting</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Lord of the Rims - Elves
+    ==========-->
+
+    <!--Move items to Beds, Fences, Lighting, and Storage tab. #fence #storage-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Lord of the Rims - Elves</li>
+            <li>Lord of the Rims - Elves (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="LotRE_ElvenRoyalBed" or defName="LotRE_ElvenBed"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Beds</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="LotRE_ElvenCandelabra"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="LotRE_FenceElven"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Fences</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/DoorsExpanded.DoorExpandedDef[defName="Elven_Fence_GateA" or defName="Elven_Fence_GateB"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Fences</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Lord of the Rims - Elves</li>
+            <li>Lord of the Rims - Elves (Continued)</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="Estate_Refrigerator"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
     Mechalit Core
     ==========-->
 
@@ -1358,6 +1492,28 @@
                     <designationCategory>DZ_Storage</designationCategory>
                 </value>
             </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    MedPod
+    ==========-->
+
+    <!--Move items to Beds tab.-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>MedPod</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="MedPodBedBase"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Beds</designationCategory>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 
@@ -1914,7 +2070,7 @@
     RimPlas
     ==========-->
 
-    <!--Move items to Animals, Beds, Decor, Furniture, Husbandry, Joy, Security, and Structure tab-->
+    <!--Move items to Animals, Beds, Decor, Furniture, Husbandry, Security, and Structure tab. With redundant removals-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RimPlas</li>
@@ -1954,12 +2110,6 @@
                     </value>
                 </li>
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="RimPlas_GameOfUr" or defName="RimPlas_ChessTable"]</xpath>
-                    <value>
-                        <designationCategory>Joy</designationCategory>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
                     <xpath>/Defs/ThingDef[defName="RPSecurityDoor"]</xpath>
                     <value>
                         <designationCategory>Structure</designationCategory>
@@ -1978,6 +2128,10 @@
                         <designationCategory>DZ_Animals</designationCategory>
                     </value>
                 </li>
+                <!--Remove redundancies-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="RimPlas_GameOfUr" or defName="RimPlas_ChessTable" or defName="RimPlas_Stool" or defName="RimPlas_Shelf" or defName="RimPlas_Rack" or defName="RimPlas_AnimalSleepingBox" or defName="RimPlas_DiningChair" or defName="RimPlas_EndTable" or defName="RimPlas_Table_Tiny" or defName="RimPlas_Table_Small" or defName="RimPlas_Dresser"]</xpath>
+                </li>
             </operations>
         </match>
     </Operation>
@@ -1990,6 +2144,7 @@
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>RimWriter - Books, Scrolls, Tablets, and Libraries</li>
+            <li>RimWriter - Books, Scrolls, Tablets, and Libraries (Continued)</li>
         </mods>
         <match Class="PatchOperationFindMod">
             <mods>

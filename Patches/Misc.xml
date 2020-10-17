@@ -239,6 +239,65 @@
    </Operation>
 
    <!--==========
+    Industrial Age - Objects and Furniture
+    ==========-->
+
+   <!--Make gas lamps from require chemfuel-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Industrial Age - Objects and Furniture (Continued)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha" or defName="Jecrell_GasStreetLampBeta"]/comps</xpath>
+               <value>
+                  <li Class="CompProperties_Refuelable">
+                     <fuelConsumptionRate>0.5</fuelConsumptionRate>
+                     <fuelCapacity>20.0</fuelCapacity>
+                     <fuelFilter>
+                        <thingDefs>
+                           <li>Chemfuel</li>
+                        </thingDefs>
+                     </fuelFilter>
+                  </li>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="Jecrell_GasLamp"]/comps</xpath>
+               <value>
+                  <li Class="CompProperties_Refuelable">
+                     <fuelConsumptionRate>0.25</fuelConsumptionRate>
+                     <fuelCapacity>10.0</fuelCapacity>
+                     <fuelFilter>
+                        <thingDefs>
+                           <li>Chemfuel</li>
+                        </thingDefs>
+                     </fuelFilter>
+                  </li>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha" or defName="Jecrell_GasStreetLampBeta"]/thingClass</xpath>
+               <value>
+                  <thingClass>Building</thingClass>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha" or defName="Jecrell_GasStreetLampBeta"]/comps</xpath>
+               <value>
+                  <li Class="CompProperties_Glower">
+                     <glowRadius>12</glowRadius>
+                     <glowColor>(255,178,64,0)</glowColor>
+                  </li>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
     Industrialisation
     ==========-->
 
@@ -254,6 +313,44 @@
                <Steel>1</Steel>
                <Ind_Concrete>5</Ind_Concrete>
             </costList>
+         </value>
+      </match>
+   </Operation>
+
+   <!--==========
+    Mamuffalo
+    ==========-->
+
+   <!--Use Vanilla muffalo leather-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Mamuffalo</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+         <xpath>/Defs/ThingDef[defName="Mamuffalo"]/race/leatherDef</xpath>
+         <value>
+            <leatherDef>Leather_Bluefur</leatherDef>
+         </value>
+      </match>
+   </Operation>
+
+   <!--==========
+    More Furniture
+    ==========-->
+
+   <!--Add linkable support to bed rolls-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>More Furniture [1.1 + 1.2]</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+         <xpath>/Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+         <value>
+            <li>Anon2Dresser</li>
+            <li>Anon2EndTable</li>
+            <li>Anon2RoyalEndTable</li>
+            <li>Anon2EndTableLight</li>
+            <li>Anon2RoyalEndTableLight</li>
          </value>
       </match>
    </Operation>
@@ -864,15 +961,45 @@
     Vanilla Furniture Expanded
     ==========-->
 
-   <!--Add end table linkable to simple bed-->
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Vanilla Furniture Expanded</li>
       </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <!--Add end table linkable to simple bed-->
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="Bed_Simple"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+               <value>
+                  <li>Table_LightEndTable</li>
+               </value>
+            </li>
+            <!--Add linkable support to bed rolls-->
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+               <value>
+                  <li>Table_LightEndTable</li>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Vanilla Furniture Expanded - Spacer Module
+    ==========-->
+
+   <!--Add linkable support to bed rolls-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Furniture Expanded - Spacer Module</li>
+      </mods>
       <match Class="PatchOperationAdd">
-         <xpath>/Defs/ThingDef[defName="Bed_Simple"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+         <xpath>/Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
          <value>
-              <li>Table_LightEndTable</li>
+            <li>Table_IlluminatedEndTable</li>
+            <li>Table_IlluminatedDresser</li>
          </value>
       </match>
    </Operation>

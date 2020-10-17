@@ -44,11 +44,11 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Animal Medical Bed
         {Move items to Animal tab. #animalbeds}
     Animal Straw Bed
-        {Move items to Animal tab}
+        {Move items to Animal tab. #animalbeds}
     Apothecary, Apothecary (Continued)
         {Move items to Culinary, Husbandry, Lighting, and Storage tab. #storage}
     Architect Expanded - Fences
-        {Move items to Fences tab}
+        {Move items to Fences tab. #fence}
     Ceiling Lights
         {Move items to Husbandry and Lighting tab}
     Centralized Climate Control
@@ -56,7 +56,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Chicken Coop
         {Move items to Husbandry tab}
     Chicken Nest
-        {Move items to Animal tab}
+        {Move items to Animal tab. #animalbeds}
     Clutter Structures
         {Move items to Fences tab. #fence}
     Coal Expanded
@@ -67,6 +67,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Husbandry tab and remove excess hidden power conduit}
     Door Mat
         {Move items to Decor tab}
+    Dragon's Descent
+        {Move items to Animals tab. #animalbeds}
     Dubs Bad Hygiene
         {Move items to Husbandry, Misc, Structure, and Temperature tab}
     Dubs Skylights
@@ -76,14 +78,14 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Extended Storage Extended
         {Move items to Storage tab}
     Extended Woodworking
-        {Move items to Fences tab}
+        {Move items to Fences tab. #fence}
     Fantastic Decor
         {Move items to Decor tab}
     Fast regen 1.1
         {Move items to Animals tab, all others are moved via Vanilla beds patch}
     Fences And Floors
     Fences And No Floors
-        {Move items to Fences tab}
+        {Move items to Fences tab. #fence}
     Fermenter, Fermenter (Continued)
         {Move items to Culinary tab}
     Fertile Fields
@@ -111,13 +113,15 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Decor tab}
     Gloomy Vanilla
     Gloomy Vanilla Overhaul
-        {Move items to Beds, Culinary, and Lighting tab}
+        {Move items to Culinary, Fences, and Lighting tab. #fence}
     Glowstone
         {Move items to Lighting tab}
     Goodnight
         {Move items to Beds tab}
     High Density Hydroponics
         {Move items to Husbandry tab}
+    Industrial Age - Objects and Furniture
+        {Move items to Lighting and Joy tab}
     Industrial Rollers
         {Move items to Industrial tab}
     Invisible Animal Beds
@@ -125,13 +129,19 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Jurassic Rimworld
         {Move items to Jurassic tab}
     Large Animal Beds
-        {Move items to Animal tab}
+        {Move items to Animal tab. #animalbeds}
     LED Lights
         {Move items to Lighting tab}
+    Lord of the Rims - Dwarves
+        {Move items to Lighting tab}
+    Lord of the Rims - Elves
+        {Move items to Beds, Fences, Lighting, and Storage tab. #fence #storage}
     Mechalit Core
         {Move items to Beds, Husbanry, and Lighting tab}
     Medical Supplements, Medical Supplements (Continued)
         {Move items to Beds, Production, and Storage tab. #storage}
+    MedPod
+        {Move items to Beds tab.}
     More Furniture
         {Move items to Decor, Furniture, and Lighting tab.}
     More Hydroponics
@@ -167,11 +177,11 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     RimJobWorld
         {Move items to Beds tab}
     RIMkea
-        {Move items to Animals, Beds, Decor, Floors, Furniture, Lighting, and Temperature tab}
+        {Move items to Animals #animalbeds, Beds, Decor, Floors, Furniture, Lighting, and Temperature tab}
     Rimoleum, Rimoleum (Continued)
         {Move items to Floors tab}
     RimPlas, RimPlas (Continued)
-        {Move items to Animals, Beds, Decor, Furniture, Husbandry, Joy, Security, and Structure tab}
+        {Move items to Animals #animalbeds, Beds, Decor, Furniture, Husbandry, Security, and Structure tab. With redundant removals}
     RimWriter
         {Move items to Storage tab}
     Science Never Stops
@@ -291,13 +301,13 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 
 #### Conditional Section:
     Vanilla
-        {Battery, Cooler, Fermenting Barrel, Geothermal, Heater, Hydroponics, Machining, Smelter, Solar, Tool Cabinet, Transport Pod, Vitals Monitor, Wind Generator}
+        {Battery, Cooler, Deep Drill, Fermenting Barrel, Geothermal, Heater, Hydroponics, Machining, Smelter, Solar, Tool Cabinet, Transport Pod, Vitals Monitor, Wind Generator}
 
 #### Unconditional Section:
     Vanilla
         {Generator, IEDs, Power Conduits, Smithy, Standing Lamps, Stove, Television, Turrets}
     Alpha Biomes
-        {AB_AlcyoniteSolar, AB_PropaneHeater, AB_PropaneStove, AB_SmelterBase}
+        {AB_AlcyoniteSolar, AB_PropaneHeater, AB_PropaneStove, AB_SmelterBase, AB_CoreSampleDrill}
     Apothecary, Apothecary (Continued)
         {AYCharcoalStove, AYCharcoalSmithy}
     Coal Expanded
@@ -390,16 +400,28 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 
     Vanilla
         {Torch_Lamp, CommsConsole, GroundPenetratingScanner, LongRangeMineralScanner, MoisturePump, MultiAnalyzer, OrbitalTradeBeacon, PodLauncher, Sarcophagus, ChemfuelPoweredGenerator, PowerSwitch, SolarGenerator, WindTurbine, WoodFiredGenerator, BiofuelRefinery, FabricationBench, HiTechResearchBench, ElectricCrematorium, Hopper, HydroponicsBasin, Cooler, PassiveCooler, Vent}
+    Apothecary (Continued)
+        {AYCharcoalFiredGenerator}
     Dubs Bad Hygiene
         {WindPump}
+    Genetic Rim
+        {GR_CryostabilizedEngine}
     High Tech Laboratory Facilities (Continued)
         {LabStation, LabTerminal}
     Medical Training
         {IF_MeditrainTable}
     Repair Workbench
         {ElectricTableRepair}
+    RimPlas
+        {RPGrapheneSolarGenerator, RPGrapheneWindTurbine}
+    Smokeleaf Industry Reborn
+        {HempSolarGenerator, HempolineGenerator}
+    Vanilla Factions Expanded - Settlers
+        {Windmill}
     Vanilla Furniture Expanded - Production
         {VFE_ComponentFabricationBench}
+    Vanilla Furniture Expanded - Power
+        {VFE_AdvancedWindTurbine, VFE_AdvancedSolarGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator}
 
 ### Glass_Requisites (Glass+Lights mod required):
 `This file will contain all patches that replace/change glass requirements for Vanilla and Mods using Glass+Lights as the base glass mod.`
@@ -413,6 +435,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Glitter Tech
     Glitter Tech (No Surgery)
         {Floodlight requires glass}
+    Industrial Age - Objects and Furniture
+        {Lamps require glass}
     More Furniture
         {Lamps and endtables require glass}
     Raise The Roof
@@ -449,8 +473,14 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Allow rotation of aquaculture basin (microfungus texture edited due to this), Stuff the pier}
     Fishing Nets
         {Increase fish spawn randomness, ensure minimum meat count per trap, and increase/further randomize the possible lifespan of all traps}
+    Industrial Age - Objects and Furniture
+        {Make gas lamps from require chemfuel}
     Industrialisation
         {Patch Vanilla paved tile flooring}
+    Mamuffalo
+        {Use Vanilla muffalo leather}
+    More Furniture
+        {Add linkable support to bed rolls}
     Open The Windows
         {Allow regular windows to be made of stone}
     Power Switch
@@ -478,7 +508,9 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Vanilla Factions Expanded - Medieval
         {Allow armor to be made of woody stuff}
     Vanilla Furniture Expanded
-        {Add end table linkable to simple bed}
+        {Add end table linkable to simple bed, Add linkable support to bed rolls}
+    Vanilla Furniture Expanded - Spacer Module
+        {Add linkable support to bed rolls}
     VGP Garden Gourmet
         {Stuff items}
 
@@ -513,6 +545,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {LWM's Deep Storage, Gloomy Extra - Kitchen}
     Harvest Organs Post Mortem
         {Alpha Animals, VGP Garden Medicine}
+    Industrial Age - Objects and Furniture
+        {VGP Garden Gourmet, Lord of the Rims - Dwarves (Continued), Lord of the Rims - Elves (Continued), Vanilla Furniture Expanded}
     Medical Training
         {Thanks For All The Fish}
     [T] MoreFloors
@@ -532,7 +566,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     RimOverhaul
         {Simple Chains: Leather}
     RimPlas, RimPlas (Continued)
-        {Insulation, Insulation (Continued), LWM's Deep Storage}
+        {Insulation, Insulation (Continued), LWM's Deep Storage, More Furniture, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module, Wall Vitals Monitor}
     Simple Chains: Leather
         {[SYR] Universal Fermenter, Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest, Vanilla Factions Expanded - Vikings}
 	Simple Chains: Steel
@@ -544,7 +578,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Slightly More Realistic Wool Production Revived
         {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra}
     Smokeleaf Industry Reborn
-        {Vanilla Brewing Expanded, Vanilla Cooking Expanded}
+        {RimPlas (Continued), Vanilla Brewing Expanded, Vanilla Cooking Expanded, Vanilla Furniture Expanded - Production}
     Sparkling Worlds - Full Mod
         {More Furniture [1.1 + 1.2], Vanilla Furniture Expanded, Vanilla Furniture Expanded - Medical Module, Vanilla Furniture Expanded - Production, Vanilla Furniture Expanded - Spacer Module, Wall Vitals Monitor}
     Soft Warm Beds
@@ -562,7 +596,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Vanilla Furniture Expanded - Farming
         {LWM's Deep Storage}
     Vanilla Furniture Expanded - Production
-        {Medical System Expansion - Revived}
+        {Apothecary (Continued), Medical System Expansion - Revived, Smokeleaf Industry Reborn, What the hack?!}
     Vanilla Furniture Expanded - Spacer Module
         {LWM's Deep Storage, [WD] Reinforced Doors}
     VGP Garden Fabrics
@@ -649,6 +683,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Disallow lights until electricity is researched, Remove Redundancies}
     High Tech Laboratory Facilities (Continued)
         {Require Research for countertop}
+    Industrial Age - Objects and Furniture
+        {Telescope requires complex furniture}
     Industrial Rollers
         {Rollers require complex furniture and electricity}
     RoofBomb
@@ -703,6 +739,8 @@ Cupro's Stones
 DDA Security and More
 DeCore
 Door Mat
+Doors Expanded (Dev)
+Dragon's Descent
 Dubs Bad Hygiene
 Dubs Skylights
 Empire
@@ -740,6 +778,7 @@ Glowstone
 Harvest Organs Post Mortem
 High Density Hydroponics
 High Tech Laboratory Facilities (Continued)
+Industrial Age - Objects and Furniture (Continued)
 Industrial Rollers
 Industrialisation
 Insulation
@@ -752,7 +791,8 @@ LED Lights
 LWM's Deep Storage
 Large Animal Beds
 Larger Solar Panels
-Lord of the Rims - Elves
+Lord of the Rims - Dwarves (Continued)
+Lord of the Rims - Elves (Continued)
 MBS Faux Rock Wall
 Mechalit Core
 Medical Supplements
@@ -785,8 +825,8 @@ Preemptive Strike
 Preemptive Strike (Fork)
 Project RimFactory Revived
 Questionable Ethics Enhanced
-Raise The Roof 1.2
 RIMkea
+Raise The Roof 1.2
 ReGrowth: Biomes of The Rim - Boreal Expansion
 ReGrowth: Biomes of The Rim - Tundra Expansion
 ReGrowth: Biomes of The Rim - Wasteland
@@ -824,7 +864,6 @@ Slightly More Realistic Wool Production Revived
 Smarter Vanilla Food
 Smoked meat
 Smokeleaf Industry Reborn
-[JPT] Soft Warm Beds
 Sparkling Worlds - Full Mod
 Sparkling Worlds - Modular Core - Reduced features
 Standalone Hot Spring
@@ -882,6 +921,7 @@ Zen Garden
 [D] Thermodynamics - Hot Meals
 [ELIF] Flooring and Decorative Options
 [JDS] Simple Storage
+[JPT] Soft Warm Beds
 [LC] Survival Tools
 [RF] Fishing
 [SYR] Doormats

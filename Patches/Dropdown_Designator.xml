@@ -84,6 +84,41 @@
         </match>
     </Operation>
 
+    <!--Deep Drill-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Alpha Biomes</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Production_Drill</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="DeepDrill"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="DeepDrill"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Production_Drill</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="DeepDrill"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Production_Drill</designatorDropdown>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
     <!--Fermenting Barrel-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -587,7 +622,7 @@
     Alpha Biomes
     ==========-->
 
-    <!--AB_AlcyoniteSolar, AB_PropaneHeater, AB_PropaneStove, AB_SmelterBase-->
+    <!--AB_AlcyoniteSolar, AB_PropaneHeater, AB_PropaneStove, AB_SmelterBase, AB_CoreSampleDrill-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Alpha Biomes</li>
@@ -610,6 +645,12 @@
                     <xpath>/Defs/ThingDef[defName="AB_PropaneStove"]</xpath>
                     <value>
                         <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AB_CoreSampleDrill"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Drill</designatorDropdown>
                     </value>
                 </li>
                 <li Class="PatchOperationReplace">
