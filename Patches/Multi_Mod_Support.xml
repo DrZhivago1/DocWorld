@@ -1989,7 +1989,7 @@
   </Operation>
 
   <!--==========
-    Rimatomics {Vanilla Furniture Expanded - Power, Sparkling Worlds - Full Mod}
+    Rimatomics {Vanilla Furniture Expanded - Power, Sparkling Worlds - Full Mod, Sparkling Worlds - Modular Core - Reduced features}
     ==========-->
 
   <!--Remove redundant power buildings in favor of complex systems-->
@@ -2000,13 +2000,33 @@
     <match Class="PatchOperationFindMod">
       <mods>
         <li>Vanilla Furniture Expanded - Power</li>
-        <li>Sparkling Worlds - Full Mod</li>
       </mods>
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName="VPE_NuclearGenerator" or defName="CompactFissionPowerSW"]</xpath>
+            <xpath>/Defs/ThingDef[defName="VPE_NuclearGenerator" | /Defs/ResearchProjectDef[defName="VFE_NuclearPower"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+  
+  <!--Remove redundant power buildings in favor of complex systems-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Rimatomics</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Sparkling Worlds - Full Mod</li>
+        <li>Sparkling Worlds - Modular Core - Reduced features</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="CompactFissionPowerSW"] | /Defs/ResearchProjectDef[defName="AdvPowerSW"]</xpath>
           </li>
         </operations>
       </match>
@@ -3662,7 +3682,7 @@
   </Operation>
 
   <!--==========
-    Sparkling Worlds - Full Mod {More Furniture [1.1 + 1.2], Vanilla Furniture Expanded, Vanilla Furniture Expanded - Medical Module, Vanilla Furniture Expanded - Production, Vanilla Furniture Expanded - Spacer Module, Wall Vitals Monitor}
+    Sparkling Worlds {More Furniture [1.1 + 1.2], Vanilla Furniture Expanded, Vanilla Furniture Expanded - Medical Module, Vanilla Furniture Expanded - Production, Vanilla Furniture Expanded - Spacer Module, Wall Vitals Monitor}
     ==========-->
 
   <!--Add linkable support to Hospital Bed-->
@@ -3973,7 +3993,7 @@
   </Operation>
 
   <!--==========
-    Vanilla Armour Expanded {NightVision}
+    Vanilla Armour Expanded {Dragons Not Included, NightVision}
     ==========-->
 
   <!--Remove NightVision goggles-->
@@ -3987,6 +4007,118 @@
       </mods>
       <match Class="PatchOperationRemove">
         <xpath>/Defs/ThingDef[defName="NV_nv_goggles"]</xpath>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Armor requires new research -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Armour Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[O21] Dragons Not Included</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[@ParentName="ApparelMakeableBase"]/recipeMaker/researchPrerequisite[text()="O21_DNI_SimpleApparel"]</xpath>
+            <value>
+              <researchPrerequisite>VAE_LeatherTanning</researchPrerequisite>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ResearchProjectDef[defName="PlateArmor"]/prerequisites/li[text()="O21_DNI_SimpleApparel"]</xpath>
+            <value>
+              <li>VAE_LeatherTanning</li>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ResearchProjectDef[defName="O21_DNI_SimpleApparel"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Factions Expanded - Medieval {Dragons Not Included, Medieval Madness: Tools of the Trade}
+    ==========-->
+
+  <!--VFE-M crossbow requires new research -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Medieval</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Medieval Madness: Tools of the Trade</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VFEM_Bow_HeavyCrossbow"]/recipeMaker/researchPrerequisite</xpath>
+            <value>
+              <researchPrerequisite>HeavyCrossbows</researchPrerequisite>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ResearchProjectDef[defName="VFEM_HeavyCrossbow"]</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Armor requires new research -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Medieval</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[O21] Dragons Not Included</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VFEM_Apparel_PlateHelmetHeavy" or defName="VFEM_Apparel_PlateArmorHeavy"]/recipeMaker/researchPrerequisite</xpath>
+            <value>
+              <researchPrerequisite>O21_DNI_MetalArmour</researchPrerequisite>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Factions Expanded - Vikings {Dragons Not Included}
+    ==========-->
+
+  <!--Armor requires new research -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Vikings</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[O21] Dragons Not Included</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VFEV_Apparel_GuardianHelmet" or defName="VFEV_Apparel_GuardianArmor"]/recipeMaker/researchPrerequisite</xpath>
+            <value>
+              <researchPrerequisite>O21_DNI_MetalArmour</researchPrerequisite>
+            </value>
+          </li>
+        </operations>
       </match>
     </match>
   </Operation>
@@ -4313,6 +4445,42 @@
                 </researchPrerequisites>
               </value>
             </nomatch>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Vanilla Weapons Expanded {Dragons Not Included}
+    ==========-->
+
+  <!--Armor requires new research -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Weapons Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[O21] Dragons Not Included</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ResearchProjectDef[defName="O21_DNI_ResonanceGuns"]/prerequisites/li[text()="O21_DNI_FlintlockGuns"]</xpath>
+            <value>
+              <li>VWE_Gunpowder</li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[@ParentName="O21BaseMakeableGunMedieval"]/recipeMaker/researchPrerequisite[text()="O21_DNI_FlintlockGuns"]</xpath>
+            <value>
+              <researchPrerequisite>VWE_Gunpowder</researchPrerequisite>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ResearchProjectDef[defName="O21_DNI_ResonanceGuns"]/prerequisites/li[text()="O21_DNI_FlintlockGuns"] | /Defs/ResearchProjectDef[defName="O21_DNI_FlintlockGuns"]</xpath>
           </li>
         </operations>
       </match>

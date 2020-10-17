@@ -560,7 +560,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Replimat
         {LWM's Deep Storage}
     Rimatomics
-        {Vanilla Furniture Expanded - Power, Sparkling Worlds - Full Mod}
+        {Vanilla Furniture Expanded - Power, Sparkling Worlds - Full Mod, Sparkling Worlds - Modular Core - Reduced features}
     RIMkea
         {Stuffed Floors, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module}
     RimOverhaul
@@ -579,7 +579,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra}
     Smokeleaf Industry Reborn
         {RimPlas (Continued), Vanilla Brewing Expanded, Vanilla Cooking Expanded, Vanilla Furniture Expanded - Production}
-    Sparkling Worlds - Full Mod
+    Sparkling Worlds
         {More Furniture [1.1 + 1.2], Vanilla Furniture Expanded, Vanilla Furniture Expanded - Medical Module, Vanilla Furniture Expanded - Production, Vanilla Furniture Expanded - Spacer Module, Wall Vitals Monitor}
     Soft Warm Beds
         {More Furniture [1.1 + 1.2], Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module}
@@ -590,7 +590,11 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Universal Fermenter
         {Vanilla Factions Expanded - Medieval, Vanilla Factions Expanded - Settlers, RimBees}
     Vanilla Armour Expanded
-        {NightVision}
+        {Dragons Not Included, NightVision}
+    Vanilla Factions Expanded - Medieval
+        {Dragons Not Included, Medieval Madness: Tools of the Trade}
+    Vanilla Factions Expanded - Vikings
+        {Dragons Not Included}
     Vanilla Furniture Expanded
         {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields, More Furniture, Vanilla Furniture Expanded - Spacer Module}
     Vanilla Furniture Expanded - Farming
@@ -599,6 +603,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Apothecary (Continued), Medical System Expansion - Revived, Smokeleaf Industry Reborn, What the hack?!}
     Vanilla Furniture Expanded - Spacer Module
         {LWM's Deep Storage, [WD] Reinforced Doors}
+    Vanilla Weapons Expanded
+        {Dragons Not Included}
     VGP Garden Fabrics
         {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Animals Overhaul Reloaded, MendAndRecycle, SeedsPlease}
     ZARS Production Spots
@@ -679,6 +685,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 ### Research_Projects:
 `This file will contain all patches that replace/change research requirements for Vanilla and Mods.`
 
+    Dragons Not Included
+        {Change armor research}
     Glass+Lights
         {Disallow lights until electricity is researched, Remove Redundancies}
     High Tech Laboratory Facilities (Continued)
@@ -687,6 +695,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Telescope requires complex furniture}
     Industrial Rollers
         {Rollers require complex furniture and electricity}
+    Medieval Madness: Tools of the Trade
+        {Change weapon requirements}
     RoofBomb
         {Shaped Charges require IEDs}
 
@@ -713,7 +723,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {LWM's Deep Storage, Dubs Bad Hygiene, Fertile Fields [1.1], Rimatomics, Rimefeller, [D] Thermodynamics - Hot Meals, Vanilla Factions Expanded - Medieval, Vanilla Factions Expanded - Vikings}
 
 *******
-# Incorporated Mods in RimWorld 1.1
+# Incorporated Mods in RimWorld 1.2
 *******
 ```
 Alpha Animals
@@ -923,6 +933,7 @@ Zen Garden
 [JDS] Simple Storage
 [JPT] Soft Warm Beds
 [LC] Survival Tools
+[O21] Dragons Not Included
 [RF] Fishing
 [SYR] Doormats
 [T] MoreFloors

@@ -2,6 +2,43 @@
   <!--This file will contain all patches that replace/change research requirements for Vanilla and Mods-->
 
   <!--==========
+    Dragons Not Included
+    ==========-->
+
+  <!--Change armor research-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[O21] Dragons Not Included</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[@ParentName="ApparelMakeableBase"]/recipeMaker/researchPrerequisite[text()="O21_DNI_LeatherArmour"]</xpath>
+          <value>
+            <researchPrerequisite>PlateArmor</researchPrerequisite>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ResearchProjectDef[defName="PlateArmor"]/prerequisites</xpath>
+          <value>
+            <li>O21_DNI_SimpleApparel</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ResearchProjectDef[defName="O21_DNI_MetalArmour"]/prerequisites</xpath>
+          <value>
+            <li>PlateArmor</li>
+          </value>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/ResearchProjectDef[defName="O21_DNI_MetalArmour"]/prerequisites/li[text()="O21_DNI_LeatherArmour"] | /Defs/ResearchProjectDef[defName="O21_DNI_LeatherArmour"]</xpath>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--==========
     Glass+Lights
     ==========-->
 
@@ -104,6 +141,41 @@
       </value>
     </match>
   </Operation>
+
+  <!--==========
+    Medieval Madness: Tools of the Trade
+    ==========-->
+
+  <!--Change weapon requirements-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medieval Madness: Tools of the Trade</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ResearchProjectDef[defName="LongBlades"]/prerequisites</xpath>
+          <value>
+            <li>BasicTools</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ResearchProjectDef[defName="BasicCrossbows"]/prerequisites</xpath>
+          <value>
+            <li>Greatbow</li>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="HeavyCrossbows"]/baseCost</xpath>
+          <value>
+            <baseCost>1100</baseCost>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
 
   <!--==========
     RoofBomb
