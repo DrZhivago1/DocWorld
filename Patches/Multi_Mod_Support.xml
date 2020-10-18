@@ -61,155 +61,6 @@
   </Operation>
 
   <!--==========
-    Change Dresser {GloomyFurniture, Lord of the Rims - Elves, Medieval Times Unofficial, Polyamory Beds (Vanilla Edition), RIMkea, [sd] Goodnight (Continued)}
-    ==========-->
-
-  <!--Allow Gloomy Furniture beds to use Change Dresser and Mirror-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[KV] Change Dresser - 1.1</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>GloomyFurniture</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName = "RGK_bedSingle" or defName = "RGK_bedSingleB" or defName = "RGK_bedDouble" or defName = "RGK_bedDoubleB"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>ChangeDresser</li>
-              <li>ChangeMirror</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Allow LotRE beds to use Change Dresser and Mirror-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[KV] Change Dresser - 1.1</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Lord of the Rims - Elves</li>
-        <li>Lord of the Rims - Elves (Continued)</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName = "LotRE_ElvenRoyalBed" or defName = "LotRE_ElvenBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>ChangeDresser</li>
-              <li>ChangeMirror</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Allow Medieval Times beds to use Change Dresser and Mirror-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[KV] Change Dresser - 1.1</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Medieval Times Unofficial Update</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName = "MedTimes_Cot" or defName = "MedTimes_CotDouble"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>ChangeDresser</li>
-              <li>ChangeMirror</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Allow Polyamory Beds to use Change Dresser and Mirror-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[KV] Change Dresser - 1.1</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Polyamory Beds (Vanilla Edition)</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName = "TripleBed" or defName = "QuadBed" or defName = "TripleRoyalBed" or defName = "QuadRoyalBed" or defName = "PentaRoyalBed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>ChangeDresser</li>
-              <li>ChangeMirror</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Allow RIMkea beds to use Change Dresser and Mirror-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[KV] Change Dresser - 1.1</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>RIMkea</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName = "PILFURBed" or defName = "SNOREGGSingle" or defName = "SNOREGGDouble" or defName = "KRUDNEPPSingle" or defName = "SLABNEPPDouble"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>ChangeDresser</li>
-              <li>ChangeMirror</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Allow [sd]Goodnight beds to use Change Dresser and Mirror-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[KV] Change Dresser - 1.1</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>[sd] Goodnight (Continued)</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName = "sd_basebed"]/comps/li[@Class = "CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>ChangeDresser</li>
-              <li>ChangeMirror</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--==========
     Coal Expanded {Simple Chains: Lumber}
     ==========-->
 
@@ -240,21 +91,6 @@
       </match>
     </match>
   </Operation>
-
-  <!--Create coal from wood logs
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Coal Expanded</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Expanded Woodworking</li>
-      </mods>
-      <match 
-        </operations>
-      </match>
-    </match>
-  </Operation>-->
 
   <!--==========
     Cupro's Stones {Simple Chains: Steel, RIMkea, MBS Faux Rock Wall, Simply More Bridges}
@@ -1135,6 +971,113 @@
   </Operation>
 
   <!--==========
+    Expanded Materials - Metals {Fertile Fields [1.1], [WD] Simple Coal}
+    ==========-->
+
+  <!--Change recipe to use sand-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Materials - Metals</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Fertile Fields [1.1]</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="VMEu_MakeConcrete"]/ingredients/li</xpath>
+            <value>
+              <li>
+                <filter>
+                  <categories>
+                    <li>SandPile</li>
+                  </categories>
+                </filter>
+                <count>5</count>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="VMEu_MakeConcrete"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>SandPile</li>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/RecipeDef[defName="VMEu_MakeConcrete"]/fixedIngredientFilter/categories</xpath>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Smelt steel with coal, smart patches included for any mod using generic defNames
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Materials - Metals</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[WD] Simple Coal</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="VMEu_MakeSteel"]/ingredients/li[2]/filter/thingDefs | /Defs/RecipeDef[defName="VMEu_MakeSteel"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>WDCoal</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Materials - Metals</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="Coal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="VMEu_MakeSteel"]/ingredients/li[2]/filter/thingDefs | /Defs/RecipeDef[defName="VMEu_MakeSteel"]/fixedIngredientFilter/thingDefs</xpath>
+          <value>
+            <li>Coal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Materials - Metals</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="Charcoal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/RecipeDef[defName="VMEu_MakeSteel"]/ingredients/li[2]/filter/thingDefs | /Defs/RecipeDef[defName="VMEu_MakeSteel"]/fixedIngredientFilter/thingDefs</xpath>
+          <value>
+            <li>Charcoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>-->
+
+
+  <!--==========
     Expanded Woodworking {Simple Chains: Leather, Survivalist's Additions}
     ==========-->
 
@@ -1404,7 +1347,7 @@
   </Operation>
 
   <!--==========
-    Glass+Lights {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module, Raise The Roof}
+    Glass+Lights {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module, Raise The Roof, Rimatomics}
     ==========-->
 
   <!--Use glass from "Glass+Lights" if "Dubs Skylights" also installed. Also removes "Dubs Skylights" glass resource.-->
@@ -1478,6 +1421,29 @@
             <xpath>/Defs/ResearchProjectDef[defName="TransparentRoofing"]/techLevel</xpath>
             <value>
               <techLevel>Medieval</techLevel>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Move designation category-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Rimatomics</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName = "GLWindowRimatomics"]/designationCategory</xpath>
+            <value>
+              <designationCategory>Structure</designationCategory>
             </value>
           </li>
         </operations>
@@ -2034,7 +2000,7 @@
   </Operation>
 
   <!--==========
-    RIMkea {Stuffed Floors, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module}
+    RIMkea {Stuffed Floors}
     ==========-->
 
   <!--Remove stone floors added by "RIMKea" IF "Stuffed Floors" is installed-->
@@ -2069,55 +2035,6 @@
           </li>
           <li Class="PatchOperationRemove">
             <xpath>/Defs/TerrainDef[defName="Floor_StoneSquaresMarble"]</xpath>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Add support for linkables to beds-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>RIMkea</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="PILFURBed" or defName="SNOREGGSingle" or defName="SNOREGGDouble" or defName="KRUDNEPPSingle" or defName="SLABNEPPDouble"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Table_RoyalDresser</li>
-              <li>Table_RoyalEndTable</li>
-              <li>Table_Wardrobe</li>
-              <li>Table_LightEndTable</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>RIMkea</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded - Spacer Module</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="PILFURBed" or defName="SNOREGGSingle" or defName="SNOREGGDouble" or defName="KRUDNEPPSingle" or defName="SLABNEPPDouble"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Table_IlluminatedEndTable</li>
-              <li>Table_IlluminatedDresser</li>
-            </value>
           </li>
         </operations>
       </match>
@@ -2176,7 +2093,7 @@
   </Operation>
 
   <!--==========
-    RimPlas {Insulation, Insulation (Continued), LWM's Deep Storage, More Furniture, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module, Wall Vitals Monitor}
+    RimPlas {Insulation, Insulation (Continued), LWM's Deep Storage. #storage}
     ==========-->
 
   <!--Move insulated items to Insulation designation category-->
@@ -2223,103 +2140,6 @@
           </li>
         </operations>
       </nomatch>
-    </match>
-  </Operation>
-
-  <!--Add linkables to bed rolls-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>RimPlas (Continued)</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>More Furniture [1.1 + 1.2]</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="BedRoll_TSB" or defName="BedrollDouble_TSB"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Anon2Dresser</li>
-              <li>Anon2EndTable</li>
-              <li>Anon2RoyalEndTable</li>
-              <li>Anon2EndTableLight</li>
-              <li>Anon2RoyalEndTableLight</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Add linkables to bed rolls-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>RimPlas (Continued)</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="BedRoll_TSB" or defName="BedrollDouble_TSB"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Table_LightEndTable</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Add linkables to bed rolls-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>RimPlas (Continued)</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded - Spacer Module</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="BedRoll_TSB" or defName="BedrollDouble_TSB"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Table_IlluminatedEndTable</li>
-              <li>Table_IlluminatedDresser</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Add linkables to hospital bed-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>RimPlas (Continued)</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Wall Vitals Monitor</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="RPHT_HospitalBed"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Wall_M_VitalsMonitor</li>
-            </value>
-          </li>
-        </operations>
-      </match>
     </match>
   </Operation>
 
@@ -3530,31 +3350,8 @@
   </Operation>
 
   <!--==========
-    Smokeleaf Industry Reborn {RimPlas (Continued), Vanilla Brewing Expanded, Vanilla Cooking Expanded, Vanilla Furniture Expanded - Production}
+    Smokeleaf Industry Reborn {Vanilla Brewing Expanded}
     ==========-->
-
-  <!--Add linkables to Auto Trimmer, Cultivation Bench and Medicinals Lab-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Smokeleaf Industry Reborn</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>RimPlas (Continued)</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="PoweredCultivationBench" or defName="SmokeleafAutoTrimmer" or defName="MedicinalsLab"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>RimPlas_DrugCabinet</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
 
   <!--Add to HempFlour to Whiskey production-->
   <Operation Class="PatchOperationFindMod">
@@ -3575,263 +3372,6 @@
             <li>HempFlour</li>
           </value>
         </match>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Add linkables to Auto Trimmer, Cultivation Bench and Medicinals Lab-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Smokeleaf Industry Reborn</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded - Production</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="PoweredCultivationBench" or defName="SmokeleafAutoTrimmer" or defName="MedicinalsLab"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>VFE_DrugCabinet</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--==========
-    Soft Warm Beds {More Furniture [1.1 + 1.2], Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module}
-    ==========-->
-
-  <!--Add linkables to Hammock-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[JPT] Soft Warm Beds</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>More Furniture [1.1 + 1.2]</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="Rede"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Anon2Dresser</li>
-              <li>Anon2EndTable</li>
-              <li>Anon2RoyalEndTable</li>
-              <li>Anon2EndTableLight</li>
-              <li>Anon2RoyalEndTableLight</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[JPT] Soft Warm Beds</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="Rede"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Table_RoyalDresser</li>
-              <li>Table_RoyalEndTable</li>
-              <li>Table_Wardrobe</li>
-              <li>Table_LightEndTable</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[JPT] Soft Warm Beds</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded - Spacer Module</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="Rede"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Table_IlluminatedEndTable</li>
-              <li>Table_IlluminatedDresser</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--==========
-    Sparkling Worlds {More Furniture [1.1 + 1.2], Vanilla Furniture Expanded, Vanilla Furniture Expanded - Medical Module, Vanilla Furniture Expanded - Production, Vanilla Furniture Expanded - Spacer Module, Wall Vitals Monitor}
-    ==========-->
-
-  <!--Add linkable support to Hospital Bed-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Sparkling Worlds - Full Mod</li>
-      <li>Sparkling Worlds - Modular Core - Reduced features</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Wall Vitals Monitor</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="GlitterworldHospitalBedSW"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Wall_M_VitalsMonitor</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Sparkling Worlds - Full Mod</li>
-      <li>Sparkling Worlds - Modular Core - Reduced features</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>More Furniture [1.1 + 1.2]</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="GlitterworldHospitalBedSW"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Anon2Dresser</li>
-              <li>Anon2EndTable</li>
-              <li>Anon2RoyalEndTable</li>
-              <li>Anon2EndTableLight</li>
-              <li>Anon2RoyalEndTableLight</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Sparkling Worlds - Full Mod</li>
-      <li>Sparkling Worlds - Modular Core - Reduced features</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="GlitterworldHospitalBedSW"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Table_RoyalDresser</li>
-              <li>Table_RoyalEndTable</li>
-              <li>Table_Wardrobe</li>
-              <li>Table_LightEndTable</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Sparkling Worlds - Full Mod</li>
-      <li>Sparkling Worlds - Modular Core - Reduced features</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded - Medical Module</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="GlitterworldHospitalBedSW"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Facility_VitalsCentre</li>
-              <li>Facility_IVDrip</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Sparkling Worlds - Full Mod</li>
-      <li>Sparkling Worlds - Modular Core - Reduced features</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded - Spacer Module</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="GlitterworldHospitalBedSW"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Table_IlluminatedEndTable</li>
-              <li>Table_IlluminatedDresser</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Add linkable support to Matterweaver and Mechanite Assembly-->
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Sparkling Worlds - Full Mod</li>
-      <li>Sparkling Worlds - Modular Core - Reduced features</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded - Production</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="MechaniteAssemblySW" or defName="TableWeaverSW"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>VFE_MachiningCabinet</li>
-              <li>VFE_FabricationCabinet</li>
-            </value>
-          </li>
-        </operations>
       </match>
     </match>
   </Operation>
@@ -4124,7 +3664,7 @@
   </Operation>
 
   <!--==========
-    Vanilla Furniture Expanded {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields, More Furniture, Vanilla Furniture Expanded - Spacer Module}
+    Vanilla Furniture Expanded {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields. #storage}
     ==========-->
 
   <!--Allow corpse composting at stone campfire-->
@@ -4203,63 +3743,8 @@
     </match>
   </Operation>
 
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Furniture Expanded</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>More Furniture [1.1 + 1.2]</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <!--Add linkables to beds-->
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="Bed_StoneSlab" or defName="Bed_Simple" or defName="Bed_Kingsize" or defName="Bed_Ergonomic" or defName="Bed_DoubleErgonomic"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Anon2Dresser</li>
-              <li>Anon2EndTable</li>
-              <li>Anon2RoyalEndTable</li>
-              <li>Anon2EndTableLight</li>
-              <li>Anon2RoyalEndTableLight</li>
-            </value>
-          </li>
-          <!--Remove redundancies from "More Furniture" IF "VFE" is installed-->
-          <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName="Anon2FileCabinet"]</xpath>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Furniture Expanded</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded - Spacer Module</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <!--Add linkables to beds-->
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="Bed_Simple"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>Table_IlluminatedEndTable</li>
-              <li>Table_IlluminatedDresser</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
   <!--==========
-    Vanilla Furniture Expanded - Farming {LWM's Deep Storage}
+    Vanilla Furniture Expanded - Farming {LWM's Deep Storage. #storage}
     ==========-->
 
   <!--Move animal feeder to Storage if LWM Deep Storage is not installed. #storage-->
@@ -4281,101 +3766,7 @@
   </Operation>
 
   <!--==========
-    Vanilla Furniture Expanded - Production {Apothecary (Continued), Medical System Expansion - Revived, Smokeleaf Industry Reborn, What the hack?!}
-    ==========-->
-
-  <!--Add linkable connection to Mechanoid Workshop-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Furniture Expanded - Production</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Apothecary (Continued)</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="AYCharcoalSmithy"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>VFE_SmithyCabinet</li>
-            </value>
-          </li>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="AYCharcoalStove"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>VFE_KitchenSinkCabinet</li>
-            </value>
-          </li>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="AYApothecaryTable"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-            <value>
-              <li>VFE_DrugCabinet</li>
-            </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Add linkable connection to MSE from VFE-P-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Furniture Expanded - Production</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Medical System Expansion - Revived</li>
-      </mods>
-      <match Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="ArchotechProsthesesBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-        <value>
-          <li>VFE_FabricationCabinet</li>
-        </value>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Add linkable connection to Electric Drug Lab for trimming tools-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Furniture Expanded - Production</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Smokeleaf Industry Reborn</li>
-      </mods>
-      <match Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="VFE_TableDrugLabElectric"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-        <value>
-          <li>TrimmingTools</li>
-        </value>
-      </match>
-    </match>
-  </Operation>
-
-  <!--Add linkable connection to Mechanoid Workshop-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Furniture Expanded - Production</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>What the hack?!</li>
-      </mods>
-      <match Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="WTH_TableMechanoidWorkshop"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-        <value>
-          <li>VFE_FabricationCabinet</li>
-          <li>VFE_MachiningCabinet</li>
-        </value>
-      </match>
-    </match>
-  </Operation>
-
-  <!--==========
-    Vanilla Furniture Expanded - Spacer Module {LWM's Deep Storage, [WD] Reinforced Doors}
+    Vanilla Furniture Expanded - Spacer Module {LWM's Deep Storage, [WD] Reinforced Doors. #storage}
     ==========-->
 
   <!--Change designation category of storage furniture for "Vanilla Furniture Expanded - Spacer Module" if "LWM Deep Storage" is/isnt installed. #storage-->

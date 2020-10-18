@@ -176,6 +176,23 @@
     </Operation>
 
     <!--==========
+    Advanced Polyamory Beds
+    ==========-->
+
+    <!--Move items to Beds tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Advanced Polyamory Beds</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[@Name="AdvancedPolyBed"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Beds</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
     Alpha Biomes
     ==========-->
 
@@ -1186,7 +1203,7 @@
     Industrial Age - Objects and Furniture
     ==========-->
 
-    <!--Move items to Lighting and Joy tab-->
+    <!--Move items to Joy, Lighting, and Storage tab. #storage-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Industrial Age - Objects and Furniture (Continued)</li>
@@ -1213,6 +1230,23 @@
                     </value>
                 </li>
             </operations>
+        </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Industrial Age - Objects and Furniture (Continued)</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="Estate_Refrigerator"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
         </match>
     </Operation>
 
@@ -1354,7 +1388,7 @@
     Lord of the Rims - Elves
     ==========-->
 
-    <!--Move items to Beds, Fences, Lighting, and Storage tab. #fence #storage-->
+    <!--Move items to Beds, Fences, and Lighting tab. #fence -->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Lord of the Rims - Elves</li>
@@ -1388,24 +1422,6 @@
                     </value>
                 </li>
             </operations>
-        </match>
-    </Operation>
-
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Lord of the Rims - Elves</li>
-            <li>Lord of the Rims - Elves (Continued)</li>
-        </mods>
-        <match Class="PatchOperationFindMod">
-            <mods>
-                <li>LWM's Deep Storage</li>
-            </mods>
-            <nomatch Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="Estate_Refrigerator"]/designationCategory</xpath>
-                <value>
-                    <designationCategory>DZ_Storage</designationCategory>
-                </value>
-            </nomatch>
         </match>
     </Operation>
 
@@ -1568,6 +1584,28 @@
             <value>
                 <designationCategory>DZ_Husbandry</designationCategory>
             </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Natural Paths
+    ==========-->
+
+    <!--Move items to Floors tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Natural Paths</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/TerrainDef/designationCategory[text()="NaturalPaths"]</xpath>
+                    <value>
+                        <designationCategory>Floors</designationCategory>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 

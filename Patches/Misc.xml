@@ -335,27 +335,6 @@
    </Operation>
 
    <!--==========
-    More Furniture
-    ==========-->
-
-   <!--Add linkable support to bed rolls-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>More Furniture [1.1 + 1.2]</li>
-      </mods>
-      <match Class="PatchOperationAdd">
-         <xpath>/Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-         <value>
-            <li>Anon2Dresser</li>
-            <li>Anon2EndTable</li>
-            <li>Anon2RoyalEndTable</li>
-            <li>Anon2EndTableLight</li>
-            <li>Anon2RoyalEndTableLight</li>
-         </value>
-      </match>
-   </Operation>
-
-   <!--==========
     Open The Windows
     ==========-->
 
@@ -954,53 +933,6 @@
                </value>
             </li>
          </operations>
-      </match>
-   </Operation>
-
-   <!--==========
-    Vanilla Furniture Expanded
-    ==========-->
-
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>Vanilla Furniture Expanded</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-         <success>Always</success>
-         <operations>
-            <!--Add end table linkable to simple bed-->
-            <li Class="PatchOperationAdd">
-               <xpath>/Defs/ThingDef[defName="Bed_Simple"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-               <value>
-                  <li>Table_LightEndTable</li>
-               </value>
-            </li>
-            <!--Add linkable support to bed rolls-->
-            <li Class="PatchOperationAdd">
-               <xpath>/Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-               <value>
-                  <li>Table_LightEndTable</li>
-               </value>
-            </li>
-         </operations>
-      </match>
-   </Operation>
-
-   <!--==========
-    Vanilla Furniture Expanded - Spacer Module
-    ==========-->
-
-   <!--Add linkable support to bed rolls-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>Vanilla Furniture Expanded - Spacer Module</li>
-      </mods>
-      <match Class="PatchOperationAdd">
-         <xpath>/Defs/ThingDef[defName="Bedroll" or defName="BedrollDouble"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
-         <value>
-            <li>Table_IlluminatedEndTable</li>
-            <li>Table_IlluminatedDresser</li>
-         </value>
       </match>
    </Operation>
 

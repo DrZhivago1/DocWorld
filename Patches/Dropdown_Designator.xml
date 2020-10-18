@@ -1233,6 +1233,36 @@
     </Operation>
 
     <!--==========
+    Natural Paths
+    ==========-->
+
+    <!--pathBase-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Natural Paths</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_NP_dirtPath</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/TerrainDef[@Name="pathBase"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_NP_dirtPath</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Over-Wall Nutrient Paste Dispenser
     ==========-->
 

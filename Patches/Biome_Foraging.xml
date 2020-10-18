@@ -43,6 +43,21 @@
   </Operation>
 
   <!--==========
+    Lord of the Rims - Elves (Continued)
+    ==========-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Lord of the Rims - Elves (Continued)</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/BiomeDef[defName="LotRE_MallornForest"]/foragedFood</xpath>
+      <value>
+        <foragedFood>LotRE_PlantLembas</foragedFood>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
     More Vanilla Biomes
     ==========-->
   <Operation Class="PatchOperationFindMod">
@@ -129,6 +144,56 @@
               <foragedFood>VCE_RawPricklyPear</foragedFood>
             </value>
           </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    RimUniverse - Biomes
+    ==========-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Plants Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>RimUniverse - Biomes</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="Permafrost"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_Bearberry</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="Grassland"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawApple</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="Savanna"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawPeach</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="MoistDeciduousForest"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawBanana</foragedFood>
+            </value>
+          </li>
+          <!--Leave as berries for now
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="Woodland"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawApple</foragedFood>
+            </value>
+          </li>-->
         </operations>
       </match>
     </match>

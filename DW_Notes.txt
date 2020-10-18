@@ -19,10 +19,14 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 
     Vanilla
         {VCE_Bearberry(BorealForest/ColdBog), VCE_RawCherry(Tundra), VCE_RawBanana(TropicalRainforest/TropicalSwamp), VCE_RawPricklyPear(AridShrubland)}
+    Lord of the Rims - Elves (Continued)
+        {LotRE_PlantLembas(LotRE_MallornForest)}
     More Vanilla Biomes
         {VCE_RawCherry(ZBiome_AlpineMeadow), VCE_RawPlum(ZBiome_CloudForest), VCE_RawPricklyPear(ZBiome_DesertOasis), VCE_RawApple(ZBiome_Grasslands), VCE_RawPeach(ZBiome_Marsh)}
     Realistic Planets - Fan Update
         {VCE_Bearberry(RRP_Steppes/RRP_Permafrost), VCE_RawPeach(RRP_Savanna), VCE_RawPricklyPear(RRP_TemperateDesert/RRP_Oasis), VCE_RawApple(RRP_Grassland)}
+    RimUniverse - Biomes
+        {VCE_Bearberry(Permafrost), VCE_RawApple(Grassland), VCE_RawPeach(Savanna), VCE_RawBanana(MoistDeciduousForest)}
 
 ### Cloth_Beds:
 `This file will contain all patches that add cloth to bed construction recipes, with conditionals if certain mods are installed.`
@@ -39,6 +43,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 
     Vanilla
         {Move items to Animals(conditional), Culinary, Decor, Husbandry, Lighting, and Storage(conditional) tab}
+    Advanced Polyamory Beds
+        {Move items to Beds tab}
     Alpha Biomes
         {Move items to Floors, Power, Production, Security, Joy, Culinary, Temperature, and Structure tab}
     Animal Medical Bed
@@ -121,7 +127,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     High Density Hydroponics
         {Move items to Husbandry tab}
     Industrial Age - Objects and Furniture
-        {Move items to Lighting and Joy tab}
+        {Move items to Joy, Lighting, and Storage tab. #storage}
     Industrial Rollers
         {Move items to Industrial tab}
     Invisible Animal Beds
@@ -135,7 +141,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Lord of the Rims - Dwarves
         {Move items to Lighting tab}
     Lord of the Rims - Elves
-        {Move items to Beds, Fences, Lighting, and Storage tab. #fence #storage}
+        {Move items to Beds, Fences, and Lighting tab. #fence}
     Mechalit Core
         {Move items to Beds, Husbanry, and Lighting tab}
     Medical Supplements, Medical Supplements (Continued)
@@ -146,6 +152,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Move items to Decor, Furniture, and Lighting tab.}
     More Hydroponics
         {Move items to Husbandry tab}
+    Natural Paths
+        {Move items to Floors tab}
     Neon Rim: The Rimworld Signs Pack
         {Move items to Decor tab}
     NPDTiers - The Nutrient Paste Expansion Mod
@@ -346,6 +354,10 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Anon2CarpetBase, ANON2StandingLampBase}
     More Linkables
         {ToolCabinetA, ToolCabinetB, ToolCabinetC}
+    Natural Paths
+        {pathBase}
+    Over-Wall Nutrient Paste Dispenser
+        {NutrientPasteDispenser}
     Questionable Ethics Enhanced
         {QE_Building_OrganVat, QE_PawnVat}
     Rimatomics
@@ -460,6 +472,26 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     UN-Colony
         {Remove and replace all UN-Colony glass}
 
+### Linkables:
+`This file will contain all linkable patches that allow furniture from various mods to utilize modded linkables, based on Vanilla counterparts.`
+
+    Change Dresser
+        {Vanilla EndTable support}
+    More Furniture
+        {Vanilla EndTable support. Vanilla Furniture Expanded remove redundancy.}
+    Smokeleaf Industry Reborn
+        {RimPlas (Continued), Vanilla Furniture Expanded - Production}
+    Vanilla Furniture Expanded
+        {Vanilla EndTable support}
+    Vanilla Furniture Expanded - Medical Module
+        {Vanilla VitalsMonitor support}
+    Vanilla Furniture Expanded - Production
+        {Apothecary (Continued), Medical System Expansion - Revived, What the hack?!, Sparkling Worlds - Full Mod, Sparkling Worlds - Modular Core - Reduced features}
+    Vanilla Furniture Expanded - Spacer Module
+        {Vanilla EndTable support}
+    Wall Vitals Monitor
+        {Vanilla VitalsMonitor support}
+
 ### Misc:
 `This file will contain all miscellaneous patches that replace/change all sorts of things from various mods.`
 
@@ -479,8 +511,6 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Patch Vanilla paved tile flooring}
     Mamuffalo
         {Use Vanilla muffalo leather}
-    More Furniture
-        {Add linkable support to bed rolls}
     Open The Windows
         {Allow regular windows to be made of stone}
     Power Switch
@@ -507,10 +537,6 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Allow armor to be made of woody stuff}
     Vanilla Factions Expanded - Medieval
         {Allow armor to be made of woody stuff}
-    Vanilla Furniture Expanded
-        {Add end table linkable to simple bed, Add linkable support to bed rolls}
-    Vanilla Furniture Expanded - Spacer Module
-        {Add linkable support to bed rolls}
     VGP Garden Gourmet
         {Stuff items}
 
@@ -519,8 +545,6 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 
     Ceramics
         {Expanded Woodworking, Fertile Fields, VFE-Production}
-    Change Dresser
-        {GloomyFurniture, Lord of the Rims - Elves *not yet 1.0*, Medieval Times Unofficial, Polyamory Beds (Vanilla Edition), RIMkea, [sd] Goodnight (Continued)}
     Coal Expanded
         {Simple Chains: Lumber}
     Cupro's Stones
@@ -531,6 +555,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Apothecary, Apothecary (Continued), Fertile Fields, Fermenter, Vanilla Furniture Expanded - Farming}
     Empire
         {Realistic Planets - Fan Update}
+    Expanded Materials - Metals
+        {Fertile Fields [1.1], [WD] Simple Coal}
     Expanded Woodworking
         {Simple Chains: Leather, Survivalist's Additions}
     Extended Storage
@@ -540,7 +566,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Floored
         {Simply More Bridges (Continued)}
     Glass+Lights
-        {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module, Raise The Roof}
+        {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module, Raise The Roof, Rimatomics}
     Gloomy Vanilla Overhaul
         {LWM's Deep Storage, Gloomy Extra - Kitchen}
     Harvest Organs Post Mortem
@@ -562,11 +588,11 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Rimatomics
         {Vanilla Furniture Expanded - Power, Sparkling Worlds - Full Mod, Sparkling Worlds - Modular Core - Reduced features}
     RIMkea
-        {Stuffed Floors, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module}
+        {Stuffed Floors}
     RimOverhaul
         {Simple Chains: Leather}
-    RimPlas, RimPlas (Continued)
-        {Insulation, Insulation (Continued), LWM's Deep Storage, More Furniture, Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module, Wall Vitals Monitor}
+    RimPlas
+        {Insulation, Insulation (Continued), LWM's Deep Storage. #storage}
     Simple Chains: Leather
         {[SYR] Universal Fermenter, Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest, Vanilla Factions Expanded - Vikings}
 	Simple Chains: Steel
@@ -578,11 +604,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Slightly More Realistic Wool Production Revived
         {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra}
     Smokeleaf Industry Reborn
-        {RimPlas (Continued), Vanilla Brewing Expanded, Vanilla Cooking Expanded, Vanilla Furniture Expanded - Production}
-    Sparkling Worlds
-        {More Furniture [1.1 + 1.2], Vanilla Furniture Expanded, Vanilla Furniture Expanded - Medical Module, Vanilla Furniture Expanded - Production, Vanilla Furniture Expanded - Spacer Module, Wall Vitals Monitor}
-    Soft Warm Beds
-        {More Furniture [1.1 + 1.2], Vanilla Furniture Expanded, Vanilla Furniture Expanded - Spacer Module}
+        {Vanilla Brewing Expanded}
     Standalone Hot Spring
         {Dubs Bad Hygiene}
     UN-Colony
@@ -596,13 +618,13 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
     Vanilla Factions Expanded - Vikings
         {Dragons Not Included}
     Vanilla Furniture Expanded
-        {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields, More Furniture, Vanilla Furniture Expanded - Spacer Module}
+        {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields. #storage}
     Vanilla Furniture Expanded - Farming
-        {LWM's Deep Storage}
+        {LWM's Deep Storage. #storage}
     Vanilla Furniture Expanded - Production
         {Apothecary (Continued), Medical System Expansion - Revived, Smokeleaf Industry Reborn, What the hack?!}
     Vanilla Furniture Expanded - Spacer Module
-        {LWM's Deep Storage, [WD] Reinforced Doors}
+        {LWM's Deep Storage, [WD] Reinforced Doors. #storage}
     Vanilla Weapons Expanded
         {Dragons Not Included}
     VGP Garden Fabrics
@@ -645,6 +667,8 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {Power and Ship Designation Category removal}
     More Furniture
         {ANON2MF Designation Category removal}
+    Natural Paths
+        {NaturalPaths Designation Category removal}
     Preemptive Strike, Preemptive Strike (Fork)
         {PES_Reconnaissance Designation Category removal}
     Project RimFactory Revived
@@ -726,6 +750,7 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 # Supported Mods in RimWorld 1.2
 *******
 ```
+Advanced Polyamory Beds
 Alpha Animals
 Alpha Biomes
 Animal Medical Bed
@@ -821,6 +846,8 @@ More Hydroponics
 More Linkables
 More Planning
 More Vanilla Biomes
+Natural Paths
+Natural Lakes
 NPDTiers - The Nutrient Paste Expansion Mod (Continued)
 Neon Rim: The Rimworld Signs Pack
 NightVision

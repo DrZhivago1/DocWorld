@@ -14,33 +14,34 @@
 		<li>Primus.FunctionalProps</li>
 	</incompatibleWith>
 	<loadAfter>
-		<li>Nif.ArchitectExpanded.FencesTabPatch</li>
-		<li>Terragg.ExtendedStorage.Extended</li>
-		<li>pelador.fermenter</li>
-		<li>Mlie.Fermenter</li>
-		<li>jamaicancastle.RF.fertilefields</li>
-		<li>Rikiki.FishIndustry</li>
-		<li>Owlchemist.GloomyVanilla</li>
-		<li>zymex.GloomyVanillaOverhaul</li>
-		<li>trasheddt.industrialisation</li>
-		<li>pelador.insulation</li>
-		<li>Mlie.Insulation</li>
-		<li>pelador.rimplas</li>
-		<li>Mlie.RimPlas</li>
-		<li>cucumpear.animalbeds</li>
-		<li>syrchalis.metallicbatteries</li>
 		<li>JPT.OpenTheWindows</li>
-		<li>spdskatr.projectrimfactory</li>
+		<li>Mlie.Fermenter</li>
+		<li>Mlie.Insulation</li>
+		<li>Mlie.RimPlas</li>
+		<li>Nif.ArchitectExpanded.FencesTabPatch</li>
+		<li>Oreno.VFEFarming.VGPGardenTools</li>
+		<li>Owlchemist.GloomyVanilla</li>
 		<li>Owlchemist.SimpleChains.Leather</li>
 		<li>Owlchemist.SimpleChains.Lumber</li>
+		<li>Rikiki.FishIndustry</li>
+		<li>Terragg.ExtendedStorage.Extended</li>
 		<li>VanillaExpanded.VBrewE</li>
 		<li>VanillaExpanded.VFEFarming</li>
-		<li>Oreno.VFEFarming.VGPGardenTools</li>
+		<li>cucumpear.animalbeds</li>
+		<li>jamaicancastle.RF.fertilefields</li>
+		<li>pelador.fermenter</li>
+		<li>pelador.insulation</li>
+		<li>pelador.rimplas</li>
+		<li>sarg.alphabiomes</li>
+		<li>spdskatr.projectrimfactory</li>
+		<li>syrchalis.metallicbatteries</li>
+		<li>trasheddt.industrialisation</li>
+		<li>wofl.MoreFurnitureUpdated</li>
+		<li>zymex.GloomyVanillaOverhaul</li>
+		<li>NanoCE.GlassLights</li>
 	</loadAfter>
-  <description>
-One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, better functioning, and intuitive system. This mod patches, fixes, and adds content to many mods (including but not limited to plain old vanilla RimWorld).
-
-&lt;size=24&gt;Features&lt;/size&gt;
+	<description>
+One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, better functioning, and intuitive system. This mod patches, fixes, and adds content to many mods (including but not limited to plain old vanilla RimWorld). &lt;size=24&gt;Features&lt;/size&gt;
     * New Architect tabs and organizes Architect menu
     * New drop down menus
     * Balances recipes for various items
@@ -50,18 +51,14 @@ One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, be
     * Lights are now more efficient with power usage
     * Greatly improves inter-mod compatibility
 
-[Link to Full Feature List]
-  https://github.com/DrZhivago1/DocWorld/wiki/1.-Content-Overview
+[Link to Full Feature List]https://github.com/DrZhivago1/DocWorld/wiki/1.-Content-Overview
 
-[Link to GitHub]
-  https://github.com/DrZhivago1/DocWorld/releases
+[Link to GitHub]https://github.com/DrZhivago1/DocWorld/releases
 
-[Link to Ludeon]
-  https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416
+[Link to Ludeon] https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416
 
-[The Doctor's World mod collection]
-  https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074
+[The Doctor's World mod collection] https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074
     
-  </description>
+	</description>
 
 </ModMetaData>

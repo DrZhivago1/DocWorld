@@ -278,6 +278,20 @@
    </Operation>
 
    <!--==========
+    Natural Paths
+    ==========-->
+
+   <!--NaturalPaths Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Natural Paths</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="NaturalPaths"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
     Preemptive Strike
     ==========-->
 
