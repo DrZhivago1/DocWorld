@@ -987,13 +987,13 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationReplace">
-            <xpath>/Defs/RecipeDef[defName="VMEu_MakeConcrete"]/ingredients/li</xpath>
+            <xpath>/Defs/RecipeDef[defName="VMEu_MakeConcrete"]/ingredients/li[1]</xpath>
             <value>
               <li>
                 <filter>
-                  <categories>
+                  <thingDefs>
                     <li>SandPile</li>
-                  </categories>
+                  </thingDefs>
                 </filter>
                 <count>5</count>
               </li>
