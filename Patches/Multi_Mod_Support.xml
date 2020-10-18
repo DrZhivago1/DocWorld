@@ -1013,7 +1013,7 @@
     </match>
   </Operation>
 
-  <!--Smelt steel with coal, smart patches included for any mod using generic defNames
+  <!--Smelt steel with coal, smart patches included for any mod using generic defNames-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Expanded Materials - Metals</li>
@@ -1074,7 +1074,7 @@
         </li>
       </operations>
     </match>
-  </Operation>-->
+  </Operation>
 
 
   <!--==========
