@@ -1122,6 +1122,34 @@
         </match>
     </Operation>
 
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationFindMod">
+                <mods>
+                    <li>Vanilla Brewing Expanded</li>
+                </mods>
+                <match Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Vanilla Plants Expanded</li>
+                    </mods>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="DZ_VFEPD_WineRack"]/building/fixedStorageSettings/filter/thingDefs</xpath>
+                        <value>
+                            <li>VBE_UnfermentedCider</li>
+                            <li>VBE_Cider</li>
+                        </value>
+                    </match>
+                </match>
+            </match>
+        </match>
+    </Operation>
+
     <!--Vanilla Factions Expanded - Medieval-->
     <Operation Class="PatchOperationFindMod">
         <mods>
