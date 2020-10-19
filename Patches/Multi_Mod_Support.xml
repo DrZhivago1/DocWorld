@@ -528,49 +528,8 @@
   </Operation>
 
   <!--==========
-    DDA Security and More {Fences And Floors (Continued), Fences And No Floors, Doors Expanded}
+    DDA Security and More {Doors Expanded}
     ==========-->
-
-  <!--If fence mods installed, remove research. In either instance of mods loaded or not, move items to Fences tab.-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>DDA Security and More (Continued)</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Fences And Floors (Continued)</li>
-        <li>Fences And No Floors</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationRemove">
-            <xpath>/Defs/ResearchProjectDef[defName="Fences"]</xpath>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="Fence"]/researchPrerequisites</xpath>
-            <value>
-              <researchPrerequisites>
-                <li>Machining</li>
-              </researchPrerequisites>
-            </value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="Fence"]/designationCategory</xpath>
-            <value>
-              <designationCategory>DZ_Fences</designationCategory>
-            </value>
-          </li>
-        </operations>
-      </match>
-      <nomatch Class="PatchOperationReplace">
-        <xpath>/Defs/ThingDef[defName="Fence"]/designationCategory</xpath>
-        <value>
-          <designationCategory>DZ_Fences</designationCategory>
-        </value>
-      </nomatch>
-    </match>
-  </Operation>
 
   <!--Replace research for blast doors from DDA Security with Doors Expanded research-->
   <Operation Class="PatchOperationFindMod">

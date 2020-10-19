@@ -50,17 +50,6 @@
   </DesignationCategoryDef>
 
   <DesignationCategoryDef>
-    <defName>DZ_Fences</defName>
-    <label>fences</label>
-    <description>Not quite walls, but still an obstruction.</description>
-    <order>710</order>
-    <specialDesignatorClasses>
-      <li>Designator_Cancel</li>
-      <li>Designator_Deconstruct</li>
-    </specialDesignatorClasses>
-  </DesignationCategoryDef>
-
-  <DesignationCategoryDef>
     <defName>DZ_Husbandry</defName>
     <label>husbandry</label>
     <description>For all your agricultural and livestock needs.</description>

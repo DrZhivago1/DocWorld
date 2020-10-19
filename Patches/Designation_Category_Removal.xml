@@ -23,27 +23,6 @@
       </nomatch>
    </Operation>
 
-   <!--Fences Designation Category removal, if mods not found. #fence-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>Architect Expanded - Fences</li>
-         <li>Architect Expanded - Fences (Tab Patch)</li>
-         <li>Extended Woodworking</li>
-         <li>Gloomy Vanilla</li>
-         <li>Gloomy Vanilla Overhaul</li>
-         <li>Fences And Floors (Continued)</li>
-         <li>Fences And No Floors</li>
-         <li>DDA Security and More</li>
-         <li>Lord of the Rims - Elves</li>
-         <li>Lord of the Rims - Elves (Continued)</li>
-         <li>[O21] Clutter Structures</li>
-         <li>Zen Garden</li>
-      </mods>
-      <nomatch Class="PatchOperationRemove">
-         <xpath>/Defs/DesignationCategoryDef[defName="DZ_Fences"]</xpath>
-      </nomatch>
-   </Operation>
-
    <!--Industrial Designation Category removal, if mods not found. #industrial-->
    <Operation Class="PatchOperationFindMod">
       <mods>
@@ -78,20 +57,6 @@
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="AB_AlphaBiomesBuildings"]</xpath>
-      </match>
-   </Operation>
-
-   <!--==========
-    Architect Expanded - Fences
-    ==========-->
-
-   <!--ArchitectExpandedFence Designation Category removal-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>Architect Expanded - Fences (Tab Patch)</li>
-      </mods>
-      <match Class="PatchOperationRemove">
-         <xpath>/Defs/DesignationCategoryDef[defName="ArchitectExpandedFence"]</xpath>
       </match>
    </Operation>
 
