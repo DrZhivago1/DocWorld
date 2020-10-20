@@ -37,6 +37,7 @@
                                 <offset>(0,0,0)</offset>
                             </shadowData>
                         </graphicData>
+                        <uiIconPath>Baby_Lamps/DZ_BabyLamp_UI</uiIconPath>
                         <comps>
                             <li Class="CompProperties_Glower">
                                 <glowRadius>6</glowRadius>
