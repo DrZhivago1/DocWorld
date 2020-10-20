@@ -58,8 +58,8 @@
       <li>Designator_Cancel</li>
       <li>Designator_Deconstruct</li>
       <li>Designator_Uninstall</li>
-			<li>Designator_SmoothSurface</li>
-			<li>Designator_RemoveFloor</li>
+      <li>Designator_SmoothSurface</li>
+      <li>Designator_RemoveFloor</li>
     </specialDesignatorClasses>
   </DesignationCategoryDef>
 

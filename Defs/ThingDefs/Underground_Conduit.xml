@@ -5,19 +5,4 @@
     <defName>DZ_PowerConduits</defName>
   </DesignatorDropdownGroupDef>
 
-  <ThingDef ParentName="PowerConduit">
-    <defName>DZ_CamoConduit</defName>
-    <label>underground power conduit</label>
-    <description>A bundle of underground electrical cables for moving power around. Can be placed beneath walls and other buildings. Labor intensive.</description>
-    <graphicData>
-      <texPath>Underground_Power_Conduits/DZ_CamoConduit_Atlas</texPath>
-    </graphicData>
-    <uiIconPath>Underground_Power_Conduits/DZ_CamoConduit_MenuIcon</uiIconPath>
-    <statBases>
-      <WorkToBuild>350</WorkToBuild>
-      <Flammability>0.0</Flammability>
-      <Beauty>0</Beauty>
-    </statBases>
-  </ThingDef>
-
 </Defs>

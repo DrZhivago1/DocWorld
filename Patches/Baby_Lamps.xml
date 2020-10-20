@@ -6,4 +6,54 @@
     VANILLA
     ==========-->
 
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+
+                    <!--Industrial tech desk lamp-->
+                    <ThingDef ParentName="StandingLampBase">
+                        <defName>DZ_BabyLamp</defName>
+                        <label>desk lamp</label>
+                        <description>An electrical standing lamp that lights an area. People need light to move and work at full speed.</description>
+                        <altitudeLayer>MoteOverhead</altitudeLayer>                        <!--Blueprint-->
+                        <passability>Standable</passability>
+                        <clearBuildingArea>false</clearBuildingArea>
+                        <rotatable>True</rotatable>
+                        <fillPercent>0.15</fillPercent>
+                        <costList>
+                            <Steel>10</Steel>
+                        </costList>
+                        <building>
+                            <isEdifice>false</isEdifice>
+                            <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+                        </building>
+                        <graphicData>
+                            <texPath>Baby_Lamps/DZ_BabyLamp</texPath>
+                            <graphicClass>Graphic_Multi</graphicClass>
+                            <drawSize>1,1</drawSize>
+                            <shadowData Inherit="False">
+                                <volume>(0, 0, 0)</volume>
+                                <offset>(0,0,0)</offset>
+                            </shadowData>
+                        </graphicData>
+                        <uiIconPath>Baby_Lamps/DZ_BabyLamp_UI</uiIconPath>
+                        <comps>
+                            <li Class="CompProperties_Glower">
+                                <glowRadius>6</glowRadius>
+                                <glowColor>(217,217,208,0)</glowColor>
+                            </li>
+                        </comps>
+                        <statBases>
+                            <MaxHitPoints>25</MaxHitPoints>
+                            <WorkToBuild>150</WorkToBuild>
+                        </statBases>
+                    </ThingDef>
+
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
 </Patch>
