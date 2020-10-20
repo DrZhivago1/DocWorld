@@ -1,4 +1,5 @@
 In order to best utilize this, search for a mod name using CTRL+F(or other search function based on your OS). The template below is an example of how each file documentation is setup.
+Each file can be toggled in mod settings, nullifying content.
 *******
 # Template 
 ******* 
@@ -12,7 +13,13 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
 *******
 ### New Original Content:
     DocWorld
-        {Underground Conduit, Designation Categories (Animals, Beds, Culinary, Decor, Fences, Husbandry, Industrial, Lighting, Storage)}
+        {Desk Lamp, Underground Conduit, Designation Categories (Animals, Beds, Culinary, Decor, Fences, Husbandry, Industrial, Lighting, Storage)}
+
+### Baby_Lamps:
+`This file will contain all baby lamps, to be turned on or off in mod options.`
+
+    Vanilla
+        {Industrial tech desk lamp}
 
 ### Biome_Foraging:
 `This file will contain all patches that alter biome foraging. Requires Vanilla Plants Expanded.`
@@ -748,6 +755,9 @@ In order to best utilize this, search for a mod name using CTRL+F(or other searc
         {New art assets applied: FishingPier x6, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus}
     Simple Chains: Lumber
         {New art assets applied: Trestle}
+
+### Underground_Conduits:
+`This file will contain the Underground Conduits. They cost the same amount of resources but require 6x the work of Vanilla.`
 
 ### VFE_Usable_Props:
 `This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Since this is a large overhaul of one specific mod, I deemed it worthy to have it's own file.`

@@ -12,6 +12,7 @@
                 <xpath>/Defs</xpath>
                 <value>
 
+                    <!--Industrial tech desk lamp-->
                     <ThingDef ParentName="StandingLampBase">
                         <defName>DZ_BabyLamp</defName>
                         <label>desk lamp</label>
