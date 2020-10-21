@@ -8,15 +8,16 @@
     <!--Vanilla Beds, with conditional if mods installed. #animalbeds-->
     <Operation Class="PatchOperationFindMod">
         <mods>
-            <li>Large Animal Beds</li>
-            <li>【1.1】Animalstrawbed</li>
-            <li>[sd] Chicken Nest (Continued)</li>
-            <li>[FSF] Invisible Animal Beds</li>
             <li>Animal Medical Bed</li>
             <li>Dragon's Descent</li>
-            <li>RimPlas</li>
-            <li>RimPlas (Continued)</li>
+            <li>Fast regen 1.1</li>
+            <li>Large Animal Beds</li>
             <li>RIMkea</li>
+            <li>RimPlas (Continued)</li>
+            <li>RimPlas</li>
+            <li>[FSF] Invisible Animal Beds</li>
+            <li>[sd] Chicken Nest (Continued)</li>
+            <li>【1.1】Animalstrawbed</li>
         </mods>
 
         <match Class="PatchOperationSequence">
