@@ -17,10 +17,10 @@ Each file can be toggled in mod settings, nullifying content.
 ### New Original Content:
     Desk_Lamps
         {This file will contain all desk lamps. Current tech levels: Industrial}
-    Walled_Vitals_Monitor
-        {This file will contain all walled vitals monitors. Current tech levels: Industrial, Spacer}
     Underground_Conduits
         {This file will contain the underground conduits. They cost the same amount of resources but require 6x the work of Vanilla.}
+    Vitals_Monitor
+        {This file will contain all vitals monitors. Current tech levels: Industrial, Spacer}
 
 ### Biome_Foraging:
 `This file will contain all patches that alter biome foraging. Requires Vanilla Plants Expanded.`
