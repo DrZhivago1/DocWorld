@@ -496,7 +496,7 @@ Each file can be toggled in mod settings, nullifying content.
 `This file will contain all patches that replace/change the power consumption for lights in Vanilla and Mods.`
 
     Vanilla
-        {basePowerConsumption for Standing Lamps is 20, glowRadius for Standing Lamps is 13, basePowerConsumption for SunLamp is 2000,  SunLamp does not short circuit in rain}
+        {basePowerConsumption for Standing Lamps is 20, basePowerConsumption for SunLamp is 2000,  SunLamp does not short circuit in rain}
 
 ### Enhanced_Miniaturisation:
 `This file will contain all patches that replace/change the ability to miniaturize objects for Vanilla and Mods.`
@@ -537,6 +537,8 @@ Each file can be toggled in mod settings, nullifying content.
         {Ceiling light and Grow light require glass}
     Dubs Bad Hygiene
         {Ceiling Fans require glass}
+    Dubs Skylights
+        {Skylights require glass. Also removes "Dubs Skylights" glass resource.}
     Glitter Tech
     Glitter Tech (No Surgery)
         {Floodlight requires glass}
@@ -659,7 +661,7 @@ Each file can be toggled in mod settings, nullifying content.
     Floored
         {Simply More Bridges (Continued)}
     Glass+Lights
-        {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module, Raise The Roof, Rimatomics}
+        {Vanilla Furniture Expanded - Spacer Module, Raise The Roof, Rimatomics}
     Gloomy Vanilla Overhaul
         {LWM's Deep Storage, Gloomy Extra - Kitchen}
     Harvest Organs Post Mortem

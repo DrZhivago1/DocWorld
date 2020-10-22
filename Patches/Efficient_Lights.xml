@@ -15,12 +15,6 @@
                     <basePowerConsumption>20</basePowerConsumption>
                 </value>
             </li>
-            <li Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="StandingLamp" or defName="StandingLamp_Red" or defName="StandingLamp_Green" or defName="StandingLamp_Blue"]/comps[@Class="CompProperties_Glower"]/glowRadius</xpath>
-                <value>
-                    <glowRadius>13</glowRadius>
-                </value>
-            </li>
             <!--Sun Lamps-->
             <li Class="PatchOperationReplace">
                 <xpath>/Defs/ThingDef[defName="SunLamp"]/basePowerConsumption</xpath>

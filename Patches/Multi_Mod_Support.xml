@@ -1306,55 +1306,8 @@
   </Operation>
 
   <!--==========
-    Glass+Lights {Dubs Skylights, Vanilla Furniture Expanded - Spacer Module, Raise The Roof, Rimatomics}
+    Glass+Lights {Vanilla Furniture Expanded - Spacer Module, Raise The Roof, Rimatomics}
     ==========-->
-
-  <!--Use glass from "Glass+Lights" if "Dubs Skylights" also installed. Also removes "Dubs Skylights" glass resource.-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Glass+Lights</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Dubs Skylights</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="SkyLightA"]/costList</xpath>
-            <value>
-              <costList>
-                <Glass>2</Glass>
-              </costList>
-            </value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="SkyLightB"]/costList</xpath>
-            <value>
-              <costList>
-                <Glass>10</Glass>
-              </costList>
-            </value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="SkyLightC" or defName="SkyLightD"]/costList</xpath>
-            <value>
-              <costList>
-                <Glass>6</Glass>
-              </costList>
-            </value>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName="GlassPane"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>/Defs/RecipeDef[defName="SmeltGlass"]</xpath>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
 
   <!--Allow transparent roofing to be research after glassworks-->
   <Operation Class="PatchOperationFindMod">
