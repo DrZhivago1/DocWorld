@@ -16,6 +16,50 @@
       </nomatch>
    </Operation>
 
+   <!--Tool Cabinet-->
+   <Operation Class="PatchOperationConditional">
+      <xpath>/Defs/ThingDef[defName="ToolCabinet"]/stuffCategories</xpath>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName = "ToolCabinet"]</xpath>
+               <value>
+                  <stuffCategories>
+                     <li>Metallic</li>
+                     <li>Woody</li>
+                     <li>Stony</li>
+                  </stuffCategories>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName = "ToolCabinet"]/costStuffCount</xpath>
+               <value>
+                  <costStuffCount>150</costStuffCount>
+               </value>
+            </li>
+         </operations>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+         <xpath>/Defs/ThingDef[defName = "ToolCabinet"]</xpath>
+         <value>
+            <costStuffCount>150</costStuffCount>
+            <stuffCategories>
+               <li>Metallic</li>
+               <li>Woody</li>
+               <li>Stony</li>
+            </stuffCategories>
+         </value>
+      </nomatch>
+   </Operation>
+
+   <Operation Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName = "ToolCabinet"]/costList/Steel</xpath>
+      <value>
+         <Steel>50</Steel>
+      </value>
+   </Operation>
+
    <!--Vents-->
    <Operation Class="PatchOperationConditional">
       <xpath>/Defs/ThingDef[defName = "Vent"]/costList</xpath>

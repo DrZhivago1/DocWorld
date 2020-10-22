@@ -674,6 +674,31 @@
     </Operation>
 
     <!--==========
+    Simple Chains: Lumber
+    ==========-->
+
+    <!--Owl_CarpentersTrestle, Owl_WoodDryingRack-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Simple Chains: Lumber</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Owl_CarpentersTrestle" or defName="Owl_WoodDryingRack"]</xpath>
+                    <value>
+                        <minifiedDef>MinifiedThing</minifiedDef>
+                        <thingCategories>
+                            <li>BuildingsMisc</li>
+                        </thingCategories>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Smokeleaf Industry Reborn
     ==========-->
 

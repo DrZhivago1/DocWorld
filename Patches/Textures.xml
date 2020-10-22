@@ -2,6 +2,38 @@
   <!--This file will contain all patches that replace/change textures for Vanilla and Mods-->
 
   <!--==========
+    Vanilla
+    ==========-->
+
+  <!--New art assets applied:  Tool Cabinet-->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="ToolCabinet"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Original_Content/Tool_Cabinet/DZ_ToolCabinet</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="ToolCabinet"]/graphicData/shaderType</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName = "ToolCabinet"]/graphicData/shaderType</xpath>
+          <value>
+            <shaderType>CutoutComplex</shaderType>
+          </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName = "ToolCabinet"]/graphicData</xpath>
+          <value>
+            <shaderType>CutoutComplex</shaderType>
+          </value>
+        </nomatch>
+      </li>
+    </operations>
+  </Operation>
+
+  <!--==========
     Better Coolers
     ==========-->
 
@@ -13,7 +45,7 @@
     <match Class="PatchOperationReplace">
       <xpath>/Defs/ThingDef[defName="Cooler"]/graphicData/texPath</xpath>
       <value>
-        <texPath>Better_Coolers/CoolerZ</texPath>
+        <texPath>Mod_Content/Better_Coolers/CoolerZ</texPath>
       </value>
     </match>
   </Operation>
@@ -31,7 +63,7 @@
       <xpath>/Defs/ThingDef[defName="FishingPier"]/graphicData</xpath>
       <value>
         <graphicData>
-          <texPath>FishingIndustry/FishingPier</texPath>
+          <texPath>Mod_Content/FishingIndustry/FishingPier</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <shaderType>CutoutComplex</shaderType>
           <drawSize>(1.5,3.5)</drawSize>
@@ -58,7 +90,7 @@
     <match Class="PatchOperationReplace">
       <xpath>/Defs/ThingDef[defName="Owl_CarpentersTrestle"]/graphicData/texPath</xpath>
       <value>
-          <texPath>SimpleChains_Lumber/carpenters_trestle</texPath>
+        <texPath>Mod_Content/SimpleChains_Lumber/carpenters_trestle</texPath>
       </value>
     </match>
   </Operation>

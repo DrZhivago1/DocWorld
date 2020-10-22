@@ -8,18 +8,19 @@ Each file can be toggled in mod settings, nullifying content.
 
     Mod_Name
         {Content or Mod_Name}
+
+
+
 *******
 # Mod Features
 *******
 ### New Original Content:
-    DocWorld
-        {Desk Lamp, Underground Conduit, Designation Categories (Animals, Beds, Culinary, Decor, Fences, Husbandry, Industrial, Lighting, Storage)}
-
-### Baby_Lamps:
-`This file will contain all baby lamps, to be turned on or off in mod options.`
-
-    Vanilla
-        {Industrial tech desk lamp}
+    Desk_Lamps
+        {This file will contain all desk lamps. Current tech levels: Industrial}
+    Walled_Vitals_Monitor
+        {This file will contain all walled vitals monitors. Current tech levels: Industrial, Spacer}
+    Underground_Conduits
+        {This file will contain the underground conduits. They cost the same amount of resources but require 6x the work of Vanilla.}
 
 ### Biome_Foraging:
 `This file will contain all patches that alter biome foraging. Requires Vanilla Plants Expanded.`
@@ -516,6 +517,8 @@ Each file can be toggled in mod settings, nullifying content.
         {ElectricTableRepair}
     RimPlas
         {RPGrapheneSolarGenerator, RPGrapheneWindTurbine}
+    Simple Chains: Lumber
+        {Owl_CarpentersTrestle, Owl_WoodDryingRack}
     Smokeleaf Industry Reborn
         {HempSolarGenerator, HempolineGenerator}
     Vanilla Factions Expanded - Settlers
@@ -744,7 +747,7 @@ Each file can be toggled in mod settings, nullifying content.
 `This file will contain all patches that replace/change item stuffability for Vanilla and Mods.`
 
     Vanilla
-        {Vent, Butcher Table}
+        {Vent, Butcher Table, Tool Cabinet}
 
 ### Textures:
 `This file will contain all patches that replace/change textures for Vanilla and Mods.`
@@ -755,9 +758,6 @@ Each file can be toggled in mod settings, nullifying content.
         {New art assets applied: FishingPier x6, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus}
     Simple Chains: Lumber
         {New art assets applied: Trestle}
-
-### Underground_Conduits:
-`This file will contain the Underground Conduits. They cost the same amount of resources but require 6x the work of Vanilla.`
 
 ### VFE_Usable_Props:
 `This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Since this is a large overhaul of one specific mod, I deemed it worthy to have it's own file.`
@@ -912,6 +912,7 @@ Save Our Ship 2
 Science Never Stops: Ambition of the Cosmic
 SeedsPlease
 Simple Chains: Leather
+Simple Chains: Lumber
 Simple Chains: Steel
 Simple Coal
 Simple Concrete

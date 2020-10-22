@@ -14,6 +14,7 @@
 		<li>Primus.FunctionalProps</li>
 	</incompatibleWith>
 	<loadAfter>
+		<li>HH.MaterialsForToolCabinet</li>
 		<li>JPT.OpenTheWindows</li>
 		<li>Mlie.Fermenter</li>
 		<li>Mlie.Insulation</li>
