@@ -11,13 +11,13 @@
             <li Class="PatchOperationAttributeSet">
                 <xpath>/Defs/ThingDef[defName = "Vent"]</xpath>
                 <attribute>Name</attribute>
-                <value>DZ_Vent</value>
+                <value>Vent</value>
             </li>
             <!--Walled Vents-->
             <li Class="PatchOperationAdd">
                 <xpath>/Defs</xpath>
                 <value>
-                    <ThingDef Name="DZ_Vent_Industrial" ParentName="DZ_Vent">
+                    <ThingDef Name="DZ_Vent_Industrial" ParentName="Vent">
                         <defName>DZ_Vent_Industrial</defName>
                         <label>walled vent</label>
                         <graphicData>

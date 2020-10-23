@@ -11,7 +11,7 @@
             <li Class="PatchOperationAttributeSet">
                 <xpath>/Defs/ThingDef[defName = "VitalsMonitor"]</xpath>
                 <attribute>Name</attribute>
-                <value>DZ_VitalsMonitor</value>
+                <value>VitalsMonitor</value>
             </li>
             <!--Vitals Monitor-->
             <li Class="PatchOperationAdd">
@@ -19,7 +19,7 @@
                 <value>
 
                     <!--Spacer-->
-                    <ThingDef Name="DZ_VitalsMonitor_Spacer" ParentName="DZ_VitalsMonitor">
+                    <ThingDef Name="DZ_VitalsMonitor_Spacer" ParentName="VitalsMonitor">
                         <defName>DZ_VitalsMonitor_Spacer</defName>
                         <label>spacer vitals monitor</label>
                         <graphicData>
@@ -63,7 +63,7 @@
                 <value>
 
                     <!--Industrial-->
-                    <ThingDef Name="DZ_WalledVitalsMonitor_Industrial" ParentName="DZ_VitalsMonitor">
+                    <ThingDef Name="DZ_WalledVitalsMonitor_Industrial" ParentName="VitalsMonitor">
                         <defName>DZ_WalledVitalsMonitor_Industrial</defName>
                         <label>walled vitals monitor</label>
                         <graphicData>
