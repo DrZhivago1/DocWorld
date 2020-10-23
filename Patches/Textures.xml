@@ -34,23 +34,6 @@
   </Operation>
 
   <!--==========
-    Better Coolers
-    ==========-->
-
-  <!--New art assets applied:  Newer cooler graphic from RedistHeat-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>BetterCoolers</li>
-    </mods>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/ThingDef[defName="Cooler"]/graphicData/texPath</xpath>
-      <value>
-        <texPath>Mod_Content/Better_Coolers/CoolerZ</texPath>
-      </value>
-    </match>
-  </Operation>
-
-  <!--==========
     Fish Industry
     ==========-->
 

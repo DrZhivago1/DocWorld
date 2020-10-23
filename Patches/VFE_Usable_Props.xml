@@ -1,5 +1,5 @@
 <Patch>
-    <!--This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Since this is a large overhaul of one specific mod, I deemed it worthy to have it's own file.-->
+    <!--This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Dropped individual mod item storage support, now storage items are able to store everything but size limits still apply, roleplay as you wish.-->
 
     <!--==========
     Vanilla Furniture Expanded - Props and Decor {LWM's Deep Storage, Dubs Bad Hygiene, Fertile Fields [1.1], Rimatomics, Rimefeller, [D] Thermodynamics - Hot Meals, Vanilla Factions Expanded - Medieval}
@@ -23,10 +23,10 @@
                     <li Class="PatchOperationAdd">
                         <xpath>/Defs</xpath>
                         <value>
-                            <ThingDef Name="DZ_VFEPD_ContainerGreen" ParentName="LWM_Skip">
+                            <ThingDef Name="DZ_VFEPD_ContainerGreen" ParentName="LWM_DeepStorage">
                                 <defName>DZ_VFEPD_ContainerGreen</defName>
                                 <label>green cargo container</label>
-                                <description>A green metal cargo container, similar to a skip. Impassable. Cannot hold roof.</description>
+                                <description>A green metal cargo container, similar to a skip. Passable. Cannot hold roof.</description>
                                 <graphicData>
                                     <texPath>Things/Building/IndustrialProps/ShippingContainer/ShippingContainer</texPath>
                                     <graphicClass>Graphic_Multi</graphicClass>
@@ -36,7 +36,6 @@
                                     </shadowData>
                                     <color>(117,169,119)</color>
                                 </graphicData>
-                                <staticSunShadowHeight Inherit="false" />
                                 <defaultPlacingRot>South</defaultPlacingRot>
                                 <castEdgeShadows>True</castEdgeShadows>
                                 <blockWind>true</blockWind>
@@ -54,8 +53,6 @@
                                 <costList>
                                     <Steel>150</Steel>
                                 </costList>
-                                <costStuffCount Inherit="false" />
-                                <stuffCategories Inherit="false" />
                                 <uiIconScale>1</uiIconScale>
                                 <designatorDropdown>IndustrialPropsContainers</designatorDropdown>
                                 <building>
@@ -118,7 +115,7 @@
                     <li Class="PatchOperationAdd">
                         <xpath>/Defs</xpath>
                         <value>
-                            <ThingDef Name="DZ_VFEPD_BarrelGreen" ParentName="LWM_Skip">
+                            <ThingDef Name="DZ_VFEPD_BarrelGreen" ParentName="LWM_DeepStorage">
                                 <defName>DZ_VFEPD_BarrelGreen</defName>
                                 <label>green barrel</label>
                                 <description>A green metal barrel used for secure mass storage.</description>
@@ -132,7 +129,6 @@
                                     </shadowData>
                                     <color>(117,169,119)</color>
                                 </graphicData>
-                                <staticSunShadowHeight Inherit="false" />
                                 <altitudeLayer>Building</altitudeLayer>
                                 <passability>PassThroughOnly</passability>
                                 <fillPercent>0.2</fillPercent>
@@ -148,27 +144,8 @@
                                 <costList>
                                     <Steel>15</Steel>
                                 </costList>
-                                <costStuffCount Inherit="false" />
-                                <stuffCategories Inherit="false" />
                                 <uiIconScale>1</uiIconScale>
                                 <designatorDropdown>IndustrialProps</designatorDropdown>
-                                <building Inherit="false">
-                                    <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
-                                    <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
-                                    <fixedStorageSettings>
-                                        <filter>
-                                            <thingDefs>
-                                                <li>Chemfuel</li>
-                                            </thingDefs>
-                                        </filter>
-                                    </fixedStorageSettings>
-                                    <defaultStorageSettings>
-                                        <priority>Important</priority>
-                                        <filter>
-                                        </filter>
-                                    </defaultStorageSettings>
-                                    <isInert>true</isInert>
-                                </building>
                                 <comps>
                                     <li Class="LWM.DeepStorage.Properties">
                                         <maxNumberStacks>3</maxNumberStacks>
@@ -226,7 +203,7 @@
                     <li Class="PatchOperationAdd">
                         <xpath>/Defs</xpath>
                         <value>
-                            <ThingDef Name="DZ_VFEPD_PalletBarrelGreen" ParentName="LWM_Skip">
+                            <ThingDef Name="DZ_VFEPD_PalletBarrelGreen" ParentName="LWM_DeepStorage">
                                 <defName>DZ_VFEPD_PalletBarrelGreen</defName>
                                 <label>pallet with green barrels</label>
                                 <description>Green metal barrels on a wooden pallet used for secure mass storage.</description>
@@ -241,7 +218,6 @@
                                     <color>(117,169,119)</color>
                                 </graphicData>
                                 <rotatable>false</rotatable>
-                                <staticSunShadowHeight Inherit="false" />
                                 <defaultPlacingRot>North</defaultPlacingRot>
                                 <altitudeLayer>Building</altitudeLayer>
                                 <passability>PassThroughOnly</passability>
@@ -259,28 +235,9 @@
                                     <Steel>100</Steel>
                                     <WoodLog>25</WoodLog>
                                 </costList>
-                                <costStuffCount Inherit="false" />
-                                <stuffCategories Inherit="false" />
                                 <uiIconScale>1</uiIconScale>
                                 <designatorDropdown>IndustrialProps</designatorDropdown>
                                 <castEdgeShadows>True</castEdgeShadows>
-                                <building Inherit="false">
-                                    <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
-                                    <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
-                                    <fixedStorageSettings>
-                                        <filter>
-                                            <thingDefs>
-                                                <li>Chemfuel</li>
-                                            </thingDefs>
-                                        </filter>
-                                    </fixedStorageSettings>
-                                    <defaultStorageSettings>
-                                        <priority>Important</priority>
-                                        <filter>
-                                        </filter>
-                                    </defaultStorageSettings>
-                                    <isInert>true</isInert>
-                                </building>
                                 <comps>
                                     <li Class="LWM.DeepStorage.Properties">
                                         <maxNumberStacks>27</maxNumberStacks>
@@ -454,7 +411,7 @@
                                 </comps>
                             </ThingDef>
 
-                            <ThingDef Name="DZ_VFEPD_SpacerStorage" ParentName="LWM_Skip">
+                            <ThingDef Name="DZ_VFEPD_SpacerStorage" ParentName="LWM_DeepStorage">
                                 <defName>DZ_VFEPD_SpacerStorage</defName>
                                 <label>advanced storage device</label>
                                 <description>A large, multi-chamber advanced storage device.</description>
@@ -466,7 +423,6 @@
                                 <researchPrerequisites>
                                     <li>SpacerProps</li>
                                 </researchPrerequisites>
-                                <staticSunShadowHeight Inherit="false" />
                                 <fillPercent>0.35</fillPercent>
                                 <castEdgeShadows>True</castEdgeShadows>
                                 <blockWind>true</blockWind>
@@ -485,34 +441,8 @@
                                     <Plasteel>180</Plasteel>
                                     <Silver>600</Silver>
                                 </costList>
-                                <costStuffCount Inherit="false" />
-                                <stuffCategories Inherit="false" />
                                 <uiIconScale>1</uiIconScale>
                                 <designatorDropdown>SpacerProps</designatorDropdown>
-                                <building>
-                                    <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
-                                    <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
-                                    <fixedStorageSettings>
-                                        <filter>
-                                            <categories>
-                                                <li>Chunks</li>
-                                                <li>ResourcesRaw</li>
-                                                <li>Manufactured</li>
-                                                <li>Items</li>
-                                                <li>Weapons</li>
-                                                <li>Apparel</li>
-                                            </categories>
-                                            <disallowedCategories>
-                                                <li>PlantMatter</li>
-                                                <li>Drugs</li>
-                                            </disallowedCategories>
-                                        </filter>
-                                    </fixedStorageSettings>
-                                    <defaultStorageSettings>
-                                        <priority>Important</priority>
-                                    </defaultStorageSettings>
-                                    <isInert>true</isInert>
-                                </building>
                                 <comps>
                                     <li Class="LWM.DeepStorage.Properties">
                                         <maxNumberStacks>10</maxNumberStacks>
@@ -540,7 +470,7 @@
                     <li Class="PatchOperationAdd">
                         <xpath>/Defs</xpath>
                         <value>
-                            <ThingDef Name="DZ_VFEPD_HayBaleSmall" ParentName="LWM_HayLoft">
+                            <ThingDef Name="DZ_VFEPD_HayBaleSmall" ParentName="LWM_DeepStorage">
                                 <defName>DZ_VFEPD_HayBaleSmall</defName>
                                 <label>small hay bale</label>
                                 <description>A small block of hay.</description>
@@ -552,7 +482,6 @@
                                         <volume>(0.55, 0.30, 0.40)</volume>
                                     </shadowData>
                                 </graphicData>
-                                <staticSunShadowHeight Inherit="false" />
                                 <defaultPlacingRot>South</defaultPlacingRot>
                                 <researchPrerequisites>
                                     <li>FarmProps</li>
@@ -570,22 +499,8 @@
                                 <costList>
                                     <Hay>20</Hay>
                                 </costList>
-                                <costStuffCount Inherit="false" />
-                                <stuffCategories Inherit="false" />
                                 <uiIconScale>1</uiIconScale>
                                 <designatorDropdown>DZ_Storage_HayBales</designatorDropdown>
-                                <building Inherit="false">
-                                    <preventDeteriorationOnTop>false</preventDeteriorationOnTop>
-                                    <fixedStorageSettings Inherit="false">
-                                        <filter>
-                                            <thingDefs>
-                                                <li>Hay</li>
-                                            </thingDefs>
-                                        </filter>
-                                    </fixedStorageSettings>
-                                    <defaultStorageSettings Inherit="false" />
-                                    <isInert>true</isInert>
-                                </building>
                                 <comps>
                                     <li Class="LWM.DeepStorage.Properties">
                                         <maxNumberStacks>3</maxNumberStacks>
@@ -673,7 +588,7 @@
                     <li Class="PatchOperationAdd">
                         <xpath>/Defs</xpath>
                         <value>
-                            <ThingDef Name="DZ_VFEPD_BrickPile" ParentName="LWM_Skip">
+                            <ThingDef Name="DZ_VFEPD_BrickPile" ParentName="LWM_DeepStorage">
                                 <defName>DZ_VFEPD_BrickPile</defName>
                                 <label>brick pile</label>
                                 <description>A pile of bricks.</description>
@@ -686,7 +601,6 @@
                                     </shadowData>
                                 </graphicData>
                                 <rotatable>false</rotatable>
-                                <staticSunShadowHeight Inherit="false" />
                                 <altitudeLayer>Building</altitudeLayer>
                                 <passability>PassThroughOnly</passability>
                                 <fillPercent>0.3</fillPercent>
@@ -703,26 +617,6 @@
                                 <costStuffCount>50</costStuffCount>
                                 <uiIconScale>1</uiIconScale>
                                 <castEdgeShadows>True</castEdgeShadows>
-                                <building Inherit="false">
-                                    <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
-                                    <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
-                                    <fixedStorageSettings>
-                                        <filter>
-                                            <categories>
-                                                <li>StoneBlocks</li>
-                                            </categories>
-                                            <thingDefs>
-                                                <li>Jade</li>
-                                            </thingDefs>
-                                        </filter>
-                                    </fixedStorageSettings>
-                                    <defaultStorageSettings>
-                                        <priority>Important</priority>
-                                        <filter>
-                                        </filter>
-                                    </defaultStorageSettings>
-                                    <isInert>true</isInert>
-                                </building>
                                 <comps>
                                     <li Class="LWM.DeepStorage.Properties">
                                         <maxNumberStacks>5</maxNumberStacks>
@@ -741,7 +635,7 @@
                     <li Class="PatchOperationAdd">
                         <xpath>/Defs</xpath>
                         <value>
-                            <ThingDef Name="DZ_VFEPD_WineRack" ParentName="LWM_Food_Basket">
+                            <ThingDef Name="DZ_VFEPD_WineRack" ParentName="LWM_DeepStorage">
                                 <defName>DZ_VFEPD_WineRack</defName>
                                 <label>bottle rack</label>
                                 <description>A civilized bottle storage rack.</description>
@@ -769,26 +663,6 @@
                                 <costList>
                                     <WoodLog>15</WoodLog>
                                 </costList>
-                                <costStuffCount Inherit="false" />
-                                <stuffCategories Inherit="false" />
-                                <uiIconScale>1</uiIconScale>
-                                <building Inherit="false">
-                                    <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
-                                    <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
-                                    <fixedStorageSettings>
-                                        <filter>
-                                            <thingDefs>
-                                                <li>Beer</li>
-                                            </thingDefs>
-                                        </filter>
-                                    </fixedStorageSettings>
-                                    <defaultStorageSettings>
-                                        <priority>Important</priority>
-                                        <filter>
-                                        </filter>
-                                    </defaultStorageSettings>
-                                    <isInert>true</isInert>
-                                </building>
                                 <comps>
                                     <li Class="LWM.DeepStorage.Properties">
                                         <maxNumberStacks>5</maxNumberStacks>
@@ -808,7 +682,7 @@
     <!--==========
      Add modded elements
     ==========-->
-    <!--Dubs Bad Hygiene, with conditional for Fertile Fields-->
+    <!--Dubs Bad Hygiene, with conditional for Fertile Fields
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Vanilla Furniture Expanded - Props and Decor</li>
@@ -852,7 +726,7 @@
                 </match>
             </match>
         </match>
-    </Operation>
+    </Operation>-->
 
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -891,7 +765,7 @@
         </match>
     </Operation>
 
-    <!--Fertile Fields-->
+    <!--Fertile Fields
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Vanilla Furniture Expanded - Props and Decor</li>
@@ -929,9 +803,9 @@
                 </match>
             </match>
         </match>
-    </Operation>
+    </Operation>-->
 
-    <!--Rimatomics-->
+    <!--Rimatomics
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Vanilla Furniture Expanded - Props and Decor</li>
@@ -952,9 +826,9 @@
                 </match>
             </match>
         </match>
-    </Operation>
+    </Operation>-->
 
-    <!--Rimefeller-->
+    <!--Rimefeller
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Vanilla Furniture Expanded - Props and Decor</li>
@@ -976,7 +850,7 @@
                 </match>
             </match>
         </match>
-    </Operation>
+    </Operation>-->
 
     <!--Thermodynamics-->
     <Operation Class="PatchOperationFindMod">
@@ -1088,7 +962,7 @@
         </match>
     </Operation>
 
-    <!--Vanilla Brewing Expanded-->
+    <!--Vanilla Brewing Expanded
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Vanilla Furniture Expanded - Props and Decor</li>
@@ -1148,9 +1022,9 @@
                 </match>
             </match>
         </match>
-    </Operation>
+    </Operation>-->
 
-    <!--Vanilla Factions Expanded - Medieval-->
+    <!--Vanilla Factions Expanded - Medieval
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Vanilla Furniture Expanded - Props and Decor</li>
@@ -1171,9 +1045,9 @@
                 </match>
             </match>
         </match>
-    </Operation>
+    </Operation>-->
 
-    <!--Vanilla Factions Expanded - Vikings-->
+    <!--Vanilla Factions Expanded - Vikings
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Vanilla Furniture Expanded - Props and Decor</li>
@@ -1194,6 +1068,6 @@
                 </match>
             </match>
         </match>
-    </Operation>
+    </Operation>-->
 
 </Patch>

@@ -12,6 +12,11 @@
 		<li>Oreno.VFEFarming.DubsBadHygiene</li>
 		<li>dame.scleatherufpatch</li>
 		<li>Primus.FunctionalProps</li>
+		<li>Hanabishi.InwallCoolersAndVents</li>
+		<li>ruyan.vents</li>
+		<li>ruyan.coolers</li>
+		<li>antaioz.bettercoolers</li>
+		<li>antaioz.bettervents</li>
 	</incompatibleWith>
 	<loadAfter>
 		<li>HH.MaterialsForToolCabinet</li>
@@ -42,7 +47,7 @@
 		<li>zymex.GloomyVanillaOverhaul</li>
 	</loadAfter>
 	<description>
-One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, better functioning, and intuitive system. This mod patches, fixes, and adds content to many mods (including but not limited to plain old vanilla RimWorld). 
+One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, better functioning, and intuitive system. This mod patches, fixes, and adds content to many mods (including but not limited to plain old vanilla RimWorld).
 &lt;size=24&gt;Features&lt;/size&gt;
     * New Architect tabs and organizes Architect menu
     * New drop down menus

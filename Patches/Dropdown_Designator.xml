@@ -47,43 +47,6 @@
         </match>
     </Operation>
 
-    <!--Coolers-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Vanilla Furniture Expanded - Power</li>
-            <li>RimPlas</li>
-            <li>RimPlas (Continued)</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs</xpath>
-                    <value>
-                        <DesignatorDropdownGroupDef>
-                            <defName>DZ_Temp_Cooler</defName>
-                        </DesignatorDropdownGroupDef>
-                    </value>
-                </li>
-                <li Class="PatchOperationConditional">
-                    <xpath>/Defs/ThingDef[defName="Cooler"]/designatorDropdown</xpath>
-                    <match Class="PatchOperationReplace">
-                        <xpath>/Defs/ThingDef[defName="Cooler"]/designatorDropdown</xpath>
-                        <value>
-                            <designatorDropdown>DZ_Temp_Cooler</designatorDropdown>
-                        </value>
-                    </match>
-                    <nomatch Class="PatchOperationAdd">
-                        <xpath>/Defs/ThingDef[defName="Cooler"]</xpath>
-                        <value>
-                            <designatorDropdown>DZ_Temp_Cooler</designatorDropdown>
-                        </value>
-                    </nomatch>
-                </li>
-            </operations>
-        </match>
-    </Operation>
-
     <!--Deep Drill-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -408,41 +371,6 @@
         </match>
     </Operation>
 
-    <!--Vitals Monitor-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Wall Vitals Monitor</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs</xpath>
-                    <value>
-                        <DesignatorDropdownGroupDef>
-                            <defName>DZ_Misc_Vitals</defName>
-                        </DesignatorDropdownGroupDef>
-                    </value>
-                </li>
-                <li Class="PatchOperationConditional">
-                    <xpath>/Defs/ThingDef[defName="VitalsMonitor"]/designatorDropdown</xpath>
-                    <match Class="PatchOperationReplace">
-                        <xpath>/Defs/ThingDef[defName="VitalsMonitor"]/designatorDropdown</xpath>
-                        <value>
-                            <designatorDropdown>DZ_Misc_Vitals</designatorDropdown>
-                        </value>
-                    </match>
-                    <nomatch Class="PatchOperationAdd">
-                        <xpath>/Defs/ThingDef[defName="VitalsMonitor"]</xpath>
-                        <value>
-                            <designatorDropdown>DZ_Misc_Vitals</designatorDropdown>
-                        </value>
-                    </nomatch>
-                </li>
-            </operations>
-        </match>
-    </Operation>
-
     <!--Wind Generator-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -483,6 +411,31 @@
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
+
+            <!--Coolers-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Temp_Cooler</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="Cooler"]/designatorDropdown</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Cooler"]/designatorDropdown</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Cooler</designatorDropdown>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Cooler"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Cooler</designatorDropdown>
+                    </value>
+                </nomatch>
+            </li>
             <!--Generator-->
             <li Class="PatchOperationAdd">
                 <xpath>/Defs</xpath>
@@ -540,6 +493,30 @@
                     </li>
                 </operations>
             </li>
+            <!--Spots (Not currently working)
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Misc_Spots</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="MarriageSpot" or defName="PartySpot" or defName="CaravanPackingSpot"]/designatorDropdown</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="MarriageSpot" or defName="PartySpot" or defName="CaravanPackingSpot"]/designatorDropdown</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Misc_Spots</designatorDropdown>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="MarriageSpot" or defName="PartySpot" or defName="CaravanPackingSpot"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Misc_Spots</designatorDropdown>
+                    </value>
+                </nomatch>
+            </li>-->
             <!--Standing Lamps-->
             <li Class="PatchOperationAdd">
                 <xpath>/Defs</xpath>
@@ -614,6 +591,30 @@
                 <value>
                     <designatorDropdown>DZ_Security_Turret</designatorDropdown>
                 </value>
+            </li>
+            <!--Vitals Monitor-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Misc_Vitals</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="VitalsMonitor"]/designatorDropdown</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VitalsMonitor"]/designatorDropdown</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Misc_Vitals</designatorDropdown>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VitalsMonitor"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Misc_Vitals</designatorDropdown>
+                    </value>
+                </nomatch>
             </li>
         </operations>
     </Operation>

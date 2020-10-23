@@ -1,4 +1,4 @@
-In order to best utilize this, search for a mod name using CTRL+F(or other search function based on your OS). The template below is an example of how each file documentation is setup.
+In order to best utilize this, search for a mod name using `CTRL+F` (or other search function based on your OS). The template below is an example of how each file documentation is setup.
 Each file can be toggled in mod settings, nullifying content.
 *******
 # Template 
@@ -15,10 +15,14 @@ Each file can be toggled in mod settings, nullifying content.
 # Mod Features
 *******
 ### New Original Content:
-    Desk_Lamps
-        {This file will contain all desk lamps. Current tech levels: Industrial}
+    Coolers
+        {This file will contain all coolers. Current tech levels: Industrial}
+    Table_Lamps
+        {This file will contain all table lamps. Current tech levels: Medieval, Industrial}
     Underground_Conduits
         {This file will contain the underground conduits. They cost the same amount of resources but require 6x the work of Vanilla.}
+    Vents
+        {This file will contain walled vents.}
     Vitals_Monitor
         {This file will contain all vitals monitors. Current tech levels: Industrial, Spacer}
 
@@ -400,7 +404,7 @@ Each file can be toggled in mod settings, nullifying content.
 
 #### Conditional Section:
     Vanilla
-        {Battery, Cooler, Deep Drill, Fermenting Barrel, Geothermal, Heater, Hydroponics, Machining, Smelter, Solar, Tool Cabinet, Transport Pod, Vitals Monitor, Wind Generator}
+        {Battery, Deep Drill, Fermenting Barrel, Geothermal, Heater, Hydroponics, Machining, Smelter, Solar, Tool Cabinet, Transport Pod, Vitals Monitor, Wind Generator}
 
 #### Unconditional Section:
     Vanilla
@@ -754,18 +758,16 @@ Each file can be toggled in mod settings, nullifying content.
 ### Textures:
 `This file will contain all patches that replace/change textures for Vanilla and Mods.`
 
-    BetterCoolers
-        {New art assets applied:  Newer cooler graphic from RedistHeat}
     Fishing Industry
         {New art assets applied: FishingPier x6, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus}
     Simple Chains: Lumber
         {New art assets applied: Trestle}
 
 ### VFE_Usable_Props:
-`This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Since this is a large overhaul of one specific mod, I deemed it worthy to have it's own file.`
+`This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Dropped individual mod item storage support, now storage items are able to store everything but size limits still apply, roleplay as you wish.`
 
     Vanilla Furniture Expanded - Props and Decor
-        {LWM's Deep Storage, Dubs Bad Hygiene, Fertile Fields [1.1], Rimatomics, Rimefeller, [D] Thermodynamics - Hot Meals, Vanilla Factions Expanded - Medieval, Vanilla Factions Expanded - Vikings}
+        {Dubs Bad Hygiene, [D] Thermodynamics - Hot Meals}
 
 *******
 # Supported Mods in RimWorld 1.2
@@ -779,7 +781,6 @@ Apothecary
 Apothecary (Continued)
 Architect Expanded - Fences
 Atlas Materials
-BetterCoolers
 CTS - Complete Tech Solutions
 Ceiling Lights
 Centralized Climate Control

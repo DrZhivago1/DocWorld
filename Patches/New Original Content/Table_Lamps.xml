@@ -1,6 +1,6 @@
 <Patch>
 
-    <!--This file will contain all desk lamps. Current tech levels: Industrial-->
+    <!--This file will contain all desk lamps. Current tech levels: Medieval, Industrial-->
 
     <!--==========
     VANILLA
@@ -8,26 +8,116 @@
 
     <Operation Class="PatchOperationSequence">
         <operations>
+            <!--Dropdown-->
             <li Class="PatchOperationAdd">
                 <xpath>/Defs</xpath>
                 <value>
-                    <!--Industrial-->
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Lighting_TableLamp</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <!--Table Lamps-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <!--Medieval-->
                     <ThingDef ParentName="StandingLampBase">
-                        <defName>DZ_TableLamp_Industrial</defName>
-                        <label>table lamp</label>
-                        <description>An electrical standing lamp that lights an area. People need light to move and work at full speed.</description>
+                        <defName>DZ_TableLamp_Medieval</defName>
+                        <label>table lantern</label>
+                        <description>A medieval table lantern that lights an area. People need light to move and work at full speed.</description>
+                        <graphicData>
+                            <texPath>Original_Content/Table_Lamps/DZ_Medieval</texPath>
+                            <graphicClass>Graphic_Multi</graphicClass>
+                            <drawSize>1,1</drawSize>
+                            <shadowData Inherit="False">
+                                <volume>(0, 0, 0)</volume>
+                                <offset>(0,0,0)</offset>
+                            </shadowData>
+                        </graphicData>
+                        <uiIconPath>Original_Content/Table_Lamps/DZ_Medieval_UI</uiIconPath>
                         <altitudeLayer>MoteOverhead</altitudeLayer>                        <!--Blueprint-->
                         <passability>Standable</passability>
                         <clearBuildingArea>false</clearBuildingArea>
                         <rotatable>True</rotatable>
+                        <tickerType>Normal</tickerType>
+                        <drawerType>RealtimeOnly</drawerType>
                         <fillPercent>0.15</fillPercent>
+                        <designatorDropdown>DZ_Lighting_TableLamp</designatorDropdown>
+                        <statBases>
+                            <MaxHitPoints>25</MaxHitPoints>
+                            <WorkToBuild>150</WorkToBuild>
+                            <Flammability>0</Flammability>
+                            <MeditationFocusStrength>0.0</MeditationFocusStrength>
+                        </statBases>
                         <costList>
                             <Steel>10</Steel>
                         </costList>
                         <building>
                             <isEdifice>false</isEdifice>
                             <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+                            <artificialForMeditationPurposes>true</artificialForMeditationPurposes>
                         </building>
+                        <placeWorkers>
+                            <li>PlaceWorker_Heater</li>
+                            <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+                        </placeWorkers>
+                        <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+                        <comps Inherit="False">
+                            <li Class="CompProperties_Refuelable">
+                                <fuelConsumptionRate>1</fuelConsumptionRate>
+                                <fuelCapacity>30.0</fuelCapacity>
+                                <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+                                <fuelFilter>
+                                    <thingDefs>
+                                        <li>WoodLog</li>
+                                    </thingDefs>
+                                </fuelFilter>
+                                <initialFuelPercent>1</initialFuelPercent>
+                                <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+                            </li>
+                            <li Class="CompProperties_Glower">
+                                <glowRadius>6</glowRadius>
+                                <glowColor>(252,187,113,0)</glowColor>
+                            </li>
+                            <li Class="CompProperties_HeatPusher">
+                                <compClass>CompHeatPusherPowered</compClass>
+                                <heatPerSecond>1.6</heatPerSecond>
+                                <heatPushMaxTemperature>23</heatPushMaxTemperature>
+                            </li>
+                            <li Class="CompProperties_MeditationFocus">
+                                <statDef>MeditationFocusStrength</statDef>
+                                <focusTypes>
+                                    <li>Flame</li>
+                                </focusTypes>
+                                <offsets>
+                                    <li Class="FocusStrengthOffset_Lit">
+                                        <offset>0.1</offset>
+                                    </li>
+                                    <li Class="FocusStrengthOffset_BuildingDefsLit">
+                                        <defs>
+                                            <li>Campfire</li>
+                                            <li>TorchLamp</li>
+                                            <li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
+                                        </defs>
+                                        <offsetPerBuilding>0.01</offsetPerBuilding>
+                                        <radius>9.9</radius>
+                                        <maxBuildings>8</maxBuildings>
+                                        <explanationKey>MeditationFocusPerFlame</explanationKey>
+                                        <explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>
+                                    </li>
+                                </offsets>
+                            </li>
+                        </comps>
+                        <researchPrerequisites Inherit="False">
+                            <li>Stonecutting</li>
+                        </researchPrerequisites>
+                    </ThingDef>
+                    <!--Industrial-->
+                    <ThingDef ParentName="StandingLampBase">
+                        <defName>DZ_TableLamp_Industrial</defName>
+                        <label>table lamp</label>
+                        <description>An electrical table lamp that lights an area. People need light to move and work at full speed.</description>
                         <graphicData>
                             <texPath>Original_Content/Table_Lamps/DZ_Industrial</texPath>
                             <graphicClass>Graphic_Multi</graphicClass>
@@ -38,6 +128,19 @@
                             </shadowData>
                         </graphicData>
                         <uiIconPath>Original_Content/Table_Lamps/DZ_Industrial_UI</uiIconPath>
+                        <altitudeLayer>MoteOverhead</altitudeLayer>                        <!--Blueprint-->
+                        <passability>Standable</passability>
+                        <clearBuildingArea>false</clearBuildingArea>
+                        <rotatable>True</rotatable>
+                        <fillPercent>0.15</fillPercent>
+                        <designatorDropdown>DZ_Lighting_TableLamp</designatorDropdown>
+                        <costList>
+                            <Steel>10</Steel>
+                        </costList>
+                        <building>
+                            <isEdifice>false</isEdifice>
+                            <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+                        </building>
                         <comps>
                             <li Class="CompProperties_Glower">
                                 <glowRadius>6</glowRadius>
@@ -53,5 +156,68 @@
             </li>
         </operations>
     </Operation>
+
+    <!-- Vanilla Standing Lamp
+
+  <ThingDef Abstract="True" Name="LampBase" ParentName="BuildingBase">
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <selectable>true</selectable>
+    <fillPercent>0.20</fillPercent>
+    <pathCost>14</pathCost>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <designationCategory>Furniture</designationCategory>
+    <rotatable>false</rotatable>
+    <uiIconOffset>(0, 0.03)</uiIconOffset>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+    </comps>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="StandingLampBase" ParentName="LampBase">
+    <graphicData>
+      <texPath>Things/Building/Furniture/LampStanding</texPath>
+    </graphicData>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+    <statBases>
+      <Mass>4</Mass>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>30</basePowerConsumption>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+-->
 
 </Patch>
