@@ -1913,23 +1913,6 @@
                                 <building Inherit="false">
                                     <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
                                     <ignoreStoredThingsBeauty>false</ignoreStoredThingsBeauty>
-                                    <fixedStorageSettings>
-                                        <filter>
-                                            <categories>
-                                                <li>ResourcesRaw</li>
-                                                <li>Textiles</li>
-                                                <li>MortarShells</li>
-                                                <li>Medicine</li>
-                                            </categories>
-                                            <thingDefs>
-                                                <li>ComponentIndustrial</li>
-                                                <li>ComponentSpacer</li>
-                                            </thingDefs>
-                                            <disallowedCategories>
-                                                <li>PlantMatter</li>
-                                            </disallowedCategories>
-                                        </filter>
-                                    </fixedStorageSettings>
                                 </building>
                                 <comps>
                                  <li Class="LWM.DeepStorage.Properties" >
