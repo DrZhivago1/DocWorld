@@ -80,7 +80,7 @@
                             </damageData>
                         </graphicData>
                         <uiIconPath>Original_Content/Vitals_Monitor/Walled_Vitals_Monitor/DZ_Industrial_UI</uiIconPath>
-                        <altitudeLayer>MoteOverhead</altitudeLayer>
+                        <altitudeLayer>Building</altitudeLayer>
                         <passability>Standable</passability>
                         <clearBuildingArea>false</clearBuildingArea>
                         <rotatable>True</rotatable>
@@ -156,6 +156,25 @@
                 </value>
             </li>
         </operations>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>D9 Framework</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_WalledVitalsMonitor_Industrial"]</xpath>
+                    <value>
+                        <placeWorkers>
+                            <li>D9Framework.PlaceWorker_OnWall</li>
+                        </placeWorkers>
+                    </value>
+                </li>
+            </operations>
+        </match>
     </Operation>
 
 </Patch>

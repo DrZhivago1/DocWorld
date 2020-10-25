@@ -27,7 +27,7 @@
                             </shadowData>
                         </graphicData>
                         <uiIconPath>Original_Content/Vents/DZ_Vent_UI</uiIconPath>
-                        <altitudeLayer>MoteOverhead</altitudeLayer>
+                        <altitudeLayer>Building</altitudeLayer>
                         <passability>Standable</passability>
                         <clearBuildingArea>false</clearBuildingArea>
                         <rotatable>True</rotatable>
@@ -49,6 +49,25 @@
                 </value>
             </li>
         </operations>
+    </Operation>
+    
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>D9 Framework</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Vent_Industrial"]</xpath>
+                    <value>
+                        <placeWorkers>
+                            <li>D9Framework.PlaceWorker_OnWall</li>
+                        </placeWorkers>
+                    </value>
+                </li>
+            </operations>
+        </match>
     </Operation>
 
 </Patch>

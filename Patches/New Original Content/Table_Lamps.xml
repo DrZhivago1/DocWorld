@@ -36,7 +36,7 @@
                             </shadowData>
                         </graphicData>
                         <uiIconPath>Original_Content/Table_Lamps/DZ_Medieval_UI</uiIconPath>
-                        <altitudeLayer>MoteOverhead</altitudeLayer>                        <!--Blueprint-->
+                        <altitudeLayer>Building</altitudeLayer>                        <!--Blueprint, MoteOverhead-->
                         <passability>Standable</passability>
                         <clearBuildingArea>false</clearBuildingArea>
                         <rotatable>True</rotatable>
@@ -128,7 +128,7 @@
                             </shadowData>
                         </graphicData>
                         <uiIconPath>Original_Content/Table_Lamps/DZ_Industrial_UI</uiIconPath>
-                        <altitudeLayer>MoteOverhead</altitudeLayer>                        <!--Blueprint-->
+                        <altitudeLayer>Building</altitudeLayer>                        <!--Blueprint-->
                         <passability>Standable</passability>
                         <clearBuildingArea>false</clearBuildingArea>
                         <rotatable>True</rotatable>
@@ -155,6 +155,32 @@
                 </value>
             </li>
         </operations>
+    </Operation>
+
+    <!-- Allow other materials to be used as fuel in medieval lamp. -->
+    <!--Simple Chains: Lumber support-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Simple Chains: Lumber</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="DZ_TableLamp_Medieval"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[text()="WoodLog"]</xpath>
+            <value>
+                <li>Owl_Firewood</li>
+            </value>
+        </match>
+    </Operation>
+    <!--Simple Chains: Lumber support-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Lulu's Bones and Chitin</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="DZ_TableLamp_Medieval"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+            <value>
+                <li>LuluBones_Bone</li>
+            </value>
+        </match>
     </Operation>
 
     <!-- Vanilla Standing Lamp

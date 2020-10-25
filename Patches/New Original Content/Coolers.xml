@@ -33,7 +33,7 @@
                                 <cornerBR>Damage/Corner</cornerBR>
                             </damageData>
                         </graphicData>
-                        <altitudeLayer>MoteOverhead</altitudeLayer>
+                        <altitudeLayer>Building</altitudeLayer>
                         <passability>Standable</passability>
                         <clearBuildingArea>false</clearBuildingArea>
                         <rotatable>True</rotatable>
@@ -55,6 +55,25 @@
                 </value>
             </li>
         </operations>
+    </Operation>
+    
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>D9 Framework</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Cooler_Industrial"]</xpath>
+                    <value>
+                        <placeWorkers>
+                            <li>D9Framework.PlaceWorker_OnWall</li>
+                        </placeWorkers>
+                    </value>
+                </li>
+            </operations>
+        </match>
     </Operation>
 
 </Patch>

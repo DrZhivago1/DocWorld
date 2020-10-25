@@ -19,6 +19,7 @@
 		<li>antaioz.bettervents</li>
 	</incompatibleWith>
 	<loadAfter>
+		<li>dninemfive.d9framework</li>
 		<li>HH.MaterialsForToolCabinet</li>
 		<li>JPT.OpenTheWindows</li>
 		<li>Mlie.Fermenter</li>

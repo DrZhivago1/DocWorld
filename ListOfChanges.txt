@@ -50,131 +50,8 @@ Each file can be toggled in mod settings, nullifying content.
     Vanilla Furniture Expanded
     Vanilla Furniture Expanded - Spacer Module
 
-### Designation_Category_Fences:
-`This file will contain all patches that effect Fence Designation Categories for Mods.`
-    Architect Expanded - Fences
-        {ArchitectExpandedFence Designation Category removal}
-        {Move items to Fences tab}
-    Clutter Structures
-        {Move items to Fences tab}
-    Extended Woodworking
-        {Move items to Fences tab}
-    Fences And Floors
-    Fences And No Floors
-        {Move items to Fences tab}
-    Gloomy Vanilla
-    Gloomy Vanilla Overhaul
-        {Move items to Culinary, Fences, and Lighting tab}
-    Lord of the Rims - Elves
-        {Move items to Beds, Fences, and Lighting tab}
-    Zen Garden
-        {Move items to Decor, Fences, Floors, Lighting tab}
-    DDA Security and More
-        {Fences And Floors (Continued), Fences And No Floors, Doors Expanded}
-
-
-### Designation_Category_Order:
-`This file will contain all patches that replace/change the visual location of Designation Categories in the architect menu for Vanilla and Mods.`
-
-    Vanilla
-        {Floors, Furniture, Power, Production, Joy, Security, Ship, Structure, Temperature, Misc}
-    Android Tiers
-        {ATPP_DesignationAndroidTiers}
-    Boats
-        {RimShips}
-    Colony Leadership
-        {LeadershipModTab}
-    Dubs Bad Hygiene
-        {Hygiene}
-    Fertile Fields
-        {RFF_Adds}
-    Genetic Rim
-        {GR_GeneticsTab}
-    Insulation, Insulation (Continued)
-        {Insulation_Desig}
-    Jurassic Rimworld
-        {JurassicRimworld}
-    LWM's Deep Storage
-        {Storage}
-    More Planning
-        {Planning}
-    Remote Tech
-        {rxRemoteTech}
-
-### Designation_Category_Removal:
-`This file will contain all patches that remove Designation Categories for Vanilla and Mods.`
-
-    Vanilla
-        {Animals, Industrial, Storage}
-    Alpha Biomes
-        {AB_AlphaBiomesBuildings Designation Category removal}
-    Centralized Climate Control
-        {CentralClimateControl Designation Category removal}
-    Dubs Skylights
-        {skylights Designation Category removal}
-    Fantastic Decor
-        {FantasticDecor Designation Category removal}
-    Fertile Fields
-        {RFF_Farm Designation Category removal}
-    Floor Lights
-        {Lamps Designation Category removal}
-    Flooring and Decorative Options
-        {Decorations Designation Category removal}
-    Give up your building
-        {ZoreTechTool Designation Category removal}
-    OldStyleDeco Designation Category removal
-        {OldStyleDeco Designation Category removal}
-    Glowstone
-        {GLO_Glowstone Designation Category removal}
-    Industrial Rollers
-        {Industrial Designation Category removal}
-    Jurassic Rimworld
-        {AviaryJurassicRimworld Designation Category removal}
-    Medieval - Vanilla
-        {Power and Ship Designation Category removal}
-    More Furniture
-        {ANON2MF Designation Category removal}
-    Natural Paths
-        {NaturalPaths Designation Category removal}
-    Preemptive Strike, Preemptive Strike (Fork)
-        {PES_Reconnaissance Designation Category removal}
-    Project RimFactory Revived
-        {Industrial Designation Category removal}
-    Replimat
-        {Replimat_Replimat Designation Category removal}
-    Revia Race
-        {ReviaCategory Designation Category removal}
-    Rimatomics
-        {Rimatomics Designation Category removal}
-    RimBees
-        {RB_Bees Designation Category removal}
-    Rimefeller
-        {Rimefeller Designation Category removal}
-    RIMkea
-        {RIMkea Designation Category removal}
-    Rimoleum, Rimoleum (Continued)
-        {Rimoleum Designation Category removal}
-    RimPlas, RimPlas (Continued)
-        {RimPlas_FurnDesig Designation Category removal}
-	Smokeleaf Industry Reborn
-		{MSI Designation Category removal}
-	Storage Solutions
-		{CCP_StorageSolutions Designation Category removal}
-    Training Rack
-        {Training_Racks Designation Category removal}
-    Vanilla Furniture Expanded
-        {AOMorefurniture Designation Category removal}
-    Vanilla Furniture Expanded - Props and Decor
-        {PropsandDecor Designation Category removal}
-    VGP Garden Tools
-        {GardenTools Designation Category removal}
-    What The Hack
-        {WTH_Hacking Designation Category removal}
-    Zen Garden
-        {ZEN_Decoration Designation Category removal}
-
-### Designation_Category:
-`This file will contain all patches that replace/change Designation Categories in Vanilla and Mods.`
+### Designation_Category_Combined:
+`This file will contain all patches that replace/change Designation Categories(Architect Menu Tabs) in Vanilla and Mods.`
 
     Vanilla
         {Move items to Animals(conditional), Culinary, Decor, Husbandry, Lighting, and Storage(conditional) tab}
@@ -398,6 +275,128 @@ Each file can be toggled in mod settings, nullifying content.
         {Move items to Production, and Misc tab}
     Zen Garden
         {Move items to Decor Floors, and Lighting tab}
+
+### Designation_Category_Fences:
+`This file will contain all patches that effect Fence Designation Categories for Mods.`
+    Architect Expanded - Fences
+        {ArchitectExpandedFence Designation Category removal}
+        {Move items to Fences tab}
+    Clutter Structures
+        {Move items to Fences tab}
+    Extended Woodworking
+        {Move items to Fences tab}
+    Fences And Floors
+    Fences And No Floors
+        {Move items to Fences tab}
+    Gloomy Vanilla
+    Gloomy Vanilla Overhaul
+        {Move items to Culinary, Fences, and Lighting tab}
+    Lord of the Rims - Elves
+        {Move items to Beds, Fences, and Lighting tab}
+    Zen Garden
+        {Move items to Decor, Fences, Floors, Lighting tab}
+    DDA Security and More
+        {Fences And Floors (Continued), Fences And No Floors, Doors Expanded}
+
+### Designation_Category_Order:
+`This file will contain all patches that replace/change the visual location of Designation Categories(Architect Menu Tabs) in the architect menu for Vanilla and Mods.`
+
+    Vanilla
+        {Floors, Furniture, Power, Production, Joy, Security, Ship, Structure, Temperature, Misc}
+    Android Tiers
+        {ATPP_DesignationAndroidTiers}
+    Boats
+        {RimShips}
+    Colony Leadership
+        {LeadershipModTab}
+    Dubs Bad Hygiene
+        {Hygiene}
+    Fertile Fields
+        {RFF_Adds}
+    Genetic Rim
+        {GR_GeneticsTab}
+    Insulation, Insulation (Continued)
+        {Insulation_Desig}
+    Jurassic Rimworld
+        {JurassicRimworld}
+    LWM's Deep Storage
+        {Storage}
+    More Planning
+        {Planning}
+    Remote Tech
+        {rxRemoteTech}
+
+### Designation_Category_Removal:
+`This file will contain all patches that remove Designation Categories(Architect Menu Tabs) for Vanilla and Mods.`
+
+    Vanilla
+        {Animals, Industrial, Storage}
+    Alpha Biomes
+        {AB_AlphaBiomesBuildings Designation Category removal}
+    Centralized Climate Control
+        {CentralClimateControl Designation Category removal}
+    Dubs Skylights
+        {skylights Designation Category removal}
+    Fantastic Decor
+        {FantasticDecor Designation Category removal}
+    Fertile Fields
+        {RFF_Farm Designation Category removal}
+    Floor Lights
+        {Lamps Designation Category removal}
+    Flooring and Decorative Options
+        {Decorations Designation Category removal}
+    Give up your building
+        {ZoreTechTool Designation Category removal}
+    OldStyleDeco Designation Category removal
+        {OldStyleDeco Designation Category removal}
+    Glowstone
+        {GLO_Glowstone Designation Category removal}
+    Industrial Rollers
+        {Industrial Designation Category removal}
+    Jurassic Rimworld
+        {AviaryJurassicRimworld Designation Category removal}
+    Medieval - Vanilla
+        {Power and Ship Designation Category removal}
+    More Furniture
+        {ANON2MF Designation Category removal}
+    Natural Paths
+        {NaturalPaths Designation Category removal}
+    Preemptive Strike, Preemptive Strike (Fork)
+        {PES_Reconnaissance Designation Category removal}
+    Project RimFactory Revived
+        {Industrial Designation Category removal}
+    Replimat
+        {Replimat_Replimat Designation Category removal}
+    Revia Race
+        {ReviaCategory Designation Category removal}
+    Rimatomics
+        {Rimatomics Designation Category removal}
+    RimBees
+        {RB_Bees Designation Category removal}
+    Rimefeller
+        {Rimefeller Designation Category removal}
+    RIMkea
+        {RIMkea Designation Category removal}
+    Rimoleum, Rimoleum (Continued)
+        {Rimoleum Designation Category removal}
+    RimPlas, RimPlas (Continued)
+        {RimPlas_FurnDesig Designation Category removal}
+	Smokeleaf Industry Reborn
+		{MSI Designation Category removal}
+	Storage Solutions
+		{CCP_StorageSolutions Designation Category removal}
+    Training Rack
+        {Training_Racks Designation Category removal}
+    Vanilla Furniture Expanded
+        {AOMorefurniture Designation Category removal}
+    Vanilla Furniture Expanded - Props and Decor
+        {PropsandDecor Designation Category removal}
+    VGP Garden Tools
+        {GardenTools Designation Category removal}
+    What The Hack
+        {WTH_Hacking Designation Category removal}
+    Zen Garden
+        {ZEN_Decoration Designation Category removal}
     
 ### Dropdown_Designator:
 `This file will contain all patches that replace/change dropdown menus for Vanilla and Mods. Split between Non-Conditional and Conditional patches.`
@@ -851,6 +850,7 @@ Large Animal Beds
 Larger Solar Panels
 Lord of the Rims - Dwarves (Continued)
 Lord of the Rims - Elves (Continued)
+Lulu's Bones and Chitin
 MBS Faux Rock Wall
 Mechalit Core
 Medical Supplements
