@@ -668,6 +668,8 @@ An example template of each file documentation is setup below.
         {Alpha Animals, VGP Garden Medicine}
     Industrial Age - Objects and Furniture
         {VGP Garden Gourmet, Lord of the Rims - Dwarves (Continued), Lord of the Rims - Elves (Continued), Vanilla Furniture Expanded}
+    Lulu's Bones and Chitin
+        {Simple Chains: Lumber, Vanilla Factions Expanded - Insectoids}
     Medical Training
         {Thanks For All The Fish}
     [T] MoreFloors
@@ -690,6 +692,8 @@ An example template of each file documentation is setup below.
         {Insulation, Insulation (Continued), LWM's Deep Storage. #storage}
     Simple Chains: Leather
         {[SYR] Universal Fermenter, Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest, Vanilla Factions Expanded - Vikings}
+    Simple Chains: Lumber
+        {Vanilla Furniture Expanded}
 	Simple Chains: Steel
 		{Coal, Charcoal, Atlas Materials, Simple Coal, Xenite Industries, Medieval Times, Survivalist Additions}
 	Simple Concrete

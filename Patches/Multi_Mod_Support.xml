@@ -64,7 +64,7 @@
     Coal Expanded {Simple Chains: Lumber}
     ==========-->
 
-  <!--Create coal from wood logs-->
+  <!--Create Charcoal from wood logs-->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Coal Expanded</li>
@@ -1616,7 +1616,7 @@
   </Operation>
 
   <!--==========
-    Lulu's Bones and Chitin {Vanilla Factions Expanded - Insectoids}
+    Lulu's Bones and Chitin {Simple Chains: Lumber, Vanilla Factions Expanded - Insectoids}
     ==========-->
 
   <!--Replace VFE-Insectoids chitin-->
@@ -1644,6 +1644,43 @@
             <xpath>/Defs/ThingDef[defName="LuluBones_Chitin"]/graphicData/texPath</xpath>
             <value>
               <texPath>Things/Item/VFEI_Chitin</texPath>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Allow Campfire to be made of logs once again-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Lulu's Bones and Chitin</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Lumber</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationTest">
+            <xpath>/Defs/ThingDef[defName="Campfire"]/costStuffCount</xpath>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName="Campfire"]/costStuffCount | /Defs/ThingDef[defName="Campfire"]/stuffCategories</xpath>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="Campfire"]</xpath>
+            <value>
+              <costList>
+                <Owl_WoodLog>20</Owl_WoodLog>
+              </costList>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Campfire"]/graphicData/texPath</xpath>
+            <value>
+              <texPath>Things/Building/Misc/Campfire</texPath>
             </value>
           </li>
         </operations>
@@ -2795,6 +2832,35 @@
             </li>
           </operations>
         </match>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Simple Chains: Lumber {Vanilla Furniture Expanded}
+    ==========-->
+
+  <!--Allow Stone Campfire to be made of firewood-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Lumber</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Furniture Expanded</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/ThingDef[defName="Stone_Campfire"]/costList</xpath>            <!-- Both cost 20 in vanilla -->
+            <value>
+              <costList>
+                <Owl_Firewood>20</Owl_Firewood>
+              </costList>
+            </value>
+          </li>
+        </operations>
       </match>
     </match>
   </Operation>
