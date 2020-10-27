@@ -51,7 +51,7 @@ An example template of each file documentation is setup below.
 `This file will contain all patches that replace/change Designation Categories(Architect Menu Tabs) in Vanilla and Mods.`
 
     Vanilla
-        {Move items to Animals(conditional), Culinary, Decor, Husbandry, Lighting, and Storage(conditional) tab}
+        {Move items to Animals(conditional), Culinary, Decor, Husbandry, Lighting, Orders, and Storage(conditional) tab}
     Advanced Polyamory Beds
         {Move items to Beds tab}
     Alpha Biomes

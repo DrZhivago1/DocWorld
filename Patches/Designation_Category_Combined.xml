@@ -154,6 +154,19 @@
         </operations>
     </Operation>
 
+    <!--Vanilla Orders--> <!--WTF Tynan, what's so special about floors-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/DesignationCategoryDef[defName="Orders"]/specialDesignatorClasses</xpath>
+                <value>
+                    <li>Designator_RemoveFloor</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
     <!--Vanilla Storage, with conditional if mods installed. #storage-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -1713,34 +1726,34 @@
             </value>
         </match>
     </Operation>
-    
-   <!--==========
+
+    <!--==========
     Replace Stuff
     ==========-->
 
-   <!--Add "Replace Stuff" designator to more Vanilla tabs-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>Replace Stuff</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-         <success>Always</success>
-         <operations>
-            <li Class="PatchOperationAdd">
-               <xpath>/Defs/DesignationCategoryDef[defName="Furniture"]/specialDesignatorClasses</xpath>
-               <value>
-                  <li>Replace_Stuff.Designator_ReplaceStuff</li>
-               </value>
-            </li>
-            <li Class="PatchOperationAdd">
-               <xpath>/Defs/DesignationCategoryDef[defName="Production"]/specialDesignatorClasses</xpath>
-               <value>
-                  <li>Replace_Stuff.Designator_ReplaceStuff</li>
-               </value>
-            </li>
-         </operations>
-      </match>
-   </Operation>
+    <!--Add "Replace Stuff" designator to more Vanilla tabs-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Replace Stuff</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/DesignationCategoryDef[defName="Furniture"]/specialDesignatorClasses</xpath>
+                    <value>
+                        <li>Replace_Stuff.Designator_ReplaceStuff</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/DesignationCategoryDef[defName="Production"]/specialDesignatorClasses</xpath>
+                    <value>
+                        <li>Replace_Stuff.Designator_ReplaceStuff</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
 
 
     <!--==========
