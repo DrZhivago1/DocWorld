@@ -2,7 +2,7 @@
     <!--This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Dropped individual mod item storage support, now storage items are able to store everything but size limits still apply, roleplay as you wish.-->
 
     <!--==========
-    Vanilla Furniture Expanded - Props and Decor {LWM's Deep Storage, Dubs Bad Hygiene, Fertile Fields [1.1], Rimatomics, Rimefeller, [D] Thermodynamics - Hot Meals, Vanilla Factions Expanded - Medieval}
+    Vanilla Furniture Expanded - Props and Decor {LWM's Deep Storage, Dubs Bad Hygiene, RimFridge, [D] Thermodynamics - Hot Meals}
     ==========-->
     <!--Allow some props to become functional storage with Deep Storage-->
     <Operation Class="PatchOperationFindMod">

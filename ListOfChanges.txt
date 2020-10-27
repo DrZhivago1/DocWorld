@@ -1,20 +1,17 @@
-In order to best utilize this, search for a mod name using `CTRL+F` (or other search function based on your OS). The template below is an example of how each file documentation is setup.
-Each file can be toggled in mod settings, nullifying content.
-*******
-# Template 
-******* 
+In order to best utilize this, search for a mod name using CTRL+F(or other search function based on your OS).  
+Each file can be toggled in mod settings, nullifying content.  
+An example template of each file documentation is setup below.  
+  
 ### File_Name:
 `Description of File.`
 
     Mod_Name
         {Content or Mod_Name}
-
-
-
-*******
-# Mod Features
-*******
+***
+***
 ### New Original Content:
+**Use [D9 Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2037445541) for more refined features.**
+
     Coolers
         {This file will contain all coolers. Current tech levels: Industrial}
     Table_Lamps
@@ -177,6 +174,8 @@ Each file can be toggled in mod settings, nullifying content.
         {Move items to Husbandry tab}
     Replimat
         {Move items to Culinary tab}
+    Replace Stuff
+        {Add "Replace Stuff" designator to more Vanilla tabs}
     Revia Race
         {Move items to Production tab}
     Rimatomics
@@ -613,8 +612,6 @@ Each file can be toggled in mod settings, nullifying content.
         {Allow regular windows to be made of stone}
     Power Switch
         {Remove hidden conduits}
-    Replace Stuff
-        {Add "Replace Stuff" designator to more Vanilla tabs}
     RIMkea
         {Nerf RIMkea furniture comfort and beauty}
     Rim of Madness - Bones
@@ -766,7 +763,7 @@ Each file can be toggled in mod settings, nullifying content.
 `This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Dropped individual mod item storage support, now storage items are able to store everything but size limits still apply, roleplay as you wish.`
 
     Vanilla Furniture Expanded - Props and Decor
-        {Dubs Bad Hygiene, [D] Thermodynamics - Hot Meals}
+        {LWM's Deep Storage, Dubs Bad Hygiene, RimFridge, [D] Thermodynamics - Hot Meals}
 
 *******
 # Supported Mods in RimWorld 1.2
@@ -899,6 +896,7 @@ Revia Race
 Rim Cuisine 2
 Rim of Madness - Bones
 RimBees
+RimFridge
 RimJobWorld
 RimOverhaul
 RimPlas
