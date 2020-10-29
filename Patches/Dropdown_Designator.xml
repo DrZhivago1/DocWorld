@@ -300,7 +300,7 @@
         </match>
     </Operation>
 
-    <!--Tool Cabinet-->
+    <!--Tool Cabinets-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>More Linkables</li>
@@ -316,7 +316,7 @@
                             <defName>DZ_Misc_Cabinet</defName>
                         </DesignatorDropdownGroupDef>
                     </value>
-                </li>
+                </li><!--DocWorld now Stuffs the cabinet
                 <li Class="PatchOperationConditional">
                     <xpath>/Defs/ThingDef[defName="ToolCabinet"]/designatorDropdown</xpath>
                     <match Class="PatchOperationReplace">
@@ -331,7 +331,7 @@
                             <designatorDropdown>DZ_Misc_Cabinet</designatorDropdown>
                         </value>
                     </nomatch>
-                </li>
+                </li>-->
             </operations>
         </match>
     </Operation>

@@ -1908,7 +1908,7 @@
                     </value>
                 </li>
                 <li Class="PatchOperationReplace">
-                    <xpath>/Defs/TerrainDef//designationCategory[text()="Rimefeller"]</xpath>
+                    <xpath>/Defs/TerrainDef/designationCategory[text()="Rimefeller"]</xpath>
                     <value>
                         <designationCategory>Floors</designationCategory>
                     </value>

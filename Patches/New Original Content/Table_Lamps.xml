@@ -36,7 +36,7 @@
                             </shadowData>
                         </graphicData>
                         <uiIconPath>Original_Content/Table_Lamps/DZ_Medieval_UI</uiIconPath>
-                        <altitudeLayer>Building</altitudeLayer>                        <!--Blueprint, MoteOverhead-->
+                        <altitudeLayer>MoteOverhead</altitudeLayer>                        <!--Blueprint, MoteOverhead-->
                         <passability>Standable</passability>
                         <clearBuildingArea>false</clearBuildingArea>
                         <rotatable>True</rotatable>
@@ -128,7 +128,7 @@
                             </shadowData>
                         </graphicData>
                         <uiIconPath>Original_Content/Table_Lamps/DZ_Industrial_UI</uiIconPath>
-                        <altitudeLayer>Building</altitudeLayer>                        <!--Blueprint-->
+                        <altitudeLayer>MoteOverhead</altitudeLayer>                        <!--Blueprint-->
                         <passability>Standable</passability>
                         <clearBuildingArea>false</clearBuildingArea>
                         <rotatable>True</rotatable>

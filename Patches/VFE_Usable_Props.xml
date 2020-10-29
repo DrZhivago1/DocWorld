@@ -1965,6 +1965,31 @@
         </match>
     </Operation>
 
+    <!--Primitive Storage-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationFindMod">
+                <mods>
+                    <li>Primitive Storage</li>
+                </mods>
+                <match Class="PatchOperationSequence">
+                    <success>Always</success>
+                    <operations>
+                        <li Class="PatchOperationRemove">
+                            <xpath>/Defs/ThingDef[defName="VBY_WoodPile"]</xpath>
+                        </li>
+                    </operations>
+                </match>
+            </match>
+        </match>
+    </Operation>
+
     <!--RimFridge-->
     <Operation Class="PatchOperationFindMod">
         <mods>

@@ -767,7 +767,7 @@ An example template of each file documentation is setup below.
 `This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Dropped individual mod item storage support, now storage items are able to store everything but size limits still apply, roleplay as you wish.`
 
     Vanilla Furniture Expanded - Props and Decor
-        {LWM's Deep Storage, Dubs Bad Hygiene, RimFridge, [D] Thermodynamics - Hot Meals}
+        {LWM's Deep Storage, Dubs Bad Hygiene, Primitive Storage, RimFridge, [D] Thermodynamics - Hot Meals}
 
 *******
 # Supported Mods in RimWorld 1.2
@@ -884,6 +884,7 @@ Polyamory Beds (Vanilla Edition)
 Power Switch
 Preemptive Strike
 Preemptive Strike (Fork)
+Primitive Storage
 Project RimFactory Revived
 Questionable Ethics Enhanced
 RIMkea
