@@ -650,8 +650,6 @@ An example template of each file documentation is setup below.
         {Apothecary, Apothecary (Continued), Fertile Fields, Fermenter, Vanilla Furniture Expanded - Farming}
     Empire
         {Realistic Planets - Fan Update}
-    Expanded Materials - Metals
-        {Fertile Fields [1.1], [WD] Simple Coal}
     Expanded Woodworking
         {Simple Chains: Leather, Survivalist's Additions}
     Extended Storage
@@ -801,7 +799,6 @@ Dragon's Descent
 Dubs Bad Hygiene
 Dubs Skylights
 Empire
-Expanded Materials - Metals
 Expanded Roofing
 Expanded Woodworking
 Extended Storage
