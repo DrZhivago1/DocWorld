@@ -1,6 +1,6 @@
 ![The Doctor](https://i.imgur.com/5ilCgiG.png)  
 ========
-For the SCRUBs. What is it? One of the most ambitious efforts to reorganize RimWorld and RimWorld Mods into a cleaner, better functioning, and intuitive system. This mod patches, fixes, and adds content to many mods (including but not limited to plain old vanilla RimWorld). Originally started through my RimWorld mod collection [The Doctor's World](https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074).
+_DocWorld_ is one of the most ambitious efforts to reorganize RimWorld and RimWorld mods into a cleaner, better functioning, and intuitive system. This mod patches hundreds of other mods **and can be used without any other mod**. SCRUB your Rim and you will not regret it.
 
 _[Link to Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=1568744597)_
 
