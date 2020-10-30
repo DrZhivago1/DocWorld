@@ -6,124 +6,139 @@
     VANILLA
     ==========-->
     <!--Create Chunk category and let chunks become buildable-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>RIMkea</li>
-        </mods>
-        <nomatch Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs</xpath>
-                    <value>
-                        <stuffCategoryDef>
-                            <defName>Chunky</defName>
-                            <label>chunky</label>
-                        </stuffCategoryDef>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]</xpath>
-                    <value>
-                        <stuffProps>
-                            <categories>
-                                <li>Chunky</li>
-                            </categories>
-                            <statOffsets>
-                                <WorkToBuild>140</WorkToBuild>
-                            </statOffsets>
-                            <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
-                            <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
-                            <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
-                        </stuffProps>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[defName = "ChunkGranite"]</xpath>
-                    <value>
-                        <resourceReadoutPriority>Middle</resourceReadoutPriority>
-                        <stuffProps>
-                            <color>(105,95,97)</color>
-                            <stuffAdjective>granite</stuffAdjective>
-                            <statFactors>
-                                <MarketValue>0.5</MarketValue>
-                                <MaxHitPoints>1.7</MaxHitPoints>
-                                <WorkToBuild>5.25</WorkToBuild>
-                            </statFactors>
-                        </stuffProps>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[defName = "ChunkSlate"]</xpath>
-                    <value>
-                        <resourceReadoutPriority>Middle</resourceReadoutPriority>
-                        <stuffProps>
-                            <color>(70,70,70)</color>
-                            <stuffAdjective>slate</stuffAdjective>
-                            <statFactors>
-                                <Beauty>0.8</Beauty>
-                                <MarketValue>0.38</MarketValue>
-                                <MaxHitPoints>1.3</MaxHitPoints>
-                                <WorkToBuild>4.5</WorkToBuild>
-                            </statFactors>
-                        </stuffProps>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[defName = "ChunkLimestone"]</xpath>
-                    <value>
-                        <resourceReadoutPriority>Middle</resourceReadoutPriority>
-                        <stuffProps>
-                            <color>(158,153,135)</color>
-                            <stuffAdjective>limestone</stuffAdjective>
-                            <statFactors>
-                                <MarketValue>0.4</MarketValue>
-                                <MaxHitPoints>1.55</MaxHitPoints>
-                                <WorkToBuild>4.8</WorkToBuild>
-                            </statFactors>
-                        </stuffProps>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[defName = "ChunkMarble"]</xpath>
-                    <value>
-                        <resourceReadoutPriority>Middle</resourceReadoutPriority>
-                        <stuffProps>
-                            <color>(132,135,132)</color>
-                            <stuffAdjective>marble</stuffAdjective>
-                            <statFactors>
-                                <Beauty>1.35</Beauty>
-                                <MarketValue>0.45</MarketValue>
-                                <MaxHitPoints>1.2</MaxHitPoints>
-                                <WorkToBuild>5.5</WorkToBuild>
-                                <WorkToMake>1.15</WorkToMake>
-                            </statFactors>
-                        </stuffProps>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[defName = "ChunkSandstone"]</xpath>
-                    <value>
-                        <resourceReadoutPriority>Middle</resourceReadoutPriority>
-                        <stuffProps>
-                            <color>(126,104,94)</color>
-                            <stuffAdjective>sandstone</stuffAdjective>
-                            <statFactors>
-                                <Beauty>1.1</Beauty>
-                                <MarketValue>0.4</MarketValue>
-                                <MaxHitPoints>1.4</MaxHitPoints>
-                                <WorkToBuild>5.0</WorkToBuild>
-                                <WorkToMake>1.1</WorkToMake>
-                            </statFactors>
-                        </stuffProps>
-                    </value>
-                </li>
-            </operations>
-        </nomatch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs</xpath>
+        <value>
+            <StuffCategoryDef>
+                <defName>DZ_StoneChunks</defName>
+                <label>stone chunks</label>
+            </StuffCategoryDef>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]</xpath>
+                <value>
+                    <stuffProps>
+                        <categories/>
+                    </stuffProps>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps/categories</xpath>
+        <value>
+            <li>DZ_StoneChunks</li>
+        </value>
+    </Operation>
+
+    <!--I tried for a retarded amount of time to not have to change the stats of chunks, but could not get it to function without alterations. If someone figures out how to make these edits obsolete, let me know.-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps</xpath>
+                <value>
+                    <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+                    <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+                    <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "ChunkGranite"]</xpath>
+                <value>
+                    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+                    <stuffProps>
+                        <color>(105,95,97)</color>
+                        <stuffAdjective>granite</stuffAdjective>
+                        <statFactors>
+                            <MarketValue>0.5</MarketValue>
+                            <MaxHitPoints>1.7</MaxHitPoints>
+                            <WorkToBuild>5.25</WorkToBuild>
+                        </statFactors>
+                    </stuffProps>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "ChunkSlate"]</xpath>
+                <value>
+                    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+                    <stuffProps>
+                        <color>(70,70,70)</color>
+                        <stuffAdjective>slate</stuffAdjective>
+                        <statFactors>
+                            <Beauty>0.8</Beauty>
+                            <MarketValue>0.38</MarketValue>
+                            <MaxHitPoints>1.3</MaxHitPoints>
+                            <WorkToBuild>4.5</WorkToBuild>
+                        </statFactors>
+                    </stuffProps>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "ChunkLimestone"]</xpath>
+                <value>
+                    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+                    <stuffProps>
+                        <color>(158,153,135)</color>
+                        <stuffAdjective>limestone</stuffAdjective>
+                        <statFactors>
+                            <MarketValue>0.4</MarketValue>
+                            <MaxHitPoints>1.55</MaxHitPoints>
+                            <WorkToBuild>4.8</WorkToBuild>
+                        </statFactors>
+                    </stuffProps>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "ChunkMarble"]</xpath>
+                <value>
+                    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+                    <stuffProps>
+                        <color>(132,135,132)</color>
+                        <stuffAdjective>marble</stuffAdjective>
+                        <statFactors>
+                            <Beauty>1.35</Beauty>
+                            <MarketValue>0.45</MarketValue>
+                            <MaxHitPoints>1.2</MaxHitPoints>
+                            <WorkToBuild>5.5</WorkToBuild>
+                            <WorkToMake>1.15</WorkToMake>
+                        </statFactors>
+                    </stuffProps>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName = "ChunkSandstone"]</xpath>
+                <value>
+                    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+                    <stuffProps>
+                        <color>(126,104,94)</color>
+                        <stuffAdjective>sandstone</stuffAdjective>
+                        <statFactors>
+                            <Beauty>1.1</Beauty>
+                            <MarketValue>0.4</MarketValue>
+                            <MaxHitPoints>1.4</MaxHitPoints>
+                            <WorkToBuild>5.0</WorkToBuild>
+                            <WorkToMake>1.1</WorkToMake>
+                        </statFactors>
+                    </stuffProps>
+                </value>
+            </li>
+        </operations>
     </Operation>
 
     <!--Create Furniture-->
     <Operation Class="PatchOperationSequence">
+        <success>Always</success>
         <operations>
             <!--Table-->
             <li Class="PatchOperationAdd">
@@ -145,9 +160,9 @@
                         </graphicData>
                         <uiIconScale>0.5</uiIconScale>
                         <stuffCategories Inherit="False">
-                            <li>Chunky</li>
+                            <li>DZ_StoneChunks</li>
                         </stuffCategories>
-                        <costStuffCount Inherit="False">2</costStuffCount>
+                        <costStuffCount>2</costStuffCount>
                         <costList Inherit="False" />
                         <statBases>
                             <MaxHitPoints>75</MaxHitPoints>
@@ -164,49 +179,7 @@
                         <size>(1,1)</size>
                         <researchPrerequisites Inherit="False" />
                     </ThingDef>
-                </value>
-            </li>
-            <!--Table-->
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs</xpath>
-                <value>
-                    <ThingDef ParentName="TableBase">
-                        <defName>DZ_RockTable</defName>
-                        <label>rock table</label>
-                        <graphicData>
-                            <texPath>Original_Content/Rock_Table/DZ_RockTable</texPath>
-                            <graphicClass>Graphic_Multi</graphicClass>
-                            <drawSize>(2,2)</drawSize>
-                            <damageData Inherit="False" />
-                            <shadowData>
-                                <volume>(0, 0, 0)</volume>
-                            </shadowData>
-                        </graphicData>
-                        <staticSunShadowHeight Inherit="False" />
-                        <uiIconScale>0.8</uiIconScale>
-                        <stuffCategories Inherit="False">
-                            <li>Chunky</li>
-                        </stuffCategories>
-                        <costStuffCount Inherit="False">2</costStuffCount>
-                        <costList Inherit="False" />
-                        <statBases>
-                            <MaxHitPoints>600</MaxHitPoints>
-                            <WorkToBuild>500</WorkToBuild>
-                            <Mass>50</Mass>
-                            <Flammability>0</Flammability>
-                            <Beauty>-5</Beauty>
-                            <Cleanliness>-4</Cleanliness>
-                        </statBases>
-                        <comps Inherit="False">
-                            <li>
-                                <compClass>CompGatherSpot</compClass>
-                            </li>
-                        </comps>
-                        <size>(1,1)</size>
-                        <researchPrerequisites Inherit="False" />
-                        <tradeability>None</tradeability>
-                    </ThingDef>
-
+                    <!--Chair-->
                     <ThingDef ParentName="FurnitureBase">
                         <defName>DZ_RockChair</defName>
                         <label>rock chair</label>
@@ -232,9 +205,9 @@
                         </statBases>
                         <socialPropernessMatters>true</socialPropernessMatters>
                         <stuffCategories Inherit="False">
-                            <li>Chunky</li>
+                            <li>DZ_StoneChunks</li>
                         </stuffCategories>
-                        <costStuffCount Inherit="False">1</costStuffCount>
+                        <costStuffCount>1</costStuffCount>
                         <costList Inherit="False" />
                         <pathCost>42</pathCost>
                         <designationHotKey>Misc6</designationHotKey>
@@ -250,90 +223,3 @@
     </Operation>
 
 </Patch>
-
-<!--
-
-<ThingDef Name="FurnitureBase" ParentName="BuildingBase" Abstract="True">
-    <designationCategory>Furniture</designationCategory>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <thingCategories>
-        <li>BuildingsFurniture</li>
-    </thingCategories>
-</ThingDef>
-
-<ThingDef Name="FurnitureWithQualityBase" ParentName="FurnitureBase" Abstract="True">
-    <comps>
-        <li>
-            <compClass>CompQuality</compClass>
-        </li>
-    </comps>
-</ThingDef>
-
-<ThingDef Abstract="True" ParentName="FurnitureWithQualityBase" Name="TableBase">
-    <description>People eat off tables when chairs are placed facing them.</description>
-    <thingClass>Building</thingClass>
-    <altitudeLayer>Building</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <castEdgeShadows>true</castEdgeShadows>
-    <pathCost>42</pathCost>
-    <fillPercent>0.4</fillPercent>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <canOverlapZones>false</canOverlapZones>
-    <stuffCategories>
-        <li>Metallic</li>
-        <li>Woody</li>
-        <li>Stony</li>
-    </stuffCategories>
-    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-    <staticSunShadowHeight>0.20</staticSunShadowHeight>
-    <surfaceType>Eat</surfaceType>
-</ThingDef>
-
-
-
-
-<ThingDef ParentName="FurnitureWithQualityBase">
-    <defName>Stool</defName>
-    <label>stool</label>
-    <description>A simple platform on which to sit. Not very comfortable, but much better than nothing. Can be used at tables, work stations, and elsewhere.</description>
-    <graphicData>
-        <texPath>Things/Building/Furniture/Stool</texPath>
-        <graphicClass>Graphic_Multi</graphicClass>
-        <damageData>
-            <rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
-            <rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
-            <rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
-            <rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
-            <cornerTL>Damage/Corner</cornerTL>
-            <cornerTR>Damage/Corner</cornerTR>
-            <cornerBL>Damage/Corner</cornerBL>
-            <cornerBR>Damage/Corner</cornerBR>
-        </damageData>
-        <shadowData>
-            <volume>(0.18, 0.23, 0.18)</volume>
-        </shadowData>
-    </graphicData>
-    <altitudeLayer>Building</altitudeLayer>
-    <statBases>
-        <MaxHitPoints>75</MaxHitPoints>
-        <WorkToBuild>450</WorkToBuild>
-        <Mass>3</Mass>
-        <Flammability>1.0</Flammability>
-        <Beauty>0</Beauty>
-        <Comfort>0.5</Comfort>
-    </statBases>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <stuffCategories>
-        <li>Metallic</li>
-        <li>Woody</li>
-        <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>25</costStuffCount>
-    <pathCost>30</pathCost>
-    <designationHotKey>Misc6</designationHotKey>
-    <fillPercent>0.20</fillPercent>
-    <building>
-        <isSittable>true</isSittable>
-    </building>
-    <uiIconOffset>(0, -0.05)</uiIconOffset>
-</ThingDef>-->

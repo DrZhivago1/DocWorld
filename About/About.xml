@@ -19,6 +19,7 @@
 		<li>antaioz.bettervents</li>
 	</incompatibleWith>
 	<loadAfter>
+		<li>OskarPotocki.VanillaFactionsExpanded.MedievalModule</li>
 		<li>dninemfive.d9framework</li>
 		<li>HH.MaterialsForToolCabinet</li>
 		<li>JPT.OpenTheWindows</li>
