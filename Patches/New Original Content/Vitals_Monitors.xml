@@ -80,7 +80,7 @@
                             </damageData>
                         </graphicData>
                         <uiIconPath>Original_Content/Vitals_Monitor/Walled_Vitals_Monitor/DZ_Industrial_UI</uiIconPath>
-                        <altitudeLayer>Building</altitudeLayer>
+                        <altitudeLayer>MoteOverhead</altitudeLayer>
                         <passability>Standable</passability>
                         <clearBuildingArea>false</clearBuildingArea>
                         <rotatable>True</rotatable>

@@ -14,6 +14,8 @@ An example template of each file documentation is setup below.
 
     Coolers
         {This file will contain all coolers. Current tech levels: Industrial}
+    Rock_Furniture
+        {This file will contain all stone chunk furniture. Current: rock chair, 1x1 rock table}
     Table_Lamps
         {This file will contain all table lamps. Current tech levels: Medieval, Industrial}
     Underground_Conduits
@@ -606,6 +608,8 @@ An example template of each file documentation is setup below.
         {Make gas lamps from require chemfuel}
     Industrialisation
         {Patch Vanilla paved tile flooring}
+    Lulu's Bones and Chitin
+        {Bring Lulu's bones closer to Vanilla wood stats}
     Mamuffalo
         {Use Vanilla muffalo leather}
     Open The Windows
@@ -622,6 +626,8 @@ An example template of each file documentation is setup below.
 		{Healroot recipes onto production benches}
 	Simple Chains: Leather
 		{Increase Max Capacity of tanning vat, Vanilla animal leather replacement}
+    Simple Chains: Lumber
+        {Make green lumber stats in-line with Vanilla lumber}
 	Simple Chains: Steel
 		{Create Bulk Recipes for steel}
 	Smoked meat
@@ -650,6 +656,8 @@ An example template of each file documentation is setup below.
         {Apothecary, Apothecary (Continued), Fertile Fields, Fermenter, Vanilla Furniture Expanded - Farming}
     Empire
         {Realistic Planets - Fan Update}
+    Expanded Materials - Metals
+        {Simple Chains: Lumber}
     Expanded Woodworking
         {Simple Chains: Leather, Survivalist's Additions}
     Extended Storage
@@ -799,6 +807,7 @@ Dragon's Descent
 Dubs Bad Hygiene
 Dubs Skylights
 Empire
+Expanded Materials - Metals
 Expanded Roofing
 Expanded Woodworking
 Extended Storage

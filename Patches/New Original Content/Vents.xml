@@ -27,7 +27,7 @@
                             </shadowData>
                         </graphicData>
                         <uiIconPath>Original_Content/Vents/DZ_Vent_UI</uiIconPath>
-                        <altitudeLayer>Building</altitudeLayer>
+                        <altitudeLayer>MoteOverhead</altitudeLayer>
                         <passability>Standable</passability>
                         <clearBuildingArea>false</clearBuildingArea>
                         <rotatable>True</rotatable>

@@ -1,6 +1,6 @@
 <Patch>
 
-    <!--This file will contain all stone furniture. Current: Stone chunk chair, Stone 1x1 table-->
+    <!--This file will contain all stone chunk furniture. Current: rock chair, 1x1 rock table-->
 
     <!--==========
     VANILLA
@@ -41,7 +41,7 @@
         </value>
     </Operation>
 
-    <!--I tried for a retarded amount of time to not have to change the stats of chunks, but could not get it to function without alterations. If someone figures out how to make these edits obsolete, let me know.-->
+    <!--I tried for a retarded amount of time to not have to change the stats of chunks, but could not get it to function without alterations. If someone figures out how to make these edits below obsolete, let me know.-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -158,19 +158,21 @@
                                 <cornerBR>Damage/Corner</cornerBR>
                             </damageData>
                         </graphicData>
-                        <uiIconScale>0.5</uiIconScale>
+                        <uiIconScale>0.8</uiIconScale>
                         <stuffCategories Inherit="False">
                             <li>DZ_StoneChunks</li>
                         </stuffCategories>
                         <costStuffCount>2</costStuffCount>
                         <costList Inherit="False" />
                         <statBases>
-                            <MaxHitPoints>75</MaxHitPoints>
-                            <WorkToBuild>750</WorkToBuild>
-                            <Mass>5</Mass>
-                            <Flammability>1.0</Flammability>
-                            <Beauty>0.5</Beauty>
+                            <MaxHitPoints>350</MaxHitPoints>
+                            <WorkToBuild>500</WorkToBuild>
+                            <Mass>50</Mass>
+                            <Flammability>0</Flammability>
+                            <Beauty>-5</Beauty>
+                            <Cleanliness>-3</Cleanliness>
                         </statBases>
+                        <fillPercent>0.50</fillPercent>
                         <comps Inherit="False">
                             <li>
                                 <compClass>CompGatherSpot</compClass>
@@ -192,7 +194,7 @@
                                 <volume>(0, 0, 0)</volume>
                             </shadowData>
                         </graphicData>
-                        <uiIconScale>0.7</uiIconScale>
+                        <uiIconScale>0.69</uiIconScale>
                         <altitudeLayer>Building</altitudeLayer>
                         <statBases>
                             <MaxHitPoints>300</MaxHitPoints>

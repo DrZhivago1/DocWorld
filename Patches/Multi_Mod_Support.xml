@@ -930,6 +930,33 @@
   </Operation>
 
   <!--==========
+    Expanded Materials - Metals {Simple Chains: Lumber}
+    ==========-->
+
+  <!--Allow Tanning Liquor to use Logs instead of Lumber-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Expanded Materials - Metals</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Simple Chains: Lumber</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/RecipeDef[defName="VMEu_MakeCharcoal"]/*//thingDefs/li[text()="WoodLog"]</xpath>
+            <value>
+              <li>Owl_WoodLog</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
     Expanded Woodworking {Simple Chains: Leather, Survivalist's Additions}
     ==========-->
 
