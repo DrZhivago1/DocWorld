@@ -25,6 +25,36 @@ An example template of each file documentation is setup below.
     Vitals_Monitor
         {This file will contain all vitals monitors. Current tech levels: Industrial, Spacer}
 
+### .LoadFirst_Categories:
+`This file will contain all patches that replace/change/add Designation Categories in the architect menu for Vanilla and Mods. Most "Designation_Category_..." files depend on this one.`
+
+    DocWorld
+        {Animals, Beds, Culinary, Decor, Husbandry, Industrial, Lighting, Storage}
+    Vanilla
+        {Floors, Furniture, Power, Production, Joy, Security, Ship, Structure, Temperature, Misc}
+    Android Tiers
+        {ATPP_DesignationAndroidTiers}
+    Boats
+        {RimShips}
+    Colony Leadership
+        {LeadershipModTab}
+    Dubs Bad Hygiene
+        {Hygiene}
+    Fertile Fields
+        {RFF_Adds}
+    Genetic Rim
+        {GR_GeneticsTab}
+    Insulation, Insulation (Continued)
+        {Insulation_Desig}
+    Jurassic Rimworld
+        {JurassicRimworld}
+    LWM's Deep Storage
+        {Storage}
+    More Planning
+        {Planning}
+    Remote Tech
+        {rxRemoteTech}
+
 ### Biome_Foraging:
 `This file will contain all patches that alter biome foraging. Requires Vanilla Plants Expanded.`
 
@@ -299,34 +329,6 @@ An example template of each file documentation is setup below.
     DDA Security and More
         {Fences And Floors (Continued), Fences And No Floors, Doors Expanded}
 
-### Designation_Category_Order:
-`This file will contain all patches that replace/change the visual location of Designation Categories(Architect Menu Tabs) in the architect menu for Vanilla and Mods.`
-
-    Vanilla
-        {Floors, Furniture, Power, Production, Joy, Security, Ship, Structure, Temperature, Misc}
-    Android Tiers
-        {ATPP_DesignationAndroidTiers}
-    Boats
-        {RimShips}
-    Colony Leadership
-        {LeadershipModTab}
-    Dubs Bad Hygiene
-        {Hygiene}
-    Fertile Fields
-        {RFF_Adds}
-    Genetic Rim
-        {GR_GeneticsTab}
-    Insulation, Insulation (Continued)
-        {Insulation_Desig}
-    Jurassic Rimworld
-        {JurassicRimworld}
-    LWM's Deep Storage
-        {Storage}
-    More Planning
-        {Planning}
-    Remote Tech
-        {rxRemoteTech}
-
 ### Designation_Category_Removal:
 `This file will contain all patches that remove Designation Categories(Architect Menu Tabs) for Vanilla and Mods.`
 
@@ -598,8 +600,6 @@ An example template of each file documentation is setup below.
         {Remove random breakdowns of dummy}
     Expanded Roofing
         {Get rid of the annoying square shadows with glass roof}
-    Extended Storage
-        {Put Extended Storage behind Complex Furniture Tech (excluding food basket and wooden pallet)}
     Fish Industry
         {Allow rotation of aquaculture basin (microfungus texture edited due to this), Stuff the pier}
     Fishing Nets
@@ -630,8 +630,6 @@ An example template of each file documentation is setup below.
         {Make green lumber stats in-line with Vanilla lumber}
 	Simple Chains: Steel
 		{Create Bulk Recipes for steel}
-	Smoked meat
-		{Make Smoked meat available after researching Pemmican, and hide the Smokehouse behind Complex Furniture}
 	Save Our Ship 2
 		{Increase pod launcher range}
     Vanilla Armour Expanded
@@ -740,8 +738,12 @@ An example template of each file documentation is setup below.
 ### Research_Projects:
 `This file will contain all patches that replace/change research requirements for Vanilla and Mods.`
 
+    Aquarium (Continued)
+        {Allow you to feed your pet fish in Medieval era}
     Dragons Not Included
         {Change armor research}
+    Extended Storage
+        {Put Extended Storage behind Complex Furniture Tech (excluding food basket and wooden pallet)}
     Glass+Lights
         {Disallow lights until electricity is researched, Remove Redundancies}
     High Tech Laboratory Facilities (Continued)
@@ -752,8 +754,12 @@ An example template of each file documentation is setup below.
         {Rollers require complex furniture and electricity}
     Medieval Madness: Tools of the Trade
         {Change weapon requirements}
+    Medieval Medicines
+        {Unlock drug lab buildable at first medicine research}
     RoofBomb
         {Shaped Charges require IEDs}
+	Smoked meat
+		{Make Smoked meat available after researching Pemmican, and hide the Smokehouse behind Complex Furniture}
 
 ### Stuffed_Items:
 `This file will contain all patches that replace/change item stuffability for Vanilla and Mods.`
@@ -785,6 +791,7 @@ Alpha Biomes
 Animal Medical Bed
 Apothecary
 Apothecary (Continued)
+Aquarium (Continued)
 Architect Expanded - Fences
 Atlas Materials
 CTS - Complete Tech Solutions
@@ -865,6 +872,7 @@ Medical Supplements (Continued)
 Medical System Expansion - Revived
 Medical Training
 Medieval - Vanilla
+Medieval Medicines
 Medieval Times
 Medieval Times Unofficial
 MendAndRecycle

@@ -154,7 +154,7 @@
         </operations>
     </Operation>
 
-    <!--Vanilla Orders--> <!--WTF Tynan, what's so special about floors-->
+    <!--Vanilla Orders-->    <!--WTF Tynan, what's so special about floors-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
