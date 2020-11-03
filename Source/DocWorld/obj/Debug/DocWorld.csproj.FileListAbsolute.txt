@@ -1,0 +1,5 @@
+C:\Users\1zhiv\Documents\RimWorld\VS Projects\DocWorld\DocWorld\bin\Debug\DocWorld.dll
+C:\Users\1zhiv\Documents\RimWorld\VS Projects\DocWorld\DocWorld\bin\Debug\DocWorld.pdb
+C:\Users\1zhiv\Documents\RimWorld\VS Projects\DocWorld\DocWorld\obj\Debug\DocWorld.csprojAssemblyReference.cache
+C:\Users\1zhiv\Documents\RimWorld\VS Projects\DocWorld\DocWorld\obj\Debug\DocWorld.dll
+C:\Users\1zhiv\Documents\RimWorld\VS Projects\DocWorld\DocWorld\obj\Debug\DocWorld.pdb
