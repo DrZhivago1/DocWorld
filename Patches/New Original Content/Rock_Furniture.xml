@@ -5,17 +5,8 @@
     <!--==========
     VANILLA
     ==========-->
-    <!--Create Chunk category and let chunks become buildable-->
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs</xpath>
-        <value>
-            <StuffCategoryDef>
-                <defName>DZ_StoneChunks</defName>
-                <label>stone chunks</label>
-            </StuffCategoryDef>
-        </value>
-    </Operation>
 
+    <!--Test to see if other mods have added usability to Chunks.-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -34,103 +25,23 @@
         </operations>
     </Operation>
 
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps/categories</xpath>
-        <value>
-            <li>DZ_StoneChunks</li>
-        </value>
-    </Operation>
-
-    <!--I tried for a retarded amount of time to not have to change the stats of chunks, but could not get it to function without alterations. If someone figures out how to make these edits below obsolete, let me know.-->
+    <!--Create Chunk category and put it into the Chunk base for use-->
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps</xpath>
+                <xpath>/Defs</xpath>
                 <value>
-                    <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
-                    <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
-                    <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+                    <StuffCategoryDef>
+                        <defName>DZ_StoneChunks</defName>
+                        <label>stone chunks</label>
+                    </StuffCategoryDef>
                 </value>
             </li>
             <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName = "ChunkGranite"]</xpath>
+                <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps/categories</xpath>
                 <value>
-                    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-                    <stuffProps>
-                        <color>(105,95,97)</color>
-                        <stuffAdjective>granite</stuffAdjective>
-                        <statFactors>
-                            <MarketValue>0.5</MarketValue>
-                            <MaxHitPoints>1.7</MaxHitPoints>
-                            <WorkToBuild>5.25</WorkToBuild>
-                        </statFactors>
-                    </stuffProps>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName = "ChunkSlate"]</xpath>
-                <value>
-                    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-                    <stuffProps>
-                        <color>(70,70,70)</color>
-                        <stuffAdjective>slate</stuffAdjective>
-                        <statFactors>
-                            <Beauty>0.8</Beauty>
-                            <MarketValue>0.38</MarketValue>
-                            <MaxHitPoints>1.3</MaxHitPoints>
-                            <WorkToBuild>4.5</WorkToBuild>
-                        </statFactors>
-                    </stuffProps>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName = "ChunkLimestone"]</xpath>
-                <value>
-                    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-                    <stuffProps>
-                        <color>(158,153,135)</color>
-                        <stuffAdjective>limestone</stuffAdjective>
-                        <statFactors>
-                            <MarketValue>0.4</MarketValue>
-                            <MaxHitPoints>1.55</MaxHitPoints>
-                            <WorkToBuild>4.8</WorkToBuild>
-                        </statFactors>
-                    </stuffProps>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName = "ChunkMarble"]</xpath>
-                <value>
-                    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-                    <stuffProps>
-                        <color>(132,135,132)</color>
-                        <stuffAdjective>marble</stuffAdjective>
-                        <statFactors>
-                            <Beauty>1.35</Beauty>
-                            <MarketValue>0.45</MarketValue>
-                            <MaxHitPoints>1.2</MaxHitPoints>
-                            <WorkToBuild>5.5</WorkToBuild>
-                            <WorkToMake>1.15</WorkToMake>
-                        </statFactors>
-                    </stuffProps>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName = "ChunkSandstone"]</xpath>
-                <value>
-                    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-                    <stuffProps>
-                        <color>(126,104,94)</color>
-                        <stuffAdjective>sandstone</stuffAdjective>
-                        <statFactors>
-                            <Beauty>1.1</Beauty>
-                            <MarketValue>0.4</MarketValue>
-                            <MaxHitPoints>1.4</MaxHitPoints>
-                            <WorkToBuild>5.0</WorkToBuild>
-                            <WorkToMake>1.1</WorkToMake>
-                        </statFactors>
-                    </stuffProps>
+                    <li>DZ_StoneChunks</li>
                 </value>
             </li>
         </operations>
@@ -140,10 +51,10 @@
     <Operation Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
-            <!--Table-->
             <li Class="PatchOperationAdd">
                 <xpath>/Defs</xpath>
                 <value>
+                    <!--Table-->
                     <ThingDef ParentName="TableBase">
                         <defName>DZ_RockTable</defName>
                         <label>rock table</label>
@@ -157,7 +68,12 @@
                                 <cornerBL>Damage/Corner</cornerBL>
                                 <cornerBR>Damage/Corner</cornerBR>
                             </damageData>
+                            <shadowData>
+                                <volume>(0, 0, 0)</volume>
+                                <offset>(0,0,0)</offset>
+                            </shadowData>
                         </graphicData>
+                        <staticSunShadowHeight Inherit="False"/>
                         <uiIconScale>0.8</uiIconScale>
                         <stuffCategories Inherit="False">
                             <li>DZ_StoneChunks</li>
@@ -181,6 +97,7 @@
                         <size>(1,1)</size>
                         <researchPrerequisites Inherit="False" />
                     </ThingDef>
+
                     <!--Chair-->
                     <ThingDef ParentName="FurnitureBase">
                         <defName>DZ_RockChair</defName>

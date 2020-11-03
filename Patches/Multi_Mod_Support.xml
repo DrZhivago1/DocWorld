@@ -2757,8 +2757,33 @@
   </Operation>
 
   <!--==========
-    Simple Chains: Lumber {Vanilla Furniture Expanded}
+    Simple Chains: Lumber {Vanilla Factions Expanded - Vikings, Vanilla Furniture Expanded}
     ==========-->
+
+  <!--Allow Funeral Pyre to be made of logs-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Lumber</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Factions Expanded - Vikings</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VFEV_FuneralPyre"]/costList</xpath>
+            <value>
+              <costList>
+                <Owl_WoodLog>50</Owl_WoodLog>
+              </costList>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
 
   <!--Allow Stone Campfire to be made of firewood-->
   <Operation Class="PatchOperationFindMod">
@@ -2773,7 +2798,7 @@
         <success>Always</success>
         <operations>
           <li Class="PatchOperationReplace">
-            <xpath>Defs/ThingDef[defName="Stone_Campfire"]/costList</xpath>            <!-- Both cost 20 in vanilla -->
+            <xpath>/Defs/ThingDef[defName="Stone_Campfire"]/costList</xpath>            <!-- Both cost 20 in vanilla -->
             <value>
               <costList>
                 <Owl_Firewood>20</Owl_Firewood>

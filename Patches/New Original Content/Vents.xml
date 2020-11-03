@@ -45,29 +45,13 @@
                             <WorkToBuild>300</WorkToBuild>
                         </statBases>
                         <size>(1,1)</size>
+                        <placeWorkers>
+                            <li>D9Framework.PlaceWorker_OnWall</li>
+                        </placeWorkers>
                     </ThingDef>
                 </value>
             </li>
         </operations>
-    </Operation>
-    
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>D9 Framework</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[@Name="DZ_Vent_Industrial"]</xpath>
-                    <value>
-                        <placeWorkers>
-                            <li>D9Framework.PlaceWorker_OnWall</li>
-                        </placeWorkers>
-                    </value>
-                </li>
-            </operations>
-        </match>
     </Operation>
 
 </Patch>

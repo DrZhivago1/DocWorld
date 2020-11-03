@@ -8,6 +8,39 @@
 		<li>1.2</li>
 	</supportedVersions>
 	<packageId>drzhivago.docworld</packageId>
+	<description>
+One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, better functioning, and intuitive system. This mod patches, fixes, and adds content to many mods (including but not limited to plain old vanilla RimWorld).
+&lt;size=24&gt;Features&lt;/size&gt;
+    * New Architect tabs and organizes Architect menu
+    * New drop down menus
+    * Balances recipes for various items
+    * Underground power conduits
+    * Enhances miniaturisation abilities
+    * Increased "stuffable" items
+    * Lights are now more efficient with power usage
+    * Greatly improves inter-mod compatibility
+	
+Each setting can now be disabled in the mod settings menu! Restart required for them to take effect.
+
+[Link to Full Feature List]https://github.com/DrZhivago1/DocWorld/wiki/1.-Content-Overview
+
+[Link to GitHub]https://github.com/DrZhivago1/DocWorld/releases
+
+[Link to Ludeon] https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416
+
+[The Doctor's World mod collection] https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074
+    
+	</description>
+	
+    <modDependencies>
+		<li>
+			<packageId>dninemfive.d9framework</packageId>
+			<displayName>D9 Framework</displayName>
+			<downloadUrl>https://github.com/dninemfive/d9framework/releases</downloadUrl>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2037445541</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+
 	<incompatibleWith>
 		<li>Oreno.VFEFarming.DubsBadHygiene</li>
 		<li>dame.scleatherufpatch</li>
@@ -18,6 +51,7 @@
 		<li>antaioz.bettercoolers</li>
 		<li>antaioz.bettervents</li>
 	</incompatibleWith>
+
 	<loadAfter>
 		<li>OskarPotocki.VanillaFactionsExpanded.MedievalModule</li>
 		<li>dninemfive.d9framework</li>
@@ -49,28 +83,5 @@
 		<li>wofl.MoreFurnitureUpdated</li>
 		<li>zymex.GloomyVanillaOverhaul</li>
 	</loadAfter>
-	<description>
-One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, better functioning, and intuitive system. This mod patches, fixes, and adds content to many mods (including but not limited to plain old vanilla RimWorld).
-&lt;size=24&gt;Features&lt;/size&gt;
-    * New Architect tabs and organizes Architect menu
-    * New drop down menus
-    * Balances recipes for various items
-    * Underground power conduits
-    * Enhances miniaturisation abilities
-    * Increased "stuffable" items
-    * Lights are now more efficient with power usage
-    * Greatly improves inter-mod compatibility
-	
-Each setting can now be disabled in the mod settings menu! Restart required for them to take effect.
-
-[Link to Full Feature List]https://github.com/DrZhivago1/DocWorld/wiki/1.-Content-Overview
-
-[Link to GitHub]https://github.com/DrZhivago1/DocWorld/releases
-
-[Link to Ludeon] https://ludeon.com/forums/index.php?topic=47165.msg447416#msg447416
-
-[The Doctor's World mod collection] https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074
-    
-	</description>
 
 </ModMetaData>

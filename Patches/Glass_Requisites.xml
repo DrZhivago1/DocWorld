@@ -30,7 +30,7 @@
                     <xpath>/Defs/ThingDef[@Name="GLWallLightBase"]/costList</xpath>
                     <value>
                         <costList>
-                            <Glass>1</Glass>
+                            <LargeCircularGlass>1</LargeCircularGlass>
                             <Steel>10</Steel>
                         </costList>
                     </value>

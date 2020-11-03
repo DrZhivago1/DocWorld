@@ -2,7 +2,7 @@
     <!--This file will contain all patches that alter Vanilla Furniture Expanded - Props and Decor. Requires LWM's Deep Storage for most changes. Dropped individual mod item storage support, now storage items are able to store everything but size limits still apply, roleplay as you wish.-->
 
     <!--==========
-    Vanilla Furniture Expanded - Props and Decor {LWM's Deep Storage, Dubs Bad Hygiene, RimFridge, [D] Thermodynamics - Hot Meals}
+    Vanilla Furniture Expanded - Props and Decor {LWM's Deep Storage, Dubs Bad Hygiene, Primitive Storage, RimFridge, Simple Chains: Lumber, [D] Thermodynamics - Hot Meals}
     ==========-->
     <!--Allow some props to become functional storage with Deep Storage-->
     <Operation Class="PatchOperationFindMod">
@@ -268,8 +268,8 @@
                                         <maxNumberStacks>5</maxNumberStacks>
                                         <minTimeStoringTakes>20</minTimeStoringTakes>
                                         <additionalTimeEachStack>20</additionalTimeEachStack>
-                                        <additionalTimeEachDef>30</additionalTimeEachDef>   
-                                        <maxTotalMass>25</maxTotalMass>                                                           <!--Cardboard boxes hold less weight to differ from crates-->
+                                        <additionalTimeEachDef>30</additionalTimeEachDef>
+                                        <maxTotalMass>25</maxTotalMass>                                        <!--Cardboard boxes hold less weight to differ from crates-->
                                         <showContents>false</showContents>
                                         <overlayType>None</overlayType>
                                     </li>
@@ -304,8 +304,8 @@
                                         <maxNumberStacks>3</maxNumberStacks>
                                         <minTimeStoringTakes>20</minTimeStoringTakes>
                                         <additionalTimeEachStack>20</additionalTimeEachStack>
-                                        <additionalTimeEachDef>10</additionalTimeEachDef>   
-                                        <maxTotalMass>15</maxTotalMass>                                                           <!--Easier to use if it only stores the same item-->
+                                        <additionalTimeEachDef>10</additionalTimeEachDef>
+                                        <maxTotalMass>15</maxTotalMass>                                        <!--Easier to use if it only stores the same item-->
                                         <showContents>false</showContents>
                                         <overlayType>None</overlayType>
                                     </li>
@@ -341,7 +341,7 @@
                                         <minTimeStoringTakes>20</minTimeStoringTakes>
                                         <additionalTimeEachStack>20</additionalTimeEachStack>
                                         <additionalTimeEachDef>20</additionalTimeEachDef>
-                                        <maxTotalMass>150</maxTotalMass>    
+                                        <maxTotalMass>150</maxTotalMass>
                                         <showContents>false</showContents>
                                         <overlayType>None</overlayType>
                                     </li>
@@ -1844,6 +1844,7 @@
     <!--==========
      Add modded elements
     ==========-->
+
     <!--Dubs Bad Hygiene-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -2078,6 +2079,31 @@
                         </li>
                     </operations>
                 </match>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Simple Chains: Lumber-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Props and Decor</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Simple Chains: Lumber</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="DZ_VFEPD_WoodenLogs" or defName="DZ_VFEPD_WoodenLogsLarge"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Owl_WoodLog>50</Owl_WoodLog>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
             </match>
         </match>
     </Operation>

@@ -98,6 +98,9 @@
                             <Steel>50</Steel>
                             <ComponentIndustrial>3</ComponentIndustrial>
                         </costList>
+                        <placeWorkers>
+                            <li>D9Framework.PlaceWorker_OnWall</li>
+                        </placeWorkers>
                     </ThingDef>
 
                     <!--Spacer-->
@@ -156,25 +159,6 @@
                 </value>
             </li>
         </operations>
-    </Operation>
-
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>D9 Framework</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[@Name="DZ_WalledVitalsMonitor_Industrial"]</xpath>
-                    <value>
-                        <placeWorkers>
-                            <li>D9Framework.PlaceWorker_OnWall</li>
-                        </placeWorkers>
-                    </value>
-                </li>
-            </operations>
-        </match>
     </Operation>
 
 </Patch>
