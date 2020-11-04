@@ -29,7 +29,7 @@ namespace DocWorld
         new PatchDescription(".Load3_DesignationCategory_Fences.xml", "Custom Category Fences", "Should fences be given their own architect tab?"),
         new PatchDescription(".Load4_DesignationCategory_Removal.xml", "Modded Category Removals", "Should modded architect tabs be removed now that they're combined? Note: Depends on 'Custom Categories'"),
         new PatchDescription("Biome_Foraging.xml", "Biome Foraging", "Should biomes give different foraged food? Note: Requires 'Vanilla Plants Expanded' or `VGP Vegetable Garden`"),
-        new PatchDescription("Cloth_Beds", "Cloth Beds", "Should beds require cloth? Note: Mods like 'Soft Warm Beds' will automatically nullify this content."),
+        new PatchDescription("Cloth_Beds.xml", "Cloth Beds", "Should beds require cloth? Note: Mods like 'Soft Warm Beds' will automatically nullify this content."),
         new PatchDescription("Dropdown_Designator.xml", "Dropdown Menus", "Should custom dropdown menus be enabled?"),
         new PatchDescription("Efficient_Power.xml", "Efficient Power", "Should utilities recieve power consumption changes?"),
         new PatchDescription("Enhanced_Miniaturisation.xml", "Enhanced Miniaturisation", "Should hand selected items become minifiable?"),
@@ -40,7 +40,7 @@ namespace DocWorld
         new PatchDescription("Research_Projects.xml", "Research Projects", "Should research projects be combined or removed where appropriate?"),
         new PatchDescription("Stuffed_Items.xml", "Stuffed Items", "Should more items become stuffable?"),
         new PatchDescription("Textures.xml", "Textures", "Should custom textures be applied?"),
-        new PatchDescription("VFE_Usable_Props.xml", "VFE Usable Props", "Should certain props be usable? Note: Requires `VFE-Props and Decor`")
+        new PatchDescription("VFE_Usable_Props.xml", "VFE Usable Props", "Should certain props be usable? Note: Requires `VFE-Props and Decor` and `LWM Deep Storage`")
 
         };
 
