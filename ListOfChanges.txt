@@ -10,7 +10,6 @@ An example template of each file documentation is setup below.
 ***
 ***
 ### New Original Content:
-**Use [D9 Framework](https://steamcommunity.com/sharedfiles/filedetails/?id=2037445541) for more refined features.**
 
     Coolers
         {This file will contain all coolers. Current tech levels: Industrial}
@@ -596,8 +595,6 @@ An example template of each file documentation is setup below.
 ### Misc:
 `This file will contain all miscellaneous patches that replace/change all sorts of things from various mods.`
 
-    Combat Training
-        {Remove random breakdowns of dummy}
     Expanded Roofing
         {Get rid of the annoying square shadows with glass roof}
     Fish Industry

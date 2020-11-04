@@ -45,11 +45,6 @@ Each setting can now be disabled in the mod settings menu! Restart required for 
 		<li>Oreno.VFEFarming.DubsBadHygiene</li>
 		<li>dame.scleatherufpatch</li>
 		<li>Primus.FunctionalProps</li>
-		<li>Hanabishi.InwallCoolersAndVents</li>
-		<li>ruyan.vents</li>
-		<li>ruyan.coolers</li>
-		<li>antaioz.bettercoolers</li>
-		<li>antaioz.bettervents</li>
 	</incompatibleWith>
 
 	<loadAfter>

@@ -2,20 +2,6 @@
    <!--This file will contain all miscellaneous patches that replace/change all sorts of things from various mods-->
 
    <!--==========
-    Combat Training
-    ==========-->
-
-   <!--Remove random breakdowns of dummy-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>Combat Training</li>
-      </mods>
-      <match Class="PatchOperationRemove">
-         <xpath>/Defs/ThingDef[defName="CombatDummy"]/comps/li[@Class="CompProperties_Breakdownable"]</xpath>
-      </match>
-   </Operation>
-
-   <!--==========
     Expanded Roofing
     ==========-->
 

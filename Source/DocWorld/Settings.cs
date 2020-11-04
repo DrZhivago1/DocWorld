@@ -109,6 +109,8 @@ namespace DocWorld
         // we initialize all patches as not disabled, we'll load their
         // values in ExposeData.
         public Dictionary<PatchDescription, bool> PatchDisabled = PatchDisablerMod.Patches.ToDictionary(p => p, p => true);
+        private Vector2 scrollPosition;
+        private Rect viewRect;
 
         // I like putting the 'render function' for settings in the settings class, vanilla would put it in the mod class. 
         public void DoWindowContents(Rect canvas)
@@ -122,7 +124,8 @@ namespace DocWorld
             options.Label("Game has to be restarted in order for the changes to be applied!");
             options.Label("Check the github for an exact list of what each setting changes.");
             options.Label("");
-            options.Label("Choose which patches should be enabled.");
+            options.Label("Choose what should be enabled:");
+            options.BeginScrollView(options.GetRect(400), ref scrollPosition, ref viewRect);
 
             // for each patch in the list of patches, render a checkbox.
             // this is one of the things that is super easy to do in options.
@@ -136,7 +139,7 @@ namespace DocWorld
 
                 PatchDisabled[patch] = status;
             }
-            
+            options.EndScrollView(ref viewRect);
             
             // see also other functions on `options`, for textboxes, radio buttons, etc.
             options.End();
