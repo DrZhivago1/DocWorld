@@ -692,22 +692,20 @@
       <mods>
          <li>Simple Chains: Lumber</li>
       </mods>
-      <match Class="PatchOperationSequence">
-         <success>Always</success>
-         <operations>
-            <li Class="PatchOperationAdd">
-               <xpath>/Defs/ThingDef[defName="Owl_GreenLumber"]/statBases</xpath>
-               <value>
-                  <StuffPower_Armor_Sharp>0.50</StuffPower_Armor_Sharp>
-                  <StuffPower_Armor_Blunt>0.50</StuffPower_Armor_Blunt>
-                  <StuffPower_Armor_Heat>0.45</StuffPower_Armor_Heat>
-                  <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
-                  <StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
-                  <SharpDamageMultiplier>0.35</SharpDamageMultiplier>
-                  <BluntDamageMultiplier>0.85</BluntDamageMultiplier>
-               </value>
-            </li>
-         </operations>
+      <match Class="PatchOperationConditional">
+         <xpath>/Defs/ThingDef[defName="Owl_GreenLumber"]/statBases/BluntDamageMultiplier</xpath>
+         <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Owl_GreenLumber"]/statBases</xpath>
+            <value>
+               <StuffPower_Armor_Sharp>0.50</StuffPower_Armor_Sharp>
+               <StuffPower_Armor_Blunt>0.50</StuffPower_Armor_Blunt>
+               <StuffPower_Armor_Heat>0.45</StuffPower_Armor_Heat>
+               <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+               <StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
+               <SharpDamageMultiplier>0.35</SharpDamageMultiplier>
+               <BluntDamageMultiplier>0.85</BluntDamageMultiplier>
+            </value>
+         </nomatch>
       </match>
    </Operation>
 

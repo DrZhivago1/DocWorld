@@ -1,6 +1,6 @@
 <Manifest>
 
-  <version>1.2.2.14</version>
+  <version>1.2.2.15</version>
   <showCrossPromotions>true</showCrossPromotions>
   <manifestUri>https://raw.githubusercontent.com/DrZhivago1/DocWorld/master/About/Manifest.xml</manifestUri>
   <downloadUri>https://github.com/DrZhivago1/DocWorld/releases/latest</downloadUri>

@@ -50,6 +50,7 @@ Each setting can now be disabled in the mod settings menu! Restart required for 
 
 	<loadAfter>
 		<li>OskarPotocki.VanillaFactionsExpanded.MedievalModule</li>
+		<li>CETeam.CombatExtended</li>
 		<li>dninemfive.d9framework</li>
 		<li>HH.MaterialsForToolCabinet</li>
 		<li>JPT.OpenTheWindows</li>

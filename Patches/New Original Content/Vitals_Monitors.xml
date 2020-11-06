@@ -18,6 +18,41 @@
                 <xpath>/Defs</xpath>
                 <value>
 
+                    <!--Medieval-->
+                    <ThingDef Name="DZ_VitalsMonitor_Medieval" ParentName="VitalsMonitor">
+                        <defName>DZ_VitalsMonitor_Medieval</defName>
+                        <label>medieval vitals monitor</label>
+                        <graphicData>
+                            <texPath>Original_Content/Vitals_Monitor/DZ_Medieval</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                        </graphicData>
+                        <defaultPlacingRot>North</defaultPlacingRot>
+                        <uiIconPath>Original_Content/Vitals_Monitor/DZ_Medieval_UI</uiIconPath>
+                        <researchPrerequisites>
+                            <li>ComplexFurniture</li>
+                        </researchPrerequisites>
+                        <statBases>
+                            <MaxHitPoints>75</MaxHitPoints>
+                            <WorkToBuild>3500</WorkToBuild>
+                            <Mass>10</Mass>
+                            <Flammability>1</Flammability>
+                        </statBases>
+                        <costList Inherit="False">
+                            <Steel>25</Steel>
+                        </costList>
+                        <comps Inherit="False">
+                            <li Class="CompProperties_Facility">
+                                <statOffsets>
+                                    <MedicalTendQualityOffset>0.035</MedicalTendQualityOffset>
+                                    <ImmunityGainSpeedFactor>0.01</ImmunityGainSpeedFactor>
+                                    <SurgerySuccessChanceFactor>0.025</SurgerySuccessChanceFactor>
+                                </statOffsets>
+                                <maxSimultaneous>1</maxSimultaneous>
+                                <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+                            </li>
+                        </comps>
+                    </ThingDef>
+
                     <!--Spacer-->
                     <ThingDef Name="DZ_VitalsMonitor_Spacer" ParentName="VitalsMonitor">
                         <defName>DZ_VitalsMonitor_Spacer</defName>
@@ -153,6 +188,7 @@
             <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities" and linkableFacilities/li[text()="VitalsMonitor"]]/linkableFacilities</xpath>
                 <value>
+                    <li>DZ_VitalsMonitor_Medieval</li>
                     <li>DZ_VitalsMonitor_Spacer</li>
                     <li>DZ_WalledVitalsMonitor_Industrial</li>
                     <li>DZ_WalledVitalsMonitor_Spacer</li>
