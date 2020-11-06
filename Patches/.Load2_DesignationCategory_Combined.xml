@@ -413,28 +413,6 @@
     </Operation>
 
     <!--==========
-    Centralized Climate Control
-    ==========-->
-
-    <!--Move items to Temperature tab and remove designation category-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Centralized Climate Control (Continued)</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[@Name="CentralizedClimateControl_BaseVent" or defName="IntakeFan" or defName="redAirPipe" or defName="redAirPipeHidden" or defName="blueAirPipe" or defName="blueAirPipeHidden" or defName="cyanAirPipe" or defName="cyanAirPipeHidden" or defName="AirThermal" or defName="LargeIntakeFan" or defName="LargeAirThermal"]/designationCategory</xpath>
-                    <value>
-                        <designationCategory>Temperature</designationCategory>
-                    </value>
-                </li>
-            </operations>
-        </match>
-    </Operation>
-
-    <!--==========
     Chicken Coop
     ==========-->
 
@@ -2965,7 +2943,329 @@
         </match>
     </Operation>
 
+    <!--==========
+    Various Culinary Support
+    ==========-->
 
+    <!--==========
+    Gloomy Vanilla Overhaul {Gloomy Extra - Kitchen}
+    ==========-->
 
+    <!--If Gloomy Extra - Kitchen installed, furniture to "Culinary" designation category-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Gloomy Vanilla Overhaul</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Gloomy Extra - Kitchen</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="SM_Sink"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Culinary</designationCategory>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="SM_KitchenCupboard_A" or defName="SM_KitchenCupboard_B" or defName="SM_KitchenCupboard_C" or defName="SM_ButcherShelf" or defName="SM_CornerIRD"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Culinary</designationCategory>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Universal Fermenter {Vanilla Factions Expanded - Medieval, Vanilla Factions Expanded - Settlers, RimBees}
+    ==========-->
+
+    <!--Move items to Culinary tab. #uf-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[SYR] Universal Fermenter</li>
+        </mods>
+        <nomatch Class="PatchOperationFindMod">
+            <mods>
+                <li>RimBees</li>
+            </mods>
+            <match Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="RB_MeadFermentingBarrel"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Culinary</designationCategory>
+                </value>
+            </match>
+        </nomatch>
+    </Operation>
+
+    <!--Move items to Culinary tab. #uf-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[SYR] Universal Fermenter</li>
+        </mods>
+        <nomatch Class="PatchOperationFindMod">
+            <mods>
+                <li>Vanilla Factions Expanded - Medieval</li>
+            </mods>
+            <match Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="VFEM_WineBarrel"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Culinary</designationCategory>
+                </value>
+            </match>
+        </nomatch>
+    </Operation>
+
+    <!--Move items to Culinary tab. #uf-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[SYR] Universal Fermenter</li>
+        </mods>
+        <nomatch Class="PatchOperationFindMod">
+            <mods>
+                <li>Vanilla Factions Expanded - Settlers</li>
+            </mods>
+            <match Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="Building_ChemshineBarrel"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Culinary</designationCategory>
+                </value>
+            </match>
+        </nomatch>
+    </Operation>
+
+    <!--==========
+    Various Misc Support
+    ==========-->
+
+    <!--==========
+    Colony Leadership {Move to Misc}
+    ==========-->
+
+    <!--Healroot recipes onto production benches-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Colony Leadership</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef/designationCategory[text()="LeadershipModTab"]</xpath>
+            <value>
+                <designationCategory>Misc</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Various Storage Support
+    ==========-->
+
+    <!--==========
+    Gloomy Vanilla Overhaul {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Gloomy storage furniture to "Storage" designation category, with conditional if "LWM Deep Storage" is installed-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Gloomy Vanilla Overhaul</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="RKGWineRackB" or defName="WardrobeA" or defName="GL_Cupboard" or defName="RGK_Manger" or defName="GL_Locker" or defName="RGK_DogBowl"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Project RimFactory Revived {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Storage furniture moved to Storage-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Project RimFactory Revived</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name="PRFMassStorageBase"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Replimat {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Moves Animal Feeder and Feedstock Tank to Storage-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Replimat</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="ReplimatAnimalFeeder" or defName="ReplimatFeedTank"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>LWM_DS_Storage</designationCategory>
+                </value>
+            </match>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="ReplimatAnimalFeeder" or defName="ReplimatFeedTank"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    RimPlas {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Do not move items to custom designation category-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationSequence">
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="RimPlas_DrugCabinet" or defName="RimPlas_Shelf" or defName="RimPlas_Rack"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Storage</designationCategory>
+                        </value>
+                    </li>
+                </operations>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Change designation category of storage furniture if "LWM Deep Storage" is/isnt installed-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="Shelf_1x1c" or defName="Shelf_WeaponRack"]/designationCategory</xpath>
+            </match>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="Shelf_1x1c" or defName="Shelf_WeaponRack"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Farming {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Move animal feeder to Storage if LWM Deep Storage is not installed-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Farming</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="VFE_AnimalFeeder"]</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Spacer Module {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Change designation category of storage furniture for "Vanilla Furniture Expanded - Spacer Module" if "LWM Deep Storage" is/isnt installed-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Spacer Module</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationRemove">
+                <xpath>/Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>
+            </match>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Various Structure Support
+    ==========-->
+
+    <!--==========
+    Insulation, Insulation (Continued) {Rimplas also effected, must load below both}
+    ==========-->
+
+    <!--Move insulated items to Structure designation category-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Insulation</li>
+            <li>Insulation (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef/designationCategory[text()="Insulation_Desig"]</xpath>
+                    <value>
+                        <designationCategory>Structure</designationCategory>
+                    </value>
+                </li>
+                <!--Rimplas structures conditionally loaded if Insulation is-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="RTPDoorSimple" or defName="RTPAutodoor" or defName="RTPInsulatedWall" or @Name="RTPInsulatorBuildingBase"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Structure</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
 
 </Patch>

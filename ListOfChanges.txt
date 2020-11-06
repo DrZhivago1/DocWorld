@@ -14,9 +14,9 @@ An example template of each file documentation is setup below.
     Coolers
         {This file will contain all coolers. Current tech levels: Industrial}
     Rock_Furniture
-        {This file will contain all stone chunk furniture. Current: rock chair, 1x1 rock table}
+        {This file will contain all stone chunk furniture. Current: 1x1 rock chair, 1x1 rock table}
     Table_Lamps
-        {This file will contain all table lamps. Current tech levels: Medieval, Industrial}
+        {This file will contain all table lamps. Current tech levels: Neolithic, Medieval, Industrial}
     Underground_Conduits
         {This file will contain the underground conduits. They cost the same amount of resources but require 6x the work of Vanilla.}
     Vents
@@ -24,7 +24,7 @@ An example template of each file documentation is setup below.
     Vitals_Monitor
         {This file will contain all vitals monitors. Current tech levels: Industrial, Spacer}
 
-### .LoadFirst_Categories:
+### .Load1_DesignationCategories:
 `This file will contain all patches that replace/change/add Designation Categories in the architect menu for Vanilla and Mods. Most "Designation_Category_..." files depend on this one.`
 
     DocWorld
@@ -35,16 +35,12 @@ An example template of each file documentation is setup below.
         {ATPP_DesignationAndroidTiers}
     Boats
         {RimShips}
-    Colony Leadership
-        {LeadershipModTab}
     Dubs Bad Hygiene
         {Hygiene}
     Fertile Fields
         {RFF_Adds}
     Genetic Rim
         {GR_GeneticsTab}
-    Insulation, Insulation (Continued)
-        {Insulation_Desig}
     Jurassic Rimworld
         {JurassicRimworld}
     LWM's Deep Storage
@@ -54,31 +50,7 @@ An example template of each file documentation is setup below.
     Remote Tech
         {rxRemoteTech}
 
-### Biome_Foraging:
-`This file will contain all patches that alter biome foraging. Requires Vanilla Plants Expanded.`
-
-    Vanilla
-        {VCE_Bearberry(BorealForest/ColdBog), VCE_RawCherry(Tundra), VCE_RawBanana(TropicalRainforest/TropicalSwamp), VCE_RawPricklyPear(AridShrubland)}
-    Lord of the Rims - Elves (Continued)
-        {LotRE_PlantLembas(LotRE_MallornForest)}
-    More Vanilla Biomes
-        {VCE_RawCherry(ZBiome_AlpineMeadow), VCE_RawPlum(ZBiome_CloudForest), VCE_RawPricklyPear(ZBiome_DesertOasis), VCE_RawApple(ZBiome_Grasslands), VCE_RawPeach(ZBiome_Marsh)}
-    Realistic Planets - Fan Update
-        {VCE_Bearberry(RRP_Steppes/RRP_Permafrost), VCE_RawPeach(RRP_Savanna), VCE_RawPricklyPear(RRP_TemperateDesert/RRP_Oasis), VCE_RawApple(RRP_Grassland)}
-    RimUniverse - Biomes
-        {VCE_Bearberry(Permafrost), VCE_RawApple(Grassland), VCE_RawPeach(Savanna), VCE_RawBanana(MoistDeciduousForest)}
-
-### Cloth_Beds:
-`This file will contain all patches that add cloth to bed construction recipes, with conditionals if certain mods are installed.`
-
-    Vanilla
-    Gloomy Furniture
-    Rim Job World
-    RIMkea
-    Vanilla Furniture Expanded
-    Vanilla Furniture Expanded - Spacer Module
-
-### Designation_Category_Combined:
+### .Load2_DesignationCategory_Combined:
 `This file will contain all patches that replace/change Designation Categories(Architect Menu Tabs) in Vanilla and Mods.`
 
     Vanilla
@@ -95,8 +67,6 @@ An example template of each file documentation is setup below.
         {Move items to Culinary, Husbandry, Lighting, and Storage tab. #storage}
     Ceiling Lights
         {Move items to Husbandry and Lighting tab}
-    Centralized Climate Control
-        {Move items to Temperature tab}
     Chicken Coop
         {Move items to Husbandry tab}
     Chicken Nest
@@ -305,8 +275,34 @@ An example template of each file documentation is setup below.
         {Move items to Production, and Misc tab}
     Zen Garden
         {Move items to Decor Floors, and Lighting tab}
+    ------------------Various Culinary Support------------------
+    Gloomy Vanilla Overhaul
+        {Gloomy Extra - Kitchen}
+    Universal Fermenter
+        {Vanilla Factions Expanded - Medieval, Vanilla Factions Expanded - Settlers, RimBees}
+    ------------------Various Misc Support------------------
+    Colony Leadership
+        {Move to Misc}
+    ------------------Various Storage Support------------------
+    Gloomy Vanilla Overhaul
+        {LWM's Deep Storage. #storage}
+    Project RimFactory Revived
+        {LWM's Deep Storage. #storage}
+    Replimat
+        {LWM's Deep Storage. #storage}
+    RimPlas
+        {LWM's Deep Storage. #storage}
+    Vanilla Furniture Expanded
+        {LWM's Deep Storage. #storage}
+    Vanilla Furniture Expanded - Farming
+        {LWM's Deep Storage. #storage}
+    Vanilla Furniture Expanded - Spacer Module
+        {LWM's Deep Storage. #storage}
+    ------------------Various Structure Support------------------
+    Insulation, Insulation (Continued)
+        {Rimplas also effected, must load below both}
 
-### Designation_Category_Fences:
+### .Load3_DesignationCategory_Fences:
 `This file will contain all patches that effect Fence Designation Categories for Mods.`
     Architect Expanded - Fences
         {ArchitectExpandedFence Designation Category removal}
@@ -328,15 +324,15 @@ An example template of each file documentation is setup below.
     DDA Security and More
         {Fences And Floors (Continued), Fences And No Floors, Doors Expanded}
 
-### Designation_Category_Removal:
+### .Load4_DesignationCategory_Removal:
 `This file will contain all patches that remove Designation Categories(Architect Menu Tabs) for Vanilla and Mods.`
 
     Vanilla
         {Animals, Industrial, Storage}
     Alpha Biomes
         {AB_AlphaBiomesBuildings Designation Category removal}
-    Centralized Climate Control
-        {CentralClimateControl Designation Category removal}
+    Colony Leadership
+        {LeadershipModTab Designation Category removal}
     Dubs Skylights
         {skylights Designation Category removal}
     Fantastic Decor
@@ -355,6 +351,8 @@ An example template of each file documentation is setup below.
         {GLO_Glowstone Designation Category removal}
     Industrial Rollers
         {Industrial Designation Category removal}
+    Insulation, Insulation (Continued)
+        {Insulation_Desig Designation Category removal}
     Jurassic Rimworld
         {AviaryJurassicRimworld Designation Category removal}
     Medieval - Vanilla
@@ -399,6 +397,30 @@ An example template of each file documentation is setup below.
         {WTH_Hacking Designation Category removal}
     Zen Garden
         {ZEN_Decoration Designation Category removal}
+
+### Biome_Foraging:
+`This file will contain all patches that alter biome foraging. Requires Vanilla Plants Expanded.`
+
+    Vanilla
+        {VCE_Bearberry(BorealForest/ColdBog), VCE_RawCherry(Tundra), VCE_RawBanana(TropicalRainforest/TropicalSwamp), VCE_RawPricklyPear(AridShrubland)}
+    Lord of the Rims - Elves (Continued)
+        {LotRE_PlantLembas(LotRE_MallornForest)}
+    More Vanilla Biomes
+        {VCE_RawCherry(ZBiome_AlpineMeadow), VCE_RawPlum(ZBiome_CloudForest), VCE_RawPricklyPear(ZBiome_DesertOasis), VCE_RawApple(ZBiome_Grasslands), VCE_RawPeach(ZBiome_Marsh)}
+    Realistic Planets - Fan Update
+        {VCE_Bearberry(RRP_Steppes/RRP_Permafrost), VCE_RawPeach(RRP_Savanna), VCE_RawPricklyPear(RRP_TemperateDesert/RRP_Oasis), VCE_RawApple(RRP_Grassland)}
+    RimUniverse - Biomes
+        {VCE_Bearberry(Permafrost), VCE_RawApple(Grassland), VCE_RawPeach(Savanna), VCE_RawBanana(MoistDeciduousForest)}
+
+### Cloth_Beds:
+`This file will contain all patches that add cloth to bed construction recipes, with conditionals if certain mods are installed.`
+
+    Vanilla
+    Gloomy Furniture
+    Rim Job World
+    RIMkea
+    Vanilla Furniture Expanded
+    Vanilla Furniture Expanded - Spacer Module
     
 ### Dropdown_Designator:
 `This file will contain all patches that replace/change dropdown menus for Vanilla and Mods. Split between Non-Conditional and Conditional patches.`
@@ -664,7 +686,7 @@ An example template of each file documentation is setup below.
     Glass+Lights
         {Vanilla Furniture Expanded - Spacer Module, Raise The Roof, Rimatomics}
     Gloomy Vanilla Overhaul
-        {LWM's Deep Storage, Gloomy Extra - Kitchen}
+        {Gloomy Extra - Kitchen}
     Harvest Organs Post Mortem
         {Alpha Animals, VGP Garden Medicine}
     Industrial Age - Objects and Furniture
@@ -681,16 +703,12 @@ An example template of each file documentation is setup below.
         {Expanded Woodworking}
     Repair Workbench
         {[LC] Survival Tools}
-    Replimat
-        {LWM's Deep Storage}
     Rimatomics
         {Vanilla Furniture Expanded - Power, Sparkling Worlds - Full Mod, Sparkling Worlds - Modular Core - Reduced features}
     RIMkea
         {Stuffed Floors}
     RimOverhaul
         {Simple Chains: Leather}
-    RimPlas
-        {Insulation, Insulation (Continued), LWM's Deep Storage. #storage}
     Simple Chains: Leather
         {[SYR] Universal Fermenter, Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest, Vanilla Factions Expanded - Vikings}
     Simple Chains: Lumber
@@ -702,7 +720,7 @@ An example template of each file documentation is setup below.
 	Simply More Bridges
 		{Industrialisation, Roads of the Rim, Simple Concrete}
     Slightly More Realistic Wool Production Revived
-        {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra}
+        {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Factions Expanded - Vikings}
     Smokeleaf Industry Reborn
         {Vanilla Brewing Expanded}
     Standalone Hot Spring
@@ -718,13 +736,11 @@ An example template of each file documentation is setup below.
     Vanilla Factions Expanded - Vikings
         {Dragons Not Included}
     Vanilla Furniture Expanded
-        {Simple Chains: Leather, LWM's Deep Storage, Misc. Training, Combat Training, Fertile Fields. #storage}
-    Vanilla Furniture Expanded - Farming
-        {LWM's Deep Storage. #storage}
+        {Simple Chains: Leather, Misc. Training, Combat Training, Fertile Fields}
     Vanilla Furniture Expanded - Production
         {Apothecary (Continued), Medical System Expansion - Revived, Smokeleaf Industry Reborn, What the hack?!}
     Vanilla Furniture Expanded - Spacer Module
-        {LWM's Deep Storage, [WD] Reinforced Doors. #storage}
+        {[WD] Reinforced Doors}
     Vanilla Weapons Expanded
         {Dragons Not Included}
     VGP Garden Fabrics
@@ -793,7 +809,6 @@ Architect Expanded - Fences
 Atlas Materials
 CTS - Complete Tech Solutions
 Ceiling Lights
-Centralized Climate Control
 Ceramics
 Change Dresser
 Charcoal

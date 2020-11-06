@@ -44,6 +44,7 @@ Each setting can now be disabled in the mod settings menu! Restart required for 
 	<incompatibleWith>
 		<li>Oreno.VFEFarming.DubsBadHygiene</li>
 		<li>dame.scleatherufpatch</li>
+		<li>Owlchemist.UndergroundPowerConduits</li>
 		<li>Primus.FunctionalProps</li>
 	</incompatibleWith>
 

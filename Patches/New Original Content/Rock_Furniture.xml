@@ -30,15 +30,6 @@
         <success>Always</success>
         <operations>
             <li Class="PatchOperationAdd">
-                <xpath>/Defs</xpath>
-                <value>
-                    <StuffCategoryDef>
-                        <defName>DZ_StoneChunks</defName>
-                        <label>stone chunks</label>
-                    </StuffCategoryDef>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd">
                 <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps/categories</xpath>
                 <value>
                     <li>DZ_StoneChunks</li>

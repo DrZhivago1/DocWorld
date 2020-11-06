@@ -213,27 +213,6 @@
   </Operation>
 
   <!--==========
-    Colony Leadership
-    ==========-->
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Colony Leadership</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/DesignationCategoryDef[defName="LeadershipModTab"]/order</xpath>
-          <value>
-            <order>560</order>
-          </value>
-        </li>
-      </operations>
-    </match>
-  </Operation>
-
-  <!--==========
     Dubs Bad Hygiene
     ==========-->
 
@@ -277,23 +256,6 @@
       <xpath>/Defs/DesignationCategoryDef[defName="GR_GeneticsTab"]/order</xpath>
       <value>
         <order>596</order>
-      </value>
-    </match>
-  </Operation>
-
-  <!--==========
-    Insulation
-    ==========-->
-
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Insulation</li>
-      <li>Insulation (Continued)</li>
-    </mods>
-    <match Class="PatchOperationReplace">
-      <xpath>/Defs/DesignationCategoryDef[defName="Insulation_Desig"]/order</xpath>
-      <value>
-        <order>567</order>
       </value>
     </match>
   </Operation>

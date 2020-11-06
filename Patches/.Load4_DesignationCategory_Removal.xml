@@ -62,16 +62,16 @@
    </Operation>
 
    <!--==========
-    Centralized Climate Control
+    Colony Leadership
     ==========-->
 
-   <!--CentralClimateControl Designation Category removal-->
+   <!--LeadershipModTab Designation Category removal-->
    <Operation Class="PatchOperationFindMod">
       <mods>
-         <li>Centralized Climate Control (Continued)</li>
+         <li>Colony Leadership</li>
       </mods>
       <match Class="PatchOperationRemove">
-         <xpath>/Defs/DesignationCategoryDef[defName="CentralClimateControl"]</xpath>
+         <xpath>/Defs/DesignationCategoryDef[defName="LeadershipModTab"]</xpath>
       </match>
    </Operation>
 
@@ -198,6 +198,21 @@
       </mods>
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="Industrial"]</xpath>
+      </match>
+   </Operation>
+
+   <!--==========
+    Insulation, Insulation (Continued)
+    ==========-->
+
+   <!--Insulation_Desig Designation Category removal-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Insulation</li>
+         <li>Insulation (Continued)</li>
+      </mods>
+      <match Class="PatchOperationRemove">
+         <xpath>/Defs/DesignationCategoryDef[defName="Insulation_Desig"]</xpath>
       </match>
    </Operation>
 

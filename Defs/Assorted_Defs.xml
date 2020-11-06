@@ -5,4 +5,9 @@
     <defName>DZ_PowerConduits</defName>
   </DesignatorDropdownGroupDef>
 
+  <StuffCategoryDef>
+    <defName>DZ_StoneChunks</defName>
+    <label>stone chunks</label>
+  </StuffCategoryDef>
+
 </Defs>

@@ -316,7 +316,7 @@
                             <defName>DZ_Misc_Cabinet</defName>
                         </DesignatorDropdownGroupDef>
                     </value>
-                </li><!--DocWorld now Stuffs the cabinet
+                </li>                <!--DocWorld now Stuffs the cabinet
                 <li Class="PatchOperationConditional">
                     <xpath>/Defs/ThingDef[defName="ToolCabinet"]/designatorDropdown</xpath>
                     <match Class="PatchOperationReplace">
