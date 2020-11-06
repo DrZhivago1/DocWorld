@@ -2382,9 +2382,30 @@
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
-                <!--Bar-->
                 <li Class="PatchOperationReplace">
                     <xpath>/Defs/ThingDef[defName="VBE_Bar" or defName="VBE_SodaFountain" or defName="VBE_AmbrandyDistillery" or defName="VBE_WhiskeyCask" or defName="VBE_TequilaBarrel" or defName="VBE_VodkaDrum" or defName="VBE_GinStill"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Culinary</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Brewing Expanded - Coffees and Teas
+    ==========-->
+
+    <!--Move items to Culinary tab-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>VanillaExpanded.VBrewECandT</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VBE_EspressoMachineBuilding"]/designationCategory</xpath>
                     <value>
                         <designationCategory>DZ_Culinary</designationCategory>
                     </value>

@@ -225,6 +225,8 @@ An example template of each file documentation is setup below.
         {LightColumnMod}
     Vanilla Brewing Expanded
         {Move items to Culinary tab}
+    Vanilla Brewing Expanded - Coffees and Teas
+        {Move items to Culinary tab}
     Vanilla Cooking Expanded
         {Move items to Culinary tab}
     Vanilla Cooking Expanded - Stews
@@ -985,6 +987,8 @@ Vanilla Animals Expanded — Tropical Rainforest
 Vanilla Animals Expanded — Tundra
 Vanilla Animals Overhaul Reloaded
 Vanilla Armour Expanded
+Vanilla Brewing Expanded
+Vanilla Brewing Expanded - Coffees and Teas
 Vanilla Cooking Expanded
 Vanilla Cooking Expanded - Stews
 Vanilla Cooking Expanded - Sushi
