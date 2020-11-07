@@ -722,7 +722,7 @@ An example template of each file documentation is setup below.
 	Simply More Bridges
 		{Industrialisation, Roads of the Rim, Simple Concrete}
     Slightly More Realistic Wool Production Revived
-        {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Factions Expanded - Vikings}
+        {[HLX] ReGrowth - Extinct Animals Pack, Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Factions Expanded - Vikings}
     Smokeleaf Industry Reborn
         {Vanilla Brewing Expanded}
     Standalone Hot Spring

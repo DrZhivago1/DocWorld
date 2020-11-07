@@ -2970,7 +2970,7 @@
   </Operation>
 
   <!--==========
-    Slightly More Realistic Wool Production Revived {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Factions Expanded - Vikings}
+    Slightly More Realistic Wool Production Revived {[HLX] ReGrowth - Extinct Animals Pack, Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Factions Expanded - Vikings}
     ==========-->
 
   <!--Create Fleece and Wool Recipe-->
@@ -3034,6 +3034,18 @@
             <value>
               <woolDef>SMRW_camelFleece</woolDef>
             </value>
+          </li>
+
+          <li Class="PatchOperationFindMod">
+            <mods>
+              <li>VGP Garden Fabrics</li>
+            </mods>
+            <match Class="PatchOperationReplace">
+              <xpath>/Defs/ThingDef[defName="SMRW_camelFleece"]/description</xpath>
+              <value>
+                <description>The untreated fleece of a Camel. It must be made in to wool at a Tailor's loom before it can be used.</description>
+              </value>
+            </match>
           </li>
 
         </operations>
@@ -3192,6 +3204,86 @@
               <xpath>/Defs/ThingDef[defName="SMRW_woolycowFleece"]/description</xpath>
               <value>
                 <description>The untreated fleece of a wooly cow. It must be made in to wool at a Tailor's loom before it can be used.</description>
+              </value>
+            </match>
+          </li>
+
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Create Fleece and Wool Recipe-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Slightly More Realistic Wool Production Revived</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>[HLX] ReGrowth - Extinct Animals Pack</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <!--woolly rhino-->
+              <ThingDef ParentName="SMRW_FleeceBase">
+                <defName>SMRW_EAP_WoollyRhinoFleece</defName>
+                <label>woolly rhino fleece</label>
+                <description>The untreated fleece of a woolly rhino. It must be made in to wool at a Tailor's bench before it can be used.</description>
+                <graphicData>
+                  <color>(92,73,60)</color>
+                </graphicData>
+                <stuffProps>
+                  <color>(92,73,60)</color>
+                </stuffProps>
+              </ThingDef>
+
+              <RecipeDef ParentName="SMRW_RecipeWoolBase">
+                <defName>SMRW_Make_EAP_woollyrhinoWool</defName>
+                <label>weave woolly rhino wool</label>
+                <description>Create woolly rhino wool from woolly rhino fleece.</description>
+                <jobString>Making woolly rhino wool</jobString>
+                <ingredients>
+                  <li>
+                    <filter>
+                      <thingDefs>
+                        <li>SMRW_EAP_WoollyRhinoFleece</li>
+                      </thingDefs>
+                    </filter>
+                    <count>25</count>
+                  </li>
+                </ingredients>
+                <products>
+                  <RG-EAP_WoollyRhinoWool>25</RG-EAP_WoollyRhinoWool>
+                </products>
+                <fixedIngredientFilter>
+                  <thingDefs>
+                    <li>SMRW_EAP_WoollyRhinoFleece</li>
+                  </thingDefs>
+                </fixedIngredientFilter>
+              </RecipeDef>
+
+            </value>
+          </li>
+
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="EAP_WoollyRhino"]/comps/li/woolDef</xpath>
+            <value>
+              <woolDef>SMRW_EAP_WoollyRhinoFleece</woolDef>
+            </value>
+          </li>
+
+          <li Class="PatchOperationFindMod">
+            <mods>
+              <li>VGP Garden Fabrics</li>
+            </mods>
+            <match Class="PatchOperationReplace">
+              <xpath>/Defs/ThingDef[defName="SMRW_EAP_WoollyRhinoFleece"]/description</xpath>
+              <value>
+                <description>The untreated fleece of a woolly rhino. It must be made in to wool at a Tailor's loom before it can be used.</description>
               </value>
             </match>
           </li>

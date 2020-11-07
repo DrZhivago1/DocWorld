@@ -28,7 +28,7 @@
                         </graphicData>
                         <defaultPlacingRot>North</defaultPlacingRot>
                         <uiIconPath>Original_Content/Vitals_Monitor/DZ_Medieval_UI</uiIconPath>
-                        <researchPrerequisites>
+                        <researchPrerequisites Inherit="False">
                             <li>ComplexFurniture</li>
                         </researchPrerequisites>
                         <statBases>
