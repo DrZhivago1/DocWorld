@@ -3694,12 +3694,12 @@
     ==========-->
 
   <!--Add Camel wool to blended wool recipe-->
-  <Operation Class="PatchOperationFindMod">
+  <Operation Class="D9Framework.PatchOperationFindPackage">
     <packageIds>
       <li>dismarzero.VGP.VGPGardenFabrics</li>
       <li>dismarzero.VGP.VGPGardenFabricsSimplified</li>
     </packageIds>
-    <match Class="PatchOperationFindMod">
+    <match Class="D9Framework.PatchOperationFindPackage">
       <packageIds>
         <li>VanillaExpanded.VAEED</li>
       </packageIds>
