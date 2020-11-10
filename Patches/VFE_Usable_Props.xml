@@ -127,7 +127,7 @@
                                 </graphicData>
                                 <tickerType>Normal</tickerType>
                                 <researchPrerequisites>
-                                    <li>MedievalProps</li>
+                                    <li>FurnitureProps</li>
                                 </researchPrerequisites>
                                 <altitudeLayer>Building</altitudeLayer>
                                 <defaultPlacingRot>South</defaultPlacingRot>

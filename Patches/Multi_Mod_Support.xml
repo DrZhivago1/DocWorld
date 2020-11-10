@@ -593,7 +593,7 @@
         <li>Vanilla Furniture Expanded - Farming</li>
       </mods>
       <match Class="PatchOperationSequence">
-        <operations>
+        <operations>          <!-- Has unintended side-effects
           <li Class="PatchOperationReplace">
             <xpath>/Defs/ThingDef[defName="VFE_PlanterBox" or defName="VFE_PlanterBox_Tilable"]/thingClass</xpath>
             <value>
@@ -608,7 +608,7 @@
                 <transmitsPower>false</transmitsPower>
               </li>
             </value>
-          </li>
+          </li>-->
           <li Class="PatchOperationReplace">
             <xpath>/Defs/ThingDef[defName="IrrigationSprinkler"]/graphicData/texPath</xpath>
             <value>
@@ -2826,76 +2826,24 @@
   </Operation>
 
   <!--==========
-    Simple Concrete {Simply More Bridges, Roads of the Rim}
-    ==========-->
-
-  <!--Replace the cost of concrete bridges with concrete, disregard patch if using "Simply More Bridges"-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Simple Concrete</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Simply More Bridges</li>
-      </mods>
-      <nomatch Class="PatchOperationFindMod">
-        <mods>
-          <li>Roads of the Rim</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-          <success>Always</success>
-          <operations>
-            <li Class="PatchOperationReplace">
-              <xpath>/Defs/TerrainDef[defName="ConcreteBridge"]/costList</xpath>
-              <value>
-                <costList>
-                  <D9Concrete>25</D9Concrete>
-                </costList>
-              </value>
-            </li>
-          </operations>
-        </match>
-      </nomatch>
-    </match>
-  </Operation>
-
-  <!--==========
-    Simply More Bridges {Industrialisation, Roads of the Rim, Simple Concrete}
+    Simply More Bridges (Continued) {Roads of the Rim, Roads of the Rim (Continued), Simple Concrete, Industrialisation}
     ==========-->
 
   <!--Replace/add texture and recipe for Concrete bridges-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Simply More Bridges</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Industrialisation</li>
-      </mods>
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>Mlie.SimplyMoreBridges</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>Loconeko.RoadsOfTheRim</li>
+        <li>Mlie.RoadsOfTheRim</li>
+      </packageIds>
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
-          <li Class="PatchOperationFindMod">
-            <mods>
-              <li>Roads of the Rim</li>
-            </mods>
-            <match Class="PatchOperationRemove">
-              <xpath>/Defs/TerrainDef[defName="ConcreteBridge"]</xpath>
-            </match>
-          </li>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs</xpath>
-            <value>
-              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
-                <defName>DeepWaterBridgeConcrete</defName>
-                <label>concrete deep water bridge</label>
-                <color>(155, 155, 150)</color>
-                <costList>
-                  <Steel>5</Steel>
-                  <Ind_Concrete>17</Ind_Concrete>
-                </costList>
-              </TerrainDef>
-            </value>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/TerrainDef[defName="ConcreteBridge"]</xpath>
           </li>
           <li Class="PatchOperationAdd">
             <xpath>/Defs</xpath>
@@ -2905,8 +2853,20 @@
                 <label>concrete bridge</label>
                 <color>(155, 155, 150)</color>
                 <costList>
-                  <Steel>3</Steel>
-                  <Ind_Concrete>10</Ind_Concrete>
+                  <Steel>13</Steel>
+                </costList>
+              </TerrainDef>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
+                <defName>DeepWaterBridgeConcrete</defName>
+                <label>concrete deep water bridge</label>
+                <color>(155, 155, 150)</color>
+                <costList>
+                  <Steel>22</Steel>
                 </costList>
               </TerrainDef>
             </value>
@@ -2917,51 +2877,80 @@
   </Operation>
 
   <!--Replace/add texture and recipe for Concrete bridges-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Simply More Bridges</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Simple Concrete</li>
-      </mods>
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>Mlie.SimplyMoreBridges</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>dninemfive.simpleconcrete</li>
+      </packageIds>
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
-          <li Class="PatchOperationFindMod">
-            <mods>
-              <li>Roads of the Rim</li>
-            </mods>
-            <match Class="PatchOperationRemove">
-              <xpath>/Defs/TerrainDef[defName="ConcreteBridge"]</xpath>
-            </match>
+          <li Class="D9Framework.PatchOperationFindPackage">
+            <packageIds>
+              <li>Loconeko.RoadsOfTheRim</li>
+              <li>Mlie.RoadsOfTheRim</li>
+            </packageIds>
           </li>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs</xpath>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[defName="ConcreteBridge"]/costList</xpath>
             <value>
-              <TerrainDef ParentName="DeepWaterBridgeStoneBase">
-                <defName>DeepWaterBridgeConcrete</defName>
-                <label>concrete deep water bridge</label>
-                <color>(155, 155, 150)</color>
-                <costList>
-                  <Steel>5</Steel>
-                  <D9Concrete>17</D9Concrete>
-                </costList>
-              </TerrainDef>
+              <costList>
+                <Steel>3</Steel>
+                <D9Concrete>10</D9Concrete>
+              </costList>
             </value>
           </li>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs</xpath>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[defName="DeepWaterBridgeConcrete"]/costList</xpath>
             <value>
-              <TerrainDef ParentName="HeavyBridgeStoneBase">
-                <defName>ConcreteBridge</defName>
-                <label>concrete bridge</label>
-                <color>(155, 155, 150)</color>
-                <costList>
-                  <Steel>3</Steel>
-                  <D9Concrete>10</D9Concrete>
-                </costList>
-              </TerrainDef>
+              <costList>
+                <Steel>5</Steel>
+                <D9Concrete>17</D9Concrete>
+              </costList>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Replace/add texture and recipe for Concrete bridges-->
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>Mlie.SimplyMoreBridges</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>trasheddt.industrialisation</li>
+      </packageIds>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="D9Framework.PatchOperationFindPackage">
+            <packageIds>
+              <li>Loconeko.RoadsOfTheRim</li>
+              <li>Mlie.RoadsOfTheRim</li>
+            </packageIds>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[defName="ConcreteBridge"]/costList</xpath>
+            <value>
+              <costList>
+                <Steel>3</Steel>
+                <Ind_Concrete>10</Ind_Concrete>
+              </costList>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/TerrainDef[defName="DeepWaterBridgeConcrete"]/costList</xpath>
+            <value>
+              <costList>
+                <Steel>5</Steel>
+                <Ind_Concrete>17</Ind_Concrete>
+              </costList>
             </value>
           </li>
         </operations>
@@ -3013,11 +3002,11 @@
                         <li>SMRW_camelFleece</li>
                       </thingDefs>
                     </filter>
-                    <count>25</count>
+                    <count>50</count>
                   </li>
                 </ingredients>
                 <products>
-                  <WoolCamel>25</WoolCamel>
+                  <WoolCamel>50</WoolCamel>
                 </products>
                 <fixedIngredientFilter>
                   <thingDefs>
@@ -3093,11 +3082,11 @@
                         <li>SMRW_muskoxFleece</li>
                       </thingDefs>
                     </filter>
-                    <count>25</count>
+                    <count>50</count>
                   </li>
                 </ingredients>
                 <products>
-                  <AEXP_MuskOxWool>25</AEXP_MuskOxWool>
+                  <AEXP_MuskOxWool>50</AEXP_MuskOxWool>
                 </products>
                 <fixedIngredientFilter>
                   <thingDefs>
@@ -3173,11 +3162,11 @@
                         <li>SMRW_woolycowFleece</li>
                       </thingDefs>
                     </filter>
-                    <count>25</count>
+                    <count>50</count>
                   </li>
                 </ingredients>
                 <products>
-                  <VFEV_WoolCow>25</VFEV_WoolCow>
+                  <VFEV_WoolCow>50</VFEV_WoolCow>
                 </products>
                 <fixedIngredientFilter>
                   <thingDefs>
@@ -3253,11 +3242,11 @@
                         <li>SMRW_EAP_WoollyRhinoFleece</li>
                       </thingDefs>
                     </filter>
-                    <count>25</count>
+                    <count>50</count>
                   </li>
                 </ingredients>
                 <products>
-                  <RG-EAP_WoollyRhinoWool>25</RG-EAP_WoollyRhinoWool>
+                  <RG-EAP_WoollyRhinoWool>50</RG-EAP_WoollyRhinoWool>
                 </products>
                 <fixedIngredientFilter>
                   <thingDefs>
@@ -3701,30 +3690,30 @@
   </Operation>
 
   <!--==========
-    VGP Garden Fabrics {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Animals Overhaul Reloaded, MendAndRecycle, SeedsPlease}
+    VGP Garden Fabrics / VGP Garden Fabrics Simplified {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Factions Expanded - Vikings, [HLX] ReGrowth - Extinct Animals Pack, Vanilla Animals Overhaul Reloaded, MendAndRecycle, SeedsPlease}
     ==========-->
 
   <!--Add Camel wool to blended wool recipe-->
   <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>VGP Garden Fabrics</li>
-      <li>VGP Garden Fabrics Simplified</li>
-    </mods>
+    <packageIds>
+      <li>dismarzero.VGP.VGPGardenFabrics</li>
+      <li>dismarzero.VGP.VGPGardenFabricsSimplified</li>
+    </packageIds>
     <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Animals Expanded — Extreme Desert</li>
-      </mods>
+      <packageIds>
+        <li>VanillaExpanded.VAEED</li>
+      </packageIds>
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/ingredients/li/filter/thingDefs</xpath>
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/ingredients/li/filter/thingDefs</xpath>
             <value>
               <li>WoolCamel</li>
             </value>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/fixedIngredientFilter/thingDefs</xpath>
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/fixedIngredientFilter/thingDefs</xpath>
             <value>
               <li>WoolCamel</li>
             </value>
@@ -3735,26 +3724,26 @@
   </Operation>
 
   <!--Add Musk Ox wool to blended wool recipe-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>VGP Garden Fabrics</li>
-      <li>VGP Garden Fabrics Simplified</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Animals Expanded — Tundra</li>
-      </mods>
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>dismarzero.VGP.VGPGardenFabrics</li>
+      <li>dismarzero.VGP.VGPGardenFabricsSimplified</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>VanillaExpanded.VAET</li>
+      </packageIds>
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/ingredients/li/filter/thingDefs</xpath>
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/ingredients/li/filter/thingDefs</xpath>
             <value>
               <li>AEXP_MuskOxWool</li>
             </value>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/fixedIngredientFilter/thingDefs</xpath>
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/fixedIngredientFilter/thingDefs</xpath>
             <value>
               <li>AEXP_MuskOxWool</li>
             </value>
@@ -3765,26 +3754,26 @@
   </Operation>
 
   <!--Add Cow wool to blended wool recipe-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>VGP Garden Fabrics</li>
-      <li>VGP Garden Fabrics Simplified</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Factions Expanded - Vikings</li>
-      </mods>
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>dismarzero.VGP.VGPGardenFabrics</li>
+      <li>dismarzero.VGP.VGPGardenFabricsSimplified</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>OskarPotocki.VFE.Vikings</li>
+      </packageIds>
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/ingredients/li/filter/thingDefs</xpath>
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/ingredients/li/filter/thingDefs</xpath>
             <value>
               <li>VFEV_WoolCow</li>
             </value>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/fixedIngredientFilter/thingDefs</xpath>
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/fixedIngredientFilter/thingDefs</xpath>
             <value>
               <li>VFEV_WoolCow</li>
             </value>
@@ -3794,28 +3783,58 @@
     </match>
   </Operation>
 
-  <!--Add Ibex and Thrumbo wool to blended wool recipe-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>VGP Garden Fabrics</li>
-      <li>VGP Garden Fabrics Simplified</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Animals Overhaul Reloaded</li>
-      </mods>
+  <!--Add woolly rhino wool to blended wool recipe-->
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>dismarzero.VGP.VGPGardenFabrics</li>
+      <li>dismarzero.VGP.VGPGardenFabricsSimplified</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>ReGrowth.BOTR.ExtinctAnimalsPack</li>
+      </packageIds>
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/ingredients/li/filter/thingDefs</xpath>
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/ingredients/li/filter/thingDefs</xpath>
+            <value>
+              <li>RG-EAP_WoollyRhinoWool</li>
+            </value>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/fixedIngredientFilter/thingDefs</xpath>
+            <value>
+              <li>RG-EAP_WoollyRhinoWool</li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--Add Ibex and Thrumbo wool to blended wool recipe-->
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>dismarzero.VGP.VGPGardenFabrics</li>
+      <li>dismarzero.VGP.VGPGardenFabricsSimplified</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>drzhivago.vanillaanimalsoverhaulreloaded</li>
+      </packageIds>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/ingredients/li/filter/thingDefs</xpath>
             <value>
               <li>KKAO_WoolIbex</li>
               <li>KKAO_ThrumboWool</li>
             </value>
           </li>
           <li Class="PatchOperationAdd">
-            <xpath>/Defs/RecipeDef[defName="Makeblendedwool"]/fixedIngredientFilter/thingDefs</xpath>
+            <xpath>/Defs/RecipeDef[defName="Makeblendedwool" or defName="MakeblendedwoolBulk"]/fixedIngredientFilter/thingDefs</xpath>
             <value>
               <li>KKAO_WoolIbex</li>
               <li>KKAO_ThrumboWool</li>
@@ -3827,15 +3846,15 @@
   </Operation>
 
   <!--Remove salvaging from Loom if using VGP Fabrics and MendandRecycle-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>VGP Garden Fabrics</li>
-      <li>VGP Garden Fabrics Simplified</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>MendAndRecycle</li>
-      </mods>
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>dismarzero.VGP.VGPGardenFabrics</li>
+      <li>dismarzero.VGP.VGPGardenFabricsSimplified</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>notfood.MendAndRecycle</li>
+      </packageIds>
       <match Class="PatchOperationRemove">
         <xpath>/Defs/RecipeDef[defName="SalvageApparel"]</xpath>
       </match>
@@ -3843,14 +3862,14 @@
   </Operation>
 
   <!--Clean up storage categories if using "VGP Garden Fabrics" and "SeedsPlease"-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>VGP Garden Fabrics</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>SeedsPlease</li>
-      </mods>
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>dismarzero.VGP.VGPGardenFabrics</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>notfood.SeedsPlease</li>
+      </packageIds>
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>

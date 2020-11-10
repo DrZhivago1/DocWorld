@@ -75,6 +75,23 @@
   </Operation>
 
   <!--==========
+    Fertile Fields [1.1]
+    ==========-->
+
+  <!--Allow all terraforming in Medieval era-->
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>jamaicancastle.RF.fertilefields</li>
+    </packageIds>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ResearchProjectDef[defName="RFF_Terraforming"]/techLevel</xpath>
+      <value>
+        <techLevel>Medieval</techLevel>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
     Glass+Lights
     ==========-->
 

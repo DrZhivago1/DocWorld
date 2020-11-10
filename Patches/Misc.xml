@@ -2,6 +2,36 @@
    <!--This file will contain all miscellaneous patches that replace/change all sorts of things from various mods-->
 
    <!--==========
+    Vanilla
+    ==========-->
+
+   <!--Add a melting mechanoid recipe for low tech colonies-->
+   <Operation Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+         <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+               <RecipeDef ParentName="ButcherCorpseMechanoidBase">
+                  <defName>DZ_MeltCorpseMechanoid</defName>
+                  <label>melt mechanoid</label>
+                  <description>Melt a dead mechanoid with a smelter to salvage usable material. Slightly faster than smashing it.</description>
+                  <jobString>Melting mechanoid.</jobString>
+                  <workAmount>400</workAmount>
+                  <soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+               </RecipeDef>
+            </value>
+         </li>
+         <li Class="PatchOperationInsert">
+            <xpath>/Defs/ThingDef/recipes/li[text()="SmeltApparel"]</xpath>
+            <value>
+               <li>DZ_MeltCorpseMechanoid</li>
+            </value>
+         </li>
+      </operations>
+   </Operation>
+
+   <!--==========
     Expanded Roofing
     ==========-->
 

@@ -1,6 +1,7 @@
-In order to best utilize this, search for a mod name using CTRL+F(or other search function based on your OS).  
+Consider this a dictionary. In order to best utilize this, search for a mod name using CTRL+F(or other search function based on your OS).  
 Each file can be toggled in mod settings, nullifying content.  
 An example template of each file documentation is setup below.  
+I do not document every detail, but you can get a good idea of which mods interact.  
   
 ### File_Name:
 `Description of File.`
@@ -619,6 +620,8 @@ An example template of each file documentation is setup below.
 ### Misc:
 `This file will contain all miscellaneous patches that replace/change all sorts of things from various mods.`
 
+    Vanilla
+        {Add a melting mechanoid recipe for low tech colonies}
     Expanded Roofing
         {Get rid of the annoying square shadows with glass roof}
     Fish Industry
@@ -717,10 +720,8 @@ An example template of each file documentation is setup below.
         {Vanilla Furniture Expanded}
 	Simple Chains: Steel
 		{Coal, Charcoal, Atlas Materials, Simple Coal, Xenite Industries, Medieval Times, Survivalist Additions}
-	Simple Concrete
-		{Simply More Bridges, Roads of the Rim}
-	Simply More Bridges
-		{Industrialisation, Roads of the Rim, Simple Concrete}
+	Simply More Bridges (Continued)
+        {Roads of the Rim, Roads of the Rim (Continued), Simple Concrete, Industrialisation}
     Slightly More Realistic Wool Production Revived
         {[HLX] ReGrowth - Extinct Animals Pack, Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Factions Expanded - Vikings}
     Smokeleaf Industry Reborn
@@ -745,8 +746,8 @@ An example template of each file documentation is setup below.
         {[WD] Reinforced Doors}
     Vanilla Weapons Expanded
         {Dragons Not Included}
-    VGP Garden Fabrics
-        {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Animals Overhaul Reloaded, MendAndRecycle, SeedsPlease}
+    VGP Garden Fabrics / VGP Garden Fabrics Simplified
+        {Vanilla Animals Expanded — Extreme Desert, Vanilla Animals Expanded — Tundra, Vanilla Factions Expanded - Vikings, [HLX] ReGrowth - Extinct Animals Pack, Vanilla Animals Overhaul Reloaded, MendAndRecycle, SeedsPlease}
     ZARS Production Spots
         {Thanks For All The Fish}
 
@@ -759,6 +760,8 @@ An example template of each file documentation is setup below.
         {Change armor research}
     Extended Storage
         {Put Extended Storage behind Complex Furniture Tech (excluding food basket and wooden pallet)}
+    Fertile Fields [1.1]
+        {Allow all terraforming in Medieval era}
     Glass+Lights
         {Disallow lights until electricity is researched, Remove Redundancies}
     High Tech Laboratory Facilities (Continued)
@@ -974,6 +977,7 @@ VFE-Production
 VGP Garden Canning
 VGP Garden Drinks
 VGP Garden Fabrics
+VGP Garden Fabrics Simplified
 VGP Garden Gourmet
 VGP Garden Medicine
 VGP Garden Tools

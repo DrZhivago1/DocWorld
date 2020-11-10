@@ -23,7 +23,7 @@
          <success>Always</success>
          <operations>
             <li Class="PatchOperationReplace">
-               <xpath>/Defs/ThingDef[defName = "ToolCabinet"]</xpath>
+               <xpath>/Defs/ThingDef[defName = "ToolCabinet"]/stuffCategories</xpath>
                <value>
                   <stuffCategories>
                      <li>Metallic</li>
