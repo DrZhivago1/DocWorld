@@ -995,7 +995,7 @@
     </Operation>
 
     <!--==========
-    Glass+Lights
+    Glass+Lights {Disallow lights until electricity is researched, Remove Redundancies, Vanilla Furniture Expanded - Spacer Module}
     ==========-->
 
     <Operation Class="PatchOperationFindMod">
@@ -1038,6 +1038,40 @@
                     </value>
                 </li>
             </operations>
+        </match>
+    </Operation>
+
+    <!--Add to a dropdown designator to show similar type of lighting-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Vanilla Furniture Expanded - Spacer Module</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs</xpath>
+                        <value>
+                            <DesignatorDropdownGroupDef>
+                                <defName>DZ_GL_VFESM</defName>
+                            </DesignatorDropdownGroupDef>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef[defName="Spacer_OutdoorLamp" or defName="OutdoorGroundLamp"]/designatorDropdown</xpath>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Spacer_OutdoorLamp" or defName="OutdoorGroundLamp"]</xpath>
+                            <value>
+                                <designatorDropdown>DZ_GL_VFESM</designatorDropdown>
+                            </value>
+                        </nomatch>
+                    </li>
+                </operations>
+            </match>
         </match>
     </Operation>
 
@@ -1826,6 +1860,36 @@
     </Operation>
 
     <!--==========
+    Vanilla Books Expanded
+    ==========-->
+
+    <!--VBE_WritersTable, VBE_TypewritersTable-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>VanillaExpanded.VBooksE</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_VBE_BookTables</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VBE_WritersTable" or defName="VBE_TypewritersTable"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_VBE_BookTables</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Vanilla Brewing Expanded
     ==========-->
 
@@ -2173,6 +2237,28 @@
             <value>
                 <designatorDropdown>DZ_Misc_Vitals</designatorDropdown>
             </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    ZARS Production Spots {Thanks For All The Fish}
+    ==========-->
+
+    <!--Add to fishingspot to ZARS dropdown-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>dracoix.zars.spots</li>
+        </packageIds>
+        <match Class="D9Framework.PatchOperationFindPackage">
+            <packageIds>
+                <li>pyrce.thanks.for.all.the.fish</li>
+            </packageIds>
+            <match Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="FishingSpot"]</xpath>
+                <value>
+                    <designatorDropdown>ZARS_Spots</designatorDropdown>
+                </value>
+            </match>
         </match>
     </Operation>
 

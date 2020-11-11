@@ -98,7 +98,7 @@
                     <li Class="PatchOperationAdd">
                         <xpath>/Defs/ThingDef[defName="CeilingFan" or defName="CeilingFanS"]/costList</xpath>
                         <value>
-                            <Glass>1</Glass>
+                            <LargeCircularGlass>1</LargeCircularGlass>
                         </value>
                     </li>
                 </operations>

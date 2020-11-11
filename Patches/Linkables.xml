@@ -134,6 +134,34 @@
     </Operation>
 
     <!--==========
+    Sparkling Worlds - Full Mod / Sparkling Worlds - Modular Core - Reduced features {Rimatomics}
+    ==========-->
+
+    <!--Add linkable support to Rimatomics research bench-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Albion.SparklingWorlds.Full</li>
+            <li>Albion.SparklingWorlds.Core</li>
+        </packageIds>
+        <match Class="D9Framework.PatchOperationFindPackage">
+            <packageIds>
+                <li>Dubwise.Rimatomics</li>
+            </packageIds>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="NuclearResearchBench"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                        <value>
+                            <li>ComputingSystemSW</li>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
     Vanilla Furniture Expanded {Vanilla EndTable support}
     ==========-->
 
@@ -182,7 +210,7 @@
     </Operation>
 
     <!--==========
-    Vanilla Furniture Expanded - Production {Apothecary (Continued), Medical System Expansion - Revived, What the hack?!, Sparkling Worlds - Full Mod, Sparkling Worlds - Modular Core - Reduced features}
+    Vanilla Furniture Expanded - Production {Apothecary (Continued), Medical System Expansion - Revived, What the hack?!, Sparkling Worlds - Full Mod, Sparkling Worlds - Modular Core - Reduced features, Swords (Continued)}
     ==========-->
 
     <!--Add linkable connection to Mechanoid Workshop-->
@@ -257,6 +285,29 @@
         </match>
     </Operation>
 
+    <!--Add linkable support to Rimatomics machining table-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>VanillaExpanded.VFEProduction</li>
+        </packageIds>
+        <match Class="D9Framework.PatchOperationFindPackage">
+            <packageIds>
+                <li>Dubwise.Rimatomics</li>
+            </packageIds>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="TableRimatomicsMachining"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                        <value>
+                            <li>VFE_MachiningCabinet</li>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
     <!--Add linkable support to Matterweaver and Mechanite Assembly-->
     <Operation Class="PatchOperationFindMod">
         <mods>
@@ -275,6 +326,29 @@
                         <value>
                             <li>VFE_MachiningCabinet</li>
                             <li>VFE_FabricationCabinet</li>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--Add linkable support to ancestral forge-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>VanillaExpanded.VFEProduction</li>
+        </packageIds>
+        <match Class="D9Framework.PatchOperationFindPackage">
+            <packageIds>
+                <li>Mlie.Swords</li>
+            </packageIds>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="LS_AncestralForge"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+                        <value>
+                            <li>VFE_SmithyCabinet</li>
                         </value>
                     </li>
                 </operations>

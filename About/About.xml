@@ -46,6 +46,7 @@ Each setting can now be disabled in the mod settings menu! Restart required for 
 		<li>dame.scleatherufpatch</li>
 		<li>Owlchemist.UndergroundPowerConduits</li>
 		<li>Primus.FunctionalProps</li>
+		<li>Wemd.MaterialsForCoolers</li>
 	</incompatibleWith>
 
 	<loadAfter>

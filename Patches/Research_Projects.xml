@@ -123,6 +123,27 @@
     </match>
   </Operation>
 
+  <!--Hide outdoor lamp from Glass+Lights until solar lamp from VFE-SM is researched-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Furniture Expanded - Spacer Module</li>
+      </mods>
+      <match Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[@Name="GlassLightBase"]/researchPrerequisites</xpath>
+        <match Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[@Name="GlassLightBase"]/researchPrerequisites</xpath>
+          <value>
+            <li>SpacerElectronics</li>
+          </value>
+        </match>
+      </match>
+    </match>
+  </Operation>
+
   <!--==========
     High Tech Laboratory Facilities (Continued)
     ==========-->

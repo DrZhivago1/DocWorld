@@ -1284,51 +1284,6 @@
     </match>
   </Operation>
 
-  <!--Hide outdoor lamp from Glass+Lights until solar lamp from VFE-SM is researched, and dropdown edits-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Glass+Lights</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded - Spacer Module</li>
-      </mods>
-      <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-          <!--Hide behind research-->
-          <li Class="PatchOperationConditional">
-            <xpath>/Defs/ThingDef[@Name="GlassLightBase"]/researchPrerequisites</xpath>
-            <match Class="PatchOperationAdd">
-              <xpath>/Defs/ThingDef[@Name="GlassLightBase"]/researchPrerequisites</xpath>
-              <value>
-                <li>SpacerElectronics</li>
-              </value>
-            </match>
-          </li>
-          <!--Add to a dropdown designator to show similar type of lighting-->
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs</xpath>
-            <value>
-              <DesignatorDropdownGroupDef>
-                <defName>DZ_GL_VFESM</defName>
-              </DesignatorDropdownGroupDef>
-            </value>
-          </li>
-          <li Class="PatchOperationConditional">
-            <xpath>/Defs/ThingDef[defName="Spacer_OutdoorLamp" or defName="OutdoorGroundLamp"]/designatorDropdown</xpath>
-            <nomatch Class="PatchOperationAdd">
-              <xpath>/Defs/ThingDef[defName="Spacer_OutdoorLamp" or defName="OutdoorGroundLamp"]</xpath>
-              <value>
-                <designatorDropdown>DZ_GL_VFESM</designatorDropdown>
-              </value>
-            </nomatch>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
   <!--==========
     Harvest Organs Post Mortem {Alpha Animals, VGP Garden Medicine}
     ==========-->
@@ -3893,28 +3848,6 @@
             <xpath>/Defs/ThingCategoryDef[defName="GardenFabrics"]</xpath>
           </li>
         </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!--==========
-    ZARS Production Spots {Thanks For All The Fish}
-    ==========-->
-
-  <!--Add to ZARS dropdown-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>ZARS Production Spots</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Thanks For All The Fish</li>
-      </mods>
-      <match Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="FishingSpot"]</xpath>
-        <value>
-          <designatorDropdown>ZARS_Spots</designatorDropdown>
-        </value>
       </match>
     </match>
   </Operation>

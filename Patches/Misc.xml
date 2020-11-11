@@ -18,7 +18,7 @@
                   <description>Melt a dead mechanoid with a smelter to salvage usable material. Slightly faster than smashing it.</description>
                   <jobString>Melting mechanoid.</jobString>
                   <workAmount>400</workAmount>
-                  <soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+                  <soundWorking>Recipe_Smelt</soundWorking>
                </RecipeDef>
             </value>
          </li>

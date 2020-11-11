@@ -272,10 +272,10 @@
     <!-- Allow other materials to be used as fuel in medieval lamp. -->
 
     <!--Lulu's Bones and Chitin-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Lulu's Bones and Chitin</li>
-        </mods>
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>LoonyLadle.RimWorld.Bones</li>
+        </packageIds>
         <!--Bones can refuel Lantern and Candle-->
         <match Class="PatchOperationAdd">
             <xpath>/Defs/ThingDef[defName="DZ_TableLamp_Medieval" or defName="DZ_TableLamp_Neolithic"]/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
@@ -286,10 +286,10 @@
     </Operation>
 
     <!--Simple Chains: Lumber support-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Simple Chains: Lumber</li>
-        </mods>
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Owlchemist.SimpleChains.Lumber</li>
+        </packageIds>
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
@@ -312,10 +312,10 @@
     </Operation>
 
     <!--Industrial Age - Objects and Furniture (Continued)-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Industrial Age - Objects and Furniture (Continued)</li>
-        </mods>
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Mlie.CallofCthulhuIndustrialAge</li>
+        </packageIds>
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>

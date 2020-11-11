@@ -276,8 +276,13 @@ I do not document every detail, but you can get a good idea of which mods intera
         {Move items to Husbandry tab}
     What The Hack
         {Move items to Production, and Misc tab}
+    ZARS Production Spots
+        {Move items to Culinary tab}
     Zen Garden
         {Move items to Decor Floors, and Lighting tab}
+    ------------------
+    ------------------
+    ------------------
     ------------------Various Culinary Support------------------
     Gloomy Vanilla Overhaul
         {Gloomy Extra - Kitchen}
@@ -458,7 +463,7 @@ I do not document every detail, but you can get a good idea of which mods intera
     Genetic Rim
         {GR_CryostabilizedEngine, GR_NitroMilkTrap, GR_HugeBearRug, GR_HugeBearCatRug, GR_WolfRug, GR_MuffaloRug}
     Glass+Lights
-        {Cieling Lamps, GlassMonitorLarge, FueledGlassworkTable, GlassworkTable, ReinforcedGlassworkTable}
+        {Cieling Lamps, GlassMonitorLarge, FueledGlassworkTable, GlassworkTable, ReinforcedGlassworkTable, Vanilla Furniture Expanded - Spacer Module}
     JetPack, JetPack (Continued)
         {JPKerosene_Generator}
     Large Animal Beds
@@ -501,6 +506,8 @@ I do not document every detail, but you can get a good idea of which mods intera
         {BeamCannonSatellitePodSW, KineticBombardmentSatellitePodSW}
     Utility Columns
         {OrbitalTradeBeacon, OrbitalTradeColumnMod}
+    Vanilla Books Expanded
+        {VBE_WritersTable, VBE_TypewritersTable}
     Vanilla Brewing Expanded
         {VBE_AmbrandyDistillery, VBE_WhiskeyCask, VBE_TequilaBarrel, VBE_VodkaDrum, VBE_GinStill}
     Vanilla Furniture Expanded - Power
@@ -521,6 +528,8 @@ I do not document every detail, but you can get a good idea of which mods intera
         {}
     Wall Vitals Monitor
         {Wall_M_VitalsMonitor}
+    ZARS Production Spots
+        {Thanks For All The Fish}
 
 ### Efficient_Lights:
 `This file will contain all patches that replace/change the power consumption for lights in Vanilla and Mods.`
@@ -606,12 +615,14 @@ I do not document every detail, but you can get a good idea of which mods intera
         {Vanilla EndTable support. Vanilla Furniture Expanded remove redundancy.}
     Smokeleaf Industry Reborn
         {RimPlas (Continued), Vanilla Furniture Expanded - Production}
+    Sparkling Worlds - Full Mod / Sparkling Worlds - Modular Core - Reduced features
+        {Rimatomics}
     Vanilla Furniture Expanded
         {Vanilla EndTable support}
     Vanilla Furniture Expanded - Medical Module
         {Vanilla VitalsMonitor support}
     Vanilla Furniture Expanded - Production
-        {Apothecary (Continued), Medical System Expansion - Revived, What the hack?!, Sparkling Worlds - Full Mod, Sparkling Worlds - Modular Core - Reduced features}
+        {Apothecary (Continued), Medical System Expansion - Revived, What the hack?!, Rimatomics, Sparkling Worlds - Full Mod, Sparkling Worlds - Modular Core - Reduced features, Swords (Continued)}
     Vanilla Furniture Expanded - Spacer Module
         {Vanilla EndTable support}
     Wall Vitals Monitor
@@ -689,7 +700,7 @@ I do not document every detail, but you can get a good idea of which mods intera
     Floored
         {Simply More Bridges (Continued)}
     Glass+Lights
-        {Vanilla Furniture Expanded - Spacer Module, Raise The Roof, Rimatomics}
+        {Raise The Roof, Rimatomics}
     Gloomy Vanilla Overhaul
         {Gloomy Extra - Kitchen}
     Harvest Organs Post Mortem
@@ -763,7 +774,7 @@ I do not document every detail, but you can get a good idea of which mods intera
     Fertile Fields [1.1]
         {Allow all terraforming in Medieval era}
     Glass+Lights
-        {Disallow lights until electricity is researched, Remove Redundancies}
+        {Disallow lights until electricity is researched, Remove Redundancies, Vanilla Furniture Expanded - Spacer Module}
     High Tech Laboratory Facilities (Continued)
         {Require Research for countertop}
     Industrial Age - Objects and Furniture
@@ -991,6 +1002,7 @@ Vanilla Animals Expanded — Tropical Rainforest
 Vanilla Animals Expanded — Tundra
 Vanilla Animals Overhaul Reloaded
 Vanilla Armour Expanded
+Vanilla Books Expanded
 Vanilla Brewing Expanded
 Vanilla Brewing Expanded - Coffees and Teas
 Vanilla Cooking Expanded
