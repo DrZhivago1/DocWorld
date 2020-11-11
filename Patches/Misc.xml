@@ -31,6 +31,32 @@
       </operations>
    </Operation>
 
+   <!--Allow butcher spot and crafting spot to be placed on furniture-->
+   <Operation Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+         <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="ButcherSpot" or defName="CraftingSpot"]/altitudeLayer</xpath>
+            <value>
+               <altitudeLayer>MoteOverhead</altitudeLayer>
+            </value>
+         </li>
+         <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="ButcherSpot" or defName="CraftingSpot"]/building</xpath>
+            <value>
+               <isEdifice>false</isEdifice>
+               <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+            </value>
+         </li>
+         <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="ButcherSpot" or defName="CraftingSpot"]</xpath>
+            <value>
+               <clearBuildingArea>false</clearBuildingArea>
+            </value>
+         </li>
+      </operations>
+   </Operation>
+
    <!--==========
     Expanded Roofing
     ==========-->
