@@ -1,0 +1,1235 @@
+<Patch>
+    <!--This file will contain all standardized resources for use in replacing modded recipes, unifying supported mods.-->
+
+    <!--==========
+    Clay {Combat Extended, Ceramics, Fertile Fields}
+    ==========-->
+
+    <!--DocWorld Clay, with whitelist-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>n7huntsman.ceramics</li>
+            <li>jamaicancastle.RF.fertilefields</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <ThingDef Name="DZ_Clay" ParentName="ResourceBase">
+                            <defName>DZ_Clay</defName>
+                            <label>Clay</label>
+                            <description>Clay: can be molded, folded, and/or fired to create bricks.</description>
+                            <!--=====Nodes below this line are merged from mods to be universally applicable=====-->
+                            <graphicData>
+                                <graphicClass>Graphic_StackCount</graphicClass>
+                            </graphicData>
+                            <soundInteract>Standard_Pickup</soundInteract>
+                            <soundDrop>Standard_Pickup</soundDrop>
+                            <stackLimit>25</stackLimit>
+                            <statBases>
+                                <MarketValue>1.0</MarketValue>
+                                <Mass>5.0</Mass>
+                                <Beauty>-5</Beauty>
+                                <Flammability>0</Flammability>
+                            </statBases>
+                            <thingCategories>
+                                <li>ResourcesRaw</li>
+                            </thingCategories>
+                            <tradeTags />
+                        </ThingDef>
+                    </value>
+                </li>
+                <!--Combat Extended, taken from Ceramics-->
+                <li Class="D9Framework.PatchOperationFindPackage">
+                    <packageIds>
+                        <li>CETeam.CombatExtended</li>
+                    </packageIds>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Clay"]/statBases</xpath>
+                        <value>
+                            <Bulk>0.05</Bulk>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Ceramics-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>n7huntsman.ceramics</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics to ThingDef-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Clay"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Clay"]/graphicData/texPath</xpath>
+                        <value>
+                            <texPath>Things/Item/Clay</texPath>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Clay"]/graphicData</xpath>
+                        <value>
+                            <texPath>Things/Item/Clay</texPath>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Add StuffProps to ThingDef-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Clay"]/stuffProps</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Clay"]/stuffProps</xpath>
+                        <value>
+                            <stuffProps>
+                                <categories Inherit="false">
+                                    <li>Clay</li>
+                                </categories>
+                                <color>(128,70,27)</color>
+                                <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+                                <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+                                <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+                                <stuffAdjective>clay</stuffAdjective>
+                                <statFactors>
+                                    <MarketValue>0.6</MarketValue>
+                                    <Flammability>0</Flammability>
+                                    <Beauty>0.7</Beauty>
+                                </statFactors>
+                            </stuffProps>
+                            <smeltable>false</smeltable>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Clay"]</xpath>
+                        <value>
+                            <stuffProps>
+                                <categories Inherit="false">
+                                    <li>Clay</li>
+                                </categories>
+                                <color>(128,70,27)</color>
+                                <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+                                <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+                                <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+                                <stuffAdjective>clay</stuffAdjective>
+                                <statFactors>
+                                    <MarketValue>0.6</MarketValue>
+                                    <Flammability>0</Flammability>
+                                    <Beauty>0.7</Beauty>
+                                </statFactors>
+                            </stuffProps>
+                            <smeltable>false</smeltable>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="N7_RawClay"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Fertile Fields-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>jamaicancastle.RF.fertilefields</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics to ThingDef-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Clay"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Clay"]/graphicData/texPath</xpath>
+                        <value>
+                            <texPath>Clay</texPath>
+                            <color>(132,115,82)</color>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Clay"]/graphicData</xpath>
+                        <value>
+                            <texPath>Clay</texPath>
+                            <color>(132,115,82)</color>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Add FF trade tags to ThingDef-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Clay"]/tradeTags</xpath>
+                    <value>
+                        <li>TerraformingResources</li>
+                    </value>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="RFFClay"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--
+        Universal Clay Replacements
+        -->
+    <!--RFFClay = Fertile Fields-->
+    <!--N7_RawClay = Ceramics-->
+
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>/Defs/ThingDef[@ParentName="RockBase"]/building/mineableThing[text()="RFFClay" or text()="N7_RawClay"]</xpath>
+        <value>
+            <mineableThing>DZ_Clay</mineableThing>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationSetName">
+        <success>Always</success>        <!-- MANDATORY due to vanilla bug -->
+        <xpath>/Defs/ThingDef/modExtensions/*//products/*[self::RFFClay or self::N7_RawClay] 
+            | /Defs/ThingDef/costList/*[self::RFFClay or self::N7_RawClay] 
+            | /Defs/RecipeDef/products/*[self::RFFClay or self::N7_RawClay]
+            | /Defs/TerrainDef/costList/*[self::RFFClay or self::N7_RawClay]
+        </xpath>
+        <name>DZ_Clay</name>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef/ingredients/*//filter/thingDefs/li[text()="RFFClay" or text()="N7_RawClay"] 
+            | /Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="RFFClay" or text()="N7_RawClay"] 
+            | /Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="RFFClay" or text()="N7_RawClay"]
+        </xpath>
+        <value>
+            <li>DZ_Clay</li>
+        </value>
+    </Operation>
+
+    <!--==========
+    Coal {[WD] Simple Coal, Project RimFactory Revived, Expanded Materials - Metals}
+    ==========-->
+
+    <!--DocWorld Coal, with whitelist-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Wemd.SimpleCoal</li>
+            <li>spdskatr.projectrimfactory</li>
+            <li>Argon.VMEu</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <ThingDef Name="DZ_Coal" ParentName="ResourceBase">
+                            <defName>DZ_Coal</defName>
+                            <label>Coal</label>
+                            <description>Coal: A carbon based sedimentary rock that can be burned for fuel.</description>
+                            <!--=====Nodes below this line are merged from mods to be universally applicable=====-->
+                            <graphicData />
+                            <soundInteract>ChunkRock_Drop</soundInteract>
+                            <soundDrop>ChunkRock_Drop</soundDrop>
+                            <stackLimit>25</stackLimit>
+                            <statBases>
+                                <MarketValue>1.0</MarketValue>
+                                <MaxHitPoints>100</MaxHitPoints>
+                                <Flammability>1.0</Flammability>
+                                <Mass>0.5</Mass>
+                            </statBases>
+                            <thingCategories>
+                                <li>ResourcesRaw</li>
+                            </thingCategories>
+                            <deepCommonality>1.25</deepCommonality>
+                            <deepCountPerPortion>25</deepCountPerPortion>
+                            <deepLumpSizeRange>15~25</deepLumpSizeRange>
+                            <tradeTags />
+                        </ThingDef>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--[WD] Simple Coal-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Wemd.SimpleCoal</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics to ThingDef-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Coal"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Coal"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Things/Item/Resource/WDCoal</texPath>
+                                <graphicClass>Graphic_Single</graphicClass>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Coal"]/graphicData</xpath>
+                        <value>
+                            <texPath>Things/Item/Resource/WDCoal</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="WDCoal"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Project RimFactory Revived-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>spdskatr.projectrimfactory</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics to ThingDef-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Coal"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Coal"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Things/Item/Resource/WDCoal</texPath>
+                                <graphicClass>Graphic_StackCount</graphicClass>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Coal"]/graphicData</xpath>
+                        <value>
+                            <texPath>Things/Item/Resource/WDCoal</texPath>
+                            <graphicClass>Graphic_StackCount</graphicClass>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="WDCoal"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Expanded Materials - Metals-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Argon.VMEu</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics to ThingDef-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Coal"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Coal"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Things/Item/Resource/VMEu_Coal</texPath>
+                                <graphicClass>Graphic_StackCount</graphicClass>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Coal"]/graphicData</xpath>
+                        <value>
+                            <texPath>Things/Item/Resource/VMEu_Coal</texPath>
+                            <graphicClass>Graphic_StackCount</graphicClass>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="VMEu_Coal"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--
+        Universal Coal Replacements
+        -->
+    <!--WDCoal = [WD] Simple Coal & Project RimFactory Revived-->
+    <!--VMEu_Coal = Expanded Materials - Metals-->
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>/Defs/TraderKindDef/stockGenerators/*//thingDef[text()="WDCoal" or text()="VMEu_Coal"]</xpath>
+        <value>
+            <thingDef>DZ_Coal</thingDef>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>/Defs/ThingDef[@ParentName="RockBase"]/building/mineableThing[text()="WDCoal" or text()="VMEu_Coal"]</xpath>
+        <value>
+            <mineableThing>DZ_Coal</mineableThing>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationSetName">
+        <success>Always</success>        <!--MANDATORY due to vanilla bug-->
+        <xpath>/Defs/ThingDef/modExtensions/*//products/*[self::WDCoal or self::VMEu_Coal] 
+            | /Defs/ThingDef/costList/*[self::WDCoal or self::VMEu_Coal]
+            | /Defs/RecipeDef/products/*[self::WDCoal or self::VMEu_Coal]
+            | /Defs/TerrainDef/costList/*[self::WDCoal or self::VMEu_Coal]
+        </xpath>
+        <name>DZ_Coal</name>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_Refuelable"]/fuelFilter/thingDefs/li[text()="WDCoal" or text()="VMEu_Coal"] 
+            | /Defs/RecipeDef/ingredients/*//filter/thingDefs/li[text()="WDCoal" or text()="VMEu_Coal"] 
+            | /Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="WDCoal" or text()="VMEu_Coal"]
+            | /Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="WDCoal" or text()="VMEu_Coal"]
+        </xpath>
+        <value>
+            <li>DZ_Coal</li>
+        </value>
+    </Operation>
+
+
+    <!--==========
+    Concrete {Industrialisation, UN-Colony (Continued), Simple Concrete, [RF] Concrete (Continued), Expanded Materials - Metals}
+    ==========-->
+
+    <!--DocWorld Concrete, with whitelist-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Mlie.UNColony</li>
+            <li>trasheddt.industrialisation</li>
+            <li>dninemfive.simpleconcrete</li>
+            <li>Mlie.Concrete</li>
+            <li>Argon.VMEu</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <ThingDef Name="DZ_Concrete" ParentName="ResourceBase">
+                            <defName>DZ_Concrete</defName>
+                            <label>Concrete</label>
+                            <description>Concrete: A hard, resilient, stony material.</description>
+                            <!--=====Nodes below this line are merged from mods to be universally applicable=====-->
+                            <graphicData />
+                            <soundInteract>Stone_Drop</soundInteract>
+                            <soundDrop>Stone_Drop</soundDrop>
+                            <stackLimit>25</stackLimit>
+                            <statBases>
+                                <MarketValue>2.0</MarketValue>
+                                <Mass>2.5</Mass>
+                                <Beauty>-5</Beauty>
+                                <Flammability>0</Flammability>
+                                <SharpDamageMultiplier>0.8</SharpDamageMultiplier>
+                                <BluntDamageMultiplier>1.1</BluntDamageMultiplier>
+                            </statBases>
+                            <thingCategories>
+                                <li>Manufactured</li>
+                            </thingCategories>
+                            <stuffProps>
+                                <stuffAdjective>concrete</stuffAdjective>
+                                <categories>
+                                    <li>Stony</li>
+                                </categories>
+                                <commonality>0.16</commonality>
+                                <constructEffect>ConstructMetal</constructEffect>
+                                <color>(107,109,107)</color>
+                                <soundImpactStuff>BulletImpact_Ground</soundImpactStuff>
+                                <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+                                <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+                                <statFactors>
+                                    <Beauty>0.8</Beauty>
+                                    <Flammability>0</Flammability>
+                                    <MeleeWeapon_CooldownMultiplier>1.4</MeleeWeapon_CooldownMultiplier>
+                                    <MaxHitPoints>1.6</MaxHitPoints>
+                                    <WorkToBuild>0.5</WorkToBuild>
+                                </statFactors>
+                            </stuffProps>
+                            <tradeTags />
+                        </ThingDef>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Industrialisation-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>trasheddt.industrialisation</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Ind/Stuff/Concrete</texPath>
+                                <graphicClass>Graphic_Single</graphicClass>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData</xpath>
+                        <value>
+                            <texPath>Ind/Stuff/Concrete</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="Ind_Concrete"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--UN-Colony (Continued)-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Mlie.UNColony</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>SadjuukUN-Building/SadjuukConcrete</texPath>
+                                <graphicClass>Graphic_StackCount</graphicClass>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData</xpath>
+                        <value>
+                            <texPath>SadjuukUN-Building/SadjuukConcrete</texPath>
+                            <graphicClass>Graphic_StackCount</graphicClass>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="SadjuukConcrete"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Simple Concrete-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>dninemfive.simpleconcrete</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Resource/concrete</texPath>
+                                <graphicClass>Graphic_Single</graphicClass>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData</xpath>
+                        <value>
+                            <texPath>Resource/concrete</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="D9Concrete"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--[RF] Concrete (Continued)-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Mlie.Concrete</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>RFFConcrete</texPath>
+                                <graphicClass>Graphic_StackCount</graphicClass>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData</xpath>
+                        <value>
+                            <texPath>RFFConcrete</texPath>
+                            <graphicClass>Graphic_StackCount</graphicClass>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Add FF trade tags-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/tradeTags[not(child::li[text()="TerraformingResources"])]</xpath>
+                    <value>
+                        <li>TerraformingResources</li>
+                    </value>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="RFFConcrete"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Expanded Materials - Metals-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Argon.VMEu</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Things/Item/Resource/VMEu_Concrete</texPath>
+                                <graphicClass>Graphic_Single</graphicClass>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/graphicData</xpath>
+                        <value>
+                            <texPath>Things/Item/Resource/VMEu_Concrete</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Change stuffProps category-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Concrete"]/stuffProps/categories</xpath>
+                    <value>
+                        <li>VMEu_ConcreteStuffCategory</li>
+                    </value>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="VMEu_Concrete"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--
+        Universal Concrete Replacements
+        -->
+    <!--SadjuukConcrete = UN-Colony (Continued)-->
+    <!--Ind_Concrete = Industrialisation-->
+    <!--D9Concrete = Simple Concrete-->
+    <!--RFFConcrete = [RF] Concrete (Continued)-->
+    <!--VMEu_Concrete = Expanded Materials - Metals-->
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>/Defs/TraderKindDef/stockGenerators/*//thingDef[text()="SadjuukConcrete" or text()="Ind_Concrete" or text()="D9Concrete" or text()="RFFConcrete" or text()="VMEu_Concrete"]</xpath>
+        <value>
+            <thingDef>DZ_Concrete</thingDef>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationSetName">
+        <success>Always</success>        <!--MANDATORY due to vanilla bug-->
+        <xpath>/Defs/ThingDef/modExtensions/*//products/*[self::SadjuukConcrete or self::Ind_Concrete or self::D9Concrete or self::RFFConcrete or self::VMEu_Concrete] 
+            | /Defs/ThingDef/costList/*[self::SadjuukConcrete or self::Ind_Concrete or self::D9Concrete or self::RFFConcrete or self::VMEu_Concrete] 
+            | /Defs/RecipeDef/products/*[self::SadjuukConcrete or self::Ind_Concrete or self::D9Concrete or self::RFFConcrete or self::VMEu_Concrete]
+            | /Defs/TerrainDef/costList/*[self::SadjuukConcrete or self::Ind_Concrete or self::D9Concrete or self::RFFConcrete or self::VMEu_Concrete]
+        </xpath>
+        <name>DZ_Concrete</name>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef/ingredients/*//filter/thingDefs/li[text()="SadjuukConcrete" or text()="Ind_Concrete" or text()="D9Concrete" or text()="RFFConcrete" or text()="VMEu_Concrete"] 
+            | /Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="SadjuukConcrete" or text()="Ind_Concrete" or text()="D9Concrete" or text()="RFFConcrete" or text()="VMEu_Concrete"] 
+            | /Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="SadjuukConcrete" or text()="Ind_Concrete" or text()="D9Concrete" or text()="RFFConcrete" or text()="VMEu_Concrete"]
+        </xpath>
+        <value>
+            <li>DZ_Concrete</li>
+        </value>
+    </Operation>
+
+    <!--==========
+    Salt {Real World Food 2 (Continued), RimSeasoning, Apothecary (Continued), [KYD] Rebalanced - Apothecary, VGP Garden Gourmet, Vanilla Cooking Expanded}
+    ==========-->
+
+    <!--DocWorld Salt, with whitelist-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Mlie.RealWorldFood2</li>
+            <li>tikubonn.RimSeasoning</li>
+            <li>Mlie.Apothecary</li>
+            <li>dismarzero.VGP.VGPGardenGourmet</li>
+            <li>VanillaExpanded.VCookE</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <ThingDef Name="DZ_Salt" ParentName="RoughPlantBase">
+                            <defName>DZ_Salt</defName>
+                            <label>Salt</label>
+                            <description>Salt: Enhances flavors in cooking and preserves organics.</description>
+                            <!--=====Nodes below this line are merged from mods to be universally applicable=====-->
+                            <graphicData />
+                            <statBases>
+                                <MarketValue>1.76</MarketValue>
+                                <Nutrition>1</Nutrition>
+                                <Flammability>1.3</Flammability>
+                            </statBases>
+                            <deepCommonality>1.25</deepCommonality>
+                            <deepCountPerPortion>10</deepCountPerPortion>
+                            <deepLumpSizeRange>2~5</deepLumpSizeRange>
+                            <thingCategories />
+                            <ingestible>
+                                <preferability>NeverForNutrition</preferability>
+                            </ingestible>
+                            <tradeTags />
+                            <comps />
+                        </ThingDef>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Real World Food 2 (Continued)-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Mlie.RealWorldFood2</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Things/Food_In/Salt/RWF_Salt</texPath>
+                                <drawSize>0.9</drawSize>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData</xpath>
+                        <value>
+                            <texPath>Things/Food_In/Salt/RWF_Salt</texPath>
+                            <drawSize>0.9</drawSize>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Use thingCategories-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/thingCategories</xpath>
+                    <value>
+                        <li>CookComponents</li>
+                    </value>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="RWF_Salt"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--RimSeasoning-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>tikubonn.RimSeasoning</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Salt/Salt</texPath>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData</xpath>
+                        <value>
+                            <texPath>Salt/Salt</texPath>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Use thingCategories-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/thingCategories</xpath>
+                    <value>
+                        <li>RimSeasoning_Seasoning</li>
+                    </value>
+                </li>
+                <!--Use hediff comp-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/comps</xpath>
+                    <value>
+                        <li Class="RimSeasoning.CompProperties_Seasoning">
+                            <compClass>RimSeasoning.CompSeasoning</compClass>
+                            <consumedThought>RimSeasoning_AteWithSalt</consumedThought>
+                        </li>
+                    </value>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="RimSeasoning_Salt"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Apothecary (Continued)-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Mlie.Apothecary</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Things/Item/Resource/Misc/AYSalt/AYSalt</texPath>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData</xpath>
+                        <value>
+                            <texPath>Things/Item/Resource/Misc/AYSalt/AYSalt</texPath>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Use thingCategories-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/thingCategories</xpath>
+                    <value>
+                        <li>AYProducts</li>
+                    </value>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="AYSalt"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--[KYD] Rebalanced - Apothecary-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>KYD.RebalancedApothecary</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/RecipeDef[defName="RefineAYSalt"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--VGP Garden Gourmet-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>dismarzero.VGP.VGPGardenGourmet</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Things/Item/Salt</texPath>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData</xpath>
+                        <value>
+                            <texPath>Things/Item/Salt</texPath>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Use thingCategories-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/thingCategories</xpath>
+                    <value>
+                        <li>ResourcesRaw</li>
+                    </value>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="ChunkSalt"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Vanilla Cooking Expanded-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>VanillaExpanded.VCookE</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData</xpath>
+                        <value>
+                            <graphicData>
+                                <texPath>Things/Items/Condiments/VCE_Salt</texPath>
+                            </graphicData>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/graphicData</xpath>
+                        <value>
+                            <texPath>Things/Items/Condiments/VCE_Salt</texPath>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Use thingCategories-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/thingCategories</xpath>
+                    <value>
+                        <li>VCE_Condiments</li>
+                    </value>
+                </li>
+                <!--Use/replace specialThoughtAsIngredient-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/ingestible/specialThoughtAsIngredient</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/ingestible/specialThoughtAsIngredient</xpath>
+                        <value>
+                            <specialThoughtAsIngredient>VCE_ConsumedSalt</specialThoughtAsIngredient>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Salt"]/ingestible</xpath>
+                        <value>
+                            <specialThoughtAsIngredient>VCE_ConsumedSalt</specialThoughtAsIngredient>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="VCE_Salt"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--
+        Universal Salt Replacements
+        -->
+    <!--VCE_Salt = Vanilla Cooking Expanded-->
+    <!--AYSalt = Apothecary (Continued)-->
+    <!--RWF_Salt = Real World Food 2 (Continued)-->
+    <!--RimSeasoning_Salt = RimSeasoning-->
+    <!--ChunkSalt = VGP Garden Gourmet-->
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>/Defs/TraderKindDef/stockGenerators/*//thingDef[text()="VCE_Salt" or text()="AYSalt" or text()="RWF_Salt" or text()="RimSeasoning_Salt" or text()="ChunkSalt"]</xpath>
+        <value>
+            <thingDef>DZ_Salt</thingDef>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>/Defs/ThingDef[@ParentName="RockBase"]/building/mineableThing[text()="VCE_Salt" or text()="AYSalt" or text()="RWF_Salt" or text()="RimSeasoning_Salt" or text()="ChunkSalt"]</xpath>
+        <value>
+            <mineableThing>DZ_Salt</mineableThing>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationSetName">
+        <success>Always</success>        <!--MANDATORY due to vanilla bug-->
+        <xpath>/Defs/ThingDef/modExtensions/*//products/*[self::VCE_Salt or self::AYSalt or self::RWF_Salt or self::RimSeasoning_Salt or self::ChunkSalt] 
+            | /Defs/ThingDef/costList/*[self::VCE_Salt or self::AYSalt or self::RWF_Salt or self::RimSeasoning_Salt or self::ChunkSalt] 
+            | /Defs/RecipeDef/products/*[self::VCE_Salt or self::AYSalt or self::RWF_Salt or self::RimSeasoning_Salt or self::ChunkSalt]
+            | /Defs/TerrainDef/costList/*[self::VCE_Salt or self::AYSalt or self::RWF_Salt or self::RimSeasoning_Salt or self::ChunkSalt]
+        </xpath>
+        <name>DZ_Salt</name>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef/ingredients/*//filter/thingDefs/li[text()="VCE_Salt" or text()="AYSalt" or text()="RWF_Salt" or text()="RimSeasoning_Salt" or text()="ChunkSalt"] 
+            | /Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="VCE_Salt" or text()="AYSalt" or text()="RWF_Salt" or text()="RimSeasoning_Salt" or text()="ChunkSalt"] 
+            | /Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="VCE_Salt" or text()="AYSalt" or text()="RWF_Salt" or text()="RimSeasoning_Salt" or text()="ChunkSalt"]
+        </xpath>
+        <value>
+            <li>DZ_Salt</li>
+        </value>
+    </Operation>
+
+    <!--==========
+    Sand {Combat Extended, Ceramics, Fertile Fields, [RF] Concrete (Continued)}
+    ==========-->
+
+    <!--DocWorld Sand, with whitelist-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>n7huntsman.ceramics</li>
+            <li>jamaicancastle.RF.fertilefields</li>
+            <li>Mlie.Concrete</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <ThingDef Name="DZ_Sand" ParentName="ResourceBase">
+                            <defName>DZ_Sand</defName>
+                            <label>Sand</label>
+                            <description>Sand: coarse, rough, irritating, and gets everywhere.</description>
+                            <!--=====Nodes below this line are merged from mods to be universally applicable=====-->
+                            <graphicData>
+                                <graphicClass>Graphic_StackCount</graphicClass>
+                            </graphicData>
+                            <soundInteract>Standard_Pickup</soundInteract>
+                            <soundDrop>Standard_Pickup</soundDrop>
+                            <stackLimit>25</stackLimit>
+                            <statBases>
+                                <MarketValue>1.0</MarketValue>
+                                <Mass>5.0</Mass>
+                                <Beauty>-5</Beauty>
+                                <Flammability>0</Flammability>
+                            </statBases>
+                            <thingCategories>
+                                <li>ResourcesRaw</li>
+                            </thingCategories>
+                            <tradeTags />
+                        </ThingDef>
+                    </value>
+                </li>
+                <!--Combat Extended, taken from Ceramics-->
+                <li Class="D9Framework.PatchOperationFindPackage">
+                    <packageIds>
+                        <li>CETeam.CombatExtended</li>
+                    </packageIds>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Sand"]/statBases</xpath>
+                        <value>
+                            <Bulk>0.03</Bulk>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Ceramics-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>n7huntsman.ceramics</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Sand"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Sand"]/graphicData/texPath</xpath>
+                        <value>
+                            <texPath>Things/Item/Sand</texPath>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Sand"]/graphicData</xpath>
+                        <value>
+                            <texPath>Things/Item/Sand</texPath>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="N7_Sand"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Fertile Fields-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>jamaicancastle.RF.fertilefields</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <!--<success>Always</success>-->
+            <operations>
+                <!--Use/replace graphics-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Sand"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Sand"]/graphicData/texPath</xpath>
+                        <value>
+                            <texPath>SandPile</texPath>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Sand"]/graphicData</xpath>
+                        <value>
+                            <texPath>SandPile</texPath>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Add FF trade tags-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Sand"]/tradeTags[not(child::li[text()="TerraformingResources"])]</xpath>
+                    <value>
+                        <li>TerraformingResources</li>
+                    </value>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="SandPile"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--[RF] Concrete (Continued)-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Mlie.Concrete</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Use/replace graphics to ThingDef-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[@Name="DZ_Sand"]/graphicData/texPath</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Sand"]/graphicData/texPath</xpath>
+                        <value>
+                            <texPath>SandPile</texPath>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[@Name="DZ_Sand"]/graphicData</xpath>
+                        <value>
+                            <texPath>SandPile</texPath>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Remove resource-->
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/ThingDef[defName="SandPile"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--
+        Universal Sand Replacements
+        -->
+    <!--SandPile = Fertile Fields-->
+    <!--N7_Sand = Ceramics-->
+    <Operation Class="PatchOperationSetName">
+        <success>Always</success>        <!-- MANDATORY due to vanilla bug -->
+        <xpath>/Defs/ThingDef/modExtensions/*//products/*[self::SandPile or self::N7_Sand] 
+        | /Defs/ThingDef/costList/*[self::SandPile or self::N7_Sand] 
+        | /Defs/RecipeDef/products/*[self::SandPile or self::N7_Sand]
+        | /Defs/TerrainDef/costList/*[self::SandPile or self::N7_Sand]
+        </xpath>
+        <name>DZ_Sand</name>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>/Defs/RecipeDef/ingredients/*//filter/thingDefs/li[text()="SandPile" or text()="N7_Sand"] 
+            | /Defs/RecipeDef/fixedIngredientFilter/thingDefs/li[text()="SandPile" or text()="N7_Sand"] 
+            | /Defs/RecipeDef/defaultIngredientFilter/thingDefs/li[text()="SandPile" or text()="N7_Sand"]
+        </xpath>
+        <value>
+            <li>DZ_Sand</li>
+        </value>
+    </Operation>
+
+</Patch>

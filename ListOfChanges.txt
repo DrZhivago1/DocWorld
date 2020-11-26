@@ -74,7 +74,7 @@ I do not document every detail, but you can get a good idea of which mods intera
         {Move items to Animal tab. #animalbeds}
     Coal Expanded
         {Move items to Culinary and Lighting tab}
-    CTS - Complete Tech Solutions
+    CTS - Complete Tech Solutions (Continued)
         {Move items to Beds tab}
     DeCore
         {Move items to Husbandry tab and remove excess hidden power conduit}
@@ -280,6 +280,8 @@ I do not document every detail, but you can get a good idea of which mods intera
         {Move items to Culinary tab}
     Zen Garden
         {Move items to Decor Floors, and Lighting tab}
+    [JPT] Soft Warm Beds
+        {Move items to Beds tab}
     ------------------
     ------------------
     ------------------
@@ -305,6 +307,8 @@ I do not document every detail, but you can get a good idea of which mods intera
     Vanilla Furniture Expanded - Farming
         {LWM's Deep Storage. #storage}
     Vanilla Furniture Expanded - Spacer Module
+        {LWM's Deep Storage. #storage}
+    [JPT] Human Resources
         {LWM's Deep Storage. #storage}
     ------------------Various Structure Support------------------
     Insulation, Insulation (Continued)
@@ -632,17 +636,19 @@ I do not document every detail, but you can get a good idea of which mods intera
 `This file will contain all miscellaneous patches that replace/change all sorts of things from various mods.`
 
     Vanilla
-        {Add a melting mechanoid recipe for low tech colonies, Allow butcher spot and crafting spot to be placed on furniture}
+        {Patch Vanilla flooring if Concrete exists, Add a melting mechanoid recipe for low tech colonies, Allow butcher spot and crafting spot to be placed on furniture}
+    Concrete Walls
+        {Use concrete from other mods}
     Expanded Roofing
         {Get rid of the annoying square shadows with glass roof}
+    Expanded Materials - Metals
+        {Return concrete flooring to normal}
     Fish Industry
         {Allow rotation of aquaculture basin (microfungus texture edited due to this), Stuff the pier}
     Fishing Nets
         {Increase fish spawn randomness, ensure minimum meat count per trap, and increase/further randomize the possible lifespan of all traps}
     Industrial Age - Objects and Furniture
         {Make gas lamps from require chemfuel}
-    Industrialisation
-        {Patch Vanilla paved tile flooring}
     Lulu's Bones and Chitin
         {Bring Lulu's bones closer to Vanilla wood stats}
     Mamuffalo
@@ -664,13 +670,15 @@ I do not document every detail, but you can get a good idea of which mods intera
     Simple Chains: Lumber
         {Make green lumber stats in-line with Vanilla lumber}
 	Simple Chains: Steel
-		{Create Bulk Recipes for steel}
+		{Create Bulk Recipes for steel, Add coal/charcoal to steel smelting list}
 	Save Our Ship 2
 		{Increase pod launcher range}
     Vanilla Armour Expanded
         {Allow armor to be made of woody stuff}
     Vanilla Factions Expanded - Medieval
         {Allow armor to be made of woody stuff}
+    Vanilla Weapons Expanded
+        {Balance tools: Hatchet, Pickaxe, Hammer, Shovel, Wrench, Cleaver (they should not be better than real weapons)}
     VGP Garden Gourmet
         {Stuff items}
 
@@ -678,7 +686,7 @@ I do not document every detail, but you can get a good idea of which mods intera
 `This file will contain all patches that replace/change items based off whether or not multiple mods are loaded.`
 
     Ceramics
-        {Expanded Woodworking, Fertile Fields, VFE-Production}
+        {Expanded Woodworking, Fertile Fields, Vanilla Furniture Expanded - Production}
     Coal Expanded
         {Simple Chains: Lumber}
     Cupro's Stones
@@ -686,7 +694,7 @@ I do not document every detail, but you can get a good idea of which mods intera
     DDA Security and More
         {Doors Expanded}
     Dubs Bad Hygiene
-        {Apothecary, Apothecary (Continued), Fertile Fields, Fermenter, Vanilla Furniture Expanded - Farming}
+        {Apothecary (Continued), Vanilla Furniture Expanded - Farming, Fertile Fields, Fermenter, Fermenter (Continued)}
     Empire
         {Realistic Planets - Fan Update}
     Expanded Materials - Metals
@@ -711,6 +719,8 @@ I do not document every detail, but you can get a good idea of which mods intera
         {Simple Chains: Lumber, Vanilla Factions Expanded - Insectoids}
     Medical Training
         {Thanks For All The Fish}
+    More Planning
+        {Circle And Oval}
     [T] MoreFloors
         {Stuffed Floors}
     Project RimFactory Revived
@@ -729,8 +739,6 @@ I do not document every detail, but you can get a good idea of which mods intera
         {[SYR] Universal Fermenter, Vanilla Animals Expanded — Arid Shrubland, Vanilla Animals Expanded — Desert, Vanilla Animals Expanded — Ice Sheet, Vanilla Animals Expanded — Tropical Rainforest, Vanilla Factions Expanded - Vikings}
     Simple Chains: Lumber
         {Vanilla Furniture Expanded}
-	Simple Chains: Steel
-		{Coal, Charcoal, Atlas Materials, Simple Coal, Xenite Industries, Medieval Times, Survivalist Additions}
 	Simply More Bridges (Continued)
         {Roads of the Rim, Roads of the Rim (Continued), Simple Concrete, Industrialisation}
     Slightly More Realistic Wool Production Revived
@@ -741,8 +749,6 @@ I do not document every detail, but you can get a good idea of which mods intera
         {Dubs Bad Hygiene}
     UN-Colony
         {Industrialisation}
-    Universal Fermenter
-        {Vanilla Factions Expanded - Medieval, Vanilla Factions Expanded - Settlers, RimBees}
     Vanilla Armour Expanded
         {Dragons Not Included, NightVision}
     Vanilla Factions Expanded - Medieval
@@ -823,16 +829,17 @@ Apothecary (Continued)
 Aquarium (Continued)
 Architect Expanded - Fences
 Atlas Materials
-CTS - Complete Tech Solutions
+CTS - Complete Tech Solutions (Continued)
 Ceiling Lights
 Ceramics
 Change Dresser
 Charcoal
 Clutter Structures
-Coal
 Coal Expanded
 Colony Leadership
+Combat Extended
 Combat Training
+Concrete Walls
 Cupro's Stones
 DDA Security and More
 DeCore
@@ -855,7 +862,7 @@ Fences And Floors (Continued)
 Fences And No Floors
 Fermenter
 Fermenter (Continued)
-Fertile Fields [1.1]
+Fertile Fields
 Fish Industry
 Fishing Industry
 Fishing Nets
@@ -912,9 +919,9 @@ More Hydroponics
 More Linkables
 More Planning
 More Vanilla Biomes
-Natural Paths
-Natural Lakes
 NPDTiers - The Nutrient Paste Expansion Mod (Continued)
+Natural Lakes
+Natural Paths
 Neon Rim: The Rimworld Signs Pack
 NightVision
 Open The Windows
@@ -934,6 +941,7 @@ Raise The Roof 1.2
 ReGrowth: Biomes of The Rim - Boreal Expansion
 ReGrowth: Biomes of The Rim - Tundra Expansion
 ReGrowth: Biomes of The Rim - Wasteland
+Real World Food 2 (Continued)
 Realistic Planets - Fan Update
 RedistHeat
 Remote Tech
@@ -948,6 +956,7 @@ RimJobWorld
 RimOverhaul
 RimPlas
 RimPlas (Continued)
+RimSeasoning
 RimWriter
 Rimatomics
 Rimefeller
@@ -982,7 +991,7 @@ Survivalist Additions
 Survivalist's Additions
 Thanks For All The Fish
 Training Rack
-UN-Colony
+UN-Colony (Continued)
 Utility Columns
 VFE-Production
 VGP Garden Canning
@@ -1025,15 +1034,16 @@ Wall Light
 Wall Sun Lamp
 Wall Vitals Monitor
 What The Hack
-Xenite Industries
 ZARS Production Spots
 Zen Garden
 [D] Thermodynamics - Hot Meals
 [ELIF] Flooring and Decorative Options
 [JDS] Simple Storage
 [JPT] Soft Warm Beds
+[KYD] Rebalanced - Apothecary
 [LC] Survival Tools
 [O21] Dragons Not Included
+[RF] Concrete (Continued)
 [RF] Fishing
 [SYR] Doormats
 [T] MoreFloors

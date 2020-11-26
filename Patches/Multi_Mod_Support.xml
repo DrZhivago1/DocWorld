@@ -2,18 +2,18 @@
   <!--This file will contain all patches that replace/change items based off whether or not multiple mods are loaded-->
 
   <!--==========
-    Ceramics {Expanded Woodworking, Fertile Fields, VFE-Production}
+    Ceramics {Expanded Woodworking, Fertile Fields, Vanilla Furniture Expanded - Production}
     ==========-->
 
   <!--Add fiber recipe to woodworking tables from Expanded Woodworking-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[1.1] Ceramics</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Expanded Woodworking</li>
-      </mods>
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>n7huntsman.ceramics</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>Adventurer.ExpandWoodwork</li>
+      </packageIds>
       <match Class="PatchOperationAdd">
         <xpath>/Defs/RecipeDef[defName="Make_FiberFromWood"]/recipeUsers</xpath>
         <value>
@@ -25,14 +25,14 @@
   </Operation>
 
   <!--Add most recipes to RockMill from FF-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[1.1] Ceramics</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Fertile Fields [1.1]</li>
-      </mods>
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>n7huntsman.ceramics</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>jamaicancastle.RF.fertilefields</li>
+      </packageIds>
       <match Class="PatchOperationAdd">
         <xpath>/Defs/RecipeDef[defName="Make_RawMudbricks" or defName="Make_RawBricks" or defName="Make_HardenedCeramic" or defName="Make_Wafer" or defName="Make_Porcelain"]/recipeUsers</xpath>
         <value>
@@ -43,14 +43,14 @@
   </Operation>
 
   <!--Add most recipes to VFE-Production electric stonecutter-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>[1.1] Ceramics</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Vanilla Furniture Expanded - Production</li>
-      </mods>
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>n7huntsman.ceramics</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>VanillaExpanded.VFEProduction</li>
+      </packageIds>
       <match Class="PatchOperationAdd">
         <xpath>/Defs/RecipeDef[defName="Make_RawMudbricks" or defName="Make_RawBricks" or defName="Make_HardenedCeramic" or defName="Make_Wafer" or defName="Make_Porcelain"]/recipeUsers</xpath>
         <value>
@@ -561,19 +561,18 @@
   </Operation>
 
   <!--==========
-    Dubs Bad Hygiene {Apothecary, Fertile Fields, Fermenter, Fermenter (Continued) Vanilla Furniture Expanded - Farming}
+    Dubs Bad Hygiene {Apothecary (Continued), Vanilla Furniture Expanded - Farming, Fertile Fields, Fermenter, Fermenter (Continued)}
     ==========-->
 
   <!--Move Apothecary washing tub to Hygiene tab-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Dubs Bad Hygiene</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Apothecary</li>
-        <li>Apothecary (Continued)</li>
-      </mods>
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>Mlie.Apothecary</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>Dubwise.DubsBadHygiene</li>
+      </packageIds>
       <match Class="PatchOperationReplace">
         <xpath>/Defs/ThingDef[defName="AYApparelWashingTub"]/designationCategory</xpath>
         <value>
@@ -593,7 +592,7 @@
         <li>Vanilla Furniture Expanded - Farming</li>
       </mods>
       <match Class="PatchOperationSequence">
-        <operations>          <!-- Has unintended side-effects
+        <operations>          <!-- Has unintended side-effects, but was meant to utilize Dubs' hydroponics water
           <li Class="PatchOperationReplace">
             <xpath>/Defs/ThingDef[defName="VFE_PlanterBox" or defName="VFE_PlanterBox_Tilable"]/thingClass</xpath>
             <value>
@@ -1540,6 +1539,28 @@
             </value>
           </li>
         </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    More Planning {Circle And Oval}
+    ==========-->
+
+  <!--Move to planning designationCategory-->
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>com.github.alandariva.moreplanning</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>WGFLASH55.CircleAndOval</li>
+      </packageIds>
+      <match Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[@Name="CAOBase"]/designationCategory</xpath>
+        <value>
+          <designationCategory>Planning</designationCategory>
+        </value>
       </match>
     </match>
   </Operation>
@@ -2615,172 +2636,6 @@
   </Operation>
 
   <!--==========
-    Simple Chains: Steel {Coal, Charcoal, Atlas Materials, Simple Coal, Xenite Industries, Medieval Times, Survivalist Additions}
-    ==========-->
-
-  <!--Add modded items to steel smelting list conditionally, based on defName-->
-  <!-- Any mod using the def "coal" -->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Simple Chains: Steel</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
-        <li Class="PatchOperationTest">
-          <xpath>/Defs/ThingDef[defName="Coal"]</xpath>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
-					//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
-          </xpath>
-          <value>
-            <li>Coal</li>
-          </value>
-        </li>
-      </operations>
-    </match>
-  </Operation>
-
-  <!-- Any mod using the def "charcoal" -->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Simple Chains: Steel</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
-        <li Class="PatchOperationTest">
-          <xpath>/Defs/ThingDef[defName="Charcoal"]</xpath>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
-					//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
-          </xpath>
-          <value>
-            <li>Charcoal</li>
-          </value>
-        </li>
-      </operations>
-    </match>
-  </Operation>
-
-  <!-- Atlas Materials -->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Simple Chains: Steel</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
-        <li Class="PatchOperationTest">
-          <xpath>/Defs/ThingDef[defName="AM_Coal"]</xpath>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
-                  //thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
-          </xpath>
-          <value>
-            <li>AM_Coal</li>
-          </value>
-        </li>
-      </operations>
-    </match>
-  </Operation>
-
-  <!-- Simple Coal -->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Simple Chains: Steel</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
-        <li Class="PatchOperationTest">
-          <xpath>/Defs/ThingDef[defName="WDCoal"]</xpath>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
-                  //thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
-          </xpath>
-          <value>
-            <li>WDCoal</li>
-          </value>
-        </li>
-      </operations>
-    </match>
-  </Operation>
-
-  <!-- Xenite Industries -->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Simple Chains: Steel</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
-        <li Class="PatchOperationTest">
-          <xpath>/Defs/ThingDef[defName="XIcharcoal"]</xpath>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
-				//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
-          </xpath>
-          <value>
-            <li>XIcharcoal</li>
-          </value>
-        </li>
-      </operations>
-    </match>
-  </Operation>
-
-  <!-- Medieval Times -->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Simple Chains: Steel</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
-        <li Class="PatchOperationTest">
-          <xpath>/Defs/ThingDef[defName="MedTimes_Resource_Coal"]</xpath>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
-				//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
-          </xpath>
-          <value>
-            <li>MedTimes_Resource_Coal</li>
-          </value>
-        </li>
-      </operations>
-    </match>
-  </Operation>
-
-  <!-- Survivalist Additions -->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Simple Chains: Steel</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <success>Always</success>
-      <operations>
-        <li Class="PatchOperationTest">
-          <xpath>/Defs/ThingDef[defName="SRV_Charcoal"]</xpath>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
-				//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
-          </xpath>
-          <value>
-            <li>SRV_Charcoal</li>
-          </value>
-        </li>
-      </operations>
-    </match>
-  </Operation>
-
-  <!--==========
     Simply More Bridges (Continued) {Roads of the Rim, Roads of the Rim (Continued), Simple Concrete, Industrialisation}
     ==========-->
 
@@ -2854,7 +2709,7 @@
             <value>
               <costList>
                 <Steel>3</Steel>
-                <D9Concrete>10</D9Concrete>
+                <DZ_Concrete>10</DZ_Concrete>
               </costList>
             </value>
           </li>
@@ -2863,7 +2718,7 @@
             <value>
               <costList>
                 <Steel>5</Steel>
-                <D9Concrete>17</D9Concrete>
+                <DZ_Concrete>17</DZ_Concrete>
               </costList>
             </value>
           </li>
@@ -2895,7 +2750,7 @@
             <value>
               <costList>
                 <Steel>3</Steel>
-                <Ind_Concrete>10</Ind_Concrete>
+                <DZ_Concrete>10</DZ_Concrete>
               </costList>
             </value>
           </li>
@@ -2904,7 +2759,7 @@
             <value>
               <costList>
                 <Steel>5</Steel>
-                <Ind_Concrete>17</Ind_Concrete>
+                <DZ_Concrete>17</DZ_Concrete>
               </costList>
             </value>
           </li>
@@ -3307,55 +3162,13 @@
             <xpath>/Defs/WorkGiverDef[defName="Ind_DoBillsMixconcrete"]</xpath>
           </li>
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName="Ind_Concrete" or defName="Ind_ConcreteMixer"]</xpath>
+            <xpath>/Defs/ThingDef[defName="Ind_ConcreteMixer"]</xpath>
           </li>
           <li Class="PatchOperationRemove">
             <xpath>/Defs/ResearchProjectDef[defName="Ind_ConcreteProduction"]</xpath>
           </li>
-          <li Class="PatchOperationRemove">            <!--I would have used one operation in: [defName="item" or defName="item"...] but it was breaking. So separate operations it is...-->
-            <xpath>/Defs/RecipeDef[defName="Ind_MakeConcreteFromAny"]</xpath>
-          </li>
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/RecipeDef[defName="Ind_MakeConcreteFromSandstone"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>/Defs/RecipeDef[defName="Ind_MakeConcreteFromGranite"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>/Defs/RecipeDef[defName="Ind_MakeConcreteFromLimestone"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>/Defs/RecipeDef[defName="Ind_MakeConcreteFromSlate"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>/Defs/RecipeDef[defName="Ind_MakeConcreteFromMarble"]</xpath>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>/Defs/RecipeDef[@Name="Ind_MakeConcreteBase"]</xpath>
-          </li>
-
-          <li Class="PatchOperationReplace">
-            <xpath>/Defs/TerrainDef[defName="Concrete"]/costList</xpath>
-            <value>
-              <costList>
-                <SadjuukConcrete>5</SadjuukConcrete>
-              </costList>
-            </value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>/Defs/TerrainDef[defName="PavedTile"]/costList</xpath>
-            <value>
-              <costList>
-                <Steel>1</Steel>
-                <SadjuukConcrete>5</SadjuukConcrete>
-              </costList>
-            </value>
-          </li>
-          <li Class="PatchOperationReplace">
-            <xpath>/Defs/ThingDef[defName="Ind_NuclearPowerPlant"]/costList/Ind_Concrete</xpath>
-            <value>
-              <SadjuukConcrete>1000</SadjuukConcrete>
-            </value>
+            <xpath>/Defs/RecipeDef[@Name="Ind_MakeConcreteBase" or defName="Ind_MakeConcreteFromAny" or defName="Ind_MakeConcreteFromSandstone" or defName="Ind_MakeConcreteFromGranite" or defName="Ind_MakeConcreteFromLimestone" or defName="Ind_MakeConcreteFromSlate" or defName="Ind_MakeConcreteFromMarble"]</xpath>
           </li>
         </operations>
       </match>
@@ -3467,7 +3280,7 @@
   </Operation>
 
   <!--==========
-    Vanilla Factions Expanded - Vikings {Dragons Not Included}
+    Vanilla Factions Expanded - Vikings | OskarPotocki.VFE.Vikings {Dragons Not Included, [SYR] Universal Fermenter}
     ==========-->
 
   <!--Armor requires new research -->
@@ -3487,6 +3300,43 @@
             <value>
               <researchPrerequisite>O21_DNI_MetalArmour</researchPrerequisite>
             </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!-- [SYR] Universal Fermenter -->
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>OskarPotocki.VFE.Vikings</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>syrchalis.universalfermenter</li>
+      </packageIds>
+      <match Class="PatchOperationSequence">
+        <operations>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/ThingDef[defName = "VFEV_MeadFermentingBarrel"]/designationCategory</xpath>
+          </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName = "UniversalFermenter"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes</xpath>
+            <value>
+              <li>
+                <thingDef>VFEV_Mead</thingDef>
+                <ingredientFilter>
+                  <thingDefs>
+                    <li>VFEV_Honey</li>
+                  </thingDefs>
+                </ingredientFilter>
+                <maxCapacity>75</maxCapacity>
+                <usesQuality>false</usesQuality>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationRemove">
+            <xpath>/Defs/WorkGiverDef[defName = "VFEV_TakeMeadOutOfMeadBarrel" or defName = "VFEV_FillMeadBarrel"]</xpath>
           </li>
         </operations>
       </match>

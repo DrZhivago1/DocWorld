@@ -5,6 +5,33 @@
     Vanilla
     ==========-->
 
+   <!--Patch Vanilla flooring if Concrete exists-->
+   <Operation Class="PatchOperationConditional">
+      <xpath>/Defs/ThingDef[defName = "DZ_Concrete"]</xpath>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/TerrainDef[defName = "Concrete"]/costList</xpath>
+               <value>
+                  <costList>
+                     <DZ_Concrete>5</DZ_Concrete>
+                  </costList>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/TerrainDef[defName = "PavedTile"]/costList</xpath>
+               <value>
+                  <costList>
+                     <Steel>1</Steel>
+                     <DZ_Concrete>5</DZ_Concrete>
+                  </costList>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
    <!--Add a melting mechanoid recipe for low tech colonies-->
    <Operation Class="PatchOperationSequence">
       <success>Always</success>
@@ -55,6 +82,78 @@
             </value>
          </li>
       </operations>
+   </Operation>
+
+   <!--==========
+    Concrete Walls
+    ==========-->
+
+   <!--Use concrete from other mods-->
+   <Operation Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+         <li>Porohkun.ConcreteWalls</li>
+      </packageIds>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationTest">
+               <xpath>/Defs/ThingDef[defName="DZ_Concrete"]</xpath>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/RecipeDef[defName="MakeConcreteSlabBricks"]/label</xpath>
+               <value>
+                  <label>make concrete slabs</label>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/RecipeDef[defName="MakeConcreteSlabBricks4"]/label</xpath>
+               <value>
+                  <label>make concrete slabs x4</label>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/RecipeDef[defName="MakeConcreteSlabBricks" or defName="MakeConcreteSlabBricks4"]/ingredients/*//filter/categories</xpath>
+               <value>
+                  <thingDefs>
+                     <li>DZ_Concrete</li>
+                  </thingDefs>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/RecipeDef[defName="MakeConcreteSlabBricks" or defName="MakeConcreteSlabBricks4"]/fixedIngredientFilter/thingDefs 
+                     | /Defs/RecipeDef[defName="MakeConcreteSlabBricks" or defName="MakeConcreteSlabBricks4"]/defaultIngredientFilter/thingDefs</xpath>
+               <value>
+                  <li>DZ_Concrete</li>
+               </value>
+            </li>
+            <li Class="PatchOperationRemove">
+               <xpath> /Defs/RecipeDef[defName="MakeConcreteSlabBricks" or defName="MakeConcreteSlabBricks4"]/fixedIngredientFilter/categories 
+                     | /Defs/RecipeDef[defName="MakeConcreteSlabBricks" or defName="MakeConcreteSlabBricks4"]/defaultIngredientFilter/categories 
+                     | /Defs/RecipeDef[defName="MakeConcreteSlabChunks"]
+               </xpath>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Expanded Materials - Metals
+    ==========-->
+
+   <!--Return concrete flooring to normal-->
+   <Operation Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+         <li>Argon.VMEu</li>
+      </packageIds>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationRemove">
+               <xpath>/Defs/TerrainDef[defName = "Concrete" or defName = "PavedTile"]/designatorDropdown 
+                  | /Defs/TerrainDef[defName="VMEu_Concrete_Industrial" or defName="VMEu_Paved_Industrial"]</xpath>
+            </li>
+         </operations>
+      </match>
    </Operation>
 
    <!--==========
@@ -317,26 +416,6 @@
                </value>
             </li>
          </operations>
-      </match>
-   </Operation>
-
-   <!--==========
-    Industrialisation
-    ==========-->
-
-   <!--Patch Vanilla paved tile flooring-->
-   <Operation Class="PatchOperationFindMod">
-      <mods>
-         <li>Industrialisation</li>
-      </mods>
-      <match Class="PatchOperationReplace">
-         <xpath>/Defs/TerrainDef[defName = "PavedTile"]/costList</xpath>
-         <value>
-            <costList>
-               <Steel>1</Steel>
-               <Ind_Concrete>5</Ind_Concrete>
-            </costList>
-         </value>
       </match>
    </Operation>
 
@@ -869,6 +948,52 @@
       </match>
    </Operation>
 
+  <!--Add coal/charcoal to steel smelting list-->
+  <!--Coal-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="DZ_Coal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+					//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>DZ_Coal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--Charcoal-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="DZ_Charcoal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+					//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>DZ_Charcoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
    <!--==========
     Save Our Ship 2
     ==========-->
@@ -944,6 +1069,23 @@
             </li>
          </operations>
       </match>
+   </Operation>
+
+   <!--==========
+    Vanilla Weapons Expanded
+    ==========-->
+
+   <!--Balance tools: Hatchet, Pickaxe, Hammer, Shovel, Wrench, Cleaver (they should not be better than real weapons)-->
+   <Operation Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+         <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VWE_MeleeWeapon_Axe" or defName="VWE_MeleeWeapon_Pickaxe" or defName="VWE_MeleeWeapon_Hammer" or defName="VWE_MeleeWeapon_Shovel" or defName="VWE_MeleeWeapon_Wrench" or defName="VWE_MeleeWeapon_Cleaver"]/tools/li[label="blade" or label="point" or label="head"]/power</xpath>
+            <value>
+               <power>8</power>
+            </value>
+         </li>
+      </operations>
    </Operation>
 
    <!--==========

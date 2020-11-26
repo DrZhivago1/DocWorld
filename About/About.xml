@@ -9,8 +9,7 @@
 	</supportedVersions>
 	<packageId>drzhivago.docworld</packageId>
 	<description>
-One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, better functioning, and intuitive system. This mod patches, fixes, and adds content to many mods (including but not limited to plain old vanilla RimWorld).
-&lt;size=24&gt;Features&lt;/size&gt;
+One of the most ambitious efforts to reorganize RimWorld/Mods into a cleaner, better functioning, and intuitive system. This mod patches, fixes, and adds content to many mods (including but not limited to plain old vanilla RimWorld). &lt;size=24&gt;Features&lt;/size&gt;
     * New Architect tabs and organizes Architect menu
     * New drop down menus
     * Balances recipes for various items
@@ -31,8 +30,8 @@ Each setting can now be disabled in the mod settings menu! Restart required for 
 [The Doctor's World mod collection] https://steamcommunity.com/sharedfiles/filedetails/?id=1568763074
     
 	</description>
-	
-    <modDependencies>
+
+	<modDependencies>
 		<li>
 			<packageId>dninemfive.d9framework</packageId>
 			<displayName>D9 Framework</displayName>
@@ -43,17 +42,32 @@ Each setting can now be disabled in the mod settings menu! Restart required for 
 
 	<incompatibleWith>
 		<li>Oreno.VFEFarming.DubsBadHygiene</li>
-		<li>dame.scleatherufpatch</li>
 		<li>Owlchemist.UndergroundPowerConduits</li>
 		<li>Primus.FunctionalProps</li>
 		<li>Wemd.MaterialsForCoolers</li>
+		<li>dame.scleatherufpatch</li>
 	</incompatibleWith>
 
 	<loadAfter>
-		<li>OskarPotocki.VanillaFactionsExpanded.MedievalModule</li>
+            <li>Wemd.SimpleCoal</li>
+            <li>dismarzero.VGP.VGPGardenGourmet</li>
+		<li>Cozarkian.RimSeasoning.VCookE</li>
+		<li>tikubonn.RimSeasoning</li>
+		<li>Mlie.RealWorldFood2</li>
+		<li>Mlie.MedicalSupplements</li>
+		<li>KYD.RebalancedApothecary</li>
+		<li>Mlie.Apothecary</li>
+		<li>Argon.SaltedMeat</li>
+		<li>VanillaExpanded.VCookE</li>
+		<li>Argon.VMEu</li>
+		<li>Mlie.UNColony</li>
+		<li>dninemfive.simpleconcrete</li>
+		<li>Mlie.Concrete</li>
+		<li>jamaicancastle.RF.fertilefields</li>
+		<li>n7huntsman.ceramics</li>
 		<li>CETeam.CombatExtended</li>
-		<li>dninemfive.d9framework</li>
 		<li>HH.MaterialsForToolCabinet</li>
+		<li>JPT.FertileFieldsMakeover</li>
 		<li>JPT.OpenTheWindows</li>
 		<li>LoonyLadle.RimWorld.Bones</li>
 		<li>Mlie.Fermenter</li>
@@ -62,6 +76,7 @@ Each setting can now be disabled in the mod settings menu! Restart required for 
 		<li>NanoCE.GlassLights</li>
 		<li>Nif.ArchitectExpanded.FencesTabPatch</li>
 		<li>Oreno.VFEFarming.VGPGardenTools</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.MedievalModule</li>
 		<li>Owlchemist.GloomyVanilla</li>
 		<li>Owlchemist.SimpleChains.Leather</li>
 		<li>Owlchemist.SimpleChains.Lumber</li>
@@ -70,7 +85,7 @@ Each setting can now be disabled in the mod settings menu! Restart required for 
 		<li>VanillaExpanded.VBrewE</li>
 		<li>VanillaExpanded.VFEFarming</li>
 		<li>cucumpear.animalbeds</li>
-		<li>jamaicancastle.RF.fertilefields</li>
+		<li>dninemfive.d9framework</li>
 		<li>pelador.fermenter</li>
 		<li>pelador.insulation</li>
 		<li>pelador.rimplas</li>

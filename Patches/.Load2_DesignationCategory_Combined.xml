@@ -494,14 +494,14 @@
     </Operation>
 
     <!--==========
-    CTS - Complete Tech Solutions
+    CTS - Complete Tech Solutions (Continued)
     ==========-->
 
     <!--Move items to Beds tab-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>CTS - Complete Tech Solutions</li>
-        </mods>
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Mlie.CTS</li>
+        </packageIds>
         <match Class="PatchOperationAdd">
             <xpath>/Defs/ThingDef[defName="CTSHiTechHospitalBed"]</xpath>
             <value>
@@ -2202,23 +2202,6 @@
     </Operation>
 
     <!--==========
-    Soft Warm Beds
-    ==========-->
-
-    <!--Move items to Beds tab-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>[JPT] Soft Warm Beds</li>
-        </mods>
-        <match Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName="Rede"]</xpath>
-            <value>
-                <designationCategory>DZ_Beds</designationCategory>
-            </value>
-        </match>
-    </Operation>
-
-    <!--==========
     Sparkling Worlds
     ==========-->
 
@@ -2986,6 +2969,23 @@
         </match>
     </Operation>
 
+    <!--==========
+    [JPT] Soft Warm Beds
+    ==========-->
+
+    <!--Move items to Beds tab-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>JPT.SoftWarmBeds</li>
+        </packageIds>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Rede"]</xpath>
+            <value>
+                <designationCategory>DZ_Beds</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
     <!--======================================================================================================================================================================================================================================================
 ==========================================================================================================================================================================================================================================================
 ==========================================================================================================================================================================================================================================================
@@ -3276,6 +3276,34 @@
             </match>
             <nomatch Class="PatchOperationReplace">
                 <xpath>/Defs/ThingDef[defName="Shelf_RepairRack"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    [JPT] Human Resources {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Move bookshelf to Storage tab-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>JPT.HumanResources</li>
+        </packageIds>
+        <match Class="D9Framework.PatchOperationFindPackage">
+            <packageIds>
+                <li>LWM.DeepStorage</li>
+            </packageIds>
+            <match Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="BookShelf"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>LWM_DS_Storage</designationCategory>
+                </value>
+            </match>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="BookShelf"]/designationCategory</xpath>
                 <value>
                     <designationCategory>DZ_Storage</designationCategory>
                 </value>
