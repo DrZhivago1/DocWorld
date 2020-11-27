@@ -1868,14 +1868,14 @@
                             <uiIconScale>0.75</uiIconScale>
                         </value>
                     </li>
-                    <!--Water Tank as alternative for water butt -->
+                    <!--Water Tank as alternative for water butt-->
                     <li Class="PatchOperationAdd">
                         <xpath>/Defs</xpath>
                         <value>
-                            <ThingDef Name="DZ_VFEPD_WaterTank" ParentName="BasedWaterTower">
+                            <ThingDef ParentName="BasedWaterTower">
                                 <defName>DZ_VFEPD_WaterTank</defName>
                                 <label>water tank</label>
-                                <description>Stores water for use by plumbed fixtures. If the contained water becomes contaminated, the tank must be drained. Pawns can wash their hands and drink (if thirst is enabled) from this building.</description>
+                                <description>Stores water for use by plumbed fixtures. If the contained water becomes contaminated, the tank must be drained.</description>
                                 <graphicData>
                                     <texPath>Things/Building/IndustrialProps/WaterTank/WaterTank</texPath>
                                     <graphicClass>Graphic_Single</graphicClass>
@@ -1884,39 +1884,32 @@
                                         <volume>(0.55, 0.30, 0.40)</volume>
                                     </shadowData>
                                 </graphicData>
-                                <staticSunShadowHeight Inherit="false" />
-                                <defaultPlacingRot Inherit="false" />
+                                <socialPropernessMatters>true</socialPropernessMatters>
+                                <size>(1,1)</size>
+                                <minifiedDef>MinifiedThing</minifiedDef>
+                                <tradeNeverStack>true</tradeNeverStack>
                                 <thingCategories>
                                     <li>BuildingsHygiene</li>
                                 </thingCategories>
-                                <minifiedDef>MinifiedThing</minifiedDef>
-                                <rotatable>false</rotatable>
-                                <researchPrerequisites>
-                                    <li>IndustrialProps</li>
-                                </researchPrerequisites>
-                                <altitudeLayer>Building</altitudeLayer>
-                                <passability>PassThroughOnly</passability>
-                                <statBases>
-                                    <MaxHitPoints>20</MaxHitPoints>
-                                    <WorkToBuild>200</WorkToBuild>
-                                    <Mass>5</Mass>
-                                    <Flammability>0.2</Flammability>
-                                </statBases>
-                                <tickerType>Rare</tickerType>
-                                <fillPercent>0.15</fillPercent>
-                                <size>(1,1)</size>
                                 <costList>
                                     <Steel>20</Steel>
                                 </costList>
-                                <socialPropernessMatters>true</socialPropernessMatters>
-                                <costStuffCount Inherit="false" />
-                                <stuffCategories Inherit="false" />
-                                <uiIconScale>1</uiIconScale>
                                 <comps>
                                     <li Class="DubsBadHygiene.CompProperties_WaterStorage">
                                         <WaterStorageCap>1500</WaterStorageCap>
                                     </li>
                                 </comps>
+                                <blockWind>false</blockWind>
+                                <canOverlapZones>true</canOverlapZones>
+                                <tradeability>Sellable</tradeability>
+                                <statBases>
+                                    <Mass>2</Mass>
+                                    <MaxHitPoints>75</MaxHitPoints>
+                                    <WorkToBuild>1000</WorkToBuild>
+                                </statBases>
+                                <researchPrerequisites>
+                                    <li>Plumbing</li>
+                                </researchPrerequisites>
                             </ThingDef>
                         </value>
                     </li>

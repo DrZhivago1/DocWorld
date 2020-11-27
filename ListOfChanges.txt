@@ -837,7 +837,6 @@ Charcoal
 Clutter Structures
 Coal Expanded
 Colony Leadership
-Combat Extended
 Combat Training
 Concrete Walls
 Cupro's Stones
@@ -908,7 +907,6 @@ Medical System Expansion - Revived
 Medical Training
 Medieval - Vanilla
 Medieval Medicines
-Medieval Times Unofficial Update
 MendAndRecycle
 Metallic Batteries
 Misc. Training
@@ -940,7 +938,6 @@ Raise The Roof 1.2
 ReGrowth: Biomes of The Rim - Boreal Expansion
 ReGrowth: Biomes of The Rim - Tundra Expansion
 ReGrowth: Biomes of The Rim - Wasteland
-Real World Food 2 (Continued)
 Realistic Planets - Fan Update
 RedistHeat
 Remote Tech
@@ -955,7 +952,6 @@ RimJobWorld
 RimOverhaul
 RimPlas
 RimPlas (Continued)
-RimSeasoning
 RimWriter
 Rimatomics
 Rimefeller
@@ -1039,10 +1035,8 @@ Zen Garden
 [ELIF] Flooring and Decorative Options
 [JDS] Simple Storage
 [JPT] Soft Warm Beds
-[KYD] Rebalanced - Apothecary
 [LC] Survival Tools
 [O21] Dragons Not Included
-[RF] Concrete (Continued)
 [RF] Fishing
 [SYR] Doormats
 [T] MoreFloors
