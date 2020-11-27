@@ -49,25 +49,7 @@ Each setting can now be disabled in the mod settings menu! Restart required for 
 	</incompatibleWith>
 
 	<loadAfter>
-            <li>Wemd.SimpleCoal</li>
-            <li>dismarzero.VGP.VGPGardenGourmet</li>
-		<li>Cozarkian.RimSeasoning.VCookE</li>
-		<li>tikubonn.RimSeasoning</li>
-		<li>Mlie.RealWorldFood2</li>
-		<li>Mlie.MedicalSupplements</li>
-		<li>KYD.RebalancedApothecary</li>
-		<li>Mlie.Apothecary</li>
-		<li>Argon.SaltedMeat</li>
-		<li>VanillaExpanded.VCookE</li>
-		<li>Argon.VMEu</li>
-		<li>Mlie.UNColony</li>
-		<li>dninemfive.simpleconcrete</li>
-		<li>Mlie.Concrete</li>
-		<li>jamaicancastle.RF.fertilefields</li>
-		<li>n7huntsman.ceramics</li>
-		<li>CETeam.CombatExtended</li>
 		<li>HH.MaterialsForToolCabinet</li>
-		<li>JPT.FertileFieldsMakeover</li>
 		<li>JPT.OpenTheWindows</li>
 		<li>LoonyLadle.RimWorld.Bones</li>
 		<li>Mlie.Fermenter</li>
@@ -85,7 +67,6 @@ Each setting can now be disabled in the mod settings menu! Restart required for 
 		<li>VanillaExpanded.VBrewE</li>
 		<li>VanillaExpanded.VFEFarming</li>
 		<li>cucumpear.animalbeds</li>
-		<li>dninemfive.d9framework</li>
 		<li>pelador.fermenter</li>
 		<li>pelador.insulation</li>
 		<li>pelador.rimplas</li>
