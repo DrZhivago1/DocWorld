@@ -929,18 +929,18 @@
   </Operation>
 
   <!--==========
-    Expanded Materials - Metals {Simple Chains: Lumber}
+    Expanded Materials - Metals {Simple Chains: Lumber, VGP Garden Fabrics}
     ==========-->
 
-  <!--Allow Tanning Liquor to use Logs instead of Lumber-->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Expanded Materials - Metals</li>
-    </mods>
-    <match Class="PatchOperationFindMod">
-      <mods>
-        <li>Simple Chains: Lumber</li>
-      </mods>
+  <!--Allow Tanning Liquor to use Logs instead of Lumber, trestle uses iron instead of steel-->
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>Argon.VMEu</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>Owlchemist.SimpleChains.Lumber</li>
+      </packageIds>
       <match Class="PatchOperationSequence">
         <success>Always</success>
         <operations>
@@ -949,6 +949,33 @@
             <value>
               <li>Owl_WoodLog</li>
             </value>
+          </li>
+          <li Class="PatchOperationSetName">
+            <success>Always</success>
+            <xpath>/Defs/ThingDef[defName="Owl_CarpentersTrestle"]/costList/Steel</xpath>
+            <name>VMEu_Iron</name>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--loom uses iron instead of steel-->
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>Argon.VMEu</li>
+    </packageIds>
+    <match Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+        <li>dismarzero.VGP.VGPGardenFabrics</li>
+      </packageIds>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationSetName">
+            <success>Always</success>
+            <xpath>/Defs/ThingDef[defName="TableLoom"]/costList/Steel</xpath>
+            <name>VMEu_Iron</name>
           </li>
         </operations>
       </match>

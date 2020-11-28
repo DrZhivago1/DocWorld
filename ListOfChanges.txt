@@ -698,7 +698,7 @@ I do not document every detail, but you can get a good idea of which mods intera
     Empire
         {Realistic Planets - Fan Update}
     Expanded Materials - Metals
-        {Simple Chains: Lumber}
+        {Simple Chains: Lumber, VGP Garden Fabrics}
     Expanded Woodworking
         {Simple Chains: Leather, Survivalist's Additions}
     Extended Storage
