@@ -1,7 +1,7 @@
 Consider this a dictionary. In order to best utilize this, search for a mod name using CTRL+F(or other search function based on your OS).  
 Each file can be toggled in mod settings, nullifying content.  
 An example template of each file documentation is setup below.  
-I do not document every detail, but you can get a good idea of which mods interact.  
+I do not document every detail here, but you can get a good idea of which mods interact.  
   
 ### File_Name:
 `Description of File.`
