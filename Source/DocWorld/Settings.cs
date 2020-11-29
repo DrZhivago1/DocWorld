@@ -24,23 +24,22 @@ namespace DocWorld
         new PatchDescription("Vents.xml", "DocWorld Vents", "Should new vents be added?"),
         new PatchDescription("Vitals_Monitors.xml", "DocWorld Vitals Monitors", "Should new vitals monitors be added?"),
         new PatchDescription("Blank.xml", "=============================Mod Features Below this Line===================================", "This is just a line. Stop reading this tooltip."),
-        new PatchDescription(".Load1_DesignationCategories.xml", "Custom Categories", "This is the base file for all Architect Menu changes. If disabled, you must disable the other Category options as well."),
-        new PatchDescription(".Load2_DesignationCategory_Combined.xml", "Custom Categories Combined", "Should modded architect tabs be combined into DocWorld's custom ones? Note: Depends on 'Custom Categories'"),
-        new PatchDescription(".Load3_DesignationCategory_Fences.xml", "Custom Category Fences", "Should fences be given their own architect tab?"),
-        new PatchDescription(".Load4_DesignationCategory_Removal.xml", "Modded Category Removals", "Should modded architect tabs be removed now that they're combined? Note: Depends on 'Custom Categories'"),
-        new PatchDescription("Biome_Foraging.xml", "Biome Foraging", "Should biomes give different foraged food? Note: Requires 'Vanilla Plants Expanded' or `VGP Vegetable Garden`"),
+        new PatchDescription(".Load1_DesignationCategories.xml", "Architect Tabs - Core", "This is the base file for Architect Menu changes. If disabled, you must disable the other tab options as well."),
+        new PatchDescription(".Load2_DesignationCategory_Combined.xml", "Architect Tabs - Mods", "Should modded architect tabs be combined into custom ones? Note: Depends on 'Architect Tabs - Core'"),
+        new PatchDescription(".Load3_DesignationCategory_Fences.xml", "Architect Tab - Fences", "Should fences be given their own architect tab?"),
+        new PatchDescription(".Load4_DesignationCategory_Removal.xml", "Architect Tab - Removals", "Should modded architect tabs be removed now that they're combined? Note: Depends on 'Architect Tabs - Core'"),
+        new PatchDescription("Biome_Foraging.xml", "Biome Foraging", "Should biomes give different foraged food types? Note: Requires 'Vanilla Plants Expanded' or `VGP Vegetable Garden`"),
         new PatchDescription("Cloth_Beds.xml", "Cloth Beds", "Should beds require cloth? Note: Mods like 'Soft Warm Beds' will automatically nullify this content."),
         new PatchDescription("Dropdown_Designator.xml", "Dropdown Menus", "Should custom dropdown menus be enabled?"),
         new PatchDescription("Efficient_Power.xml", "Efficient Power", "Should utilities recieve power consumption changes?"),
-        new PatchDescription("Enhanced_Miniaturisation.xml", "Enhanced Miniaturisation", "Should hand selected items become minifiable?"),
-        new PatchDescription("Glass_Requisites.xml", "Glass Requisites", "Should modded lights require glass to be built? Note: Must use 'Glass+Lights' mod."),
+        new PatchDescription("Enhanced_Miniaturisation.xml", "Enhanced Miniaturisation", "Should select items become minifiable?"),
+        new PatchDescription("Glass_Requisites.xml", "Glass Requisites", "Should lights require glass to be built? Note: Requires a glass mod."),
         new PatchDescription("Linkables.xml", "Linkables", "Should more furniture link to modded linkables?"),
-        new PatchDescription("Misc.xml", "Misc", "Should a variety of miscellaneous changes be done? Note: check Wiki for further info"),
-        new PatchDescription("Multi_Mod_Support.xml", "Multi Mod Support", "Should changes be applied when certain mods are loaded together?"),
+        new PatchDescription("Misc.xml", "Misc", "Should a variety of miscellaneous changes be done? Note: check Wiki"),
+        new PatchDescription("Multi_Mod_Support.xml", "Multi Mod Support", "Should changes be applied when certain mods are loaded together? Note: check Wiki"),
         new PatchDescription("Research_Projects.xml", "Research Projects", "Should research projects be combined or removed where appropriate?"),
         new PatchDescription("Stuffed_Items.xml", "Stuffed Items", "Should more items become stuffable?"),
-        new PatchDescription("Textures.xml", "Textures", "Should custom textures be applied?"),
-        new PatchDescription("VFE_Usable_Props.xml", "VFE Usable Props", "Should certain props be usable? Note: Requires `VFE-Props and Decor` and `LWM Deep Storage`")
+        new PatchDescription("Textures.xml", "Textures", "Should custom textures be applied?")
 
         };
 
