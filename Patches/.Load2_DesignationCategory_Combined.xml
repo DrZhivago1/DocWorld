@@ -207,6 +207,64 @@
     </Operation>
 
     <!--==========
+    Defenses Expanded
+    ==========-->
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Defenses Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="RazorWireObstacle" or defName="RazorWireBarrier" or defName="Gabion" or defName="HBarrier_Tan" or defName="HBarrier_Green" or defName="HBarrier_FP" or defName="HBarrier_FP_Green" or defName="TBarrier"]/designationCategory</xpath>
+					<value>
+						<designationCategory>Security</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="TrapMine_M14AP"]</xpath>
+					<value>
+						<designationCategory>Security</designationCategory>
+					</value>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>Defs/DesignationCategoryDef[defName="DefensesExpanded_CustomCategory"]</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+    <!--==========
+    Path Avoid
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[KV] Path Avoid</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/DesignationCategoryDef[defName="Zone"]/specialDesignatorClasses</xpath>
+					<value>
+						<li>PathAvoid.Designator_PathAvoid_Prefer</li>
+						<li>PathAvoid.Designator_PathAvoid_Normal</li>
+						<li>PathAvoid.Designator_PathAvoid_Dislike</li>
+						<li>PathAvoid.Designator_PathAvoid_Hate</li>
+						<li>PathAvoid.Designator_PathAvoid_Strong</li>
+						<li>PathAvoid.Designator_MapSettings</li>
+					</value>
+				</li>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/DesignationCategoryDef[defName="Pathing"]</xpath>
+                </li>
+			</operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Alpha Biomes
     ==========-->
 
@@ -1369,7 +1427,7 @@
                 <li>LWM's Deep Storage</li>
             </mods>
             <nomatch Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="DrugCabinet"]/designationCategory</xpath>
+                <xpath>/Defs/ThingDef[defName="DrugCabinet" or defName="DrugCabinetFridge"]/designationCategory</xpath>
                 <value>
                     <designationCategory>DZ_Storage</designationCategory>
                 </value>
