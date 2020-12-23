@@ -409,7 +409,7 @@
     ==========-->
 
     <Operation Class="PatchOperationSequence">
-        <success>Always</success>
+        <!--<success>Always</success>-->
         <operations>
 
             <!--Coolers-->
@@ -467,11 +467,20 @@
                 </value>
             </li>
             <!--Power Conduits-->
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="PowerConduit"][not(designatorDropdown)]</xpath>
-                <value>
-                    <designatorDropdown>DZ_PowerConduits</designatorDropdown>
-                </value>
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="PowerConduit"]/designatorDropdown</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="PowerConduit"]/designatorDropdown</xpath>
+                    <value>
+                        <designatorDropdown>DZ_PowerConduits</designatorDropdown>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="PowerConduit"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_PowerConduits</designatorDropdown>
+                    </value>
+                </nomatch>
             </li>
             <!--Smithy-->
             <li Class="PatchOperationAdd">

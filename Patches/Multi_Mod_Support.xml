@@ -3344,9 +3344,6 @@
       </packageIds>
       <match Class="PatchOperationSequence">
         <operations>
-          <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName = "VFEV_MeadFermentingBarrel"]/designationCategory</xpath>
-          </li>
           <li Class="PatchOperationAdd">
             <xpath>/Defs/ThingDef[defName = "UniversalFermenter"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes</xpath>
             <value>
@@ -3363,7 +3360,8 @@
             </value>
           </li>
           <li Class="PatchOperationRemove">
-            <xpath>/Defs/WorkGiverDef[defName = "VFEV_TakeMeadOutOfMeadBarrel" or defName = "VFEV_FillMeadBarrel"]</xpath>
+            <xpath>/Defs/ThingDef[defName = "VFEV_MeadFermentingBarrel"]/designationCategory |
+                  /Defs/WorkGiverDef[defName = "VFEV_TakeMeadOutOfMeadBarrel" or defName = "VFEV_FillMeadBarrel"]</xpath>
           </li>
         </operations>
       </match>
