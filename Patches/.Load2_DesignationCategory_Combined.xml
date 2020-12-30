@@ -1651,8 +1651,8 @@
         <match Class="PatchOperationSequence">
             <success>Always</success>
             <operations>
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[@Name="PRF_FloorSign"]/designationCategory</xpath>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="PRF_FloorIconBase"]</xpath>
                     <value>
                         <designationCategory>DZ_Lighting</designationCategory>
                     </value>
