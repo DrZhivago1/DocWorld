@@ -42,6 +42,8 @@ I do not document every detail here, but you can get a good idea of which mods i
         {RFF_Adds}
     Genetic Rim
         {GR_GeneticsTab}
+    GlitterNet
+        {GlitterNet}
     Jurassic Rimworld
         {JurassicRimworld}
     LWM's Deep Storage
@@ -78,6 +80,8 @@ I do not document every detail here, but you can get a good idea of which mods i
         {Move items to Beds tab}
     DeCore
         {Move items to Husbandry tab and remove excess hidden power conduit}
+    Defenses Expanded
+        {Move items to Security tab}
     Door Mat
         {Move items to Decor tab}
     Dragon's Descent
@@ -164,6 +168,8 @@ I do not document every detail here, but you can get a good idea of which mods i
         {Move items to Lighting tab}
     Over-Wall Nutrient Paste Dispenser
         {Move items to Culinary tab}
+    Path Avoid
+        {Move items to Zone tab}
     Plant Growing Wall Light
         {Move items to Husbandry tab}
     Polyamory Beds
@@ -345,6 +351,8 @@ I do not document every detail here, but you can get a good idea of which mods i
         {AB_AlphaBiomesBuildings Designation Category removal}
     Colony Leadership
         {LeadershipModTab Designation Category removal}
+    Defenses Expanded
+        {DefensesExpanded_CustomCategory Designation Category removal}
     Dubs Skylights
         {skylights Designation Category removal}
     Fantastic Decor
@@ -373,6 +381,8 @@ I do not document every detail here, but you can get a good idea of which mods i
         {ANON2MF Designation Category removal}
     Natural Paths
         {NaturalPaths Designation Category removal}
+    Path Avoid
+        {Pathing Designation Category removal}
     Preemptive Strike, Preemptive Strike (Fork)
         {PES_Reconnaissance Designation Category removal}
     Project RimFactory Revived
@@ -396,7 +406,7 @@ I do not document every detail here, but you can get a good idea of which mods i
 	Smokeleaf Industry Reborn
 		{MSI Designation Category removal}
 	Storage Solutions
-		{CCP_StorageSolutions Designation Category removal}
+		{CCP_StorageSolutions Designation Category removal. #storage}
     Training Rack
         {Training_Racks Designation Category removal}
     Vanilla Furniture Expanded
@@ -884,6 +894,7 @@ Genetic Rim
 Geyser Cooker
 Give up your building
 Glass+Lights
+GlitterNet
 Glitter Tech
 Glitter Tech (No Surgery)
 Glitter Tech {No Surgery}

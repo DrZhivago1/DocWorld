@@ -539,28 +539,29 @@
     Defenses Expanded
     ==========-->
 
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Defenses Expanded</li>
-		</mods>
-		<match Class="PatchOperationSequence">
-			<success>Always</success>
-			<operations>
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef[defName="RazorWireObstacle" or defName="RazorWireBarrier" or defName="Gabion" or defName="HBarrier_Tan" or defName="HBarrier_Green" or defName="HBarrier_FP" or defName="HBarrier_FP_Green" or defName="TBarrier"]/designationCategory</xpath>
-					<value>
-						<designationCategory>Security</designationCategory>
-					</value>
-				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/ThingDef[defName="TrapMine_M14AP"]</xpath>
-					<value>
-						<designationCategory>Security</designationCategory>
-					</value>
-				</li>
-			</operations>
-		</match>
-	</Operation>
+    <!--Move items to Security tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Defenses Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="RazorWireObstacle" or defName="RazorWireBarrier" or defName="Gabion" or defName="HBarrier_Tan" or defName="HBarrier_Green" or defName="HBarrier_FP" or defName="HBarrier_FP_Green" or defName="TBarrier"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Security</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="TrapMine_M14AP"]</xpath>
+                    <value>
+                        <designationCategory>Security</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
 
     <!--==========
     Door Mat
@@ -1613,25 +1614,26 @@
             </operations>
         </match>
     </Operation>
-	
+
     <!--==========
     Path Avoid
     ==========-->
 
+    <!--Move items to Zone tab-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>[KV] Path Avoid</li>
         </mods>
         <match Class="PatchOperationAdd">
-					<xpath>/Defs/DesignationCategoryDef[defName="Zone"]/specialDesignatorClasses</xpath>
-					<value>
-						<li>PathAvoid.Designator_PathAvoid_Prefer</li>
-						<li>PathAvoid.Designator_PathAvoid_Normal</li>
-						<li>PathAvoid.Designator_PathAvoid_Dislike</li>
-						<li>PathAvoid.Designator_PathAvoid_Hate</li>
-						<li>PathAvoid.Designator_PathAvoid_Strong</li>
-						<li>PathAvoid.Designator_MapSettings</li>
-					</value>
+            <xpath>/Defs/DesignationCategoryDef[defName="Zone"]/specialDesignatorClasses</xpath>
+            <value>
+                <li>PathAvoid.Designator_PathAvoid_Prefer</li>
+                <li>PathAvoid.Designator_PathAvoid_Normal</li>
+                <li>PathAvoid.Designator_PathAvoid_Dislike</li>
+                <li>PathAvoid.Designator_PathAvoid_Hate</li>
+                <li>PathAvoid.Designator_PathAvoid_Strong</li>
+                <li>PathAvoid.Designator_MapSettings</li>
+            </value>
         </match>
     </Operation>
 
@@ -2293,16 +2295,12 @@
         <mods>
             <li>Storage Solutions</li>
         </mods>
-        <match Class="PatchOperationConditional">
-            <xpath>/Defs/ThingDef[@Name="CCPSS_StorageBase" or @Name="CCPSS_ArtableStorageBase" or defName="CCPSS_NestingBox" or defName="CCPSS_Crate"]/designationCategory</xpath>
-            <match Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[@Name="CCPSS_StorageBase" or @Name="CCPSS_ArtableStorageBase" or defName="CCPSS_NestingBox" or defName="CCPSS_Crate"]/designationCategory</xpath>
-                <value>
-                    <designationCategory>DZ_Storage</designationCategory>
-                </value>
-            </match>
-            <nomatch Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[@Name="CCPSS_StorageBase" or @Name="CCPSS_ArtableStorageBase" or defName="CCPSS_NestingBox" or defName="CCPSS_Crate"]</xpath>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name="CCPSS_StorageBase" or @Name="CCPSS_ArtableStorageBase"]/designationCategory</xpath>
                 <value>
                     <designationCategory>DZ_Storage</designationCategory>
                 </value>

@@ -49,6 +49,7 @@ Each setting can now be disabled in the mod settings menu! Restart required for 
 	</incompatibleWith>
 
 	<loadAfter>
+		<li>cucumpear.storage</li>
 		<li>jamaicancastle.RF.fertilefields</li>
 		<li>HH.MaterialsForToolCabinet</li>
 		<li>JPT.OpenTheWindows</li>
