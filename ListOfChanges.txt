@@ -454,6 +454,8 @@ I do not document every detail here, but you can get a good idea of which mods i
         {Water heaters, Wells, Pump}
     Dubs Skylights
         {BasedSkyLight}
+    Enhanced Battery
+        {ChargeBack_Battery_Prototype, ChargeBack_Battery, SpeedCharge_Battery, ResonanceCell_Battery, VoidCell_Battery}
     Fertile Fields
         {RFF_ScrapGenerator}
     Fishing Nets
@@ -464,6 +466,8 @@ I do not document every detail here, but you can get a good idea of which mods i
         {ELIF_WallMountedFTV}
     Fueled Heaters
         {WDWoodFiredHeater, WDChemfuelPoweredHeater}
+    Fuse Plus
+        {FPIndustrialBreaker, FPGWBreaker}
     Genetic Rim
         {GR_CryostabilizedEngine, GR_NitroMilkTrap, GR_HugeBearRug, GR_HugeBearCatRug, GR_WolfRug, GR_MuffaloRug}
     Glass+Lights
@@ -476,6 +480,8 @@ I do not document every detail here, but you can get a good idea of which mods i
         {SolarGeneratorLarge, CCPSolarGeneratorLarger, CCPSolarGeneratorLargest, CCPSolarGeneratorTiled}
     Mechalit Core
         {Lamp-pots}
+    Medical IV's
+        {IV_Blood, IV_Nutrition, IV_Painkiller, IV_Antibiotics, IV_Anesthetic, IV_Blood_Electric, IV_Nutrition_Electric, IV_Painkiller_Electric, IV_Antibiotics_Electric, IV_Anesthetic_Electric, IV_Multi_Electric}
     Medical Supplements, Medical Supplements (Continued)
         {MSMedicalMatEarly, MSMedicalMat, MSMedicalMatSpacer, MSMedicalMatUltra}
     Metallic Batteries
@@ -500,6 +506,8 @@ I do not document every detail here, but you can get a good idea of which mods i
         {Shainbrait, Kageshain, Wood Floors}
     RimPlas, RimPlas (Continued)
         {RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator, RPGrapheneGeoGenerator, RPGrapheneWindTurbine, RPGrapheneBattery, RPSmallGrapheneBattery, RPGrapheneHeater, RPGrapheneCooler, RimPlas_InjMldMachine, RimPlas_AdvInjMld, RP_CeilingLight, RP_GrapheneCeilingLight}
+    RT Fuse
+        {Building_RTMakeshiftFuse, Building_RTCircuitBreaker}
     Science Never Stops
         {SNS_Hydroponics_I, SNS_Hydroponics_II, SNS_Hydroponics_III}
     Simple Storage
@@ -545,7 +553,7 @@ I do not document every detail here, but you can get a good idea of which mods i
 `This file will contain all patches that replace/change the ability to miniaturize objects for Vanilla and Mods.`
 
     Vanilla
-        {Torch_Lamp, CommsConsole, GroundPenetratingScanner, LongRangeMineralScanner, MoisturePump, MultiAnalyzer, OrbitalTradeBeacon, PodLauncher, Sarcophagus, ChemfuelPoweredGenerator, PowerSwitch, SolarGenerator, WindTurbine, WoodFiredGenerator, BiofuelRefinery, FabricationBench, HiTechResearchBench, ElectricCrematorium, Hopper, HydroponicsBasin, Cooler, PassiveCooler, Vent}
+        {Torch_Lamp, CommsConsole, GroundPenetratingScanner, LongRangeMineralScanner, MoisturePump, MultiAnalyzer, OrbitalTradeBeacon, PodLauncher, Sarcophagus, ChemfuelPoweredGenerator, PowerSwitch, SolarGenerator, WindTurbine, WoodFiredGenerator, BiofuelRefinery, FabricationBench, HiTechResearchBench, ElectricCrematorium, Hopper, HydroponicsBasin, Cooler, PassiveCooler}
     Apothecary (Continued)
         {AYCharcoalFiredGenerator}
     Dubs Bad Hygiene
@@ -615,6 +623,8 @@ I do not document every detail here, but you can get a good idea of which mods i
 
     Change Dresser
         {Vanilla EndTable support}
+    Medical IV's
+        {Vanilla VitalsMonitor support}
     More Furniture
         {Vanilla EndTable support. Vanilla Furniture Expanded remove redundancy.}
     Smokeleaf Industry Reborn
@@ -849,6 +859,7 @@ Dragon's Descent
 Dubs Bad Hygiene
 Dubs Skylights
 Empire
+Enhanced Battery
 Expanded Materials - Metals
 Expanded Roofing
 Expanded Woodworking
@@ -868,6 +879,7 @@ Fishing Industry
 Fishing Nets
 Floor Lights
 Floored
+Fuse Plus
 Genetic Rim
 Geyser Cooker
 Give up your building
@@ -902,6 +914,7 @@ Lord of the Rims - Elves (Continued)
 Lulu's Bones and Chitin
 MBS Faux Rock Wall
 Mechalit Core
+Medical IV's
 Medical Supplements
 Medical Supplements (Continued)
 Medical System Expansion - Revived
@@ -935,6 +948,7 @@ Primitive Storage
 Project RimFactory Revived
 Questionable Ethics Enhanced
 RIMkea
+RT Fuse
 Raise The Roof 1.2
 ReGrowth: Biomes of The Rim - Boreal Expansion
 ReGrowth: Biomes of The Rim - Tundra Expansion

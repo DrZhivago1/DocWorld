@@ -428,27 +428,6 @@
             </li>
         </operations>
     </Operation>
-    <!--Vent-->
-    <Operation Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName = "Vent"][not(minifiedDef)]</xpath>
-                <value>
-                    <minifiedDef>MinifiedThing</minifiedDef>
-                    <thingCategories>
-                        <li>BuildingsMisc</li>
-                    </thingCategories>
-                </value>
-            </li>
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName = "Vent"]/statBases</xpath>
-                <value>
-                    <Mass>10</Mass>
-                </value>
-            </li>
-        </operations>
-    </Operation>
 
     <!--==========
     Apothecary

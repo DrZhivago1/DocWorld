@@ -20,6 +20,38 @@
     </Operation>
 
     <!--==========
+    Medical IV's {Vanilla VitalsMonitor support}
+    ==========-->
+
+    <!--Vanilla VitalsMonitor support-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Knight.MedicalIVs</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities" and linkableFacilities/li[text()="VitalsMonitor"]]/linkableFacilities</xpath>
+                    <value>
+                        <li>IV_Blood</li>
+                        <li>IV_Nutrition</li>
+                        <li>IV_Painkiller</li>
+                        <li>IV_Antibiotics</li>
+                        <li>IV_Anesthetic</li>
+                        <li>IV_Blood_Electric</li>
+                        <li>IV_Nutrition_Electric</li>
+                        <li>IV_Painkiller_Electric</li>
+                        <li>IV_Antibiotics_Electric</li>
+                        <li>IV_Anesthetic_Electric</li>
+                        <li>IV_Multi_Electric</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     More Furniture  {Vanilla EndTable support. Vanilla Furniture Expanded remove redundancy.}
     ==========-->
 
@@ -400,31 +432,5 @@
             </operations>
         </match>
     </Operation>
-	<!--Medical IV patch 11/28 --> 
-	<Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Medical IV's</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities" and linkableFacilities/li[text()="VitalsMonitor"]]/linkableFacilities</xpath>
-                    <value>
-						<li>IV_Blood</li>
-						<li>IV_Nutrition</li>
-						<li>IV_Painkiller</li>
-						<li>IV_Antibiotics</li>
-						<li>IV_Anesthetic</li>
-						<li>IV_Blood_Electric</li>
-						<li>IV_Nutrition_Electric</li>
-						<li>IV_Painkiller_Electric</li>
-						<li>IV_Antibiotics_Electric</li>
-						<li>IV_Anesthetic_Electric</li>
-						<li>IV_Multi_Electric</li>
-                    </value>
-                </li>
-            </operations>
-        </match>
-    </Operation>
+
 </Patch>

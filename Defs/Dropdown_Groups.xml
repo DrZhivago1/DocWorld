@@ -5,4 +5,8 @@
     <defName>DZ_PowerConduits</defName>
   </DesignatorDropdownGroupDef>
 
+  <DesignatorDropdownGroupDef>
+    <defName>DZ_Power_Fuse</defName>
+  </DesignatorDropdownGroupDef>
+
 </Defs>

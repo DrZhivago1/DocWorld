@@ -841,6 +841,27 @@
     </Operation>
 
     <!--==========
+    Enhanced Battery
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Enhanced Battery</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ChargeBack_Battery_Prototype" or defName="ChargeBack_Battery" or defName="SpeedCharge_Battery" or defName="ResonanceCell_Battery" or defName="VoidCell_Battery"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Battery</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
     Fertile Fields
     ==========-->
 
@@ -955,6 +976,27 @@
             <value>
                 <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
             </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Fuse Plus
+    ==========-->
+
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>neceros.fuseplus</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="FPIndustrialBreaker" or defName="FPGWBreaker"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Fuse</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 
@@ -1179,6 +1221,35 @@
                     <xpath>/Defs/ThingDef[defName="Lamp-pot" or @Name="Lamp-potBase"][not(designatorDropdown)]</xpath>
                     <value>
                         <designatorDropdown>DZ_LampPots_Mechalit</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Medical IV's
+    ==========-->
+
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>Knight.MedicalIVs</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Misc_MedicalIV</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="IV_Blood" or defName="IV_Nutrition" or defName="IV_Painkiller" or defName="IV_Antibiotics" or defName="IV_Anesthetic" or defName="IV_Blood_Electric" or defName="IV_Nutrition_Electric" or defName="IV_Painkiller_Electric" or defName="IV_Antibiotics_Electric" or defName="IV_Anesthetic_Electric" or defName="IV_Multi_Electric"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Misc_MedicalIV</designatorDropdown>
                     </value>
                 </li>
             </operations>
@@ -1627,6 +1698,27 @@
                         <designatorDropdown Inherit="false" />
                     </value>
                 </li>-->
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    RT Fuse
+    ==========-->
+
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>ratys.rtfuse</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Building_RTMakeshiftFuse" or defName="Building_RTCircuitBreaker"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Fuse</designatorDropdown>
+                    </value>
+                </li>
             </operations>
         </match>
     </Operation>
@@ -2271,113 +2363,5 @@
             </match>
         </match>
     </Operation>
-    <!--SHARK JUST TRYING TO COPY PASTE, PLZ CORRECT THINGS-->
-    
-    <!--==========
-    Enhanced Battery 11/27 
-    ==========-->
-	
-	<Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Enhanced Battery</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="ChargeBack_Battery_Prototype" or defName="ChargeBack_Battery" or defName="SpeedCharge_Battery" or defName="ResonanceCell_Battery" or defName="VoidCell_Battery"]</xpath>
-                    <value>
-                        <designatorDropdown>DZ_Power_Battery</designatorDropdown>
-                    </value>
-                </li>
-            </operations>
-        </match>
-    </Operation>
-    
-    <!--==========
-    Medical IV's 1 11/28
-    ==========-->
-	
-	<Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Medical IV's</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs</xpath>
-                    <value>
-                        <DesignatorDropdownGroupDef>
-                            <defName>DZ_Misc_MedicalIV1</defName>
-                        </DesignatorDropdownGroupDef>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="IV_Blood" or defName="IV_Nutrition" or defName="IV_Painkiller" or defName="IV_Antibiotics" or defName="IV_Anesthetic"]</xpath>
-					<value>
-                        <designatorDropdown>DZ_Misc_MedicalIV1</designatorDropdown>
-                    </value>
-                </li>
-            </operations>
-        </match>
-    </Operation>
-	
-	<!--==========
-    Medical IV's 2 Electronic 11/28
-    ==========-->
-	
-	<Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Medical IV's</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs</xpath>
-                    <value>
-                        <DesignatorDropdownGroupDef>
-                            <defName>DZ_Misc_MedicalIV2</defName>
-                        </DesignatorDropdownGroupDef>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="IV_Blood_Electric" or defName="IV_Nutrition_Electric" or defName="IV_Painkiller_Electric" or defName="IV_Antibiotics_Electric" or defName="IV_Anesthetic_Electric" or defName="IV_Multi_Electric"]</xpath>
-					<value>
-                        <designatorDropdown>DZ_Misc_MedicalIV2</designatorDropdown>
-                    </value>
-                </li>
-            </operations>
-        </match>
-    </Operation>
-	<!--==========
-    Fuse and Fuse plus 11/29
-    ==========-->
-	
-	<Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>RT Fuse</li>
-			<li>Fuse Plus</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs</xpath>
-                    <value>
-                        <DesignatorDropdownGroupDef>
-                            <defName>DZ_Power_Fuse</defName>
-                        </DesignatorDropdownGroupDef>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="Building_RTMakeshiftFuse" or defName="Building_RTCircuitBreaker" or defName="FPIndustrialBreaker" or defName="FPGWBreaker"]</xpath>
-					<value>
-                        <designatorDropdown>DZ_Power_Fuse</designatorDropdown>
-                    </value>
-                </li>
-            </operations>
-        </match>
-    </Operation>
+
 </Patch>
