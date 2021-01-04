@@ -74,6 +74,19 @@
          <xpath>/Defs/DesignationCategoryDef[defName="LeadershipModTab"]</xpath>
       </match>
    </Operation>
+   
+   <!--==========
+    Defenses Expanded
+    ==========-->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Defenses Expanded</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+        <xpath>Defs/DesignationCategoryDef[defName="DefensesExpanded_CustomCategory"]</xpath>
+    </match>
+</Operation>
 
    <!--==========
     Dubs Skylights
@@ -271,6 +284,19 @@
          <xpath>/Defs/DesignationCategoryDef[defName="NaturalPaths"]</xpath>
       </match>
    </Operation>
+   
+   <!--==========
+    Path Avoid
+    ==========-->
+
+<Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>[KV] Path Avoid</li>
+    </mods>
+    <match Class="PatchOperationRemove">
+        <xpath>/Defs/DesignationCategoryDef[defName="Pathing"]</xpath>
+    </match>
+</Operation>
 
    <!--==========
     Preemptive Strike

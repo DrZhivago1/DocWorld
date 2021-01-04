@@ -259,6 +259,22 @@
       </value>
     </match>
   </Operation>
+  
+    <!--==========
+    GlitterNet
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>GlitterNet</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="GlitterNet"]/order</xpath>
+      <value>
+        <order>600</order>
+      </value>
+    </match>
+  </Operation>
 
   <!--==========
     Jurassic Rimworld
