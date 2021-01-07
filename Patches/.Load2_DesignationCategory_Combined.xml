@@ -359,31 +359,6 @@
         </match>
     </Operation>
 
-    <!--Move items to Storage tab. #storage-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Apothecary</li>
-            <li>Apothecary (Continued)</li>
-        </mods>
-        <match Class="PatchOperationFindMod">
-            <mods>
-                <li>LWM's Deep Storage</li>
-            </mods>
-            <match Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="AYPreserveBarrel"]/designationCategory</xpath>
-                <value>
-                    <designationCategory>LWM_DS_Storage</designationCategory>
-                </value>
-            </match>
-            <nomatch Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="AYPreserveBarrel"]/designationCategory</xpath>
-                <value>
-                    <designationCategory>DZ_Storage</designationCategory>
-                </value>
-            </nomatch>
-        </match>
-    </Operation>
-
     <!--==========
     Ceiling Lights
     ==========-->
@@ -1109,7 +1084,7 @@
     Industrial Age - Objects and Furniture
     ==========-->
 
-    <!--Move items to Joy, Lighting, and Storage tab. #storage-->
+    <!--Move items to Joy, Lighting, and Storage tab.-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Industrial Age - Objects and Furniture (Continued)</li>
@@ -1136,23 +1111,6 @@
                     </value>
                 </li>
             </operations>
-        </match>
-    </Operation>
-
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Industrial Age - Objects and Furniture (Continued)</li>
-        </mods>
-        <match Class="PatchOperationFindMod">
-            <mods>
-                <li>LWM's Deep Storage</li>
-            </mods>
-            <nomatch Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="Estate_Refrigerator"]/designationCategory</xpath>
-                <value>
-                    <designationCategory>DZ_Storage</designationCategory>
-                </value>
-            </nomatch>
         </match>
     </Operation>
 
@@ -1360,7 +1318,7 @@
     Medical Supplements
     ==========-->
 
-    <!--Move items to Beds, Production, and Storage tab. #storage-->
+    <!--Move items to Beds, Production, and Storage tab.-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Medical Supplements</li>
@@ -1384,24 +1342,6 @@
                     </value>
                 </li>
             </operations>
-        </match>
-    </Operation>
-
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Medical Supplements</li>
-            <li>Medical Supplements (Continued)</li>
-        </mods>
-        <match Class="PatchOperationFindMod">
-            <mods>
-                <li>LWM's Deep Storage</li>
-            </mods>
-            <nomatch Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="DrugCabinet" or defName="DrugCabinetFridge"]/designationCategory</xpath>
-                <value>
-                    <designationCategory>DZ_Storage</designationCategory>
-                </value>
-            </nomatch>
         </match>
     </Operation>
 
@@ -1707,20 +1647,11 @@
                         <designationCategory>DZ_Lighting</designationCategory>
                     </value>
                 </li>
-                <li Class="PatchOperationConditional">
-                    <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp"]/designationCategory</xpath>
-                    <match Class="PatchOperationReplace">
-                        <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp" or defName="PRF_FloorSpotlight"]/designationCategory</xpath>
-                        <value>
-                            <designationCategory>DZ_Lighting</designationCategory>
-                        </value>
-                    </match>
-                    <nomatch Class="PatchOperationAdd">
-                        <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp" or defName="PRF_FloorSpotlight"]</xpath>
-                        <value>
-                            <designationCategory>DZ_Lighting</designationCategory>
-                        </value>
-                    </nomatch>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="PRF_WallLight" or defName="PRF_IndustrialLamp" or defName="PRF_FloorSpotlight"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Lighting</designationCategory>
+                    </value>
                 </li>
                 <li Class="PatchOperationReplace">
                     <xpath>/Defs/ThingDef[defName="PRF_SunWallLight"]/designationCategory</xpath>
@@ -2121,29 +2052,6 @@
     </Operation>
 
     <!--==========
-    RimWriter
-    ==========-->
-
-    <!--Move items to Storage tab. #storage-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>RimWriter - Books, Scrolls, Tablets, and Libraries</li>
-            <li>RimWriter - Books, Scrolls, Tablets, and Libraries (Continued)</li>
-        </mods>
-        <match Class="PatchOperationFindMod">
-            <mods>
-                <li>LWM's Deep Storage</li>
-            </mods>
-            <nomatch Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="Jecrell_StoneShelf"]</xpath>
-                <value>
-                    <designationCategory>DZ_Storage</designationCategory>
-                </value>
-            </nomatch>
-        </match>
-    </Operation>
-
-    <!--==========
     Science Never Stops
     ==========-->
 
@@ -2283,28 +2191,6 @@
             <value>
                 <designationCategory>DZ_Lighting</designationCategory>
             </value>
-        </match>
-    </Operation>
-
-    <!--==========
-    Storage Solutions
-    ==========-->
-
-    <!--Move items to Storage tab. #storage-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Storage Solutions</li>
-        </mods>
-        <match Class="PatchOperationFindMod">
-            <mods>
-                <li>LWM's Deep Storage</li>
-            </mods>
-            <nomatch Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[@Name="CCPSS_StorageBase" or @Name="CCPSS_ArtableStorageBase"]/designationCategory</xpath>
-                <value>
-                    <designationCategory>DZ_Storage</designationCategory>
-                </value>
-            </nomatch>
         </match>
     </Operation>
 
@@ -2672,28 +2558,6 @@
                     </value>
                 </li>
             </operations>
-        </match>
-    </Operation>
-
-    <!--==========
-    Vanilla Furniture Expanded - Security
-    ==========-->
-
-    <!--Move items to Storage tab. #storage-->
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Vanilla Furniture Expanded - Security</li>
-        </mods>
-        <match Class="PatchOperationFindMod">
-            <mods>
-                <li>LWM's Deep Storage</li>
-            </mods>
-            <nomatch Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="VFES_AmmoCrate"]/designationCategory</xpath>
-                <value>
-                    <designationCategory>DZ_Storage</designationCategory>
-                </value>
-            </nomatch>
         </match>
     </Operation>
 
@@ -3159,6 +3023,35 @@
     ==========-->
 
     <!--==========
+    Apothecary (Continued) {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Apothecary (Continued) storage furniture to "Storage" designation category, with conditional if "LWM Deep Storage" is installed-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Apothecary</li>
+            <li>Apothecary (Continued)</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <match Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="AYPreserveBarrel"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>LWM_DS_Storage</designationCategory>
+                </value>
+            </match>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="AYPreserveBarrel"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
     Gloomy Vanilla Overhaul {LWM's Deep Storage. #storage}
     ==========-->
 
@@ -3173,6 +3066,51 @@
             </mods>
             <nomatch Class="PatchOperationReplace">
                 <xpath>/Defs/ThingDef[defName="RKGWineRackB" or defName="WardrobeA" or defName="GL_Cupboard" or defName="RGK_Manger" or defName="GL_Locker" or defName="RGK_DogBowl"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Industrial Age - Objects and Furniture (Continued) {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Industrial Age - Objects and Furniture (Continued) storage furniture to "Storage" designation category, with conditional if "LWM Deep Storage" is installed-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Industrial Age - Objects and Furniture (Continued)</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="Estate_Refrigerator"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Project RimFactory Revived {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Medical Supplements furniture moved to Storage-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medical Supplements</li>
+            <li>Medical Supplements (Continued)</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="DrugCabinet" or defName="DrugCabinetFridge"]/designationCategory</xpath>
                 <value>
                     <designationCategory>DZ_Storage</designationCategory>
                 </value>
@@ -3258,6 +3196,51 @@
     </Operation>
 
     <!--==========
+    RimWriter {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Move items to Storage tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RimWriter - Books, Scrolls, Tablets, and Libraries</li>
+            <li>RimWriter - Books, Scrolls, Tablets, and Libraries (Continued)</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="Jecrell_StoneShelf"]</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Storage Solutions {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Change designation category of storage furniture if "LWM Deep Storage" is/isnt installed-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Storage Solutions</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name="CCPSS_StorageBase" or @Name="CCPSS_ArtableStorageBase"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
     Vanilla Furniture Expanded {LWM's Deep Storage. #storage}
     ==========-->
 
@@ -3297,6 +3280,28 @@
             </mods>
             <nomatch Class="PatchOperationReplace">
                 <xpath>/Defs/ThingDef[defName="VFE_AnimalFeeder"]</xpath>
+                <value>
+                    <designationCategory>DZ_Storage</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Security {LWM's Deep Storage. #storage}
+    ==========-->
+
+    <!--Move items to Storage tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Security</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>LWM's Deep Storage</li>
+            </mods>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="VFES_AmmoCrate"]/designationCategory</xpath>
                 <value>
                     <designationCategory>DZ_Storage</designationCategory>
                 </value>
