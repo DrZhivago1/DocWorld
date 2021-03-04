@@ -19,7 +19,7 @@ I do not document every detail here, but you can get a good idea of which mods i
     Table_Lamps
         {This file will contain all table lamps. Current tech levels: Neolithic, Medieval, Industrial}
     Underground_Conduits
-        {This file will contain the underground conduits. They cost the same amount of resources but require 6x the work of Vanilla.}
+        {This file will contain the underground conduits. They cost the same amount of resources but require 6x the work of Vanilla. They cannot be damaged.}
     Vents
         {This file will contain walled vents.}
     Vitals_Monitor
@@ -114,8 +114,6 @@ I do not document every detail here, but you can get a good idea of which mods i
         {Move items to Decor and Lighting tab}
     Geyser Cooker
         {Move items to Culinary tab}
-    Give up your building
-        {Move items to Orders tab}
     Glass+Lights
         {Move items to Lighting tab}
     Glitter Tech
@@ -363,8 +361,6 @@ I do not document every detail here, but you can get a good idea of which mods i
         {Lamps Designation Category removal}
     Flooring and Decorative Options
         {Decorations Designation Category removal}
-    Give up your building
-        {ZoreTechTool Designation Category removal}
     OldStyleDeco Designation Category removal
         {OldStyleDeco Designation Category removal}
     Glowstone
@@ -892,7 +888,6 @@ Floored
 Fuse Plus
 Genetic Rim
 Geyser Cooker
-Give up your building
 Glass+Lights
 GlitterNet
 Glitter Tech

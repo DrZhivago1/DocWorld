@@ -160,10 +160,10 @@
    </Operation>
 
    <!--==========
-    Give up your building
+    Give up your building (obsolete)
     ==========-->
 
-   <!--ZoreTechTool Designation Category removal-->
+   <!--ZoreTechTool Designation Category removal
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Give up your building</li>
@@ -171,7 +171,7 @@
       <match Class="PatchOperationRemove">
          <xpath>/Defs/DesignationCategoryDef[defName="ZoreTechTool"]</xpath>
       </match>
-   </Operation>
+   </Operation>-->
 
    <!--==========
     Gloomy Furniture

@@ -17,6 +17,7 @@
                     <texPath>Original_Content/Underground_Power_Conduits/DZ_CamoConduit_Atlas</texPath>
                 </graphicData>
                 <uiIconPath>Original_Content/Underground_Power_Conduits/DZ_CamoConduit_MenuIcon</uiIconPath>
+                <useHitPoints>false</useHitPoints>
                 <statBases>
                     <WorkToBuild>350</WorkToBuild>
                     <Flammability>0.0</Flammability>
