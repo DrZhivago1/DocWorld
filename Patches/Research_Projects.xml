@@ -308,14 +308,6 @@
           </value>
         </li>
         <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="Smokepit"]</xpath>
-          <value>
-            <researchPrerequisites>
-              <li>Pemmican</li>
-            </researchPrerequisites>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
           <xpath>/Defs/ThingDef[defName="SmokeHouse"]</xpath>
           <value>
             <researchPrerequisites>
@@ -323,6 +315,23 @@
               <li>ComplexFurniture</li>
             </researchPrerequisites>
           </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="Smokepit"]/researchPrerequisites</xpath>
+          <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Smokepit"]/researchPrerequisites</xpath>
+            <value>
+              <li>Pemmican</li>
+            </value>
+          </match>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Smokepit"]</xpath>
+            <value>
+              <researchPrerequisites>
+                <li>Pemmican</li>
+              </researchPrerequisites>
+            </value>
+          </nomatch>
         </li>
       </operations>
     </match>

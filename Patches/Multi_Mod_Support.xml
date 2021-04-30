@@ -3307,7 +3307,7 @@
   </Operation>
 
   <!--==========
-    Vanilla Factions Expanded - Vikings | OskarPotocki.VFE.Vikings {Dragons Not Included, [SYR] Universal Fermenter}
+    Vanilla Factions Expanded - Vikings | OskarPotocki.VFE.Vikings {Dragons Not Included}
     ==========-->
 
   <!--Armor requires new research -->
@@ -3327,41 +3327,6 @@
             <value>
               <researchPrerequisite>O21_DNI_MetalArmour</researchPrerequisite>
             </value>
-          </li>
-        </operations>
-      </match>
-    </match>
-  </Operation>
-
-  <!-- [SYR] Universal Fermenter -->
-  <Operation Class="D9Framework.PatchOperationFindPackage">
-    <packageIds>
-      <li>OskarPotocki.VFE.Vikings</li>
-    </packageIds>
-    <match Class="D9Framework.PatchOperationFindPackage">
-      <packageIds>
-        <li>syrchalis.universalfermenter</li>
-      </packageIds>
-      <match Class="PatchOperationSequence">
-        <operations>
-          <li Class="PatchOperationAdd">
-            <xpath>/Defs/ThingDef[defName = "UniversalFermenter"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes</xpath>
-            <value>
-              <li>
-                <thingDef>VFEV_Mead</thingDef>
-                <ingredientFilter>
-                  <thingDefs>
-                    <li>VFEV_Honey</li>
-                  </thingDefs>
-                </ingredientFilter>
-                <maxCapacity>75</maxCapacity>
-                <usesQuality>false</usesQuality>
-              </li>
-            </value>
-          </li>
-          <li Class="PatchOperationRemove">
-            <xpath>/Defs/ThingDef[defName = "VFEV_MeadFermentingBarrel"]/designationCategory |
-                  /Defs/WorkGiverDef[defName = "VFEV_TakeMeadOutOfMeadBarrel" or defName = "VFEV_FillMeadBarrel"]</xpath>
           </li>
         </operations>
       </match>
