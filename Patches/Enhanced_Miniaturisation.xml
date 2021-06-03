@@ -656,7 +656,7 @@
     Simple Chains: Lumber
     ==========-->
 
-    <!--Owl_CarpentersTrestle, Owl_WoodDryingRack-->
+    <!--Owl_CarpentersTrestle, Owl_WoodDryingRack
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Simple Chains: Lumber</li>
@@ -675,7 +675,7 @@
                 </li>
             </operations>
         </match>
-    </Operation>
+    </Operation>-->
 
     <!--==========
     Smokeleaf Industry Reborn

@@ -23,11 +23,11 @@ namespace DocWorld
         new PatchDescription("Underground_Conduits.xml", "DocWorld Underground Conduits", "Should underground conduits be added?"),
         new PatchDescription("Vents.xml", "DocWorld Vents", "Should new vents be added?"),
         new PatchDescription("Vitals_Monitors.xml", "DocWorld Vitals Monitors", "Should new vitals monitors be added?"),
-        new PatchDescription("Blank.xml", "=============================Mod Features Below this Line===================================", "This is just a line. Stop reading this tooltip."),
-        new PatchDescription(".Load1_DesignationCategories.xml", "Architect Tabs - Core", "This is the base file for Architect Menu changes. If disabled, you must disable the other tab options as well."),
-        new PatchDescription(".Load2_DesignationCategory_Combined.xml", "Architect Tabs - Mods", "Should modded architect tabs be combined into custom ones? Note: Depends on 'Architect Tabs - Core'"),
-        new PatchDescription(".Load3_DesignationCategory_Fences.xml", "Architect Tab - Fences", "Should fences be given their own architect tab?"),
-        new PatchDescription(".Load4_DesignationCategory_Removal.xml", "Architect Tab - Removals", "Should modded architect tabs be removed now that they're combined? Note: Depends on 'Architect Tabs - Core'"),
+        new PatchDescription("DZ_Blank.xml", "null", "DocSettings_Spacer"),
+        new PatchDescription(".Load1_ArchitectTabs_Core.xml", "Architect Tabs - Core", "This is the base file for Architect Menu changes. If disabled, you must disable the other tab options as well."),
+        new PatchDescription(".Load2_ArchitectTabs_Combined.xml", "Architect Tabs - Mods", "Should modded architect tabs be combined into custom ones? Note: Depends on 'Architect Tabs - Core'"),
+        new PatchDescription(".Load3_ArchitectTabs_Fences.xml", "Architect Tab - Fences", "Should fences be given their own architect tab?"),
+        new PatchDescription(".Load4_ArchitectTabs_Removal.xml", "Architect Tab - Removals", "Should modded architect tabs be removed now that they're combined? Note: Depends on 'Architect Tabs - Core'"),
         new PatchDescription("Biome_Foraging.xml", "Biome Foraging", "Should biomes give different foraged food types? Note: Requires 'Vanilla Plants Expanded' or `VGP Vegetable Garden`"),
         new PatchDescription("Cloth_Beds.xml", "Cloth Beds", "Should beds require cloth? Note: Mods like 'Soft Warm Beds' will automatically nullify this content."),
         new PatchDescription("Dropdown_Designator.xml", "Dropdown Menus", "Should custom dropdown menus be enabled?"),
@@ -134,7 +134,10 @@ namespace DocWorld
             {
                 // we can't use ref on a dictionary value, so pull it out for a sec.
                 var status = PatchDisabled[patch];
-                options.CheckboxLabeled(patch.label, ref status, patch.tooltip);
+                if (patch.tooltip == "DocSettings_Spacer")
+                { options.GapLine(); }
+                else
+                { options.CheckboxLabeled(patch.label, ref status, patch.tooltip); }
 
                 PatchDisabled[patch] = status;
             }

@@ -998,7 +998,7 @@
     Save Our Ship 2
     ==========-->
 
-   <!--Increase pod launcher range-->
+   <!--Increase pod launcher range (overwrites the max fuel of sos2 shuttles, but once you launch, it goes back to normal wasting all fuel.)
    <Operation Class="PatchOperationFindMod">
       <mods>
          <li>Save Our Ship 2</li>
@@ -1025,7 +1025,7 @@
             </li>
          </operations>
       </match>
-   </Operation>
+   </Operation>-->
 
    <!--==========
     Vanilla Armour Expanded
