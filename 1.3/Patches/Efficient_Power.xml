@@ -1,0 +1,34 @@
+<Patch>
+    <!--This file will contain all patches that replace/change the power consumption for lights in Vanilla and Mods-->
+
+    <!--==========
+    VANILLA
+    ==========-->
+
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <!--Standing Lamps-->
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[@Name="StandingLampBase"]/basePowerConsumption</xpath>
+                <value>
+                    <basePowerConsumption>20</basePowerConsumption>
+                </value>
+            </li>
+            <!--Sun Lamps-->
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="SunLamp"]/basePowerConsumption</xpath>
+                <value>
+                    <basePowerConsumption>2000</basePowerConsumption>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="SunLamp"]/comps[@Class="CompProperties_Power"]/shortCircuitInRain</xpath>
+                <value>
+                    <shortCircuitInRain>false</shortCircuitInRain>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>

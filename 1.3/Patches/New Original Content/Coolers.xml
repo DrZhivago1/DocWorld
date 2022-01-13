@@ -1,0 +1,63 @@
+<Patch>
+
+    <!--This file will contain all coolers. Current tech levels: Industrial-->
+
+    <!--==========
+    VANILLA
+    ==========-->
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAttributeSet">
+                <xpath>/Defs/ThingDef[defName = "Cooler"]</xpath>
+                <attribute>Name</attribute>
+                <value>Cooler</value>
+            </li>
+            <!--Walled Coolers-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <!--Industrial-->
+                    <ThingDef Name="DZ_Cooler_Industrial" ParentName="Cooler">
+                        <defName>DZ_Cooler_Industrial</defName>
+                        <label>walled cooler</label>
+                        <graphicData>
+                            <texPath>Original_Content/Coolers/DZ_Industrial</texPath>
+                            <shadowData Inherit="False">
+                                <volume>(0, 0, 0)</volume>
+                            </shadowData>
+                            <damageData>
+                                <cornerTL>Damage/Corner</cornerTL>
+                                <cornerTR>Damage/Corner</cornerTR>
+                                <cornerBL>Damage/Corner</cornerBL>
+                                <cornerBR>Damage/Corner</cornerBR>
+                            </damageData>
+                        </graphicData>
+                        <altitudeLayer>MoteOverhead</altitudeLayer>
+                        <passability>Standable</passability>
+                        <clearBuildingArea>false</clearBuildingArea>
+                        <rotatable>True</rotatable>
+                        <blockWind>false</blockWind>
+                        <fillPercent>0.25</fillPercent>
+                        <coversFloor>false</coversFloor>
+                        <blockLight>false</blockLight>
+                        <castEdgeShadows>false</castEdgeShadows>
+                        <staticSunShadowHeight />
+                        <building>
+                            <isEdifice>false</isEdifice>
+                            <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+                        </building>
+                        <statBases>
+                            <WorkToBuild>1500</WorkToBuild>
+                        </statBases>
+                        <size>(1,1)</size>
+                        <placeWorkers>
+                            <li>D9Framework.PlaceWorker_OnWall</li>
+                        </placeWorkers>
+                    </ThingDef>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>

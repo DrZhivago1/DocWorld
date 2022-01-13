@@ -1,0 +1,200 @@
+<Patch>
+
+    <!--This file will contain all vitals monitors. Current tech levels: Medieval, Industrial, Spacer-->
+
+    <!--==========
+    VANILLA
+    ==========-->
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAttributeSet">
+                <xpath>/Defs/ThingDef[defName = "VitalsMonitor"]</xpath>
+                <attribute>Name</attribute>
+                <value>VitalsMonitor</value>
+            </li>
+            <!--Vitals Monitor-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+
+                    <!--Medieval-->
+                    <ThingDef Name="DZ_VitalsMonitor_Medieval" ParentName="VitalsMonitor">
+                        <defName>DZ_VitalsMonitor_Medieval</defName>
+                        <label>medieval vitals monitor</label>
+                        <graphicData>
+                            <texPath>Original_Content/Vitals_Monitor/DZ_Medieval</texPath>
+                            <graphicClass>Graphic_Single</graphicClass>
+                        </graphicData>
+                        <defaultPlacingRot>North</defaultPlacingRot>
+                        <uiIconPath>Original_Content/Vitals_Monitor/DZ_Medieval_UI</uiIconPath>
+                        <researchPrerequisites Inherit="False">
+                            <li>ComplexFurniture</li>
+                        </researchPrerequisites>
+                        <statBases>
+                            <MaxHitPoints>75</MaxHitPoints>
+                            <WorkToBuild>3500</WorkToBuild>
+                            <Mass>10</Mass>
+                            <Flammability>1</Flammability>
+                        </statBases>
+                        <costList Inherit="False">
+                            <Steel>25</Steel>
+                        </costList>
+                        <comps Inherit="False">
+                            <li Class="CompProperties_Facility">
+                                <statOffsets>
+                                    <MedicalTendQualityOffset>0.035</MedicalTendQualityOffset>
+                                    <ImmunityGainSpeedFactor>0.01</ImmunityGainSpeedFactor>
+                                    <SurgerySuccessChanceFactor>0.025</SurgerySuccessChanceFactor>
+                                </statOffsets>
+                                <maxSimultaneous>1</maxSimultaneous>
+                                <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+                            </li>
+                        </comps>
+                    </ThingDef>
+
+                    <!--Spacer-->
+                    <ThingDef Name="DZ_VitalsMonitor_Spacer" ParentName="VitalsMonitor">
+                        <defName>DZ_VitalsMonitor_Spacer</defName>
+                        <label>spacer vitals monitor</label>
+                        <graphicData>
+                            <texPath>Original_Content/Vitals_Monitor/DZ_Spacer</texPath>
+                        </graphicData>
+                        <uiIconPath>Original_Content/Vitals_Monitor/DZ_Spacer_UI</uiIconPath>
+                        <researchPrerequisites>
+                            <li>AdvancedFabrication</li>
+                        </researchPrerequisites>
+                        <statBases>
+                            <MaxHitPoints>150</MaxHitPoints>
+                        </statBases>
+                        <costList Inherit="False">
+                            <Plasteel>50</Plasteel>
+                            <ComponentSpacer>2</ComponentSpacer>
+                        </costList>
+                        <comps Inherit="False">
+                            <li Class="CompProperties_Power">
+                                <compClass>CompPowerTrader</compClass>
+                                <shortCircuitInRain>true</shortCircuitInRain>
+                                <basePowerConsumption>150</basePowerConsumption>
+                            </li>
+                            <li Class="CompProperties_Flickable"/>
+                            <li Class="CompProperties_Facility">
+                                <statOffsets>
+                                    <MedicalTendQualityOffset>0.12</MedicalTendQualityOffset>
+                                    <ImmunityGainSpeedFactor>0.05</ImmunityGainSpeedFactor>
+                                    <SurgerySuccessChanceFactor>0.10</SurgerySuccessChanceFactor>
+                                </statOffsets>
+                                <maxSimultaneous>1</maxSimultaneous>
+                                <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+                            </li>
+                        </comps>
+                    </ThingDef>
+                </value>
+            </li>
+
+            <!--Walled Vitals Monitors-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+
+                    <!--Industrial-->
+                    <ThingDef Name="DZ_WalledVitalsMonitor_Industrial" ParentName="VitalsMonitor">
+                        <defName>DZ_WalledVitalsMonitor_Industrial</defName>
+                        <label>walled vitals monitor</label>
+                        <graphicData>
+                            <texPath>Original_Content/Vitals_Monitor/Walled_Vitals_Monitor/DZ_Industrial</texPath>
+                            <shadowData Inherit="False">
+                                <volume>(0, 0, 0)</volume>
+                            </shadowData>
+                            <damageData>
+                                <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN>
+                                <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS>
+                                <rectE>(0.125,0.46875,0.625,0.296875)</rectE>
+                                <rectW>(0.25,0.46875,0.625,0.296875)</rectW>
+                                <cornerTR>Damage/Corner</cornerTR>
+                            </damageData>
+                        </graphicData>
+                        <uiIconPath>Original_Content/Vitals_Monitor/Walled_Vitals_Monitor/DZ_Industrial_UI</uiIconPath>
+                        <altitudeLayer>MoteOverhead</altitudeLayer>
+                        <passability>Standable</passability>
+                        <clearBuildingArea>false</clearBuildingArea>
+                        <rotatable>True</rotatable>
+                        <fillPercent>0.1</fillPercent>
+                        <building>
+                            <isEdifice>false</isEdifice>
+                            <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+                        </building>
+                        <statBases>
+                            <MaxHitPoints>75</MaxHitPoints>
+                            <Mass>10</Mass>
+                        </statBases>
+                        <size>(1,1)</size>
+                        <costList>
+                            <Steel>50</Steel>
+                            <ComponentIndustrial>3</ComponentIndustrial>
+                        </costList>
+                        <placeWorkers>
+                            <li>D9Framework.PlaceWorker_OnWall</li>
+                        </placeWorkers>
+                    </ThingDef>
+
+                    <!--Spacer-->
+                    <ThingDef Name="DZ_WalledVitalsMonitor_Spacer" ParentName="DZ_WalledVitalsMonitor_Industrial">
+                        <defName>DZ_WalledVitalsMonitor_Spacer</defName>
+                        <label>walled spacer vitals monitor</label>
+                        <graphicData>
+                            <texPath>Original_Content/Vitals_Monitor/Walled_Vitals_Monitor/DZ_Spacer</texPath>
+                            <damageData>
+                                <rectN>(0.078125,0.46875,0.859375,0.53125)</rectN>
+                                <rectS>(0.078125,0.46875,0.859375,0.53125)</rectS>
+                                <rectE>(0.125,0.46875,0.625,0.296875)</rectE>
+                                <rectW>(0.25,0.46875,0.625,0.296875)</rectW>
+                                <cornerTR>Damage/Corner</cornerTR>
+                            </damageData>
+                        </graphicData>
+                        <uiIconPath>Original_Content/Vitals_Monitor/Walled_Vitals_Monitor/DZ_Spacer_UI</uiIconPath>
+                        <researchPrerequisites>
+                            <li>AdvancedFabrication</li>
+                        </researchPrerequisites>
+                        <statBases>
+                            <MaxHitPoints>150</MaxHitPoints>
+                        </statBases>
+                        <costList Inherit="False">
+                            <Plasteel>50</Plasteel>
+                            <ComponentSpacer>2</ComponentSpacer>
+                        </costList>
+                        <comps Inherit="False">
+                            <li Class="CompProperties_Power">
+                                <compClass>CompPowerTrader</compClass>
+                                <shortCircuitInRain>true</shortCircuitInRain>
+                                <basePowerConsumption>150</basePowerConsumption>
+                            </li>
+                            <li Class="CompProperties_Flickable"/>
+                            <li Class="CompProperties_Facility">
+                                <statOffsets>
+                                    <MedicalTendQualityOffset>0.12</MedicalTendQualityOffset>
+                                    <ImmunityGainSpeedFactor>0.05</ImmunityGainSpeedFactor>
+                                    <SurgerySuccessChanceFactor>0.10</SurgerySuccessChanceFactor>
+                                </statOffsets>
+                                <maxSimultaneous>1</maxSimultaneous>
+                                <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+                            </li>
+                        </comps>
+                    </ThingDef>
+                </value>
+            </li>
+
+            <!--Add monitors to all things effected by Vanilla Vitals Monitor-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef/comps/li[@Class="CompProperties_AffectedByFacilities" and linkableFacilities/li[text()="VitalsMonitor"]]/linkableFacilities</xpath>
+                <value>
+                    <li>DZ_VitalsMonitor_Medieval</li>
+                    <li>DZ_VitalsMonitor_Spacer</li>
+                    <li>DZ_WalledVitalsMonitor_Industrial</li>
+                    <li>DZ_WalledVitalsMonitor_Spacer</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>

@@ -1,0 +1,135 @@
+<Patch>
+
+    <!--This file will contain all stone chunk furniture. Current: rock chair, 1x1 rock table-->
+
+    <!--==========
+    VANILLA
+    ==========-->
+
+    <!--Test to see if other mods have added usability to Chunks.-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationTest">
+                <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]</xpath>
+                <value>
+                    <stuffProps>
+                        <categories/>
+                    </stuffProps>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <!--Create Chunk category and put it into the Chunk base for use-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[@Name="ChunkRockBase"]/stuffProps/categories</xpath>
+                <value>
+                    <li>DZ_StoneChunks</li>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <!--Create Furniture-->
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <!--Table-->
+                    <ThingDef ParentName="TableBase">
+                        <defName>DZ_RockTable</defName>
+                        <label>rock table</label>
+                        <graphicData>
+                            <texPath>Original_Content/Rock_Table/DZ_RockTable</texPath>
+                            <graphicClass>Graphic_Multi</graphicClass>
+                            <drawSize>(2,2)</drawSize>
+                            <damageData>
+                                <cornerTL>Damage/Corner</cornerTL>
+                                <cornerTR>Damage/Corner</cornerTR>
+                                <cornerBL>Damage/Corner</cornerBL>
+                                <cornerBR>Damage/Corner</cornerBR>
+                            </damageData>
+                            <shadowData>
+                                <volume>(0, 0, 0)</volume>
+                                <offset>(0,0,0)</offset>
+                            </shadowData>
+                        </graphicData>
+                        <staticSunShadowHeight Inherit="False"/>
+                        <uiIconScale>0.8</uiIconScale>
+                        <stuffCategories Inherit="False">
+                            <li>DZ_StoneChunks</li>
+                        </stuffCategories>
+                        <costStuffCount>2</costStuffCount>
+                        <costList Inherit="False" />
+                        <statBases>
+                            <MaxHitPoints>350</MaxHitPoints>
+                            <WorkToBuild>500</WorkToBuild>
+                            <Mass>50</Mass>
+                            <Flammability>0</Flammability>
+                            <Beauty>-5</Beauty>
+                            <Cleanliness>-3</Cleanliness>
+                        </statBases>
+                        <fillPercent>0.50</fillPercent>
+                        <comps Inherit="False">
+                            <li>
+                                <compClass>CompGatherSpot</compClass>
+                            </li>
+                        </comps>
+                        <size>(1,1)</size>
+                        <researchPrerequisites Inherit="False" />
+                    </ThingDef>
+
+                    <!--Chair-->
+                    <ThingDef ParentName="FurnitureBase">
+                        <defName>DZ_RockChair</defName>
+                        <label>rock chair</label>
+                        <description>A simple platform on which to sit. Not very comfortable, but much better than nothing. Can be used at tables, work stations, and elsewhere.</description>
+                        <graphicData>
+                            <texPath>Things/Item/Chunk/ChunkStone</texPath>
+                            <graphicClass>Graphic_Random</graphicClass>
+                            <damageData Inherit="False" />
+                            <shadowData>
+                                <volume>(0, 0, 0)</volume>
+                            </shadowData>
+                        </graphicData>
+                        <uiIconScale>0.69</uiIconScale>
+                        <altitudeLayer>Building</altitudeLayer>
+                        <statBases>
+                            <MaxHitPoints>300</MaxHitPoints>
+                            <WorkToBuild>250</WorkToBuild>
+                            <Mass>25</Mass>
+                            <Flammability>0</Flammability>
+                            <Beauty>-3</Beauty>
+                            <Cleanliness>-2</Cleanliness>
+                            <Comfort>-1</Comfort>
+                        </statBases>
+                        <socialPropernessMatters>true</socialPropernessMatters>
+                        <stuffCategories Inherit="False">
+                            <li>DZ_StoneChunks</li>
+                        </stuffCategories>
+                        <costStuffCount>1</costStuffCount>
+                        <costList Inherit="False" />
+                        <pathCost>42</pathCost>
+                        <designationHotKey>Misc6</designationHotKey>
+                        <fillPercent>0.50</fillPercent>
+                        <building>
+                            <isSittable>true</isSittable>
+                        </building>
+                        <tradeability>None</tradeability>
+                    </ThingDef>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>

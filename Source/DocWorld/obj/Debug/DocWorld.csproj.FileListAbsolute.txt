@@ -3,3 +3,9 @@ C:\Users\1zhiv\Documents\RimWorld\VS Projects\DocWorld\DocWorld\bin\Debug\DocWor
 C:\Users\1zhiv\Documents\RimWorld\VS Projects\DocWorld\DocWorld\obj\Debug\DocWorld.csprojAssemblyReference.cache
 C:\Users\1zhiv\Documents\RimWorld\VS Projects\DocWorld\DocWorld\obj\Debug\DocWorld.dll
 C:\Users\1zhiv\Documents\RimWorld\VS Projects\DocWorld\DocWorld\obj\Debug\DocWorld.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DocWorld\Source\DocWorld\obj\Debug\DocWorld.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DocWorld\Source\DocWorld\obj\Debug\DocWorld.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DocWorld\Source\DocWorld\obj\Debug\DocWorld.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DocWorld\Source\DocWorld\obj\Debug\DocWorld.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DocWorld\Source\DocWorld\bin\Debug\DocWorld.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\DocWorld\Source\DocWorld\bin\Debug\DocWorld.pdb

@@ -1,0 +1,1101 @@
+<Patch>
+  <!--This file will contain all patches that alter biome foraging. Requires Vanilla Plants Expanded.-->
+
+  <!--==========
+    VANILLA
+    ==========-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Plants Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <!--Cold-->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/BiomeDef[defName="BorealForest" or defName="ColdBog"]/foragedFood</xpath>
+          <value>
+            <foragedFood>VCE_Bearberry</foragedFood>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/BiomeDef[defName="Tundra"]/foragedFood</xpath>
+          <value>
+            <foragedFood>VCE_RawCherry</foragedFood>
+          </value>
+        </li>
+        <!--Warm-->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/BiomeDef[defName="TropicalRainforest" or defName="TropicalSwamp"]/foragedFood</xpath>
+          <value>
+            <foragedFood>VCE_RawBanana</foragedFood>
+          </value>
+        </li>
+        <!--WarmArid-->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/BiomeDef[defName="AridShrubland"]/foragedFood</xpath>
+          <value>
+            <foragedFood>VCE_RawPricklyPear</foragedFood>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--==========
+    Lord of the Rims - Elves (Continued)
+    ==========-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Lord of the Rims - Elves (Continued)</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/BiomeDef[defName="LotRE_MallornForest"]/foragedFood</xpath>
+      <value>
+        <foragedFood>LotRE_PlantLembas</foragedFood>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    More Vanilla Biomes
+    ==========-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Plants Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>More Vanilla Biomes</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="ZBiome_AlpineMeadow"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawCherry</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="ZBiome_CloudForest"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawPlum</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="ZBiome_DesertOasis"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawPricklyPear</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="ZBiome_Grasslands"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawApple</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="ZBiome_Marsh"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawPeach</foragedFood>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    Realistic Planets - Fan Update
+    ==========-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Plants Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Realistic Planets - Fan Update</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="RRP_Grassland"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawApple</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="RRP_Savanna"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawPeach</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="RRP_Steppes" or defName="RRP_Permafrost"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_Bearberry</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="RRP_TemperateDesert" or defName="RRP_Oasis"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawPricklyPear</foragedFood>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    RimUniverse - Biomes
+    ==========-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Plants Expanded</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>RimUniverse - Biomes</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="Permafrost"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_Bearberry</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="Grassland"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawApple</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="Savanna"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawPeach</foragedFood>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="MoistDeciduousForest"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawBanana</foragedFood>
+            </value>
+          </li>
+          <!--Leave as berries for now
+          <li Class="PatchOperationReplace">
+            <xpath>/Defs/BiomeDef[defName="Woodland"]/foragedFood</xpath>
+            <value>
+              <foragedFood>VCE_RawApple</foragedFood>
+            </value>
+          </li>-->
+        </operations>
+      </match>
+    </match>
+  </Operation>
+
+
+</Patch>
+
+<!-- 
+  ================================
+    Nutrition Stats 
+  ================================
+    Vanilla
+  ================================
+RawBerries - 0.05
+RawAgave - 0.05
+  ================================
+    Vanilla Plants Expanded
+  ================================
+VCE_RawCherry - 0.05
+VCE_RawApple - 0.05
+VCE_Bearberry - 0.05
+VCE_RawPlum - 0.05
+VCE_RawPricklyPear - 0.05
+VCE_RawBanana - 0.05
+VCE_RawPeach - 0.05
+
+  ================================
+    Biomes
+  ================================
+    Vanilla
+  ================================
+
+BorealForest
+    <forageability>0.75</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlants>
+      <Plant_Grass>8.0</Plant_Grass>
+      <Plant_Brambles>2.0</Plant_Brambles>
+      <Plant_Moss>4.0</Plant_Moss>
+      <Plant_Bush>3.0</Plant_Bush>
+      <Plant_TreePine>5.0</Plant_TreePine>
+      <Plant_TreeBirch>1.5</Plant_TreeBirch>
+      <Plant_TreePoplar>1.2</Plant_TreePoplar>
+      <Plant_Berry>0.16</Plant_Berry>
+      <Plant_HealrootWild>0.16</Plant_HealrootWild>
+    </wildPlants>
+    <wildAnimals>
+      <Yak>0.12</Yak>
+      <Horse>0.15</Horse>
+      <Squirrel>1</Squirrel>
+      <Hare>1</Hare>
+      <Rat>1</Rat>
+      <Elk>0.5</Elk>
+      <Caribou>0.5</Caribou>
+      <Muffalo>0.5</Muffalo>
+      <WildBoar>0.5</WildBoar>
+      <Ibex>0.5</Ibex>
+      <Raccoon>0.5</Raccoon>
+      <Turkey>0.5</Turkey>
+      <Deer>0.5</Deer>
+      <Megasloth>0.1</Megasloth>
+      <Fox_Red>0.07</Fox_Red>
+      <Fox_Arctic>0.07</Fox_Arctic>
+      <Bear_Grizzly>0.07</Bear_Grizzly>
+      <Wolf_Timber>0.07</Wolf_Timber>
+      <Wolf_Arctic>0.07</Wolf_Arctic>
+      <Cougar>0.07</Cougar>
+      <Lynx>0.07</Lynx>
+      <Warg>0.07</Warg>
+    </wildAnimals>
+
+Tundra
+    <forageability>0.5</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlants>
+      <Plant_Grass>3.6</Plant_Grass>
+      <Plant_Moss>0.5</Plant_Moss>
+      <Plant_Bush>0.3</Plant_Bush>
+      <Plant_Astragalus>0.1</Plant_Astragalus>
+      <Plant_Dandelion>0.1</Plant_Dandelion>
+      <Plant_TreePine>0.08</Plant_TreePine>
+      <Plant_TreeBirch>0.08</Plant_TreeBirch>
+      <Plant_Berry>0.07</Plant_Berry>
+      <Plant_HealrootWild>0.05</Plant_HealrootWild>
+    </wildPlants>
+    <wildAnimals>
+      <Hare>2</Hare>
+      <Snowhare>2</Snowhare>
+      <Caribou>2</Caribou>
+      <Elk>2</Elk>
+      <Muffalo>2</Muffalo>
+      <Ibex>2</Ibex>
+      <Megasloth>0.2</Megasloth>
+      <Fox_Arctic>0.07</Fox_Arctic>
+      <Wolf_Arctic>0.07</Wolf_Arctic>
+      <Wolf_Timber>0.07</Wolf_Timber>
+      <Lynx>0.07</Lynx>
+      <Warg>0.07</Warg>
+      <Bear_Polar>0.07</Bear_Polar>
+      <Bear_Grizzly>0.07</Bear_Grizzly>
+    </wildAnimals>
+
+ColdBog
+    <forageability>0.5</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlants>
+      <Plant_Chokevine>3.0</Plant_Chokevine>
+      <Plant_TallGrass>2.4</Plant_TallGrass>
+      <Plant_Moss>0.5</Plant_Moss>
+      <Plant_Bush>0.3</Plant_Bush>
+      <Plant_Astragalus>0.1</Plant_Astragalus>
+      <Plant_TreeWillow>0.6</Plant_TreeWillow>
+      <Plant_TreeCypress>0.6</Plant_TreeCypress>
+      <Plant_TreeMaple>0.6</Plant_TreeMaple>
+      <Plant_Berry>0.07</Plant_Berry>
+      <Plant_HealrootWild>0.05</Plant_HealrootWild>
+    </wildPlants>
+    <wildAnimals>
+      <GuineaPig>0.07</GuineaPig>
+      <Yak>0.2</Yak>
+      <Squirrel>1</Squirrel>
+      <Hare>1</Hare>
+      <Rat>1</Rat>
+      <Elk>0.5</Elk>
+      <Caribou>0.5</Caribou>
+      <Muffalo>0.5</Muffalo>
+      <WildBoar>0.5</WildBoar>
+      <Ibex>0.5</Ibex>
+      <Raccoon>0.5</Raccoon>
+      <Turkey>0.5</Turkey>
+      <Deer>0.5</Deer>
+      <Megasloth>0.1</Megasloth>
+      <Fox_Red>0.07</Fox_Red>
+      <Fox_Arctic>0.07</Fox_Arctic>
+      <Wolf_Timber>0.07</Wolf_Timber>
+      <Wolf_Arctic>0.07</Wolf_Arctic>
+      <Cougar>0.07</Cougar>
+      <Lynx>0.07</Lynx>
+      <Warg>0.07</Warg>
+      <Bear_Polar>0.07</Bear_Polar>
+      <Bear_Grizzly>0.07</Bear_Grizzly>
+    </wildAnimals>
+
+IceSheet
+    <forageability>0</forageability>
+    <wildAnimals>
+      <Snowhare>2</Snowhare>
+      <Muffalo>0.1</Muffalo>
+      <Bear_Polar>0.1</Bear_Polar>
+      <Wolf_Arctic>0.1</Wolf_Arctic>
+      <Fox_Arctic>0.1</Fox_Arctic>
+      <Lynx>0.1</Lynx>
+      <Megasloth>0.1</Megasloth>
+    </wildAnimals>
+
+SeaIce
+    <forageability>0</forageability>
+    <wildAnimals>
+      <Snowhare>2</Snowhare>
+      <Muffalo>0.1</Muffalo>
+      <Bear_Polar>0.1</Bear_Polar>
+      <Wolf_Arctic>0.1</Wolf_Arctic>
+      <Fox_Arctic>0.1</Fox_Arctic>
+    </wildAnimals>
+
+TemperateForest
+    <forageability>1</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlants>
+      <Plant_Grass>5.0</Plant_Grass>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
+      <Plant_Brambles>1.0</Plant_Brambles>
+      <Plant_Dandelion>0.5</Plant_Dandelion>
+      <Plant_Bush>0.6</Plant_Bush>
+      <Plant_TreeOak>0.5</Plant_TreeOak>
+      <Plant_TreePoplar>0.5</Plant_TreePoplar>
+      <Plant_Berry>0.05</Plant_Berry>
+      <Plant_HealrootWild>0.05</Plant_HealrootWild>
+    </wildPlants>
+    <wildAnimals>
+      <Donkey>0.20</Donkey>
+      <GuineaPig>0.45</GuineaPig>
+      <Yak>0.06</Yak>
+      <Bison>0.07</Bison>
+      <Horse>0.20</Horse>
+      <Hare>1.0</Hare>
+      <Squirrel>1.0</Squirrel>
+      <Rat>1.0</Rat>
+      <Deer>0.5</Deer>
+      <WildBoar>0.5</WildBoar>
+      <Turkey>0.5</Turkey>
+      <Raccoon>0.5</Raccoon>
+      <Ibex>0.5</Ibex>
+      <Muffalo>0.5</Muffalo>
+      <Alpaca>0.5</Alpaca>
+      <Boomalope>0.4</Boomalope>
+      <Boomrat>0.4</Boomrat>
+      <Tortoise>0.3</Tortoise>
+      <Gazelle>0.3</Gazelle>
+      <Megasloth>0.2</Megasloth>
+      <Rhinoceros>0.1</Rhinoceros>
+      <Bear_Grizzly>0.07</Bear_Grizzly>
+      <Wolf_Timber>0.07</Wolf_Timber>
+      <Fox_Red>0.07</Fox_Red>
+      <Cougar>0.07</Cougar>
+      <Lynx>0.07</Lynx>
+      <Warg>0.07</Warg>
+    </wildAnimals>
+
+TemperateSwamp
+    <forageability>0.75</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlants>
+      <Plant_TallGrass>3.2</Plant_TallGrass>
+      <Plant_Chokevine>0.8</Plant_Chokevine>
+      <Plant_Bush>0.2</Plant_Bush>
+      <Plant_TreeWillow>1.0</Plant_TreeWillow>
+      <Plant_TreeCypress>1.0</Plant_TreeCypress>
+      <Plant_TreeMaple>1.0</Plant_TreeMaple>
+      <Plant_Berry>0.05</Plant_Berry>
+      <Plant_HealrootWild>0.05</Plant_HealrootWild>
+    </wildPlants>
+    <wildAnimals>
+      <GuineaPig>0.15</GuineaPig>
+      <Yak>0.04</Yak>
+      <Horse>0.20</Horse>
+      <Hare>1.0</Hare>
+      <Squirrel>1.0</Squirrel>
+      <Rat>1.0</Rat>
+      <Tortoise>0.6</Tortoise>
+      <Deer>0.5</Deer>
+      <WildBoar>0.5</WildBoar>
+      <Turkey>0.5</Turkey>
+      <Raccoon>0.5</Raccoon>
+      <Ibex>0.5</Ibex>
+      <Muffalo>0.5</Muffalo>
+      <Alpaca>0.5</Alpaca>
+      <Boomalope>0.4</Boomalope>
+      <Boomrat>0.4</Boomrat>
+      <Megasloth>0.2</Megasloth>
+      <Rhinoceros>0.1</Rhinoceros>
+      <Bear_Grizzly>0.07</Bear_Grizzly>
+      <Wolf_Timber>0.07</Wolf_Timber>
+      <Fox_Red>0.07</Fox_Red>
+      <Cougar>0.07</Cougar>
+      <Lynx>0.07</Lynx>
+      <Warg>0.07</Warg>
+    </wildAnimals>
+
+TropicalRainforest
+    <forageability>1</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlants>
+      <Plant_Grass>3.0</Plant_Grass>
+      <Plant_TallGrass>2.0</Plant_TallGrass>
+      <Plant_ShrubLow>2.0</Plant_ShrubLow>
+      <Plant_Alocasia>0.8</Plant_Alocasia>
+      <Plant_TreeCecropia>0.3</Plant_TreeCecropia>
+      <Plant_TreePalm>0.3</Plant_TreePalm>
+      <Plant_TreeBamboo>0.3</Plant_TreeBamboo>
+      <Plant_TreeTeak>0.2</Plant_TreeTeak>
+      <Plant_Bush>0.15</Plant_Bush>
+      <Plant_Clivia>0.07</Plant_Clivia>
+      <Plant_Berry>0.05</Plant_Berry>
+      <Plant_Rafflesia>0.0008</Plant_Rafflesia>
+    </wildPlants>
+    <wildAnimals>
+      <GuineaPig>0.25</GuineaPig>
+      <Rat>1</Rat>
+      <Monkey>1</Monkey>
+      <Boomalope>0.5</Boomalope>
+      <Capybara>0.5</Capybara>
+      <Cassowary>0.5</Cassowary>
+      <Tortoise>0.5</Tortoise>
+      <Chinchilla>0.5</Chinchilla>
+      <WildBoar>0.5</WildBoar>
+      <Elephant>0.5</Elephant>
+      <Rhinoceros>0.5</Rhinoceros>
+      <Alpaca>0.5</Alpaca>
+      <Cobra>0.15</Cobra>
+      <Panther>0.15</Panther>
+    </wildAnimals>
+
+TropicalSwamp
+    <forageability>0.75</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlants>
+      <Plant_TallGrass>4.8</Plant_TallGrass>
+      <Plant_ShrubLow>2.0</Plant_ShrubLow>
+      <Plant_TreeWillow>1.72</Plant_TreeWillow>
+      <Plant_TreeCypress>1.72</Plant_TreeCypress>
+      <Plant_TreeMaple>1.72</Plant_TreeMaple>
+      <Plant_Chokevine>0.8</Plant_Chokevine>
+      <Plant_Alocasia>0.8</Plant_Alocasia>
+      <Plant_Bush>0.15</Plant_Bush>
+      <Plant_Clivia>0.07</Plant_Clivia>
+      <Plant_Berry>0.05</Plant_Berry>
+      <Plant_Rafflesia>0.0008</Plant_Rafflesia>
+    </wildPlants>
+    <wildAnimals>
+      <GuineaPig>0.18</GuineaPig>
+      <Rat>1</Rat>
+      <Monkey>1</Monkey>
+      <Boomalope>0.5</Boomalope>
+      <Capybara>0.5</Capybara>
+      <Cassowary>0.5</Cassowary>
+      <Tortoise>0.5</Tortoise>
+      <Chinchilla>0.5</Chinchilla>
+      <WildBoar>0.5</WildBoar>
+      <Elephant>0.5</Elephant>
+      <Rhinoceros>0.5</Rhinoceros>
+      <Alpaca>0.5</Alpaca>
+      <Cobra>0.15</Cobra>
+      <Panther>0.15</Panther>
+    </wildAnimals>
+
+AridShrubland
+    <forageability>0.5</forageability>
+    <foragedFood>RawAgave</foragedFood>
+    <wildPlants>
+      <Plant_Grass>7.0</Plant_Grass>
+      <Plant_Dandelion>0.8</Plant_Dandelion>
+      <Plant_Bush>0.7</Plant_Bush>
+      <Plant_PincushionCactus>0.6</Plant_PincushionCactus>
+      <Plant_Agave>0.2</Plant_Agave>
+      <Plant_SaguaroCactus>0.26</Plant_SaguaroCactus>
+      <Plant_TreeDrago>0.20</Plant_TreeDrago>
+      <Plant_Berry>0.10</Plant_Berry>
+    </wildPlants>
+    <wildAnimals>
+      <Donkey>0.2</Donkey>
+      <GuineaPig>0.017</GuineaPig>
+      <Horse>0.1</Horse>
+      <Bison>0.1</Bison>
+      <Rat>1.3</Rat>
+      <Hare>1.3</Hare>
+      <Iguana>0.7</Iguana>
+      <Gazelle>0.7</Gazelle>
+      <Ostrich>0.7</Ostrich>
+      <Emu>0.7</Emu>
+      <Dromedary>0.7</Dromedary>
+      <Boomrat>0.5</Boomrat>
+      <Elephant>0.5</Elephant>
+      <Rhinoceros>0.5</Rhinoceros>
+      <Boomalope>0.5</Boomalope>
+      <Cougar>0.15</Cougar>
+      <Fox_Fennec>0.15</Fox_Fennec>
+      <Megasloth>0.1</Megasloth>
+    </wildAnimals>
+
+Desert
+    <forageability>0.25</forageability>
+    <foragedFood>RawAgave</foragedFood>
+    <wildPlants>
+      <Plant_Grass>6</Plant_Grass>
+      <Plant_PincushionCactus>1</Plant_PincushionCactus>
+      <Plant_SaguaroCactus>1.0</Plant_SaguaroCactus>
+      <Plant_Dandelion>0.5</Plant_Dandelion>
+      <Plant_TreeDrago>0.45</Plant_TreeDrago>
+      <Plant_Agave>0.25</Plant_Agave>
+      <Plant_Bush>0.25</Plant_Bush>
+    </wildPlants>
+    <wildAnimals>
+      <Donkey>0.15</Donkey>
+      <GuineaPig>0.01</GuineaPig>
+      <Iguana>1.2</Iguana>
+      <Dromedary>0.7</Dromedary>
+      <Boomalope>0.6</Boomalope>
+      <Ostrich>0.6</Ostrich>
+      <Emu>0.6</Emu>
+      <Gazelle>0.6</Gazelle>
+      <Cougar>0.07</Cougar>
+      <Fox_Fennec>0.07</Fox_Fennec>
+    </wildAnimals>
+
+ExtremeDesert
+    <forageability>0</forageability>
+    <wildPlants>
+      <Plant_Grass>6</Plant_Grass>
+      <Plant_SaguaroCactus>1</Plant_SaguaroCactus>
+      <Plant_Agave>0.25</Plant_Agave>
+    </wildPlants>
+    <wildAnimals>
+      <Donkey>0.20</Donkey>
+      <GuineaPig>0.002</GuineaPig>
+      <Iguana>1.5</Iguana>
+      <Dromedary>0.2</Dromedary>
+      <Fox_Fennec>0.1</Fox_Fennec>
+    </wildAnimals>
+================================
+  Realistic Planets - Fan Update 
+  ================================
+
+RRP_Grassland
+		<forageability>0.7</forageability>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlants>
+			<Plant_Berry>0.2</Plant_Berry>
+			<Plant_Brambles>0.2</Plant_Brambles>
+			<Plant_Grass>5</Plant_Grass> 
+			<Plant_Bush>1</Plant_Bush> 
+			<Plant_TallGrass>5</Plant_TallGrass> 
+			<Plant_Dandelion>0.35</Plant_Dandelion>
+			<Plant_TreeOak>0.05</Plant_TreeOak>
+			<Plant_HealrootWild>0.05</Plant_HealrootWild>
+			<RRP_TreeAcacia>0.01</RRP_TreeAcacia>
+		</wildPlants>
+		<wildAnimals>
+			<Boomalope>0.3</Boomalope> 
+			<Boomrat>0.5</Boomrat> 
+			<Cougar>0.07</Cougar> 
+			<Deer>0.4</Deer> 
+			<Gazelle>0.05</Gazelle>
+			<Raccoon>0.1</Raccoon> 
+			<Rat>1</Rat> 
+			<Squirrel>0.05</Squirrel>
+			<Turkey>0.05</Turkey> 
+			<Muffalo>1</Muffalo> 
+			<Hare>0.5</Hare> 
+			<WildBoar>0.2</WildBoar>
+			<Megasloth>0.1</Megasloth>
+			<Fox_Red>0.05</Fox_Red>
+			<Wolf_Timber>0.07</Wolf_Timber>
+			<Warg>0.05</Warg>
+			<Bear_Grizzly>0.05</Bear_Grizzly>
+			<Elk>0.1</Elk>
+			<Emu>0.1</Emu>
+			<Ostrich>0.1</Ostrich>
+			<Bison>0.45</Bison>
+			<Horse>0.3</Horse>
+			<GuineaPig>0.4</GuineaPig>
+			<Donkey>0.2</Donkey>
+		</wildAnimals>
+
+RRP_Savanna
+		<forageability>0.8</forageability> 
+		<foragedFood>RawAgave</foragedFood>
+		<wildPlants>
+			<Plant_Grass>8</Plant_Grass>
+			<Plant_TallGrass>2</Plant_TallGrass> 
+			<Plant_Bush>0.7</Plant_Bush> 
+			<Plant_Dandelion>0.4</Plant_Dandelion>
+			<Plant_Berry>0.1</Plant_Berry>
+			<Plant_HealrootWild>0.05</Plant_HealrootWild> 
+			<Plant_PincushionCactus>0.4</Plant_PincushionCactus>
+			<Plant_SaguaroCactus>0.1</Plant_SaguaroCactus>
+			<Plant_Agave>0.2</Plant_Agave>
+			<RRP_TreeAcacia>0.5</RRP_TreeAcacia>
+			<Plant_TreeDrago>0.2</Plant_TreeDrago> 
+		</wildPlants>
+		<wildAnimals>
+			<Alpaca>0.25</Alpaca> 
+			<Boomalope>0.4</Boomalope> 
+			<Boomrat>0.7</Boomrat>
+			<Capybara>0.05</Capybara>
+			<Cassowary>0.1</Cassowary> 
+			<Cobra>0.05</Cobra> 
+			<Cougar>0.1</Cougar> 
+			<Elephant>0.5</Elephant> 
+			<Gazelle>0.5</Gazelle> 
+			<Muffalo>0.5</Muffalo> 
+			<Panther>0.05</Panther>
+			<Rat>1</Rat> 
+			<Rhinoceros>0.2</Rhinoceros>
+			<Tortoise>0.1</Tortoise> 
+			<WildBoar>0.4</WildBoar> 
+			<Hare>0.1</Hare>
+			<Megasloth>0.1</Megasloth> 
+			<Monkey>0.2</Monkey>
+			<Ibex>0.3</Ibex>
+			<Squirrel>0.5</Squirrel>
+			<Iguana>0.2</Iguana>
+			<Emu>0.3</Emu>
+			<Ostrich>0.5</Ostrich>
+			<Fox_Fennec>0.05</Fox_Fennec>
+			<Turkey>0.1</Turkey>
+			<Bison>0.4</Bison>
+			<Horse>0.1</Horse>
+			<GuineaPig>0.4</GuineaPig>
+			<Donkey>0.3</Donkey>
+		</wildAnimals>
+
+RRP_Steppes
+		<forageability>0.6</forageability>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlants>
+			<Plant_Grass>7</Plant_Grass>
+			<Plant_Moss>0.5</Plant_Moss>
+			<Plant_TallGrass>3</Plant_TallGrass>
+			<Plant_Bush>1</Plant_Bush>
+			<Plant_Astragalus>0.05</Plant_Astragalus>
+			<Plant_Dandelion>0.35</Plant_Dandelion>
+			<Plant_TreePine>0.05</Plant_TreePine>
+			<Plant_Berry>0.1</Plant_Berry>
+			<Plant_Brambles>0.5</Plant_Brambles>
+			<Plant_HealrootWild>0.05</Plant_HealrootWild>
+			<RRP_TreeAcacia>0.01</RRP_TreeAcacia>
+		</wildPlants>
+		<wildAnimals>
+			<Cougar>0.07</Cougar>
+			<Deer>0.4</Deer>
+			<Elk>0.5</Elk>
+			<Snowhare>0.5</Snowhare>
+			<Squirrel>0.05</Squirrel>
+			<Turkey>0.05</Turkey>
+			<Muffalo>1</Muffalo>
+			<Raccoon>0.1</Raccoon>
+			<Rat>0.7</Rat>
+			<Hare>0.2</Hare>
+			<Caribou>0.5</Caribou>
+			<Megasloth>0.1</Megasloth>
+			<Wolf_Arctic>0.07</Wolf_Arctic>
+			<Fox_Arctic>0.05</Fox_Arctic>
+			<Warg>0.05</Warg>
+			<WildBoar>0.2</WildBoar>
+			<Bear_Grizzly>0.05</Bear_Grizzly>
+			<Boomalope>0.2</Boomalope>
+			<Boomrat>0.5</Boomrat>
+			<Bison>0.05</Bison>
+			<Horse>0.5</Horse>
+			<Yak>0.05</Yak>
+		</wildAnimals>
+
+RRP_TemperateDesert
+		<forageability>0.3</forageability>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlants>
+			<Plant_Grass>5</Plant_Grass>
+			<Plant_Bush>0.28</Plant_Bush>
+			<Plant_Dandelion>0.3</Plant_Dandelion>
+			<Plant_Berry>0.05</Plant_Berry>
+			<Plant_TreeDrago>0.25</Plant_TreeDrago>
+		</wildPlants>
+		<wildAnimals>
+			<Boomalope>0.3</Boomalope>
+			<Snowhare>0.2</Snowhare>
+			<Muffalo>0.05</Muffalo>
+			<Ostrich>0.3</Ostrich>
+			<Hare>0.2</Hare>
+			<Caribou>0.05</Caribou>
+			<Cougar>0.05</Cougar>
+			<Dromedary>0.4</Dromedary>
+			<Elk>0.05</Elk>
+			<Emu>0.3</Emu>
+			<Ibex>0.05</Ibex>
+			<Iguana>0.6</Iguana>
+			<Fox_Fennec>0.05</Fox_Fennec>
+			<Gazelle>0.3</Gazelle>
+			<Horse>0.05</Horse>
+			<GuineaPig>0.1</GuineaPig>
+			<Donkey>0.1</Donkey>
+		</wildAnimals>
+
+RRP_Permafrost
+		<forageability>0.25</forageability>
+		<foragedFood>RawBerries</foragedFood>
+		<wildPlants>
+			<Plant_Grass>1.8</Plant_Grass>
+			<Plant_Moss>0.25</Plant_Moss>
+			<Plant_Bush>0.15</Plant_Bush>
+			<Plant_Astragalus>0.05</Plant_Astragalus>
+			<Plant_Dandelion>0.05</Plant_Dandelion>
+			<Plant_TreePine>0.04</Plant_TreePine>
+			<Plant_TreeBirch>0.04</Plant_TreeBirch>
+			<Plant_Berry>0.035</Plant_Berry>
+			<Plant_HealrootWild>0.025</Plant_HealrootWild>
+		</wildPlants>
+		<wildAnimals>
+			<Snowhare>2</Snowhare>
+			<Muffalo>1.05</Muffalo>
+			<Hare>1</Hare>
+			<Caribou>1</Caribou>
+			<Elk>1</Elk>
+			<Ibex>1</Ibex>
+			<Megasloth>0.15</Megasloth>
+			<Bear_Polar>0.085</Bear_Polar>
+			<Wolf_Arctic>0.085</Wolf_Arctic>
+			<Fox_Arctic>0.085</Fox_Arctic>
+			<Lynx>0.085</Lynx>
+			<Wolf_Timber>0.035</Wolf_Timber>
+			<Warg>0.035</Warg>
+			<Bear_Grizzly>0.035</Bear_Grizzly>
+		</wildAnimals>
+
+RRP_Oasis
+		<forageability>0.75</forageability> 
+		<foragedFood>RawAgave</foragedFood>
+		<wildPlants>
+			<Plant_Grass>3</Plant_Grass>
+			<Plant_Agave>0.25</Plant_Agave>
+			<Plant_SaguaroCactus>0.3</Plant_SaguaroCactus>
+			<Plant_PincushionCactus>0.7</Plant_PincushionCactus>
+			<Plant_Dandelion>0.2</Plant_Dandelion>
+			<Plant_Bush>0.3</Plant_Bush>
+			<Plant_TreeDrago>0.25</Plant_TreeDrago>
+			<Plant_Berry>0.05</Plant_Berry>
+			<Plant_TreePalm>0.5</Plant_TreePalm>
+			<RRP_TreeAcacia>0.05</RRP_TreeAcacia>
+		</wildPlants>
+		<wildAnimals>
+			<Fox_Fennec>0.05</Fox_Fennec>
+			<Iguana>0.5</Iguana> 
+			<Dromedary>0.25</Dromedary>
+			<Gazelle>0.8</Gazelle> 
+			<Emu>0.3</Emu> 
+			<Boomalope>0.15</Boomalope> 
+			<Ostrich>0.3</Ostrich> 
+			<Cougar>0.3</Cougar>
+			<Rat>0.2</Rat>
+			<Rhinoceros>0.025</Rhinoceros>
+			<Elephant>0.25</Elephant>
+			<Boomrat>0.15</Boomrat>
+			<Hare>0.5</Hare>
+			<Megasloth>0.05</Megasloth>
+			<Donkey>0.15</Donkey>
+		</wildAnimals>
+================================
+    More Vanilla Biomes 
+  ================================
+
+ZBiome_AlpineMeadow
+	<forageability>1</forageability>
+	<foragedFood>RawBerries</foragedFood>
+  <wildPlants>
+		<ZBiome_Plant_WildRose>2.5</ZBiome_Plant_WildRose>
+		<ZBiome_Plant_WildDaylily>2.0</ZBiome_Plant_WildDaylily>
+		<Plant_Dandelion>1.5</Plant_Dandelion>
+		<Plant_Astragalus>0.1</Plant_Astragalus>
+		
+		<Plant_Grass>8.0</Plant_Grass>
+		<Plant_TallGrass>3.0</Plant_TallGrass>
+		<Plant_Brambles>1.0</Plant_Brambles>
+		<Plant_Bush>1.0</Plant_Bush>
+		<Plant_Moss>3.0</Plant_Moss>
+		
+		<Plant_TreePine>0.5</Plant_TreePine>
+		<Plant_TreeBirch>0.05</Plant_TreeBirch>
+		<Plant_TreePoplar>0.2</Plant_TreePoplar>
+		
+		<Plant_Berry>0.1</Plant_Berry>
+		<Plant_HealrootWild>0.1</Plant_HealrootWild>
+
+	</wildPlants>
+	<wildAnimals>
+		<Hare>1.5</Hare>
+		<Squirrel>1.5</Squirrel>
+		<Rat>1.0</Rat>
+		<Deer>1.0</Deer>
+		<WildBoar>0.5</WildBoar>
+		<Turkey>0.5</Turkey>
+		<Raccoon>0.5</Raccoon>
+		<Ibex>0.5</Ibex>
+		<Muffalo>0.5</Muffalo>
+		<Goat>0.4</Goat>
+		<Alpaca>0.2</Alpaca>
+		<Boomalope>0.2</Boomalope>
+		<Boomrat>0.2</Boomrat>
+		<Gazelle>0.5</Gazelle>
+		<Megasloth>0.15</Megasloth>
+		<Horse>0.04</Horse>
+		<Rhinoceros>0.03</Rhinoceros>
+		<GuineaPig>0.002</GuineaPig>
+		<Yak>0.11</Yak>
+		<Fox_Red>0.12</Fox_Red>
+		<Bear_Grizzly>0.03</Bear_Grizzly>
+		<Wolf_Timber>0.07</Wolf_Timber>
+		<Cougar>0.05</Cougar>
+		<Warg>0.07</Warg>
+		
+	</wildAnimals>
+
+ZBiome_CloudForest
+	<forageability>1.0</forageability>
+	<foragedFood>RawBerries</foragedFood>
+  <wildPlants>
+		<Plant_TreeOak>0.8</Plant_TreeOak>
+		<Plant_TreeWillow>0.5</Plant_TreeWillow>
+		<Plant_TreeBirch>0.3</Plant_TreeBirch>
+		<Plant_TreeBamboo>0.3</Plant_TreeBamboo>
+		
+		<Plant_Moss>3.0</Plant_Moss>
+		
+		<Plant_Grass>0.5</Plant_Grass>
+		<Plant_Brambles>2.0</Plant_Brambles>
+		<Plant_Rafflesia>0.0008</Plant_Rafflesia>
+		
+		<Plant_Dandelion>0.6</Plant_Dandelion>
+		<ZBiome_Plant_WildDaylily>0.5</ZBiome_Plant_WildDaylily>
+		
+		<Plant_Bush>0.5</Plant_Bush>
+		<Plant_ShrubLow>0.5</Plant_ShrubLow>
+		
+		<Plant_Berry>0.05</Plant_Berry>
+		<Plant_HealrootWild>0.05</Plant_HealrootWild>
+	</wildPlants>
+	<wildAnimals>
+		<Rat>1</Rat>
+		<Squirrel>1</Squirrel>
+		<Monkey>1</Monkey>
+		<Boomalope>0.5</Boomalope>
+		<Capybara>0.5</Capybara>
+		<Cassowary>0.5</Cassowary>
+		<Tortoise>0.5</Tortoise>
+		<Chinchilla>0.5</Chinchilla>
+		<WildBoar>0.5</WildBoar>
+		<Elephant>0.5</Elephant>
+		<Rhinoceros>0.5</Rhinoceros>
+		<Alpaca>0.5</Alpaca>
+		<Iguana>0.3</Iguana>
+		<GuineaPig>0.3</GuineaPig>
+		<Goat>0.2</Goat>
+		<Yak>0.003</Yak>
+		<Cobra>0.15</Cobra>
+		<Panther>0.15</Panther>
+		<Cougar>0.2</Cougar>
+		<Lynx>0.07</Lynx>
+  </wildAnimals>
+
+ZBiome_CoastalDunes
+    <forageability>0.5</forageability>
+    <foragedFood>RawAgave</foragedFood>
+    <wildPlants>
+		<Plant_Grass>3.0</Plant_Grass>
+		<Plant_TallGrass>3.0</Plant_TallGrass>
+		<Plant_Dandelion>0.8</Plant_Dandelion>
+		<Plant_Bush>0.7</Plant_Bush>
+		<Plant_PincushionCactus>0.6</Plant_PincushionCactus>
+		<Plant_Brambles>0.5</Plant_Brambles>
+		<Plant_Chokevine>0.8</Plant_Chokevine>
+		<Plant_Alocasia>0.8</Plant_Alocasia>
+		
+		<Plant_TreePalm>0.26</Plant_TreePalm>
+		<Plant_TreeCecropia>0.20</Plant_TreeCecropia>
+		<Plant_TreeCypress>1.72</Plant_TreeCypress>
+		
+		<Plant_Agave>0.2</Plant_Agave>
+		<Plant_HealrootWild>0.05</Plant_HealrootWild>
+    </wildPlants>
+    <wildAnimals>
+      <Rat>1.3</Rat>
+      <Hare>1.3</Hare>
+      <Iguana>0.7</Iguana>
+      <Gazelle>0.7</Gazelle>
+      <Ostrich>0.7</Ostrich>
+      <Emu>0.7</Emu>
+      <Dromedary>0.7</Dromedary>
+      <Boomrat>0.5</Boomrat>
+      <Elephant>0.5</Elephant>
+      <Rhinoceros>0.5</Rhinoceros>
+      <Boomalope>0.5</Boomalope>
+	  <Horse>0.4</Horse>
+      <Cougar>0.15</Cougar>
+      <Fox_Fennec>0.15</Fox_Fennec>
+      <Megasloth>0.1</Megasloth>
+	  <Donkey>0.1</Donkey>
+	  
+    </wildAnimals>
+
+ZBiome_DesertOasis
+	<forageability>0.5</forageability>
+	<foragedFood>RawAgave</foragedFood>
+    <wildPlants>
+      <Plant_Grass>6</Plant_Grass>
+      <Plant_PincushionCactus>1</Plant_PincushionCactus>
+      <Plant_Alocasia>0.5</Plant_Alocasia>
+      <Plant_SaguaroCactus>0.25</Plant_SaguaroCactus>
+      <Plant_Dandelion>1</Plant_Dandelion>
+      <Plant_TreeDrago>0.4</Plant_TreeDrago>
+      <Plant_TreePalm>0.4</Plant_TreePalm>
+      <Plant_Agave>0.25</Plant_Agave>
+      <Plant_Bush>0.75</Plant_Bush>
+      <Plant_HealrootWild>0.05</Plant_HealrootWild>
+      <Plant_Clivia>0.07</Plant_Clivia>
+      <Plant_Chokevine>0.6</Plant_Chokevine>
+    </wildPlants>
+    <wildAnimals>
+      <Iguana>1.2</Iguana>
+      <Dromedary>0.7</Dromedary>
+      <Boomalope>0.6</Boomalope>
+      <Ostrich>0.6</Ostrich>
+      <Emu>0.6</Emu>
+      <Gazelle>0.6</Gazelle>
+      <Donkey>0.15</Donkey>
+      <Horse>0.03</Horse>
+      <GuineaPig>0.08</GuineaPig>
+      <Cougar>0.07</Cougar>
+      <Fox_Fennec>0.07</Fox_Fennec>
+    </wildAnimals>
+
+ZBiome_Grasslands
+    <forageability>0.75</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlants>
+      <Plant_Grass>6.0</Plant_Grass>
+      <Plant_TallGrass>2.9</Plant_TallGrass>
+      <Plant_Chokevine>0.8</Plant_Chokevine>
+      <Plant_Dandelion>0.65</Plant_Dandelion>
+      <Plant_Bush>0.65</Plant_Bush>
+      <Plant_PincushionCactus>0.6</Plant_PincushionCactus>
+      <Plant_TreeDrago>0.2</Plant_TreeDrago>
+      <Plant_Berry>0.075</Plant_Berry>
+    </wildPlants>
+    <wildAnimals>
+      <Hare>1.15</Hare>
+      <Rat>1.15</Rat>
+      <Gazelle>0.5</Gazelle>
+      <Ibex>0.5</Ibex>
+      <Muffalo>0.5</Muffalo>
+      <Elephant>0.5</Elephant>
+      <Boomalope>0.45</Boomalope>
+      <Boomrat>0.45</Boomrat>
+      <Rhinoceros>0.3</Rhinoceros>
+      <Cougar>0.11</Cougar>
+      <Monkey>0.1</Monkey>
+      <Bison>0.08</Bison>
+      <Donkey>0.20</Donkey>
+      <GuineaPig>0.03</GuineaPig>
+      <Horse>0.15</Horse>
+      <Bear_Grizzly>0.07</Bear_Grizzly>
+      <Lynx>0.07</Lynx>
+      <Wolf_Timber>0.07</Wolf_Timber>
+      <Warg>0.07</Warg>
+    </wildAnimals>
+
+ZBiome_Iceberg_NoBeach
+    <forageability>0</forageability>
+		<wildAnimals>
+			<Snowhare>2</Snowhare>
+			<Muffalo>0.1</Muffalo>
+			<Bear_Polar>0.1</Bear_Polar>
+			<Wolf_Arctic>0.1</Wolf_Arctic>
+			<Fox_Arctic>0.1</Fox_Arctic>
+		</wildAnimals>
+
+ZBiome_Marsh
+	  <forageability>0.5</forageability>
+	  <foragedFood>RawBerries</foragedFood>
+    <wildPlants>
+      <Plant_Chokevine>4.0</Plant_Chokevine>
+      <Plant_Brambles>4.0</Plant_Brambles>
+      <Plant_Bush>1.0</Plant_Bush>
+      <Plant_Moss>0.5</Plant_Moss>
+      <Plant_TallGrass>0.2</Plant_TallGrass>
+      <Plant_Dandelion>0.1</Plant_Dandelion>
+
+      <Plant_Berry>0.07</Plant_Berry>
+      <Plant_HealrootWild>0.05</Plant_HealrootWild>
+
+      <Plant_TreeWillow>0.6</Plant_TreeWillow>
+      <Plant_TreeCypress>0.1</Plant_TreeCypress>
+      <Plant_TreePine>0.05</Plant_TreePine>
+    </wildPlants>
+    <wildAnimals>
+      <Squirrel>1</Squirrel>
+      <Hare>1</Hare>
+      <Rat>1</Rat>
+      <Elk>0.5</Elk>
+      <Caribou>0.5</Caribou>
+      <Muffalo>0.5</Muffalo>
+      <WildBoar>0.5</WildBoar>
+      <Ibex>0.5</Ibex>
+      <Raccoon>0.5</Raccoon>
+      <Turkey>0.5</Turkey>
+      <Deer>0.5</Deer>
+      <Megasloth>0.1</Megasloth>
+      <GuineaPig>0.1</GuineaPig>
+      <Fox_Red>0.07</Fox_Red>
+      <Yak>0.15</Yak>
+      <Fox_Arctic>0.07</Fox_Arctic>
+      <Wolf_Timber>0.07</Wolf_Timber>
+      <Wolf_Arctic>0.07</Wolf_Arctic>
+      <Cougar>0.07</Cougar>
+      <Lynx>0.07</Lynx>
+      <Warg>0.07</Warg>
+      <Bear_Grizzly>0.07</Bear_Grizzly>
+    </wildAnimals>
+
+ZBiome_Sandbar_NoBeach
+    <forageability>0.1</forageability>
+	  <foragedFood>RawAgave</foragedFood>
+    <wildPlants>
+      <Plant_Grass>6</Plant_Grass>
+      <Plant_PincushionCactus>2</Plant_PincushionCactus>
+      <Plant_TreePalm>1.0</Plant_TreePalm>
+      <Plant_SaguaroCactus>0.5</Plant_SaguaroCactus>
+      <Plant_Dandelion>0.5</Plant_Dandelion>
+      <Plant_Agave>0.25</Plant_Agave>
+      <Plant_Bush>0.45</Plant_Bush>
+    </wildPlants>
+    <wildAnimals>
+      <Iguana>1.2</Iguana>
+      <Donkey>0.15</Donkey>
+      <GuineaPig>0.02</GuineaPig>
+      <Dromedary>0.3</Dromedary>
+      <Boomalope>0.6</Boomalope>
+      <Boomrat>0.6</Boomrat>
+      <Ostrich>0.6</Ostrich>
+      <Emu>0.6</Emu>
+      <Gazelle>0.6</Gazelle>
+      <Cougar>0.07</Cougar>
+      <Fox_Fennec>0.07</Fox_Fennec>
+    </wildAnimals>
+
+-->

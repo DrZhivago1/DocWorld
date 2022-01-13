@@ -1,0 +1,81 @@
+﻿<Patch>
+  <!--This file will contain all patches that replace/change textures for Vanilla and Mods-->
+
+  <!--==========
+    Vanilla
+    ==========-->
+
+  <!--New art assets applied:  Tool Cabinet-->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="ToolCabinet"]/graphicData/texPath</xpath>
+        <value>
+          <texPath>Original_Content/Tool_Cabinet/DZ_ToolCabinet</texPath>
+        </value>
+      </li>
+      <li Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[defName="ToolCabinet"]/graphicData/shaderType</xpath>
+        <match Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName = "ToolCabinet"]/graphicData/shaderType</xpath>
+          <value>
+            <shaderType>CutoutComplex</shaderType>
+          </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName = "ToolCabinet"]/graphicData</xpath>
+          <value>
+            <shaderType>CutoutComplex</shaderType>
+          </value>
+        </nomatch>
+      </li>
+    </operations>
+  </Operation>
+
+  <!--==========
+    Fish Industry
+    ==========-->
+
+  <!--New art assets applied: FishingPier x6, FishingPierSpawner, MenuIcon_FishingPierSpawner, MicroFungus-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>FishIndustry</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="FishingPier"]/graphicData</xpath>
+      <value>
+        <graphicData>
+          <texPath>Mod_Content/FishingIndustry/FishingPier</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>CutoutComplex</shaderType>
+          <drawSize>(1.5,3.5)</drawSize>
+          <damageData>
+            <cornerTL>Damage/Corner</cornerTL>
+            <cornerTR>Damage/Corner</cornerTR>
+            <cornerBL>Damage/Corner</cornerBL>
+            <cornerBR>Damage/Corner</cornerBR>
+          </damageData>
+        </graphicData>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Simple Chains: Lumber
+    ==========-->
+
+  <!--New art assets applied: Trestle-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Lumber</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="Owl_CarpentersTrestle"]/graphicData/texPath</xpath>
+      <value>
+        <texPath>Mod_Content/SimpleChains_Lumber/carpenters_trestle</texPath>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

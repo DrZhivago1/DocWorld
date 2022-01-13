@@ -1,0 +1,57 @@
+<Patch>
+
+    <!--This file will contain walled vents.-->
+
+    <!--==========
+    VANILLA
+    ==========-->
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAttributeSet">
+                <xpath>/Defs/ThingDef[defName = "Vent"]</xpath>
+                <attribute>Name</attribute>
+                <value>Vent</value>
+            </li>
+            <!--Walled Vents-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <ThingDef Name="DZ_Vent_Industrial" ParentName="Vent">
+                        <defName>DZ_Vent_Industrial</defName>
+                        <label>walled vent</label>
+                        <graphicData>
+                            <texPath>Original_Content/Vents/DZ_Vent</texPath>
+                            <shadowData Inherit="False">
+                                <volume>(0, 0, 0)</volume>
+                            </shadowData>
+                        </graphicData>
+                        <uiIconPath>Original_Content/Vents/DZ_Vent_UI</uiIconPath>
+                        <altitudeLayer>MoteOverhead</altitudeLayer>
+                        <passability>Standable</passability>
+                        <clearBuildingArea>false</clearBuildingArea>
+                        <rotatable>True</rotatable>
+                        <blockWind>false</blockWind>
+                        <fillPercent>0.25</fillPercent>
+                        <coversFloor>false</coversFloor>
+                        <blockLight>false</blockLight>
+                        <castEdgeShadows>false</castEdgeShadows>
+                        <staticSunShadowHeight />
+                        <building>
+                            <isEdifice>false</isEdifice>
+                            <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+                        </building>
+                        <statBases>
+                            <WorkToBuild>300</WorkToBuild>
+                        </statBases>
+                        <size>(1,1)</size>
+                        <placeWorkers>
+                            <li>D9Framework.PlaceWorker_OnWall</li>
+                        </placeWorkers>
+                    </ThingDef>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>

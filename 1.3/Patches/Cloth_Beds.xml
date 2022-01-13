@@ -1,0 +1,438 @@
+<Patch>
+    <!--This file will contain all patches that add cloth to bed construction recipes, with conditionals if certain mods are installed.-->
+
+    <!--==========
+    VANILLA
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <!--#clothbeds-->
+            <li>RealBeds</li>
+            <li>RealBeds-Easy</li>
+            <li>Soft Beds</li>
+            <li>[T] MoreBedsCloth</li>
+            <li>[JPT] Soft Warm Beds</li>
+        </mods>
+        <nomatch Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationConditional">                    <!--Vanilla Bed-->
+                    <xpath>/Defs/ThingDef[defName="Bed"]/costList</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Bed"]/costList</xpath>
+                        <value>
+                            <Cloth>12</Cloth>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Bed"]</xpath>
+                        <value>
+                            <costList>
+                                <Cloth>12</Cloth>
+                            </costList>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">                    <!--Vanilla Hospital Bed-->
+                    <xpath>/Defs/ThingDef[defName="HospitalBed"]/costList</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="HospitalBed"]/costList</xpath>
+                        <value>
+                            <Cloth>12</Cloth>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="HospitalBed"]</xpath>
+                        <value>
+                            <costList>
+                                <Cloth>12</Cloth>
+                            </costList>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">                    <!--Vanilla Double Bed-->
+                    <xpath>/Defs/ThingDef[defName="DoubleBed"]/costList</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="DoubleBed"]/costList</xpath>
+                        <value>
+                            <Cloth>18</Cloth>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="DoubleBed"]</xpath>
+                        <value>
+                            <costList>
+                                <Cloth>18</Cloth>
+                            </costList>
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">                    <!--Vanilla Royal Double Bed-->
+                    <xpath>/Defs/ThingDef[defName="RoyalBed"]/costList</xpath>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="RoyalBed"]/costList</xpath>
+                        <value>
+                            <Cloth>24</Cloth>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="RoyalBed"]</xpath>
+                        <value>
+                            <costList>
+                                <Cloth>24</Cloth>
+                            </costList>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </nomatch>
+    </Operation>
+
+    <!--==========
+    Gloomy Furniture
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>GloomyFurniture</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <!--#clothbeds-->
+                <li>RealBeds</li>
+                <li>RealBeds-Easy</li>
+                <li>Soft Beds</li>
+                <li>[T] MoreBedsCloth</li>
+                <li>[JPT] Soft Warm Beds</li>
+            </mods>
+            <nomatch Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationConditional">                        <!--RGK_bedSingle/B Bed-->
+                        <xpath>/Defs/ThingDef[defName="RGK_bedSingle" or defName="RGK_bedSingleB"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="RGK_bedSingle" or defName="RGK_bedSingleB"]/costList</xpath>
+                            <value>
+                                <Cloth>12</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="RGK_bedSingle" or defName="RGK_bedSingleB"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>12</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+                    <li Class="PatchOperationConditional">                        <!--RGK_bedDouble/B Bed-->
+                        <xpath>/Defs/ThingDef[defName="RGK_bedDouble" or defName="RGK_bedDoubleB"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="RGK_bedDouble" or defName="RGK_bedDoubleB"]/costList</xpath>
+                            <value>
+                                <Cloth>18</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="RGK_bedDouble" or defName="RGK_bedDoubleB"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>18</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+                </operations>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Rim Job World
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RimJobWorld</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <!--#clothbeds-->
+                <li>RealBeds</li>
+                <li>RealBeds-Easy</li>
+                <li>Soft Beds</li>
+                <li>[T] MoreBedsCloth</li>
+                <li>[JPT] Soft Warm Beds</li>
+            </mods>
+            <nomatch Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationConditional">                        <!--RJW_Bed-->
+                        <xpath>/Defs/ThingDef[defName="RJW_Bed"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="RJW_Bed"]/costList</xpath>
+                            <value>
+                                <Cloth>12</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="RJW_Bed"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>12</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+                    <li Class="PatchOperationConditional">                        <!--RJW_DoubleBed-->
+                        <xpath>/Defs/ThingDef[defName="RJW_DoubleBed"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="RJW_DoubleBed"]/costList</xpath>
+                            <value>
+                                <Cloth>18</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="RJW_DoubleBed"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>18</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+                    <li Class="PatchOperationConditional">                        <!--RJW_RoyalBed-->
+                        <xpath>/Defs/ThingDef[defName="RJW_RoyalBed"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="RJW_RoyalBed"]/costList</xpath>
+                            <value>
+                                <Cloth>24</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="RJW_RoyalBed"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>24</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+                </operations>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    RIMkea
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RIMkea</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <!--#clothbeds-->
+                <li>RealBeds</li>
+                <li>RealBeds-Easy</li>
+                <li>Soft Beds</li>
+                <li>[T] MoreBedsCloth</li>
+                <li>[JPT] Soft Warm Beds</li>
+            </mods>
+            <nomatch Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationConditional">                        <!--SNOREGGSingle/KRUDNEPPSingle Bed-->
+                        <xpath>/Defs/ThingDef[defName="SNOREGGSingle" or defName="KRUDNEPPSingle"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="SNOREGGSingle" or defName="KRUDNEPPSingle"]/costList</xpath>
+                            <value>
+                                <Cloth>12</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="SNOREGGSingle" or defName="KRUDNEPPSingle"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>12</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+                    <li Class="PatchOperationConditional">                        <!--SNOREGGDouble/SLABNEPPDouble Bed-->
+                        <xpath>/Defs/ThingDef[defName="SNOREGGDouble" or defName="SLABNEPPDouble"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="SNOREGGDouble" or defName="SLABNEPPDouble"]/costList</xpath>
+                            <value>
+                                <Cloth>18</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="SNOREGGDouble" or defName="SLABNEPPDouble"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>18</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+                </operations>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <!--#clothbeds-->
+                <li>RealBeds</li>
+                <li>RealBeds-Easy</li>
+                <li>Soft Beds</li>
+                <li>[T] MoreBedsCloth</li>
+                <li>[JPT] Soft Warm Beds</li>
+            </mods>
+            <nomatch Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationConditional">                        <!--Bed_Simple-->
+                        <xpath>/Defs/ThingDef[defName="Bed_Simple"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Bed_Simple"]/costList</xpath>
+                            <value>
+                                <Cloth>6</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Bed_Simple"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>6</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+
+                    <li Class="PatchOperationConditional">                        <!--Bed_Ergonomic-->
+                        <xpath>/Defs/ThingDef[defName="Bed_Ergonomic"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Bed_Ergonomic"]/costList</xpath>
+                            <value>
+                                <Cloth>12</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Bed_Ergonomic"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>12</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+                    <li Class="PatchOperationConditional">                        <!--Bed_DoubleErgonomic-->
+                        <xpath>/Defs/ThingDef[defName="Bed_DoubleErgonomic"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Bed_DoubleErgonomic"]/costList</xpath>
+                            <value>
+                                <Cloth>18</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Bed_DoubleErgonomic"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>18</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+                    <li Class="PatchOperationConditional">                        <!--Bed_Kingsize-->
+                        <xpath>/Defs/ThingDef[defName="Bed_Kingsize"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Bed_Kingsize"]/costList</xpath>
+                            <value>
+                                <Cloth>24</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Bed_Kingsize"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>24</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+                </operations>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Spacer Module
+    ==========-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Spacer Module</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <!--#clothbeds-->
+                <li>RealBeds</li>
+                <li>RealBeds-Easy</li>
+                <li>Soft Beds</li>
+                <li>[T] MoreBedsCloth</li>
+                <li>[JPT] Soft Warm Beds</li>
+            </mods>
+            <nomatch Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationConditional">                        <!--Bed_AdvBed-->
+                        <xpath>/Defs/ThingDef[defName="Bed_AdvBed"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Bed_AdvBed"]/costList</xpath>
+                            <value>
+                                <Cloth>12</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Bed_AdvBed"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>12</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+                    <li Class="PatchOperationConditional">                        <!--Bed_AdvDoubleBed-->
+                        <xpath>/Defs/ThingDef[defName="Bed_AdvDoubleBed"]/costList</xpath>
+                        <match Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Bed_AdvDoubleBed"]/costList</xpath>
+                            <value>
+                                <Cloth>18</Cloth>
+                            </value>
+                        </match>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Bed_AdvDoubleBed"]</xpath>
+                            <value>
+                                <costList>
+                                    <Cloth>18</Cloth>
+                                </costList>
+                            </value>
+                        </nomatch>
+                    </li>
+                </operations>
+            </nomatch>
+        </match>
+    </Operation>
+
+</Patch>

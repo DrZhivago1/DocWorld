@@ -1,0 +1,332 @@
+﻿<Patch>
+  <!--This file will contain all patches that replace/change research requirements for Vanilla and Mods-->
+
+  <!--==========
+    Aquarium (Continued)
+    ==========-->
+
+  <!--Allow you to feed your pet fish in Medieval era-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Aquarium (Continued)</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ResearchProjectDef[defName="AQGelatin"]/techLevel</xpath>
+      <value>
+        <techLevel>Medieval</techLevel>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Dragons Not Included
+    ==========-->
+
+  <!--Change armor research-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>[O21] Dragons Not Included</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[@ParentName="ApparelMakeableBase"]/recipeMaker/researchPrerequisite[text()="O21_DNI_LeatherArmour"]</xpath>
+          <value>
+            <researchPrerequisite>PlateArmor</researchPrerequisite>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ResearchProjectDef[defName="PlateArmor"]/prerequisites</xpath>
+          <value>
+            <li>O21_DNI_SimpleApparel</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ResearchProjectDef[defName="O21_DNI_MetalArmour"]/prerequisites</xpath>
+          <value>
+            <li>PlateArmor</li>
+          </value>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/ResearchProjectDef[defName="O21_DNI_MetalArmour"]/prerequisites/li[text()="O21_DNI_LeatherArmour"] | /Defs/ResearchProjectDef[defName="O21_DNI_LeatherArmour"]</xpath>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--==========
+    Extended Storage
+    ==========-->
+
+  <!--Put Extended Storage behind Complex Furniture Tech (excluding food basket and wooden pallet) -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Extended Storage</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="Storage_HazMatContainer" or defName="Storage_FabricHamper" or defName="Storage_Locker" or defName="Storage_MedicineCabinet" or defName="Storage_Skip" or defName="Storage_TrayRack"]</xpath>
+      <value>
+        <researchPrerequisites>
+          <li>ComplexFurniture</li>
+        </researchPrerequisites>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Fertile Fields [1.1]
+    ==========-->
+
+  <!--Allow all terraforming in Medieval era-->
+  <Operation Class="D9Framework.PatchOperationFindPackage">
+    <packageIds>
+      <li>jamaicancastle.RF.fertilefields</li>
+    </packageIds>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ResearchProjectDef[defName="RFF_Terraforming"]/techLevel</xpath>
+      <value>
+        <techLevel>Medieval</techLevel>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Glass+Lights
+    ==========-->
+
+  <!--Disallow lights until electricity is researched-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ThingDef[defName="GLCeilingLamp" or defName="GLCeilingLamp_Red" or defName="GLCeilingLamp_Blue" or defName="GLCeilingLamp_Green" or defName="GLCeilingLamp_Violet" or defName="GLCeilingLamp_Yellow" or defName="GLCeilingLamp_Orange"]/researchPrerequisites/li[.="Electricity"]</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="GLCeilingLamp" or defName="GLCeilingLamp_Red" or defName="GLCeilingLamp_Blue" or defName="GLCeilingLamp_Green" or defName="GLCeilingLamp_Violet" or defName="GLCeilingLamp_Yellow" or defName="GLCeilingLamp_Orange"]/researchPrerequisites</xpath>
+            <value>
+              <li>Electricity</li>
+            </value>
+          </nomatch>
+        </li>
+        <!--Remove Redundancies-->
+        <li Class="PatchOperationConditional">
+          <xpath>/Defs/ResearchProjectDef[defName="ReinforcedGlassResearch"]/prerequisites/li[.=Electricity]</xpath>
+          <match Class="PatchOperationRemove">
+            <xpath>/Defs/ResearchProjectDef[defName="ReinforcedGlassResearch"]/prerequisites/Electricity</xpath>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--Hide outdoor lamp from Glass+Lights until solar lamp from VFE-SM is researched-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Glass+Lights</li>
+    </mods>
+    <match Class="PatchOperationFindMod">
+      <mods>
+        <li>Vanilla Furniture Expanded - Spacer Module</li>
+      </mods>
+      <match Class="PatchOperationConditional">
+        <xpath>/Defs/ThingDef[@Name="GlassLightBase"]/researchPrerequisites</xpath>
+        <match Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[@Name="GlassLightBase"]/researchPrerequisites</xpath>
+          <value>
+            <li>SpacerElectronics</li>
+          </value>
+        </match>
+      </match>
+    </match>
+  </Operation>
+
+  <!--==========
+    High Tech Laboratory Facilities (Continued)
+    ==========-->
+
+  <!--Require Research for countertop-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>High Tech Laboratory Facilities (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="CounterTopModular"]/researchPrerequisites</xpath>
+          <success>Invert</success>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="CounterTopModular"]</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>ComplexFurniture</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--==========
+    Industrial Age - Objects and Furniture
+    ==========-->
+
+  <!--Telescope requires complex furniture-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Industrial Age - Objects and Furniture (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Estate_Telescope"]</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>ComplexFurniture</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--==========
+    Industrial Rollers
+    ==========-->
+
+  <!--Rollers require complex furniture and electricity-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Industrial Rollers</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[@Name="RollerBase"]</xpath>
+      <value>
+        <researchPrerequisites>
+          <li>ComplexFurniture</li>
+          <li>Electricity</li>
+        </researchPrerequisites>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Medieval Madness: Tools of the Trade
+    ==========-->
+
+  <!--Change weapon requirements-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medieval Madness: Tools of the Trade</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ResearchProjectDef[defName="LongBlades"]/prerequisites</xpath>
+          <value>
+            <li>BasicTools</li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ResearchProjectDef[defName="BasicCrossbows"]/prerequisites</xpath>
+          <value>
+            <li>Greatbow</li>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="HeavyCrossbows"]/baseCost</xpath>
+          <value>
+            <baseCost>1100</baseCost>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--==========
+    Medieval Medicines
+    ==========-->
+
+  <!--Unlock drug lab buildable at first medicine research-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medieval Medicines</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/ThingDef[defName="DrugLab"]/researchPrerequisites</xpath>
+      <value>
+        <researchPrerequisites>
+          <li>EarlyMedievalMedicine</li>
+        </researchPrerequisites>
+      </value>
+    </match>
+  </Operation>
+
+
+  <!--==========
+    RoofBomb
+    ==========-->
+
+  <!--Shaped Charges require IEDs-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>RoofBomb</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ResearchProjectDef[defName="ShapedCharges"]/prerequisites</xpath>
+      <value>
+        <li>IEDs</li>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Smoked meat
+    ==========-->
+
+  <!--Make Smoked meat available after researching Pemmican, and hide the Smokehouse behind Complex Furniture-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Smoked meat</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Tam_SmokedMeat"]</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>Pemmican</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="Smokepit"]</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>Pemmican</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="SmokeHouse"]</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>Pemmican</li>
+              <li>ComplexFurniture</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+
+</Patch>
