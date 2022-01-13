@@ -1,0 +1,284 @@
+<Patch>
+    <!--This file will contain all patches that effect Fence Designation Categories for Mods.-->
+    <!--Check disabled compat with Zen Garden, Lord of the Rims - Elves, Gloomy Vanilla/Overhaul-->
+
+    <!--==========
+    VANILLA
+    ==========-->
+
+    <!--Fences Designation Category removal, if mods not found-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Architect Expanded - Fences</li>
+            <li>Architect Expanded - Fences (Tab Patch)</li>
+            <li>Extended Woodworking</li>
+            <li>Gloomy Vanilla</li>
+            <li>Gloomy Vanilla Overhaul</li>
+            <li>Fences And Floors (Continued)</li>
+            <li>Fences And No Floors</li>
+            <li>DDA Security and More</li>
+            <li>Lord of the Rims - Elves</li>
+            <li>Lord of the Rims - Elves (Continued)</li>
+            <li>[O21] Clutter Structures</li>
+            <li>Zen Garden</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignationCategoryDef>
+                            <defName>DZ_Fences</defName>
+                            <label>fences</label>
+                            <description>Not quite walls, but still an obstruction.</description>
+                            <order>710</order>
+                            <specialDesignatorClasses>
+                                <li>Designator_Cancel</li>
+                                <li>Designator_Deconstruct</li>
+                            </specialDesignatorClasses>
+                        </DesignationCategoryDef>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Architect Expanded - Fences
+    ==========-->
+
+    <!--ArchitectExpandedFence Designation Category removal-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Architect Expanded - Fences (Tab Patch)</li>
+        </mods>
+        <match Class="PatchOperationRemove">
+            <xpath>/Defs/DesignationCategoryDef[defName="ArchitectExpandedFence"]</xpath>
+        </match>
+    </Operation>
+
+    <!--Move items to Fences tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Architect Expanded - Fences</li>
+            <li>Architect Expanded - Fences (Tab Patch)</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[@Name="FenceBase" or @Name="GateBase"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Fences</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Clutter Structures
+    ==========-->
+
+    <!--Move items to Fences tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[O21] Clutter Structures</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="ClutterFence" or defName="ClutterConcreteFenceA"]/designationCategory</xpath>
+            <value>
+                <designationCategory>DZ_Fences</designationCategory>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    DDA Security and More
+    ==========-->
+
+    <!--If fence mods installed, remove research. In either instance of mods loaded or not, move items to Fences tab.-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>DDA Security and More (Continued)</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Fences And Floors (Continued)</li>
+                <li>Fences And No Floors</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationRemove">
+                        <xpath>/Defs/ResearchProjectDef[defName="Fences"]</xpath>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Fence"]/researchPrerequisites</xpath>
+                        <value>
+                            <researchPrerequisites>
+                                <li>Machining</li>
+                            </researchPrerequisites>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Fence"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Fences</designationCategory>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+            <nomatch Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="Fence"]/designationCategory</xpath>
+                <value>
+                    <designationCategory>DZ_Fences</designationCategory>
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+
+    <!--==========
+    Extended Woodworking
+    ==========-->
+
+    <!--Move items to Fences tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Extended Woodworking</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Fence"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Fences</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="FenceGate"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="FenceGate"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Fences</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="FenceGate"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Fences</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Fences And Floors
+    Fences And No Floors
+    ==========-->
+
+    <!--Move items to Fences tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fences And Floors (Continued)</li>
+            <li>Fences And No Floors</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationRemove">
+                    <xpath>/Defs/DesignationCategoryDef[defName="Fences"]</xpath>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="FencesAFGateBase" or defName="WoodFence" or defName="WoodFenceGate" or defName="WoodFenceGateB" or defName="ChainFence" or defName="ChainFenceGate" or defName="ChainFenceGateB" or defName="TechFence" or defName="TechFenceGate" or defName="TechFenceGateB" or defName="SecurityBarrier"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Fences</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Gloomy Vanilla/Overhaul
+    ==========-->
+
+    <!--Move items to Fences tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Gloomy Vanilla</li>
+            <li>Gloomy Vanilla Overhaul</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="RGK_Door" or defName="RGK_WoodFence"]/designationCategory</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="RGK_Door" or defName="RGK_WoodFence"]/designationCategory</xpath>
+                        <value>
+                            <designationCategory>DZ_Fences</designationCategory>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="RGK_Door" or defName="RGK_WoodFence"]</xpath>
+                        <value>
+                            <designationCategory>DZ_Fences</designationCategory>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Lord of the Rims - Elves
+    ==========-->
+
+    <!--Move items to Fences tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Lord of the Rims - Elves</li>
+            <li>Lord of the Rims - Elves (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="LotRE_FenceElven"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>DZ_Fences</designationCategory>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/DoorsExpanded.DoorExpandedDef[defName="Elven_Fence_GateA" or defName="Elven_Fence_GateB"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Fences</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Zen Garden
+    ==========-->
+
+    <!--Move items to Fences tab-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Zen Garden</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ZEN_Fence" or defName="ZEN_BonboriFence"]</xpath>
+                    <value>
+                        <designationCategory>DZ_Fences</designationCategory>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

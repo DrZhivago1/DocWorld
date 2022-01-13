@@ -1,0 +1,2374 @@
+<Patch>
+    <!--This file will contain all patches that replace/change dropdown menus for Vanilla and Mods. Split between Conditional Vanilla patches and Non-Conditional patches-->
+
+    <!--==============================
+            Conditional Section
+    ==============================-->
+
+    <!--==========
+    VANILLA
+    ==========-->
+
+    <!--Battery-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[SYR] Metallic Batteries</li>
+            <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
+            <li>Vanilla Furniture Expanded - Power</li>
+            <li>Enhanced Battery</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Battery</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="Battery"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Battery"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Power_Battery</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Battery"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Power_Battery</designatorDropdown>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Deep Drill-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Alpha Biomes</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Production_Drill</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="DeepDrill"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="DeepDrill"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Production_Drill</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="DeepDrill"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Production_Drill</designatorDropdown>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Fermenting Barrel-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Medieval</li>
+            <li>Vanilla Factions Expanded - Settlers</li>
+            <li>Vanilla Factions Expanded - Vikings</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Culinary_FermentingBarrel</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="FermentingBarrel"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_FermentingBarrel</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Geothermal Generators-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Geothermal</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="GeothermalGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Geothermal</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Heaters-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Alpha Biomes</li>
+            <li>Coal Expanded</li>
+            <li>Vanilla Furniture Expanded - Power</li>
+            <li>Vanilla Factions Expanded - Settlers</li>
+            <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
+            <li>[WD] Fueled Heaters</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Temp_Heater</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="Heater"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Heater"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Heater"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Hydroponics-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Garden Tools</li>
+            <li>Science Never Stops: Ambition of the Cosmic</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Husbandry_Hydroponics</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="HydroponicsBasin"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="HydroponicsBasin"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Husbandry_Hydroponics</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="HydroponicsBasin"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Husbandry_Hydroponics</designatorDropdown>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Machining-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Production</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Production_Machining</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="TableMachining"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Machining</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Smelter-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Alpha Biomes</li>
+            <li>Vanilla Furniture Expanded - Power</li>
+            <li>Vanilla Furniture Expanded - Production</li>
+            <li>Coal Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Production_Smelter</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ElectricSmelter"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smelter</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Solar Generators-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Alpha Biomes</li>
+            <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
+            <li>Larger Solar Panels</li>
+            <li>Smokeleaf Industry Reborn</li>
+            <li>Vanilla Furniture Expanded - Power</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Solar</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="SolarGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Solar</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Tool Cabinets-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>More Linkables</li>
+            <li>Vanilla Furniture Expanded - Production</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Misc_Cabinet</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>                <!--DocWorld now Stuffs the cabinet
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="ToolCabinet"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="ToolCabinet"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Misc_Cabinet</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="ToolCabinet"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Misc_Cabinet</designatorDropdown>
+                        </value>
+                    </nomatch>
+                </li>-->
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Transport Pod-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Sparkling Worlds - Full Mod</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Misc_Pod</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="TransportPod"]/designatorDropdown</xpath>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="TransportPod"]/designatorDropdown</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Misc_Pod</designatorDropdown>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="TransportPod"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Misc_Pod</designatorDropdown>
+                        </value>
+                    </nomatch>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Wind Generator-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
+            <li>Vanilla Furniture Expanded - Power</li>
+            <li>Vanilla Factions Expanded - Settlers</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Wind</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="WindTurbine"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Wind</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==============================
+            UnConditional Section
+    ==============================-->
+
+    <!--==========
+    VANILLA
+    ==========-->
+
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+
+            <!--Coolers-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Temp_Cooler</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="Cooler"]/designatorDropdown</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Cooler"]/designatorDropdown</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Cooler</designatorDropdown>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Cooler"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Cooler</designatorDropdown>
+                    </value>
+                </nomatch>
+            </li>
+            <!--Generator-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Power_Generator</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="WoodFiredGenerator" or defName="ChemfuelPoweredGenerator"]</xpath>
+                <value>
+                    <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                </value>
+            </li>
+            <!--IEDs-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Security_IED</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[@Name="TrapIEDBase"][not(designatorDropdown)]</xpath>
+                <value>
+                    <designatorDropdown>DZ_Security_IED</designatorDropdown>
+                </value>
+            </li>
+            <!--Power Conduits-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="PowerConduit"][not(designatorDropdown)]</xpath>
+                <value>
+                    <designatorDropdown>DZ_PowerConduits</designatorDropdown>
+                </value>
+            </li>
+            <!--Smithy-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Production_Smithy</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="FueledSmithy" or defName="ElectricSmithy"]</xpath>
+                        <value>
+                            <designatorDropdown>DZ_Production_Smithy</designatorDropdown>
+                        </value>
+                    </li>
+                </operations>
+            </li>
+            <!--Spots (Not currently working)
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Misc_Spots</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="MarriageSpot" or defName="PartySpot" or defName="CaravanPackingSpot"]/designatorDropdown</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="MarriageSpot" or defName="PartySpot" or defName="CaravanPackingSpot"]/designatorDropdown</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Misc_Spots</designatorDropdown>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="MarriageSpot" or defName="PartySpot" or defName="CaravanPackingSpot"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Misc_Spots</designatorDropdown>
+                    </value>
+                </nomatch>
+            </li>-->
+            <!--Standing Lamps-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Lighting_StandingLamp</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="StandingLamp"]</xpath>
+                <value>
+                    <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="StandingLamp_Red" or defName="StandingLamp_Green" or defName="StandingLamp_Blue"]/designatorDropdown</xpath>
+                <value>
+                    <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
+                </value>
+            </li>
+            <!--Stove-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Culinary_Stove</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/designatorDropdown</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]/designatorDropdown</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="FueledStove" or defName="ElectricStove"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </nomatch>
+            </li>
+            <!--Television-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Rec_TV</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="TubeTelevision" or defName="FlatscreenTelevision"][not(designatorDropdown)]</xpath>
+                <value>
+                    <designatorDropdown>DZ_Rec_TV</designatorDropdown>
+                </value>
+            </li>
+            <!--Turrets-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Security_Turret</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="Turret_Sniper" or defName="Turret_Autocannon"][not(designatorDropdown)]</xpath>
+                <value>
+                    <designatorDropdown>DZ_Security_Turret</designatorDropdown>
+                </value>
+            </li>
+            <!--Vitals Monitor-->
+            <li Class="PatchOperationAdd">
+                <xpath>/Defs</xpath>
+                <value>
+                    <DesignatorDropdownGroupDef>
+                        <defName>DZ_Misc_Vitals</defName>
+                    </DesignatorDropdownGroupDef>
+                </value>
+            </li>
+            <li Class="PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="VitalsMonitor"]/designatorDropdown</xpath>
+                <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VitalsMonitor"]/designatorDropdown</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Misc_Vitals</designatorDropdown>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VitalsMonitor"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Misc_Vitals</designatorDropdown>
+                    </value>
+                </nomatch>
+            </li>
+        </operations>
+    </Operation>
+
+    <!--==========
+    Alpha Biomes
+    ==========-->
+
+    <!--AB_AlcyoniteSolar, AB_PropaneHeater, AB_PropaneStove, AB_SmelterBase, AB_CoreSampleDrill-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Alpha Biomes</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AB_AlcyoniteSolar"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Solar</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AB_PropaneHeater"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AB_PropaneStove"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AB_CoreSampleDrill"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Drill</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="AB_SmelterBase"]/designatorDropdown</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smelter</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Apothecary
+    ==========-->
+
+    <!--AYCharcoalStove, AYCharcoalSmithy-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Apothecary</li>
+            <li>Apothecary (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AYCharcoalStove"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AYCharcoalSmithy"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smithy</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AYCharcoalFiredGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Coal Expanded
+    ==========-->
+
+    <!--CoalGrill, CoalSmelter, CoalFiredGenerator, CoalStove-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Coal Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!--Grill-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="CoalGrill"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </li>
+                <!--Smelter-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="CoalSmelter"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smelter</designatorDropdown>
+                    </value>
+                </li>
+                <!--Generator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="CoalFiredGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                    </value>
+                </li>
+                <!--Coal Stove-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="CoalStove"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Dubs Bad Hygiene
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dubs Bad Hygiene</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!--Water heaters-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_DBH_WaterHeaters</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="LogBoiler" or defName="GasBoiler" or defName="ElectricBoiler" or defName="SolarHeater"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_DBH_WaterHeaters</designatorDropdown>
+                    </value>
+                </li>
+                <!--Wells-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_DBH_WaterWells</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="WaterWellInlet" or defName="DeepWaterWellInlet"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_DBH_WaterWells</designatorDropdown>
+                    </value>
+                </li>
+                <!--Pump-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_DBH_WaterPump</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ElectricPump" or defName="PumpingStation"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_DBH_WaterPump</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Dubs Skylights
+    ==========-->
+
+    <!--BasedSkyLight-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Dubs Skylights</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_DS_Skylights</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="BasedSkyLight"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_DS_Skylights</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Fertile Fields
+    ==========-->
+
+    <!--RFF_ScrapGenerator-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fertile Fields [1.1]</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RFF_ScrapGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Fishing Nets
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Fishing Nets</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Husbandry_FishingNets</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="GTF_FishingNetBase"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Husbandry_FishingNets</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Floored
+    ==========-->
+
+    <!--StripedTile, YellowTile-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Floored [1.0+]</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_FlooredSecurity</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/TerrainDef[defName="StripedTile" or defName="YellowTile"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_FlooredSecurity</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Flooring and Decorative Options
+    ==========-->
+
+    <!--ELIF_WallMountedFTV-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[ELIF] Flooring and Decorative Options</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ELIF_WallMountedFTV"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Rec_TV</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Fueled Heaters
+    ==========-->
+
+    <!--WDWoodFiredHeater, WDChemfuelPoweredHeater-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[WD] Fueled Heaters</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="WDWoodFiredHeater" or defName="WDChemfuelPoweredHeater"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+            </value>
+        </match>
+    </Operation>
+
+
+    <!--==========
+    Genetic Rim
+    ==========-->
+
+    <!--GR_CryostabilizedEngine, GR_NitroMilkTrap, GR_HugeBearRug, GR_HugeBearCatRug, GR_WolfRug, GR_MuffaloRug-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Genetic Rim</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--IED-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="GR_NitroMilkTrap"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Security_IED</designatorDropdown>
+                    </value>
+                </li>
+                <!--Generator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="GR_CryostabilizedEngine"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                    </value>
+                </li>
+                <!--Rugs-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_GR_Rugs</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="GR_HugeBearRug" or defName="GR_HugeBearCatRug" or defName="GR_WolfRug" or defName="GR_MuffaloRug"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_GR_Rugs</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Glass+Lights {Disallow lights until electricity is researched, Remove Redundancies, Vanilla Furniture Expanded - Spacer Module}
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Cieling Lamps-->
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/ThingDef[defName="GLCeilingLamp"]/designatorDropdown</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="GLCeilingLamp"]</xpath>
+                        <value>
+                            <designatorDropdown>CeilingLights</designatorDropdown>
+                        </value>
+                    </nomatch>
+                </li>
+                <!--Television-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="GlassMonitorLarge"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Rec_TV</designatorDropdown>
+                    </value>
+                </li>
+                <!--FueledGlassworkTable, GlassworkTable, ReinforcedGlassworkTable-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_GL_Glassworks</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="FueledGlassworkTable" or defName="GlassworkTable" or defName="ReinforcedGlassworkTable"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_GL_Glassworks</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--Add to a dropdown designator to show similar type of lighting-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Vanilla Furniture Expanded - Spacer Module</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs</xpath>
+                        <value>
+                            <DesignatorDropdownGroupDef>
+                                <defName>DZ_GL_VFESM</defName>
+                            </DesignatorDropdownGroupDef>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationConditional">
+                        <xpath>/Defs/ThingDef[defName="Spacer_OutdoorLamp" or defName="OutdoorGroundLamp"]/designatorDropdown</xpath>
+                        <nomatch Class="PatchOperationAdd">
+                            <xpath>/Defs/ThingDef[defName="Spacer_OutdoorLamp" or defName="OutdoorGroundLamp"]</xpath>
+                            <value>
+                                <designatorDropdown>DZ_GL_VFESM</designatorDropdown>
+                            </value>
+                        </nomatch>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    JetPack
+    ==========-->
+
+    <!--JPKerosene_Generator-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>JetPack</li>
+            <li>JetPack (Continued)</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="JPKerosene_Generator"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Large Animal Beds (not currently working)
+    ==========-->
+
+    <!--Sleeping Spots
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Large Animal Beds</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Animals_LargeAnimalSpot</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="AnimalSleepingSpot" or defName="CCPMAnimalSleepingSpot" or defName="CCPLAnimalSleepingSpot"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Animals_LargeAnimalSpot</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>-->
+
+    <!--==========
+    Larger Solar Panels
+    ==========-->
+
+    <!--SolarGeneratorLarge, CCPSolarGeneratorLarger, CCPSolarGeneratorLargest, CCPSolarGeneratorTiled-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Larger Solar Panels</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="SolarGeneratorLarge" or defName="CCPSolarGeneratorLarger" or defName="CCPSolarGeneratorLargest" or defName="CCPSolarGeneratorTiled"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Solar</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Mechalit Core
+    ==========-->
+
+    <!--Lamp-pots-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Mechalit Core 1.1</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_LampPots_Mechalit</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Lamp-pot" or @Name="Lamp-potBase"][not(designatorDropdown)]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_LampPots_Mechalit</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Medical Supplements
+    ==========-->
+
+    <!--MSMedicalMatEarly, MSMedicalMat, MSMedicalMatSpacer, MSMedicalMatUltra-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medical Supplements</li>
+            <li>Medical Supplements (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_MS_MedMats</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="MSMedicalMatEarly" or defName="MSMedicalMat" or defName="MSMedicalMatSpacer" or defName="MSMedicalMatUltra"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_MS_MedMats</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Metallic Batteries
+    ==========-->
+
+    <!--Battery_Silver, Battery_Gold, Battery_Plasteel, Battery_Uranium, Battery_Advanced, Battery_Vanometric-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[SYR] Metallic Batteries</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="Battery_Silver" or defName="Battery_Gold" or defName="Battery_Plasteel" or defName="Battery_Uranium" or defName="Battery_Advanced" or defName="Battery_Vanometric"]/designatorDropdown</xpath>
+            <value>
+                <designatorDropdown>DZ_Power_Battery</designatorDropdown>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    More Furniture
+    ==========-->
+
+    <!--Anon2CarpetBase, ANON2StandingLampBase-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>More Furniture [1.1 + 1.2]</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAttributeSet">
+                    <xpath>/Defs/TerrainDef[@ParentName="Anon2CarpetBase"]</xpath>
+                    <attribute>ParentName</attribute>
+                    <value>CarpetBase</value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="ANON2StandingLampBase"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Lighting_StandingLamp</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    More Linkables
+    ==========-->
+
+    <!--ToolCabinetA, ToolCabinetB, ToolCabinetC-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>More Linkables</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="ToolCabinetA" or defName="ToolCabinetB" or defName="ToolCabinetC"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Misc_Cabinet</designatorDropdown>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Natural Paths
+    ==========-->
+
+    <!--pathBase-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Natural Paths</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_NP_dirtPath</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/TerrainDef[@Name="pathBase"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_NP_dirtPath</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Over-Wall Nutrient Paste Dispenser
+    ==========-->
+
+    <!--NutrientPasteDispenser-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Over-Wall Nutrient Paste Dispenser</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="NutrientPasteDispenser"]</xpath>
+            <value>
+                <designatorDropdown>OverWallNutrientDispenser</designatorDropdown>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Questionable Ethics Enhanced
+    ==========-->
+
+    <!--QE_Building_OrganVat, QE_PawnVat-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Questionable Ethics Enhanced</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_QEE_Vats</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="QE_Building_OrganVat" or defName="QE_PawnVat"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_QEE_Vats</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Rimatomics
+    ==========-->
+
+    <!--BaseReactor, Turbine, BigTurbine-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Rimatomics</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_BaseReactor</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="BaseReactor"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_BaseReactor</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Turbine</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Turbine" or defName="BigTurbine"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Turbine</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Rimefeller
+    ==========-->
+
+    <!--FuelPowerplant, LargeFuelPowerplant, BasedWell-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Rimefeller</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_ChemfuelPlant</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="FuelPowerplant" or defName="LargeFuelPowerplant"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_ChemfuelPlant</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_BasedWell</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="BasedWell"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_BasedWell</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Rim of Madness - Bones
+    ==========-->
+
+    <!--Moves Floors into a single designation tile-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Rim of Madness - Bones</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Floor_Bones</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/TerrainDef[defName="BoneFloor" or defName="BoneFloor_Blackened" or defName="BoneChinaFloor" or defName="BoneFloor_Ashen" or defName="BoneFloor_Tile"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Floor_Bones</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    RIMkea
+    ==========-->
+
+    <!--Shainbrait, Kageshain, Wood Floors-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RIMkea</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Lighting_SHAINBRAIT</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="RIKMilleniumLampBase"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Lighting_SHAINBRAIT</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Lighting_KAGESHAIN</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="RIKFleaLampBase"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Lighting_KAGESHAIN</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Floors_RKWood</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/TerrainDef[@Name="RIKWoodFloorBase"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Floors_RKWood</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    RimPlas
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RimPlas</li>
+            <li>RimPlas (Continued)</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--RPGrapheneSolarGenerator, RPSmallGrapheneSolarGenerator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneSolarGenerator" or defName="RPSmallGrapheneSolarGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Solar</designatorDropdown>
+                    </value>
+                </li>
+                <!--RPGrapheneGeoGenerator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneGeoGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Geothermal</designatorDropdown>
+                    </value>
+                </li>
+                <!--RPGrapheneWindTurbine-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneWindTurbine"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Wind</designatorDropdown>
+                    </value>
+                </li>
+                <!--RPGrapheneBattery, RPSmallGrapheneBattery-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneBattery" or defName="RPSmallGrapheneBattery"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Battery</designatorDropdown>
+                    </value>
+                </li>
+                <!--RPGrapheneHeater-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneHeater"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                    </value>
+                </li>
+                <!--RPGrapheneCooler-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGrapheneCooler"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Cooler</designatorDropdown>
+                    </value>
+                </li>
+                <!--RimPlas_InjMldMachine, RimPlas_AdvInjMld-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_RP_IMM</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RimPlas_InjMldMachine" or defName="RimPlas_AdvInjMld"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_RP_IMM</designatorDropdown>
+                    </value>
+                </li>
+                <!--RP_CeilingLight, RP_GrapheneCeilingLight-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_RP_GCL</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RP_CeilingLight" or defName="RP_GrapheneCeilingLight"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_RP_GCL</designatorDropdown>
+                    </value>
+                </li>
+                <!--RPGraphenePowerConduit, RPUndGrapheneConduit, RPGraphenePowerConduit_Buried
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGraphenePowerConduit" or defName="RPUndGrapheneConduit"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_PowerConduits</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="RPGraphenePowerConduit_Buried"]</xpath>
+                    <value>
+                        <designatorDropdown Inherit="false" />
+                    </value>
+                </li>-->
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Science Never Stops
+    ==========-->
+
+    <!--SNS_Hydroponics_I, SNS_Hydroponics_II, SNS_Hydroponics_III-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Science Never Stops: Ambition of the Cosmic</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="SNS_Hydroponics_I" or defName="SNS_Hydroponics_II" or defName="SNS_Hydroponics_III"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Husbandry_Hydroponics</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Simple Storage
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>[JDS] Simple Storage</li>
+        </mods>
+
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- Ammo Boxes -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_AmmoBoxes</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDSAmmo_BoxA" or defName="JDSAmmo_BoxB" or defName="JDSAmmo_BoxC"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_AmmoBoxes</designatorDropdown>
+                    </value>
+                </li>
+
+                <!-- Bundles -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_BundlesWrap</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDS_Bundles_Wrap" or defName="JDS_Bundles_Wrap_Big" or defName="JDS_Bundles_Wrap_Pile"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_BundlesWrap</designatorDropdown>
+                    </value>
+                </li>
+
+                <!-- Metal Crates -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_MetalCrates</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDS_Metal_Crate" or defName="JDS_Metal_Crate_Pile" or defName="JDS_Metal_Crate_Small_Pile" or defName="JDS_Metal_Crate_Bigger_Pile"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_MetalCrates</designatorDropdown>
+                    </value>
+                </li>
+
+                <!-- Metal Shelves -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_MetalShelves</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDSMetal_Shelf_A" or defName="JDSMetal_Shelf_B" or defName="JDSIndustrial_shelf" or defName="JDSIndustrial_shelf_empty" or defName="JDSMetal_Shelf_A_Full" or defName="JDSMetal_Shelf_B_Full"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_MetalShelves</designatorDropdown>
+                    </value>
+                </li>
+
+                <!-- Military Crates -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_MilitaryCrates</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDSMilitaryGradeCrateSmall" or defName="JDSMilitary_Grade_Crate_Small_Pile" or defName="JDSMilitary_Grade_Crate_Long" or defName="JDSMilitary_Grade_crate_Large"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_MilitaryCrates</designatorDropdown>
+                    </value>
+                </li>
+
+                <!-- Resource Crates -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_ResourceCrates</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDS_1ResourcesCrate" or defName="JDS_2ResourcesCrate" or defName="JDS_3ResourcesCrate" or defName="JDS_4ResourcesCrate" or defName="JDS_5ResourcesCrate" or defName="JDS_6ResourcesCrate" or defName="JDS_7ResourcesCrate" or defName="JDS_8ResourcesCrate" or defName="JDS_9ResourcesCrate" or defName="JDS_10ResourcesCrate"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_ResourceCrates</designatorDropdown>
+                    </value>
+                </li>
+
+                <!-- Shipping Containers -->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>JDS_ShippingContainers</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="JDSShippingContainerRed" or defName="JDSShippingContainerBlue" or defName="JDSShippingContainerGreen"]</xpath>
+                    <value>
+                        <designatorDropdown>JDS_ShippingContainers</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Smokeleaf Industry Reborn
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Smokeleaf Industry Reborn</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--HempolineGenerator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="HempolineGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                    </value>
+                </li>
+                <!--HempSolarGenerator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="HempSolarGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Solar</designatorDropdown>
+                    </value>
+                </li>
+                <!--HempPowerConduit-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="HempPowerConduit"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_PowerConduits</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Sparkling Worlds - Full Mod
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Sparkling Worlds - Full Mod</li>
+        </mods>
+        <!--BeamCannonSatellitePodSW, KineticBombardmentSatellitePodSW-->
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="BeamCannonSatellitePodSW" or defName="KineticBombardmentSatellitePodSW"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Misc_Pod</designatorDropdown>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    Utility Columns
+    ==========-->
+
+    <!--OrbitalTradeBeacon, OrbitalTradeColumnMod-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Utility Columns</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_UtCl_Trade</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="OrbitalTradeColumnMod" or defName="OrbitalTradeBeacon"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_UtCl_Trade</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Books Expanded
+    ==========-->
+
+    <!--VBE_WritersTable, VBE_TypewritersTable-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>VanillaExpanded.VBooksE</li>
+        </packageIds>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_VBE_BookTables</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VBE_WritersTable" or defName="VBE_TypewritersTable"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_VBE_BookTables</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Brewing Expanded
+    ==========-->
+
+    <!--VBE_AmbrandyDistillery, VBE_WhiskeyCask, VBE_TequilaBarrel, VBE_VodkaDrum, VBE_GinStill-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Brewing Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_VBE_Mixers</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VBE_AmbrandyDistillery" or defName="VBE_WhiskeyCask" or defName="VBE_TequilaBarrel" or defName="VBE_VodkaDrum" or defName="VBE_GinStill"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_VBE_Mixers</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Power
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Power</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--VFE_PortableWoodFiredGenerator, VFE_PortableChemfuelPoweredGenerator, VFE_IndustrialWoodFiredGenerator, VFE_IndustrialChemfuelPoweredGenerator, VPE_HelixienGenerator, VPE_IndustrialHelixienGenerator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_PortableWoodFiredGenerator" or defName="VFE_PortableChemfuelPoweredGenerator" or defName="VFE_IndustrialWoodFiredGenerator" or defName="VFE_IndustrialChemfuelPoweredGenerator" or defName="VPE_HelixienGenerator" or defName="VPE_IndustrialHelixienGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Generator</designatorDropdown>
+                    </value>
+                </li>
+                <!--VFE_AdvancedSolarGenerator-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_AdvancedSolarGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Solar</designatorDropdown>
+                    </value>
+                </li>
+                <!--VFE_AdvancedWindTurbine-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_AdvancedWindTurbine"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Wind</designatorDropdown>
+                    </value>
+                </li>
+                <!--VFE_LargeBattery, VFE_SmallBattery, VFE_AdvancedBattery, VFE_LargeAdvancedBattery-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_LargeBattery" or defName="VFE_SmallBattery" or defName="VFE_AdvancedBattery" or defName="VFE_LargeAdvancedBattery"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Battery</designatorDropdown>
+                    </value>
+                </li>
+                <!--VPE_GasHeater-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VPE_GasHeater"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                    </value>
+                </li>
+                <!--VPE_GasCooler-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VPE_GasCooler"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Cooler</designatorDropdown>
+                    </value>
+                </li>
+                <!--VPE_GasPipe, VPE_GasPipeSub-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_VPE_GasPipe</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VPE_GasPipe" or defName="VPE_GasPipeSub"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_VPE_GasPipe</designatorDropdown>
+                    </value>
+                </li>
+                <!--VPE_GasSmelter-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VPE_GasSmelter"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smelter</designatorDropdown>
+                    </value>
+                </li>
+                <!--VPE_GasStove-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VPE_GasStove"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </li>
+                <!--Watermill-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Watermill</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="WatermillGenerator" or defName="VFE_AdvancedWatermillGenerator"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Watermill</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Production
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Production</li>
+        </mods>
+        <!--VFE_DrugCabinet, VFE_MachiningCabinet, VFE_SmithyCabinet, VFE_KitchenSinkCabinet, VFE_TailorCabinet, VFE_FabricationCabinet, VFE_TableStoveLarge, VFE_TableSmithyLarge, VFE_FueledSmelter, VFE_TableMachiningLarge-->
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_DrugCabinet" or defName="VFE_MachiningCabinet" or defName="VFE_SmithyCabinet" or defName="VFE_KitchenSinkCabinet" or defName="VFE_TailorCabinet" or defName="VFE_FabricationCabinet"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Misc_Cabinet</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_TableStoveLarge"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_Stove</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_TableSmithyLarge"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smithy</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_FueledSmelter"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Smelter</designatorDropdown>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFE_TableMachiningLarge"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Production_Machining</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Security
+    ==========-->
+
+    <!--VFES_ShieldGenerator_Large, VFES_ShieldGenerator_Small, VFES_Turret_AutocannonDouble-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Security</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Shields-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_VFES_Shield</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFES_ShieldGenerator_Small" or defName="VFES_ShieldGenerator_Large"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_VFES_Shield</designatorDropdown>
+                    </value>
+                </li>
+                <!--Turret-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFES_Turret_AutocannonDouble"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Security_Turret</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Factions Expanded - Medieval
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Medieval</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--VFEM_WineBarrel-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFEM_WineBarrel"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_FermentingBarrel</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Factions Expanded - Settlers
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Settlers</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Chemboiler-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ChemBoiler"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Temp_Heater</designatorDropdown>
+                    </value>
+                </li>
+                <!--Windmill-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Windmill"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Wind</designatorDropdown>
+                    </value>
+                </li>
+                <!--ChemsineBarrel-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Building_ChemshineBarrel"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_FermentingBarrel</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Factions Expanded - Vikings
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Factions Expanded - Vikings</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--VFEV_MeadFermentingBarrel-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VFEV_MeadFermentingBarrel"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Culinary_FermentingBarrel</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Spacer Module
+    ==========-->
+
+    <!--UltrascreenTV-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Furniture Expanded - Spacer Module</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="UltrascreenTV"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Rec_TV</designatorDropdown>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    VGP Garden Tools
+    ==========-->
+
+    <!--ModularHydroponicsBasin, ADVHydroponicsBasin, ADVModularHydroponicsBasin-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>VGP Garden Tools</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ModularHydroponicsBasin" or defName="ADVHydroponicsBasin" or defName="ADVModularHydroponicsBasin"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Husbandry_Hydroponics</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Wall Vitals Monitor
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Wall Vitals Monitor</li>
+        </mods>
+        <!--Wall_M_VitalsMonitor-->
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Wall_M_VitalsMonitor"]</xpath>
+            <value>
+                <designatorDropdown>DZ_Misc_Vitals</designatorDropdown>
+            </value>
+        </match>
+    </Operation>
+
+    <!--==========
+    ZARS Production Spots {Thanks For All The Fish}
+    ==========-->
+
+    <!--Add to fishingspot to ZARS dropdown-->
+    <Operation Class="D9Framework.PatchOperationFindPackage">
+        <packageIds>
+            <li>dracoix.zars.spots</li>
+        </packageIds>
+        <match Class="D9Framework.PatchOperationFindPackage">
+            <packageIds>
+                <li>pyrce.thanks.for.all.the.fish</li>
+            </packageIds>
+            <match Class="PatchOperationAdd">
+                <xpath>/Defs/ThingDef[defName="FishingSpot"]</xpath>
+                <value>
+                    <designatorDropdown>ZARS_Spots</designatorDropdown>
+                </value>
+            </match>
+        </match>
+    </Operation>
+    <!--SHARK JUST TRYING TO COPY PASTE, PLZ CORRECT THINGS-->
+    
+    <!--==========
+    Enhanced Battery 11/27 
+    ==========-->
+	
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Enhanced Battery</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ChargeBack_Battery_Prototype" or defName="ChargeBack_Battery" or defName="SpeedCharge_Battery" or defName="ResonanceCell_Battery" or defName="VoidCell_Battery"]</xpath>
+                    <value>
+                        <designatorDropdown>DZ_Power_Battery</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    
+    <!--==========
+    Medical IV's 1 11/28
+    ==========-->
+	
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medical IV's</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Misc_MedicalIV1</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="IV_Blood" or defName="IV_Nutrition" or defName="IV_Painkiller" or defName="IV_Antibiotics" or defName="IV_Anesthetic"]</xpath>
+					<value>
+                        <designatorDropdown>DZ_Misc_MedicalIV1</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+	
+	<!--==========
+    Medical IV's 2 Electronic 11/28
+    ==========-->
+	
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medical IV's</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Misc_MedicalIV2</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="IV_Blood_Electric" or defName="IV_Nutrition_Electric" or defName="IV_Painkiller_Electric" or defName="IV_Antibiotics_Electric" or defName="IV_Anesthetic_Electric" or defName="IV_Multi_Electric"]</xpath>
+					<value>
+                        <designatorDropdown>DZ_Misc_MedicalIV2</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+	<!--==========
+    Fuse and Fuse plus 11/29
+    ==========-->
+	
+	<Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>RT Fuse</li>
+			<li>Fuse Plus</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <DesignatorDropdownGroupDef>
+                            <defName>DZ_Power_Fuse</defName>
+                        </DesignatorDropdownGroupDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Building_RTMakeshiftFuse" or defName="Building_RTCircuitBreaker" or defName="FPIndustrialBreaker" or defName="FPGWBreaker"]</xpath>
+					<value>
+                        <designatorDropdown>DZ_Power_Fuse</designatorDropdown>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

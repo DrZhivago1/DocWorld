@@ -1,0 +1,1129 @@
+﻿<Patch>
+   <!--This file will contain all miscellaneous patches that replace/change all sorts of things from various mods-->
+
+   <!--==========
+    Vanilla
+    ==========-->
+
+   <!--Patch Vanilla flooring if Concrete exists-->
+   <Operation Class="PatchOperationConditional">
+      <xpath>/Defs/ThingDef[defName = "DZ_Concrete"]</xpath>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/TerrainDef[defName = "Concrete"]/costList</xpath>
+               <value>
+                  <costList>
+                     <DZ_Concrete>5</DZ_Concrete>
+                  </costList>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/TerrainDef[defName = "PavedTile"]/costList</xpath>
+               <value>
+                  <costList>
+                     <Steel>1</Steel>
+                     <DZ_Concrete>5</DZ_Concrete>
+                  </costList>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--Add a melting mechanoid recipe for low tech colonies-->
+   <Operation Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+         <li Class="PatchOperationAdd">
+            <xpath>/Defs</xpath>
+            <value>
+               <RecipeDef ParentName="ButcherCorpseMechanoidBase">
+                  <defName>DZ_MeltCorpseMechanoid</defName>
+                  <label>melt mechanoid</label>
+                  <description>Melt a dead mechanoid with a smelter to salvage usable material. Slightly faster than smashing it.</description>
+                  <jobString>Melting mechanoid.</jobString>
+                  <workAmount>400</workAmount>
+                  <soundWorking>Recipe_Smelt</soundWorking>
+               </RecipeDef>
+            </value>
+         </li>
+         <li Class="PatchOperationInsert">
+            <xpath>/Defs/ThingDef/recipes/li[text()="SmeltApparel"]</xpath>
+            <value>
+               <li>DZ_MeltCorpseMechanoid</li>
+            </value>
+         </li>
+      </operations>
+   </Operation>
+
+   <!--Allow butcher spot and crafting spot to be placed on furniture-->
+   <Operation Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+         <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="ButcherSpot" or defName="CraftingSpot"]/altitudeLayer</xpath>
+            <value>
+               <altitudeLayer>MoteOverhead</altitudeLayer>
+            </value>
+         </li>
+         <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="ButcherSpot" or defName="CraftingSpot"]/building</xpath>
+            <value>
+               <isEdifice>false</isEdifice>
+               <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+            </value>
+         </li>
+         <li Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="ButcherSpot" or defName="CraftingSpot"]</xpath>
+            <value>
+               <clearBuildingArea>false</clearBuildingArea>
+            </value>
+         </li>
+      </operations>
+   </Operation>
+
+   <!--==========
+    Concrete Walls
+    ==========-->
+
+   <!--Use concrete from other mods-->
+   <Operation Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+         <li>Porohkun.ConcreteWalls</li>
+      </packageIds>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationTest">
+               <xpath>/Defs/ThingDef[defName="DZ_Concrete"]</xpath>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/RecipeDef[defName="MakeConcreteSlabBricks"]/label</xpath>
+               <value>
+                  <label>make concrete slabs</label>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/RecipeDef[defName="MakeConcreteSlabBricks4"]/label</xpath>
+               <value>
+                  <label>make concrete slabs x4</label>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/RecipeDef[defName="MakeConcreteSlabBricks" or defName="MakeConcreteSlabBricks4"]/ingredients/*//filter/categories</xpath>
+               <value>
+                  <thingDefs>
+                     <li>DZ_Concrete</li>
+                  </thingDefs>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/RecipeDef[defName="MakeConcreteSlabBricks" or defName="MakeConcreteSlabBricks4"]/fixedIngredientFilter/thingDefs 
+                     | /Defs/RecipeDef[defName="MakeConcreteSlabBricks" or defName="MakeConcreteSlabBricks4"]/defaultIngredientFilter/thingDefs</xpath>
+               <value>
+                  <li>DZ_Concrete</li>
+               </value>
+            </li>
+            <li Class="PatchOperationRemove">
+               <xpath> /Defs/RecipeDef[defName="MakeConcreteSlabBricks" or defName="MakeConcreteSlabBricks4"]/fixedIngredientFilter/categories 
+                     | /Defs/RecipeDef[defName="MakeConcreteSlabBricks" or defName="MakeConcreteSlabBricks4"]/defaultIngredientFilter/categories 
+                     | /Defs/RecipeDef[defName="MakeConcreteSlabChunks"]
+               </xpath>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Expanded Materials - Metals
+    ==========-->
+
+   <!--Return concrete flooring to normal-->
+   <Operation Class="D9Framework.PatchOperationFindPackage">
+      <packageIds>
+         <li>Argon.VMEu</li>
+      </packageIds>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationRemove">
+               <xpath>/Defs/TerrainDef[defName = "Concrete" or defName = "PavedTile"]/designatorDropdown 
+                  | /Defs/TerrainDef[defName="VMEu_Concrete_Industrial" or defName="VMEu_Paved_Industrial"]</xpath>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Expanded Roofing
+    ==========-->
+
+   <!--Get rid of the annoying square shadows with glass roof-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Expanded Roofing</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="RoofTransparentFraming"]</xpath>
+               <value>
+                  <castEdgeShadows>false</castEdgeShadows>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Fish Industry
+    ==========-->
+
+   <!--Allow rotation of aquaculture basin (microfungus texture edited due to this), Stuff the pier-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>FishIndustry</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="AquacultureBasin"]/rotatable</xpath>
+               <value>
+                  <rotatable>true</rotatable>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="FishingPier"]/costList</xpath>
+               <value>
+                  <costStuffCount>200</costStuffCount>
+                  <stuffCategories>
+                     <li>Stony</li>
+                     <li>Metallic</li>
+                     <li>Woody</li>
+                  </stuffCategories>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Fishing Nets
+    ==========-->
+
+   <!--Increase fish spawn randomness, ensure minimum meat count per trap, and increase/further randomize the possible lifespan of all traps -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Fishing Nets</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <operations>
+            <!--Basic Nets-->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetBasic"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/resultCount</xpath>
+               <value>
+                  <resultCount>7</resultCount>                  <!--Fish caught when successful, minimum 7 meat per basic net-->
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetBasic"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/durationIntervalRange</xpath>
+               <value>
+                  <durationIntervalRange>
+                     <min>180000</min>                     <!--3 days-->
+                     <max>360000</max>                     <!--6 days-->
+                  </durationIntervalRange>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetBasic"]/comps/li[@Class="GTU_Processor.CompProperties_GTLifespan"]/lifetimeRange</xpath>
+               <value>
+                  <lifetimeRange>
+                     <min>420000</min>                     <!--7 days-->
+                     <max>900000</max>                     <!--15 days-->
+                  </lifetimeRange>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetBasic"]/comps</xpath>
+               <value>
+                  <li Class="GT_ExplicitTerrainAffordance.CompProperties_GTExplicitTerrainAffordance">
+                     <requiredTerrains>
+                        <li>Marsh</li>
+                        <li>WaterShallow</li>
+                     </requiredTerrains>
+                  </li>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetBasic"]</xpath>
+               <value>
+                  <placeWorkers>
+                     <li>GT_ExplicitTerrainAffordance.PlaceWorker_ExplicitAffordance</li>
+                  </placeWorkers>
+               </value>
+            </li>
+            <li Class="PatchOperationRemove">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetBasic"]/terrainAffordanceNeeded</xpath>
+            </li>
+            <!--Complex Nets-->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetComplex"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/resultCount</xpath>
+               <value>
+                  <resultCount>15</resultCount>                  <!--Fish caught when successful, minimum 45 meat per complex net-->
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetComplex"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/durationIntervalRange</xpath>
+               <value>
+                  <durationIntervalRange>
+                     <min>120000</min>                     <!--2 days-->
+                     <max>300000</max>                     <!--5 days-->
+                  </durationIntervalRange>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetComplex"]/comps/li[@Class="GTU_Processor.CompProperties_GTLifespan"]/lifetimeRange</xpath>
+               <value>
+                  <lifetimeRange>
+                     <min>900000</min>                     <!--15 days-->
+                     <max>1800000</max>                     <!--30 days-->
+                  </lifetimeRange>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetComplex"]/comps/li[@Class="GT_ExplicitTerrainAffordance.CompProperties_GTExplicitTerrainAffordance"]</xpath>
+               <value>
+                  <li Class="GT_ExplicitTerrainAffordance.CompProperties_GTExplicitTerrainAffordance">
+                     <requiredTerrains>
+                        <li>WaterShallow</li>
+                        <li>WaterMovingChestDeep</li>
+                        <li>WaterOceanShallow</li>
+                     </requiredTerrains>
+                  </li>
+               </value>
+            </li>
+            <!--Advanced Nets-->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetAdvanced"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/resultCount</xpath>
+               <value>
+                  <resultCount>30</resultCount>                  <!--Fish caught when successful, minimum 300 meat per advanced net-->
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetAdvanced"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/durationIntervalRange</xpath>
+               <value>
+                  <durationIntervalRange>
+                     <min>60000</min>                     <!--1 day-->
+                     <max>180000</max>                     <!--3 day-->
+                  </durationIntervalRange>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetAdvanced"]/comps/li[@Class="GTU_Processor.CompProperties_GTLifespan"]/lifetimeRange</xpath>
+               <value>
+                  <lifetimeRange>
+                     <min>1800000</min>                     <!--30 days-->
+                     <max>3600000</max>                     <!--60 days-->
+                  </lifetimeRange>
+               </value>
+            </li>
+            <!--Ice Nets-->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetIce"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/resultCount</xpath>
+               <value>
+                  <resultCount>7</resultCount>                  <!--Fish caught when successful, minimum 17.5 meat per ice net-->
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetIce"]/comps/li[@Class="GTU_Processor.CompProperties_GTProcessor"]/durationIntervalRange</xpath>
+               <value>
+                  <durationIntervalRange>
+                     <min>180000</min>                     <!--3 day-->
+                     <max>360000</max>                     <!--6 day-->
+                  </durationIntervalRange>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="GTF_FishingNetIce"]/comps/li[@Class="GTU_Processor.CompProperties_GTLifespan"]/lifetimeRange</xpath>
+               <value>
+                  <lifetimeRange>
+                     <min>900000</min>                     <!--15 days-->
+                     <max>1800000</max>                     <!--30 days-->
+                  </lifetimeRange>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Industrial Age - Objects and Furniture
+    ==========-->
+
+   <!--Make gas lamps from require chemfuel-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Industrial Age - Objects and Furniture (Continued)</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha" or defName="Jecrell_GasStreetLampBeta"]/comps</xpath>
+               <value>
+                  <li Class="CompProperties_Refuelable">
+                     <fuelConsumptionRate>0.5</fuelConsumptionRate>
+                     <fuelCapacity>20.0</fuelCapacity>
+                     <fuelFilter>
+                        <thingDefs>
+                           <li>Chemfuel</li>
+                        </thingDefs>
+                     </fuelFilter>
+                  </li>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="Jecrell_GasLamp"]/comps</xpath>
+               <value>
+                  <li Class="CompProperties_Refuelable">
+                     <fuelConsumptionRate>0.25</fuelConsumptionRate>
+                     <fuelCapacity>10.0</fuelCapacity>
+                     <fuelFilter>
+                        <thingDefs>
+                           <li>Chemfuel</li>
+                        </thingDefs>
+                     </fuelFilter>
+                  </li>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha" or defName="Jecrell_GasStreetLampBeta"]/thingClass</xpath>
+               <value>
+                  <thingClass>Building</thingClass>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha" or defName="Jecrell_GasStreetLampBeta"]/comps</xpath>
+               <value>
+                  <li Class="CompProperties_Glower">
+                     <glowRadius>12</glowRadius>
+                     <glowColor>(255,178,64,0)</glowColor>
+                  </li>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Lulu's Bones and Chitin
+    ==========-->
+
+   <!--Bring Lulu's bones closer to Vanilla wood stats-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Lulu's Bones and Chitin</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+         <xpath>/Defs/ThingDef[defName = "LuluBones_Bone"]/statBases</xpath>
+         <value>
+            <statBases>
+               <MarketValue>1.2</MarketValue>
+               <MaxHitPoints>150</MaxHitPoints>
+               <Mass>0.4</Mass>
+               <Flammability>1.0</Flammability>
+               <DeteriorationRate>0.5</DeteriorationRate>
+               <StuffPower_Armor_Sharp>0.45</StuffPower_Armor_Sharp>
+               <StuffPower_Armor_Blunt>0.50</StuffPower_Armor_Blunt>
+               <StuffPower_Armor_Heat>0.50</StuffPower_Armor_Heat>
+               <StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
+               <StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
+               <SharpDamageMultiplier>0.45</SharpDamageMultiplier>
+               <BluntDamageMultiplier>0.85</BluntDamageMultiplier>
+            </statBases>
+         </value>
+      </match>
+   </Operation>
+
+   <!--==========
+    Mamuffalo
+    ==========-->
+
+   <!--Use Vanilla muffalo leather-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Mamuffalo</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+         <xpath>/Defs/ThingDef[defName="Mamuffalo"]/race/leatherDef</xpath>
+         <value>
+            <leatherDef>Leather_Bluefur</leatherDef>
+         </value>
+      </match>
+   </Operation>
+
+   <!--==========
+    Open The Windows
+    ==========-->
+
+   <!--Allow regular windows to be made of stone-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>[JPT] Open The Windows</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="OpenWindow" or defName="LargeOpenWindow"]/stuffCategories</xpath>
+               <value>
+                  <li>Stony</li>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Power Switch
+    ==========-->
+
+   <!--Remove hidden conduits-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>PowerSwitch</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <operations>
+            <li Class="PatchOperationRemove">
+               <xpath>/Defs/ThingDef[defName="PowerConduitInvisible"]
+                    | /Defs/ResearchProjectDef[defName="ResearchPowerConduitsInvisible"]</xpath>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    RIMkea
+    ==========-->
+
+   <!--Nerf RIMkea furniture comfort and beauty-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>RIMkea</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">               <!--=====WODENTable=====-->
+               <xpath>/Defs/ThingDef[defName="WODENTable"]/Beauty</xpath>
+               <value>
+                  <Beauty>0.3</Beauty>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">               <!--=====REGSITStool=====-->
+               <xpath>/Defs/ThingDef[defName="REGSITStool"]/Beauty</xpath>
+               <value>
+                  <Beauty>0.5</Beauty>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="REGSITStool"]/Comfort</xpath>
+               <value>
+                  <Comfort>0.5</Comfort>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">               <!--=====SITTSLABChair=====-->
+               <xpath>/Defs/ThingDef[defName="SITTSLABChair"]/Beauty</xpath>
+               <value>
+                  <Beauty>6</Beauty>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="SITTSLABChair"]/Comfort</xpath>
+               <value>
+                  <Comfort>0.7</Comfort>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">               <!--=====STAMMRESTChair=====-->
+               <xpath>/Defs/ThingDef[defName="STAMMRESTChair"]/Beauty</xpath>
+               <value>
+                  <Beauty>8</Beauty>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="STAMMRESTChair"]/Comfort</xpath>
+               <value>
+                  <Comfort>0.75</Comfort>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">               <!--=====PILREKLINCouch=====-->
+               <xpath>/Defs/ThingDef[defName="PILREKLINCouch"]/Beauty</xpath>
+               <value>
+                  <Beauty>6</Beauty>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="PILREKLINCouch"]/Comfort</xpath>
+               <value>
+                  <Comfort>.9</Comfort>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="PILREKLINCouch"]/WorkToBuild</xpath>
+               <value>
+                  <WorkToBuild>15000</WorkToBuild>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">               <!--=====BUTTEKUSHPillow=====-->
+               <xpath>/Defs/ThingDef[defName="BUTTEKUSHPillow"]/Beauty</xpath>
+               <value>
+                  <Beauty>8</Beauty>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="BUTTEKUSHPillow"]/Comfort</xpath>
+               <value>
+                  <Comfort>0.75</Comfort>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="BUTTEKUSHPillow"]/WorkToBuild</xpath>
+               <value>
+                  <WorkToBuild>8000</WorkToBuild>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">               <!--=====STAMMFLATTTable=====-->
+               <xpath>/Defs/ThingDef[defName="STAMMFLATTTable"]/Beauty</xpath>
+               <value>
+                  <Beauty>10</Beauty>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">               <!--=====SLABFLATTTable=====-->
+               <xpath>/Defs/ThingDef[defName="SLABFLATTTable"]/Beauty</xpath>
+               <value>
+                  <Beauty>8</Beauty>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">               <!--=====BLUMTASK=====-->
+               <xpath>/Defs/ThingDef[defName="BLUMTASK"]/Beauty</xpath>
+               <value>
+                  <Beauty>3</Beauty>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">               <!--=====BUMRESTStool=====-->
+               <xpath>/Defs/ThingDef[defName="BUMRESTStool"]/Beauty</xpath>
+               <value>
+                  <Beauty>1</Beauty>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="BUMRESTStool"]/Comfort</xpath>
+               <value>
+                  <Comfort>0.6</Comfort>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">               <!--=====SITEGGArmchair=====-->
+               <xpath>/Defs/ThingDef[defName="SITEGGArmchair"]/Beauty</xpath>
+               <value>
+                  <Beauty>10</Beauty>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="SITEGGArmchair"]/Comfort</xpath>
+               <value>
+                  <Comfort>0.75</Comfort>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">               <!--=====CHILLEGGCouch=====-->
+               <xpath>/Defs/ThingDef[defName="CHILLEGGCouch"]/Beauty</xpath>
+               <value>
+                  <Beauty>12</Beauty>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="PILREKLINCouch"]/Comfort</xpath>
+               <value>
+                  <Comfort>.95</Comfort>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="PILREKLINCouch"]/WorkToBuild</xpath>
+               <value>
+                  <WorkToBuild>18000</WorkToBuild>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">               <!--=====POTBLUM=====-->
+               <xpath>/Defs/ThingDef[defName="POTBLUM"]/Beauty</xpath>
+               <value>
+                  <Beauty>5</Beauty>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Rim of Madness - Bones
+    ==========-->
+
+   <!--Wall nerf by 50 hitpoints-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Rim of Madness - Bones</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+         <xpath>/Defs/ThingDef[defName="BoneWall"]/statBases/MaxHitPoints</xpath>
+         <value>
+            <MaxHitPoints>150</MaxHitPoints>
+         </value>
+      </match>
+   </Operation>
+
+   <!--==========
+    Roof Support
+    ==========-->
+
+   <!--Minor edits, allow cover-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Roof Support 1.1</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="RoofSupport"]/passability</xpath>
+               <value>
+                  <passability>PassThroughOnly</passability>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="RoofSupport"]/fillPercent</xpath>
+               <value>
+                  <fillPercent>0.2</fillPercent>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="RoofSupport"]</xpath>
+               <value>
+                  <pathCost>30</pathCost>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    SeedsPlease
+    ==========-->
+
+   <!--Healroot recipes onto production benches-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>SeedsPlease</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/RecipeDef[defName="ProcessRawHealroot"]</xpath>
+               <value>
+                  <recipeUsers>
+                     <li>PlantProcessingTable</li>
+                     <li>DrugLab</li>
+                  </recipeUsers>
+               </value>
+            </li>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs</xpath>
+               <value>
+                  <RecipeDef ParentName="ProcessRaw">
+                     <defName>ProcessRawHealrootBulk</defName>
+                     <label>make bulk herbal medicine</label>
+                     <description>Process Raw Healroot into Herbal Medicine in bulk.</description>
+                     <ingredients>
+                        <li>
+                           <filter>
+                              <thingDefs>
+                                 <li>RawHealroot</li>
+                              </thingDefs>
+                           </filter>
+                           <count>25</count>
+                        </li>
+                     </ingredients>
+                     <fixedIngredientFilter>
+                        <thingDefs>
+                           <li>RawHealroot</li>
+                        </thingDefs>
+                     </fixedIngredientFilter>
+                     <products>
+                        <MedicineHerbal>5</MedicineHerbal>
+                     </products>
+                     <workAmount>3500</workAmount>
+                     <skillRequirements>
+                        <Crafting>5</Crafting>
+                     </skillRequirements>
+                     <recipeUsers>
+                        <li>PlantProcessingTable</li>
+                        <li>DrugLab</li>
+                     </recipeUsers>
+                  </RecipeDef>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Simple Chains: Leather
+    ==========-->
+
+   <!--Increase Max Capacity of tanning vat
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Leather</li>
+      </mods>
+      <match Class="PatchOperationReplace">
+         <xpath>/Defs/ThingDef[defName="Owl_TanningVat"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes//maxCapacity</xpath>
+         <value>
+            <maxCapacity>150</maxCapacity>
+         </value>
+      </match>
+   </Operation>-->
+
+   <!--Vanilla animal leather replacement-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Leather</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <!-- Replace leather drops with generics where appropriate -->
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef/race/leatherDef[text()="Leather_GuineaPig"]</xpath>
+               <value>
+                  <leatherDef>Hide_SoftPelt</leatherDef>
+               </value>
+            </li>
+            <!-- Remove unused leather -->
+            <li Class="PatchOperationRemove">
+               <xpath>/Defs/ThingDef[defName="Leather_GuineaPig"]/*/..</xpath>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Simple Chains: Lumber
+    ==========-->
+
+   <!-- Make green lumber stats in-line with Vanilla lumber -->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Lumber</li>
+      </mods>
+      <match Class="PatchOperationConditional">
+         <xpath>/Defs/ThingDef[defName="Owl_GreenLumber"]/statBases/BluntDamageMultiplier</xpath>
+         <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Owl_GreenLumber"]/statBases</xpath>
+            <value>
+               <StuffPower_Armor_Sharp>0.50</StuffPower_Armor_Sharp>
+               <StuffPower_Armor_Blunt>0.50</StuffPower_Armor_Blunt>
+               <StuffPower_Armor_Heat>0.45</StuffPower_Armor_Heat>
+               <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+               <StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
+               <SharpDamageMultiplier>0.35</SharpDamageMultiplier>
+               <BluntDamageMultiplier>0.85</BluntDamageMultiplier>
+            </value>
+         </nomatch>
+      </match>
+   </Operation>
+
+   <!--==========
+    Simple Chains: Steel
+    ==========-->
+
+   <!--Create Bulk Recipes for steel-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Simple Chains: Steel</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs</xpath>
+               <value>
+
+                  <RecipeDef>
+                     <defName>Owl_RefineSteel1000</defName>
+                     <label>refine 1000 steel</label>
+                     <description>Make a batch of steel using raw iron ore.</description>
+                     <jobString>Refining steel from iron ore.</jobString>
+                     <effectWorking>Smelt</effectWorking>
+                     <soundWorking>Recipe_Smelt</soundWorking>
+                     <workAmount>10000</workAmount>
+                     <workSpeedStat>SmeltingSpeed</workSpeedStat>
+                     <workSkillLearnFactor>0.25</workSkillLearnFactor>
+                     <targetCountAdjustment>750</targetCountAdjustment>
+                     <allowMixingIngredients>false</allowMixingIngredients>
+                     <ingredients>
+                        <li>
+                           <filter>
+                              <thingDefs />
+                           </filter>
+                           <count>250</count>
+                        </li>
+                        <li>
+                           <filter>
+                              <thingDefs>
+                                 <li>Owl_Iron</li>
+                              </thingDefs>
+                           </filter>
+                           <count>750</count>
+                        </li>
+                     </ingredients>
+                     <fixedIngredientFilter>
+                        <thingDefs>
+                           <li>Owl_Iron</li>
+                        </thingDefs>
+                     </fixedIngredientFilter>
+                     <products>
+                        <Steel>1000</Steel>
+                     </products>
+                     <recipeUsers>
+                        <li>ElectricSmelter</li>
+                     </recipeUsers>
+                  </RecipeDef>
+
+                  <RecipeDef>
+                     <defName>Owl_RefineSteel100</defName>
+                     <label>refine 100 steel</label>
+                     <description>Make a batch of steel using raw iron ore.</description>
+                     <jobString>Refining steel from iron ore.</jobString>
+                     <effectWorking>Smelt</effectWorking>
+                     <soundWorking>Recipe_Smelt</soundWorking>
+                     <workAmount>5000</workAmount>
+                     <workSpeedStat>SmeltingSpeed</workSpeedStat>
+                     <workSkillLearnFactor>0.25</workSkillLearnFactor>
+                     <targetCountAdjustment>75</targetCountAdjustment>
+                     <allowMixingIngredients>false</allowMixingIngredients>
+                     <ingredients>
+                        <li>
+                           <filter>
+                              <thingDefs />
+                           </filter>
+                           <count>25</count>
+                        </li>
+                        <li>
+                           <filter>
+                              <thingDefs>
+                                 <li>Owl_Iron</li>
+                              </thingDefs>
+                           </filter>
+                           <count>75</count>
+                        </li>
+                     </ingredients>
+                     <fixedIngredientFilter>
+                        <thingDefs>
+                           <li>Owl_Iron</li>
+                        </thingDefs>
+                     </fixedIngredientFilter>
+                     <products>
+                        <Steel>100</Steel>
+                     </products>
+                     <recipeUsers>
+                        <li>ElectricSmelter</li>
+                     </recipeUsers>
+                  </RecipeDef>
+
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+  <!--Add coal/charcoal to steel smelting list-->
+  <!--Coal-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="DZ_Coal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+					//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>DZ_Coal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+  <!--Charcoal-->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Simple Chains: Steel</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+        <li Class="PatchOperationTest">
+          <xpath>/Defs/ThingDef[defName="DZ_Charcoal"]</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/*[self::RecipeDef[defName="Owl_RefineSteel100" or defName="Owl_RefineSteel1000"]]
+					//thingDefs[ancestor::fixedIngredientFilter or not(li/text()="Owl_Iron")]
+          </xpath>
+          <value>
+            <li>DZ_Charcoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+   <!--==========
+    Save Our Ship 2
+    ==========-->
+
+   <!--Increase pod launcher range-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Save Our Ship 2</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="PersonalShuttle"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+               <value>
+                  <fuelCapacity>200.0</fuelCapacity>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="CargoShuttle"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+               <value>
+                  <fuelCapacity>600.0</fuelCapacity>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="HeavyShuttle"]/comps/li[@Class="CompProperties_Refuelable"]/fuelCapacity</xpath>
+               <value>
+                  <fuelCapacity>300.0</fuelCapacity>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Vanilla Armour Expanded
+    ==========-->
+
+   <!--Allow armor to be made of woody stuff-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Armour Expanded</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="VAE_Apparel_LightPlateArmor" or defName="VAE_Apparel_PlateShoulderpads" or defName="VAE_Apparel_Chestplate" or defName="VAE_Apparel_PlateHelmet"]/stuffCategories</xpath>
+               <value>
+                  <li>Woody</li>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Vanilla Factions Expanded - Medieval
+    ==========-->
+
+   <!--Allow armor to be made of woody stuff-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>Vanilla Factions Expanded - Medieval</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationAdd">
+               <xpath>/Defs/ThingDef[defName="VFEM_Apparel_PlateArmorHeavy" or defName="VFEM_Apparel_PlateHelmetLight" or defName="VFEM_Apparel_PlateHelmetHeavy"]/stuffCategories</xpath>
+               <value>
+                  <li>Woody</li>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+   <!--==========
+    Vanilla Weapons Expanded
+    ==========-->
+
+   <!--Balance tools: Hatchet, Pickaxe, Hammer, Shovel, Wrench, Cleaver (they should not be better than real weapons)-->
+   <Operation Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+         <li Class="PatchOperationReplace">
+            <xpath>/Defs/ThingDef[defName="VWE_MeleeWeapon_Axe" or defName="VWE_MeleeWeapon_Pickaxe" or defName="VWE_MeleeWeapon_Hammer" or defName="VWE_MeleeWeapon_Shovel" or defName="VWE_MeleeWeapon_Wrench" or defName="VWE_MeleeWeapon_Cleaver"]/tools/li[label="blade" or label="point" or label="head"]/power</xpath>
+            <value>
+               <power>8</power>
+            </value>
+         </li>
+      </operations>
+   </Operation>
+
+   <!--==========
+    VGP Garden Gourmet
+    ==========-->
+
+   <!--Stuff items-->
+   <Operation Class="PatchOperationFindMod">
+      <mods>
+         <li>VGP Garden Gourmet</li>
+      </mods>
+      <match Class="PatchOperationSequence">
+         <success>Always</success>
+         <operations>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="HandCanningstove" or defName="Canningstove"]/costList</xpath>
+               <value>
+                  <costStuffCount>40</costStuffCount>
+                  <stuffCategories>
+                     <li>Metallic</li>
+                     <li>Woody</li>
+                     <li>Stony</li>
+                  </stuffCategories>
+               </value>
+            </li>
+            <li Class="PatchOperationReplace">
+               <xpath>/Defs/ThingDef[defName="FueledCandyTable" or defName="CandyTable"]/costList</xpath>
+               <value>
+                  <costStuffCount>60</costStuffCount>
+                  <stuffCategories>
+                     <li>Metallic</li>
+                     <li>Woody</li>
+                     <li>Stony</li>
+                  </stuffCategories>
+               </value>
+            </li>
+         </operations>
+      </match>
+   </Operation>
+
+</Patch>

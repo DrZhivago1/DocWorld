@@ -1,0 +1,627 @@
+﻿<Patch>
+    <!--This file will contain all patches that replace/change glass requirements for Vanilla and Mods using Glass+Lights as the base glass mod-->
+
+    <!--==========
+    Vanilla
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <!--Lamps require glass-->
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[@Name="StandingLampBase" or defName="SunLamp"]/costList</xpath>
+                    <value>
+                        <LargeCircularGlass>1</LargeCircularGlass>
+                    </value>
+                </li>
+                <!--Minor grammar correction-->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="OutdoorGroundLamp"]/label</xpath>
+                    <value>
+                        <label>outdoor ground lamp</label>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[@Name="GLWallLightBase"]/costList</xpath>
+                    <value>
+                        <costList>
+                            <LargeCircularGlass>1</LargeCircularGlass>
+                            <Steel>10</Steel>
+                        </costList>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+    <!--==========
+    Ceiling Lights
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Ceiling Lights</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Ceiling light and Grow light require glass-->
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Lighting_CeilingLight"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>10</Steel>
+                                <LargeCircularGlass>1</LargeCircularGlass>
+                            </costList>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Lighting_CeilingGrowLight"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>30</Steel>
+                                <Gold>15</Gold>
+                                <ComponentIndustrial>1</ComponentIndustrial>
+                                <LargeCircularGlass>1</LargeCircularGlass>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Dubs Bad Hygiene
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Dubs Bad Hygiene</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="CeilingFan" or defName="CeilingFanS"]/costList</xpath>
+                        <value>
+                            <LargeCircularGlass>1</LargeCircularGlass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Dubs Skylights
+    ==========-->
+
+    <!--Skylights require glass. Also removes "Dubs Skylights" glass resource.-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Dubs Skylights</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="SkyLightA"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Glass>2</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="SkyLightB"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Glass>10</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="SkyLightC" or defName="SkyLightD"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Glass>6</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationRemove">
+                        <xpath>/Defs/ThingDef[defName="GlassPane"]</xpath>
+                    </li>
+                    <li Class="PatchOperationRemove">
+                        <xpath>/Defs/RecipeDef[defName="SmeltGlass"]</xpath>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Glitter Tech
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Glitter Tech</li>
+                <li>Glitter Tech (No Surgery)</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Floodlight requires glass-->
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="FloodLight"]/costList</xpath>
+                        <value>
+                            <LargeCircularGlass>1</LargeCircularGlass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Industrial Age - Objects and Furniture
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Industrial Age - Objects and Furniture (Continued)</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Jecrell_GasStreetLampAlpha" or defName="Jecrell_GasStreetLampBeta" or defName="Jecrell_GasLamp"]/costList</xpath>
+                        <value>
+                            <Glass>1</Glass>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ThingDef[defName="Estate_ArcLamp" or defName="Estate_EdisonLamp" or defName="Estate_EdisonTube"]</xpath>
+                        <value>
+                            <costList>
+                                <Glass>1</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    More Furniture
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>More Furniture [1.1 + 1.2]</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Lamps and endtables require glass-->
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="ANON2StandingLampBase"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>15</Steel>
+                                <LargeCircularGlass>1</LargeCircularGlass>
+                            </costList>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Anon2EndTableLight"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>10</Steel>
+                                <LargeCircularGlass>1</LargeCircularGlass>
+                            </costList>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Anon2RoyalEndTableLight"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>10</Steel>
+                                <Gold>15</Gold>
+                                <LargeCircularGlass>1</LargeCircularGlass>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Raise The Roof
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Raise The Roof 1.2</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Transparent roofs require glass-->
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="RTR_TransparentRoof"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>30</Steel>
+                                <Glass>10</Glass>
+                                <ComponentIndustrial>1</ComponentIndustrial>
+                            </costList>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="RTR_TransparentSolarRoof"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>30</Steel>
+                                <Glass>10</Glass>
+                                <ComponentIndustrial>1</ComponentIndustrial>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    RIMkea
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>RIMkea</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Kageshain lamps require glass-->
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="RIKFleaLampBase"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>20</Steel>
+                                <Glass>1</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Rimplas
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>RimPlas</li>
+                <li>RimPlas (Continued)</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--CeilingLights require glass-->
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="RP_GrapheneCeilingLight" or defName="RP_CeilingLight"]/costList</xpath>
+                        <value>
+                            <Glass>2</Glass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Smokeleaf Industry Reborn
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Smokeleaf Industry Reborn</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--GrowLamps require glass-->
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="GrowLamp"]/costList</xpath>
+                        <value>
+                            <LargeCircularGlass>1</LargeCircularGlass>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="MSI_TubeGrowLights"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>10</Steel>
+                                <Glass>1</Glass>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Static Quality Plus
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Static Quality Plus 1.2.2</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Sun lamps require glass-->
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="PermaSunLamp"]/costList</xpath>
+                        <value>
+                            <LargeCircularGlass>4</LargeCircularGlass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Factions Expanded - Settlers
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Vanilla Factions Expanded - Settlers</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Chemlamps require glass-->
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Chemlamp" or defName="ChemlampPost"]/costList</xpath>
+                        <value>
+                            <Glass>1</Glass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Vanilla Furniture Expanded</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Lamps require glass-->
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Light_ModernLamp" or defName="Light_Streetlamp" or defName="Table_LightEndTable"]/costList</xpath>
+                        <value>
+                            <LargeCircularGlass>1</LargeCircularGlass>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Vanilla Furniture Expanded - Spacer Module
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Vanilla Furniture Expanded - Spacer Module</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Lamps require glass-->
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Light_SpacerLamp"]/costList</xpath>
+                        <value>
+                            <Glass>1</Glass>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Spacer_SunLamp"]/costList</xpath>
+                        <value>
+                            <Glass>5</Glass>
+                        </value>
+                    </li>
+                    <!--Vanilla outdoor lamps have equal lighting and resource requirements-->
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="OutdoorGroundLamp" or defName="Spacer_OutdoorLamp"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Steel>40</Steel>
+                                <ComponentIndustrial>1</ComponentIndustrial>
+                                <LargeCircularGlass>1</LargeCircularGlass>
+                            </costList>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="OutdoorGroundLamp"]/comps/li[@Class="CompProperties_Glower"]/glowRadius</xpath>
+                        <value>
+                            <glowRadius>8</glowRadius>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    Wall Light
+    ==========-->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>Wall Light</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <!--Lamps require glass-->
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[@Name="MURWallLightBase"]/costList</xpath>
+                        <value>
+                            <costList>
+                                <Glass>1</Glass>
+                                <Steel>10</Steel>
+                            </costList>
+                        </value>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+    <!--==========
+    UN-Colony
+    ==========-->
+
+    <!--Remove and replace all UN-Colony glass-->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Glass+Lights</li>
+        </mods>
+        <match Class="PatchOperationFindMod">
+            <mods>
+                <li>UN-Colony (Continued)</li>
+            </mods>
+            <match Class="PatchOperationSequence">
+                <success>Always</success>
+                <operations>
+                    <li Class="PatchOperationRemove">                        <!--SadjuukUN-IndustryDEF-->
+                        <xpath>/Defs/ThingDef[defName="SadjuukConstructionMachinery"]/recipes/li[.="SadjuukGlassRecipeA"]</xpath>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="SadjuukConstructionMachinery"]/description</xpath>
+                        <value>
+                            <description>A very complex machinery capable of extracting silicon from the rock and coarsely refining organic elements to produce paint, concrete, and asphalt.</description>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">                        <!--SadjuukUN-BuildingRESEARCH-->
+                        <xpath>/Defs/ResearchProjectDef[defName="SadjuukConstructionA"]/description</xpath>
+                        <value>
+                            <description>This important research allows you to produce basic construction items such as paint or concrete.</description>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationRemove">                        <!--SadjuukUN-BuildingRECIPE-->
+                        <xpath>/Defs/RecipeDef[defName="SadjuukGlassRecipeA"]</xpath>
+                    </li>
+                    <li Class="PatchOperationReplace">                        <!--SadjuukUN-BuildingDEF-->
+                        <xpath>/Defs/ThingDef[@Name="SadjuukDoorBaseC" or defName="SadjuukGlassFenceA"]/costList/SadjuukGlass</xpath>
+                        <value>
+                            <Glass>2</Glass>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">                        <!--SadjuukUN-IndustryRECIPE-->
+                        <xpath>/Defs/RecipeDef[defName="SadjuukSolarCellRecipeA" or defName="SadjuukSolarCellRecipeB"]/ingredients/li/filter/thing/Defs/SadjuukGlass</xpath>
+                        <value>
+                            <li>Glass</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>/Defs/RecipeDef[defName="SadjuukSolarCellRecipeA" or defName="SadjuukSolarCellRecipeB"]/fixedIngredientFilter/thing/Defs/SadjuukGlass</xpath>
+                        <value>
+                            <li>Glass</li>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationRemove">                        <!--SadjuukUN-BuildingITEM-->
+                        <xpath>/Defs/ThingDef[defName="SadjuukGlass"]</xpath>
+                    </li>
+                </operations>
+            </match>
+        </match>
+    </Operation>
+
+</Patch>

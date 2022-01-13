@@ -1,0 +1,343 @@
+<Patch>
+  <!--This file will contain all patches that replace/change/add Designation Categories in the architect menu for Vanilla and Mods. Most "Designation_Category_..." files depend on this one.-->
+
+  <!--==========
+    DocWorld
+    ==========-->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs</xpath>
+    <value>
+
+      <DesignationCategoryDef>
+        <defName>DZ_Animals</defName>
+        <label>animals</label>
+        <description>All things related to animals.</description>
+        <order>730</order>
+        <specialDesignatorClasses>
+          <li>Designator_Cancel</li>
+          <li>Designator_Deconstruct</li>
+          <li>Designator_Uninstall</li>
+        </specialDesignatorClasses>
+      </DesignationCategoryDef>
+
+      <DesignationCategoryDef>
+        <defName>DZ_Beds</defName>
+        <label>beds</label>
+        <description>Spots for your pawns to rest.</description>
+        <order>725</order>
+        <specialDesignatorClasses>
+          <li>Designator_Cancel</li>
+          <li>Designator_Deconstruct</li>
+          <li>Designator_Uninstall</li>
+        </specialDesignatorClasses>
+      </DesignationCategoryDef>
+
+      <DesignationCategoryDef>
+        <defName>DZ_Culinary</defName>
+        <label>culinary</label>
+        <description>Cooking and fermenting.</description>
+        <order>723</order>
+        <specialDesignatorClasses>
+          <li>Designator_Cancel</li>
+          <li>Designator_Deconstruct</li>
+          <li>Designator_Uninstall</li>
+        </specialDesignatorClasses>
+      </DesignationCategoryDef>
+
+      <DesignationCategoryDef>
+        <defName>DZ_Decor</defName>
+        <label>Decor</label>
+        <description>Beautify your base.</description>
+        <order>720</order>
+        <specialDesignatorClasses>
+          <li>Designator_Cancel</li>
+          <li>Designator_Deconstruct</li>
+          <li>Designator_Uninstall</li>
+        </specialDesignatorClasses>
+      </DesignationCategoryDef>
+
+      <DesignationCategoryDef>
+        <defName>DZ_Husbandry</defName>
+        <label>husbandry</label>
+        <description>For all your agricultural and livestock needs.</description>
+        <order>595</order>
+        <specialDesignatorClasses>
+          <li>Designator_Cancel</li>
+          <li>Designator_Deconstruct</li>
+          <li>Designator_Uninstall</li>
+          <li>Designator_SmoothSurface</li>
+          <li>Designator_RemoveFloor</li>
+        </specialDesignatorClasses>
+      </DesignationCategoryDef>
+
+      <DesignationCategoryDef>
+        <defName>DZ_Industrial</defName>
+        <label>industrial</label>
+        <description>For all your industrial production.</description>
+        <order>570</order>
+        <specialDesignatorClasses>
+          <li>Designator_Cancel</li>
+          <li>Designator_Deconstruct</li>
+          <li>Designator_Uninstall</li>
+        </specialDesignatorClasses>
+      </DesignationCategoryDef>
+
+      <DesignationCategoryDef>
+        <defName>DZ_Lighting</defName>
+        <label>lighting</label>
+        <description>Illumination.</description>
+        <order>550</order>
+        <specialDesignatorClasses>
+          <li>Designator_Cancel</li>
+          <li>Designator_Deconstruct</li>
+          <li>Designator_Uninstall</li>
+        </specialDesignatorClasses>
+      </DesignationCategoryDef>
+
+      <DesignationCategoryDef>
+        <defName>DZ_Storage</defName>
+        <label>storage</label>
+        <description>Furniture that can store items.</description>
+        <order>150</order>
+        <specialDesignatorClasses>
+          <li>Designator_Cancel</li>
+          <li>Designator_Deconstruct</li>
+          <li>Designator_Uninstall</li>
+        </specialDesignatorClasses>
+      </DesignationCategoryDef>
+
+    </value>
+  </Operation>
+
+  <!--==========
+    VANILLA
+    ==========-->
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Floors"]/order</xpath>
+        <value>
+          <order>700</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Furniture"]/order</xpath>
+        <value>
+          <order>600</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Power"]/order</xpath>
+        <value>
+          <order>500</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Production"]/order</xpath>
+        <value>
+          <order>400</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Joy"]/order</xpath>
+        <value>
+          <order>300</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Security"]/order</xpath>
+        <value>
+          <order>250</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Ship"]/order</xpath>
+        <value>
+          <order>200</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Structure"]/order</xpath>
+        <value>
+          <order>100</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Temperature"]/order</xpath>
+        <value>
+          <order>50</order>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/DesignationCategoryDef[defName="Misc"]/order</xpath>
+        <value>
+          <order>25</order>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+
+  <!--==========
+    Android Tiers
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Android tiers</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="ATPP_DesignationAndroidTiers"]/order</xpath>
+      <value>
+        <order>730</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Boats
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Boats</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="RimShips"]/order</xpath>
+      <value>
+        <order>724</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Dubs Bad Hygiene
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dubs Bad Hygiene</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="Hygiene"]/order</xpath>
+      <value>
+        <order>590</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Fertile Fields
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Fertile Fields [1.1]</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="RFF_Adds"]/order</xpath>
+      <value>
+        <order>40</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Genetic Rim
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Genetic Rim</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="GR_GeneticsTab"]/order</xpath>
+      <value>
+        <order>596</order>
+      </value>
+    </match>
+  </Operation>
+  
+    <!--==========
+    GlitterNet
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>GlitterNet</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="GlitterNet"]/order</xpath>
+      <value>
+        <order>600</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Jurassic Rimworld
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Jurassic Rimworld 1.1</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="JurassicRimworld"]/order</xpath>
+      <value>
+        <order>565</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    LWM's DEEP STORAGE
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>LWM's Deep Storage</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="LWM_DS_Storage"]/order</xpath>
+      <value>
+        <order>150</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    More Planning
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>More Planning</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="Planning"]/order</xpath>
+      <value>
+        <order>733</order>
+      </value>
+    </match>
+  </Operation>
+
+  <!--==========
+    Remote Tech
+    ==========-->
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Remote Tech</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>/Defs/DesignationCategoryDef[defName="rxRemoteTech"]/order</xpath>
+      <value>
+        <order>275</order>
+      </value>
+    </match>
+  </Operation>
+
+</Patch>

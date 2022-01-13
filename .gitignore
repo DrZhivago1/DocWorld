@@ -1,2 +1,7 @@
 Source/.vs/
 Source/DocWorld/.vs/
+Source/DocWorld/bin/
+Source/DocWorld/obj/
+Source/packages/
+*.bak
+*.pdb

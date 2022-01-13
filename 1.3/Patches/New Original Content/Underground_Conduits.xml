@@ -1,0 +1,29 @@
+<Patch>
+
+    <!--This file will contain the Underground Conduits. They cost the same amount of resources but require 6x the work of Vanilla.-->
+
+    <!--==========
+    VANILLA
+    ==========-->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs</xpath>
+        <value>
+            <ThingDef ParentName="PowerConduit">
+                <defName>DZ_CamoConduit</defName>
+                <label>underground power conduit</label>
+                <description>A bundle of underground electrical cables for moving power around. Can be placed beneath walls and other buildings. Labor intensive.</description>
+                <graphicData>
+                    <texPath>Original_Content/Underground_Power_Conduits/DZ_CamoConduit_Atlas</texPath>
+                </graphicData>
+                <uiIconPath>Original_Content/Underground_Power_Conduits/DZ_CamoConduit_MenuIcon</uiIconPath>
+                <statBases>
+                    <WorkToBuild>350</WorkToBuild>
+                    <Flammability>0.0</Flammability>
+                    <Beauty>0</Beauty>
+                </statBases>
+            </ThingDef>
+        </value>
+    </Operation>
+
+</Patch>

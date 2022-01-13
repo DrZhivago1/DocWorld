@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using RimWorld;
 using Verse;
 using UnityEngine;
-/*
+
 namespace DocWorld
 {
     // Made by Fluffy and ISOREX for Dr_Zhivago's DocWorld
@@ -189,4 +189,3 @@ namespace DocWorld
     }
 
 }
-*/
